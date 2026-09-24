@@ -169,8 +169,8 @@ test('R12 emergencia: bloqueia, nenhuma ordem para cancelar neste build; sai so 
 
 test('R13 visao publica sem nomes de conta nem ordens (agente/web nao veem contas)', () => {
   const core = createRobotCore({ config: FULL, stateDir: tmpDir() });
-  core.report(exec({ accounts: [{ name: 'MinhaContaSecreta', provider: 'Simulator', connection: 'Connected' }], orders_owned: [{ name: 'IJC|x' }] }));
+  core.report(exec({ accounts: [{ name: 'MinhaContaSecreta', provider: 'Simulator', connection: 'Connected' }], orders_owned: [{ name: 'IJC-ROBOT|x' }] }));
   const pub = JSON.stringify(core.publicStatus());
   assert.ok(!pub.includes('MinhaContaSecreta'));
-  assert.ok(!pub.includes('IJC|x'));
+  assert.ok(!pub.includes('IJC-ROBOT|x'));
 });

@@ -15,8 +15,15 @@ export const DECISION_ACTIONS = Object.freeze(['NONE', 'ENTER_LONG', 'ENTER_SHOR
 
 // Padrao forte do Invictus (AoRoboGuard original, 18/08): so contas que o PROPRIO NT8 classifica como simuladas.
 export const ELIGIBLE_PROVIDERS = Object.freeze(['Simulator', 'Playback']);
-// Prefixo de propriedade (com pipe; comparacao Ordinal). Distinto de "AO|" do Invictus.
-export const ORDER_PREFIX = 'IJC|';
+// Origem e prefixos de propriedade (com pipe; comparacao Ordinal). Distintos de "AO|" do Invictus.
+// Manual NUNCA entra como robot-owned: "IJC-MANUAL|" nao comeca com "IJC-ROBOT|".
+export const ORIGIN = Object.freeze({ MANUAL: 'MANUAL_OPERATOR', ROBOT: 'JEV_ROBOT' });
+export const ORDER_PREFIX = 'IJC-ROBOT|';
+export const MANUAL_PREFIX = 'IJC-MANUAL|';
 
 export const isEligibleProvider = (provider) => typeof provider === 'string' && ELIGIBLE_PROVIDERS.includes(provider); // case-sensitive de proposito
 export const isRobotOrderName = (name) => typeof name === 'string' && name.startsWith(ORDER_PREFIX);
+export const isManualOrderName = (name) => typeof name === 'string' && name.startsWith(MANUAL_PREFIX);
+export const orderOwner = (name) => (isRobotOrderName(name) ? ORIGIN.ROBOT : isManualOrderName(name) ? ORIGIN.MANUAL : 'FOREIGN');
+// Tipo da conta so para EXIBICAO (Provider real do NT8, nunca o nome).
+export const accountKind = (provider) => (typeof provider !== 'string' || provider === '' ? 'UNKNOWN' : ELIGIBLE_PROVIDERS.includes(provider) ? 'SIM' : 'LIVE');

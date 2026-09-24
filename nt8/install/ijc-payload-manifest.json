@@ -1,0 +1,34 @@
+{
+  "schema": "ijc-nt8-payload/v1",
+  "product": "INVICTUS JEV CODE",
+  "source_dir": "nt8/AddOns/InvictusJevCode",
+  "install_dir": "Documents\\NinjaTrader 8\\bin\\Custom\\AddOns\\InvictusJevCode",
+  "jev_can_send_order": false,
+  "order_path": "HARD_DISABLED",
+  "install_lot": "RTH_TEST_READ_ONLY_NO_MANUAL_ORDER_EXECUTION",
+  "deferred_not_installed": [
+    "IjcManualOrders.cs"
+  ],
+  "files": [
+    {
+      "name": "IjcAddOn.cs",
+      "size": 2867,
+      "sha256": "de122011f4bd78190fe5d4e4cdd8263da508779d2eb6ce60d883a189df8ef5b2"
+    },
+    {
+      "name": "IjcControlCenterWindow.cs",
+      "size": 48756,
+      "sha256": "edd8dd07d9a7f3c7baab1e17958cc4780321837554b9e6d29cf7d96e92c863ee"
+    },
+    {
+      "name": "IjcExecutor.cs",
+      "size": 15055,
+      "sha256": "3292e45c49eaff902822acf11fd8b07f2fc1e30573f98fdd94faed4019c93410"
+    },
+    {
+      "name": "IjcPure.cs",
+      "size": 23265,
+      "sha256": "56db47bedf6bd3048a65b04bfdcf26c91f56897882dd28e63ea87216df861aa8"
+    }
+  ]
+}

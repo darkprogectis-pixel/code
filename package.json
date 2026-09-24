@@ -22,6 +22,8 @@
     "check:nt8": "dotnet build nt8/check/InvictusJevCode.check.csproj -nologo -v q",
     "test:nt8": "dotnet run --project nt8/check/IjcPureTests -nologo -v q",
     "agent": "node src/ijc/agent-gateway/cli.mjs",
+    "nt8:manifest": "node nt8/install/build-payload-manifest.mjs",
+    "nt8:shadow": "node nt8/install/shadow-compile.mjs",
     "test:rotation": "node --test \"test/rotation/*.test.mjs\"",
     "rotation:status": "node tools/jev-rotation/status.mjs"
   }

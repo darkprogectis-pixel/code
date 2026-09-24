@@ -1,0 +1,3 @@
+# payload do AddOn NT8: bytes fixos (ijc-payload-manifest.json usa SHA256 do arquivo)
+nt8/AddOns/InvictusJevCode/*.cs text eol=lf
+nt8/install/ijc-payload-manifest.json text eol=lf

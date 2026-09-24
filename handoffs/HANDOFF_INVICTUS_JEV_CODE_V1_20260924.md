@@ -114,3 +114,11 @@ Sem reabrir nada do que foi feito, nesta ordem:
    - trocar os stubs `IjcExecutionStub` por submissão real **só** para `Provider ∈ {Simulator, Playback}`;
    - proteção pós-fill;
    - só então rever `JEV_CAN_SEND_ORDER` / `ORDER_PATH` em código, com revisão e ordem explícita.
+
+## 6. V2 (24/09/2026) — EM ANDAMENTO
+
+Estado, recusa do ambiente (ROBOT ORDER BINDING isolado) e próximo passo exato: `handoffs/HANDOFF_INVICTUS_JEV_NT8_INSTALL_20260924.md` §11. Caminho MANUAL implementado (`IjcManualOrders.cs`); UI V2 Full/Compact implementada; nada commitado; F5 NOT PERFORMED.
+
+## 7. Lote de instalação RTH (24/09/2026)
+
+Lote atual: READ_ONLY / NO MANUAL ORDER EXECUTION, payload de 4 arquivos. MANUAL ORDER CODE = IMPLEMENTED, fora deste lote (INSTALLATION DEFERRED). ROBOT SUBMIT = PENDING_ENVIRONMENT_REFUSAL. Detalhes, checks e estado da cópia/F5: `handoffs/HANDOFF_INVICTUS_JEV_NT8_INSTALL_20260924.md` §12–§13.

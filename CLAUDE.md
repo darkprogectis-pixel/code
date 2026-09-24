@@ -12,7 +12,8 @@ Then the most recent phase handoffs in `handoffs/` (newest last):
 - `handoffs/HANDOFF_JEV_RUNTIME_V1_20260924.md` — JEV Runtime V1 implemented
 - `handoffs/HANDOFF_JEV_LIVE_INPUT_V1_20260924.md` — live input adapter (done, `6ecb18d`)
 - `handoffs/HANDOFF_JEV_CONTROL_CENTER_V1_20260924.md` — Control Center V1 (superseded by INVICTUS JEV CODE V1)
-- `handoffs/HANDOFF_INVICTUS_JEV_CODE_V1_20260924.md` — **INVICTUS JEV CODE V1 (current)**
+- `handoffs/HANDOFF_INVICTUS_JEV_CODE_V1_20260924.md` — INVICTUS JEV CODE V1
+- `handoffs/HANDOFF_INVICTUS_JEV_NT8_INSTALL_20260924.md` — **NT8 install, current lot = RTH test, 4-file payload, no manual order execution (current; see §13)**
 
 Then read only the minimum canonical files referenced by those handoffs.
 
@@ -48,7 +49,9 @@ TRADE EXECUTION: DISABLED (JEV_CAN_SEND_ORDER / EXECUTE_TRADE / MODIFY_NT8 / OVE
 
 REAL MARKET ADAPTER: LIVE INPUT ADAPTER V1 OPERATIONAL (read-only relay 127.0.0.1:3457 /gexbot/*, commit 6ecb18d)
 
-PRODUCT: INVICTUS JEV CODE V1 — Analyzer IMPLEMENTED · Robot Core IMPLEMENTED / EXECUTION HARD DISABLED · control plane 127.0.0.1:3591 (token, pull) · NT8 executor READ-ONLY (source only, not installed, no F5) · Agent Gateway 127.0.0.1:3592 OPTIONAL/ADVISORY · robot accounts Simulator/Playback ONLY · real orders IMPOSSIBLE in this build
+PRODUCT: INVICTUS JEV CODE — Analyzer IMPLEMENTED · UI V2 (FULL/COMPACT, account selector, PNL, position) IMPLEMENTED · control plane 127.0.0.1:3591 (token, pull) · Agent Gateway 127.0.0.1:3592 ADVISORY_ONLY · WEB READ_ONLY
+MANUAL ORDER: CODE IMPLEMENTED / INFRASTRUCTURE EXECUTION_CAPABLE (`IjcManualOrders.cs`) · INSTALLATION DEFERRED (not in the current install lot; install precheck integration BLOCKED_BY_ENVIRONMENT_REFUSAL)
+ROBOT: ORDER INFRASTRUCTURE PARTIAL · SUBMIT BINDING PENDING_ENVIRONMENT_REFUSAL (environment restriction, not a product rule / not SIM_ONLY by design) · default OFF · decision NONE
 
 Product docs: `context/jev-future/INVICTUS_JEV_CODE_V1_20260924.md`
 
@@ -260,6 +263,8 @@ POST_LAUNCH_REFINEMENT_BACKLOG (non-blocking): R2, R6 materialization, G1/G2, E1
 ## Current phase
 
 INVICTUS JEV CODE V1: DONE (Fronts A Codex UI · B architecture · C implementation). See `handoffs/HANDOFF_INVICTUS_JEV_CODE_V1_20260924.md`.
+
+CURRENT INSTALL LOT (RTH test): READ_ONLY / NO MANUAL ORDER EXECUTION · payload 4 files (IjcManualOrders.cs deferred) · all pre-install checks PASS (precheck, manifest, Node, C#, V2, smokes, external build, shadow normal + as-is, rehearsal/rollback). State of copy/F5: `handoffs/HANDOFF_INVICTUS_JEV_NT8_INSTALL_20260924.md` §13 (NT8 closed for copy; exactly one F5 per lot).
 
 Still NOT allowed without explicit operator order:
 

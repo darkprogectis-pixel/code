@@ -1,5 +1,5 @@
-// INVARIANTES DO BUILD INVICTUS JEV CODE V1:
-//   NO LIVE ORDER PATH EXISTS IN THIS BUILD · NO SECOND BRAIN · PRODUCTION UNTOUCHED · UNKNOWN OPERATIONAL
+// INVARIANTES DO BUILD INVICTUS JEV CODE V2:
+//   ORDER PATHS SEPARATED (manual=clique; robot binding isolado) · NO SECOND BRAIN · PRODUCTION UNTOUCHED · UNKNOWN OPERATIONAL
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, statSync, mkdtempSync } from 'node:fs';
@@ -24,13 +24,30 @@ const strip = (s) => s.replace(/^\s*\/\/.*$/gm, '').replace(/\s\/\/\s.*$/gm, '')
 const SRC = walk(path.join(REPO_ROOT, 'src'), ['.mjs', '.js', '.html']);
 const NT8 = walk(path.join(REPO_ROOT, 'nt8'), ['.cs']);
 
-test('I01 NO LIVE ORDER PATH EXISTS IN THIS BUILD (prova estatica + runtime)', () => {
-  // estatica: nenhum arquivo de codigo contem API de ordem do NT8 nem funcao de envio de ordem
+test('I01 CAMINHOS DE ORDEM: API NT8 so no caminho MANUAL (clique); robot binding isolado; Node/web/agente sem ordem', () => {
+  // estatica: API de ordem do NT8 aparece em UM arquivo so (IjcManualOrders.cs), e so criar+enviar (sem cancel/change/flatten/ATM)
   const NT8_ORDER_API = /CreateOrder|SubmitOrder|\.Submit\(|Account\.(Change|Cancel|Flatten)|\b[a-z]\.(Change|Cancel|Submit)\(|Flatten|\bAtm[A-Z]|EnterLong|EnterShort|ExitLong|ExitShort|OrderAction\.|CancelAllOrders|:5152/;
-  for (const f of NT8) assert.ok(!NT8_ORDER_API.test(strip(readFileSync(f, 'utf8'))), path.relative(REPO_ROOT, f));
+  const withApi = NT8.filter((f) => NT8_ORDER_API.test(strip(readFileSync(f, 'utf8')))).map((f) => path.basename(f));
+  assert.deepEqual(withApi, ['IjcManualOrders.cs']);
+  const man = strip(readFileSync(NT8.find((f) => f.endsWith('IjcManualOrders.cs')), 'utf8'));
+  assert.equal((man.match(/\.CreateOrder\(/g) || []).length, 1);
+  assert.equal((man.match(/\.Submit\(/g) || []).length, 1);
+  assert.match(man, /OrderEntry\.Manual/);
+  assert.doesNotMatch(man, /OrderEntry\.Automated|\.Cancel\(|\.Change\(|Flatten|Atm|CancelAllOrders|EnterLong|ExitLong/);
+  assert.match(man, /string name = IjcOrigin\.NewManualName\(\);/);                 // origin MANUAL_OPERATOR, prefixo IJC-MANUAL|
+  assert.doesNotMatch(man, /IjcHttp|IjcExecutor|127\.0\.0\.1|359[0-2]|Timer|new Thread|Task\.Run|JObject/); // independe de bridge/Node/robot/agente
+  // o controlador so e chamado pelo clique BUY/SELL da janela
+  const all = NT8.map((f) => [path.basename(f), strip(readFileSync(f, 'utf8'))]);
+  const calls = all.flatMap(([f, s]) => (s.match(/manual\.Click\(/g) || []).map(() => f));
+  assert.deepEqual(calls, ['IjcControlCenterWindow.cs']);
+  const win = all.find(([f]) => f === 'IjcControlCenterWindow.cs')[1];
+  assert.equal((win.match(/OnManualClick\(IjcTicketValidator\.(Buy|Sell)\)/g) || []).length, 2);
+  assert.match(win, /buyBtn\.Click \+= \(s, e\) => OnManualClick\(IjcTicketValidator\.Buy\);/);
+  assert.match(win, /sellBtn\.Click \+= \(s, e\) => OnManualClick\(IjcTicketValidator\.Sell\);/);
+  // Node (bridge/web/robot/agente): nenhuma funcao de envio de ordem
   const NODE_ORDER_FN = /\b(sendOrder|placeOrder|submitOrder|executeTrade|createOrder|flattenAll|\/orders?\b['"`]|:5152)/i;
   for (const f of SRC) assert.ok(!NODE_ORDER_FN.test(strip(readFileSync(f, 'utf8'))), path.relative(REPO_ROOT, f));
-  // runtime: travas congeladas, caminho HARD_DISABLED, intents vazias, decisao NONE
+  // ROBOT: binding de ordem isolado (recusa do ambiente, 24/09) — intents vazias, fila recusa, decisao NONE
   assert.equal(SAFETY.JEV_CAN_SEND_ORDER, false);
   assert.equal(ORDER_PATH.state, 'HARD_DISABLED');
   const cs = readFileSync(path.join(REPO_ROOT, 'nt8', 'AddOns', 'InvictusJevCode', 'IjcPure.cs'), 'utf8');

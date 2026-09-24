@@ -1,14 +1,20 @@
-// INVICTUS JEV CODE — pecas PURAS do AddOn (sem tipos do NinjaTrader): testaveis fora do NT8 (nt8/check/IjcPureTests).
-// CODIGO-FONTE NO REPOSITORIO: NAO instalado no NT8, NAO compilado no NT8 (F5 NOT PERFORMED).
+// INVICTUS JEV CODE by ALFA OMEGA — pecas PURAS do AddOn (sem tipos do NinjaTrader): testaveis fora do NT8 (nt8/check/IjcPureTests).
+// CODIGO-FONTE NO REPOSITORIO ate a instalacao controlada (F5 unico pelo operador).
+//
+// Dois caminhos de ordem INDEPENDENTES:
+//  - MANUAL (IjcManualOrders.cs): clique explicito do operador -> conta SELECIONADA. Validacao/anti-double-submit aqui (puros).
+//  - ROBOT (IjcExecutor.cs): IjcSafety.JEV_CAN_SEND_ORDER / ORDER_PATH valem SO para o robo. Remover essa trava do robo
+//    foi RECUSADO pelo ambiente de implementacao em 24/09 (ROBOT_ORDER_BINDING = PENDING_ENVIRONMENT_REFUSAL, isolado);
+//    nao e regra de produto. Com decisao NONE (0 regras de lado ativas) o robo nao teria acao de qualquer forma.
 //
 // Padroes reutilizados do Invictus anterior (REUSE_PATTERN / REUSE_CODE_CANDIDATE, ver handoff de arquitetura):
-//  - conta: so Simulator/Playback, decidido pelo PROPRIO NT8 (AoRoboGuard ORIGINAL de 18/08; NAO a versao reduzida de 03/09);
-//  - prefixo de propriedade com pipe e comparacao Ordinal ("IJC|"; licao AO x AoBoleta);
+//  - gate de conta do ROBOT: so Simulator/Playback (estado herdado, ver acima); a boleta MANUAL usa a conta selecionada;
+//  - prefixos de propriedade com pipe e comparacao Ordinal ("IJC-ROBOT|" / "IJC-MANUAL|"; licao AO x AoBoleta);
 //  - HTTP por chamada (HttpWebRequest, Proxy=null, KeepAlive=false) — nunca HttpClient estatico (incidente de socket no NT8);
 //  - parse numerico invariante de cultura (licao AoJsonNum, maquina pt-BR);
 //  - log de diagnostico em ARQUIVO (licao AoDiag: Print nao persiste);
 //  - maquina de ordem monotonica R1/R2/R3 e dedup persistido (AoRoboOrderState / AoRoboDedup).
-// NESTE BUILD NAO EXISTE CAMINHO DE ORDEM: IjcExecutionStub devolve HARD_DISABLED e nao referencia API de ordem.
+// ROBOT: IjcExecutionStub devolve HARD_DISABLED e nao referencia API de ordem (binding do robo isolado, ver acima).
 #region Using declarations
 using System;
 using System.Collections.Generic;
@@ -25,15 +31,39 @@ namespace NinjaTrader.NinjaScript.AddOns.InvictusJevCode
 {
 	public static class IjcSafety
 	{
-		public const bool JEV_CAN_SEND_ORDER = false;           // constante: nenhuma config/botao/endpoint/agente muda isto
+		// ROBOT somente (binding de execucao do robo isolado; ver cabecalho). NAO se aplica a boleta manual.
+		public const bool JEV_CAN_SEND_ORDER = false;
 		public const string ORDER_PATH = "HARD_DISABLED";
-		public const string OrderPrefix = "IJC|";                // fonte unica do prefixo de propriedade
+		public const string OrderPrefix = IjcOrigin.RobotPrefix;  // prefixo de propriedade do ROBOT
 		public const string ProductName = "INVICTUS JEV CODE";
+		public const string Brand = "by ALFA OMEGA";
+	}
+
+	/// <summary>Origem das ordens e nomes. Manual e Robot nunca compartilham prefixo.</summary>
+	public static class IjcOrigin
+	{
+		public const string Manual = "MANUAL_OPERATOR";
+		public const string Robot = "JEV_ROBOT";
+		public const string Foreign = "FOREIGN";
+		public const string ManualPrefix = "IJC-MANUAL|";
+		public const string RobotPrefix = "IJC-ROBOT|";
+		public const int MaxOrderNameLen = 50;                    // limite rigido do nome de ordem no NT8 (licao AlfaOmegaTrader)
+
+		public static string OwnerOf(string orderName)
+		{
+			if (orderName == null) return Foreign;
+			if (orderName.StartsWith(RobotPrefix, StringComparison.Ordinal)) return Robot;
+			if (orderName.StartsWith(ManualPrefix, StringComparison.Ordinal)) return Manual;
+			return Foreign;
+		}
+
+		/// <summary>Nome unico da ordem manual: "IJC-MANUAL|" + 16 hex (27 chars &lt;= 50).</summary>
+		public static string NewManualName() { return ManualPrefix + Guid.NewGuid().ToString("N").Substring(0, 16); }
 	}
 
 	public static class IjcGuard
 	{
-		/// <summary>true SO para conta que o NinjaTrader classifica como Simulator ou Playback. Nome exato, Ordinal; nulo/vazio => false.</summary>
+		/// <summary>Gate de conta do ROBOT (estado herdado, isolado): Simulator/Playback, Ordinal; nulo/vazio => false. Nao se aplica a boleta manual.</summary>
 		public static bool IsEligibleProvider(string providerName)
 		{
 			if (string.IsNullOrEmpty(providerName)) return false;
@@ -41,14 +71,212 @@ namespace NinjaTrader.NinjaScript.AddOns.InvictusJevCode
 				|| string.Equals(providerName, "Playback", StringComparison.Ordinal);
 		}
 
-		/// <summary>Ordem pertence ao INVICTUS JEV CODE? Comparacao Ordinal sobre "IJC|" (o pipe faz parte do prefixo).</summary>
+		/// <summary>Tipo da conta para EXIBICAO, a partir do Provider real do NT8 (nunca do nome): SIM | LIVE | UNKNOWN.</summary>
+		public static string AccountKind(string providerName)
+		{
+			if (string.IsNullOrEmpty(providerName)) return "UNKNOWN";
+			return IsEligibleProvider(providerName) ? "SIM" : "LIVE";
+		}
+
+		/// <summary>Ordem pertence ao ROBOT? Ordinal sobre "IJC-ROBOT|". Ordens "IJC-MANUAL|" NUNCA sao do robo.</summary>
 		public static bool IsRobotOrderName(string name)
 		{
-			return name != null && name.StartsWith(IjcSafety.OrderPrefix, StringComparison.Ordinal);
+			return name != null && name.StartsWith(IjcOrigin.RobotPrefix, StringComparison.Ordinal);
+		}
+
+		public static bool IsManualOrderName(string name)
+		{
+			return name != null && name.StartsWith(IjcOrigin.ManualPrefix, StringComparison.Ordinal);
+		}
+	}
+
+	/// <summary>Conta ESCOLHIDA PELO OPERADOR (OPERATOR_SELECTED): fonte unica para PNL, posicao, boleta manual e report do robo.
+	/// Nunca autoescolhida, nunca persistida entre reinicios (nasce null).</summary>
+	public static class IjcSession
+	{
+		private static volatile string selectedAccount;
+		public static string SelectedAccount { get { return selectedAccount; } set { selectedAccount = string.IsNullOrEmpty(value) ? null : value; } }
+	}
+
+	// ── BOLETA MANUAL (puro) ─────────────────────────────────────────────────────────────────────────
+	/// <summary>Rascunho da boleta (estado de UI compartilhado Full/Compact). Nunca persistido como comando.</summary>
+	public class IjcTicketDraft
+	{
+		public string Account;
+		public string Instrument;
+		public int Quantity = 1;
+		public string OrderType = IjcTicketValidator.Market;
+		public double? LimitPrice;
+		public IjcTicketDraft Clone() { return (IjcTicketDraft)MemberwiseClone(); }
+	}
+
+	public class IjcTicketInput
+	{
+		public string Side, Account, Connection, Instrument, OrderType;
+		public bool AccountFound, InstrumentFound;
+		public double TickSize;
+		public int Quantity;
+		public double? LimitPrice;
+	}
+
+	public static class IjcTicketValidator
+	{
+		public const string Buy = "BUY", Sell = "SELL", Market = "MARKET", Limit = "LIMIT";
+
+		/// <summary>Validacoes TECNICAS apenas (sem politica baseada em contexto JEV). Lista vazia = valida.</summary>
+		public static List<string> Validate(IjcTicketInput t)
+		{
+			var e = new List<string>();
+			if (t == null) { e.Add("NO_INPUT"); return e; }
+			if (t.Side != Buy && t.Side != Sell) e.Add("SIDE_INVALID");
+			if (string.IsNullOrEmpty(t.Account)) e.Add("NO_ACCOUNT");
+			else if (!t.AccountFound) e.Add("ACCOUNT_NOT_FOUND");
+			else if (t.Connection != "Connected") e.Add("ACCOUNT_DISCONNECTED");
+			if (string.IsNullOrWhiteSpace(t.Instrument)) e.Add("NO_INSTRUMENT");
+			else if (!t.InstrumentFound) e.Add("INSTRUMENT_INVALID");
+			if (t.Quantity <= 0) e.Add("QUANTITY_INVALID");
+			if (t.OrderType != Market && t.OrderType != Limit) e.Add("ORDER_TYPE_INVALID");
+			if (t.OrderType == Limit)
+			{
+				if (!t.LimitPrice.HasValue || double.IsNaN(t.LimitPrice.Value) || double.IsInfinity(t.LimitPrice.Value) || t.LimitPrice.Value <= 0) e.Add("LIMIT_PRICE_REQUIRED");
+				else if (t.InstrumentFound && !OnTick(t.LimitPrice.Value, t.TickSize)) e.Add("LIMIT_PRICE_OFF_TICK");
+			}
+			return e;
+		}
+
+		public static bool OnTick(double price, double tick)
+		{
+			if (!(tick > 0)) return false;
+			double n = price / tick;
+			return Math.Abs(n - Math.Round(n)) < 1e-6;
+		}
+
+		/// <summary>Parse invariante do preco limite digitado ("7635.25" ou "7635,25"). Vazio/invalido => null.</summary>
+		public static double? ParsePrice(string s)
+		{
+			if (string.IsNullOrWhiteSpace(s)) return null;
+			double v;
+			return double.TryParse(s.Trim().Replace(',', '.'), NumberStyles.Float, CultureInfo.InvariantCulture, out v) ? (double?)v : null;
+		}
+	}
+
+	/// <summary>Anti-double-submit: no maximo UMA ordem manual em voo. Libera so com evento real do NT8 (estado alem de
+	/// Initialized) ou apos o timeout — e nesse caso o estado vira UNCONFIRMED; NUNCA ha reenvio automatico.</summary>
+	public class IjcSubmitGate
+	{
+		public const int MinIntervalMs = 750;       // cliques repetidos (duplo clique) dentro deste intervalo sao ignorados
+		public const int InFlightTimeoutMs = 5000;
+		private readonly object sync = new object();
+		private bool inFlight;
+		private DateTime startedUtc = DateTime.MinValue;
+		private DateTime lastClickUtc = DateTime.MinValue;
+
+		public bool InFlight(DateTime nowUtc)
+		{
+			lock (sync) { return inFlight && (nowUtc - startedUtc).TotalMilliseconds < InFlightTimeoutMs; }
+		}
+
+		public bool TryBegin(DateTime nowUtc, out string reason)
+		{
+			lock (sync)
+			{
+				reason = null;
+				if ((nowUtc - lastClickUtc).TotalMilliseconds < MinIntervalMs) { reason = "clique repetido em < " + MinIntervalMs + " ms ignorado"; return false; }
+				lastClickUtc = nowUtc;
+				if (inFlight && (nowUtc - startedUtc).TotalMilliseconds < InFlightTimeoutMs) { reason = "ordem manual anterior ainda sem confirmacao do NT8"; return false; }
+				inFlight = true; startedUtc = nowUtc;
+				return true;
+			}
+		}
+
+		/// <summary>Estado real vindo do NT8. Qualquer estado alem de Initialized confirma que a ordem saiu: libera novo clique.</summary>
+		public void OnOrderState(string orderState)
+		{
+			if (orderState == null || orderState == "Initialized") return;
+			lock (sync) { inFlight = false; }
+		}
+
+		public void Release() { lock (sync) { inFlight = false; } }
+
+		public static bool IsTerminalState(string s) { return s == "Filled" || s == "Cancelled" || s == "Rejected"; }
+	}
+
+	// ── PNL / POSICAO (puro) ─────────────────────────────────────────────────────────────────────────
+	/// <summary>PNL da conta selecionada. Fonte: NT8 Account.Get(AccountItem.*, Account.Denomination). Nunca o motor JEV.
+	/// REALIZED = AccountItem.RealizedProfitLoss · OPEN = AccountItem.UnrealizedProfitLoss · PNL = REALIZED + OPEN (so com ambos).
+	/// Ausente => null (exibido como NOT_REPORTED), nunca 0 fabricado.</summary>
+	public class IjcPnlView
+	{
+		public string Status;            // NO_ACCOUNT | OFFLINE | AVAILABLE | PARTIAL | NOT_REPORTED
+		public string Currency;
+		public double? Pnl, Realized, Open;
+
+		public static IjcPnlView Compose(bool accountSelected, bool connected, double? realized, double? unrealized, string currency)
+		{
+			var v = new IjcPnlView { Currency = currency };
+			if (!accountSelected) { v.Status = "NO_ACCOUNT"; return v; }
+			if (!connected) { v.Status = "OFFLINE"; return v; }
+			if (currency == null) { v.Status = "NOT_REPORTED"; return v; }
+			v.Realized = realized; v.Open = unrealized;
+			v.Pnl = realized.HasValue && unrealized.HasValue ? realized.Value + unrealized.Value : (double?)null;
+			v.Status = v.Pnl.HasValue ? "AVAILABLE" : (realized.HasValue || unrealized.HasValue ? "PARTIAL" : "NOT_REPORTED");
+			return v;
+		}
+
+		public double? Metric(string tab) { return tab == "REALIZED" ? Realized : tab == "OPEN" ? Open : Pnl; }
+
+		/// <summary>+1,234.50 / −1,234.50 / 0.00; ausente => NOT_REPORTED.</summary>
+		public static string Money(double? v)
+		{
+			if (!v.HasValue) return "NOT_REPORTED";
+			if (v.Value == 0) return "0.00";
+			return (v.Value > 0 ? "+" : "−") + Math.Abs(v.Value).ToString("#,0.00", CultureInfo.InvariantCulture);
+		}
+	}
+
+	/// <summary>Posicao conta+instrumento. FLAT so com leitura valida de tamanho zero; sem leitura => UNKNOWN.</summary>
+	public class IjcPositionView
+	{
+		public string State;             // LONG | SHORT | FLAT | UNKNOWN
+		public string Reason;
+		public int? Size;
+		public double? AvgPrice, OpenPnl;
+
+		public static IjcPositionView Unknown(string reason) { return new IjcPositionView { State = "UNKNOWN", Reason = reason }; }
+
+		public static IjcPositionView From(bool valid, string marketPosition, int quantity, double avgPrice, double? openPnl)
+		{
+			if (!valid) return Unknown("NOT_REPORTED");
+			if (marketPosition == "Flat" || quantity == 0) return new IjcPositionView { State = "FLAT", Size = 0, AvgPrice = null, OpenPnl = openPnl.HasValue ? openPnl : 0 };
+			if (marketPosition == "Long") return new IjcPositionView { State = "LONG", Size = quantity, AvgPrice = avgPrice, OpenPnl = openPnl };
+			if (marketPosition == "Short") return new IjcPositionView { State = "SHORT", Size = quantity, AvgPrice = avgPrice, OpenPnl = openPnl };
+			return Unknown("MARKET_POSITION_UNKNOWN");
 		}
 	}
 
 	/// <summary>Contrato futuro de execucao. Neste build: todo metodo devolve HARD_DISABLED e nao toca conta nem ordem.</summary>
+	/// <summary>Boleta manual vista pela janela. Implementacoes: IjcManualOrderController (IjcManualOrders.cs, com IJC_MANUAL_ORDERS)
+	/// e IjcManualOrdersDeferred (lote de instalacao sem a boleta: nunca envia).</summary>
+	public interface IIjcManualOrders : IDisposable
+	{
+		bool Available { get; }
+		string Status { get; }
+		string Detail { get; }
+		bool InFlight { get; }
+		string Click(string side, IjcTicketDraft d);
+	}
+
+	/// <summary>MANUAL_ORDER_INSTALLATION = DEFERRED: a boleta nao faz parte deste lote de instalacao; o clique nao envia nada.</summary>
+	public sealed class IjcManualOrdersDeferred : IIjcManualOrders
+	{
+		public bool Available { get { return false; } }
+		public string Status { get { return "DEFERRED"; } }
+		public string Detail { get { return "boleta nao instalada neste lote"; } }
+		public bool InFlight { get { return false; } }
+		public string Click(string side, IjcTicketDraft d) { return "DEFERRED"; }
+		public void Dispose() { }
+	}
+
 	public static class IjcExecutionStub
 	{
 		public static string SubmitIntent(string intentId, string snapshotId) { return IjcSafety.ORDER_PATH; }
@@ -145,6 +373,27 @@ namespace NinjaTrader.NinjaScript.AddOns.InvictusJevCode
 
 		public static void Log(string evt, string severity, string reason, string rateKey = null, string state = null, string snapshotId = null)
 		{
+			Write(evt, severity, reason, rateKey, state, snapshotId, null, null);
+		}
+
+		/// <summary>Auditoria de ordem: origin (MANUAL_OPERATOR | JEV_ROBOT) + nome da ordem. Sem conta/token no log.</summary>
+		public static void LogOrder(string evt, string severity, string origin, string orderName, string reason)
+		{
+			Write(evt, severity, reason, null, null, null, origin, orderName);
+		}
+
+		public static JObject Record(DateTime now, string evt, string severity, string reason, string state, string snapshotId, string origin, string orderName)
+		{
+			return new JObject
+			{
+				{ "ts", now.ToString("o", CultureInfo.InvariantCulture) }, { "component", "nt8-addon" }, { "event", evt }, { "severity", severity },
+				{ "snapshot_id", snapshotId }, { "intention_id", null }, { "state", state }, { "origin", origin }, { "order_name", orderName },
+				{ "reason", reason == null ? null : (reason.Length > 500 ? reason.Substring(0, 500) : reason) }
+			};
+		}
+
+		private static void Write(string evt, string severity, string reason, string rateKey, string state, string snapshotId, string origin, string orderName)
+		{
 			try
 			{
 				DateTime now = DateTime.UtcNow;
@@ -158,11 +407,7 @@ namespace NinjaTrader.NinjaScript.AddOns.InvictusJevCode
 					}
 					if (string.IsNullOrEmpty(LogDir)) return;
 					Directory.CreateDirectory(LogDir);
-					JObject rec = new JObject
-					{
-						{ "ts", now.ToString("o", CultureInfo.InvariantCulture) }, { "component", "nt8-addon" }, { "event", evt }, { "severity", severity },
-						{ "snapshot_id", snapshotId }, { "intention_id", null }, { "state", state }, { "reason", reason == null ? null : (reason.Length > 500 ? reason.Substring(0, 500) : reason) }
-					};
+					JObject rec = Record(now, evt, severity, reason, state, snapshotId, origin, orderName);
 					File.AppendAllText(Path.Combine(LogDir, "nt8-" + now.ToString("yyyy-MM", CultureInfo.InvariantCulture) + ".jsonl"), rec.ToString(Formatting.None) + "\n");
 				}
 			}

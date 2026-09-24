@@ -35,16 +35,16 @@ test('B06 Control Center: identidade INVICTUS JEV CODE, abas/status do Codex, so
   assert.ok(!/probability"?\s*:|chance|%\s*(long|short)/i.test(r.body), 'sem probabilidade');
 });
 
-test('B09 NT8 AddOn INVICTUS JEV CODE (source-only): nenhum caminho de ordem, robo travado, rede so loopback, HttpWebRequest por chamada', () => {
+test('B09 NT8 AddOn INVICTUS JEV CODE V2: API de ordem so no caminho manual, robo isolado, rede so loopback, HttpWebRequest por chamada', () => {
   const dir = path.join(REPO_ROOT, 'nt8', 'AddOns', 'InvictusJevCode');
   const files = readdirSync(dir).filter((f) => f.endsWith('.cs'));
-  assert.deepEqual(files.sort(), ['IjcAddOn.cs', 'IjcControlCenterWindow.cs', 'IjcExecutor.cs', 'IjcPure.cs']);
+  assert.deepEqual(files.sort(), ['IjcAddOn.cs', 'IjcControlCenterWindow.cs', 'IjcExecutor.cs', 'IjcManualOrders.cs', 'IjcPure.cs']);
   assert.ok(!readdirSync(path.join(REPO_ROOT, 'nt8', 'AddOns')).includes('JevControlCenter.cs'), 'AddOn preliminar substituido');
   const strip = (s) => s.replace(/^\s*\/\/.*$/gm, '').replace(/\s\/\/\s.*$/gm, '');
   const all = files.map((f) => [f, strip(readFileSync(path.join(dir, f), 'utf8'))]);
   const ORDER_API = /CreateOrder|SubmitOrder|\.Submit\(|Account\.(Change|Cancel|Flatten)|\b[a-z]\.(Change|Cancel|Submit)\(|Flatten|\bAtm[A-Z]|EnterLong|EnterShort|ExitLong|ExitShort|OrderAction\.|CancelAllOrders/;
   for (const [f, code] of all) {
-    assert.ok(!ORDER_API.test(code), f + ': API de ordem');
+    if (f !== 'IjcManualOrders.cs') assert.ok(!ORDER_API.test(code), f + ': API de ordem fora do caminho manual');
     assert.ok(!/HttpClient\b/.test(code), f + ': HttpClient');
     const urls = code.match(/https?:\/\/[^"\s]+/g) || [];
     // o prefixo literal "http://127.0.0.1:" e a propria trava de loopback do IjcHttp
@@ -62,12 +62,14 @@ test('B09 NT8 AddOn INVICTUS JEV CODE (source-only): nenhum caminho de ordem, ro
   assert.match(pure, /"Simulator", StringComparison\.Ordinal/);
   assert.match(pure, /"Playback", StringComparison\.Ordinal/);
   const win = get('IjcControlCenterWindow.cs');
-  assert.match(win, /Content = "🔒 ON", IsChecked = false, IsEnabled = false/);
   assert.match(win, /Task\.Run\(\(\) => PollLoop/);
-  assert.match(win, /Caption = IjcSafety\.ProductName/);
-  // a janela so LE bridge/agente: nenhuma requisicao ao control plane nem uso do token (3591 aparece so como texto em Settings)
+  assert.match(win, /Task\.Run\(\(\) => AccountLoop/);                 // conta/PNL em laco proprio, independente do bridge
+  assert.match(win, /Caption = IjcSafety\.ProductName \+ " · " \+ IjcSafety\.Brand/);
+  // a janela so LE bridge/agente; o control plane so e tocado via IjcExecutor.RobotControl (OFF/ON do robo), nunca pela boleta
   const winUrls = (win.match(/const string \w+Url = "[^"]+"/g) || []).join(' ');
-  assert.ok(!/3591/.test(winUrls) && !/[^A-Za-z]Token\(\)|X-IJC-Token|TokenPath|IjcHttp\.Request\("POST"/.test(win), 'a janela nao fala com o control plane nesta versao');
+  assert.ok(!/3591/.test(winUrls) && !/[^A-Za-z]Token\(\)|X-IJC-Token|TokenPath|IjcHttp\.Request\("POST"/.test(win), 'a janela nao faz POST direto');
+  assert.equal((win.match(/IjcExecutor\.RobotControl\(/g) || []).length, 1);
+  assert.match(pure, /public const string ORDER_PATH = "HARD_DISABLED";/);   // trava do ROBOT (binding isolado)
   const ex = get('IjcExecutor.cs');
   assert.match(ex, /IsBackground = true/);
   assert.match(ex, /lock \(Account\.All\) \{ snap = Account\.All\.ToArray\(\); \}/);

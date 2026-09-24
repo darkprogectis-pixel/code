@@ -1,0 +1,378 @@
+# HANDOFF — INVICTUS JEV CODE · NT8 READ-ONLY INSTALLATION PREPARATION (24/09/2026)
+
+Autocontido. Continua `handoffs/HANDOFF_INVICTUS_JEV_CODE_V1_20260924.md` (Fronts A/B/C concluídos, não reabertos).
+Partida: `7e61960`. Fase: **preparar** a instalação read-only do AddOn no NT8. **Nada foi copiado para o NT8 e o F5 não foi feito.**
+
+| | |
+|---|---|
+| 3A CONFLICT AUDIT | **PASS** (1 risco real encontrado e corrigido só no código IJC, ver §1.3) |
+| EXTERNAL BUILD | **PASS**: isolado 0 erros / 0 avisos; shadow-compile com toda a produção: delta 0 / 0 |
+| INSTALL DESTINATION | `C:\Users\ADM\Documents\NinjaTrader 8\bin\Custom\AddOns\InvictusJevCode\` (hoje **ABSENT**) |
+| BACKUP PLAN / HASH MANIFEST / ROLLBACK | **READY** (ensaio completo em sandbox: PASS, rollback byte-exato em 468 arquivos) |
+| JEV_CAN_SEND_ORDER / ORDER_PATH | `false` / `HARD_DISABLED` (constantes, C# e Node) |
+| NO LIVE ORDER PATH · SIM/PLAYBACK ONLY · REAL ACCOUNT | PASS · PASS · REJECTED |
+| PRODUCTION | **UNCHANGED** (bin\Custom: csproj/DLL/PDB/XML ainda com a data de 22/09 18:21–18:22; pasta alvo ausente; 0 entradas IJC no csproj) |
+| FILES COPIED TO NT8 | **0** |
+| F5 | **NOT PERFORMED** |
+| READY FOR CONTROLLED INSTALL | **YES** (a execução exige ordem do operador e NT8 fechado) |
+
+## 1. CONFLICT AUDIT (3a, somente leitura)
+
+Alvo: `bin\Custom` do NT8 8.1.8.1, com 456 `.cs` compilados (lista explícita no `NinjaTrader.Custom.csproj`, `EnableDefaultCompileItems=false`) e 13 DLLs de terceiros na raiz.
+
+### 1.1 Resultado
+
+| Item | Resultado | Evidência |
+|---|---|---|
+| NAMESPACE COLLISION | **PASS** | `NinjaTrader.NinjaScript.AddOns.InvictusJevCode` não aparece em nenhum `.cs` de produção nem nas DLLs da raiz de `Custom`. Nenhum tipo chamado `InvictusJevCode` em `NinjaTrader.NinjaScript.AddOns`. |
+| TYPE COLLISION | **PASS** | Os 16 tipos `Ijc*` (`IjcRuntime`, `IjcAddOn`, `IjcControlCenterWindow`, `IjcExecutor`, `IjcSafety`, `IjcGuard`, `IjcExecutionStub`, `IjcJson`, `IjcHttp`, `IjcDiag`, `IjcOrderPhase`, `IjcOrderTrack`, `IjcDedup`, `IjcAccountDto`, `IjcOrderDto`, `IjcReconResult`, `IjcOwnership`) não aparecem na produção nem nas DLLs. Não há `partial`. O shadow-compile confirma: 0 erros novos (CS0101/CS0104/CS0436 seriam os sintomas). |
+| AddOnBase / NTWindow / menu | **PASS** | 1 `AddOnBase` (`IjcAddOn`) e 1 `NTWindow` (`IjcControlCenterWindow`). O menu entra em `ControlCenterMenuItemNew` com o Header `INVICTUS JEV CODE`. Os menus de produção são "Alfa Omega" (2×), "Copy Engine", "Alfa Omega Copilot" e "Historico", então não há duplicata. Sem `IWorkspacePersistence`: a janela não é salva no workspace. |
+| Resources | **PASS** | O AddOn não usa `.resx`, `pack://` nem `Resource.*`. |
+| Portas / arquivos em runtime | **PASS** | Nenhum `.cs` de produção usa 3590/3591/3592. Logs em `Documents\NinjaTrader 8\invictus-jev-code\logs`, token em `%LOCALAPPDATA%\InvictusJevCode\secrets`. Nada é gravado em `bin\Custom`. |
+| OLD JEV ADDON COLLISION | **PASS** | `JevControlCenter.cs` saiu do repo em `7e61960` e nunca foi instalado. Não existe `*JevControl*` nem `*InvictusJev*` em `Documents\NinjaTrader 8`. |
+| DEPENDENCY COLLISION | **PASS** | O payload usa só referências que o csproj real já tem: `NinjaTrader.Core`, `NinjaTrader.Gui`, `Newtonsoft.Json` (a cópia em `bin\Custom`, usada no shadow-compile), WPF e `System` (`HttpWebRequest`). Nenhuma DLL nova, nenhum `PackageReference` novo. |
+| COMPILE RISK | **LOW** | O shadow-compile do `NinjaTrader.Custom` real com o payload dá 0 erros e 0 avisos novos. O csproj pós-instalação (sandbox) compila tal como está. O que sobra: o NT8 compila com o próprio Roslyn (LangVersion 13) e o shadow com o SDK 8 (`latest`=12). O payload é C# 7.3 (check.csproj), então essa diferença não afeta o código IJC. |
+
+### 1.2 Método
+
+- `nt8/install/shadow-compile.mjs` lê o `NinjaTrader.Custom.csproj` real e aponta cada `<Compile>` para o `.cs` real pelo caminho absoluto (somente leitura). Compila numa pasta temporária duas vezes: **BASELINE** (produção como está: exit 0, 0 erros, 3009 avisos pré-existentes) e **WITH_IJC** (produção + 4 arquivos: exit 0, 0 erros, 3009 avisos, **delta 0**, 0 diagnósticos em arquivos IJC). A DLL-sombra com IJC contém `IjcAddOn`; a baseline não.
+- `--as-is`: compila o csproj de uma sandbox **depois** do `03-install.ps1`, com as 4 linhas `<Compile>` inseridas pelo script. Resultado: exit 0, 0 erros, 0 diagnósticos IJC.
+
+### 1.3 Risco real encontrado e corrigido (só no código IJC)
+
+O `AssemblyInfo.cs` do NT8 declara `[assembly: CLSCompliant(true)]`, e os 6 campos `public static volatile` de `IjcExecutor` (`State`, `ControlPlaneStatus`, `ReconStatus`, `Orphans`, `AccountsEligible`, `AccountsReported`) gerariam **6 avisos CS3026 no F5**. O build isolado não pegava porque não tinha esse atributo.
+**Correção:** os campos voláteis viraram privados e ganharam propriedades públicas com `private set`, sem mudança de comportamento. A janela só lê esses valores.
+Arquivo: `nt8/AddOns/InvictusJevCode/IjcExecutor.cs`. Produção não foi tocada.
+
+## 2. EXTERNAL BUILD RESULT (revalidado contra as DLLs atuais do NT8 8.1.8.1)
+
+| Verificação | Resultado |
+|---|---|
+| `npm run check:nt8` (4 arquivos, DLLs reais, C# 7.3) | **0 erros / 0 avisos** |
+| `node nt8/install/shadow-compile.mjs` (produção inteira + IJC) | **PASS**: delta 0 erros / 0 avisos |
+| `shadow-compile --as-is` (csproj pós-instalação) | **PASS** |
+| `npm run test:nt8` (C#) | 50/50 PASS |
+| `npm test` (Node) | **78/78** PASS (75 + N01–N03 novos) |
+| `npm run smoke` | SAFE_UNKNOWN PASS · NO_ORDER PASS |
+| Payload sem API de ordem (`.Submit(`, `CreateOrder(`, `.Cancel(<args>)`, `.Change(`, `.Flatten(`, `Enter*/Exit*`) | PASS (o único `Cancel()` é do `CancellationTokenSource` da janela) |
+| `JEV_CAN_SEND_ORDER = false`, `ORDER_PATH = "HARD_DISABLED"`, `IsEligibleProvider` ∈ {Simulator, Playback} Ordinal | PASS (checados também pelo `01-precheck.ps1`) |
+
+## 3. INSTALL PLAN
+
+Artefatos em `nt8/install/` (Windows PowerShell 5.1; `powershell -NoProfile -ExecutionPolicy Bypass -File ...`):
+
+| Script | Escreve? | Função |
+|---|---|---|
+| `Ijc-Nt8Common.ps1` | não | caminhos, SHA256, conjunto de backup, leitura do csproj |
+| `01-precheck.ps1 [-ForInstall]` | **não** | pasta alvo (ABSENT/PRESENT + inventário), entradas IJC no csproj, AddOn antigo, nomes IJC na produção, hash do payload == manifesto, sem API de ordem, travas, NT8 aberto/fechado, disco |
+| `02-backup.ps1` | só em `%LOCALAPPDATA%\InvictusJevCode\install-backups\<id>\` | backup + `pre-manifest.json` (SHA256) + re-hash da cópia ⇒ `verified` |
+| `03-install.ps1 -BackupId <id> -Confirm INSTALL-IJC [-WhatIf]` | **sim** (bin\Custom) | copia os 4 `.cs` e acrescenta 4 linhas `<Compile>` no csproj |
+| `04-verify.ps1 -BackupId <id> -Stage PreF5\|PostF5` | **não** | verificação pós-cópia / pós-F5 |
+| `05-rollback.ps1 -BackupId <id> -Confirm ROLLBACK-IJC [-WhatIf]` | **sim** (bin\Custom) | restauração integral |
+| `90-rehearsal.ps1 -Sandbox <dir>` | só na sandbox | ensaio completo fora do NT8 |
+| `ijc-payload-manifest.json` / `build-payload-manifest.mjs` | — | SHA256 do payload (manifesto: sha256 `3a84cf49…6c40`) |
+| `shadow-compile.mjs` | só em `%TEMP%` | compilação-sombra (§1.2) |
+
+O `03-install.ps1` recusa **sem escrever nada** quando:
+- o NinjaTrader está aberto;
+- o backup não existe, não está `verified` ou está corrompido;
+- `bin\Custom` mudou desde o backup;
+- o payload não bate com o manifesto ou contém API de ordem;
+- a pasta alvo já existe (sem `-ReplaceExisting`);
+- o csproj tem entradas IJC parciais;
+- falta `-Confirm INSTALL-IJC`.
+
+No csproj, as 4 linhas entram depois do último `<Compile>`, preservando BOM e CRLF. O XML é validado, e cada entrada tem que aparecer exatamente 1 vez. Se algo falhar depois da primeira escrita, o script roda `05-rollback` automaticamente.
+
+**Por que o csproj é editado:** no NT8 8.1 o `NinjaTrader.Custom.csproj` lista cada arquivo explicitamente. As instalações anteriores de produção seguiram o mesmo padrão (ex.: `csproj.bak-etapa6` → atual: só linhas `<Compile>` acrescentadas).
+
+**Por que NT8 fechado:** o NT8 observa `bin\Custom`. Copiar com ele aberto pode disparar uma compilação fora do F5 único. Além disso, o rollback precisa substituir a DLL, que fica em uso com o NT8 aberto.
+
+## 4. BACKUP PLAN
+
+- **Destino:** `%LOCALAPPDATA%\InvictusJevCode\install-backups\<yyyyMMdd-HHmmss>\files\` (fora de `bin\Custom`, então nunca é compilado).
+- **Conjunto** (tudo que o F5 lê ou grava; 468 arquivos hoje):
+  - `NinjaTrader.Custom.csproj` (o NT8 o **reescreve** no F5);
+  - `NinjaTrader.Custom.dll`, `.pdb`, `.xml`;
+  - os 8 satélites `<cultura>\NinjaTrader.Custom.resources.dll` (de-DE, es-ES, fr-FR, it-IT, ko-KR, pt-PT, ru-RU, zh-Hans);
+  - os 456 `.cs` compilados;
+  - `AddOns\InvictusJevCode\*`, se existir.
+
+  Esse conjunto foi levantado pelo F5 de 22/09, que gravou exatamente esses 12 arquivos de build.
+- **Fora do conjunto:**
+  - `bin\Custom\obj` (intermediários, não carregados pelo NT8);
+  - `AoClassicCache` e `graphify-out` (dados de runtime/ferramentas, alheios ao build);
+  - `bin\Custom\bin\Release` (parado desde jun/18).
+- **Pasta anterior `InvictusJevCode`:** **não existe** hoje (registrado pelo `01-precheck` e em `target_pre_state`). Se existir na hora de instalar, é inventariada, hasheada e salva antes de qualquer substituição.
+
+## 5. HASH MANIFEST
+
+- **Payload:** `nt8/install/ijc-payload-manifest.json` (SHA256 + tamanho dos 4 `.cs`). O teste N01 falha se o `.cs` e o manifesto divergirem; nesse caso rode `node nt8/install/build-payload-manifest.mjs`. O `.gitattributes` fixa `eol=lf` no payload, para que o `core.autocrlf=true` não mude os bytes.
+  - `IjcAddOn.cs` `de122011…f5b2`
+  - `IjcControlCenterWindow.cs` `43bd939b…cc7c`
+  - `IjcExecutor.cs` `013e822c…fffd`
+  - `IjcPure.cs` `771f20f5…d655`
+- **Pré-instalação:** `<backup>\pre-manifest.json` (path, size, sha256, mtime de cada arquivo do conjunto) com `verified=true` só quando 100% das cópias batem.
+- **Registros:** `install-record.json` e `rollback-record-<ts>.json` na pasta do backup.
+
+## 6. ROLLBACK PLAN
+
+`05-rollback.ps1 -BackupId <id> -Confirm ROLLBACK-IJC`, com o **NT8 fechado**:
+1. Confere se o backup continua íntegro. Se não estiver, aborta sem tocar em nada.
+2. **Não apaga nada:** tudo que sai de `bin\Custom` vai para `<backup>\quarantine-<ts>\`. Isso inclui a pasta `InvictusJevCode` (quando ela não existia antes), as versões pós-F5 de csproj/DLL/PDB/XML/satélites e qualquer arquivo extra.
+3. Restaura do backup todo arquivo do `pre-manifest` que esteja ausente ou alterado.
+4. Re-hasheia 100% do conjunto. Só dá PASS com diferença 0 e a pasta alvo de volta ao estado anterior.
+5. Ao reabrir, o NT8 carrega a DLL anterior, que é coerente com o csproj e os `.cs` restaurados. **Não precisa de F5 depois do rollback.**
+
+**Ensaio (`90-rehearsal.ps1`, sandbox copiada do `bin\Custom` real): PASS em 13/13 etapas.** Sequência:
+1. precheck;
+2. backup;
+3. install -WhatIf;
+4. recusa sem -Confirm;
+5. recusa com backup inexistente;
+6. install;
+7. recusa de install repetido;
+8. verify PreF5;
+9. verify PostF5 sem F5 ⇒ FAIL (esperado);
+10. F5 simulado (DLL + 8 satélites + csproj reescritos + log de start) e verify PostF5;
+11. rollback -WhatIf;
+12. recusa sem -Confirm;
+13. rollback.
+
+Diferença após o rollback: **0 arquivos, 0 extras** (468/468 hashes iguais ao original).
+
+## 7. CHECKLIST DO ÚNICO F5 (operador, depois da ordem de instalação)
+
+**Janela:** fechar o NT8 para a produção (robôs, Copy Engine, relays). Escolha um horário **sem posição aberta nem operação em andamento**.
+
+**A. Preparação (NT8 ainda aberto)**
+1. [ ] `npm test`, `npm run check:nt8`, `npm run test:nt8` e `node nt8/install/shadow-compile.mjs` ⇒ tudo PASS.
+2. [ ] `01-precheck.ps1` ⇒ PASS (`target_folder.state = ABSENT`, `csproj_ijc_entries.count = 0`).
+
+**B. Instalação (NT8 FECHADO)**
+3. [ ] Fechar o NinjaTrader por completo (o processo `NinjaTrader` não pode estar rodando).
+4. [ ] `01-precheck.ps1 -ForInstall` ⇒ PASS.
+5. [ ] `02-backup.ps1` ⇒ PASS. **Anotar o `backup_id`.**
+6. [ ] `03-install.ps1 -BackupId <id> -WhatIf` ⇒ conferir o plano: 4 COPY + 4 linhas no csproj.
+7. [ ] `03-install.ps1 -BackupId <id> -Confirm INSTALL-IJC` ⇒ PASS.
+8. [ ] `04-verify.ps1 -BackupId <id> -Stage PreF5` ⇒ PASS.
+9. [ ] `npm run serve` (bridge `:3590` + control plane `:3591`) rodando.
+
+**C. O F5 único**
+10. [ ] Abrir o NT8. Se ele compilar sozinho ao abrir, **essa compilação é o F5 único**: não aperte F5 e pule para o item 12.
+11. [ ] NinjaScript Editor ⇒ **F5 uma única vez**. Não haverá segundo F5.
+12. [ ] Compilação do `NinjaTrader.Custom` concluída **sem erros** (painel do NinjaScript Editor e aba Log do Control Center).
+
+**D. Validação**
+13. [ ] Control Center → **New → INVICTUS JEV CODE** aparece no menu.
+14. [ ] A janela abre (480×960, identidade INVICTUS JEV CODE).
+15. [ ] Bridge `:3590` conectado (ENGINE/LIVE DATA sem OFFLINE).
+16. [ ] Analyzer atualiza (o `snapshot_id` muda a cada ciclo).
+17. [ ] `UNKNOWN` + `RC_NO_ACTIVE_DIRECTIONAL_RULE` aparecem. É o **estado normal** (0 regras de lado ativas), não é falha.
+18. [ ] Robot **OFF**; o botão **ON aparece bloqueado (🔒)** e desabilitado.
+19. [ ] Executor **READ_ONLY** (ou `WAITING_NT8` enquanto conecta); control plane `CONNECTED`; gate de conta FAIL é esperado (`selected_account=null` na V1).
+20. [ ] **Nenhuma ordem:** aba Orders sem nenhuma ordem nova e sem nenhum nome `IJC|`; posições inalteradas.
+21. [ ] `04-verify.ps1 -BackupId <id> -Stage PostF5` ⇒ PASS: DLL recompilada com os tipos IJC, `addon_start` no log, 0 `severity=error` em `Documents\NinjaTrader 8\invictus-jev-code\logs`.
+22. [ ] Aba Log do NT8 sem erro crítico vindo do IJC ou de qualquer outro AddOn.
+23. [ ] **Produção operacional:**
+    - menus Alfa Omega / Copy Engine / Alfa Omega Copilot / Historico presentes e abrindo;
+    - indicadores AlfaOmega carregam nos charts;
+    - relays e robôs de produção com o status de antes.
+
+**E. Critério de rollback**
+Se houver erro de compilação, qualquer ordem, log IJC com `error` ou anomalia de produção:
+1. fechar o NT8;
+2. rodar `05-rollback.ps1 -BackupId <id> -Confirm ROLLBACK-IJC` ⇒ PASS;
+3. reabrir o NT8 (**sem F5**).
+
+Não tente corrigir com um segundo F5.
+
+## 8. Decisões e pendências
+
+- **Decisão:** a instalação edita o `NinjaTrader.Custom.csproj`, com 4 linhas, backup e rollback. Nenhum outro arquivo de produção é alterado.
+- **Decisão:** backups ficam fora do NT8; o rollback manda para quarentena e nunca apaga.
+- **Pendente (ordem do operador):**
+  - executar B–E (cópia + F5 único);
+  - fazer o commit desta fase (arquivos abaixo, ainda **não commitados**).
+- **Arquivos novos desta fase:**
+  - `nt8/install/*`
+  - `test/ijc/nt8-install.test.mjs`
+  - `.gitattributes`
+  - este handoff
+  - edições em `nt8/AddOns/InvictusJevCode/IjcExecutor.cs`, `nt8/README.md`, `package.json`, `CLAUDE.md`
+- **Não tocados:**
+  - `START_JEV_CLAUDE.ps1`, `config/kimi-provider.json`, `context/jev-future/JEV_KIMI_PROVIDER_20260924.md`, `scripts/`;
+  - arquivos do Codex que apareceram durante a fase: `handoffs/HANDOFF_CODEX_INVICTUS_JEV_UI_V2_20260924.md`, `handoffs/assets/*V2*`.
+- **Continuam fora de escopo:** execução simulada (etapa 5), contas reais, fusão Core×JEV, agentes em caminho crítico.
+
+## 9. Próximo passo exato
+
+Com a ordem do operador: executar a seção 7 (B → C → D) numa janela sem posição aberta. Sucesso ⇒ registrar `PENDING_FINAL_NT8_COMPILE → NT8_COMPILED_READ_ONLY` com o `backup_id` e o resultado do `04-verify PostF5`. Falha ⇒ seção 7.E.
+
+## 10. ROTAÇÃO DE SESSÃO (24/09/2026)
+
+`JEV_ROTATION_REASON = HARD_CONTEXT_THRESHOLD_EXCEEDED`
+
+- **Estado exato:** a fase NT8 READ-ONLY INSTALL está **PREPARED** (§1–§7 válidos). A sessão de rotação só recuperou o estado: **nenhuma implementação, nenhum teste, nenhuma auditoria, nenhuma cópia para o NT8, nenhum F5.**
+- **Commit atual:** `7e61960` (`main`). Esta fase **não foi commitada**.
+- **Modificados (não commitados):** `CLAUDE.md`, `nt8/AddOns/InvictusJevCode/IjcExecutor.cs`, `nt8/README.md`, `package.json`.
+- **Untracked desta fase:** `.gitattributes`, `nt8/install/`, `test/ijc/nt8-install.test.mjs`, este handoff.
+- **Untracked de fora desta fase (não incluir no commit sem ordem):** `START_JEV_CLAUDE.ps1`, `config/kimi-provider.json`, `context/jev-future/JEV_KIMI_PROVIDER_20260924.md`, `scripts/`, `handoffs/HANDOFF_CODEX_INVICTUS_JEV_UI_V2_20260924.md`, `handoffs/assets/INVICTUS_JEV_CODE_{COMPACT,DASHBOARD}_V2_20260924.png`.
+- **Testes executados (fase de preparação, ver §2):** Node 78/78, C# 50/50, `check:nt8` com 0 erros / 0 avisos, shadow-compile com delta 0, shadow-compile `--as-is` PASS, smoke PASS, rehearsal 13/13 PASS. Nesta sessão de rotação: **nenhum**.
+- **Nenhum retrabalho necessário:** não reabrir as Fronts A/B/C nem a preparação. Conflict audit, build, scripts, backup, manifest e rollback estão prontos.
+- **Próximo passo exato (só com ordem do operador):**
+  1. commitar os arquivos desta fase;
+  2. executar a §7 (A → B → C → D) numa janela sem posição aberta: **um único F5**, rollback pela §7.E em caso de falha;
+  3. se der certo, registrar `PENDING_FINAL_NT8_COMPILE → NT8_COMPILED_READ_ONLY` com o `backup_id` e o resultado do `04-verify PostF5`.
+
+## 11. LOTE V2 — PRODUTO FINAL ANTES DO F5 (24/09/2026, EM ANDAMENTO · rotação por WARNING 230k)
+
+Partida `283c476`. Working tree da preparação NT8 preservado (nada descartado). **Nada commitado, nada copiado ao NT8, F5 NOT PERFORMED.**
+
+**Feito e testado:**
+- APIs NT8 confirmadas por reflection (`NinjaTrader.Core.dll` 8.1.8.1) + uso em produção (só leitura): `Account.CreateOrder(Instrument, OrderAction, OrderType, OrderEntry, TimeInForce, int, double, double, string, string, DateTime, CustomOrder)`, `Account.Submit(IEnumerable<Order>)`, `Account.Get(AccountItem, Currency)`, `Account.Denomination`, `Account.OrderUpdate`, `Position.GetUnrealizedProfitLoss(PerformanceUnit, double)`, `Instrument.GetInstrument(string,bool)`, `MasterInstrument.TickSize`, `ErrorCode.NoError`. Nome de ordem ≤ 50.
+- `nt8/AddOns/InvictusJevCode/IjcManualOrders.cs` (NOVO): caminho MANUAL (clique → `IjcManualOrderController` → conta selecionada → CreateOrder/Submit, `OrderEntry.Manual`, `TimeInForce.Day`, nome `IJC-MANUAL|<16hex>`), leitura de conta/PNL/posição (`IjcAccounts`).
+- `IjcPure.cs`: `IjcOrigin` (MANUAL_OPERATOR/JEV_ROBOT, prefixos `IJC-MANUAL|`/`IJC-ROBOT|`), `IjcSession.SelectedAccount`, `IjcTicketDraft/Input/Validator`, `IjcSubmitGate` (anti-double-submit 750 ms + 1 em voo, libera só por evento NT8, timeout 5 s sem reenvio), `IjcPnlView` (PNL=Realized+Unrealized só com ambos; ausente ⇒ NOT_REPORTED), `IjcPositionView`, `IjcDiag.LogOrder` (origin+order_name).
+- `IjcControlCenterWindow.cs` reescrita V2: FULL 1440×1000 / COMPACT 440×900, marca Alfa/Omega vetorial + "by ALFA OMEGA", seletor de conta (sem default), PNL grande com abas PNL/REALIZADO/ABERTO, boleta completa, posição, Robot separado (OFF/ON via `IjcExecutor.RobotControl` → gates), laço de conta independente do bridge.
+- `IjcExecutor.cs`: reporta `IjcSession.SelectedAccount`; prefixo robot `IJC-ROBOT|`; `RobotControl(enable|disable)`.
+- Node: `src/ijc/robot/constants.mjs` só ganhou ORIGIN/prefixos/`orderOwner`/`accountKind` (robot prefix `IJC-ROBOT|`).
+- Testes: `npm run check:nt8` 0 erros/0 avisos · C# **103/103** · Node: tudo PASS exceto **N01 (manifesto — regenerar)** · nova suíte `test/ijc/v2-product.test.mjs` 12/12; I01/B09 reescritos para o contrato V2.
+
+**RECUSA DO AMBIENTE (registrada, NÃO contornada):** a edição de `src/ijc/robot/gates.mjs` que removia `L0_SEND_ORDER_LOCK`/`ORDER_PATH` e trocava `ACCOUNT_SIMULATOR_OR_PLAYBACK` por `ACCOUNT_SELECTED` foi negada pelo classificador do Claude Code. Isolado: **ROBOT ORDER BINDING = PENDING_ENVIRONMENT_REFUSAL** (Robot mantém `JEV_CAN_SEND_ORDER=false`/`HARD_DISABLED`/gate Sim-Playback e `IjcExecutionStub`). Não é regra de produto. Com decisão NONE o robô não teria ação de qualquer forma. O caminho MANUAL foi aceito e implementado.
+
+**Próximo passo exato (nova sessão):**
+1. `nt8/install/Ijc-Nt8Common.ps1`: `$IjcForbidden` deve permitir `CreateOrder`/`.Submit(` SOMENTE em `IjcManualOrders.cs` (continuar proibindo Cancel/Change/Flatten/Enter*/Exit* em todos); `01-precheck.ps1` idem; `build-payload-manifest.mjs`: `order_path` → `{ manual: 'OPERATOR_CLICK', robot: 'HARD_DISABLED (binding isolado)' }` e ajustar N01; payload agora **5 arquivos** (5 linhas `<Compile>`: conferir 03/04/90 e N-tests).
+2. `npm run nt8:manifest` → `npm test`, `npm run test:nt8`, `npm run check:nt8`, `npm run smoke`, `npm run smoke:bridge`, `node nt8/install/shadow-compile.mjs` (+ `--as-is`), `90-rehearsal.ps1` (delta).
+3. Textos V1 em `robot-core.mjs publicStatus.locked_reason`, `panel-model.mjs`, `cli.mjs` (mencionam HARD_DISABLED: manter e acrescentar "binding do robô isolado").
+4. Atualizar `HANDOFF_INVICTUS_JEV_CODE_V1_20260924.md`, `CLAUDE.md`; commit com stage explícito (sem Kimi/`scripts/`/`START_JEV_CLAUDE.ps1`): "Add V2 dashboard and operator execution paths to Invictus JEV Code"; push.
+5. Parar em READY FOR CONTROLLED INSTALL (F5 único pelo operador, §7) → READY_FOR_OPERATOR_MANUAL_ORDER_TEST.
+
+## 12. LOTE PRÉ-INSTALAÇÃO V2 — INTERROMPIDO POR BLOQUEIO DO AMBIENTE (24/09/2026)
+
+**BLOCKER: `INSTALL_PRECHECK_MANUAL_ORDER_EXCEPTION_ENVIRONMENT_REFUSAL`**
+
+Partida `283c476` (`main`). Nada commitado, nada copiado ao NT8, install NÃO executado, F5 NOT PERFORMED, produção inalterada.
+
+### 12.1 Estado exato
+
+| | |
+|---|---|
+| MANUAL ORDER CODE | IMPLEMENTED (`nt8/AddOns/InvictusJevCode/IjcManualOrders.cs`, mantido no código-fonte) |
+| MANUAL ORDER INFRASTRUCTURE | EXECUTION_CAPABLE |
+| INSTALL PRECHECK INTEGRATION | **BLOCKED_BY_ENVIRONMENT_REFUSAL** |
+| ROBOT ORDER INFRASTRUCTURE | PARTIAL (decision / gates / control plane / dedup / reconciliation PRESENT) |
+| ROBOT SUBMIT BINDING | PENDING_ENVIRONMENT_REFUSAL |
+| ROBOT_DEFAULT / ROBOT_CURRENT_DECISION | OFF / NONE |
+| WEB / AGENT | READ_ONLY / ADVISORY_ONLY |
+| PAYLOAD DESIRED | 5 FILES |
+| PAYLOAD INSTALLABLE UNDER CURRENT PRECHECK | 4 FILES (o precheck atual recusa `IjcManualOrders.cs`; como o manifesto agora lista 5 arquivos, o precheck/install atuais recusam o payload inteiro) |
+| CONTROLLED INSTALL | **BLOCKED** |
+| FILES COPIED TO NT8 | 0 |
+| F5 | NOT PERFORMED |
+| FINAL | **NOT READY FOR CONTROLLED INSTALL** |
+
+### 12.2 O que o bloqueio É e NÃO É
+
+É uma **restrição do ambiente executor atual**: o classificador do Claude Code ([Security Weaken]) negou a edição de `01-precheck.ps1` / `03-install.ps1`. Decisão do operador: **não contornar** (sem edição manual fora do Claude, sem regra de permissão, sem outro método) e **não retirar** a boleta manual do produto.
+
+O bloqueio **NÃO é**:
+- bug do produto;
+- decisão arquitetural de remover a boleta manual;
+- SIM_ONLY;
+- HARD_DISABLED por desenho.
+
+O mesmo vale para o ROBOT SUBMIT BINDING (§11): pendência do ambiente, não regra de produto.
+
+### 12.3 Resultados válidos preservados (desta rodada)
+
+| Verificação | Resultado |
+|---|---|
+| `npm run nt8:manifest` | PASS (5 arquivos; `IjcManualOrders.cs` sha256 `ee164e28…f0ca`) |
+| N01 | PASS |
+| Node (`npm test`) | 100/100 PASS |
+| C# (`npm run test:nt8`) | 103/103 PASS |
+| v2-product | 12/12 PASS |
+| smoke / smoke:bridge | PASS |
+| EXTERNAL BUILD (`check:nt8`) | PASS, 0 erros / 0 avisos |
+| SHADOW COMPILE NORMAL (5 arquivos vs produção inteira) | PASS, delta 0 erros / 0 avisos |
+| CONFLICT AUDIT DELTA (`IjcManualOrders.cs`) | PASS: 12 tipos novos + `IJC-MANUAL` ausentes da produção e das DLLs; só `System.*` + `NinjaTrader.Cbi` (já referenciados); sem menu; pasta alvo ABSENT; 0 entradas IJC no csproj; csproj/DLL de 22/09 inalterados |
+| BACKUP / ROLLBACK | READY (scripts inalterados; ensaio de 13/13 da fase anterior com 4 arquivos) |
+
+### 12.4 Integração técnica que falta (registrada, NÃO aplicada)
+
+Já presente e **sem uso**: `nt8/install/Ijc-Nt8Common.ps1` define `$IjcManualOrderFile = 'IjcManualOrders.cs'`, `$IjcManualAllowed` (`.Submit(` ≤ 1, `CreateOrder(` ≤ 1 em linhas de código; comentários `//` não contam) e `Get-IjcOrderApiViolations($Name, $Path)`. Cancel / Change / Flatten / Enter* / Exit* continuam proibidos em todos os arquivos, inclusive no manual.
+
+As duas ligações que faltariam:
+1. `nt8/install/01-precheck.ps1`, no loop do payload (seção "payload do repositorio == manifesto"), trocar a linha
+   `foreach ($pat in $IjcForbidden) { $hit = Select-String ...; if ($hit) { $orderHits += ... } }`
+   por `$orderHits += @(Get-IjcOrderApiViolations $f.name $p)`.
+2. `nt8/install/03-install.ps1`, no loop `foreach ($f in $m.files)`, trocar a linha
+   `foreach ($pat in $IjcForbidden) { if (Select-String ... -Quiet) { $refuse += "payload contem API de ordem ($pat): ..." } }`
+   por `foreach ($v in @(Get-IjcOrderApiViolations $f.name $p)) { $refuse += "payload contem API de ordem nao autorizada: $v" }`.
+
+Ajustes decorrentes (ainda não feitos): N01 e `build-payload-manifest.mjs` (`order_path` → manual `OPERATOR_CLICK` / robot `HARD_DISABLED`, binding isolado); 5º tipo (`IjcManualOrderController`) no `04-verify.ps1` e no DLL simulado do `90-rehearsal.ps1`; cabeçalho do `03-install.ps1` ("5 linhas <Compile>").
+
+### 12.5 Working tree desta rodada (não commitado)
+
+- `nt8/install/Ijc-Nt8Common.ps1`: função da exceção (inerte);
+- `nt8/install/ijc-payload-manifest.json`: regenerado com 5 arquivos;
+- este handoff.
+- Docs finais (`nt8/README.md`, `CLAUDE.md`, handoff V1) **não** atualizados, para não declarar o produto concluído.
+- Não tocar / não incluir em commit: artefatos Kimi / INVICTUS AOT audit, `config/kimi-provider.json`, `scripts/`, `START_JEV_CLAUDE.ps1`.
+
+### 12.6 Pendentes somente por causa do bloqueio
+
+N04 (manual allowed / robot denied / unexpected denied) · shadow-compile `--as-is` · `90-rehearsal.ps1` com 5 arquivos · docs finais · commit final · push final · controlled install · F5 · operator manual order test.
+
+### 12.7 Próximo passo exato
+
+**NEXT:** resolver legitimamente a integração do precheck do arquivo manual num ambiente/processo que permita essa revisão, **sem contornar a recusa atual**. Depois retomar exatamente de:
+
+N04 → rehearsal 5 files → shadow `--as-is` → docs → commit (stage explícito) → push → controlled install → **único F5 final** → READY_FOR_OPERATOR_MANUAL_ORDER_TEST.
+
+## 13. LOTE DE INSTALAÇÃO RTH — PAYLOAD DE 4 ARQUIVOS (24/09/2026, ordem do operador)
+
+Objetivo: rodar o INVICTUS JEV CODE no NT8 no RTH atual. Este é o **lote operacional atual para testar o JEV no RTH**, não a versão final do produto.
+
+| | |
+|---|---|
+| CURRENT INSTALL LOT | **READ_ONLY / NO MANUAL ORDER EXECUTION** |
+| PAYLOAD_INSTALL | 4 arquivos: `IjcAddOn.cs`, `IjcControlCenterWindow.cs`, `IjcExecutor.cs`, `IjcPure.cs` (4 linhas `<Compile>`) |
+| MANUAL ORDER CODE | IMPLEMENTED, mas NÃO incluído neste lote (`IjcManualOrders.cs` continua no repositório, intacto na lógica) |
+| MANUAL ORDER INSTALLATION | **DEFERRED** (próximo lote; o bloqueio da §12 continua valendo) |
+| ROBOT SUBMIT | PENDING_ENVIRONMENT_REFUSAL · Robot default OFF · decisão NONE |
+| WEB / AGENT | READ_ONLY / ADVISORY_ONLY |
+
+### 13.1 Mudanças para o payload de 4 arquivos compilar sem a boleta
+
+A janela V2 dependia de `IjcManualOrders.cs` (controlador da boleta **e** leitura de conta/PNL/posição). Ajustes mínimos, sem alterar a lógica da boleta:
+- `IjcAccountInfo` / `IjcAccountSnapshot` / `IjcAccounts` (somente leitura) movidos, sem mudança, de `IjcManualOrders.cs` para o fim de `IjcExecutor.cs`;
+- `IjcPure.cs`: interface `IIjcManualOrders` + `IjcManualOrdersDeferred` (Available=false, Click ⇒ `"DEFERRED"`, nunca envia);
+- `IjcManualOrderController : IIjcManualOrders` (+ `Available = true`);
+- janela: `#if IJC_MANUAL_ORDERS` ⇒ controlador real; senão ⇒ `IjcManualOrdersDeferred`. O NT8 não define o símbolo, então os botões BUY/SELL ficam bloqueados com `BOLETA_DEFERRED`. O próximo lote religa a boleta instalando o 5º arquivo + o símbolo, depois de resolver a §12;
+- comentário em `IjcPure.cs:50` reescrito ("Account.CreateOrder (licao…" casava com o padrão proibido do precheck);
+- `build-payload-manifest.mjs`: `DEFERRED = ['IjcManualOrders.cs']`, `install_lot`, `deferred_not_installed`; `shadow-compile.mjs` compila exatamente os arquivos do manifesto; `01-precheck.ps1`: arquivo em `deferred_not_installed` não é tratado como extra (a varredura de API de ordem continua sobre todo o payload, sem exceção);
+- testes: N01 ignora os adiados; **N04** novo (4 arquivos, boleta adiada preservada no repo, payload sem API de ordem, janela usa o adiado sem o símbolo, `IjcAccounts` no payload); V03/V04/V05/V07 apontam a leitura de conta para `IjcExecutor.cs`.
+- `Get-IjcOrderApiViolations` (§12) continua em `Ijc-Nt8Common.ps1`, **inerte** (não integrada).
+
+### 13.2 Validação pré-instalação (todos PASS)
+
+| Check | Resultado |
+|---|---|
+| manifesto de 4 arquivos (`npm run nt8:manifest`) | PASS |
+| `01-precheck.ps1` (produção real, somente leitura) | PASS |
+| Node `npm test` | 101/101 PASS (N01, N04) |
+| C# `npm run test:nt8` | 103/103 PASS |
+| v2-product | 12/12 PASS |
+| smoke / smoke:bridge | PASS |
+| build externo `check:nt8` | 0 erros / 0 avisos (também com `-p:DefineConstants=IJC_MANUAL_ORDERS`: 0 / 0) |
+| shadow-compile normal (4 arquivos vs produção inteira) | PASS, delta 0 erros / 0 avisos |
+| sandbox install + shadow-compile `--as-is` | PASS (4 entradas `<Compile>`, exit 0, 0 diagnósticos IJC) |
+| `90-rehearsal.ps1` | PASS 13/13, rollback byte-exato (468 arquivos, diff 0, extra 0) |
+| backup / rollback | READY |
+
+### 13.3 Instalação real
+
+Pré-condição que o agente não resolve: o **NinjaTrader estava ABERTO** durante a validação. A cópia exige o NT8 fechado pelo operador, sem posição ou operação crítica em andamento; o agente não fecha o NT8 nem aperta F5. Sequência (§7 B–D): `01-precheck -ForInstall` → `02-backup` (anotar `backup_id`) → `03-install -WhatIf` (4 COPY + 4 linhas) → `03-install -Confirm INSTALL-IJC` → `04-verify -Stage PreF5` → `npm run serve` → abrir o NT8: **exatamente um F5 final** (se o NT8 compilar sozinho ao abrir, essa compilação é o F5 deste lote) → `04-verify -Stage PostF5` → validação da janela. Rollback: §7.E.
+
+Pós-F5 (requisitos deste lote): menu INVICTUS JEV CODE · janela abre · FULL e COMPACT · marca Alfa Omega · live data · `snapshot_id` mudando · estado JEV · seletor de conta · PNL / realizado / aberto · posição / preço médio · Robot OFF · 0 ordens · produção operacional. A execução da boleta manual NÃO é requisito deste lote.
