@@ -15,6 +15,8 @@
     "core_vs_jev_fusion": "UNDEFINED",
     "core_vs_jev_conflict": "UNDEFINED",
     "precedence": "NOT_DEFINED",
+    "review_status": "REVIEWED / STRUCTURALLY CONSOLIDATED (integracao das frentes A/B/C, 2026-09-24): regras estruturais revisadas; blockers semanticos preservados; validation NOT STARTED; registro V1 alcanca so UNKNOWN; estados direcionais INCOMPLETE",
+    "review_handoff": "handoffs/HANDOFF_JEV_PREREG_INTEGRATED_20260924.md",
     "schema": "jev-future/classification-state-machine/v1",
     "nature": "CLASSIFICACAO DE ESTADO/CONFLUENCIA — nao e ordem de trade"
   },
@@ -159,7 +161,9 @@
       "ENRICHES",
       "NO_EFFECT",
       "UNAVAILABLE"
-    ]
+    ],
+    "spx_effect_granularity": "R_S18: um efeito por (fonte, dimensao) em source_contributions/reason_codes; escalar effect_on_native so quando derivavel sem perda, senao nao preenchido + RC_SPX_EFFECT_NOT_DERIVED; sem enum novo; efeitos mistos nunca viram CONFLICTED_CONTEXT",
+    "dimension_availability": "R_S10: familia nao utilizavel => so as dimensoes dependentes ficam UNKNOWN/UNAVAILABLE; DATA_INVALID global so sem nenhuma dimensao dealer utilizavel"
   },
   "context_decision": {
     "applies_to": [
@@ -191,7 +195,8 @@
         "if": "leituras de lado de familias distintas em sentidos opostos",
         "then": "CONFLICTED_CONTEXT",
         "reason": "RC_OPPOSITE_FAMILY_READINGS",
-        "rule": "R_S16_CONTEXT_STATE_DEFINITIONS"
+        "rule": "R_S16_CONTEXT_STATE_DEFINITIONS",
+        "guard": "R7: familias separadas so por lineage UNKNOWN/SUSPECTED (ou por override de lineage conhecida) nao formam par de conflito automaticamente; a divergencia entre elas vai para conflicts[] como diagnostico, nao para CONFLICTED_CONTEXT. Efeitos SPX mistos (R_S18) tambem nao entram aqui. Predicado completo de elegibilidade de par: pendente (frente B, G2)"
       },
       {
         "if": "todas as leituras de lado no mesmo sentido",
@@ -212,6 +217,7 @@
     "LONG_CONTEXT": {
       "defined": true,
       "reachable_in_record_v1": false,
+      "record_v1_status": "BLOCKED",
       "reachable_in_research_arm": true,
       "via": [
         "HT01",
@@ -223,6 +229,7 @@
     "SHORT_CONTEXT": {
       "defined": true,
       "reachable_in_record_v1": false,
+      "record_v1_status": "BLOCKED",
       "reachable_in_research_arm": true,
       "via": [
         "HT01",
@@ -234,33 +241,69 @@
     "NEUTRAL_CONTEXT": {
       "defined": true,
       "reachable_in_record_v1": false,
-      "reachable_in_research_arm": true
+      "record_v1_status": "BLOCKED",
+      "reachable_in_research_arm": true,
+      "note": "sem produtor neutro explicito; ausencia de evidencia, direction 0 de descritor ou nenhuma regra disparada nao sao neutralidade"
     },
     "CONFLICTED_CONTEXT": {
       "defined": true,
       "reachable_in_record_v1": false,
+      "record_v1_status": "BLOCKED",
       "reachable_in_research_arm": true,
       "via": [
         "HT06 V_A"
-      ]
+      ],
+      "note": "nao e sinonimo de efeitos SPX mistos (R_S18) nem de divergencia entre familias de lineage desconhecida (R7)"
     },
     "NO_TRADE_CONTEXT": {
       "defined": true,
       "reachable_in_record_v1": false,
+      "record_v1_status": "UNDEFINED / BLOCKED",
       "reachable_in_research_arm": false,
       "criteria": "UNDEFINED"
     },
     "UNKNOWN": {
       "defined": true,
       "reachable_in_record_v1": true,
+      "record_v1_status": "REACHABLE (unico)",
       "reasons": [
         "RC_DATA_INVALID",
         "RC_NO_ACTIVE_DIRECTIONAL_RULE"
       ]
     }
   },
+  "research_arm_reachability_note": "reachable_in_research_arm = capacidade pretendida, nao prontidao: braco NOT IMPLEMENTED; 0/10 hipoteses testable_now (frente B, G4)",
   "classification_states_status": "INCOMPLETE — 6 estados definidos; no registro V1 so UNKNOWN e alcancavel (nenhuma regra de lado ativa); LONG/SHORT/NEUTRAL/CONFLICTED so no braco de pesquisa; NO_TRADE_CONTEXT sem criterio",
   "no_trade_context_criteria": "UNDEFINED",
+  "governance_notes": {
+    "R7_A": "familias mantidas separadas apenas por lineage UNKNOWN (UNVERIFIED/SUSPECTED) nao produzem CONFLICTED_CONTEXT automaticamente",
+    "R7_B": "unknown lineage != independence: separacao conservadora nao prova independencia; concordancia entre elas nao reforca (R_S03)",
+    "R7_C": "conflito potencialmente inflado por segregacao conservadora e diagnosticavel (conflicts[]), nao evidencia direcional",
+    "R7_D": "ESF4 (DEALER_HEDGE_CONFLICT, auditoria A-BOT) e qualquer divergencia Core x Jev nao geram NO_TRADE_CONTEXT enquanto CORE_vs_JEV fusion/conflict policy = UNDEFINED (R_S21)",
+    "no_automatic_no_trade": "missing, stale, frozen, DATA_INVALID e divergencia Core/Jev nunca viram NO_TRADE_CONTEXT automaticamente"
+  },
+  "known_lineage_overrides": [
+    {
+      "members": [
+        "abot.root.classic.delta_risk_reversal",
+        "abot.classic.delta_risk_reversal@SPX/zero"
+      ],
+      "lineage": "BY_CONSTRUCTION",
+      "rule": "tratar como 1 evidencia; nunca contar como independentes nem como par de conflito",
+      "source": "R6 24/09 (feature contract: copia raiz = mesmo payload da rota /gexbot/classic/SPX/zero)",
+      "materialized_in_evidence_families": false,
+      "why_not": "exige reabrir DC groups do Feature Contract V1 e contagens da Decision Logic V1 (fechada) => STOP; pendente de ordem"
+    }
+  ],
+  "pending_operator_decisions": [
+    {
+      "id": "POD_R_M06_INTERPOLATED_LEVEL_MIGRATION",
+      "rule": "R_M06_LEVEL_TRANSITION",
+      "status": "PENDING_OPERATOR_DECISION",
+      "question": "Qual mudanca minima/quantitativa constitui migracao de um nivel interpolado? Os majors 0DTE do orderflow sao interpolados (fracao mod 5 variavel, auditoria A-BOT A2), entao \"muda de strike\" nao e discreto para eles.",
+      "blocks_architecture": false
+    }
+  ],
   "research_arm": {
     "label": "JEV_RESEARCH_ARM_V1",
     "rule": "avalia HYPOTHESIS_TO_TEST offline, fora do contexto de registro; resultado nunca promovido sem pre-registro de validacao + decisao do operador",

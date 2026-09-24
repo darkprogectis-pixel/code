@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | PROJECT | ALFA OMEGA JEV FUTURE |
-| STATUS | **PREREGISTRATION DESIGN — CREATED** (lógica interna do Jev definida antes de qualquer teste) |
+| STATUS | **PREREGISTRATION DESIGN V1 — REVIEWED / STRUCTURALLY CONSOLIDATED** (24/09, integração das frentes A/B/C; ver §0.1). Regras estruturais revisadas, blockers semânticos preservados, validation NOT STARTED, registro V1 alcança só UNKNOWN, estados direcionais INCOMPLETE. **Não** é validado nem direcionalmente completo |
 | NATUREZA | CLASSIFICAÇÃO DE ESTADO / CONFLUÊNCIA — **não é ordem de trade** |
 | ESCOPO | só a lógica interna do Jev: `native_dealer_state` + `spx_final_context` → `jev_directional_context` |
 | CORE × JEV | FUSION_POLICY **UNDEFINED** · CONFLICT_POLICY **UNDEFINED** · PRECEDENCE **NOT_DEFINED** (fase separada) |
@@ -26,6 +26,8 @@ O gerador é determinístico e **falha** em qualquer um destes casos:
 - contagem simples numa regra;
 - rota sem `possible_contribution_areas_status = PROVISIONAL_DESIGN_MAPPING`.
 
+Guards acrescentados na integração de 24/09: B = 174 e C = 16; `is_vote=false` nas 190 rotas; `zero_mcall`/`zero_mput` fora de HT02/HT03 (R1); R_S10 sem hard gate de família específica; R_S18 sem rótulo único destrutivo nem enum MIXED; HT = 10 e BLOCKED = 10 (nenhuma promoção); triagem da frente C completa para as 20 regras.
+
 _Substitui o rascunho anterior deste mesmo arquivo (sessão aaa9a1de, 1º turno). Aquele rascunho tratava 20/40 pregões como pré-condição e já foi removido junto com o `data/jev-preregistration-design-v1.json`._
 
 ---
@@ -38,6 +40,31 @@ _Substitui o rascunho anterior deste mesmo arquivo (sessão aaa9a1de, 1º turno)
 | B | **VALIDATION_HISTORY_TARGET: NON_BLOCKING.** 20–40 pregões são alvo de evidência futura; não são gate de arquitetura, blocker de design, requisito para continuar nem condição de fechamento de fase. | Decision Logic V1 §8 · política `VALIDATION_HISTORY_TARGET` · `ABOT_GAMMAGEX_JEV_FUTURE_AUDIT` (A4 e §6.3) · `ABOT_GAMMAGEX_ES_FIRST_AUDIT` (item 4) · `gammagex-jev-candidates.json` e `es-pattern-candidates.json`, com seus geradores |
 
 Nenhuma coleta começa sem ordem explícita do operador.
+
+## 0.1 Integração da revisão (24/09/2026)
+
+Três frentes paralelas revisaram este design; o consolidado está em `handoffs/HANDOFF_JEV_PREREG_INTEGRATED_20260924.md`.
+
+| Frente | Conclusão |
+|---|---|
+| A (regras THIS_DESIGN) | R_S15 ACCEPT · R_S10 REVISE · R_S18 REVISE |
+| B (máquina de estados) | UNKNOWN é o único estado alcançável no registro V1, e isso é correto; lacunas estruturais G1–G5 e I1–I3 registradas, sem emissão incorreta demonstrada |
+| C (hipóteses e blocked) | 10/10 HT e 10/10 BLOCKED triadas; nenhuma promovida; ajustes R1–R7 |
+
+| Decisão | Aplicação |
+|---|---|
+| **R_S15 ACCEPT** | só CANONICAL_STRUCTURAL e SUPPORTED_SEMANTIC no registro V1 |
+| **R_S10 REVISE** | qualidade de dados dimensional: a ausência de uma família (inclusive regime 0DTE) ou do preço derruba só as dimensões dependentes; DATA_INVALID global = nenhuma dimensão dealer utilizável (§3) |
+| **R_S18 REVISE** | efeito de C preservado por (fonte, dimensão) nos campos existentes; escalar só quando derivável sem perda; **MIXED não criado**; efeito misto nunca vira CONFLICTED_CONTEXT (§5) |
+| R1 | HT02 = `z_mlgamma`, HT03 = `z_msgamma`; `zero_mcall`/`zero_mput` fora |
+| R2 | R_M06 × níveis interpolados = **PENDING_OPERATOR_DECISION** (sem definição inventada) |
+| R3 | HT08: parte descritiva = R_M02; só o resíduo empírico fica como hipótese |
+| R4 | HT09: "alinhado" **BLOCKED/PENDING**: não há semântica MenthorQ documentada nos artefatos |
+| R5 | B05: identidade candidata `zero_mput ≡ state/gex_zero.major_neg_vol` = **PENDING_SHORT_VALIDATION** |
+| R6 | risk reversal raiz ≡ rota SPX/zero = BY_CONSTRUCTION registrado como governança; **materialização nas evidence families NÃO aplicada** (exigiria reabrir o Feature Contract V1 e as contagens da Decision Logic V1) |
+| R7 | governança de lineage/conflito/NO_TRADE na máquina de estados (`governance_notes`) |
+
+Não alterados: Decision Logic V1, output contract, feature contract, evidence families, rotas. Fusão/conflito/precedência Core × Jev continuam UNDEFINED.
 
 ## 1. Ordem interna do Jev (pré-registrada)
 
@@ -99,15 +126,15 @@ As pré-condições semânticas (18) têm estado MET, PARTIAL, UNMET ou UNDEFINE
 | R_S07_BREAK_0909 | nunca misturar antes × depois de 09/09 | canon |
 | R_S08_FRESHNESS_BASIS | vendor ts; **60 s / 300 s = PROVISIONAL**, não finais; FROZEN_VALUES fora da leitura; freshness e RTH = CLASSIFICATION INPUT, não gate de trade | canon |
 | R_S09_DATA_INVALID_TO_UNKNOWN | DATA_INVALID ⇒ UNKNOWN + `RC_DATA_INVALID`, nunca NO_TRADE_CONTEXT | canon |
-| R_S10_DQ_STATUS_DEFINITION | **DATA_INVALID:** sem preço utilizável, ou nenhum membro da família de regime 0DTE FRESH/MARKET_CLOSED. **DEGRADED:** família ativa STALE, UNKNOWN, PENDING_REVISION_AUDIT ou parcial. **VALID:** demais casos. Nenhum threshold novo | este design |
+| R_S10_DQ_STATUS_DEFINITION | **Revisada 24/09 (dimensional).** Família utilizável = ao menos um membro com vendor ts e FRESH/MARKET_CLOSED, fora de FROZEN_VALUES (MARKET_CLOSED não mascara ausência, ts inválido nem FROZEN_VALUES). Família não utilizável ⇒ só as dimensões dependentes ficam UNKNOWN/UNAVAILABLE; nenhuma família específica é condição global. Preço não utilizável ⇒ só as leituras que usam spot (R_M01 b, R_M02, R_M03, R_M04, R_M05 cruzamento, R_M09). **DATA_INVALID:** nenhuma dimensão dealer do estágio B utilizável. **DEGRADED:** há dimensão utilizável, mas alguma família ativa está não utilizável, STALE, PENDING_REVISION_AUDIT ou parcial. **VALID:** demais casos. Semântica UNKNOWN não é qualidade (R_S14). Nenhum threshold, score ou peso novo | este design · **REVISED** |
 | R_S11_SESSION_INFORMATIONAL | RTH/OUTSIDE_RTH só informativo; fora do RTH é MARKET_CLOSED | canon |
 | R_S12_REGIME_IS_NOT_SIDE | POSITIVE_GAMMA ≠ LONG; NEGATIVE_GAMMA ≠ SHORT | canon |
 | R_S13_LOCATION_IS_NOT_SIDE | distância ou posição nunca vira lado automaticamente | canon |
 | R_S14_UNKNOWN_SEMANTICS_NO_SIDE | semântica, unidade ou sinal UNKNOWN ⇒ UNRESOLVED + `unresolved_fields` | canon |
-| R_S15_ACTIVE_RULES_ONLY | só CANONICAL e SUPPORTED entram no contexto de registro. HYPOTHESIS só no braço de pesquisa e só é promovida por pré-registro de validação + decisão do operador | este design |
+| R_S15_ACTIVE_RULES_ONLY | só CANONICAL e SUPPORTED entram no contexto de registro. HYPOTHESIS só no braço de pesquisa e só é promovida por pré-registro de validação + decisão do operador. BLOCKED e DIAGNOSTIC não participam | este design · **ACCEPTED** |
 | R_S16_CONTEXT_STATE_DEFINITIONS | definições do §6 (output contract), aplicadas só a regras ativas | canon |
 | R_S17_C_AFTER_B_NO_FUSION | C entra depois de B; sem fusão B × C; o efeito fica em `effect_on_native`, sem pesos | canon |
-| R_S18_EFFECT_LABEL_SELECTION | escolha do rótulo único de `effect_on_native` (§5) | este design |
+| R_S18_EFFECT_LABEL_SELECTION | **Revisada 24/09:** efeito de C por (fonte, dimensão), sem redução destrutiva (§5) | este design · **REVISED** |
 | R_S19_MENTHORQ_OVERLAY | POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING; enquanto "alinhado" não estiver definido, ZERO | canon |
 | R_S20_EXPLAINABILITY | toda classificação cita famílias, contribuições e reason codes; conviction UNCALIBRATED | canon |
 | R_S21_CORE_SEPARATE | o Core só aparece em `core_comparison`; fusão, conflito e precedência não definidos | canon |
@@ -170,6 +197,8 @@ As pré-condições semânticas (18) têm estado MET, PARTIAL, UNMET ou UNDEFINE
 
 Os eventos ficam em `native_dealer_state.change_transition` e em `reason_codes`. Os dois snapshots precisam estar do mesmo lado de 09/09.
 
+**R_M06 × níveis interpolados — PENDING_OPERATOR_DECISION** (`POD_R_M06_INTERPOLATED_LEVEL_MIGRATION`). Os majors 0DTE do orderflow são interpolados (fração mod 5 variável, auditoria A-BOT A2), então "muda de strike" não é um evento discreto para eles. Questão ao operador: *qual mudança mínima/quantitativa constitui migração de um nível interpolado?* Nenhuma definição foi inventada. Até a decisão, LEVEL_MIGRATION não tem critério discreto para níveis interpolados; níveis na grade de strikes e a mudança de ordenação não são afetados. Não bloqueia a arquitetura. HT04 depende dessa decisão.
+
 ### VOL / SKEW
 
 `delta_risk_reversal` e call/put ivol: **B06 BLOCKED** (semântica e unidade UNKNOWN).
@@ -189,7 +218,12 @@ Entra **somente depois** do native dealer state (R_S17). O `jev_directional_cont
 | HT06_SPX_CONTRADICTS_EFFECT | HYPOTHESIS | CONTRADICTS sobre uma leitura de lado ⇒ (V_A) CONFLICTED ou (V_B) só anotação |
 | HT07_TRACE_REGIME_AGREEMENT_RELIABILITY | HYPOTHESIS | a concordância TRACE × nativo torna o regime mais informativo para amplitude |
 
-- **Rótulo único (R_S18):** o primeiro que se aplicar, na ordem UNAVAILABLE → CONTRADICTS → CONFIRMS → ENRICHES → NO_EFFECT.
+- **Efeito por (fonte, dimensão) — R_S18 revisada em 24/09.** A precedência escalar única anterior (UNAVAILABLE → CONTRADICTS → CONFIRMS → ENRICHES → NO_EFFECT) apagava efeitos simultâneos e foi removida.
+  - Cada par (TRACE|VOLSIGNALS, dimensão) recebe um efeito do enum **existente** `spx_effect_on_native`, registrado em `source_contributions[]` e em `reason_codes` (`RC_SPX_<SOURCE>_<DIMENSÃO>_<EFEITO>`).
+  - Um CONTRADICTS também vai em `conflicts[]` como divergência **descritiva** C × B, não como conflito direcional.
+  - O escalar `effect_on_native` só é preenchido sem perda: UNAVAILABLE se nenhum par tem leitura C utilizável; o efeito comum se todos os pares utilizáveis têm o mesmo efeito. Senão, fica **sem derivação automática** (`RC_SPX_EFFECT_NOT_DERIVED`), e os efeitos granulares são a informação válida.
+  - **MIXED não foi criado** (Decision Logic V1 / output contract fechados).
+  - Efeitos distintos não mudam `jev_directional_context` (R_S17) e **nunca** produzem CONFLICTED_CONTEXT.
 - **Comparável** = mesma dimensão e semântica MET.
 - **PARTIAL_ANALOG** compara só sinal ou posição, nunca magnitude.
 - **Sem pesos.** Equivalência numérica NOT ALLOWED.
@@ -219,9 +253,37 @@ O passo 5 exige **consistência** entre famílias, não contagem. Famílias com 
 | CONFLICTED_CONTEXT | não | sim (inclui HT06 V_A) |
 | NO_TRADE_CONTEXT | não | não (critério UNDEFINED) |
 
-⇒ **JEV CLASSIFICATION STATES: INCOMPLETE.** Os 6 estados e as transições estão definidos, mas LONG/SHORT ainda não têm regra ativa. Isso é consequência da regra "não inventar polaridade", não uma lacuna de desenho.
+⇒ **JEV CLASSIFICATION STATES: INCOMPLETE.** Os 6 estados e as transições estão nomeados, mas LONG/SHORT ainda não têm regra ativa, porque não se inventa polaridade.
 
-O braço de pesquisa (`JEV_RESEARCH_ARM_V1`) avalia as hipóteses offline, fora do contexto de registro. NOT IMPLEMENTED.
+A frente B (24/09) corrige a afirmação anterior de que não havia lacuna de desenho. Há lacunas de formalização, **latentes** porque o passo 2 encerra antes:
+- G1: contrato de leitura e redutor (neutro × não aplicável × sem dado × irresolvido; casos mistos);
+- G2: elegibilidade de par para conflito;
+- G3: cobertura por dimensão ≠ elegibilidade por regra/instância (os 53 campos "side-capable na pesquisa" são associação potencial, não entradas liberadas);
+- G4: promoção futura exige revisão versionada do contrato e do guard, não só troca de status;
+- G5: composição local/global da qualidade de dados, tratada pela R_S10 revisada.
+
+Nenhuma delas foi resolvida por inferência.
+
+**Matriz final (registro V1):**
+
+| Estado | Registro V1 | Observação |
+|---|---|---|
+| LONG_CONTEXT | **BLOCKED** | sem regra de lado ativa; HT01–HT04 só pesquisa |
+| SHORT_CONTEXT | **BLOCKED** | idem; nenhuma simetria de sinal presumida |
+| NEUTRAL_CONTEXT | **BLOCKED** | sem produtor neutro; ausência de evidência ≠ neutralidade |
+| CONFLICTED_CONTEXT | **BLOCKED** | não é sinônimo de efeito SPX misto (R_S18) nem de divergência entre famílias de lineage desconhecida (R7) |
+| NO_TRADE_CONTEXT | **UNDEFINED / BLOCKED** | critério UNDEFINED; 0 candidatos |
+| UNKNOWN | **REACHABLE (único)** | RC_DATA_INVALID ou RC_NO_ACTIVE_DIRECTIONAL_RULE |
+
+**Governança R7** (`governance_notes` na máquina):
+- (A) famílias separadas só por lineage UNKNOWN não produzem CONFLICTED_CONTEXT automaticamente;
+- (B) unknown lineage ≠ independência;
+- (C) conflito inflado por segregação conservadora é diagnóstico (`conflicts[]`), não evidência direcional;
+- (D) ESF4 / divergência Core × Jev não gera NO_TRADE_CONTEXT enquanto a política Core × Jev for UNDEFINED.
+
+**Lineage conhecida não materializada (R6):** `abot.root.classic.delta_risk_reversal` ≡ `abot.classic.delta_risk_reversal@SPX/zero` (BY_CONSTRUCTION) fica em `known_lineage_overrides`: tratar como 1 evidência, nunca como independentes nem como par de conflito. As evidence families V1 continuam listando as duas separadas; corrigir exige reabrir o Feature Contract V1 e a Decision Logic V1, portanto não foi feito.
+
+O braço de pesquisa (`JEV_RESEARCH_ARM_V1`) avalia as hipóteses offline, fora do contexto de registro. NOT IMPLEMENTED; "alcançável na pesquisa" é capacidade pretendida, não prontidão (0/10 hipóteses `testable_now`).
 
 ## 7. NO_TRADE_CONTEXT
 
@@ -248,6 +310,12 @@ O braço de pesquisa (`JEV_RESEARCH_ARM_V1`) avalia as hipóteses offline, fora 
 | HT10_SPY_INSTANCE_ROLE | não | SP_SPY_INDEPENDENCE UNMET | — |
 
 - Todas estão `testable_now = false` e `validation = NOT STARTED`.
+- **Ajustes de 24/09 (nenhuma promoção):**
+  - **R1:** HT02 restrita a `z_mlgamma` e HT03 a `z_msgamma`. `zero_mcall`/`zero_mput` (semântica UNKNOWN, B05) e os demais majors saem do escopo delas; regime, zero gamma e spot ficam só como condição/referência. HT04 não mudou; depende de R2.
+  - **R3:** HT08 reescrita como resíduo empírico. A parte descritiva (regimes lado a lado) é R_M02.
+  - **R4:** HT09 com `definition_status = BLOCKED_PENDING`. O envelope continua o de R_S19 (POSITIVE|ZERO; nunca origina lado, veta, bloqueia ou reduz).
+  - HT06 passa a referir o efeito granular de R_S18; continua dormente.
+- Classe de triagem da frente C por hipótese: `front_c_class` no registro de hipóteses.
 - Os 10 bloqueios têm caminho de desbloqueio registrado: primeiro resolver a semântica (documentação do vendor ou medição), só então formular hipótese.
 
 ## 9. Bloqueados por semântica desconhecida
@@ -264,6 +332,12 @@ O braço de pesquisa (`JEV_RESEARCH_ARM_V1`) avalia as hipóteses offline, fora 
 | B08_VOLSIGNALS_EXPOSURES | as 6 exposições VolSignals |
 | B09_VOLSIGNALS_GAMMA_REGIME | gammaExposure como regime |
 | B10_STAGE_C_SIDE_ORIGIN | estágio C originando lado |
+
+Resolução de cada bloqueio (frente C) em `front_c_resolution`:
+- externas: B01, B02, B03, B06, B07 (OPTIONAL_EVIDENCE_GAP), B08/B09 (auditoria VolSignals ENCERRADA: não reabrir sem ordem);
+- medição curta: B02 (gamma), B04;
+- **B05 = PENDING_SHORT_VALIDATION** (identidade candidata `zero_mput ≡ state/gex_zero.major_neg_vol`, falta confirmação em RTH; sem coleta agora, sem promoção, side capability inalterada);
+- B10 = decisão arquitetural futura; C não origina lado.
 
 **DIAGNOSTIC_ONLY:** D01 metadados · D02 blocos legados/congelados, col5/col6 · D03 `label_color` · D04 `heat_trail` · D05 OI degenerado do state · D06 referência de preço · D07 MenthorQ null.
 
@@ -299,7 +373,7 @@ O gerador confere que as áreas das 190 rotas batem com este mapeamento.
 |---|---|
 | Campos cobertos | **190/190** (B 174 · C 16) |
 | Com lado no contexto de registro | 0 |
-| Com lado possível só no braço de pesquisa | 53 (via HT01–HT04) |
+| Com lado possível só no braço de pesquisa | 53 (via HT01–HT04; associação potencial, não elegibilidade, frente B G3). Após R1, HT02/HT03 só cobrem `z_mlgamma`/`z_msgamma`; a contagem não muda porque os demais majors seguem associados a HT04 |
 | Campos descartados | 0 |
 
 Cada campo tem as suas regras em `field_coverage`, com pelo menos uma regra não genérica.
@@ -317,6 +391,20 @@ Cada campo tem as suas regras em `field_coverage`, com pelo menos uma regra não
   - Bonferroni/FDR sobre o nº real de testes;
   - VERDICT = rótulo formal exato;
   - resultados negativos permanentes.
+
+### 12.1 Backlog mínimo de evidência futura (só registro)
+
+Em `future_evidence_backlog` do registro de hipóteses. Tudo **NOT STARTED**, nada bloqueante, e toda captura exige ordem explícita.
+
+| ID | Evidência | Desbloqueia | Coleta? |
+|---|---|---|---|
+| E1 | documentação GammaGex/A-Bot (sinais, unidades, cvr/oflow, priors, `mini_contracts`, RR, majors 0DTE) | HT01, B01–B06 | não |
+| E2 | snapshot RTH de 1 sessão (identidades de majors, `zero_mput`, Σ gamma × GEX, priors) | HT02–HT04, B02, B04, B05 | sim (ordem) |
+| E3 | auditoria de revisão do TRACE já capturado | HT06, HT07, R_M09 | não |
+| E4 | captura SPY classic | HT10 | sim (ordem) |
+| E5 | vínculo TRACE Delta Pressure ↔ endpoint | B07, parte de B10 | não |
+| E6 | VolSignals unidades/convenção (projeto ENCERRADO) | B08, B09 | não reabrir sem ordem |
+| E7 | histórico próprio (20–40 pregões = NON_BLOCKING_VALIDATION_TARGET) | HT05, HT07, HT02–HT04, HT01 após E1 | sim (ordem) |
 
 ## 13. Fora desta fase
 

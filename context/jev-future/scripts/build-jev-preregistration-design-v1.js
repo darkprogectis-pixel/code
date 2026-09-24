@@ -6,6 +6,9 @@
 // Deterministico. Falha se: cobertura != 190/190; regra sem campo obrigatorio ou com status fora do enum;
 // regra ATIVA emitindo lado; regra ATIVA com pre-condicao semantica nao atendida; familia DC inexistente;
 // campo do estagio C com origem != SPX; contagem simples em regra; mapeamento provisorio divergente das rotas.
+// Integracao 24/09 (frentes A/B/C) acrescenta guards: B=174/C=16; is_vote=false nas 190 rotas; R1 (zero_mcall/zero_mput fora de
+// HT02/HT03); R_S10 sem hard gate de familia especifica; R_S18 sem rotulo unico destrutivo nem enum MIXED; HT=10 e B=10 (nenhuma
+// promocao); triagem da frente C completa.
 'use strict';
 const fs = require('fs');
 const path = require('path');
@@ -20,7 +23,11 @@ const META = {
   doc: 'JEV_PREREGISTRATION_DESIGN_V1_20260923.md', implementation: 'NONE', runtime: 'NONE', data_collection: 'NONE',
   validation: 'NOT STARTED', validation_history_target: 'NON_BLOCKING (20-40 pregoes = alvo de evidencia futura; nao e gate nem condicao de fase)',
   production: 'UNCHANGED', f5: 'NOT PERFORMED', core_vs_jev_fusion: 'UNDEFINED', core_vs_jev_conflict: 'UNDEFINED', precedence: 'NOT_DEFINED',
+  review_status: 'REVIEWED / STRUCTURALLY CONSOLIDATED (integracao das frentes A/B/C, 2026-09-24): regras estruturais revisadas; blockers semanticos preservados; validation NOT STARTED; registro V1 alcanca so UNKNOWN; estados direcionais INCOMPLETE',
+  review_handoff: 'handoffs/HANDOFF_JEV_PREREG_INTEGRATED_20260924.md',
 };
+// decisoes do operador na integracao de 24/09 (regras THIS_DESIGN que pediam aceite explicito)
+const REVIEW = (decision, note) => ({ date: '2026-09-24', decision, by: 'operador (integracao frentes A/B/C)', note });
 
 const STATUS = ['CANONICAL_STRUCTURAL', 'SUPPORTED_SEMANTIC', 'HYPOTHESIS_TO_TEST', 'BLOCKED_BY_UNKNOWN_SEMANTICS', 'DIAGNOSTIC_ONLY'];
 const ACTIVE = new Set(['CANONICAL_STRUCTURAL', 'SUPPORTED_SEMANTIC']);
@@ -33,7 +40,7 @@ const SP = {
   SP_LEVEL_SCALE_ES_SPX: { state: 'MET', evidence: 'ES_SPX = ESZ6 front ±1,3 pt vs NT8 .ncd; so pos-09/09' },
   SP_MAJORS_UNITS: { state: 'MET', evidence: 'majors 0DTE/next/full unit CONFIRMED' },
   SP_MAJORS_IDENTITY_RTH: { state: 'PARTIAL', evidence: 'identidades medidas so pos-fechamento (24/09); confirmar em RTH' },
-  SP_ZERO_MPUT_SEMANTICS: { state: 'UNMET', evidence: '"put support" acima do spot 67% de 23/09' },
+  SP_ZERO_MPUT_SEMANTICS: { state: 'UNMET', evidence: '"put support" acima do spot 67% de 23/09; identidade candidata zero_mput ≡ state/gex_zero.major_neg_vol medida so pos-fechamento (24/09) => PENDING_SHORT_VALIDATION (confirmacao RTH, backlog E2)' },
   SP_DEX_SIGN_CONVENTION: { state: 'UNMET', evidence: 'unit UNKNOWN; perspectiva dealer x cliente nao documentada; so pc_oi (razao) confirmado' },
   SP_GREEK_SIGN_CONVENTION: { state: 'UNMET', evidence: 'feature contract §6: convencao de sinal das gregas (vanna/charm/state por strike) UNKNOWN' },
   SP_PRIORS_SPACING: { state: 'UNMET', evidence: 'priors/max_priors: espacamento temporal e semantica UNKNOWN' },
@@ -43,7 +50,7 @@ const SP = {
   SP_TRACE_DELTA_PRESSURE_LINK: { state: 'UNMET', evidence: 'OPTIONAL_EVIDENCE_GAP: vinculo ao endpoint real nao capturado' },
   SP_VOLSIGNALS_UNITS: { state: 'UNMET', evidence: '7 unidades UNKNOWN => numeric_equivalence_allowed=false' },
   SP_VOLSIGNALS_GAMMA_SIGN: { state: 'UNMET', evidence: 'gammaExposure "Simulated": convencao de sinal nao documentada' },
-  SP_MENTHORQ_ALIGNMENT_DEF: { state: 'UNMET', evidence: 'como niveis MenthorQ definem "alinhado" a um contexto do Jev nao esta definido' },
+  SP_MENTHORQ_ALIGNMENT_DEF: { state: 'UNMET', evidence: 'como niveis MenthorQ definem "alinhado" a um contexto do Jev nao esta definido; os artefatos so trazem nomes dos niveis (hvl, call_resistance, put_support...), market_origin UNKNOWN e valores null (401) => definicao BLOCKED/PENDING sem semantica documentada' },
   SP_SPY_INDEPENDENCE: { state: 'UNMET', evidence: 'SPX x SPY: medir antes de somar' },
   SP_NO_TRADE_CRITERIA: { state: 'UNDEFINED', evidence: 'sem criterio conceitual defensavel registrado' },
 };
@@ -84,8 +91,14 @@ rule({ rule_id: 'R_S09_DATA_INVALID_TO_UNKNOWN', status: 'CANONICAL_STRUCTURAL',
   description: 'data_quality.status = DATA_INVALID => jev_directional_context = UNKNOWN com reason DATA_INVALID (nunca NO_TRADE_CONTEXT).',
   input_families: ['ALL'], required_quality: ALLQ, semantic_preconditions: [], output_effect: 'UNKNOWN + RC_DATA_INVALID' });
 rule({ rule_id: 'R_S10_DQ_STATUS_DEFINITION', status: 'CANONICAL_STRUCTURAL', origin: 'THIS_DESIGN', stage: 'DATA_QUALITY', emits_side: false,
-  description: 'DATA_INVALID: sem referencia de preco utilizavel OU nenhum membro da familia de regime 0DTE (DC_GEX0_SIGN / DC_ZERO_GAMMA_0DTE) com freshness FRESH ou MARKET_CLOSED. DEGRADED: dado valido, mas alguma familia com leitura ativa esta STALE/UNKNOWN/PENDING_REVISION_AUDIT ou so parcial. VALID: demais casos. Sem threshold numerico novo (usa os PROVISIONAL de R_S08).',
-  input_families: ['DC_SPOT_PRICE', 'DC_GEX0_SIGN', 'DC_ZERO_GAMMA_0DTE'], required_quality: ALLQ, semantic_preconditions: [], output_effect: 'data_quality.status VALID|DEGRADED|DATA_INVALID' });
+  description: 'Qualidade de dados DIMENSIONAL, avaliada so sobre freshness/disponibilidade das familias (R_S08/R_S11), nunca sobre saidas de etapas posteriores nem sobre semantica (semantica UNKNOWN e tratada por R_S14, nao por data_quality). '
+    + '(1) Familia utilizavel = ao menos um membro com vendor timestamp e freshness FRESH ou MARKET_CLOSED, fora de FROZEN_VALUES; MARKET_CLOSED nao mascara membro ausente, timestamp ausente/invalido ou FROZEN_VALUES. '
+    + '(2) Familia nao utilizavel => so as dimensoes do native_dealer_state que dependem dela ficam UNKNOWN/UNAVAILABLE, com motivo em data_quality.per_source e unresolved_fields; as demais dimensoes seguem. Nenhuma familia especifica (inclusive DC_GEX0_SIGN / DC_ZERO_GAMMA_0DTE) e condicao de validade global. '
+    + '(3) Referencia de preco (DC_SPOT_PRICE) nao utilizavel => so as leituras que dependem de spot ficam UNKNOWN (R_M01 leitura b, R_M02, R_M03, R_M04 acima/abaixo, R_M05 cruzamento, R_M09 gamma no spot); nao e condicao de validade global. '
+    + '(4) Status global: DATA_INVALID so quando nenhuma dimensao dealer do estagio B (gamma_regime, structure_location, delta_positioning, second_order_flows, vol_skew, flow_unknown_semantics) tem familia utilizavel, isto e, impossibilidade estrutural de produzir qualquer native_dealer_state utilizavel; DEGRADED quando ha ao menos uma dimensao dealer utilizavel e alguma familia com leitura ativa esta nao utilizavel, STALE, PENDING_REVISION_AUDIT ou so parcial; VALID nos demais casos. '
+    + 'Sem threshold, score, peso ou regra de proporcao novos (usa os PROVISIONAL de R_S08). data_quality e CLASSIFICATION INPUT, nao gate de trade; DATA_INVALID nunca vira NO_TRADE_CONTEXT (R_S09).',
+  input_families: ['ALL'], required_quality: ALLQ, semantic_preconditions: [], output_effect: 'data_quality.status VALID|DEGRADED|DATA_INVALID + disponibilidade por dimensao (UNKNOWN/UNAVAILABLE local, motivo em data_quality.per_source e unresolved_fields)',
+  review: REVIEW('REVISE', 'versao anterior tornava a ausencia de DC_GEX0_SIGN / DC_ZERO_GAMMA_0DTE (ou de preco) hard gate global de DATA_INVALID sem suporte em contrato canonico anterior (frente A); substituida por definicao dimensional') });
 rule({ rule_id: 'R_S11_SESSION_INFORMATIONAL', status: 'CANONICAL_STRUCTURAL', origin: 'CANON_EXISTING', stage: 'DATA_QUALITY', emits_side: false,
   description: 'Sessao RTH / OUTSIDE_RTH so informativa; fora do RTH o estado de freshness e MARKET_CLOSED, nao STALE; nenhuma regra automatica deriva de sessao.',
   input_families: ['ALL'], required_quality: ALLQ, semantic_preconditions: [], output_effect: 'data_quality.session' });
@@ -101,7 +114,8 @@ rule({ rule_id: 'R_S14_UNKNOWN_SEMANTICS_NO_SIDE', status: 'CANONICAL_STRUCTURAL
   input_families: ['ALL'], required_quality: ALLQ, semantic_preconditions: [], output_effect: 'UNRESOLVED + unresolved_fields[]' });
 rule({ rule_id: 'R_S15_ACTIVE_RULES_ONLY', status: 'CANONICAL_STRUCTURAL', origin: 'THIS_DESIGN', stage: 'NATIVE+FINAL_CONTEXT', emits_side: false,
   description: 'So regras com status CANONICAL_STRUCTURAL ou SUPPORTED_SEMANTIC entram no jev_directional_context de registro. HYPOTHESIS_TO_TEST so pode ser avaliada num braco de pesquisa rotulado, fora do contexto de registro, e so vira ativa por pre-registro de validacao + decisao do operador. BLOCKED e DIAGNOSTIC nunca entram.',
-  input_families: ['ALL'], required_quality: ALLQ, semantic_preconditions: [], output_effect: 'conjunto de regras ativas do contexto' });
+  input_families: ['ALL'], required_quality: ALLQ, semantic_preconditions: [], output_effect: 'conjunto de regras ativas do contexto',
+  review: REVIEW('ACCEPT', 'so CANONICAL_STRUCTURAL e SUPPORTED_SEMANTIC no registro V1; HYPOTHESIS_TO_TEST so no braco de pesquisa; BLOCKED e DIAGNOSTIC nao participam; nenhuma hipotese promovida') });
 rule({ rule_id: 'R_S16_CONTEXT_STATE_DEFINITIONS', status: 'CANONICAL_STRUCTURAL', origin: 'CANON_EXISTING', stage: 'NATIVE+FINAL_CONTEXT', emits_side: false,
   description: 'Definicoes do output contract, aplicadas so sobre leituras de lado de regras ativas: CONFLICTED_CONTEXT = familias com leituras opostas; LONG/SHORT_CONTEXT = todas as leituras de lado ativas no mesmo sentido (consistencia, nao contagem); NEUTRAL_CONTEXT = regras de lado avaliaveis sem inclinacao; UNKNOWN = dado valido sem regra de lado avaliavel; NO_TRADE_CONTEXT so por criterio pre-registrado (hoje UNDEFINED => nunca emitido).',
   input_families: ['ALL'], required_quality: 'data_quality.status != DATA_INVALID', semantic_preconditions: [], output_effect: 'native_directional_context e jev_directional_context' });
@@ -110,8 +124,14 @@ rule({ rule_id: 'R_S17_C_AFTER_B_NO_FUSION', status: 'CANONICAL_STRUCTURAL', ori
   input_families: ['DC_SPX_FINAL_GAMMA', 'DC_SPX_TRACE_PARTICIPANTS', 'DC_SPX_TRACE_DELTA', 'DC_SPX_TRACE_CHARM', 'DC_SPX_VOLSIGNALS_CHARM', 'DC_SPX_VOLSIGNALS_DELTACHANGE', 'DC_SPX_VOLSIGNALS_DELTATOTAL', 'DC_SPX_VOLSIGNALS_VANNA', 'DC_SPX_VOLSIGNALS_VOLGA', 'DC_SPX_VOLSIGNALS_DELTADIFF'],
   required_quality: ALLQ, semantic_preconditions: [], output_effect: 'spx_final_context.effect_on_native' });
 rule({ rule_id: 'R_S18_EFFECT_LABEL_SELECTION', status: 'CANONICAL_STRUCTURAL', origin: 'THIS_DESIGN', stage: 'SPX_FINAL_CONTEXT', emits_side: false,
-  description: 'Rotulo unico de effect_on_native: UNAVAILABLE se nenhuma leitura C utilizavel; senao CONTRADICTS se alguma leitura C comparavel contraria a leitura B da mesma dimensao; senao CONFIRMS se alguma concorda; senao ENRICHES se C so acrescenta informacao descritiva; senao NO_EFFECT. Comparavel = mesma dimensao e semantica MET; PARTIAL_ANALOG compara so sinal/posicao, nunca magnitude. A dimensao comparada vai em reason_codes.',
-  input_families: ['DC_SPX_FINAL_GAMMA', 'DC_SPX_TRACE_PARTICIPANTS'], required_quality: ALLQ, semantic_preconditions: [], output_effect: 'effect_on_native + RC_SPX_<dimensao>_<efeito>' });
+  description: 'Efeito de C preservado POR (FONTE, DIMENSAO), sem reducao destrutiva e sem enum novo. Cada par (source TRACE|VOLSIGNALS, dimensao) recebe um efeito granular do enum existente spx_effect_on_native (CONFIRMS|CONTRADICTS|ENRICHES|NO_EFFECT|UNAVAILABLE), registrado em source_contributions[] (role_in_this_reading) e em reason_codes (RC_SPX_<SOURCE>_<DIMENSAO>_<EFEITO>). '
+    + 'Comparavel = mesma dimensao e semantica MET; PARTIAL_ANALOG compara so sinal/posicao, nunca magnitude; sem fusao TRACE x VolSignals nem entre dimensoes. '
+    + 'Um efeito granular CONTRADICTS tambem vai em conflicts[] como divergencia descritiva C x B (familia C x familia B da mesma dimensao), nao como conflito direcional. '
+    + 'O escalar spx_final_context.effect_on_native e derivado so sem perda: UNAVAILABLE se nenhum par tem leitura C utilizavel; o efeito comum se todos os pares com leitura utilizavel tem o mesmo efeito; caso contrario fica SEM DERIVACAO AUTOMATICA (nao preenchido, reason RC_SPX_EFFECT_NOT_DERIVED) e os efeitos granulares sao a informacao valida. '
+    + 'Efeitos simultaneos distintos nao alteram jev_directional_context (R_S17) e nunca produzem CONFLICTED_CONTEXT, que e estado do Jev sobre leituras de lado de regras ativas (R_S16).',
+  input_families: ['DC_SPX_FINAL_GAMMA', 'DC_SPX_TRACE_PARTICIPANTS'], required_quality: ALLQ, semantic_preconditions: [],
+  output_effect: 'source_contributions[] + reason_codes por (fonte, dimensao); conflicts[] descritivo para CONTRADICTS; effect_on_native escalar so quando derivavel sem perda, senao nao preenchido + RC_SPX_EFFECT_NOT_DERIVED',
+  review: REVIEW('REVISE', 'a precedencia escalar unica UNAVAILABLE>CONTRADICTS>CONFIRMS>ENRICHES>NO_EFFECT apagava efeitos simultaneos (frente A); substituida por registro granular nos campos existentes do output contract; MIXED NAO adicionado (Decision Logic V1 fechada)') });
 rule({ rule_id: 'R_S19_MENTHORQ_OVERLAY', status: 'CANONICAL_STRUCTURAL', origin: 'CANON_EXISTING', stage: 'MENTHORQ_OVERLAY', emits_side: false,
   description: 'MenthorQ = POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING: alinhado => POSITIVE; desalinhado, neutro, stale, offline, null => ZERO. Nunca origina lado, veta, gera NO_TRADE nem reduz conviction; nao altera jev_directional_context. Enquanto SP_MENTHORQ_ALIGNMENT_DEF = UNMET, confirmation = ZERO.',
   input_families: ['DC_MENTHORQ_LEVELS'], required_quality: ALLQ, semantic_preconditions: [], output_effect: 'menthorq.confirmation POSITIVE|ZERO' });
@@ -149,7 +169,10 @@ rule({ rule_id: 'R_M06_LEVEL_TRANSITION', status: 'SUPPORTED_SEMANTIC', origin: 
   description: 'TRANSITION de estrutura por evento discreto: um nivel (major/zero gamma) muda de strike entre snapshots consecutivos da mesma categoria, ou a ordenacao dos niveis muda. Registra sentido da migracao (UP|DOWN) como descritor, nao como lado.',
   input_families: ['DC_MAJORS_0DTE', 'DC_MAJORS_NEXT', 'DC_MAJORS_FULL', 'DC_ZERO_GAMMA_0DTE', 'DC_ZERO_GAMMA_NEXT', 'DC_ZERO_GAMMA_FULL'],
   required_quality: 'os dois snapshots validos, mesmo lado de 09/09', semantic_preconditions: ['SP_MAJORS_UNITS', 'SP_LEVEL_SCALE_ES_SPX'],
-  output_effect: 'native_dealer_state.change_transition += LEVEL_MIGRATION{level,from,to,UP|DOWN}; RC_LEVEL_MIGRATION (direction 0)' });
+  output_effect: 'native_dealer_state.change_transition += LEVEL_MIGRATION{level,from,to,UP|DOWN}; RC_LEVEL_MIGRATION (direction 0)',
+  pending_operator_decision: { id: 'POD_R_M06_INTERPOLATED_LEVEL_MIGRATION', status: 'PENDING_OPERATOR_DECISION', blocks_architecture: false,
+    question: 'Qual mudanca minima/quantitativa constitui migracao de um nivel interpolado? Os majors 0DTE do orderflow sao interpolados (fracao mod 5 variavel, auditoria A-BOT A2), entao "muda de strike" nao e discreto para eles.',
+    interim: 'nenhuma definicao inventada; para niveis interpolados o evento LEVEL_MIGRATION fica sem criterio discreto ate a decisao; niveis na grade de strikes e a mudanca de ordenacao nao sao afetados' } });
 rule({ rule_id: 'R_M07_NET_SIGN_CHANGE_OBSERVED', status: 'SUPPORTED_SEMANTIC', origin: 'THIS_DESIGN', stage: 'NATIVE_DEALER_STATE', emits_side: false,
   description: 'Troca de sinal observada em net values com semantica ainda UNKNOWN (dex.net_*, vanna/charm net_*) e registrada como CHANGE aritmetico; a interpretacao fica UNRESOLVED (ver HT01, B01).',
   input_families: ['DC_DEX_0DTE', 'DC_DEX_NEXT', 'DC_VANNA_0DTE', 'DC_VANNA_NEXT', 'DC_CHARM_0DTE', 'DC_CHARM_NEXT'], required_quality: 'os dois snapshots validos',
@@ -173,23 +196,28 @@ H({ rule_id: 'HT01_DEX_DIRECTION_BY_REGIME', stage: 'NATIVE_DEALER_STATE', emits
   input_families: ['DC_DEX_0DTE', 'DC_GEX0_SIGN'], required_quality: 'FRESH; regime nao AMBIGUOUS', semantic_preconditions: ['SP_DEX_SIGN_CONVENTION', 'SP_GEX_SIGN_IS_REGIME'],
   output_effect: 'braco de pesquisa: leitura de lado LONG|SHORT da familia DEX; no registro: UNRESOLVED' });
 H({ rule_id: 'HT02_POSITIVE_GAMMA_LEVEL_REVERSION', stage: 'NATIVE_DEALER_STATE', emits_side: true,
-  description: 'Em POSITIVE_GAMMA, preco afastado do major/long-gamma 0DTE tende a voltar em direcao a ele (lado = sentido do nivel).',
+  description: 'Em POSITIVE_GAMMA, preco afastado do major long-gamma 0DTE (z_mlgamma) tende a voltar em direcao a ele (lado = sentido do nivel).',
   input_families: ['DC_MAJORS_0DTE', 'DC_ZERO_GAMMA_0DTE', 'DC_GEX0_SIGN', 'DC_SPOT_PRICE'], required_quality: 'FRESH; regime POSITIVE_GAMMA', semantic_preconditions: ['SP_MAJORS_IDENTITY_RTH', 'SP_MAJORS_UNITS'],
-  output_effect: 'braco de pesquisa: leitura de lado da familia MAJORS_0DTE' });
+  output_effect: 'braco de pesquisa: leitura de lado da familia MAJORS_0DTE',
+  level_fields: ['abot.root.orderflow.z_mlgamma'],
+  scope_note: 'R1 (24/09): nivel restrito a z_mlgamma; zero_mcall/zero_mput excluidos (semantica UNKNOWN, B05) e demais majors da familia fora do escopo desta hipotese; DC_ZERO_GAMMA_0DTE / DC_GEX0_SIGN / DC_SPOT_PRICE so como condicao/referencia' });
 H({ rule_id: 'HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION', stage: 'NATIVE_DEALER_STATE', emits_side: true,
-  description: 'Em NEGATIVE_GAMMA, preco que atravessa o major short-gamma 0DTE tende a continuar no sentido do cruzamento.',
+  description: 'Em NEGATIVE_GAMMA, preco que atravessa o major short-gamma 0DTE (z_msgamma) tende a continuar no sentido do cruzamento.',
   input_families: ['DC_MAJORS_0DTE', 'DC_GEX0_SIGN', 'DC_SPOT_PRICE'], required_quality: 'FRESH; regime NEGATIVE_GAMMA', semantic_preconditions: ['SP_MAJORS_IDENTITY_RTH', 'SP_MAJORS_UNITS'],
-  output_effect: 'braco de pesquisa: leitura de lado da familia MAJORS_0DTE' });
+  output_effect: 'braco de pesquisa: leitura de lado da familia MAJORS_0DTE',
+  level_fields: ['abot.root.orderflow.z_msgamma'],
+  scope_note: 'R1 (24/09): nivel restrito a z_msgamma; zero_mcall/zero_mput excluidos (semantica UNKNOWN, B05) e demais majors da familia fora do escopo desta hipotese; DC_GEX0_SIGN / DC_SPOT_PRICE so como condicao/referencia' });
 H({ rule_id: 'HT04_LEVEL_MIGRATION_SIDE', stage: 'NATIVE_DEALER_STATE', emits_side: true,
   description: 'LEVEL_MIGRATION intradia (R_M06) dos majors 0DTE no sentido UP/DOWN antecede movimento do ES no mesmo sentido.',
   input_families: ['DC_MAJORS_0DTE'], required_quality: 'snapshots validos consecutivos', semantic_preconditions: ['SP_MAJORS_IDENTITY_RTH'],
-  output_effect: 'braco de pesquisa: leitura de lado da familia MAJORS_0DTE' });
+  output_effect: 'braco de pesquisa: leitura de lado da familia MAJORS_0DTE',
+  depends_on_pending: 'POD_R_M06_INTERPOLATED_LEVEL_MIGRATION (evento de migracao de nivel interpolado ainda sem definicao)' });
 H({ rule_id: 'HT05_REGIME_AMPLITUDE', stage: 'NATIVE_DEALER_STATE', emits_side: false,
   description: 'O regime R_M01 prediz amplitude (|retorno|), nao lado: NEGATIVE_GAMMA > POSITIVE_GAMMA.',
   input_families: ['DC_GEX0_SIGN', 'DC_ZERO_GAMMA_0DTE'], required_quality: 'FRESH', semantic_preconditions: ['SP_GEX_SIGN_IS_REGIME'],
   output_effect: 'contexto de amplitude; nenhum efeito em lado' });
 H({ rule_id: 'HT06_SPX_CONTRADICTS_EFFECT', stage: 'SPX_FINAL_CONTEXT', emits_side: false,
-  description: 'Se effect_on_native = CONTRADICTS numa dimensao que sustenta uma leitura de lado, o contexto final deveria ser (V_A) CONFLICTED_CONTEXT ou (V_B) mantido com anotacao. Hoje: nenhuma, por R_S17.',
+  description: 'Se um efeito granular CONTRADICTS (R_S18, por fonte/dimensao) atinge uma dimensao que sustenta uma leitura de lado, o contexto final deveria ser (V_A) CONFLICTED_CONTEXT ou (V_B) mantido com anotacao. Hoje: nenhuma, por R_S17; dormente enquanto nao existir regra de lado ativa.',
   input_families: ['DC_SPX_FINAL_GAMMA', 'DC_SPX_TRACE_PARTICIPANTS'], required_quality: 'TRACE com auditoria de revisao classificada', semantic_preconditions: ['SP_TRACE_MM_GAMMA_SIGN'],
   output_effect: 'braco de pesquisa: variantes V_A/V_B do jev_directional_context' });
 H({ rule_id: 'HT07_TRACE_REGIME_AGREEMENT_RELIABILITY', stage: 'SPX_FINAL_CONTEXT', emits_side: false,
@@ -197,13 +225,15 @@ H({ rule_id: 'HT07_TRACE_REGIME_AGREEMENT_RELIABILITY', stage: 'SPX_FINAL_CONTEX
   input_families: ['DC_SPX_FINAL_GAMMA', 'DC_GEX0_SIGN'], required_quality: 'TRACE com auditoria de revisao classificada', semantic_preconditions: ['SP_TRACE_MM_GAMMA_SIGN', 'SP_GEX_SIGN_IS_REGIME'],
   output_effect: 'contexto de amplitude; nenhum efeito em lado' });
 H({ rule_id: 'HT08_EXPIRY_REGIME_DIVERGENCE', stage: 'NATIVE_DEALER_STATE', emits_side: false,
-  description: 'Regime 0DTE e regime next em sinais opostos (R_M02) caracteriza estado AMBIGUOUS mais amplo do que o 0DTE sozinho.',
+  description: 'RESIDUO EMPIRICO: numa variante de pesquisa, tratar a divergencia de sinal 0DTE x next (lida de R_M02, nao recalculada) como AMBIGUOUS acrescenta informacao alem do rotulo R_M01 do 0DTE sozinho. A parte descritiva (regimes 0DTE/next/full lado a lado) ja e R_M02 e nao e hipotese.',
   input_families: ['DC_GEX0_SIGN', 'DC_GEX_NEXT'], required_quality: 'FRESH', semantic_preconditions: ['SP_GEX_SIGN_IS_REGIME'],
-  output_effect: 'braco de pesquisa: variante do rotulo de regime' });
+  output_effect: 'braco de pesquisa: variante do rotulo de regime; nunca altera R_M01 nem funde vencimentos no registro (R_M02)',
+  covered_by: 'R_M02_REGIME_NEXT_FULL (parte descritiva, R3 24/09)' });
 H({ rule_id: 'HT09_MENTHORQ_ALIGNMENT_DEFINITION', stage: 'MENTHORQ_OVERLAY', emits_side: false,
   description: 'Definicao de "alinhado" entre niveis MenthorQ e um jev_directional_context LONG/SHORT (efeito so POSITIVE|ZERO).',
   input_families: ['DC_MENTHORQ_LEVELS'], required_quality: 'MenthorQ nao null (hoje 401 => null)', semantic_preconditions: ['SP_MENTHORQ_ALIGNMENT_DEF'],
-  output_effect: 'menthorq.confirmation POSITIVE|ZERO (nunca negativo)' });
+  output_effect: 'menthorq.confirmation POSITIVE|ZERO (nunca negativo)',
+  definition_status: 'BLOCKED_PENDING (R4 24/09): "alinhado" nao e definivel so com semantica presente nos artefatos (so nomes dos niveis MenthorQ; market_origin UNKNOWN; valores null por 401); nada inferido. Envelope ja canonico em R_S19: alinhado => POSITIVE; desalinhado/neutro/stale/offline/unknown => ZERO; nunca origina lado, veta, bloqueia nem reduz conviction' });
 H({ rule_id: 'HT10_SPY_INSTANCE_ROLE', stage: 'NATIVE_DEALER_STATE', emits_side: false,
   description: 'Instancias SPY (market_origin SPY) trazem informacao independente das SPX; so depois de medido podem formar familia propria.',
   input_families: ['DC_MAJORS_0DTE', 'DC_CLASSIC_GEX_PROFILE_ZERO'], required_quality: 'SPY classic capturado', semantic_preconditions: ['SP_SPY_INDEPENDENCE'],
@@ -220,9 +250,11 @@ B({ rule_id: 'B03_CVR_OFLOW', stage: 'NATIVE_DEALER_STATE', description: 'cvr/of
 B({ rule_id: 'B04_PRIORS_TIME_INTERPRETATION', stage: 'NATIVE_DEALER_STATE', description: 'priors[] e max_priors[] como serie temporal (mudanca, velocidade, TRANSITION): espacamento e semantica UNKNOWN; so "valor difere" e descritivo.',
   input_families: ['DC_CLASSIC_GEX_PROFILE_ZERO', 'DC_CLASSIC_GEX_PROFILE_NEXT', 'DC_CLASSIC_GEX_PROFILE_FULL', 'DC_STATE_GEX_PROFILE_FULL', 'DC_GEX0_SIGN'], semantic_preconditions: ['SP_PRIORS_SPACING'], output_effect: 'change_transition.priors = UNRESOLVED' });
 B({ rule_id: 'B05_ZERO_MPUT_SEMANTICS', stage: 'NATIVE_DEALER_STATE', description: 'zero_mput ("put support") como suporte: acima do spot 67% de 23/09 => so LOCATION neutra com SEMANTIC_ANOMALY.',
-  input_families: ['DC_MAJORS_0DTE'], semantic_preconditions: ['SP_ZERO_MPUT_SEMANTICS'], output_effect: 'zero_mput sem papel de suporte/resistencia' });
+  input_families: ['DC_MAJORS_0DTE'], semantic_preconditions: ['SP_ZERO_MPUT_SEMANTICS'], output_effect: 'zero_mput sem papel de suporte/resistencia',
+  short_validation: { status: 'PENDING_SHORT_VALIDATION', candidate_identity: 'zero_mput ≡ state/gex_zero.major_neg_vol (medida so pos-fechamento, 24/09)', needs: 'confirmacao em RTH (backlog E2; captura so com ordem explicita)', effect_if_confirmed: 'so re-rotulagem descritiva; nao promove regra nem muda side capability (R_S13)' } });
 B({ rule_id: 'B06_VOL_SKEW_DIRECTION', stage: 'NATIVE_DEALER_STATE', description: 'delta_risk_reversal e call/put ivol como lado ou regime de vol: semantica/unidade UNKNOWN.',
-  input_families: ['DC_RISK_REVERSAL', 'DC_STATE_IVOL'], semantic_preconditions: ['SP_RISK_REVERSAL_SEMANTICS'], output_effect: 'vol_skew = UNRESOLVED' });
+  input_families: ['DC_RISK_REVERSAL', 'DC_STATE_IVOL'], semantic_preconditions: ['SP_RISK_REVERSAL_SEMANTICS'], output_effect: 'vol_skew = UNRESOLVED',
+  lineage_note: 'R6 (24/09): abot.root.classic.delta_risk_reversal ≡ abot.classic.delta_risk_reversal na instancia SPX/zero = BY_CONSTRUCTION (mesmo payload e instante; feature contract e handoff §6) => nunca contam como evidencias independentes. As evidence families V1 ainda as listam separadas (SEPARATE_UNVERIFIED): materializar exige reabrir DC groups do Feature Contract V1 e as contagens da Decision Logic V1 => NAO aplicado (STOP), ver KNOWN_LINEAGE_OVERRIDES na maquina de estados. abot.state_gex.delta_risk_reversal segue UNVERIFIED (relacao classic x state nao medida).' });
 B({ rule_id: 'B07_TRACE_DELTA_CHARM_PRESSURE', stage: 'SPX_FINAL_CONTEXT', description: 'TRACE Delta/Charm Pressure: vendor diz que Delta Pressure so tem lado com regime definido, mas o vinculo ao endpoint real e body/formula/unidade nao foram capturados (INSUFFICIENT_INFORMATION).',
   input_families: ['DC_SPX_TRACE_DELTA', 'DC_SPX_TRACE_CHARM'], semantic_preconditions: ['SP_TRACE_DELTA_PRESSURE_LINK'], output_effect: 'effect UNAVAILABLE para essas familias' });
 B({ rule_id: 'B08_VOLSIGNALS_EXPOSURES', stage: 'SPX_FINAL_CONTEXT', description: 'VolSignals charm/deltaChange/deltaTotal/vanna/volga/deltaExposureDiff: INSUFFICIENT_INFORMATION; unidade UNKNOWN; deltaExposureDiff = 0 em 3678/3678, funcao UNKNOWN.',
@@ -300,6 +332,8 @@ const coverage = rt.routes.map(r => {
   const rep = OVERRIDE.filter(([re, , mode]) => mode === 'replace' && re.test(r.feature_id));
   const ids = new Set(rep.length ? [] : (BY_DIM[r.dimension] || []));
   for (const [re, add] of OVERRIDE) if (re.test(r.feature_id)) add.forEach(x => ids.add(x));
+  // escopo de nivel (R1): hipotese com level_fields so cobre, na dimensao de niveis, os campos declarados
+  for (const id of [...ids]) { const lf = byId[id] && byId[id].level_fields; if (lf && r.dimension === 'STRUCTURE_LOCATION' && !lf.includes(r.feature_id)) ids.delete(id); }
   ['R_S02_FULL_COVERAGE_NOT_VOTES', 'R_S03_FAMILY_LINEAGE', 'R_S05_MARKET_ORIGIN'].forEach(x => ids.add(x));
   for (const id of ids) if (!byId[id]) throw new Error('regra inexistente na cobertura ' + id);
   const st = [...ids].map(id => byId[id].status);
@@ -309,6 +343,23 @@ const coverage = rt.routes.map(r => {
     side_capable_in_record: false, side_capable_in_research_arm: [...ids].some(id => byId[id].emits_side) };
 });
 if (coverage.length !== 190 || new Set(coverage.map(c => c.feature_id)).size !== 190) throw new Error('cobertura != 190/190');
+
+// ---- guards da integracao de 24/09 ----
+const cov = Object.fromEntries(coverage.map(c => [c.feature_id, c]));
+if (coverage.filter(c => c.stage.startsWith('B_')).length !== 174 || coverage.filter(c => c.stage.startsWith('C_')).length !== 16) throw new Error('B != 174 ou C != 16');
+if (rt.routes.some(x => x.is_vote !== false)) throw new Error('rota com is_vote != false');
+for (const f of ['abot.root.orderflow.zero_mcall', 'abot.root.orderflow.zero_mput']) {
+  if (!cov[f]) throw new Error('campo ausente ' + f);
+  for (const h of ['HT02_POSITIVE_GAMMA_LEVEL_REVERSION', 'HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION'])
+    if (cov[f].rule_ids.includes(h) || byId[h].level_fields.includes(f)) throw new Error(`R1 violado: ${f} em ${h}`);
+}
+if (!cov['abot.root.orderflow.z_mlgamma'].rule_ids.includes('HT02_POSITIVE_GAMMA_LEVEL_REVERSION')) throw new Error('R1: z_mlgamma fora de HT02');
+if (!cov['abot.root.orderflow.z_msgamma'].rule_ids.includes('HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION')) throw new Error('R1: z_msgamma fora de HT03');
+if (/DC_GEX0_SIGN \/ DC_ZERO_GAMMA_0DTE\) com freshness|OU nenhum membro/.test(byId.R_S10_DQ_STATUS_DEFINITION.description)) throw new Error('R_S10: hard gate de familia especifica voltou');
+if (/Rotulo unico/.test(byId.R_S18_EFFECT_LABEL_SELECTION.description) || /\bMIXED\b/.test(byId.R_S18_EFFECT_LABEL_SELECTION.description)) throw new Error('R_S18: rotulo unico destrutivo ou enum MIXED');
+for (const r of R) if (r.status === 'HYPOTHESIS_TO_TEST' && ACTIVE.has(r.status)) throw new Error('hipotese ativa ' + r.rule_id);
+const nHT = R.filter(r => r.status === 'HYPOTHESIS_TO_TEST').length, nB = R.filter(r => r.status === 'BLOCKED_BY_UNKNOWN_SEMANTICS').length;
+if (nHT !== 10 || nB !== 10) throw new Error(`HT=${nHT} B=${nB} (esperado 10/10; nenhuma promocao/reclassificacao nesta integracao)`);
 const byStatus = {}; for (const r of R) (byStatus[r.status] = byStatus[r.status] || []).push(r.rule_id);
 const covSummary = {
   fields_total: 190, fields_covered: coverage.length, stage_B: coverage.filter(c => c.stage.startsWith('B_')).length, stage_C: coverage.filter(c => c.stage.startsWith('C_')).length,
@@ -347,6 +398,8 @@ const sm = {
     change_transition: ['REGIME_TRANSITION', 'LEVEL_MIGRATION', 'SIGN_CHANGE_OBSERVED', 'NONE', 'UNRESOLVED'],
     unresolved_dimension_reading: 'UNRESOLVED',
     spx_effect_on_native: ['CONFIRMS', 'CONTRADICTS', 'ENRICHES', 'NO_EFFECT', 'UNAVAILABLE'],
+    spx_effect_granularity: 'R_S18: um efeito por (fonte, dimensao) em source_contributions/reason_codes; escalar effect_on_native so quando derivavel sem perda, senao nao preenchido + RC_SPX_EFFECT_NOT_DERIVED; sem enum novo; efeitos mistos nunca viram CONFLICTED_CONTEXT',
+    dimension_availability: 'R_S10: familia nao utilizavel => so as dimensoes dependentes ficam UNKNOWN/UNAVAILABLE; DATA_INVALID global so sem nenhuma dimensao dealer utilizavel',
   },
   context_decision: {
     applies_to: ['native_directional_context', 'jev_directional_context'],
@@ -355,21 +408,36 @@ const sm = {
       { if: 'data_quality.status == DATA_INVALID', then: 'UNKNOWN', reason: 'RC_DATA_INVALID', rule: 'R_S09_DATA_INVALID_TO_UNKNOWN' },
       { if: 'nenhuma regra ativa de lado avaliavel', then: 'UNKNOWN', reason: 'RC_NO_ACTIVE_DIRECTIONAL_RULE', rule: 'R_S15_ACTIVE_RULES_ONLY' },
       { if: 'criterio NO_TRADE_CONTEXT pre-registrado e atendido', then: 'NO_TRADE_CONTEXT', reason: 'RC_NO_TRADE_CRITERIA_MET', rule: 'R_S16_CONTEXT_STATE_DEFINITIONS', status: 'INACTIVE — NO_TRADE_CONTEXT_CRITERIA UNDEFINED; posicao desta etapa na ordem tambem a pre-registrar com o criterio' },
-      { if: 'leituras de lado de familias distintas em sentidos opostos', then: 'CONFLICTED_CONTEXT', reason: 'RC_OPPOSITE_FAMILY_READINGS', rule: 'R_S16_CONTEXT_STATE_DEFINITIONS' },
+      { if: 'leituras de lado de familias distintas em sentidos opostos', then: 'CONFLICTED_CONTEXT', reason: 'RC_OPPOSITE_FAMILY_READINGS', rule: 'R_S16_CONTEXT_STATE_DEFINITIONS',
+        guard: 'R7: familias separadas so por lineage UNKNOWN/SUSPECTED (ou por override de lineage conhecida) nao formam par de conflito automaticamente; a divergencia entre elas vai para conflicts[] como diagnostico, nao para CONFLICTED_CONTEXT. Efeitos SPX mistos (R_S18) tambem nao entram aqui. Predicado completo de elegibilidade de par: pendente (frente B, G2)' },
       { if: 'todas as leituras de lado no mesmo sentido', then: 'LONG_CONTEXT | SHORT_CONTEXT', reason: 'RC_CONSISTENT_SIDE_READINGS', rule: 'R_S16_CONTEXT_STATE_DEFINITIONS', note: 'consistencia entre familias, nao contagem; familias com overlap_risk concordantes nao reforcam' },
       { if: 'regras de lado avaliaveis sem inclinacao', then: 'NEUTRAL_CONTEXT', reason: 'RC_NO_INCLINATION', rule: 'R_S16_CONTEXT_STATE_DEFINITIONS' },
     ],
   },
   states: {
-    LONG_CONTEXT: { defined: true, reachable_in_record_v1: false, reachable_in_research_arm: true, via: ['HT01', 'HT02', 'HT03', 'HT04'] },
-    SHORT_CONTEXT: { defined: true, reachable_in_record_v1: false, reachable_in_research_arm: true, via: ['HT01', 'HT02', 'HT03', 'HT04'] },
-    NEUTRAL_CONTEXT: { defined: true, reachable_in_record_v1: false, reachable_in_research_arm: true },
-    CONFLICTED_CONTEXT: { defined: true, reachable_in_record_v1: false, reachable_in_research_arm: true, via: ['HT06 V_A'] },
-    NO_TRADE_CONTEXT: { defined: true, reachable_in_record_v1: false, reachable_in_research_arm: false, criteria: 'UNDEFINED' },
-    UNKNOWN: { defined: true, reachable_in_record_v1: true, reasons: ['RC_DATA_INVALID', 'RC_NO_ACTIVE_DIRECTIONAL_RULE'] },
+    LONG_CONTEXT: { defined: true, reachable_in_record_v1: false, record_v1_status: 'BLOCKED', reachable_in_research_arm: true, via: ['HT01', 'HT02', 'HT03', 'HT04'] },
+    SHORT_CONTEXT: { defined: true, reachable_in_record_v1: false, record_v1_status: 'BLOCKED', reachable_in_research_arm: true, via: ['HT01', 'HT02', 'HT03', 'HT04'] },
+    NEUTRAL_CONTEXT: { defined: true, reachable_in_record_v1: false, record_v1_status: 'BLOCKED', reachable_in_research_arm: true, note: 'sem produtor neutro explicito; ausencia de evidencia, direction 0 de descritor ou nenhuma regra disparada nao sao neutralidade' },
+    CONFLICTED_CONTEXT: { defined: true, reachable_in_record_v1: false, record_v1_status: 'BLOCKED', reachable_in_research_arm: true, via: ['HT06 V_A'], note: 'nao e sinonimo de efeitos SPX mistos (R_S18) nem de divergencia entre familias de lineage desconhecida (R7)' },
+    NO_TRADE_CONTEXT: { defined: true, reachable_in_record_v1: false, record_v1_status: 'UNDEFINED / BLOCKED', reachable_in_research_arm: false, criteria: 'UNDEFINED' },
+    UNKNOWN: { defined: true, reachable_in_record_v1: true, record_v1_status: 'REACHABLE (unico)', reasons: ['RC_DATA_INVALID', 'RC_NO_ACTIVE_DIRECTIONAL_RULE'] },
   },
+  research_arm_reachability_note: 'reachable_in_research_arm = capacidade pretendida, nao prontidao: braco NOT IMPLEMENTED; 0/10 hipoteses testable_now (frente B, G4)',
   classification_states_status: 'INCOMPLETE — 6 estados definidos; no registro V1 so UNKNOWN e alcancavel (nenhuma regra de lado ativa); LONG/SHORT/NEUTRAL/CONFLICTED so no braco de pesquisa; NO_TRADE_CONTEXT sem criterio',
   no_trade_context_criteria: 'UNDEFINED',
+  governance_notes: {
+    R7_A: 'familias mantidas separadas apenas por lineage UNKNOWN (UNVERIFIED/SUSPECTED) nao produzem CONFLICTED_CONTEXT automaticamente',
+    R7_B: 'unknown lineage != independence: separacao conservadora nao prova independencia; concordancia entre elas nao reforca (R_S03)',
+    R7_C: 'conflito potencialmente inflado por segregacao conservadora e diagnosticavel (conflicts[]), nao evidencia direcional',
+    R7_D: 'ESF4 (DEALER_HEDGE_CONFLICT, auditoria A-BOT) e qualquer divergencia Core x Jev nao geram NO_TRADE_CONTEXT enquanto CORE_vs_JEV fusion/conflict policy = UNDEFINED (R_S21)',
+    no_automatic_no_trade: 'missing, stale, frozen, DATA_INVALID e divergencia Core/Jev nunca viram NO_TRADE_CONTEXT automaticamente',
+  },
+  known_lineage_overrides: [
+    { members: ['abot.root.classic.delta_risk_reversal', 'abot.classic.delta_risk_reversal@SPX/zero'], lineage: 'BY_CONSTRUCTION', rule: 'tratar como 1 evidencia; nunca contar como independentes nem como par de conflito', source: 'R6 24/09 (feature contract: copia raiz = mesmo payload da rota /gexbot/classic/SPX/zero)', materialized_in_evidence_families: false, why_not: 'exige reabrir DC groups do Feature Contract V1 e contagens da Decision Logic V1 (fechada) => STOP; pendente de ordem' },
+  ],
+  pending_operator_decisions: [
+    { id: 'POD_R_M06_INTERPOLATED_LEVEL_MIGRATION', rule: 'R_M06_LEVEL_TRANSITION', status: 'PENDING_OPERATOR_DECISION', question: byId.R_M06_LEVEL_TRANSITION.pending_operator_decision.question, blocks_architecture: false },
+  ],
   research_arm: { label: 'JEV_RESEARCH_ARM_V1', rule: 'avalia HYPOTHESIS_TO_TEST offline, fora do contexto de registro; resultado nunca promovido sem pre-registro de validacao + decisao do operador', status: 'NOT IMPLEMENTED' },
 };
 wr('jev-classification-state-machine-v1.json', sm);
@@ -382,6 +450,42 @@ const PRIOR = {
   HT05_REGIME_AMPLITUDE: 'Apoio indireto: 1C aprovou Δγ dealer (PROVISIONAL) e ΔVIX so como AMPLITUDE.',
   HT01_DEX_DIRECTION_BY_REGIME: 'Sem teste anterior no projeto para DEX GammaGex. HIRO (outra fonte) como lado foi REPROVADO — nao transferir.',
 };
+// triagem da frente C (handoffs/HANDOFF_CLAUDE_JEV_HYPOTHESES_20260924.md). Classes: A DOCUMENTATION_RESOLVABLE,
+// B REQUIRES_EMPIRICAL_VALIDATION, C REQUIRES_VENDOR_SEMANTICS, D NOT_DIRECTIONAL, E REDUNDANT_OR_BY_CONSTRUCTION. Nenhuma promovida.
+const FRONT_C_HT = {
+  HT01_DEX_DIRECTION_BY_REGIME: 'C (-> B): convencao de sinal DEX (vendor) antes de qualquer validacao',
+  HT02_POSITIVE_GAMMA_LEVEL_REVERSION: 'B (+ R1 aplicado: escopo z_mlgamma)',
+  HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION: 'B (+ R1 aplicado: escopo z_msgamma)',
+  HT04_LEVEL_MIGRATION_SIDE: 'B (+ R2 PENDING_OPERATOR_DECISION em R_M06)',
+  HT05_REGIME_AMPLITUDE: 'D (-> B): sem precondicao semantica pendente; so dados',
+  HT06_SPX_CONTRADICTS_EFFECT: 'D: dormente; V_A/V_B e escolha de politica do operador',
+  HT07_TRACE_REGIME_AGREEMENT_RELIABILITY: 'D (-> B; risco E: upstream SPX options comum a GammaGex e TRACE)',
+  HT08_EXPIRY_REGIME_DIVERGENCE: 'E (parte descritiva = R_M02, R3 aplicado); residuo -> B',
+  HT09_MENTHORQ_ALIGNMENT_DEFINITION: 'A com dependencia C: definicao BLOCKED_PENDING (R4) por falta de semantica MenthorQ documentada',
+  HT10_SPY_INSTANCE_ROLE: 'D (-> B): medicao curta de lineage SPX x SPY',
+};
+const FRONT_C_B = {
+  B01_SECOND_ORDER_DIRECTION: 'EXTERNAL_DOCUMENTATION_REQUIRED (sinal, unidade, direcao, lineage agg x por strike) -> depois hipotese; CANNOT_BE_USED_DIRECTIONALLY ate la',
+  B02_STATE_GREEK_PER_STRIKE_DIRECTION: 'EXTERNAL_DOCUMENTATION_REQUIRED + EMPIRICAL curto (1 snapshot RTH: soma gamma por strike x GEX agregado); layout mini_contracts UNKNOWN',
+  B03_CVR_OFLOW: 'EXTERNAL_DOCUMENTATION_REQUIRED; rotulos de UI nao sao semantica; CANNOT_BE_USED_DIRECTIONALLY',
+  B04_PRIORS_TIME_INTERPRETATION: 'EMPIRICAL curto (priors x snapshots consecutivos) ou EXTERNAL_DOCUMENTATION_REQUIRED; espacamento do codigo local nao e evidencia',
+  B05_ZERO_MPUT_SEMANTICS: 'RESOLVABLE_FROM_EXISTING_ARTIFACTS (parcial: identidade candidata) + PENDING_SHORT_VALIDATION (RTH); CANNOT_BE_USED_DIRECTIONALLY (R_S13)',
+  B06_VOL_SKEW_DIRECTION: 'EXTERNAL_DOCUMENTATION_REQUIRED (definicao do RR; ivol = IV ou volume?); lineage raiz x rota @zero BY_CONSTRUCTION (R6)',
+  B07_TRACE_DELTA_CHARM_PRESSURE: 'EXTERNAL_DOCUMENTATION_REQUIRED = OPTIONAL_EVIDENCE_GAP (nao bloqueia o design)',
+  B08_VOLSIGNALS_EXPOSURES: 'EXTERNAL_DOCUMENTATION_REQUIRED; auditoria VolSignals ENCERRADA (nao reabrir sem ordem); deltaExposureDiff NON_EVIDENCE; CANNOT_BE_USED_DIRECTIONALLY',
+  B09_VOLSIGNALS_GAMMA_REGIME: 'EXTERNAL_DOCUMENTATION_REQUIRED; concordancia com TRACE nao estabelece convencao; auditoria VolSignals ENCERRADA',
+  B10_STAGE_C_SIDE_ORIGIN: 'CANNOT_BE_USED_DIRECTIONALLY: decisao arquitetural futura do operador + B07; C nao origina lado',
+};
+// backlog minimo de evidencia futura (frente C). SO REGISTRO: nada executado; toda captura exige ordem explicita.
+const BACKLOG = [
+  { id: 'E1', evidence: 'documentacao GammaGex/A-Bot: sinal (DEX, vanna, charm, gregas do state), unidades, cvr/oflow, priors/max_priors, layout mini_contracts, delta_risk_reversal, semantica dos majors 0DTE', type: 'externa', unblocks: ['HT01', 'B01', 'B02', 'B03', 'B04', 'B05', 'B06'], data_collection: false },
+  { id: 'E2', evidence: 'snapshot RTH de 1 sessao: identidades de majors, zero_mput ≡ major_neg_vol, soma gamma por strike x GEX, priors x snapshots consecutivos', type: 'medicao curta', unblocks: ['HT02-HT04 (precondicao)', 'B02 (gamma)', 'B04', 'B05'], data_collection: true },
+  { id: 'E3', evidence: 'auditoria de revisao do TRACE ja capturado (PENDING_REVISION_AUDIT)', type: 'revisao de artefato', unblocks: ['HT06', 'HT07', 'R_M09 sair de DEGRADED'], data_collection: false },
+  { id: 'E4', evidence: 'captura SPY classic', type: 'medicao de lineage', unblocks: ['HT10'], data_collection: true },
+  { id: 'E5', evidence: 'vinculo TRACE Delta Pressure <-> endpoint (OPTIONAL_EVIDENCE_GAP)', type: 'externa', unblocks: ['B07', 'parte de B10'], data_collection: false },
+  { id: 'E6', evidence: 'VolSignals: unidades e convencao de sinal', type: 'externa; projeto ENCERRADO, nao reabrir sem ordem', unblocks: ['B08', 'B09'], data_collection: false },
+  { id: 'E7', evidence: 'historico proprio para validacao (alvo 20-40 pregoes = NON_BLOCKING_VALIDATION_TARGET)', type: 'validacao', unblocks: ['HT05', 'HT07', 'HT02-HT04', 'HT01 (apos E1)', 'residuo HT08'], data_collection: true },
+].map(e => ({ ...e, status: 'NOT STARTED', requires_explicit_operator_order: true, blocking: false }));
 const hyps = R.filter(r => r.status === 'HYPOTHESIS_TO_TEST').map(r => ({
   hypothesis_id: r.rule_id, statement: r.description, emits_side: r.emits_side, input_families: r.input_families,
   semantic_preconditions: r.semantic_preconditions.map(s => ({ id: s, state: SP[s].state })),
@@ -392,12 +496,21 @@ const hyps = R.filter(r => r.status === 'HYPOTHESIS_TO_TEST').map(r => ({
   ],
   prior_project_evidence: PRIOR[r.rule_id] || 'nenhuma registrada',
   would_affect: r.output_effect,
+  front_c_class: FRONT_C_HT[r.rule_id],
+  ...(r.level_fields ? { level_fields: r.level_fields, scope_note: r.scope_note } : {}),
+  ...(r.covered_by ? { covered_by: r.covered_by } : {}),
+  ...(r.definition_status ? { definition_status: r.definition_status } : {}),
+  ...(r.depends_on_pending ? { depends_on_pending: r.depends_on_pending } : {}),
   status: 'HYPOTHESIS_TO_TEST', validation: 'NOT STARTED',
 }));
 const unblock = R.filter(r => r.status === 'BLOCKED_BY_UNKNOWN_SEMANTICS').map(r => ({
   blocked_rule: r.rule_id, needs: r.semantic_preconditions.map(s => ({ id: s, state: SP[s].state, evidence: SP[s].evidence })),
   path: 'resolver a semantica (documentacao do vendor ou medicao) => so entao formular hipotese; nunca inventar polaridade',
+  front_c_resolution: FRONT_C_B[r.rule_id],
+  ...(r.short_validation ? { short_validation: r.short_validation } : {}),
+  ...(r.lineage_note ? { lineage_note: r.lineage_note } : {}),
 }));
+if (hyps.some(h => !h.front_c_class) || unblock.some(u => !u.front_c_resolution)) throw new Error('triagem da frente C incompleta');
 wr('jev-hypotheses-register-v1.json', {
   _meta: { ...META, schema: 'jev-future/hypotheses-register/v1' },
   validation: 'NOT STARTED',
@@ -405,6 +518,7 @@ wr('jev-hypotheses-register-v1.json', {
   future_validation_method_invariants: ['pre-registro de validacao congelado antes do holdout (regra 9)', 'split temporal por pregao; holdout tocado 1 vez', 'dayScore causal; nunca IC Spearman intradia', 'placebos: passeio aleatorio e vazamento proposital', 'Bonferroni/FDR sobre o numero real de testes', 'VERDICT = rotulo formal exato', 'resultados negativos permanentes; reabertura so pelas 4 regras'],
   hypotheses: hyps,
   blocked_unblock_paths: unblock,
+  future_evidence_backlog: BACKLOG,
   no_trade_context: { criteria: 'UNDEFINED', candidates_registered: 0, note: 'sem criterio conceitual defensavel; nao inventado. DATA_INVALID nunca vira NO_TRADE_CONTEXT (R_S09).' },
 });
 
