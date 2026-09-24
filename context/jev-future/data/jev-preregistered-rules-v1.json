@@ -1,0 +1,4315 @@
+{
+  "_meta": {
+    "project": "ALFA OMEGA JEV FUTURE",
+    "version": "v1",
+    "date": "2026-09-23",
+    "status": "PREREGISTRATION DESIGN — NOT A TEST",
+    "doc": "JEV_PREREGISTRATION_DESIGN_V1_20260923.md",
+    "implementation": "NONE",
+    "runtime": "NONE",
+    "data_collection": "NONE",
+    "validation": "NOT STARTED",
+    "validation_history_target": "NON_BLOCKING (20-40 pregoes = alvo de evidencia futura; nao e gate nem condicao de fase)",
+    "production": "UNCHANGED",
+    "f5": "NOT PERFORMED",
+    "core_vs_jev_fusion": "UNDEFINED",
+    "core_vs_jev_conflict": "UNDEFINED",
+    "precedence": "NOT_DEFINED",
+    "schema": "jev-future/preregistered-rules/v1",
+    "required_rule_fields": [
+      "rule_id",
+      "description",
+      "input_families",
+      "required_quality",
+      "semantic_preconditions",
+      "output_effect",
+      "status"
+    ],
+    "status_enum": [
+      "CANONICAL_STRUCTURAL",
+      "SUPPORTED_SEMANTIC",
+      "HYPOTHESIS_TO_TEST",
+      "BLOCKED_BY_UNKNOWN_SEMANTICS",
+      "DIAGNOSTIC_ONLY"
+    ],
+    "active_statuses": [
+      "CANONICAL_STRUCTURAL",
+      "SUPPORTED_SEMANTIC"
+    ],
+    "origin_enum": {
+      "CANON_EXISTING": "ja decidido em contrato/decisao anterior",
+      "THIS_DESIGN": "proposto neste design; estrutural ou semantico; vale ao ser aprovado pelo operador"
+    }
+  },
+  "summary": {
+    "rules_total": 58,
+    "by_status": {
+      "CANONICAL_STRUCTURAL": 21,
+      "SUPPORTED_SEMANTIC": 10,
+      "HYPOTHESIS_TO_TEST": 10,
+      "BLOCKED_BY_UNKNOWN_SEMANTICS": 10,
+      "DIAGNOSTIC_ONLY": 7
+    },
+    "coverage": {
+      "fields_total": 190,
+      "fields_covered": 190,
+      "stage_B": 174,
+      "stage_C": 16,
+      "fields_side_capable_in_record": 0,
+      "fields_side_capable_in_research_arm": 53,
+      "note": "nenhuma regra ativa emite lado => nenhum campo produz lado no contexto de registro nesta versao"
+    }
+  },
+  "semantic_preconditions": {
+    "SP_GEX_SIGN_IS_REGIME": {
+      "state": "MET",
+      "evidence": "vendor: GEX = regime, nao direcao; gamma_condition ≡ sign(gex.net_0dte) 100% desde 13/07 (auditoria A-BOT)"
+    },
+    "SP_ZERO_GAMMA_LEVEL": {
+      "state": "MET",
+      "evidence": "zero_gamma unit CONFIRMED (escala ES_SPX)"
+    },
+    "SP_LEVEL_SCALE_ES_SPX": {
+      "state": "MET",
+      "evidence": "ES_SPX = ESZ6 front ±1,3 pt vs NT8 .ncd; so pos-09/09"
+    },
+    "SP_MAJORS_UNITS": {
+      "state": "MET",
+      "evidence": "majors 0DTE/next/full unit CONFIRMED"
+    },
+    "SP_MAJORS_IDENTITY_RTH": {
+      "state": "PARTIAL",
+      "evidence": "identidades medidas so pos-fechamento (24/09); confirmar em RTH"
+    },
+    "SP_ZERO_MPUT_SEMANTICS": {
+      "state": "UNMET",
+      "evidence": "\"put support\" acima do spot 67% de 23/09"
+    },
+    "SP_DEX_SIGN_CONVENTION": {
+      "state": "UNMET",
+      "evidence": "unit UNKNOWN; perspectiva dealer x cliente nao documentada; so pc_oi (razao) confirmado"
+    },
+    "SP_GREEK_SIGN_CONVENTION": {
+      "state": "UNMET",
+      "evidence": "feature contract §6: convencao de sinal das gregas (vanna/charm/state por strike) UNKNOWN"
+    },
+    "SP_PRIORS_SPACING": {
+      "state": "UNMET",
+      "evidence": "priors/max_priors: espacamento temporal e semantica UNKNOWN"
+    },
+    "SP_CVR_OFLOW_SEMANTICS": {
+      "state": "UNMET",
+      "evidence": "cvr/oflow sem documentacao do vendor"
+    },
+    "SP_RISK_REVERSAL_SEMANTICS": {
+      "state": "UNMET",
+      "evidence": "delta_risk_reversal / ivol: semantica e unidade UNKNOWN"
+    },
+    "SP_TRACE_MM_GAMMA_SIGN": {
+      "state": "MET",
+      "evidence": "SpotGamma TRACE User Guide: gamma do market maker por preco"
+    },
+    "SP_TRACE_DELTA_PRESSURE_LINK": {
+      "state": "UNMET",
+      "evidence": "OPTIONAL_EVIDENCE_GAP: vinculo ao endpoint real nao capturado"
+    },
+    "SP_VOLSIGNALS_UNITS": {
+      "state": "UNMET",
+      "evidence": "7 unidades UNKNOWN => numeric_equivalence_allowed=false"
+    },
+    "SP_VOLSIGNALS_GAMMA_SIGN": {
+      "state": "UNMET",
+      "evidence": "gammaExposure \"Simulated\": convencao de sinal nao documentada"
+    },
+    "SP_MENTHORQ_ALIGNMENT_DEF": {
+      "state": "UNMET",
+      "evidence": "como niveis MenthorQ definem \"alinhado\" a um contexto do Jev nao esta definido"
+    },
+    "SP_SPY_INDEPENDENCE": {
+      "state": "UNMET",
+      "evidence": "SPX x SPY: medir antes de somar"
+    },
+    "SP_NO_TRADE_CRITERIA": {
+      "state": "UNDEFINED",
+      "evidence": "sem criterio conceitual defensavel registrado"
+    }
+  },
+  "rules": [
+    {
+      "rule_id": "R_S01_STAGE_ORDER",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "ALL",
+      "emits_side": false,
+      "description": "Ordem interna fixa: DATA QUALITY -> 4-SOURCE NATIVE DEALER ANALYSIS -> EVIDENCE FAMILIES/LINEAGE -> NATIVE DEALER STATE -> SPX FINAL CONTEXT (TRACE + VolSignals) -> JEV DIRECTIONAL CONTEXT; MenthorQ = overlay separado depois do contexto.",
+      "input_families": [
+        "ALL"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "define a sequencia; nenhuma etapa le saida de etapa posterior"
+    },
+    {
+      "rule_id": "R_S02_FULL_COVERAGE_NOT_VOTES",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "B+C",
+      "emits_side": false,
+      "description": "190/190 campos analisados (174 das 4 fontes + 16 SPX final context); nenhum descartado; 190 campos != 190 votos (is_vote=false).",
+      "input_families": [
+        "ALL"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "todo campo tem rota e familia; nenhum campo vira voto"
+    },
+    {
+      "rule_id": "R_S03_FAMILY_LINEAGE",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "EVIDENCE_FAMILIES",
+      "emits_side": false,
+      "description": "Leituras sao atribuidas a evidence families: CONFIRMED/BY_CONSTRUCTION consolidam em 1; SUSPECTED, UNVERIFIED e PARTIAL_ANALOG ficam separadas com overlap_risk; leituras concordantes de familias com overlap_risk nunca se reforcam; count_as 0 = NON_EVIDENCE.",
+      "input_families": [
+        "ALL"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "evidence_families[] com kind e overlap_risk"
+    },
+    {
+      "rule_id": "R_S04_NO_SIMPLE_COUNTING",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "ALL",
+      "emits_side": false,
+      "description": "Proibido como decisao: majority vote, X/9, suporte > contradicao, quantidade bruta de campos ou de familias. A classificacao respeita papel semantico, lineage, qualidade, independencia, market origin e semantica UNKNOWN.",
+      "input_families": [
+        "ALL"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "nenhuma contagem entra em reason_codes como justificativa"
+    },
+    {
+      "rule_id": "R_S05_MARKET_ORIGIN",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "B+C",
+      "emits_side": false,
+      "description": "As 4 fontes A-Bot e TRACE/VolSignals tem market_origin=SPX (ES_SPX e so a escala do vendor); nunca ES_NATIVE. SPY = market_origin SPY, instancia separada, sem soma com SPX antes de medir independencia.",
+      "input_families": [
+        "ALL"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "market_origin preservado em source_contributions"
+    },
+    {
+      "rule_id": "R_S06_NO_NUMERIC_EQUIVALENCE",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "C",
+      "emits_side": false,
+      "description": "TRACE e VolSignals sao namespaces separados; gamma = PARTIAL_ANALOG; os outros 6 = INSUFFICIENT_INFORMATION; unidade UNKNOWN => equivalencia numerica NOT ALLOWED; sem fusao, sem normalizacao.",
+      "input_families": [
+        "DC_SPX_FINAL_GAMMA",
+        "DC_SPX_TRACE_PARTICIPANTS",
+        "DC_SPX_TRACE_DELTA",
+        "DC_SPX_TRACE_CHARM",
+        "DC_SPX_VOLSIGNALS_CHARM",
+        "DC_SPX_VOLSIGNALS_DELTACHANGE",
+        "DC_SPX_VOLSIGNALS_DELTATOTAL",
+        "DC_SPX_VOLSIGNALS_VANNA",
+        "DC_SPX_VOLSIGNALS_VOLGA",
+        "DC_SPX_VOLSIGNALS_DELTADIFF"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "spx_final_context.numeric_equivalence_allowed=false"
+    },
+    {
+      "rule_id": "R_S07_BREAK_0909",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "ALL",
+      "emits_side": false,
+      "description": "Quebra de 09/09 (GexBot->GammaGex; SPX cru -> ESZ6): leituras, historicos e comparacoes nunca misturam antes x depois.",
+      "input_families": [
+        "ALL"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "dado pre-09/09 fora de qualquer comparacao com pos-09/09"
+    },
+    {
+      "rule_id": "R_S08_FRESHNESS_BASIS",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "DATA_QUALITY",
+      "emits_side": false,
+      "description": "Freshness pelo vendor timestamp; arrival nunca e base; limiares 60 s (orderflow) e 300 s (classic/state) = PROVISIONAL, nao finais; FROZEN_VALUES (ex.: iv30d) fora da leitura. Freshness e RTH = CLASSIFICATION INPUT, nao gate de trade.",
+      "input_families": [
+        "ALL"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "data_quality.per_source.freshness_state (FRESH|STALE|FROZEN|FROZEN_VALUES|MARKET_CLOSED|UNKNOWN)"
+    },
+    {
+      "rule_id": "R_S09_DATA_INVALID_TO_UNKNOWN",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "DATA_QUALITY",
+      "emits_side": false,
+      "description": "data_quality.status = DATA_INVALID => jev_directional_context = UNKNOWN com reason DATA_INVALID (nunca NO_TRADE_CONTEXT).",
+      "input_families": [
+        "ALL"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "UNKNOWN + RC_DATA_INVALID"
+    },
+    {
+      "rule_id": "R_S10_DQ_STATUS_DEFINITION",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "THIS_DESIGN",
+      "stage": "DATA_QUALITY",
+      "emits_side": false,
+      "description": "DATA_INVALID: sem referencia de preco utilizavel OU nenhum membro da familia de regime 0DTE (DC_GEX0_SIGN / DC_ZERO_GAMMA_0DTE) com freshness FRESH ou MARKET_CLOSED. DEGRADED: dado valido, mas alguma familia com leitura ativa esta STALE/UNKNOWN/PENDING_REVISION_AUDIT ou so parcial. VALID: demais casos. Sem threshold numerico novo (usa os PROVISIONAL de R_S08).",
+      "input_families": [
+        "DC_SPOT_PRICE",
+        "DC_GEX0_SIGN",
+        "DC_ZERO_GAMMA_0DTE"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "data_quality.status VALID|DEGRADED|DATA_INVALID"
+    },
+    {
+      "rule_id": "R_S11_SESSION_INFORMATIONAL",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "DATA_QUALITY",
+      "emits_side": false,
+      "description": "Sessao RTH / OUTSIDE_RTH so informativa; fora do RTH o estado de freshness e MARKET_CLOSED, nao STALE; nenhuma regra automatica deriva de sessao.",
+      "input_families": [
+        "ALL"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "data_quality.session"
+    },
+    {
+      "rule_id": "R_S12_REGIME_IS_NOT_SIDE",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": false,
+      "description": "Regime e regime: POSITIVE_GAMMA nao implica LONG, NEGATIVE_GAMMA nao implica SHORT. GEX/zero gamma nunca viram BUY/SELL por sinal.",
+      "input_families": [
+        "DC_GEX0_SIGN",
+        "DC_GEX_NEXT",
+        "DC_ZERO_GAMMA_0DTE",
+        "DC_ZERO_GAMMA_NEXT",
+        "DC_ZERO_GAMMA_FULL",
+        "DC_SPX_FINAL_GAMMA"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "leituras de regime com direction = 0"
+    },
+    {
+      "rule_id": "R_S13_LOCATION_IS_NOT_SIDE",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": false,
+      "description": "Distancia/posicao do preco relativa a niveis nunca vira LONG/SHORT automaticamente.",
+      "input_families": [
+        "DC_MAJORS_0DTE",
+        "DC_MAJORS_NEXT",
+        "DC_MAJORS_FULL",
+        "DC_ZERO_GAMMA_0DTE",
+        "DC_ZERO_GAMMA_NEXT",
+        "DC_ZERO_GAMMA_FULL",
+        "DC_CLASSIC_GEX_PROFILE_ZERO",
+        "DC_CLASSIC_GEX_PROFILE_NEXT",
+        "DC_CLASSIC_GEX_PROFILE_FULL",
+        "DC_STATE_GEX_PROFILE_FULL",
+        "DC_MENTHORQ_LEVELS"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "leituras de location com direction = 0"
+    },
+    {
+      "rule_id": "R_S14_UNKNOWN_SEMANTICS_NO_SIDE",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": false,
+      "description": "Campo/familia com semantica, unidade ou convencao de sinal UNKNOWN nao produz lado: leitura UNRESOLVED, campo listado em unresolved_fields. Nao inventar polaridade.",
+      "input_families": [
+        "ALL"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "UNRESOLVED + unresolved_fields[]"
+    },
+    {
+      "rule_id": "R_S15_ACTIVE_RULES_ONLY",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "THIS_DESIGN",
+      "stage": "NATIVE+FINAL_CONTEXT",
+      "emits_side": false,
+      "description": "So regras com status CANONICAL_STRUCTURAL ou SUPPORTED_SEMANTIC entram no jev_directional_context de registro. HYPOTHESIS_TO_TEST so pode ser avaliada num braco de pesquisa rotulado, fora do contexto de registro, e so vira ativa por pre-registro de validacao + decisao do operador. BLOCKED e DIAGNOSTIC nunca entram.",
+      "input_families": [
+        "ALL"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "conjunto de regras ativas do contexto"
+    },
+    {
+      "rule_id": "R_S16_CONTEXT_STATE_DEFINITIONS",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "NATIVE+FINAL_CONTEXT",
+      "emits_side": false,
+      "description": "Definicoes do output contract, aplicadas so sobre leituras de lado de regras ativas: CONFLICTED_CONTEXT = familias com leituras opostas; LONG/SHORT_CONTEXT = todas as leituras de lado ativas no mesmo sentido (consistencia, nao contagem); NEUTRAL_CONTEXT = regras de lado avaliaveis sem inclinacao; UNKNOWN = dado valido sem regra de lado avaliavel; NO_TRADE_CONTEXT so por criterio pre-registrado (hoje UNDEFINED => nunca emitido).",
+      "input_families": [
+        "ALL"
+      ],
+      "required_quality": "data_quality.status != DATA_INVALID",
+      "semantic_preconditions": [],
+      "output_effect": "native_directional_context e jev_directional_context"
+    },
+    {
+      "rule_id": "R_S17_C_AFTER_B_NO_FUSION",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "SPX_FINAL_CONTEXT",
+      "emits_side": false,
+      "description": "TRACE/VolSignals entram so depois do native dealer state. Nao ha regra de fusao B x C: jev_directional_context = native_directional_context, e o efeito de C fica registrado em spx_final_context.effect_on_native (CONFIRMS|CONTRADICTS|ENRICHES|NO_EFFECT|UNAVAILABLE), sem pesos.",
+      "input_families": [
+        "DC_SPX_FINAL_GAMMA",
+        "DC_SPX_TRACE_PARTICIPANTS",
+        "DC_SPX_TRACE_DELTA",
+        "DC_SPX_TRACE_CHARM",
+        "DC_SPX_VOLSIGNALS_CHARM",
+        "DC_SPX_VOLSIGNALS_DELTACHANGE",
+        "DC_SPX_VOLSIGNALS_DELTATOTAL",
+        "DC_SPX_VOLSIGNALS_VANNA",
+        "DC_SPX_VOLSIGNALS_VOLGA",
+        "DC_SPX_VOLSIGNALS_DELTADIFF"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "spx_final_context.effect_on_native"
+    },
+    {
+      "rule_id": "R_S18_EFFECT_LABEL_SELECTION",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "THIS_DESIGN",
+      "stage": "SPX_FINAL_CONTEXT",
+      "emits_side": false,
+      "description": "Rotulo unico de effect_on_native: UNAVAILABLE se nenhuma leitura C utilizavel; senao CONTRADICTS se alguma leitura C comparavel contraria a leitura B da mesma dimensao; senao CONFIRMS se alguma concorda; senao ENRICHES se C so acrescenta informacao descritiva; senao NO_EFFECT. Comparavel = mesma dimensao e semantica MET; PARTIAL_ANALOG compara so sinal/posicao, nunca magnitude. A dimensao comparada vai em reason_codes.",
+      "input_families": [
+        "DC_SPX_FINAL_GAMMA",
+        "DC_SPX_TRACE_PARTICIPANTS"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "effect_on_native + RC_SPX_<dimensao>_<efeito>"
+    },
+    {
+      "rule_id": "R_S19_MENTHORQ_OVERLAY",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "MENTHORQ_OVERLAY",
+      "emits_side": false,
+      "description": "MenthorQ = POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING: alinhado => POSITIVE; desalinhado, neutro, stale, offline, null => ZERO. Nunca origina lado, veta, gera NO_TRADE nem reduz conviction; nao altera jev_directional_context. Enquanto SP_MENTHORQ_ALIGNMENT_DEF = UNMET, confirmation = ZERO.",
+      "input_families": [
+        "DC_MENTHORQ_LEVELS"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "menthorq.confirmation POSITIVE|ZERO"
+    },
+    {
+      "rule_id": "R_S20_EXPLAINABILITY",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "OUTPUT",
+      "emits_side": false,
+      "description": "Toda classificacao cita evidence_families, source_contributions e reason_codes; conviction = UNCALIBRATED.",
+      "input_families": [
+        "ALL"
+      ],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "campos de explicacao do output contract"
+    },
+    {
+      "rule_id": "R_S21_CORE_SEPARATE",
+      "status": "CANONICAL_STRUCTURAL",
+      "origin": "CANON_EXISTING",
+      "stage": "OUTPUT",
+      "emits_side": false,
+      "description": "Core e Jev separados: o lado do Core nao entra em nenhuma etapa da classificacao; so em core_comparison apos o contexto final. CORE_vs_JEV_FUSION_POLICY / CONFLICT_POLICY = UNDEFINED; PRECEDENCE = NOT_DEFINED.",
+      "input_families": [],
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "output_effect": "core_comparison (so comparacao)"
+    },
+    {
+      "rule_id": "R_M01_REGIME_0DTE",
+      "status": "SUPPORTED_SEMANTIC",
+      "origin": "THIS_DESIGN",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": false,
+      "description": "Regime 0DTE a partir da familia unica GEX0_SIGN x ZERO_GAMMA (1 familia, 2 leituras): (a) sinal de gex.net_0dte (≡ gamma_condition ≡ state sum_gex_vol) e (b) spot acima/abaixo de zero_gamma. (a) e (b) concordam => POSITIVE_GAMMA ou NEGATIVE_GAMMA; discordam => AMBIGUOUS; so uma utilizavel => essa, com DEGRADED; nenhuma => UNKNOWN. Sem banda perto de zero (threshold nao calibrado => nao aplicado).",
+      "input_families": [
+        "DC_GEX0_SIGN",
+        "DC_ZERO_GAMMA_0DTE",
+        "DC_SPOT_PRICE"
+      ],
+      "required_quality": "freshness FRESH ou MARKET_CLOSED; pos-09/09",
+      "semantic_preconditions": [
+        "SP_GEX_SIGN_IS_REGIME",
+        "SP_ZERO_GAMMA_LEVEL",
+        "SP_LEVEL_SCALE_ES_SPX"
+      ],
+      "output_effect": "native_dealer_state.gamma_regime = POSITIVE_GAMMA|NEGATIVE_GAMMA|AMBIGUOUS|UNKNOWN (direction 0)"
+    },
+    {
+      "rule_id": "R_M02_REGIME_NEXT_FULL",
+      "status": "SUPPORTED_SEMANTIC",
+      "origin": "THIS_DESIGN",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": false,
+      "description": "Mesma leitura para next expiry (gex.net_next, zero_gamma next) e full (zero_gamma full), cada uma em familia propria, reportadas lado a lado com o 0DTE; nunca fundidas nem somadas ao regime 0DTE.",
+      "input_families": [
+        "DC_GEX_NEXT",
+        "DC_ZERO_GAMMA_NEXT",
+        "DC_ZERO_GAMMA_FULL",
+        "DC_SPOT_PRICE"
+      ],
+      "required_quality": "freshness FRESH ou MARKET_CLOSED; pos-09/09",
+      "semantic_preconditions": [
+        "SP_GEX_SIGN_IS_REGIME",
+        "SP_ZERO_GAMMA_LEVEL"
+      ],
+      "output_effect": "native_dealer_state.gamma_regime.by_expiry {zero,next,full}"
+    },
+    {
+      "rule_id": "R_M03_LOCATION_DESCRIPTORS",
+      "status": "SUPPORTED_SEMANTIC",
+      "origin": "THIS_DESIGN",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": false,
+      "description": "Para cada nivel com unidade CONFIRMED (zero gamma, majors 0DTE/next/full de orderflow/classic/state, majors long/short gamma, next_exp_*): lado relativo ao spot (ABOVE|BELOW), distancia assinada em pontos e em %, ordenacao dos niveis, nivel mais proximo acima/abaixo e intervalo que contem o spot (BETWEEN a,b). zero_mput: descrito, marcado SEMANTIC_ANOMALY (ver B05). Sem tolerancia de \"AT\" (threshold nao calibrado).",
+      "input_families": [
+        "DC_MAJORS_0DTE",
+        "DC_MAJORS_NEXT",
+        "DC_MAJORS_FULL",
+        "DC_ZERO_GAMMA_0DTE",
+        "DC_ZERO_GAMMA_NEXT",
+        "DC_ZERO_GAMMA_FULL",
+        "DC_SPOT_PRICE"
+      ],
+      "required_quality": "freshness do nivel FRESH ou MARKET_CLOSED; mesma escala (pos-09/09)",
+      "semantic_preconditions": [
+        "SP_MAJORS_UNITS",
+        "SP_LEVEL_SCALE_ES_SPX"
+      ],
+      "output_effect": "native_dealer_state.structure_location (direction 0; identidades de majors PARTIAL => DC colapsa, sem reforco)"
+    },
+    {
+      "rule_id": "R_M04_STRIKE_STRUCTURE",
+      "status": "SUPPORTED_SEMANTIC",
+      "origin": "THIS_DESIGN",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": false,
+      "description": "Perfil por strike (classic strikes gex_vol/gex_oi, state gex_vol) descrito como estrutura: strike de maior |GEX| acima e abaixo do spot e sinal do GEX nesses strikes. O perfil e o agregado sum_gex_* sao a mesma familia. Classic x state no mesmo strike = construtos distintos, lidos separados.",
+      "input_families": [
+        "DC_CLASSIC_GEX_PROFILE_ZERO",
+        "DC_CLASSIC_GEX_PROFILE_NEXT",
+        "DC_CLASSIC_GEX_PROFILE_FULL",
+        "DC_STATE_GEX_PROFILE_FULL",
+        "DC_GEX0_SIGN",
+        "DC_GEX_NEXT"
+      ],
+      "required_quality": "freshness FRESH ou MARKET_CLOSED",
+      "semantic_preconditions": [
+        "SP_GEX_SIGN_IS_REGIME",
+        "SP_LEVEL_SCALE_ES_SPX"
+      ],
+      "output_effect": "native_dealer_state.structure_location.strike_structure (direction 0)"
+    },
+    {
+      "rule_id": "R_M05_REGIME_TRANSITION",
+      "status": "SUPPORTED_SEMANTIC",
+      "origin": "THIS_DESIGN",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": false,
+      "description": "TRANSITION de regime por evento discreto entre snapshots consecutivos validos: troca de sinal de gex.net_0dte, ou spot cruzando zero_gamma, ou mudanca do rotulo R_M01. Sem threshold de magnitude.",
+      "input_families": [
+        "DC_GEX0_SIGN",
+        "DC_ZERO_GAMMA_0DTE",
+        "DC_GEX_NEXT"
+      ],
+      "required_quality": "os dois snapshots validos, mesmo lado de 09/09",
+      "semantic_preconditions": [
+        "SP_GEX_SIGN_IS_REGIME",
+        "SP_ZERO_GAMMA_LEVEL"
+      ],
+      "output_effect": "native_dealer_state.change_transition += REGIME_TRANSITION{from,to}; RC_REGIME_TRANSITION (direction 0)"
+    },
+    {
+      "rule_id": "R_M06_LEVEL_TRANSITION",
+      "status": "SUPPORTED_SEMANTIC",
+      "origin": "THIS_DESIGN",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": false,
+      "description": "TRANSITION de estrutura por evento discreto: um nivel (major/zero gamma) muda de strike entre snapshots consecutivos da mesma categoria, ou a ordenacao dos niveis muda. Registra sentido da migracao (UP|DOWN) como descritor, nao como lado.",
+      "input_families": [
+        "DC_MAJORS_0DTE",
+        "DC_MAJORS_NEXT",
+        "DC_MAJORS_FULL",
+        "DC_ZERO_GAMMA_0DTE",
+        "DC_ZERO_GAMMA_NEXT",
+        "DC_ZERO_GAMMA_FULL"
+      ],
+      "required_quality": "os dois snapshots validos, mesmo lado de 09/09",
+      "semantic_preconditions": [
+        "SP_MAJORS_UNITS",
+        "SP_LEVEL_SCALE_ES_SPX"
+      ],
+      "output_effect": "native_dealer_state.change_transition += LEVEL_MIGRATION{level,from,to,UP|DOWN}; RC_LEVEL_MIGRATION (direction 0)"
+    },
+    {
+      "rule_id": "R_M07_NET_SIGN_CHANGE_OBSERVED",
+      "status": "SUPPORTED_SEMANTIC",
+      "origin": "THIS_DESIGN",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": false,
+      "description": "Troca de sinal observada em net values com semantica ainda UNKNOWN (dex.net_*, vanna/charm net_*) e registrada como CHANGE aritmetico; a interpretacao fica UNRESOLVED (ver HT01, B01).",
+      "input_families": [
+        "DC_DEX_0DTE",
+        "DC_DEX_NEXT",
+        "DC_VANNA_0DTE",
+        "DC_VANNA_NEXT",
+        "DC_CHARM_0DTE",
+        "DC_CHARM_NEXT"
+      ],
+      "required_quality": "os dois snapshots validos",
+      "semantic_preconditions": [],
+      "output_effect": "native_dealer_state.change_transition += SIGN_CHANGE_OBSERVED{field} com interpretation UNRESOLVED"
+    },
+    {
+      "rule_id": "R_M08_DEX_PUT_CALL_RATIO",
+      "status": "SUPPORTED_SEMANTIC",
+      "origin": "THIS_DESIGN",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": false,
+      "description": "pc_oi lido como |dex.net_put_0dte| / |dex.net_call_0dte| (razao de DEX, confirmada), nunca como OI; descritor de composicao, sem lado.",
+      "input_families": [
+        "DC_DEX_0DTE"
+      ],
+      "required_quality": "freshness FRESH ou MARKET_CLOSED",
+      "semantic_preconditions": [],
+      "output_effect": "native_dealer_state.delta_positioning.put_call_dex_ratio (direction 0)"
+    },
+    {
+      "rule_id": "R_M09_TRACE_REGIME_COMPARE",
+      "status": "SUPPORTED_SEMANTIC",
+      "origin": "THIS_DESIGN",
+      "stage": "SPX_FINAL_CONTEXT",
+      "emits_side": false,
+      "description": "TRACE gamma_mm no preco do spot (SPX; bin i so em t[i+1]) da o sinal do gamma do market maker; comparado so em SINAL com o regime nativo R_M01 => CONFIRMS/CONTRADICTS na dimensao GAMMA_REGIME. Nao altera o regime nativo nem produz lado. VolSignals gammaExposure fica fora (B09).",
+      "input_families": [
+        "DC_SPX_FINAL_GAMMA"
+      ],
+      "required_quality": "TRACE PENDING_REVISION_AUDIT => leitura DEGRADED ate a auditoria de revisao classificar; anti-lookahead do grid",
+      "semantic_preconditions": [
+        "SP_TRACE_MM_GAMMA_SIGN"
+      ],
+      "output_effect": "spx_final_context.trace.regime_reading + effect_on_native (dimensao GAMMA_REGIME)"
+    },
+    {
+      "rule_id": "R_M10_TRACE_PARTICIPANTS_ENRICH",
+      "status": "SUPPORTED_SEMANTIC",
+      "origin": "THIS_DESIGN",
+      "stage": "SPX_FINAL_CONTEXT",
+      "emits_side": false,
+      "description": "TRACE gamma por participante (cust, procust, firm, bd) descrito como contexto; sem analogo nativo nem VolSignals => efeito ENRICHES; sem lado.",
+      "input_families": [
+        "DC_SPX_TRACE_PARTICIPANTS"
+      ],
+      "required_quality": "TRACE PENDING_REVISION_AUDIT => DEGRADED",
+      "semantic_preconditions": [
+        "SP_TRACE_MM_GAMMA_SIGN"
+      ],
+      "output_effect": "spx_final_context.trace.participants; effect ENRICHES"
+    },
+    {
+      "status": "HYPOTHESIS_TO_TEST",
+      "origin": "THIS_DESIGN",
+      "rule_id": "HT01_DEX_DIRECTION_BY_REGIME",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": true,
+      "description": "DEX_DIRECTION_RULE: o sinal de dex.net_0dte, condicionado ao regime R_M01 (nao AMBIGUOUS), indica o lado do fluxo de hedge do dealer.",
+      "input_families": [
+        "DC_DEX_0DTE",
+        "DC_GEX0_SIGN"
+      ],
+      "required_quality": "FRESH; regime nao AMBIGUOUS",
+      "semantic_preconditions": [
+        "SP_DEX_SIGN_CONVENTION",
+        "SP_GEX_SIGN_IS_REGIME"
+      ],
+      "output_effect": "braco de pesquisa: leitura de lado LONG|SHORT da familia DEX; no registro: UNRESOLVED"
+    },
+    {
+      "status": "HYPOTHESIS_TO_TEST",
+      "origin": "THIS_DESIGN",
+      "rule_id": "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": true,
+      "description": "Em POSITIVE_GAMMA, preco afastado do major/long-gamma 0DTE tende a voltar em direcao a ele (lado = sentido do nivel).",
+      "input_families": [
+        "DC_MAJORS_0DTE",
+        "DC_ZERO_GAMMA_0DTE",
+        "DC_GEX0_SIGN",
+        "DC_SPOT_PRICE"
+      ],
+      "required_quality": "FRESH; regime POSITIVE_GAMMA",
+      "semantic_preconditions": [
+        "SP_MAJORS_IDENTITY_RTH",
+        "SP_MAJORS_UNITS"
+      ],
+      "output_effect": "braco de pesquisa: leitura de lado da familia MAJORS_0DTE"
+    },
+    {
+      "status": "HYPOTHESIS_TO_TEST",
+      "origin": "THIS_DESIGN",
+      "rule_id": "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": true,
+      "description": "Em NEGATIVE_GAMMA, preco que atravessa o major short-gamma 0DTE tende a continuar no sentido do cruzamento.",
+      "input_families": [
+        "DC_MAJORS_0DTE",
+        "DC_GEX0_SIGN",
+        "DC_SPOT_PRICE"
+      ],
+      "required_quality": "FRESH; regime NEGATIVE_GAMMA",
+      "semantic_preconditions": [
+        "SP_MAJORS_IDENTITY_RTH",
+        "SP_MAJORS_UNITS"
+      ],
+      "output_effect": "braco de pesquisa: leitura de lado da familia MAJORS_0DTE"
+    },
+    {
+      "status": "HYPOTHESIS_TO_TEST",
+      "origin": "THIS_DESIGN",
+      "rule_id": "HT04_LEVEL_MIGRATION_SIDE",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": true,
+      "description": "LEVEL_MIGRATION intradia (R_M06) dos majors 0DTE no sentido UP/DOWN antecede movimento do ES no mesmo sentido.",
+      "input_families": [
+        "DC_MAJORS_0DTE"
+      ],
+      "required_quality": "snapshots validos consecutivos",
+      "semantic_preconditions": [
+        "SP_MAJORS_IDENTITY_RTH"
+      ],
+      "output_effect": "braco de pesquisa: leitura de lado da familia MAJORS_0DTE"
+    },
+    {
+      "status": "HYPOTHESIS_TO_TEST",
+      "origin": "THIS_DESIGN",
+      "rule_id": "HT05_REGIME_AMPLITUDE",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": false,
+      "description": "O regime R_M01 prediz amplitude (|retorno|), nao lado: NEGATIVE_GAMMA > POSITIVE_GAMMA.",
+      "input_families": [
+        "DC_GEX0_SIGN",
+        "DC_ZERO_GAMMA_0DTE"
+      ],
+      "required_quality": "FRESH",
+      "semantic_preconditions": [
+        "SP_GEX_SIGN_IS_REGIME"
+      ],
+      "output_effect": "contexto de amplitude; nenhum efeito em lado"
+    },
+    {
+      "status": "HYPOTHESIS_TO_TEST",
+      "origin": "THIS_DESIGN",
+      "rule_id": "HT06_SPX_CONTRADICTS_EFFECT",
+      "stage": "SPX_FINAL_CONTEXT",
+      "emits_side": false,
+      "description": "Se effect_on_native = CONTRADICTS numa dimensao que sustenta uma leitura de lado, o contexto final deveria ser (V_A) CONFLICTED_CONTEXT ou (V_B) mantido com anotacao. Hoje: nenhuma, por R_S17.",
+      "input_families": [
+        "DC_SPX_FINAL_GAMMA",
+        "DC_SPX_TRACE_PARTICIPANTS"
+      ],
+      "required_quality": "TRACE com auditoria de revisao classificada",
+      "semantic_preconditions": [
+        "SP_TRACE_MM_GAMMA_SIGN"
+      ],
+      "output_effect": "braco de pesquisa: variantes V_A/V_B do jev_directional_context"
+    },
+    {
+      "status": "HYPOTHESIS_TO_TEST",
+      "origin": "THIS_DESIGN",
+      "rule_id": "HT07_TRACE_REGIME_AGREEMENT_RELIABILITY",
+      "stage": "SPX_FINAL_CONTEXT",
+      "emits_side": false,
+      "description": "Quando o regime nativo e o TRACE concordam (R_M09 CONFIRMS), a leitura de regime e mais informativa para amplitude do que quando discordam.",
+      "input_families": [
+        "DC_SPX_FINAL_GAMMA",
+        "DC_GEX0_SIGN"
+      ],
+      "required_quality": "TRACE com auditoria de revisao classificada",
+      "semantic_preconditions": [
+        "SP_TRACE_MM_GAMMA_SIGN",
+        "SP_GEX_SIGN_IS_REGIME"
+      ],
+      "output_effect": "contexto de amplitude; nenhum efeito em lado"
+    },
+    {
+      "status": "HYPOTHESIS_TO_TEST",
+      "origin": "THIS_DESIGN",
+      "rule_id": "HT08_EXPIRY_REGIME_DIVERGENCE",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": false,
+      "description": "Regime 0DTE e regime next em sinais opostos (R_M02) caracteriza estado AMBIGUOUS mais amplo do que o 0DTE sozinho.",
+      "input_families": [
+        "DC_GEX0_SIGN",
+        "DC_GEX_NEXT"
+      ],
+      "required_quality": "FRESH",
+      "semantic_preconditions": [
+        "SP_GEX_SIGN_IS_REGIME"
+      ],
+      "output_effect": "braco de pesquisa: variante do rotulo de regime"
+    },
+    {
+      "status": "HYPOTHESIS_TO_TEST",
+      "origin": "THIS_DESIGN",
+      "rule_id": "HT09_MENTHORQ_ALIGNMENT_DEFINITION",
+      "stage": "MENTHORQ_OVERLAY",
+      "emits_side": false,
+      "description": "Definicao de \"alinhado\" entre niveis MenthorQ e um jev_directional_context LONG/SHORT (efeito so POSITIVE|ZERO).",
+      "input_families": [
+        "DC_MENTHORQ_LEVELS"
+      ],
+      "required_quality": "MenthorQ nao null (hoje 401 => null)",
+      "semantic_preconditions": [
+        "SP_MENTHORQ_ALIGNMENT_DEF"
+      ],
+      "output_effect": "menthorq.confirmation POSITIVE|ZERO (nunca negativo)"
+    },
+    {
+      "status": "HYPOTHESIS_TO_TEST",
+      "origin": "THIS_DESIGN",
+      "rule_id": "HT10_SPY_INSTANCE_ROLE",
+      "stage": "NATIVE_DEALER_STATE",
+      "emits_side": false,
+      "description": "Instancias SPY (market_origin SPY) trazem informacao independente das SPX; so depois de medido podem formar familia propria.",
+      "input_families": [
+        "DC_MAJORS_0DTE",
+        "DC_CLASSIC_GEX_PROFILE_ZERO"
+      ],
+      "required_quality": "SPY classic capturado",
+      "semantic_preconditions": [
+        "SP_SPY_INDEPENDENCE"
+      ],
+      "output_effect": "lineage SPY x SPX"
+    },
+    {
+      "status": "BLOCKED_BY_UNKNOWN_SEMANTICS",
+      "origin": "THIS_DESIGN",
+      "emits_side": false,
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "rule_id": "B01_SECOND_ORDER_DIRECTION",
+      "stage": "NATIVE_DEALER_STATE",
+      "description": "Vanna/charm (net 0DTE/next e state por strike) como lado: convencao de sinal UNKNOWN.",
+      "input_families": [
+        "DC_VANNA_0DTE",
+        "DC_VANNA_NEXT",
+        "DC_CHARM_0DTE",
+        "DC_CHARM_NEXT"
+      ],
+      "semantic_preconditions": [
+        "SP_GREEK_SIGN_CONVENTION"
+      ],
+      "output_effect": "second_order_flows = UNRESOLVED; unresolved_fields"
+    },
+    {
+      "status": "BLOCKED_BY_UNKNOWN_SEMANTICS",
+      "origin": "THIS_DESIGN",
+      "emits_side": false,
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "rule_id": "B02_STATE_GREEK_PER_STRIKE_DIRECTION",
+      "stage": "NATIVE_DEALER_STATE",
+      "description": "Gamma/delta por strike do state (mini_contracts greek_value) como lado ou ΔDelta_dealer: sinal UNKNOWN.",
+      "input_families": [
+        "DC_GEX0_SIGN",
+        "DC_DEX_0DTE"
+      ],
+      "semantic_preconditions": [
+        "SP_GREEK_SIGN_CONVENTION"
+      ],
+      "output_effect": "UNRESOLVED; unresolved_fields"
+    },
+    {
+      "status": "BLOCKED_BY_UNKNOWN_SEMANTICS",
+      "origin": "THIS_DESIGN",
+      "emits_side": false,
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "rule_id": "B03_CVR_OFLOW",
+      "stage": "NATIVE_DEALER_STATE",
+      "description": "cvr/oflow (8 campos): semantica nao documentada.",
+      "input_families": [
+        "DC_OFLOW_CVR_UNKNOWN"
+      ],
+      "semantic_preconditions": [
+        "SP_CVR_OFLOW_SEMANTICS"
+      ],
+      "output_effect": "flow_unknown_semantics = UNRESOLVED"
+    },
+    {
+      "status": "BLOCKED_BY_UNKNOWN_SEMANTICS",
+      "origin": "THIS_DESIGN",
+      "emits_side": false,
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "rule_id": "B04_PRIORS_TIME_INTERPRETATION",
+      "stage": "NATIVE_DEALER_STATE",
+      "description": "priors[] e max_priors[] como serie temporal (mudanca, velocidade, TRANSITION): espacamento e semantica UNKNOWN; so \"valor difere\" e descritivo.",
+      "input_families": [
+        "DC_CLASSIC_GEX_PROFILE_ZERO",
+        "DC_CLASSIC_GEX_PROFILE_NEXT",
+        "DC_CLASSIC_GEX_PROFILE_FULL",
+        "DC_STATE_GEX_PROFILE_FULL",
+        "DC_GEX0_SIGN"
+      ],
+      "semantic_preconditions": [
+        "SP_PRIORS_SPACING"
+      ],
+      "output_effect": "change_transition.priors = UNRESOLVED"
+    },
+    {
+      "status": "BLOCKED_BY_UNKNOWN_SEMANTICS",
+      "origin": "THIS_DESIGN",
+      "emits_side": false,
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "rule_id": "B05_ZERO_MPUT_SEMANTICS",
+      "stage": "NATIVE_DEALER_STATE",
+      "description": "zero_mput (\"put support\") como suporte: acima do spot 67% de 23/09 => so LOCATION neutra com SEMANTIC_ANOMALY.",
+      "input_families": [
+        "DC_MAJORS_0DTE"
+      ],
+      "semantic_preconditions": [
+        "SP_ZERO_MPUT_SEMANTICS"
+      ],
+      "output_effect": "zero_mput sem papel de suporte/resistencia"
+    },
+    {
+      "status": "BLOCKED_BY_UNKNOWN_SEMANTICS",
+      "origin": "THIS_DESIGN",
+      "emits_side": false,
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "rule_id": "B06_VOL_SKEW_DIRECTION",
+      "stage": "NATIVE_DEALER_STATE",
+      "description": "delta_risk_reversal e call/put ivol como lado ou regime de vol: semantica/unidade UNKNOWN.",
+      "input_families": [
+        "DC_RISK_REVERSAL",
+        "DC_STATE_IVOL"
+      ],
+      "semantic_preconditions": [
+        "SP_RISK_REVERSAL_SEMANTICS"
+      ],
+      "output_effect": "vol_skew = UNRESOLVED"
+    },
+    {
+      "status": "BLOCKED_BY_UNKNOWN_SEMANTICS",
+      "origin": "THIS_DESIGN",
+      "emits_side": false,
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "rule_id": "B07_TRACE_DELTA_CHARM_PRESSURE",
+      "stage": "SPX_FINAL_CONTEXT",
+      "description": "TRACE Delta/Charm Pressure: vendor diz que Delta Pressure so tem lado com regime definido, mas o vinculo ao endpoint real e body/formula/unidade nao foram capturados (INSUFFICIENT_INFORMATION).",
+      "input_families": [
+        "DC_SPX_TRACE_DELTA",
+        "DC_SPX_TRACE_CHARM"
+      ],
+      "semantic_preconditions": [
+        "SP_TRACE_DELTA_PRESSURE_LINK"
+      ],
+      "output_effect": "effect UNAVAILABLE para essas familias"
+    },
+    {
+      "status": "BLOCKED_BY_UNKNOWN_SEMANTICS",
+      "origin": "THIS_DESIGN",
+      "emits_side": false,
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "rule_id": "B08_VOLSIGNALS_EXPOSURES",
+      "stage": "SPX_FINAL_CONTEXT",
+      "description": "VolSignals charm/deltaChange/deltaTotal/vanna/volga/deltaExposureDiff: INSUFFICIENT_INFORMATION; unidade UNKNOWN; deltaExposureDiff = 0 em 3678/3678, funcao UNKNOWN.",
+      "input_families": [
+        "DC_SPX_VOLSIGNALS_CHARM",
+        "DC_SPX_VOLSIGNALS_DELTACHANGE",
+        "DC_SPX_VOLSIGNALS_DELTATOTAL",
+        "DC_SPX_VOLSIGNALS_VANNA",
+        "DC_SPX_VOLSIGNALS_VOLGA",
+        "DC_SPX_VOLSIGNALS_DELTADIFF"
+      ],
+      "semantic_preconditions": [
+        "SP_VOLSIGNALS_UNITS"
+      ],
+      "output_effect": "effect UNAVAILABLE ou ENRICHES (so presenca), nunca CONFIRMS/CONTRADICTS"
+    },
+    {
+      "status": "BLOCKED_BY_UNKNOWN_SEMANTICS",
+      "origin": "THIS_DESIGN",
+      "emits_side": false,
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "rule_id": "B09_VOLSIGNALS_GAMMA_REGIME",
+      "stage": "SPX_FINAL_CONTEXT",
+      "description": "VolSignals gammaExposure (\"Simulated\") como leitura de regime: convencao de sinal nao documentada; PARTIAL_ANALOG do TRACE.",
+      "input_families": [
+        "DC_SPX_FINAL_GAMMA"
+      ],
+      "semantic_preconditions": [
+        "SP_VOLSIGNALS_GAMMA_SIGN"
+      ],
+      "output_effect": "volsignals.regime_reading = UNRESOLVED"
+    },
+    {
+      "status": "BLOCKED_BY_UNKNOWN_SEMANTICS",
+      "origin": "THIS_DESIGN",
+      "emits_side": false,
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "rule_id": "B10_STAGE_C_SIDE_ORIGIN",
+      "stage": "SPX_FINAL_CONTEXT",
+      "description": "Estagio C originar lado quando B e UNKNOWN/NEUTRAL: nenhum campo C tem semantica de lado definida (Delta Pressure bloqueado em B07); a politica tambem nao esta definida.",
+      "input_families": [
+        "DC_SPX_TRACE_DELTA",
+        "DC_SPX_FINAL_GAMMA"
+      ],
+      "semantic_preconditions": [
+        "SP_TRACE_DELTA_PRESSURE_LINK"
+      ],
+      "output_effect": "C nao origina lado"
+    },
+    {
+      "status": "DIAGNOSTIC_ONLY",
+      "origin": "THIS_DESIGN",
+      "emits_side": false,
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "rule_id": "D01_METADATA",
+      "stage": "DATA_QUALITY",
+      "description": "Metadados (timestamps, ticker, categoria, _relay, status HTTP etc.): alimentam freshness/lineage, nunca evidencia.",
+      "input_families": [
+        "DC_NON_EVIDENCE_META"
+      ],
+      "output_effect": "data_quality / versions"
+    },
+    {
+      "status": "DIAGNOSTIC_ONLY",
+      "origin": "THIS_DESIGN",
+      "emits_side": false,
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "rule_id": "D02_LEGACY_FROZEN_UNKNOWN_BLOCKS",
+      "stage": "DATA_QUALITY",
+      "description": "iv30d (FROZEN), extended_zone/spotgamma/qscore/dark_pool_analysis (STALE desde 22/06), blind_spots/bl_scores/implied_vol (nao auditados), mini_contracts col5/col6: preservados, nunca evidencia.",
+      "input_families": [
+        "DC_ROOT_LEGACY_BLOCKS",
+        "DC_UNKNOWN_COLUMNS"
+      ],
+      "output_effect": "unresolved_fields / data_quality"
+    },
+    {
+      "status": "DIAGNOSTIC_ONLY",
+      "origin": "THIS_DESIGN",
+      "emits_side": false,
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "rule_id": "D03_LABEL_COLOR_AS_SIDE",
+      "stage": "NATIVE_DEALER_STATE",
+      "description": "NetGex0DTE label_color exibe sign(net_0dte) como lado (SEMANTIC_CONFLICT): mesmo dado da familia de regime; nunca lado.",
+      "input_families": [
+        "DC_GEX0_SIGN"
+      ],
+      "output_effect": "diagnostico de consistencia"
+    },
+    {
+      "status": "DIAGNOSTIC_ONLY",
+      "origin": "THIS_DESIGN",
+      "emits_side": false,
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "rule_id": "D04_HEAT_TRAIL",
+      "stage": "NATIVE_DEALER_STATE",
+      "description": "DexGexFlow heat_trail: derivado dos mesmos niveis; nunca evidencia independente.",
+      "input_families": [
+        "DC_MAJORS_0DTE"
+      ],
+      "output_effect": "diagnostico"
+    },
+    {
+      "status": "DIAGNOSTIC_ONLY",
+      "origin": "THIS_DESIGN",
+      "emits_side": false,
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "rule_id": "D05_DEGENERATE_STATE_OI",
+      "stage": "NATIVE_DEALER_STATE",
+      "description": "state_gex major_pos_oi/major_neg_oi: gex_oi = 0 no state => DEGENERATE.",
+      "input_families": [
+        "DC_MAJORS_0DTE"
+      ],
+      "output_effect": "diagnostico"
+    },
+    {
+      "status": "DIAGNOSTIC_ONLY",
+      "origin": "THIS_DESIGN",
+      "emits_side": false,
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "rule_id": "D06_PRICE_REFERENCE",
+      "stage": "DATA_QUALITY",
+      "description": "spot (6 copias, count_as 0): referencia de preco para R_M03 e consistencia entre fontes; nao e evidencia dealer.",
+      "input_families": [
+        "DC_SPOT_PRICE"
+      ],
+      "output_effect": "referencia + checagem de consistencia"
+    },
+    {
+      "status": "DIAGNOSTIC_ONLY",
+      "origin": "THIS_DESIGN",
+      "emits_side": false,
+      "required_quality": "qualquer (a regra trata a propria qualidade)",
+      "semantic_preconditions": [],
+      "rule_id": "D07_MENTHORQ_NULL",
+      "stage": "MENTHORQ_OVERLAY",
+      "description": "Niveis MenthorQ null (401) ou distance_to_hvl_pct sem hvl: overlay = ZERO, registrado em data_quality.",
+      "input_families": [
+        "DC_MENTHORQ_LEVELS"
+      ],
+      "output_effect": "menthorq.confirmation = ZERO"
+    }
+  ],
+  "rule_ids_by_status": {
+    "CANONICAL_STRUCTURAL": [
+      "R_S01_STAGE_ORDER",
+      "R_S02_FULL_COVERAGE_NOT_VOTES",
+      "R_S03_FAMILY_LINEAGE",
+      "R_S04_NO_SIMPLE_COUNTING",
+      "R_S05_MARKET_ORIGIN",
+      "R_S06_NO_NUMERIC_EQUIVALENCE",
+      "R_S07_BREAK_0909",
+      "R_S08_FRESHNESS_BASIS",
+      "R_S09_DATA_INVALID_TO_UNKNOWN",
+      "R_S10_DQ_STATUS_DEFINITION",
+      "R_S11_SESSION_INFORMATIONAL",
+      "R_S12_REGIME_IS_NOT_SIDE",
+      "R_S13_LOCATION_IS_NOT_SIDE",
+      "R_S14_UNKNOWN_SEMANTICS_NO_SIDE",
+      "R_S15_ACTIVE_RULES_ONLY",
+      "R_S16_CONTEXT_STATE_DEFINITIONS",
+      "R_S17_C_AFTER_B_NO_FUSION",
+      "R_S18_EFFECT_LABEL_SELECTION",
+      "R_S19_MENTHORQ_OVERLAY",
+      "R_S20_EXPLAINABILITY",
+      "R_S21_CORE_SEPARATE"
+    ],
+    "SUPPORTED_SEMANTIC": [
+      "R_M01_REGIME_0DTE",
+      "R_M02_REGIME_NEXT_FULL",
+      "R_M03_LOCATION_DESCRIPTORS",
+      "R_M04_STRIKE_STRUCTURE",
+      "R_M05_REGIME_TRANSITION",
+      "R_M06_LEVEL_TRANSITION",
+      "R_M07_NET_SIGN_CHANGE_OBSERVED",
+      "R_M08_DEX_PUT_CALL_RATIO",
+      "R_M09_TRACE_REGIME_COMPARE",
+      "R_M10_TRACE_PARTICIPANTS_ENRICH"
+    ],
+    "HYPOTHESIS_TO_TEST": [
+      "HT01_DEX_DIRECTION_BY_REGIME",
+      "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+      "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+      "HT04_LEVEL_MIGRATION_SIDE",
+      "HT05_REGIME_AMPLITUDE",
+      "HT06_SPX_CONTRADICTS_EFFECT",
+      "HT07_TRACE_REGIME_AGREEMENT_RELIABILITY",
+      "HT08_EXPIRY_REGIME_DIVERGENCE",
+      "HT09_MENTHORQ_ALIGNMENT_DEFINITION",
+      "HT10_SPY_INSTANCE_ROLE"
+    ],
+    "BLOCKED_BY_UNKNOWN_SEMANTICS": [
+      "B01_SECOND_ORDER_DIRECTION",
+      "B02_STATE_GREEK_PER_STRIKE_DIRECTION",
+      "B03_CVR_OFLOW",
+      "B04_PRIORS_TIME_INTERPRETATION",
+      "B05_ZERO_MPUT_SEMANTICS",
+      "B06_VOL_SKEW_DIRECTION",
+      "B07_TRACE_DELTA_CHARM_PRESSURE",
+      "B08_VOLSIGNALS_EXPOSURES",
+      "B09_VOLSIGNALS_GAMMA_REGIME",
+      "B10_STAGE_C_SIDE_ORIGIN"
+    ],
+    "DIAGNOSTIC_ONLY": [
+      "D01_METADATA",
+      "D02_LEGACY_FROZEN_UNKNOWN_BLOCKS",
+      "D03_LABEL_COLOR_AS_SIDE",
+      "D04_HEAT_TRAIL",
+      "D05_DEGENERATE_STATE_OI",
+      "D06_PRICE_REFERENCE",
+      "D07_MENTHORQ_NULL"
+    ]
+  },
+  "field_coverage": [
+    {
+      "feature_id": "abot.root.spot",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "PRICE_REFERENCE",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D06_PRICE_REFERENCE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S10_DQ_STATUS_DEFINITION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.timestamp",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.gamma_condition",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "GAMMA_REGIME",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT05_REGIME_AMPLITUDE",
+        "HT08_EXPIRY_REGIME_DIVERGENCE",
+        "R_M01_REGIME_0DTE",
+        "R_M02_REGIME_NEXT_FULL",
+        "R_M05_REGIME_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S12_REGIME_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.pc_oi",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DELTA_POSITIONING",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT01_DEX_DIRECTION_BY_REGIME",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_M08_DEX_PUT_CALL_RATIO",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.gex.net_0dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "GAMMA_REGIME",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT05_REGIME_AMPLITUDE",
+        "HT08_EXPIRY_REGIME_DIVERGENCE",
+        "R_M01_REGIME_0DTE",
+        "R_M02_REGIME_NEXT_FULL",
+        "R_M05_REGIME_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S12_REGIME_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.gex.net_next",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "GAMMA_REGIME",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT05_REGIME_AMPLITUDE",
+        "HT08_EXPIRY_REGIME_DIVERGENCE",
+        "R_M01_REGIME_0DTE",
+        "R_M02_REGIME_NEXT_FULL",
+        "R_M05_REGIME_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S12_REGIME_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.gex.cvr_0dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B03_CVR_OFLOW",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.gex.cvr_next",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B03_CVR_OFLOW",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.gex.oflow",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B03_CVR_OFLOW",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.gex.oflow_next",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B03_CVR_OFLOW",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.dex.net_0dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DELTA_POSITIONING",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT01_DEX_DIRECTION_BY_REGIME",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.dex.agg_0dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DELTA_POSITIONING",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT01_DEX_DIRECTION_BY_REGIME",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.dex.net_call_0dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DELTA_POSITIONING",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT01_DEX_DIRECTION_BY_REGIME",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.dex.net_put_0dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DELTA_POSITIONING",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT01_DEX_DIRECTION_BY_REGIME",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.dex.agg_call_0dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DELTA_POSITIONING",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT01_DEX_DIRECTION_BY_REGIME",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.dex.agg_put_0dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DELTA_POSITIONING",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT01_DEX_DIRECTION_BY_REGIME",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.dex.net_next",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DELTA_POSITIONING",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT01_DEX_DIRECTION_BY_REGIME",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.dex.agg_next",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DELTA_POSITIONING",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT01_DEX_DIRECTION_BY_REGIME",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.dex.net_call_next",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DELTA_POSITIONING",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT01_DEX_DIRECTION_BY_REGIME",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.dex.net_put_next",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DELTA_POSITIONING",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT01_DEX_DIRECTION_BY_REGIME",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.dex.agg_call_next",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DELTA_POSITIONING",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT01_DEX_DIRECTION_BY_REGIME",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.dex.agg_put_next",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DELTA_POSITIONING",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT01_DEX_DIRECTION_BY_REGIME",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.dex.oflow",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B03_CVR_OFLOW",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.dex.oflow_next",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B03_CVR_OFLOW",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.vanna.net_0dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B01_SECOND_ORDER_DIRECTION",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.vanna.net_next",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B01_SECOND_ORDER_DIRECTION",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.charm.net_0dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B01_SECOND_ORDER_DIRECTION",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.charm.net_next",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B01_SECOND_ORDER_DIRECTION",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.orderflow.cvr_oflow",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B03_CVR_OFLOW",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.orderflow.cvr_oflow_next",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B03_CVR_OFLOW",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.orderflow.zero_mcall",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.orderflow.zero_mput",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B05_ZERO_MPUT_SEMANTICS",
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.orderflow.z_mlgamma",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.orderflow.z_msgamma",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.levels.hvl",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D07_MENTHORQ_NULL",
+        "HT09_MENTHORQ_ALIGNMENT_DEFINITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S19_MENTHORQ_OVERLAY"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.levels.call_resistance",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D07_MENTHORQ_NULL",
+        "HT09_MENTHORQ_ALIGNMENT_DEFINITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S19_MENTHORQ_OVERLAY"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.levels.put_support",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D07_MENTHORQ_NULL",
+        "HT09_MENTHORQ_ALIGNMENT_DEFINITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S19_MENTHORQ_OVERLAY"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.levels.gamma_wall_0dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D07_MENTHORQ_NULL",
+        "HT09_MENTHORQ_ALIGNMENT_DEFINITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S19_MENTHORQ_OVERLAY"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.levels.put_support_0dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D07_MENTHORQ_NULL",
+        "HT09_MENTHORQ_ALIGNMENT_DEFINITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S19_MENTHORQ_OVERLAY"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.levels.hvl_0dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D07_MENTHORQ_NULL",
+        "HT09_MENTHORQ_ALIGNMENT_DEFINITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S19_MENTHORQ_OVERLAY"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.levels.call_resistance_0dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D07_MENTHORQ_NULL",
+        "HT09_MENTHORQ_ALIGNMENT_DEFINITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S19_MENTHORQ_OVERLAY"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.levels.day_min",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D07_MENTHORQ_NULL",
+        "HT09_MENTHORQ_ALIGNMENT_DEFINITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S19_MENTHORQ_OVERLAY"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.levels.day_max",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D07_MENTHORQ_NULL",
+        "HT09_MENTHORQ_ALIGNMENT_DEFINITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S19_MENTHORQ_OVERLAY"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.levels.distance_to_hvl_pct",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D07_MENTHORQ_NULL",
+        "HT09_MENTHORQ_ALIGNMENT_DEFINITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S19_MENTHORQ_OVERLAY"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.levels._menthorq_source",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.levels._asof",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.levels.short_gamma_0dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.levels.short_gamma_next",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.levels.next_exp_hvl",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.levels.next_exp_call_res",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.levels.next_exp_put_sup",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.classic.zero_gamma",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "GAMMA_REGIME",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT05_REGIME_AMPLITUDE",
+        "HT08_EXPIRY_REGIME_DIVERGENCE",
+        "R_M01_REGIME_0DTE",
+        "R_M02_REGIME_NEXT_FULL",
+        "R_M05_REGIME_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S12_REGIME_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.classic.major_pos_vol",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.classic.major_neg_vol",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.classic.major_pos_oi",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.classic.major_neg_oi",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.classic.sum_gex_vol",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M04_STRIKE_STRUCTURE",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.classic.sum_gex_oi",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M04_STRIKE_STRUCTURE",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.classic.delta_risk_reversal",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "VOL_SKEW",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B06_VOL_SKEW_DIRECTION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.classic.min_dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.classic.sec_min_dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.classic.spot",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "PRICE_REFERENCE",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D06_PRICE_REFERENCE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S10_DQ_STATUS_DEFINITION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.classic.timestamp",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.classic.strikes",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M04_STRIKE_STRUCTURE",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.classic.max_priors",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B04_PRIORS_TIME_INTERPRETATION",
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.root.iv30d",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D02_LEGACY_FROZEN_UNKNOWN_BLOCKS",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.extended_zone",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D02_LEGACY_FROZEN_UNKNOWN_BLOCKS",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.spotgamma",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D02_LEGACY_FROZEN_UNKNOWN_BLOCKS",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.qscore",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D02_LEGACY_FROZEN_UNKNOWN_BLOCKS",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.dark_pool_analysis",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D02_LEGACY_FROZEN_UNKNOWN_BLOCKS",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.blind_spots",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D02_LEGACY_FROZEN_UNKNOWN_BLOCKS",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.bl_scores",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D02_LEGACY_FROZEN_UNKNOWN_BLOCKS",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.root.implied_vol",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "market_origin": "UNKNOWN",
+      "rule_ids": [
+        "D02_LEGACY_FROZEN_UNKNOWN_BLOCKS",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.ind.netgex0dte.label_color",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "GAMMA_REGIME",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D03_LABEL_COLOR_AS_SIDE",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S12_REGIME_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.ind.dexgexflow.heat_trail",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D04_HEAT_TRAIL",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.classic.timestamp",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.classic.ticker",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.classic.min_dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.classic.sec_min_dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.classic.spot",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "PRICE_REFERENCE",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D06_PRICE_REFERENCE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S10_DQ_STATUS_DEFINITION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.classic.zero_gamma",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "GAMMA_REGIME",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT05_REGIME_AMPLITUDE",
+        "HT08_EXPIRY_REGIME_DIVERGENCE",
+        "R_M01_REGIME_0DTE",
+        "R_M02_REGIME_NEXT_FULL",
+        "R_M05_REGIME_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S12_REGIME_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.classic.major_pos_vol",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.classic.major_pos_oi",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.classic.major_neg_vol",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.classic.major_neg_oi",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.classic.strikes[].strike",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M04_STRIKE_STRUCTURE",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.classic.strikes[].gex_vol",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M04_STRIKE_STRUCTURE",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.classic.strikes[].gex_oi",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M04_STRIKE_STRUCTURE",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.classic.strikes[].priors[0..4]",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B04_PRIORS_TIME_INTERPRETATION",
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M04_STRIKE_STRUCTURE",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.classic.sum_gex_vol",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M04_STRIKE_STRUCTURE",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.classic.sum_gex_oi",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M04_STRIKE_STRUCTURE",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.classic.delta_risk_reversal",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "VOL_SKEW",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B06_VOL_SKEW_DIRECTION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.classic.max_priors[0..5]",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B04_PRIORS_TIME_INTERPRETATION",
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.classic.conversion",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.classic._relay.ticker",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.classic._relay.cat",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.classic._relay.cached",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.classic._relay.stale",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.classic._relay.age_ms",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.classic._relay.ttl_ms",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.classic._relay.served",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.cache.t",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.cache.sp",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "PRICE_REFERENCE",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D06_PRICE_REFERENCE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S10_DQ_STATUS_DEFINITION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.cache.zg",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "GAMMA_REGIME",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT05_REGIME_AMPLITUDE",
+        "HT08_EXPIRY_REGIME_DIVERGENCE",
+        "R_M01_REGIME_0DTE",
+        "R_M02_REGIME_NEXT_FULL",
+        "R_M05_REGIME_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S12_REGIME_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.cache.mpv",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.cache.mnv",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.cache.mpo",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.cache.mno",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.cache.sv",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M04_STRIKE_STRUCTURE",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.cache.so",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M04_STRIKE_STRUCTURE",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.cache.cm",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.cache.ca",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex.timestamp",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex.ticker",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex.min_dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex.sec_min_dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex.spot",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "PRICE_REFERENCE",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D06_PRICE_REFERENCE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S10_DQ_STATUS_DEFINITION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex.zero_gamma",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex.major_pos_vol",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.state_gex.major_pos_oi",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D05_DEGENERATE_STATE_OI",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex.major_neg_vol",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.state_gex.major_neg_oi",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D05_DEGENERATE_STATE_OI",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex.strikes[].strike",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "GAMMA_REGIME",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT05_REGIME_AMPLITUDE",
+        "HT08_EXPIRY_REGIME_DIVERGENCE",
+        "R_M01_REGIME_0DTE",
+        "R_M02_REGIME_NEXT_FULL",
+        "R_M04_STRIKE_STRUCTURE",
+        "R_M05_REGIME_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S12_REGIME_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex.strikes[].gex_vol",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "GAMMA_REGIME",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT05_REGIME_AMPLITUDE",
+        "HT08_EXPIRY_REGIME_DIVERGENCE",
+        "R_M01_REGIME_0DTE",
+        "R_M02_REGIME_NEXT_FULL",
+        "R_M04_STRIKE_STRUCTURE",
+        "R_M05_REGIME_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S12_REGIME_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex.strikes[].gex_oi",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex.strikes[].priors[0..4]",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "GAMMA_REGIME",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B04_PRIORS_TIME_INTERPRETATION",
+        "HT05_REGIME_AMPLITUDE",
+        "HT08_EXPIRY_REGIME_DIVERGENCE",
+        "R_M01_REGIME_0DTE",
+        "R_M02_REGIME_NEXT_FULL",
+        "R_M05_REGIME_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S12_REGIME_IS_NOT_SIDE",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex.sum_gex_vol",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "GAMMA_REGIME",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT05_REGIME_AMPLITUDE",
+        "HT08_EXPIRY_REGIME_DIVERGENCE",
+        "R_M01_REGIME_0DTE",
+        "R_M02_REGIME_NEXT_FULL",
+        "R_M04_STRIKE_STRUCTURE",
+        "R_M05_REGIME_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S12_REGIME_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex.sum_gex_oi",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_M04_STRIKE_STRUCTURE",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex.delta_risk_reversal",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "VOL_SKEW",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B06_VOL_SKEW_DIRECTION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex.max_priors[0..5]",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "GAMMA_REGIME",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B04_PRIORS_TIME_INTERPRETATION",
+        "HT05_REGIME_AMPLITUDE",
+        "HT08_EXPIRY_REGIME_DIVERGENCE",
+        "R_M01_REGIME_0DTE",
+        "R_M02_REGIME_NEXT_FULL",
+        "R_M05_REGIME_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S12_REGIME_IS_NOT_SIDE",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex.conversion",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.ticker",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.cat",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.cached",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.stale",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.age_ms",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.ttl_ms",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.served",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.grade",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.n",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.tem_majors",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.timestamp",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.ticker",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.spot",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "PRICE_REFERENCE",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D06_PRICE_REFERENCE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S10_DQ_STATUS_DEFINITION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.min_dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.sec_min_dte",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.major_positive",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.state_greek.major_negative",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.state_greek.major_long_gamma",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.state_greek.major_short_gamma",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "STRUCTURE_LOCATION",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S13_LOCATION_IS_NOT_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": true
+    },
+    {
+      "feature_id": "abot.state_greek.mini_contracts[].strike",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.mini_contracts[].call_ivol",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "VOL_SKEW",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B06_VOL_SKEW_DIRECTION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.mini_contracts[].put_ivol",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "VOL_SKEW",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B06_VOL_SKEW_DIRECTION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.mini_contracts[].col5",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D02_LEGACY_FROZEN_UNKNOWN_BLOCKS",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.mini_contracts[].col6",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D02_LEGACY_FROZEN_UNKNOWN_BLOCKS",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.conversion",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.delta.mini_contracts[].greek_value",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DELTA_POSITIONING",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B02_STATE_GREEK_PER_STRIKE_DIRECTION",
+        "B04_PRIORS_TIME_INTERPRETATION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.delta.mini_contracts[].priors[0..2]",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "DELTA_POSITIONING",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B02_STATE_GREEK_PER_STRIKE_DIRECTION",
+        "B04_PRIORS_TIME_INTERPRETATION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.gamma.mini_contracts[].greek_value",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "GAMMA_REGIME",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B02_STATE_GREEK_PER_STRIKE_DIRECTION",
+        "B04_PRIORS_TIME_INTERPRETATION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.gamma.mini_contracts[].priors[0..2]",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "GAMMA_REGIME",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B02_STATE_GREEK_PER_STRIKE_DIRECTION",
+        "B04_PRIORS_TIME_INTERPRETATION",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.vanna.mini_contracts[].greek_value",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B01_SECOND_ORDER_DIRECTION",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.vanna.mini_contracts[].priors[0..2]",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B01_SECOND_ORDER_DIRECTION",
+        "B04_PRIORS_TIME_INTERPRETATION",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.charm.mini_contracts[].greek_value",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B01_SECOND_ORDER_DIRECTION",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek.charm.mini_contracts[].priors[0..2]",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B01_SECOND_ORDER_DIRECTION",
+        "B04_PRIORS_TIME_INTERPRETATION",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.ticker",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.cat",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.cached",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.stale",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.age_ms",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.ttl_ms",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.served",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.grade",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.n",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.tem_majors",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.gamma_mm",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "dimension": "SPX_FINAL_GAMMA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT06_SPX_CONTRADICTS_EFFECT",
+        "HT07_TRACE_REGIME_AGREEMENT_RELIABILITY",
+        "R_M09_TRACE_REGIME_COMPARE",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S06_NO_NUMERIC_EQUIVALENCE",
+        "R_S17_C_AFTER_B_NO_FUSION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.gamma_cust",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "dimension": "SPX_FINAL_TRACE",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "R_M10_TRACE_PARTICIPANTS_ENRICH",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S17_C_AFTER_B_NO_FUSION",
+        "R_S18_EFFECT_LABEL_SELECTION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.gamma_procust",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "dimension": "SPX_FINAL_TRACE",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "R_M10_TRACE_PARTICIPANTS_ENRICH",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S17_C_AFTER_B_NO_FUSION",
+        "R_S18_EFFECT_LABEL_SELECTION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.gamma_firm",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "dimension": "SPX_FINAL_TRACE",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "R_M10_TRACE_PARTICIPANTS_ENRICH",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S17_C_AFTER_B_NO_FUSION",
+        "R_S18_EFFECT_LABEL_SELECTION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.gamma_bd",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "dimension": "SPX_FINAL_TRACE",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "R_M10_TRACE_PARTICIPANTS_ENRICH",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S17_C_AFTER_B_NO_FUSION",
+        "R_S18_EFFECT_LABEL_SELECTION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.delta_pressure",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "dimension": "SPX_FINAL_TRACE",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B07_TRACE_DELTA_CHARM_PRESSURE",
+        "B10_STAGE_C_SIDE_ORIGIN",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S17_C_AFTER_B_NO_FUSION",
+        "R_S18_EFFECT_LABEL_SELECTION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.charm_pressure",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "dimension": "SPX_FINAL_TRACE",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B07_TRACE_DELTA_CHARM_PRESSURE",
+        "B10_STAGE_C_SIDE_ORIGIN",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S17_C_AFTER_B_NO_FUSION",
+        "R_S18_EFFECT_LABEL_SELECTION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.stats",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "dimension": "SPX_FINAL_GAMMA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "HT06_SPX_CONTRADICTS_EFFECT",
+        "HT07_TRACE_REGIME_AGREEMENT_RELIABILITY",
+        "R_M09_TRACE_REGIME_COMPARE",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S06_NO_NUMERIC_EQUIVALENCE",
+        "R_S17_C_AFTER_B_NO_FUSION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.timestamps",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "dimension": "METADATA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "D01_METADATA",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "spx_final_context.volsignals.gammaExposure",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "dimension": "SPX_FINAL_GAMMA",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B09_VOLSIGNALS_GAMMA_REGIME",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S06_NO_NUMERIC_EQUIVALENCE",
+        "R_S17_C_AFTER_B_NO_FUSION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "spx_final_context.volsignals.charmExposure",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B08_VOLSIGNALS_EXPOSURES",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S06_NO_NUMERIC_EQUIVALENCE",
+        "R_S17_C_AFTER_B_NO_FUSION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "spx_final_context.volsignals.deltaChangeExposure",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B08_VOLSIGNALS_EXPOSURES",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S06_NO_NUMERIC_EQUIVALENCE",
+        "R_S17_C_AFTER_B_NO_FUSION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "spx_final_context.volsignals.deltaTotalExposure",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B08_VOLSIGNALS_EXPOSURES",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S06_NO_NUMERIC_EQUIVALENCE",
+        "R_S17_C_AFTER_B_NO_FUSION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "spx_final_context.volsignals.vannaExposure",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B08_VOLSIGNALS_EXPOSURES",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S06_NO_NUMERIC_EQUIVALENCE",
+        "R_S17_C_AFTER_B_NO_FUSION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "spx_final_context.volsignals.volgaExposure",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B08_VOLSIGNALS_EXPOSURES",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S06_NO_NUMERIC_EQUIVALENCE",
+        "R_S17_C_AFTER_B_NO_FUSION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    },
+    {
+      "feature_id": "spx_final_context.volsignals.deltaExposureDiff",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "market_origin": "SPX",
+      "rule_ids": [
+        "B08_VOLSIGNALS_EXPOSURES",
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S03_FAMILY_LINEAGE",
+        "R_S05_MARKET_ORIGIN",
+        "R_S06_NO_NUMERIC_EQUIVALENCE",
+        "R_S17_C_AFTER_B_NO_FUSION"
+      ],
+      "side_capable_in_record": false,
+      "side_capable_in_research_arm": false
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "_meta": {
+    "project": "ALFA OMEGA JEV FUTURE",
+    "version": "v1",
+    "date": "2026-09-23",
+    "status": "PREREGISTRATION DESIGN — NOT A TEST",
+    "doc": "JEV_PREREGISTRATION_DESIGN_V1_20260923.md",
+    "implementation": "NONE",
+    "runtime": "NONE",
+    "data_collection": "NONE",
+    "validation": "NOT STARTED",
+    "validation_history_target": "NON_BLOCKING (20-40 pregoes = alvo de evidencia futura; nao e gate nem condicao de fase)",
+    "production": "UNCHANGED",
+    "f5": "NOT PERFORMED",
+    "core_vs_jev_fusion": "UNDEFINED",
+    "core_vs_jev_conflict": "UNDEFINED",
+    "precedence": "NOT_DEFINED",
+    "schema": "jev-future/provisional-mappings/v1"
+  },
+  "status": "PROVISIONAL_DESIGN_MAPPING",
+  "provenance": "associacao dimension -> possible_contribution_areas proposta pelo Claude Code (Decision Logic V1, 23/09); NAO e regra empirica validada",
+  "usage_rule": "estrutura inicial do pre-registro; qualquer uso para classificacao direcional precisa ser pre-registrado explicitamente",
+  "mappings": [
+    {
+      "source_dimension": "GAMMA_REGIME",
+      "proposed_contribution_areas": [
+        "REGIME"
+      ],
+      "rationale": "GEX liquido e zero gamma descrevem o regime de hedge do dealer (vendor: regime, nao direcao)",
+      "semantic_confidence": "HIGH",
+      "fields": 14,
+      "rules_that_reference_dimension": [
+        "R_M01_REGIME_0DTE",
+        "R_M02_REGIME_NEXT_FULL",
+        "R_M05_REGIME_TRANSITION",
+        "R_S12_REGIME_IS_NOT_SIDE",
+        "HT05_REGIME_AMPLITUDE",
+        "HT08_EXPIRY_REGIME_DIVERGENCE"
+      ],
+      "directional_use": "NOT_ALLOWED_WITHOUT_PREREGISTRATION",
+      "status": "PROVISIONAL_DESIGN_MAPPING"
+    },
+    {
+      "source_dimension": "STRUCTURE_LOCATION",
+      "proposed_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "rationale": "majors, zero gamma e perfil por strike sao niveis e forma do posicionamento",
+      "semantic_confidence": "HIGH (unidades CONFIRMED); zero_mput LOW",
+      "fields": 43,
+      "rules_that_reference_dimension": [
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M06_LEVEL_TRANSITION",
+        "R_S13_LOCATION_IS_NOT_SIDE",
+        "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+        "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+        "HT04_LEVEL_MIGRATION_SIDE"
+      ],
+      "directional_use": "NOT_ALLOWED_WITHOUT_PREREGISTRATION",
+      "status": "PROVISIONAL_DESIGN_MAPPING"
+    },
+    {
+      "source_dimension": "DELTA_POSITIONING",
+      "proposed_contribution_areas": [
+        "FLOW",
+        "SENSITIVITY"
+      ],
+      "rationale": "DEX descreve exposicao de delta; se e fluxo de hedge depende da convencao de sinal",
+      "semantic_confidence": "LOW (unit e convencao UNKNOWN)",
+      "fields": 15,
+      "rules_that_reference_dimension": [
+        "HT01_DEX_DIRECTION_BY_REGIME",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "directional_use": "NOT_ALLOWED_WITHOUT_PREREGISTRATION",
+      "status": "PROVISIONAL_DESIGN_MAPPING"
+    },
+    {
+      "source_dimension": "SECOND_ORDER_FLOWS",
+      "proposed_contribution_areas": [
+        "SENSITIVITY",
+        "CHANGE"
+      ],
+      "rationale": "vanna/charm descrevem sensibilidade do delta a vol/tempo",
+      "semantic_confidence": "LOW (sinal UNKNOWN)",
+      "fields": 8,
+      "rules_that_reference_dimension": [
+        "B01_SECOND_ORDER_DIRECTION",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "directional_use": "NOT_ALLOWED_WITHOUT_PREREGISTRATION",
+      "status": "PROVISIONAL_DESIGN_MAPPING"
+    },
+    {
+      "source_dimension": "VOL_SKEW",
+      "proposed_contribution_areas": [
+        "SENSITIVITY",
+        "CONTEXT"
+      ],
+      "rationale": "risk reversal/ivol descrevem skew e vol",
+      "semantic_confidence": "LOW (semantica UNKNOWN)",
+      "fields": 5,
+      "rules_that_reference_dimension": [
+        "B06_VOL_SKEW_DIRECTION",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "directional_use": "NOT_ALLOWED_WITHOUT_PREREGISTRATION",
+      "status": "PROVISIONAL_DESIGN_MAPPING"
+    },
+    {
+      "source_dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "proposed_contribution_areas": [
+        "FLOW",
+        "UNRESOLVED"
+      ],
+      "rationale": "nomes sugerem fluxo, sem documentacao",
+      "semantic_confidence": "NONE",
+      "fields": 8,
+      "rules_that_reference_dimension": [
+        "B03_CVR_OFLOW",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "directional_use": "NOT_ALLOWED_WITHOUT_PREREGISTRATION",
+      "status": "PROVISIONAL_DESIGN_MAPPING"
+    },
+    {
+      "source_dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "proposed_contribution_areas": [
+        "LOCATION"
+      ],
+      "rationale": "niveis MenthorQ; papel so de confirmacao positiva",
+      "semantic_confidence": "MEDIUM (hoje null)",
+      "fields": 10,
+      "rules_that_reference_dimension": [
+        "R_S19_MENTHORQ_OVERLAY",
+        "HT09_MENTHORQ_ALIGNMENT_DEFINITION",
+        "D07_MENTHORQ_NULL"
+      ],
+      "directional_use": "NOT_ALLOWED_WITHOUT_PREREGISTRATION",
+      "status": "PROVISIONAL_DESIGN_MAPPING"
+    },
+    {
+      "source_dimension": "PRICE_REFERENCE",
+      "proposed_contribution_areas": [
+        "CONTEXT"
+      ],
+      "rationale": "referencia de preco para descritores de location",
+      "semantic_confidence": "HIGH",
+      "fields": 6,
+      "rules_that_reference_dimension": [
+        "D06_PRICE_REFERENCE",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_S10_DQ_STATUS_DEFINITION"
+      ],
+      "directional_use": "NOT_ALLOWED_WITHOUT_PREREGISTRATION",
+      "status": "PROVISIONAL_DESIGN_MAPPING"
+    },
+    {
+      "source_dimension": "METADATA",
+      "proposed_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "rationale": "freshness, lineage e versoes",
+      "semantic_confidence": "HIGH",
+      "fields": 56,
+      "rules_that_reference_dimension": [
+        "D01_METADATA",
+        "R_S08_FRESHNESS_BASIS"
+      ],
+      "directional_use": "NOT_ALLOWED_WITHOUT_PREREGISTRATION",
+      "status": "PROVISIONAL_DESIGN_MAPPING"
+    },
+    {
+      "source_dimension": "DIAGNOSTIC_UNRESOLVED",
+      "proposed_contribution_areas": [
+        "DIAGNOSTIC",
+        "UNRESOLVED"
+      ],
+      "rationale": "blocos congelados, stale ou nao auditados",
+      "semantic_confidence": "NONE",
+      "fields": 10,
+      "rules_that_reference_dimension": [
+        "D02_LEGACY_FROZEN_UNKNOWN_BLOCKS"
+      ],
+      "directional_use": "NOT_ALLOWED_WITHOUT_PREREGISTRATION",
+      "status": "PROVISIONAL_DESIGN_MAPPING"
+    },
+    {
+      "source_dimension": "SPX_FINAL_GAMMA",
+      "proposed_contribution_areas": [
+        "REGIME",
+        "CONTEXT"
+      ],
+      "rationale": "gamma do MM (TRACE) e analogo parcial (VolSignals) contextualizam o regime nativo",
+      "semantic_confidence": "MEDIUM (TRACE); LOW (VolSignals)",
+      "fields": 3,
+      "rules_that_reference_dimension": [
+        "R_S06_NO_NUMERIC_EQUIVALENCE",
+        "R_S17_C_AFTER_B_NO_FUSION"
+      ],
+      "directional_use": "NOT_ALLOWED_WITHOUT_PREREGISTRATION",
+      "status": "PROVISIONAL_DESIGN_MAPPING"
+    },
+    {
+      "source_dimension": "SPX_FINAL_TRACE",
+      "proposed_contribution_areas": [
+        "CONTEXT"
+      ],
+      "rationale": "gamma por participante e pressures como contexto SPX",
+      "semantic_confidence": "MEDIUM (participantes); NONE (pressures)",
+      "fields": 6,
+      "rules_that_reference_dimension": [
+        "R_S17_C_AFTER_B_NO_FUSION",
+        "R_S18_EFFECT_LABEL_SELECTION"
+      ],
+      "directional_use": "NOT_ALLOWED_WITHOUT_PREREGISTRATION",
+      "status": "PROVISIONAL_DESIGN_MAPPING"
+    },
+    {
+      "source_dimension": "SPX_FINAL_VOLSIGNALS",
+      "proposed_contribution_areas": [
+        "CONTEXT"
+      ],
+      "rationale": "exposicoes VolSignals como contexto SPX",
+      "semantic_confidence": "NONE (INSUFFICIENT_INFORMATION)",
+      "fields": 6,
+      "rules_that_reference_dimension": [
+        "B08_VOLSIGNALS_EXPOSURES",
+        "R_S06_NO_NUMERIC_EQUIVALENCE",
+        "R_S17_C_AFTER_B_NO_FUSION"
+      ],
+      "directional_use": "NOT_ALLOWED_WITHOUT_PREREGISTRATION",
+      "status": "PROVISIONAL_DESIGN_MAPPING"
+    }
+  ],
+  "conditional_additions": [
+    {
+      "condition": "feature_id contem \"prior\"",
+      "adds": "CHANGE",
+      "rationale": "priors sao defasagens do mesmo campo",
+      "semantic_confidence": "LOW (espacamento UNKNOWN)",
+      "status": "PROVISIONAL_DESIGN_MAPPING"
+    },
+    {
+      "condition": "quality_state em {UNKNOWN_SEMANTICS, UNKNOWN, SEMANTIC_CONFLICT, INSUFFICIENT_INFORMATION, MISLABELED, PENDING_REVISION_AUDIT} ou unit_confidence UNKNOWN (fora de METADATA)",
+      "adds": "UNRESOLVED",
+      "rationale": "sinaliza que a contribuicao depende de semantica ainda nao resolvida",
+      "semantic_confidence": "N/A",
+      "status": "PROVISIONAL_DESIGN_MAPPING"
+    }
+  ]
+}

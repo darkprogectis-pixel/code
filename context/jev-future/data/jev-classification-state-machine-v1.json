@@ -1,0 +1,269 @@
+{
+  "_meta": {
+    "project": "ALFA OMEGA JEV FUTURE",
+    "version": "v1",
+    "date": "2026-09-23",
+    "status": "PREREGISTRATION DESIGN — NOT A TEST",
+    "doc": "JEV_PREREGISTRATION_DESIGN_V1_20260923.md",
+    "implementation": "NONE",
+    "runtime": "NONE",
+    "data_collection": "NONE",
+    "validation": "NOT STARTED",
+    "validation_history_target": "NON_BLOCKING (20-40 pregoes = alvo de evidencia futura; nao e gate nem condicao de fase)",
+    "production": "UNCHANGED",
+    "f5": "NOT PERFORMED",
+    "core_vs_jev_fusion": "UNDEFINED",
+    "core_vs_jev_conflict": "UNDEFINED",
+    "precedence": "NOT_DEFINED",
+    "schema": "jev-future/classification-state-machine/v1",
+    "nature": "CLASSIFICACAO DE ESTADO/CONFLUENCIA — nao e ordem de trade"
+  },
+  "pipeline": [
+    {
+      "step": 1,
+      "id": "DATA_QUALITY",
+      "rules": [
+        "R_S08_FRESHNESS_BASIS",
+        "R_S10_DQ_STATUS_DEFINITION",
+        "R_S11_SESSION_INFORMATIONAL",
+        "D01_METADATA",
+        "D02_LEGACY_FROZEN_UNKNOWN_BLOCKS",
+        "D06_PRICE_REFERENCE"
+      ],
+      "output": "data_quality"
+    },
+    {
+      "step": 2,
+      "id": "FOUR_SOURCE_NATIVE_DEALER_ANALYSIS",
+      "sources": [
+        "AlfaOmegaNetGex0DTE",
+        "AlfaOmegaDexGexFlow",
+        "AlfaOmegaClassic",
+        "AlfaOmegaState"
+      ],
+      "fields": 174,
+      "rules": [
+        "R_S02_FULL_COVERAGE_NOT_VOTES",
+        "R_S05_MARKET_ORIGIN",
+        "R_S07_BREAK_0909"
+      ],
+      "output": "leituras por campo"
+    },
+    {
+      "step": 3,
+      "id": "EVIDENCE_FAMILIES_LINEAGE",
+      "rules": [
+        "R_S03_FAMILY_LINEAGE",
+        "R_S04_NO_SIMPLE_COUNTING"
+      ],
+      "output": "evidence_families"
+    },
+    {
+      "step": 4,
+      "id": "NATIVE_DEALER_STATE",
+      "rules": [
+        "R_M01_REGIME_0DTE",
+        "R_M02_REGIME_NEXT_FULL",
+        "R_M03_LOCATION_DESCRIPTORS",
+        "R_M04_STRIKE_STRUCTURE",
+        "R_M05_REGIME_TRANSITION",
+        "R_M06_LEVEL_TRANSITION",
+        "R_M07_NET_SIGN_CHANGE_OBSERVED",
+        "R_M08_DEX_PUT_CALL_RATIO",
+        "R_S12_REGIME_IS_NOT_SIDE",
+        "R_S13_LOCATION_IS_NOT_SIDE",
+        "R_S14_UNKNOWN_SEMANTICS_NO_SIDE"
+      ],
+      "output": "native_dealer_state {gamma_regime, structure_location, delta_positioning, second_order_flows, vol_skew, flow_unknown_semantics, change_transition}"
+    },
+    {
+      "step": 5,
+      "id": "NATIVE_DIRECTIONAL_CONTEXT",
+      "rules": [
+        "R_S09_DATA_INVALID_TO_UNKNOWN",
+        "R_S15_ACTIVE_RULES_ONLY",
+        "R_S16_CONTEXT_STATE_DEFINITIONS"
+      ],
+      "output": "native_directional_context"
+    },
+    {
+      "step": 6,
+      "id": "SPX_FINAL_CONTEXT",
+      "sources": [
+        "SpotGamma TRACE",
+        "VolSignals"
+      ],
+      "market_origin": "SPX",
+      "fields": 16,
+      "rules": [
+        "R_S06_NO_NUMERIC_EQUIVALENCE",
+        "R_S17_C_AFTER_B_NO_FUSION",
+        "R_S18_EFFECT_LABEL_SELECTION",
+        "R_M09_TRACE_REGIME_COMPARE",
+        "R_M10_TRACE_PARTICIPANTS_ENRICH"
+      ],
+      "output": "spx_final_context"
+    },
+    {
+      "step": 7,
+      "id": "JEV_DIRECTIONAL_CONTEXT",
+      "rules": [
+        "R_S17_C_AFTER_B_NO_FUSION",
+        "R_S20_EXPLAINABILITY"
+      ],
+      "output": "jev_directional_context = native_directional_context (efeito de C so registrado)"
+    },
+    {
+      "step": 8,
+      "id": "MENTHORQ_OVERLAY",
+      "rules": [
+        "R_S19_MENTHORQ_OVERLAY",
+        "D07_MENTHORQ_NULL"
+      ],
+      "output": "menthorq (nao altera o contexto)"
+    },
+    {
+      "step": 9,
+      "id": "CORE_COMPARISON",
+      "rules": [
+        "R_S21_CORE_SEPARATE"
+      ],
+      "output": "core_comparison (so comparacao; fusao UNDEFINED)"
+    }
+  ],
+  "sub_states": {
+    "gamma_regime": [
+      "POSITIVE_GAMMA",
+      "NEGATIVE_GAMMA",
+      "AMBIGUOUS",
+      "UNKNOWN"
+    ],
+    "location_descriptor": [
+      "ABOVE",
+      "BELOW",
+      "BETWEEN",
+      "SEMANTIC_ANOMALY",
+      "UNKNOWN"
+    ],
+    "change_transition": [
+      "REGIME_TRANSITION",
+      "LEVEL_MIGRATION",
+      "SIGN_CHANGE_OBSERVED",
+      "NONE",
+      "UNRESOLVED"
+    ],
+    "unresolved_dimension_reading": "UNRESOLVED",
+    "spx_effect_on_native": [
+      "CONFIRMS",
+      "CONTRADICTS",
+      "ENRICHES",
+      "NO_EFFECT",
+      "UNAVAILABLE"
+    ]
+  },
+  "context_decision": {
+    "applies_to": [
+      "native_directional_context",
+      "jev_directional_context"
+    ],
+    "side_readings_source": "so regras ativas (R_S15) com emits_side=true — nesta versao: nenhuma",
+    "ordered_steps": [
+      {
+        "if": "data_quality.status == DATA_INVALID",
+        "then": "UNKNOWN",
+        "reason": "RC_DATA_INVALID",
+        "rule": "R_S09_DATA_INVALID_TO_UNKNOWN"
+      },
+      {
+        "if": "nenhuma regra ativa de lado avaliavel",
+        "then": "UNKNOWN",
+        "reason": "RC_NO_ACTIVE_DIRECTIONAL_RULE",
+        "rule": "R_S15_ACTIVE_RULES_ONLY"
+      },
+      {
+        "if": "criterio NO_TRADE_CONTEXT pre-registrado e atendido",
+        "then": "NO_TRADE_CONTEXT",
+        "reason": "RC_NO_TRADE_CRITERIA_MET",
+        "rule": "R_S16_CONTEXT_STATE_DEFINITIONS",
+        "status": "INACTIVE — NO_TRADE_CONTEXT_CRITERIA UNDEFINED; posicao desta etapa na ordem tambem a pre-registrar com o criterio"
+      },
+      {
+        "if": "leituras de lado de familias distintas em sentidos opostos",
+        "then": "CONFLICTED_CONTEXT",
+        "reason": "RC_OPPOSITE_FAMILY_READINGS",
+        "rule": "R_S16_CONTEXT_STATE_DEFINITIONS"
+      },
+      {
+        "if": "todas as leituras de lado no mesmo sentido",
+        "then": "LONG_CONTEXT | SHORT_CONTEXT",
+        "reason": "RC_CONSISTENT_SIDE_READINGS",
+        "rule": "R_S16_CONTEXT_STATE_DEFINITIONS",
+        "note": "consistencia entre familias, nao contagem; familias com overlap_risk concordantes nao reforcam"
+      },
+      {
+        "if": "regras de lado avaliaveis sem inclinacao",
+        "then": "NEUTRAL_CONTEXT",
+        "reason": "RC_NO_INCLINATION",
+        "rule": "R_S16_CONTEXT_STATE_DEFINITIONS"
+      }
+    ]
+  },
+  "states": {
+    "LONG_CONTEXT": {
+      "defined": true,
+      "reachable_in_record_v1": false,
+      "reachable_in_research_arm": true,
+      "via": [
+        "HT01",
+        "HT02",
+        "HT03",
+        "HT04"
+      ]
+    },
+    "SHORT_CONTEXT": {
+      "defined": true,
+      "reachable_in_record_v1": false,
+      "reachable_in_research_arm": true,
+      "via": [
+        "HT01",
+        "HT02",
+        "HT03",
+        "HT04"
+      ]
+    },
+    "NEUTRAL_CONTEXT": {
+      "defined": true,
+      "reachable_in_record_v1": false,
+      "reachable_in_research_arm": true
+    },
+    "CONFLICTED_CONTEXT": {
+      "defined": true,
+      "reachable_in_record_v1": false,
+      "reachable_in_research_arm": true,
+      "via": [
+        "HT06 V_A"
+      ]
+    },
+    "NO_TRADE_CONTEXT": {
+      "defined": true,
+      "reachable_in_record_v1": false,
+      "reachable_in_research_arm": false,
+      "criteria": "UNDEFINED"
+    },
+    "UNKNOWN": {
+      "defined": true,
+      "reachable_in_record_v1": true,
+      "reasons": [
+        "RC_DATA_INVALID",
+        "RC_NO_ACTIVE_DIRECTIONAL_RULE"
+      ]
+    }
+  },
+  "classification_states_status": "INCOMPLETE — 6 estados definidos; no registro V1 so UNKNOWN e alcancavel (nenhuma regra de lado ativa); LONG/SHORT/NEUTRAL/CONFLICTED so no braco de pesquisa; NO_TRADE_CONTEXT sem criterio",
+  "no_trade_context_criteria": "UNDEFINED",
+  "research_arm": {
+    "label": "JEV_RESEARCH_ARM_V1",
+    "rule": "avalia HYPOTHESIS_TO_TEST offline, fora do contexto de registro; resultado nunca promovido sem pre-registro de validacao + decisao do operador",
+    "status": "NOT IMPLEMENTED"
+  }
+}

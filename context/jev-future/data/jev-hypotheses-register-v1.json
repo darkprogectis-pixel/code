@@ -1,0 +1,412 @@
+{
+  "_meta": {
+    "project": "ALFA OMEGA JEV FUTURE",
+    "version": "v1",
+    "date": "2026-09-23",
+    "status": "PREREGISTRATION DESIGN — NOT A TEST",
+    "doc": "JEV_PREREGISTRATION_DESIGN_V1_20260923.md",
+    "implementation": "NONE",
+    "runtime": "NONE",
+    "data_collection": "NONE",
+    "validation": "NOT STARTED",
+    "validation_history_target": "NON_BLOCKING (20-40 pregoes = alvo de evidencia futura; nao e gate nem condicao de fase)",
+    "production": "UNCHANGED",
+    "f5": "NOT PERFORMED",
+    "core_vs_jev_fusion": "UNDEFINED",
+    "core_vs_jev_conflict": "UNDEFINED",
+    "precedence": "NOT_DEFINED",
+    "schema": "jev-future/hypotheses-register/v1"
+  },
+  "validation": "NOT STARTED",
+  "validation_history_target": {
+    "value": "20-40 pregoes",
+    "status": "NON_BLOCKING_VALIDATION_TARGET",
+    "not_a_condition_for": [
+      "continuar arquitetura",
+      "concluir pre-registro",
+      "abrir proximas fases de design"
+    ],
+    "capture": "qualquer captura futura exige ordem explicita do operador"
+  },
+  "future_validation_method_invariants": [
+    "pre-registro de validacao congelado antes do holdout (regra 9)",
+    "split temporal por pregao; holdout tocado 1 vez",
+    "dayScore causal; nunca IC Spearman intradia",
+    "placebos: passeio aleatorio e vazamento proposital",
+    "Bonferroni/FDR sobre o numero real de testes",
+    "VERDICT = rotulo formal exato",
+    "resultados negativos permanentes; reabertura so pelas 4 regras"
+  ],
+  "hypotheses": [
+    {
+      "hypothesis_id": "HT01_DEX_DIRECTION_BY_REGIME",
+      "statement": "DEX_DIRECTION_RULE: o sinal de dex.net_0dte, condicionado ao regime R_M01 (nao AMBIGUOUS), indica o lado do fluxo de hedge do dealer.",
+      "emits_side": true,
+      "input_families": [
+        "DC_DEX_0DTE",
+        "DC_GEX0_SIGN"
+      ],
+      "semantic_preconditions": [
+        {
+          "id": "SP_DEX_SIGN_CONVENTION",
+          "state": "UNMET"
+        },
+        {
+          "id": "SP_GEX_SIGN_IS_REGIME",
+          "state": "MET"
+        }
+      ],
+      "testable_now": false,
+      "why_not_testable_now": [
+        "SP_DEX_SIGN_CONVENTION UNMET",
+        "sem historico de captura propria (captura so com ordem explicita)"
+      ],
+      "prior_project_evidence": "Sem teste anterior no projeto para DEX GammaGex. HIRO (outra fonte) como lado foi REPROVADO — nao transferir.",
+      "would_affect": "braco de pesquisa: leitura de lado LONG|SHORT da familia DEX; no registro: UNRESOLVED",
+      "status": "HYPOTHESIS_TO_TEST",
+      "validation": "NOT STARTED"
+    },
+    {
+      "hypothesis_id": "HT02_POSITIVE_GAMMA_LEVEL_REVERSION",
+      "statement": "Em POSITIVE_GAMMA, preco afastado do major/long-gamma 0DTE tende a voltar em direcao a ele (lado = sentido do nivel).",
+      "emits_side": true,
+      "input_families": [
+        "DC_MAJORS_0DTE",
+        "DC_ZERO_GAMMA_0DTE",
+        "DC_GEX0_SIGN",
+        "DC_SPOT_PRICE"
+      ],
+      "semantic_preconditions": [
+        {
+          "id": "SP_MAJORS_IDENTITY_RTH",
+          "state": "PARTIAL"
+        },
+        {
+          "id": "SP_MAJORS_UNITS",
+          "state": "MET"
+        }
+      ],
+      "testable_now": false,
+      "why_not_testable_now": [
+        "SP_MAJORS_IDENTITY_RTH PARTIAL",
+        "sem historico de captura propria (captura so com ordem explicita)"
+      ],
+      "prior_project_evidence": "NEGATIVE_RESULTS 1C: distancia/posicao a CW/PW/ZG (SpotGamma) falhou como direcao. Reabertura so pela regra 1 (dataset diferente: majors 0DTE GammaGex) e declarada antes do teste.",
+      "would_affect": "braco de pesquisa: leitura de lado da familia MAJORS_0DTE",
+      "status": "HYPOTHESIS_TO_TEST",
+      "validation": "NOT STARTED"
+    },
+    {
+      "hypothesis_id": "HT03_NEGATIVE_GAMMA_LEVEL_CONTINUATION",
+      "statement": "Em NEGATIVE_GAMMA, preco que atravessa o major short-gamma 0DTE tende a continuar no sentido do cruzamento.",
+      "emits_side": true,
+      "input_families": [
+        "DC_MAJORS_0DTE",
+        "DC_GEX0_SIGN",
+        "DC_SPOT_PRICE"
+      ],
+      "semantic_preconditions": [
+        {
+          "id": "SP_MAJORS_IDENTITY_RTH",
+          "state": "PARTIAL"
+        },
+        {
+          "id": "SP_MAJORS_UNITS",
+          "state": "MET"
+        }
+      ],
+      "testable_now": false,
+      "why_not_testable_now": [
+        "SP_MAJORS_IDENTITY_RTH PARTIAL",
+        "sem historico de captura propria (captura so com ordem explicita)"
+      ],
+      "prior_project_evidence": "NEGATIVE_RESULTS 1C: cruzamento do ZG e posicao entre walls (SpotGamma) falharam como direcao. Reabertura so pela regra 1 (dataset diferente).",
+      "would_affect": "braco de pesquisa: leitura de lado da familia MAJORS_0DTE",
+      "status": "HYPOTHESIS_TO_TEST",
+      "validation": "NOT STARTED"
+    },
+    {
+      "hypothesis_id": "HT04_LEVEL_MIGRATION_SIDE",
+      "statement": "LEVEL_MIGRATION intradia (R_M06) dos majors 0DTE no sentido UP/DOWN antecede movimento do ES no mesmo sentido.",
+      "emits_side": true,
+      "input_families": [
+        "DC_MAJORS_0DTE"
+      ],
+      "semantic_preconditions": [
+        {
+          "id": "SP_MAJORS_IDENTITY_RTH",
+          "state": "PARTIAL"
+        }
+      ],
+      "testable_now": false,
+      "why_not_testable_now": [
+        "SP_MAJORS_IDENTITY_RTH PARTIAL",
+        "sem historico de captura propria (captura so com ordem explicita)"
+      ],
+      "prior_project_evidence": "NEGATIVE_RESULTS 1C: shift overnight de walls (SpotGamma) falhou como direcao. Esta hipotese e intradia e em outro dataset (regras 1 e 3).",
+      "would_affect": "braco de pesquisa: leitura de lado da familia MAJORS_0DTE",
+      "status": "HYPOTHESIS_TO_TEST",
+      "validation": "NOT STARTED"
+    },
+    {
+      "hypothesis_id": "HT05_REGIME_AMPLITUDE",
+      "statement": "O regime R_M01 prediz amplitude (|retorno|), nao lado: NEGATIVE_GAMMA > POSITIVE_GAMMA.",
+      "emits_side": false,
+      "input_families": [
+        "DC_GEX0_SIGN",
+        "DC_ZERO_GAMMA_0DTE"
+      ],
+      "semantic_preconditions": [
+        {
+          "id": "SP_GEX_SIGN_IS_REGIME",
+          "state": "MET"
+        }
+      ],
+      "testable_now": false,
+      "why_not_testable_now": [
+        "sem historico de captura propria (captura so com ordem explicita)"
+      ],
+      "prior_project_evidence": "Apoio indireto: 1C aprovou Δγ dealer (PROVISIONAL) e ΔVIX so como AMPLITUDE.",
+      "would_affect": "contexto de amplitude; nenhum efeito em lado",
+      "status": "HYPOTHESIS_TO_TEST",
+      "validation": "NOT STARTED"
+    },
+    {
+      "hypothesis_id": "HT06_SPX_CONTRADICTS_EFFECT",
+      "statement": "Se effect_on_native = CONTRADICTS numa dimensao que sustenta uma leitura de lado, o contexto final deveria ser (V_A) CONFLICTED_CONTEXT ou (V_B) mantido com anotacao. Hoje: nenhuma, por R_S17.",
+      "emits_side": false,
+      "input_families": [
+        "DC_SPX_FINAL_GAMMA",
+        "DC_SPX_TRACE_PARTICIPANTS"
+      ],
+      "semantic_preconditions": [
+        {
+          "id": "SP_TRACE_MM_GAMMA_SIGN",
+          "state": "MET"
+        }
+      ],
+      "testable_now": false,
+      "why_not_testable_now": [
+        "sem historico de captura propria (captura so com ordem explicita)"
+      ],
+      "prior_project_evidence": "nenhuma registrada",
+      "would_affect": "braco de pesquisa: variantes V_A/V_B do jev_directional_context",
+      "status": "HYPOTHESIS_TO_TEST",
+      "validation": "NOT STARTED"
+    },
+    {
+      "hypothesis_id": "HT07_TRACE_REGIME_AGREEMENT_RELIABILITY",
+      "statement": "Quando o regime nativo e o TRACE concordam (R_M09 CONFIRMS), a leitura de regime e mais informativa para amplitude do que quando discordam.",
+      "emits_side": false,
+      "input_families": [
+        "DC_SPX_FINAL_GAMMA",
+        "DC_GEX0_SIGN"
+      ],
+      "semantic_preconditions": [
+        {
+          "id": "SP_TRACE_MM_GAMMA_SIGN",
+          "state": "MET"
+        },
+        {
+          "id": "SP_GEX_SIGN_IS_REGIME",
+          "state": "MET"
+        }
+      ],
+      "testable_now": false,
+      "why_not_testable_now": [
+        "sem historico de captura propria (captura so com ordem explicita)"
+      ],
+      "prior_project_evidence": "nenhuma registrada",
+      "would_affect": "contexto de amplitude; nenhum efeito em lado",
+      "status": "HYPOTHESIS_TO_TEST",
+      "validation": "NOT STARTED"
+    },
+    {
+      "hypothesis_id": "HT08_EXPIRY_REGIME_DIVERGENCE",
+      "statement": "Regime 0DTE e regime next em sinais opostos (R_M02) caracteriza estado AMBIGUOUS mais amplo do que o 0DTE sozinho.",
+      "emits_side": false,
+      "input_families": [
+        "DC_GEX0_SIGN",
+        "DC_GEX_NEXT"
+      ],
+      "semantic_preconditions": [
+        {
+          "id": "SP_GEX_SIGN_IS_REGIME",
+          "state": "MET"
+        }
+      ],
+      "testable_now": false,
+      "why_not_testable_now": [
+        "sem historico de captura propria (captura so com ordem explicita)"
+      ],
+      "prior_project_evidence": "nenhuma registrada",
+      "would_affect": "braco de pesquisa: variante do rotulo de regime",
+      "status": "HYPOTHESIS_TO_TEST",
+      "validation": "NOT STARTED"
+    },
+    {
+      "hypothesis_id": "HT09_MENTHORQ_ALIGNMENT_DEFINITION",
+      "statement": "Definicao de \"alinhado\" entre niveis MenthorQ e um jev_directional_context LONG/SHORT (efeito so POSITIVE|ZERO).",
+      "emits_side": false,
+      "input_families": [
+        "DC_MENTHORQ_LEVELS"
+      ],
+      "semantic_preconditions": [
+        {
+          "id": "SP_MENTHORQ_ALIGNMENT_DEF",
+          "state": "UNMET"
+        }
+      ],
+      "testable_now": false,
+      "why_not_testable_now": [
+        "SP_MENTHORQ_ALIGNMENT_DEF UNMET",
+        "sem historico de captura propria (captura so com ordem explicita)"
+      ],
+      "prior_project_evidence": "nenhuma registrada",
+      "would_affect": "menthorq.confirmation POSITIVE|ZERO (nunca negativo)",
+      "status": "HYPOTHESIS_TO_TEST",
+      "validation": "NOT STARTED"
+    },
+    {
+      "hypothesis_id": "HT10_SPY_INSTANCE_ROLE",
+      "statement": "Instancias SPY (market_origin SPY) trazem informacao independente das SPX; so depois de medido podem formar familia propria.",
+      "emits_side": false,
+      "input_families": [
+        "DC_MAJORS_0DTE",
+        "DC_CLASSIC_GEX_PROFILE_ZERO"
+      ],
+      "semantic_preconditions": [
+        {
+          "id": "SP_SPY_INDEPENDENCE",
+          "state": "UNMET"
+        }
+      ],
+      "testable_now": false,
+      "why_not_testable_now": [
+        "SP_SPY_INDEPENDENCE UNMET",
+        "sem historico de captura propria (captura so com ordem explicita)"
+      ],
+      "prior_project_evidence": "nenhuma registrada",
+      "would_affect": "lineage SPY x SPX",
+      "status": "HYPOTHESIS_TO_TEST",
+      "validation": "NOT STARTED"
+    }
+  ],
+  "blocked_unblock_paths": [
+    {
+      "blocked_rule": "B01_SECOND_ORDER_DIRECTION",
+      "needs": [
+        {
+          "id": "SP_GREEK_SIGN_CONVENTION",
+          "state": "UNMET",
+          "evidence": "feature contract §6: convencao de sinal das gregas (vanna/charm/state por strike) UNKNOWN"
+        }
+      ],
+      "path": "resolver a semantica (documentacao do vendor ou medicao) => so entao formular hipotese; nunca inventar polaridade"
+    },
+    {
+      "blocked_rule": "B02_STATE_GREEK_PER_STRIKE_DIRECTION",
+      "needs": [
+        {
+          "id": "SP_GREEK_SIGN_CONVENTION",
+          "state": "UNMET",
+          "evidence": "feature contract §6: convencao de sinal das gregas (vanna/charm/state por strike) UNKNOWN"
+        }
+      ],
+      "path": "resolver a semantica (documentacao do vendor ou medicao) => so entao formular hipotese; nunca inventar polaridade"
+    },
+    {
+      "blocked_rule": "B03_CVR_OFLOW",
+      "needs": [
+        {
+          "id": "SP_CVR_OFLOW_SEMANTICS",
+          "state": "UNMET",
+          "evidence": "cvr/oflow sem documentacao do vendor"
+        }
+      ],
+      "path": "resolver a semantica (documentacao do vendor ou medicao) => so entao formular hipotese; nunca inventar polaridade"
+    },
+    {
+      "blocked_rule": "B04_PRIORS_TIME_INTERPRETATION",
+      "needs": [
+        {
+          "id": "SP_PRIORS_SPACING",
+          "state": "UNMET",
+          "evidence": "priors/max_priors: espacamento temporal e semantica UNKNOWN"
+        }
+      ],
+      "path": "resolver a semantica (documentacao do vendor ou medicao) => so entao formular hipotese; nunca inventar polaridade"
+    },
+    {
+      "blocked_rule": "B05_ZERO_MPUT_SEMANTICS",
+      "needs": [
+        {
+          "id": "SP_ZERO_MPUT_SEMANTICS",
+          "state": "UNMET",
+          "evidence": "\"put support\" acima do spot 67% de 23/09"
+        }
+      ],
+      "path": "resolver a semantica (documentacao do vendor ou medicao) => so entao formular hipotese; nunca inventar polaridade"
+    },
+    {
+      "blocked_rule": "B06_VOL_SKEW_DIRECTION",
+      "needs": [
+        {
+          "id": "SP_RISK_REVERSAL_SEMANTICS",
+          "state": "UNMET",
+          "evidence": "delta_risk_reversal / ivol: semantica e unidade UNKNOWN"
+        }
+      ],
+      "path": "resolver a semantica (documentacao do vendor ou medicao) => so entao formular hipotese; nunca inventar polaridade"
+    },
+    {
+      "blocked_rule": "B07_TRACE_DELTA_CHARM_PRESSURE",
+      "needs": [
+        {
+          "id": "SP_TRACE_DELTA_PRESSURE_LINK",
+          "state": "UNMET",
+          "evidence": "OPTIONAL_EVIDENCE_GAP: vinculo ao endpoint real nao capturado"
+        }
+      ],
+      "path": "resolver a semantica (documentacao do vendor ou medicao) => so entao formular hipotese; nunca inventar polaridade"
+    },
+    {
+      "blocked_rule": "B08_VOLSIGNALS_EXPOSURES",
+      "needs": [
+        {
+          "id": "SP_VOLSIGNALS_UNITS",
+          "state": "UNMET",
+          "evidence": "7 unidades UNKNOWN => numeric_equivalence_allowed=false"
+        }
+      ],
+      "path": "resolver a semantica (documentacao do vendor ou medicao) => so entao formular hipotese; nunca inventar polaridade"
+    },
+    {
+      "blocked_rule": "B09_VOLSIGNALS_GAMMA_REGIME",
+      "needs": [
+        {
+          "id": "SP_VOLSIGNALS_GAMMA_SIGN",
+          "state": "UNMET",
+          "evidence": "gammaExposure \"Simulated\": convencao de sinal nao documentada"
+        }
+      ],
+      "path": "resolver a semantica (documentacao do vendor ou medicao) => so entao formular hipotese; nunca inventar polaridade"
+    },
+    {
+      "blocked_rule": "B10_STAGE_C_SIDE_ORIGIN",
+      "needs": [
+        {
+          "id": "SP_TRACE_DELTA_PRESSURE_LINK",
+          "state": "UNMET",
+          "evidence": "OPTIONAL_EVIDENCE_GAP: vinculo ao endpoint real nao capturado"
+        }
+      ],
+      "path": "resolver a semantica (documentacao do vendor ou medicao) => so entao formular hipotese; nunca inventar polaridade"
+    }
+  ],
+  "no_trade_context": {
+    "criteria": "UNDEFINED",
+    "candidates_registered": 0,
+    "note": "sem criterio conceitual defensavel; nao inventado. DATA_INVALID nunca vira NO_TRADE_CONTEXT (R_S09)."
+  }
+}
