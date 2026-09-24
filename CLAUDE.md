@@ -18,6 +18,12 @@ Then read only the minimum canonical files referenced by those handoffs.
 
 Do not reconstruct the project from old conversations or unrelated workspaces.
 
+## Session rotation — JEV Rotation Controller V2 (mandatory)
+
+Always start via `START_JEV_CLAUDE.ps1` (installs + verifies hooks in the isolated CLAUDE_CONFIG_DIR; no verified enforcement ⇒ no session).
+Absolute thresholds (API usage from the session transcript): 220k WARNING (handoff mandatory) · 235k SOFT_STOP (new batch blocked) · 240k HARD_ROTATION (ROTATE_SESSION_NOW; only handoffs/*.md edits) · 250k never.
+Enforced by hooks, not by the model. Never /clear. Details: `handoffs/HANDOFF_JEV_ROTATION_V2_20260924.md` · `npm run test:rotation` · `npm run rotation:status`.
+
 ---
 
 ## Project identity

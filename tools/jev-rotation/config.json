@@ -1,0 +1,17 @@
+{
+  "schema": "jev-rotation-controller/v2",
+  "unit": "tokens (absolute, not percent)",
+  "thresholds": {
+    "warning": 220000,
+    "soft_stop": 235000,
+    "hard_rotation": 240000,
+    "ceiling": 250000
+  },
+  "warning_read_max_lines": 300,
+  "warning_read_max_bytes": 40000,
+  "soft_stop_read_max_lines": 120,
+  "soft_stop_read_max_bytes": 24000,
+  "handoff_nag_every_tokens": 5000,
+  "handoff_reserve_tokens": 4000,
+  "handoff_only_prompt_token": "JEV_HANDOFF_ONLY"
+}

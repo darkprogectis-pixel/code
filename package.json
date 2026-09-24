@@ -9,7 +9,7 @@
   "scripts": {
     "jev": "node src/jev/cli.mjs",
     "jev:example": "node src/jev/cli.mjs --input fixtures/jev/C_valid_multi_source.json --output-only",
-    "test": "node --test \"test/jev/*.test.mjs\" \"test/ijc/*.test.mjs\"",
+    "test": "node --test \"test/jev/*.test.mjs\" \"test/ijc/*.test.mjs\" \"test/rotation/*.test.mjs\"",
     "smoke": "node test/jev/smoke.mjs",
     "build:prereg": "node context/jev-future/scripts/build-jev-preregistration-design-v1.js",
     "live": "node src/jev/cli.mjs --live",
@@ -21,6 +21,8 @@
     "smoke:bridge": "node test/jev/bridge-smoke.mjs",
     "check:nt8": "dotnet build nt8/check/InvictusJevCode.check.csproj -nologo -v q",
     "test:nt8": "dotnet run --project nt8/check/IjcPureTests -nologo -v q",
-    "agent": "node src/ijc/agent-gateway/cli.mjs"
+    "agent": "node src/ijc/agent-gateway/cli.mjs",
+    "test:rotation": "node --test \"test/rotation/*.test.mjs\"",
+    "rotation:status": "node tools/jev-rotation/status.mjs"
   }
 }
