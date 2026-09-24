@@ -31,9 +31,14 @@ export function ingest(input, issues = []) {
   if (isObj(input.sources)) {
     for (const [k, v] of Object.entries(input.sources)) {
       if (!/^FR_[A-Z_]+$/.test(k) || !isObj(v)) { out.issues.push({ code: 'RC_SOURCE_BLOCK_INVALID', detail: k }); continue; }
-      out.sources[k] = { vendor_timestamp: toEpochSec(v.vendor_timestamp), vendor_timestamp_raw: v.vendor_timestamp ?? null };
+      // observed_frozen: observacao OPCIONAL do produtor (adapter): vendor ts repetido em leituras consecutivas enquanto a chegada avanca
+      out.sources[k] = { vendor_timestamp: toEpochSec(v.vendor_timestamp), vendor_timestamp_raw: v.vendor_timestamp ?? null, observed_frozen: v.observed_frozen === true };
     }
   } else if (input.sources !== undefined) out.issues.push({ code: 'RC_SOURCES_INVALID', detail: 'sources nao e objeto' });
+  // problemas de coleta relatados pelo adapter (relay offline, timeout, JSON malformado...) viram reason codes, nunca crash
+  if (Array.isArray(input.adapter_issues)) {
+    for (const i of input.adapter_issues) if (isObj(i) && /^RC_[A-Z0-9_]+$/.test(String(i.code))) out.issues.push({ code: i.code, detail: String(i.detail ?? '').slice(0, 300) });
+  }
   if (isObj(input.fields)) out.fields = input.fields;
   else if (input.fields !== undefined) out.issues.push({ code: 'RC_FIELDS_INVALID', detail: 'fields nao e objeto' });
   if (isObj(input.core)) out.core = { side: ['LONG', 'SHORT', 'NONE'].includes(input.core.side) ? input.core.side : null };

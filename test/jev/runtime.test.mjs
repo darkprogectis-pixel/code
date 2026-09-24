@@ -230,10 +230,16 @@ test('20 nenhuma producao atual e tocada: runtime nao escreve artefatos nem usa 
   for (const f of FIXTURES) rt.run(fx(f));
   assert.deepEqual(hashDir(), before);
   const srcDir = path.join(REPO_ROOT, 'src', 'jev');
-  for (const f of readdirSync(srcDir)) {
+  const files = readdirSync(srcDir, { recursive: true }).filter((f) => f.endsWith('.mjs')).map((f) => f.replace(/\\/g, '/'));
+  assert.ok(files.includes('engine.mjs') && files.includes('adapters/relay-client.mjs'));
+  for (const f of files) {
     const s = readFileSync(path.join(srcDir, f), 'utf8');
-    assert.ok(!/node:(http|https|net|dgram|child_process|worker_threads)|from 'ws'|fetch\(/.test(s), f + ' usa rede/processo');
-    assert.ok(!/NinjaTrader|robo-trade|signal-engine|DarkFlow|Consolidator|Copilot|FlowOne|GexBot/i.test(s), f + ' referencia producao');
+    // so o cliente do adapter pode usar node:http (GET read-only, testado em adapter.test A15); nada usa processos, https externo, sockets crus
+    const netRe = f === 'adapters/relay-client.mjs' ? /node:(https|net|dgram|child_process|worker_threads)|from 'ws'|fetch\(/ : /node:(http|https|net|dgram|child_process|worker_threads)|from 'ws'|fetch\(/;
+    assert.ok(!netRe.test(s), f + ' usa rede/processo fora do permitido');
+    // producao nunca referenciada (o relay /gexbot e a fonte read-only declarada do adapter, nao codigo de producao)
+    assert.ok(!/NinjaTrader|robo-trade|signal-engine|DarkFlow|Consolidator|Copilot|FlowOne/i.test(s), f + ' referencia producao');
+    if (!f.startsWith('adapters/')) assert.ok(!/GexBot|:3457|:3530/i.test(s), f + ' motor acoplado a fonte especifica');
     if (f !== 'cli.mjs') assert.ok(!/writeFileSync|appendFileSync|rmSync|unlinkSync/.test(s), f + ' escreve em disco');
   }
 });

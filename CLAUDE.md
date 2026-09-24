@@ -4,9 +4,15 @@
 
 Read first:
 
-`context/jev-future/HANDOFF_JEV_FUTURE_20260923.md`
+`context/jev-future/HANDOFF_JEV_FUTURE_20260923.md` (history up to Decision Logic V1)
 
-Then read only the minimum canonical files referenced by that handoff.
+Then the most recent phase handoffs in `handoffs/` (newest last):
+
+- `handoffs/HANDOFF_JEV_PREREG_INTEGRATED_20260924.md` — preregistration REVIEWED / STRUCTURALLY CONSOLIDATED
+- `handoffs/HANDOFF_JEV_RUNTIME_V1_20260924.md` — JEV Runtime V1 implemented
+- `handoffs/HANDOFF_JEV_LIVE_INPUT_V1_20260924.md` — live input adapter (current phase)
+
+Then read only the minimum canonical files referenced by those handoffs.
 
 Do not reconstruct the project from old conversations or unrelated workspaces.
 
@@ -16,7 +22,7 @@ Do not reconstruct the project from old conversations or unrelated workspaces.
 
 PROJECT: ALFA OMEGA JEV FUTURE
 
-STATUS: RESEARCH / DESIGN ONLY
+STATUS: RUNTIME V1 OPERATIONAL (classification only) — design/preregistration history preserved below
 
 PRIMARY MARKET: ES FUTURES
 
@@ -24,11 +30,21 @@ PRIMARY OPTIONS / DEALER ECOSYSTEM: SPX / SPY
 
 NQ: SECONDARY / OPTIONAL — NOT ACTIVE IN V1
 
-IMPLEMENTATION: NONE
+IMPLEMENTATION: JEV RUNTIME V1 — IMPLEMENTED / OPERATIONAL
+
+VERSION: jev-runtime/v1.0.0 (commit 774b198)
+
+TESTS: 21/21 PASS · SMOKE: PASS · END-TO-END: PASS
+
+TRADE EXECUTION: DISABLED (JEV_CAN_SEND_ORDER / EXECUTE_TRADE / MODIFY_NT8 / OVERRIDE_CORE = false, constants)
+
+REAL MARKET ADAPTER: see `handoffs/HANDOFF_JEV_LIVE_INPUT_V1_20260924.md` (phase JEV LIVE INPUT ADAPTER V1)
 
 PRODUCTION: OUT OF SCOPE / UNCHANGED
 
 F5: NOT PERFORMED
+
+Runtime docs: `context/jev-future/JEV_RUNTIME_V1_20260924.md` · start: `node src/jev/cli.mjs --input <jev-input.json>` · `npm test` · `npm run smoke`
 
 ---
 
@@ -210,41 +226,39 @@ No collection or validation starts without explicit operator order.
 
 ---
 
-## Current completed phase
+## Completed phases (history preserved)
 
 DECISION LOGIC V1:
-CLOSED / CLEANED
+CLOSED / CLEANED (implementation none at that phase; production unchanged; F5 not performed)
 
-Implementation:
-NONE
+PREREGISTRATION DESIGN V1:
+REVIEWED / STRUCTURALLY CONSOLIDATED (commit e152d3d)
+R_S15 accepted · R_S10 revised (dimensional DQ) · R_S18 revised (per source/dimension, no MIXED)
+validation NOT STARTED · record V1 reaches UNKNOWN only · directional states INCOMPLETE
 
-Production changed:
-NO
+JEV RUNTIME V1:
+IMPLEMENTED / OPERATIONAL (jev-runtime/v1.0.0, commit 774b198)
+launch output = UNKNOWN + RC_NO_ACTIVE_DIRECTIONAL_RULE (safe operational state, not failure)
+active side rules = 0 · trade execution DISABLED · current production UNCHANGED · F5 NOT PERFORMED
 
-F5:
-NOT PERFORMED
+POST_LAUNCH_REFINEMENT_BACKLOG (non-blocking): R2, R6 materialization, G1/G2, E1–E7.
 
 ---
 
-## Next phase
+## Current phase
 
-JEV FUTURE — PREREGISTRATION DESIGN V1
-
-Only design the preregistration for the JEV internal classifier.
+JEV LIVE INPUT ADAPTER V1 — read-only adapter: real relay → jev-input/v1 → the SAME shared engine → jev-output/v1.
 
 Do NOT:
 
-- implement runtime
-- collect market data
-- validate strategy
+- send orders or execute trades
+- touch NT8 or current production
+- write to any production source (read-only)
 - define final Core×JEV fusion
-- touch NT8
-- touch production
 - run F5
+- build the NT8 Control Center / Analyzer UI / robot yet (next phase)
 
-The full roadmap is in:
-
-`context/jev-future/HANDOFF_JEV_FUTURE_20260923.md`
+Next phase after this one: JEV NT8 AGENT / BOT CONTROL CENTER V1 (Analyzer + Robot Executor sharing the same engine; external agents optional/async, never in the NT8 critical path).
 
 ---
 

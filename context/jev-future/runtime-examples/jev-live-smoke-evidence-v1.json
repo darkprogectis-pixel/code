@@ -1,0 +1,201 @@
+{
+  "_note": "EVIDENCIA SANITIZADA do live smoke read-only: so estados, contagens e codigos; nenhum valor de mercado, nenhum segredo",
+  "evaluated_at": "2026-09-24T04:43:47.076Z",
+  "session": "OUTSIDE_RTH",
+  "cycles_run": 3,
+  "relay": "127.0.0.1:3457/gexbot",
+  "read_only": true,
+  "routes": [
+    {
+      "path": "/gexbot/orderflow/ES_SPX",
+      "result": "OK",
+      "http_status": 200,
+      "relay_cached": true,
+      "unmapped_payload_keys": []
+    },
+    {
+      "path": "/gexbot/classic/SPX/zero",
+      "result": "OK",
+      "http_status": 200,
+      "relay_cached": true,
+      "unmapped_payload_keys": []
+    },
+    {
+      "path": "/gexbot/classic/SPX/one",
+      "result": "OK",
+      "http_status": 200,
+      "relay_cached": true,
+      "unmapped_payload_keys": []
+    },
+    {
+      "path": "/gexbot/classic/SPX/full",
+      "result": "OK",
+      "http_status": 200,
+      "relay_cached": false,
+      "unmapped_payload_keys": []
+    },
+    {
+      "path": "/gexbot/state/SPX/gex_zero",
+      "result": "OK",
+      "http_status": 200,
+      "relay_cached": false,
+      "unmapped_payload_keys": []
+    },
+    {
+      "path": "/gexbot/state/SPX/gex_one",
+      "result": "OK",
+      "http_status": 200,
+      "relay_cached": true,
+      "unmapped_payload_keys": []
+    },
+    {
+      "path": "/gexbot/state/SPX/gex_full",
+      "result": "OK",
+      "http_status": 200,
+      "relay_cached": true,
+      "unmapped_payload_keys": []
+    },
+    {
+      "path": "/gexbot/state/SPX/delta_zero",
+      "result": "OK",
+      "http_status": 200,
+      "relay_cached": true,
+      "unmapped_payload_keys": []
+    },
+    {
+      "path": "/gexbot/state/SPX/delta_one",
+      "result": "OK",
+      "http_status": 200,
+      "relay_cached": true,
+      "unmapped_payload_keys": []
+    },
+    {
+      "path": "/gexbot/state/SPX/gamma_zero",
+      "result": "OK",
+      "http_status": 200,
+      "relay_cached": true,
+      "unmapped_payload_keys": []
+    },
+    {
+      "path": "/gexbot/state/SPX/gamma_one",
+      "result": "OK",
+      "http_status": 200,
+      "relay_cached": true,
+      "unmapped_payload_keys": []
+    },
+    {
+      "path": "/gexbot/state/SPX/vanna_zero",
+      "result": "OK",
+      "http_status": 200,
+      "relay_cached": true,
+      "unmapped_payload_keys": []
+    },
+    {
+      "path": "/gexbot/state/SPX/vanna_one",
+      "result": "OK",
+      "http_status": 200,
+      "relay_cached": true,
+      "unmapped_payload_keys": []
+    },
+    {
+      "path": "/gexbot/state/SPX/charm_zero",
+      "result": "OK",
+      "http_status": 200,
+      "relay_cached": true,
+      "unmapped_payload_keys": []
+    },
+    {
+      "path": "/gexbot/state/SPX/charm_one",
+      "result": "OK",
+      "http_status": 200,
+      "relay_cached": true,
+      "unmapped_payload_keys": []
+    }
+  ],
+  "sources_present": [
+    "FR_ROOT_ORDERFLOW",
+    "FR_CLASSIC",
+    "FR_STATE"
+  ],
+  "fields": {
+    "received": 122,
+    "missing": 68,
+    "contract_total": 190,
+    "live_status_counts": {
+      "MAPPED_AVAILABLE": 113,
+      "NOT_PRESENT_IN_CURRENT_RELAY": 35,
+      "SEMANTICALLY_UNRESOLVED": 9,
+      "SOURCE_NOT_AVAILABLE": 29,
+      "MAPPED_CURRENTLY_NULL": 4
+    }
+  },
+  "data_quality": {
+    "status": "DEGRADED",
+    "per_source": {
+      "FR_ROOT_ORDERFLOW": "MARKET_CLOSED",
+      "FR_MENTHORQ_MERGE": "UNKNOWN",
+      "FR_ROOT_CLASSIC_COPY": "UNKNOWN",
+      "FR_FROZEN_BLOCK": "FROZEN_VALUES",
+      "FR_CLASSIC": "MARKET_CLOSED",
+      "FR_CACHE_HISTORY": "UNKNOWN",
+      "FR_STATE": "MARKET_CLOSED",
+      "FR_TRACE": "UNKNOWN",
+      "FR_VOLSIGNALS": "UNKNOWN",
+      "FR_INDICATOR_DERIVED": "MARKET_CLOSED"
+    },
+    "dimensions": {
+      "gamma_regime": "PARTIAL",
+      "structure_location": "PARTIAL",
+      "delta_positioning": "USABLE",
+      "second_order_flows": "USABLE",
+      "vol_skew": "PARTIAL",
+      "flow_unknown_semantics": "USABLE"
+    },
+    "degradation_codes": [
+      "RC_DQ_FAMILY_UNUSABLE"
+    ]
+  },
+  "jev_directional_context": "UNKNOWN",
+  "reason_codes": [
+    "RC_NO_ACTIVE_DIRECTIONAL_RULE",
+    "RC_SPX_TRACE_GAMMA_REGIME_UNAVAILABLE",
+    "RC_SPX_TRACE_TRACE_PARTICIPANTS_UNAVAILABLE",
+    "RC_SPX_TRACE_TRACE_PRESSURES_UNAVAILABLE",
+    "RC_SPX_VOLSIGNALS_GAMMA_REGIME_UNAVAILABLE",
+    "RC_SPX_VOLSIGNALS_VOLSIGNALS_EXPOSURES_UNAVAILABLE",
+    "RC_DQ_DEGRADED",
+    "RC_MENTHORQ_ZERO"
+  ],
+  "unresolved_fields_count": 65,
+  "frozen_observation": {
+    "FR_ROOT_ORDERFLOW": {
+      "consecutive_identical_vendor_ts": 3
+    },
+    "FR_CLASSIC": {
+      "consecutive_identical_vendor_ts": 3
+    },
+    "FR_STATE": {
+      "consecutive_identical_vendor_ts": 3
+    }
+  },
+  "guarantees": {
+    "orders_emitted": 0,
+    "trades_executed": 0,
+    "nt8_modified": false,
+    "core_overridden": false,
+    "production_touched": false
+  },
+  "smoke": {
+    "RELAY_CONNECT": "PASS",
+    "INPUT_BUILD": "PASS",
+    "JEV_PIPELINE": "PASS",
+    "OUTPUT": "PASS",
+    "AUDIT": "PASS",
+    "FAIL_SOFT": "PASS",
+    "NO_ORDER": "PASS"
+  },
+  "versions": {
+    "runtime": "jev-runtime/v1.0.0",
+    "mapping": "jev-live-relay-mapping/v1"
+  }
+}

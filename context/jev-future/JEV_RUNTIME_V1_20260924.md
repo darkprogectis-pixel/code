@@ -182,7 +182,7 @@ Nenhum segredo é lido nem logado.
 | R6: materialização nas evidence families | override de governança KLO_1 aplicado no output; Decision Logic V1 não reaberta |
 | G1/G2: contrato de leitura / elegibilidade de par para conflito | conservador: sem regra de lado não há conflito direcional; divergências só descritivas |
 | E1–E7 | não executados |
-| FROZEN por vendor ts repetido (≥ 3 leituras em RTH) | não implementado (exige histórico de leituras); hoje só FROZEN_VALUES estático |
+| FROZEN por vendor ts repetido (≥ 3 leituras em RTH) | **implementado no Live Input Adapter V1** (`sources[FR].observed_frozen` ⇒ FROZEN); FROZEN_VALUES entre pregões segue aberto |
 | limiar de freshness de TRACE/MenthorQ | só por override PROVISIONAL explícito do operador |
-| produtor de input real (relay → jev-input/v1) | não conectado nesta fase (produção não tocada) |
+| produtor de input real (relay → jev-input/v1) | **implementado**: `JEV_LIVE_INPUT_ADAPTER_V1_20260924.md` (read-only) |
 | 20–40 pregões | FUTURE VALIDATION OBSERVATION ONLY / NON-BLOCKING |

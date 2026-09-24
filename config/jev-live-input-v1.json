@@ -1,0 +1,22 @@
+{
+  "schema": "jev-live-input-config/v1",
+  "enabled": true,
+  "read_only": true,
+  "_note": "Relay GammaGex local (evidencia: auditoria A-BOT + discovery 24/09). Somente GET em /gexbot/*; a raiz / nunca e lida. Sem segredo.",
+  "relay": { "host": "127.0.0.1", "port": 3457, "base_path": "/gexbot" },
+  "timeouts": { "request_ms": 5000 },
+  "poll_interval_ms": 30000,
+  "tickers": { "orderflow": "ES_SPX", "classic_state": "SPX" },
+  "secondary_tickers": [],
+  "classic_categories": ["zero", "one", "full"],
+  "state_gex_categories": ["gex_zero", "gex_one", "gex_full"],
+  "state_greek_categories": ["delta_zero", "delta_one", "gamma_zero", "gamma_one", "vanna_zero", "vanna_one", "charm_zero", "charm_one"],
+  "extra_routes": [],
+  "session": { "mode": "CLOCK_AMERICA_NEW_YORK", "rth_start": "09:30", "rth_end": "16:00", "_note": "contrato: RTH 09:30-16:00 ET; feriados nao conhecidos (open item)" },
+  "frozen_detection": { "enabled": true, "consecutive_identical_vendor_ts": 3, "sources": ["FR_ROOT_ORDERFLOW"], "_note": "contrato FR_ROOT_ORDERFLOW.frozen: vendor_timestamp igual em >= 3 leituras consecutivas no RTH" },
+  "runtime_config": "config/jev-runtime-v1.json",
+  "runtime_config_overrides": {
+    "provisional_stale_after_sec_overrides": {},
+    "_note": "vazio por padrao. Qualquer limiar aqui e PROVISIONAL, sai no audit como OPERATOR_CONFIG_PROVISIONAL e NAO vira canone"
+  }
+}

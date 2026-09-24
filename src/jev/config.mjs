@@ -26,11 +26,13 @@ const DEFAULTS = {
   provisional_stale_after_sec_overrides: {},
 };
 
-export function loadConfig(configPath) {
+// overrides: objeto opcional (ex.: vindo da config do live adapter) mesclado por cima do arquivo; mesmas validacoes.
+export function loadConfig(configPath, overrides = null) {
   let user = {};
   if (configPath) {
     try { user = JSON.parse(readFileSync(configPath, 'utf8')); } catch (e) { throw new JevFatalError(`config ilegivel ou invalida: ${configPath} (${e.code || e.message})`); }
   }
+  if (overrides) user = { ...user, ...overrides, provisional_stale_after_sec_overrides: { ...(user.provisional_stale_after_sec_overrides || {}), ...(overrides.provisional_stale_after_sec_overrides || {}) } };
   const cfg = { ...DEFAULTS, ...user, provisional_stale_after_sec_overrides: { ...DEFAULTS.provisional_stale_after_sec_overrides, ...(user.provisional_stale_after_sec_overrides || {}) } };
   if (cfg.schema !== DEFAULTS.schema) throw new JevFatalError('config schema desconhecido: ' + cfg.schema);
   if (cfg.target !== 'ES') throw new JevFatalError('target V1 = ES (NQ nao ativo)');

@@ -13,8 +13,8 @@ import { coreComparison } from './output.mjs';
 
 const iso = (sec) => (sec === null || sec === undefined ? null : new Date(sec * 1000).toISOString());
 
-export function createRuntime(configPath) {
-  const cfg = loadConfig(configPath);
+export function createRuntime(configPath, configOverrides = null) {
+  const cfg = loadConfig(configPath, configOverrides);
   const art = loadArtifacts(cfg.artifacts_dir_abs);
   const engine = buildRuleEngine(art);
   const known = (art.state_machine.known_lineage_overrides || []).map((o, i) => ({ ...o, id: `KLO_${i + 1}` }));

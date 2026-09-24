@@ -32,6 +32,7 @@ export function sourceFreshness(ing, art, cfg) {
       rec.threshold_origin = ovr !== undefined ? 'OPERATOR_CONFIG_PROVISIONAL' : (contractThr ? 'CONTRACT_PROVISIONAL' : null);
       if (rec.age_sec < 0) { rec.why = 'vendor_timestamp no futuro relativo a evaluated_at'; }
       else if (ing.session === 'OUTSIDE_RTH') { rec.state = 'MARKET_CLOSED'; rec.why = 'fora do RTH (R_S11)'; }
+      else if (src.observed_frozen && ing.session === 'RTH') { rec.state = 'FROZEN'; rec.why = 'vendor_timestamp nao avanca em leituras consecutivas no RTH (observacao do adapter; contrato FR_*.frozen)'; }
       else if (rec.stale_after_sec === null) { rec.why = 'contrato nao define stale_after_sec e nao ha override do operador'; }
       else if (rec.age_sec > rec.stale_after_sec) { rec.state = 'STALE'; }
       else rec.state = 'FRESH';
@@ -103,7 +104,10 @@ export function assessQuality(ing, norm, art, cfg) {
   if (!spot) degraded.push({ code: 'RC_DQ_PRICE_REFERENCE_UNAVAILABLE', detail: 'so as leituras dependentes de spot ficam UNKNOWN (R_S10 item 3)' });
   const traceUsed = fams.some((f) => f.stage === 'C_SPX_FINAL_CONTEXT' && /trace/.test(f.family_id) && famState[f.family_id].usable);
   if (traceUsed) degraded.push({ code: 'RC_DQ_TRACE_PENDING_REVISION_AUDIT', detail: 'TRACE utilizavel mas PENDING_REVISION_AUDIT' });
-  for (const [fr, r] of Object.entries(fresh)) if (r.state === 'STALE') degraded.push({ code: 'RC_DQ_SOURCE_STALE', freshness_rule: fr });
+  for (const [fr, r] of Object.entries(fresh)) {
+    if (r.state === 'STALE') degraded.push({ code: 'RC_DQ_SOURCE_STALE', freshness_rule: fr });
+    if (r.state === 'FROZEN') degraded.push({ code: 'RC_DQ_SOURCE_FROZEN', freshness_rule: fr });
+  }
 
   const anyDealer = Object.values(dims).some((d) => d.availability !== 'UNAVAILABLE');
   const status = !anyDealer ? 'DATA_INVALID' : (degraded.length ? 'DEGRADED' : 'VALID');
