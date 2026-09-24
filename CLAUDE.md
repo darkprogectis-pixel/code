@@ -13,7 +13,7 @@ Then the most recent phase handoffs in `handoffs/` (newest last):
 - `handoffs/HANDOFF_JEV_LIVE_INPUT_V1_20260924.md` — live input adapter (done, `6ecb18d`)
 - `handoffs/HANDOFF_JEV_CONTROL_CENTER_V1_20260924.md` — Control Center V1 (superseded by INVICTUS JEV CODE V1)
 - `handoffs/HANDOFF_INVICTUS_JEV_CODE_V1_20260924.md` — INVICTUS JEV CODE V1
-- `handoffs/HANDOFF_INVICTUS_JEV_NT8_INSTALL_20260924.md` — **NT8 install, current lot = RTH test, 4-file payload, no manual order execution (current; see §13)**
+- `handoffs/HANDOFF_INVICTUS_JEV_NT8_INSTALL_20260924.md` — **NT8 install, current lot = RTH test, 4-file payload, no manual order execution (current; see §13.6 — FINAL PARTIAL, next = runtime data-plane diagnosis)**
 
 Then read only the minimum canonical files referenced by those handoffs.
 
@@ -264,7 +264,7 @@ POST_LAUNCH_REFINEMENT_BACKLOG (non-blocking): R2, R6 materialization, G1/G2, E1
 
 INVICTUS JEV CODE V1: DONE (Fronts A Codex UI · B architecture · C implementation). See `handoffs/HANDOFF_INVICTUS_JEV_CODE_V1_20260924.md`.
 
-CURRENT INSTALL LOT (RTH test): READ_ONLY / NO MANUAL ORDER EXECUTION · payload 4 files (IjcManualOrders.cs deferred) · all pre-install checks PASS (precheck, manifest, Node, C#, V2, smokes, external build, shadow normal + as-is, rehearsal/rollback). State of copy/F5: `handoffs/HANDOFF_INVICTUS_JEV_NT8_INSTALL_20260924.md` §13 (NT8 closed for copy; exactly one F5 per lot).
+CURRENT INSTALL LOT (RTH test): READ_ONLY / NO MANUAL ORDER EXECUTION · payload 4 files (IjcManualOrders.cs deferred) · all pre-install checks PASS (precheck, manifest, Node, C#, V2, smokes, external build, shadow normal + as-is, rehearsal/rollback). Installed (backup `20260924-124658`), operator F5 done (F5_COUNT_THIS_LOT=1, second F5 NOT allowed), PostF5 PASS, UI_INSTALLATION PASS, RUNTIME_DATA_VALIDATION PARTIAL (DATA_INVALID, JEV Agent NOT_REPORTED, TRACE/VolSignals unavailable, account not validated) ⇒ FINAL = PARTIAL (`JEV_INSTALL_COMPLETE_RUNTIME_DATA_PARTIAL`, NOT RTH_TEST_READY). NEXT: DIAGNOSE_RUNTIME_DATA_PLANE (read-only, zero new F5): `handoffs/HANDOFF_INVICTUS_JEV_NT8_INSTALL_20260924.md` §13.6.
 
 Still NOT allowed without explicit operator order:
 

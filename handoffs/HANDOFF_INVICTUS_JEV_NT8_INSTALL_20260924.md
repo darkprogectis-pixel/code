@@ -3,6 +3,8 @@
 Autocontido. Continua `handoffs/HANDOFF_INVICTUS_JEV_CODE_V1_20260924.md` (Fronts A/B/C concluídos, não reabertos).
 Partida: `7e61960`. Fase: **preparar** a instalação read-only do AddOn no NT8. **Nada foi copiado para o NT8 e o F5 não foi feito.**
 
+> **ESTADO ATUAL (24/09/2026):** o cabeçalho abaixo e as §1–§12 são o **registro histórico** da preparação. O estado mais recente do lote está na **§13.6**: instalado (4 arquivos, backup `20260924-124658`), **F5 = 1**, PostF5 PASS, validação visual PARCIAL, **FINAL = PARTIAL** (`JEV_INSTALL_COMPLETE_RUNTIME_DATA_PARTIAL`), NEXT = `DIAGNOSE_RUNTIME_DATA_PLANE`.
+
 | | |
 |---|---|
 | 3A CONFLICT AUDIT | **PASS** (1 risco real encontrado e corrigido só no código IJC, ver §1.3) |
@@ -189,6 +191,8 @@ Não tente corrigir com um segundo F5.
 
 ## 8. Decisões e pendências
 
+> **Desatualizada (histórico).** As pendências "executar B–E" e "commit desta fase" foram concluídas: commit `22631e0` (payload de 4 arquivos), instalação §13.4, F5 + PostF5 §13.5. Pendências atuais: **§13.6**.
+
 - **Decisão:** a instalação edita o `NinjaTrader.Custom.csproj`, com 4 linhas, backup e rollback. Nenhum outro arquivo de produção é alterado.
 - **Decisão:** backups ficam fora do NT8; o rollback manda para quarentena e nunca apaga.
 - **Pendente (ordem do operador):**
@@ -206,6 +210,8 @@ Não tente corrigir com um segundo F5.
 - **Continuam fora de escopo:** execução simulada (etapa 5), contas reais, fusão Core×JEV, agentes em caminho crítico.
 
 ## 9. Próximo passo exato
+
+> **Superado.** A seção 7 (B → C → D) foi executada (§13.4–§13.5); o estado não é `NT8_COMPILED_READ_ONLY` isolado, e sim o da **§13.6** (FINAL = PARTIAL). Próximo passo atual: **§13.6 → `DIAGNOSE_RUNTIME_DATA_PLANE`**.
 
 Com a ordem do operador: executar a seção 7 (B → C → D) numa janela sem posição aberta. Sucesso ⇒ registrar `PENDING_FINAL_NT8_COMPILE → NT8_COMPILED_READ_ONLY` com o `backup_id` e o resultado do `04-verify PostF5`. Falha ⇒ seção 7.E.
 
@@ -376,3 +382,101 @@ A janela V2 dependia de `IjcManualOrders.cs` (controlador da boleta **e** leitur
 Pré-condição que o agente não resolve: o **NinjaTrader estava ABERTO** durante a validação. A cópia exige o NT8 fechado pelo operador, sem posição ou operação crítica em andamento; o agente não fecha o NT8 nem aperta F5. Sequência (§7 B–D): `01-precheck -ForInstall` → `02-backup` (anotar `backup_id`) → `03-install -WhatIf` (4 COPY + 4 linhas) → `03-install -Confirm INSTALL-IJC` → `04-verify -Stage PreF5` → `npm run serve` → abrir o NT8: **exatamente um F5 final** (se o NT8 compilar sozinho ao abrir, essa compilação é o F5 deste lote) → `04-verify -Stage PostF5` → validação da janela. Rollback: §7.E.
 
 Pós-F5 (requisitos deste lote): menu INVICTUS JEV CODE · janela abre · FULL e COMPACT · marca Alfa Omega · live data · `snapshot_id` mudando · estado JEV · seletor de conta · PNL / realizado / aberto · posição / preço médio · Robot OFF · 0 ordens · produção operacional. A execução da boleta manual NÃO é requisito deste lote.
+
+### 13.4 Execução da parte B (24/09/2026 ~15:47Z, ordem do operador)
+
+- NT8 fechado (checagem read-only) · `01-precheck -ForInstall` PASS (alvo ABSENT, 0 entradas IJC, payload 4 arquivos = manifesto, `IjcManualOrders.cs` em `deferred_not_installed`).
+- `02-backup` PASS · **backup_id `20260924-124658`** · `%LOCALAPPDATA%\InvictusJevCode\install-backups\20260924-124658` · 468 arquivos · verified=true · pre-manifest sha256 `6DEC9911…2D3D` · csproj `9d17d579…ee4b` · DLL `f2bc038a…0812`.
+- `03-install -WhatIf` PASS (4 COPY, +4 `<Compile>`, sem arquivo manual) → `03-install -Confirm INSTALL-IJC` PASS (4 `.cs` + csproj).
+- `04-verify -Stage PreF5` PASS (4/4 ok, 0 extras, resto do csproj idêntico, 0 saídas de build / fontes de produção alteradas).
+- `npm run serve` UP (`:3590` listen, `:3591` listen, 401 sem token; ciclo 1 UNKNOWN, orders=0).
+- NT8 NÃO aberto · F5 deste lote: 0 · PostF5 NÃO executado.
+- ~~Próximo passo: operador abre o NT8~~ **SUPERADO por §13.5** (NT8 aberto e F5 feito pelo operador).
+
+### 13.5 F5 do operador + PostF5 (24/09/2026)
+
+| | |
+|---|---|
+| OPERATOR_OPENED_NT8 | **YES** |
+| FINAL_F5_PERFORMED | **YES** (operador confirmou "f5 ok"; `addon_start` no log às 15:57:54Z) |
+| F5_COUNT_THIS_LOT | **1** |
+| SECOND_F5_ALLOWED | **NO** |
+| backup_id | `20260924-124658` (rollback §7.E, se necessário, **sem** F5) |
+| `04-verify -Stage PostF5` | **PASS** (16:29Z): 4/4 arquivos ok, 0 extras, resto do csproj idêntico ao backup, DLL recompilada **com os tipos IJC**, DLL/PDB/XML + 8 satélites alterados (esperado), 0 fontes de produção alteradas, 1 `addon_start`, 0 erros no log |
+| Log IJC | `addon_start` (OFF, HARD_DISABLED, JEV_CAN_SEND_ORDER=false) · `executor_start` (READ_ONLY) · `reconnect_reconciliation` ×4 (info) · 0 error |
+| Bridge `:3590` | RUNNING, LIVE, relay 15/15 rotas, `snapshot_id` avança (#72→#74, ciclo ~35 s), `last_cycle_error` null |
+| JEV | UNKNOWN + `RC_NO_ACTIVE_DIRECTIONAL_RULE` (estado seguro) · session RTH · gamma_regime POSITIVE_GAMMA · DQ DEGRADED · conviction UNCALIBRATED |
+| Robot | OFF · decisão NONE (`RC_ROBOT_NO_ACTIVE_SIDE_RULE`, `RC_ROBOT_NO_EXECUTION_POLICY`) · can_enable/can_arm false · order_path HARD_DISABLED |
+| Executor NT8 / control plane `:3591` | READ_ONLY · nt8_ready true · heartbeat < 2 s · reconciliação COMPLETE, 0 órfãs · contas reportadas 27, elegíveis (Sim/Playback) 5 · posição FLAT |
+| Ordens | 0 (`guarantees.orders_emitted=0`, 0 órfãs `IJC-`) |
+| Produção | NT8 rodando (Control Center + Copy Engine abertos), 0 fontes de produção alteradas, relay OK |
+
+**Não verificado pelo agente (exige olho do operador):** a janela INVICTUS JEV CODE **não está aberta** (janelas visíveis do processo NT8: só "Centro de controle" e "Copy Engine"). O agente não clica no NT8. Ficam pendentes de confirmação visual: menu New → INVICTUS JEV CODE, abertura da janela, FULL/COMPACT, marca Alfa Omega, seletor de conta, PNL/realizado/aberto, posição/preço médio.
+
+**Próximo passo exato:** o operador abre Control Center → New → INVICTUS JEV CODE e confirma os itens visuais acima. **Sem F5, sem recompilar, sem testar boleta ou ordens.** Se todos passarem, marcar `RTH_TEST_READY`.
+
+### 13.6 Reconciliação final do lote: validação visual do operador + auditoria independente (24/09/2026)
+
+Este é o **estado atual do lote**. Ele substitui o "Próximo passo exato" da §13.5: **não** marcar `RTH_TEST_READY`.
+
+**Auditoria independente (somente leitura, 16:35Z):**
+- processo NT8 iniciado às 15:52:21Z;
+- `NinjaTrader.Custom.dll` gravada uma única vez depois disso (15:57:52Z);
+- log IJC com um único `addon_start` (15:57:54Z) e 0 erros;
+- csproj com exatamente 4 entradas IJC;
+- hash igual ao do repositório nos 4 `.cs` instalados;
+- backup `20260924-124658` presente;
+- `:3590`, `:3591` e `:3457` escutando.
+
+| | |
+|---|---|
+| F5_COUNT_THIS_LOT | **1** |
+| SECOND_F5 | **NO** (não permitido) |
+| POSTF5_VERIFY | **PASS** |
+| backup_id | `20260924-124658` |
+| INSTALLATION | **PASS** |
+| UI_INSTALLATION | **PASS** |
+| RUNTIME_DATA_VALIDATION | **PARTIAL** |
+| **FINAL** | **PARTIAL** · `JEV_INSTALL_COMPLETE_RUNTIME_DATA_PARTIAL` |
+
+**Validação visual (o operador abriu a janela; prints revisados):**
+
+| Item | Resultado |
+|---|---|
+| WINDOW_OPEN / FULL / COMPACT / ALFA_OMEGA_BRANDING | PASS / PASS / PASS / PASS |
+| ENGINE / LIVE_DATA | OPERATIONAL / LIVE |
+| DIRECTIONAL_CONTEXT | UNKNOWN |
+| DATA_QUALITY | **DATA_INVALID** |
+| JEV_AGENT | **NOT_REPORTED** |
+| ACCOUNT_SELECTOR / ACCOUNT_SELECTED | VISIBLE / NO (não confirmada) |
+| PNL_UI / REALIZED_UI / OPEN_PNL_UI | PASS / PASS / PASS |
+| PNL_VALUES | NOT_VALIDATED (nenhuma conta selecionada) |
+| POSITION_UI / POSITION_VALUE / AVG_PRICE_VALUE | VISIBLE / UNKNOWN / NOT_VALIDATED |
+| ROBOT / ROBOT_DECISION / EXECUTION | OFF / NONE/NONE / DISABLED |
+| Boleta manual | `BOLETA_DEFERRED` (esperado: `IjcManualOrders.cs` não faz parte do lote de 4 arquivos) |
+| TRACE / VolSignals | UNAVAILABLE/UNKNOWN · UNAVAILABLE/UNKNOWN |
+| SPX FINAL CONTEXT | UNAVAILABLE |
+
+**Desligados por projeto (NÃO são defeitos deste lote):**
+- execução do Robot: OFF, `ORDER_PATH=HARD_DISABLED`;
+- execução da boleta manual: DEFERRED.
+
+**Problemas de runtime pendentes (por que o FINAL é PARTIAL):**
+1. `DATA_INVALID`.
+2. JEV Agent `NOT_REPORTED`.
+3. TRACE indisponível no runtime.
+4. VolSignals indisponível no runtime.
+5. Seleção/enumeração de conta ainda não validada.
+6. PNL, posição e preço médio não podem ser validados sem uma conta selecionada.
+
+Nesta etapa, nenhum desses problemas foi investigado nem corrigido. Nenhuma alteração em C#/Node, nenhum F5, nenhuma recompilação, reinstalação, rollback ou ordem.
+
+**Próximo passo exato:** `DIAGNOSE_RUNTIME_DATA_PLANE`, somente leitura e com ordem do operador:
+- origem do `DATA_INVALID` (dimensões de data quality no snapshot do bridge `:3590`);
+- por que o JEV Agent não reporta;
+- rotas TRACE/VolSignals no relay `:3457`;
+- enumeração de contas pelo control plane `:3591` (27 reportadas, 5 elegíveis).
+
+Regras para a próxima etapa:
+- **ZERO novos F5.** Qualquer correção que exija recompilar o NT8 é um lote novo, com ordem própria.
+- O rollback continua sendo o da §7.E, **sem** F5.
