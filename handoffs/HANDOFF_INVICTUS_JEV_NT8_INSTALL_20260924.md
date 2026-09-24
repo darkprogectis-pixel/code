@@ -744,3 +744,84 @@ Se o skew residual vier a causar falha na fonte, decidir entre sincronizar o Win
 - validação de conta/PNL na UI (§14.8).
 
 Zero F5.
+
+### 14.13 CHECKPOINT CANÔNICO pós-`dc09d57` + ROTAÇÃO (24/09/2026 ~17:50Z · contexto 222k = WARNING)
+
+Somente estado. Nada foi implementado, nenhum serviço foi reiniciado, sem F5, NT8 não foi tocado, 0 ordens.
+
+**Correção da §14.12.**
+- O `DEGRADED` atual tem **uma única causa: o cache histórico**. O `data_quality.degradation` traz exatamente 2 entradas `RC_DQ_FAMILY_UNUSABLE`:
+  - gamma_regime: `EF_DC_ZERO_GAMMA_FULL__abot.cache.zg`;
+  - structure_location: `EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.cache.so` e `…sv`.
+- TRACE, VolSignals, MenthorQ, FR_FROZEN_BLOCK e FR_ROOT_CLASSIC_COPY **não** entram na degradação. Aparecem só como reason codes informativos ou efeito zero.
+- `FR_CACHE_HISTORY` é fixo em UNKNOWN em `quality.mjs` ("freshness não se aplica a leitura ao vivo"). Essas famílias pertencem a grupos com leitura ativa ⇒ **DQ VALID é inalcançável ao vivo com o contrato atual**. É um teto estrutural, não defeito de dado. Mudar isso exige decisão canônica pré-registrada.
+
+**Estado confirmado (snapshot `…#mufslpj2-60`, 17:49Z)**
+
+| Item | Estado |
+|---|---|
+| Runtime | RUNNING LIVE · 15/15 rotas · `last_cycle_error` null |
+| DQ | DEGRADED · DATA_INVALID 0 desde o fix |
+| Fontes | FR_ROOT_ORDERFLOW / FR_CLASSIC / FR_STATE FRESH |
+| Dimensões | delta_positioning, second_order_flows e flow_unknown_semantics USABLE · gamma_regime, structure_location e vol_skew PARTIAL |
+| Robot | OFF · HARD_DISABLED · NONE · gate `SOURCE_NOT_FROZEN` agora PASS |
+| Executor | READ_ONLY · 27 contas / 5 elegíveis · FLAT · 0 ordens |
+
+**FR_FROZEN_BLOCK**
+- 8 campos legados da raiz (iv30d, extended_zone, spotgamma, qscore, dark_pool_analysis, blind_spots, bl_scores, implied_vol).
+- Congelados **na fonte**, por constância de valor.
+- Família NON_EVIDENCE: sem efeito no JEV e sem relação com o gate `SOURCE_NOT_FROZEN`, que olha só FR_ROOT_ORDERFLOW.
+
+**Cache histórico**
+- AoClassicCache (PersistCache do AlfaOmegaClassic, no NT8): 11 campos `abot.cache.*`.
+- O snapshot congelado `context/jev-future/data/aoclassiccache-frozen/20260923/` é só pesquisa.
+- Não há adapter nem binding.
+
+**MenthorQ**
+- ZERO_EFFECT, sem conexão com o runtime: o bloco `levels` só existe na raiz composta, que não é lida, e o HT09 continua BLOCKED_PENDING.
+- O contrato `POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING` está preservado.
+
+**Runtime: SESSION_BOUND** ⚠️
+- `node src/jev/cli.mjs --serve` **PID 30468**, cadeia de pais: cmd 55228 ← npm 24188 ← bash 37280/79892, a tarefa em segundo plano da sessão Claude `8292e7dd…` (tarefa `by272zwfr`).
+- **Deve morrer quando esta sessão encerrar.**
+- Não existe launcher, watchdog, tarefa agendada ou serviço do JEV. O `pm2` da máquina é da produção (bot01–bot25, fora de escopo, intocado).
+- **Ao abrir a próxima sessão:** verificar se `:3590`/`:3591` escutam. Se não, subir `npm run serve`; o mecanismo documentado é o da §13.4. O executor NT8 reconecta sozinho, sem F5.
+
+**Agent:** `:3592` sem processo · provider none · opcional · não afeta a DQ · adiado.
+
+**Contas:** NT8 27 · IJC 27/5 · UI não confirmada · nenhuma conta selecionada · PNL, posição e preço médio NÃO validados.
+
+**W32Time:** STOPPED · offset ≈ −3,6 s · ACTION NONE.
+
+**Testes desta sessão:**
+- `npm test` 107/107 PASS;
+- `smoke` PASS;
+- `smoke:bridge` PASS;
+- F01–F06: regressão confirmada contra o código antigo.
+
+**Git**
+- HEAD `dc09d57` = origin/main.
+- Não commitado: só esta §14.13, neste handoff.
+- Não rastreados, fora de escopo e intocados:
+  - `config/kimi-provider.json`
+  - `context/jev-future/JEV_KIMI_PROVIDER_20260924.md`
+  - `handoffs/HANDOFF_CODEX_INVICTUS_JEV_UI_V2_20260924.md`
+  - `handoffs/assets/*V2*`
+  - `handoffs/rotation/`
+  - `scripts/`
+- Evidências de captura (JSON) ficaram só no scratchpad da sessão, fora do repositório.
+
+**Sequência técnica por dependência (nada executado):**
+1. Launcher persistente do runtime.
+2. Validação de conta/PNL pelo operador (pode correr em paralelo).
+3. Sincronizar o W32Time e medir o skew de novo.
+4. Decisão canônica sobre as famílias só-históricas (cache) na DQ.
+5. Binding do TRACE.
+6. VolSignals: primeiro a `freshness_basis` no contrato, depois o adapter.
+7. MenthorQ (níveis + HT09).
+8. Depois disso: regras de lado, validação 20–40 dias, Robot/SIM e a boleta manual (lote novo, com F5 próprio). Sempre com ordem explícita.
+
+**PRÓXIMO PASSO EXATO (nova sessão via `START_JEV_CLAUDE.ps1`):**
+1. Ler `CLAUDE.md` e esta §14.13.
+2. Checar `:3590` (`GET /jev/v1/health`). Se estiver fora do ar, subir `npm run serve`.
+3. Aguardar a ordem do operador para o item 1 da sequência. **Zero F5.**
