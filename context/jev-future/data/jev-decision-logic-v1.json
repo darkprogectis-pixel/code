@@ -1,0 +1,111 @@
+{
+  "_meta": {
+    "project": "ALFA OMEGA JEV FUTURE",
+    "version": "v1",
+    "date": "2026-09-23",
+    "status": "DEFINITION ONLY",
+    "implementation": "NONE",
+    "production": "UNCHANGED",
+    "f5": "NOT PERFORMED",
+    "doc": "JEV_DECISION_LOGIC_V1_20260923.md",
+    "schema": "jev-future/decision-logic/v1",
+    "history": "Previous draft superseded; non-canonical Core-dominant rules removed."
+  },
+  "roles": {
+    "FUTURES_CORE": "SEPARATE_DETERMINISTIC_SYSTEM (nao substituido nem reimplementado pelo Jev)",
+    "JEV": "SEPARATE_MARKET_STATE_CONFLUENCE_CLASSIFIER",
+    "MENTHORQ": "POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING (excecao explicita; nao se estende a outras fontes)",
+    "TRACE": "FINAL_DECISION_CONTEXT_LAYER, market_origin=SPX",
+    "VOLSIGNALS": "FINAL_DECISION_CONTEXT_LAYER, market_origin=SPX"
+  },
+  "stages": [
+    {
+      "id": "A_FUTURES_CORE",
+      "owner": "Futures Core (externo)",
+      "fields": 0,
+      "output_to_jev": "nenhum; o Jev so recebe o lado do Core para core_comparison"
+    },
+    {
+      "id": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "sources": [
+        "AlfaOmegaNetGex0DTE",
+        "AlfaOmegaDexGexFlow",
+        "AlfaOmegaClassic",
+        "AlfaOmegaState"
+      ],
+      "fields": 174,
+      "output": [
+        "native_dealer_state",
+        "native_directional_context"
+      ]
+    },
+    {
+      "id": "C_SPX_FINAL_CONTEXT",
+      "sources": [
+        "SpotGamma TRACE",
+        "VolSignals"
+      ],
+      "market_origin": "SPX",
+      "fields": 16,
+      "after": "B",
+      "output": [
+        "spx_final_context",
+        "jev_directional_context"
+      ]
+    },
+    {
+      "id": "D_MENTHORQ",
+      "policy": "POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING",
+      "fields_overlay": 12,
+      "note": "campos MenthorQ vem no bloco levels da raiz; sao roteados em B com overlay de politica"
+    }
+  ],
+  "final_trade_direction": "NOT_DEFINED",
+  "policies": {
+    "MENTHORQ": "POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING (unica politica funcional definida)",
+    "DATA_QUALITY": "CLASSIFICATION INPUT; sem regra operacional automatica",
+    "CORE_vs_JEV_FUSION_POLICY": "UNDEFINED / TO_BE_PREREGISTERED",
+    "CORE_vs_JEV_CONFLICT_POLICY": "UNDEFINED / TO_BE_PREREGISTERED",
+    "PRECEDENCE": "NOT_DEFINED",
+    "NO_TRADE_POLICY": "NOT_PREMATURELY_FIXED (regra operacional futura, pre-registro proprio)",
+    "CONVICTION": "UNCALIBRATED (sem pesos, incrementos ou decrementos)",
+    "JEV_CLASSIFICATION_CRITERIA": "TO_BE_PREREGISTERED",
+    "POSSIBLE_CONTRIBUTION_AREAS": "PROVISIONAL_DESIGN_MAPPING (proposto pelo Claude Code; nao validado; uso para classificacao direcional so com pre-registro explicito)",
+    "VALIDATION_HISTORY_TARGET": "NON_BLOCKING (20-40 pregoes = alvo de evidencia futura; nao e gate de arquitetura, blocker de design nem condicao de fechamento de fase; coleta so com ordem explicita)"
+  },
+  "summary": {
+    "total_input_fields": 190,
+    "fields_routed": 190,
+    "unassigned": 0,
+    "by_stage": {
+      "B_JEV_NATIVE_DEALER_ANALYSIS": 174,
+      "C_SPX_FINAL_CONTEXT": 16
+    },
+    "by_dimension": {
+      "PRICE_REFERENCE": 6,
+      "METADATA": 56,
+      "GAMMA_REGIME": 14,
+      "DELTA_POSITIONING": 15,
+      "FLOW_UNKNOWN_SEMANTICS": 8,
+      "SECOND_ORDER_FLOWS": 8,
+      "STRUCTURE_LOCATION": 43,
+      "MENTHORQ_CONFIRMATION_LEVELS": 10,
+      "VOL_SKEW": 5,
+      "DIAGNOSTIC_UNRESOLVED": 10,
+      "SPX_FINAL_GAMMA": 3,
+      "SPX_FINAL_TRACE": 6,
+      "SPX_FINAL_VOLSIGNALS": 6
+    },
+    "menthorq_overlay_fields": 12,
+    "evidence_families_total": 102,
+    "evidence_families_by_kind": {
+      "SEPARATE_UNVERIFIED": 62,
+      "SEPARATE_SUSPECTED_OVERLAP": 16,
+      "CONSOLIDATED": 8,
+      "NON_EVIDENCE": 5,
+      "SEPARATE_SUSPECTED": 8,
+      "SEPARATE_PARTIAL_ANALOG": 3
+    },
+    "note": "190 campos analisados != 190 votos; is_vote=false em todos"
+  }
+}

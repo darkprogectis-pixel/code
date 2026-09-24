@@ -1,0 +1,52 @@
+{
+ "_meta": {
+  "project": "ALFA OMEGA JEV FUTURE",
+  "session": "507b9f4b",
+  "date": "2026-09-24",
+  "read_only": true,
+  "implementation": "NONE",
+  "evidence": "data/abot-gammagex-audit/{probe-4ind-out,basis-classic-vs-nt8,graphify-crossfile}.json"
+ },
+ "status": "UNTESTED — design only; captura propria so com ordem + pre-registro; 20-40 pregoes = alvo NON_BLOCKING de evidencia",
+ "high_value": [
+  {
+   "f": "regime: spot vs classic.zero_gamma",
+   "role": "REGIME",
+   "dc": "LOW"
+  },
+  {
+   "f": "net_0dte (1 representante do cluster GEX0_SIGN)",
+   "role": "REGIME/amplitude",
+   "dc": "HIGH se somado"
+  },
+  {
+   "f": "majors 0DTE (classic zero / state)",
+   "role": "LOCATION",
+   "dc": "HIGH se somado"
+  },
+  {
+   "f": "dex.net_0dte condicionado ao regime",
+   "role": "CONFIRMATION/INVALIDATION",
+   "dc": "MEDIUM"
+  },
+  {
+   "f": "state gregas por strike -> ΔDelta_dealer",
+   "role": "DIRECTIONAL_PRESSURE (hipotese)",
+   "blocker": "convencao de sinal UNKNOWN"
+  },
+  {
+   "f": "priors / max_priors",
+   "role": "POSITIONING_CHANGE",
+   "dc": "LOW"
+  }
+ ],
+ "unsuitable": [
+  "raiz / como fonte",
+  "rotulo COMPRA/VENDA",
+  "quinFields MenthorQ",
+  "blocos 22/06",
+  "dealer_positioning /api/gamma",
+  "iv30d"
+ ],
+ "ready_for_feature_design": "YES (desenho de contrato); NO para validacao (sem historico)"
+}

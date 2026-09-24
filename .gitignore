@@ -1,0 +1,34 @@
+﻿# Secrets / credentials
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+apikey.txt
+*token*
+*secret*
+credentials*
+
+# Raw captures / vendor data
+*.har
+*.ndjson
+*.jsonl
+*.log
+
+# Large/raw research captures
+raw/
+captures/
+downloads/
+node_modules/
+
+# AoClassicCache raw snapshot must NOT be committed here.
+# Only MANIFEST.json and README.md belong in this repo.
+context/jev-future/data/aoclassiccache-frozen/20260923/*
+!context/jev-future/data/aoclassiccache-frozen/20260923/MANIFEST.json
+!context/jev-future/data/aoclassiccache-frozen/20260923/README.md
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/

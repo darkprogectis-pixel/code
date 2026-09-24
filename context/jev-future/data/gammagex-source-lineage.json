@@ -1,0 +1,36 @@
+{
+ "_meta": {
+  "project": "ALFA OMEGA JEV FUTURE",
+  "session": "507b9f4b",
+  "date": "2026-09-24",
+  "read_only": true,
+  "implementation": "NONE",
+  "evidence": "data/abot-gammagex-audit/{probe-4ind-out,basis-classic-vs-nt8,graphify-crossfile}.json"
+ },
+ "chain": "GexBot vendor -> GammaGex :3530 (ponte, ES_SPX/NQ_NDX orderflow; classic/state tambem SPY/QQQ) -> relay :3457 -> {raiz / composta | /gexbot/classic | /gexbot/state} -> indicadores",
+ "components": {
+  "NetGex0DTE": {
+   "endpoint": "GET / (raiz)",
+   "path": "orderflow.zgr -> parseToDF gex.net_0dte -> Values[0] histograma -> SharedState.NetGex0DTE (FlowOne)"
+  },
+  "DexGexFlow": {
+   "endpoint": "GET / (raiz)",
+   "path": "orderflow {zgr,dex,vanna,charm,z_msgamma} + classic/zero + levels(MenthorQ null) -> 15 linhas + texto + rastro"
+  },
+  "Classic": {
+   "endpoint": "/gexbot/classic/{T}/{zero|one|full}",
+   "path": "classic ES_SPX -> AoClSnap (parse completo) -> perfil/nivel/historia + AoClassicCache"
+  },
+  "State": {
+   "endpoint": "/gexbot/state/{T}/{gex_*|<greek>_*}",
+   "path": "state ES_SPX -> AoStSnap (strikes ou mini_contracts) -> perfil por strike"
+  }
+ },
+ "hedge_product_mapping": "SPX options -> ES_SPX (vendor ja em ES front, roll entre 11 e 16/09); SPY options -> SPY (sem mapping servido); conversion=null em todas as rotas",
+ "revalidated_clues": {
+  "gamma_condition = sign(net_0dte)": "CONFIRMADO (codigo darkcode-sync:184 + POSITIVE com net_0dte +22.406)",
+  "pc_oi = ratio de DEX": "CONFIRMADO: pc_oi 3,62 = |dex.net_put_0dte|/|dex.net_call_0dte| 3,6202 (nao e OI)",
+  "dealer_positioning stale": "PROVAVEL: /api/gamma SHORT_GAMMA contra gamma_condition POSITIVE; nenhum dos 4 le",
+  "perda ES por paridade NQ": "NAO COMPROVADA nos 4 indicadores (Auto ES/NQ simetrico; SPX default no State)"
+ }
+}

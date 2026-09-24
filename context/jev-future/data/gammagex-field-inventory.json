@@ -1,0 +1,287 @@
+{
+ "_meta": {
+  "project": "ALFA OMEGA JEV FUTURE",
+  "session": "507b9f4b",
+  "date": "2026-09-24",
+  "read_only": true,
+  "implementation": "NONE",
+  "evidence": "data/abot-gammagex-audit/{probe-4ind-out,basis-classic-vs-nt8,graphify-crossfile}.json"
+ },
+ "fields": [
+  {
+   "field": "gex.net_0dte (zgr)",
+   "raw_derived": "RAW",
+   "market": "ES_DIRECT",
+   "dte": "0DTE",
+   "freshness": "FRESH(vendor ts)",
+   "lineage": "orderflow ES_SPX",
+   "double_counting_risk": "HIGH",
+   "jev_class": "HIGH_VALUE_CANDIDATE",
+   "used_by": "NetGex0DTE, DexGexFlow"
+  },
+  {
+   "field": "gex.net_next (ogr)",
+   "raw_derived": "RAW",
+   "market": "ES_DIRECT",
+   "dte": "next",
+   "freshness": "FRESH",
+   "lineage": "orderflow",
+   "double_counting_risk": "MEDIUM",
+   "jev_class": "SUPPORTING_CONTEXT",
+   "used_by": "NetGex0DTE(opc), DexGexFlow"
+  },
+  {
+   "field": "gamma_condition",
+   "raw_derived": "DERIVED sign(net_0dte)",
+   "market": "ES_DIRECT",
+   "dte": "0DTE",
+   "freshness": "FRESH",
+   "lineage": "darkcode-sync:184",
+   "double_counting_risk": "HIGH",
+   "jev_class": "DERIVED_DUPLICATE",
+   "used_by": "DexGexFlow"
+  },
+  {
+   "field": "state gex_zero.sum_gex_vol",
+   "raw_derived": "RAW (imbalance)",
+   "market": "ES_DIRECT",
+   "dte": "0DTE",
+   "freshness": "FRESH",
+   "lineage": "state ES_SPX",
+   "double_counting_risk": "HIGH",
+   "jev_class": "REDUNDANT (~= net_0dte)",
+   "used_by": "State"
+  },
+  {
+   "field": "classic.zero_gamma",
+   "raw_derived": "RAW",
+   "market": "ES_DIRECT",
+   "dte": "0DTE (classic/zero)",
+   "freshness": "FRESH",
+   "lineage": "classic ES_SPX",
+   "double_counting_risk": "LOW",
+   "jev_class": "HIGH_VALUE_CANDIDATE (regime por posicao spot x zg)",
+   "used_by": "DexGexFlow, Classic"
+  },
+  {
+   "field": "spot (ES_SPX)",
+   "raw_derived": "RAW",
+   "market": "ES_DIRECT (= ESZ6 front, ±1,3 pt)",
+   "dte": "-",
+   "freshness": "FRESH",
+   "lineage": "vendor",
+   "double_counting_risk": "LOW",
+   "jev_class": "SUPPORTING_CONTEXT",
+   "used_by": "todos"
+  },
+  {
+   "field": "classic majors pos/neg vol|oi",
+   "raw_derived": "RAW",
+   "market": "ES_DIRECT",
+   "dte": "zero=0DTE; full=90d",
+   "freshness": "FRESH",
+   "lineage": "classic",
+   "double_counting_risk": "MEDIUM",
+   "jev_class": "HIGH_VALUE_CANDIDATE (LOCATION)",
+   "used_by": "DexGexFlow, Classic"
+  },
+  {
+   "field": "orderflow zero_mcall/zero_mput/z_mlgamma/z_msgamma",
+   "raw_derived": "RAW",
+   "market": "ES_DIRECT",
+   "dte": "0DTE",
+   "freshness": "FRESH",
+   "lineage": "orderflow",
+   "double_counting_risk": "HIGH (aliases em classic/state/levels)",
+   "jev_class": "SUPPORTING_CONTEXT (zero_mput semantica UNKNOWN)",
+   "used_by": "nenhum pelo nome"
+  },
+  {
+   "field": "levels.short_gamma_0dte",
+   "raw_derived": "DERIVED alias z_msgamma",
+   "market": "ES_DIRECT",
+   "dte": "0DTE",
+   "freshness": "FRESH",
+   "lineage": "parseToDF",
+   "double_counting_risk": "HIGH",
+   "jev_class": "DERIVED_DUPLICATE",
+   "used_by": "DexGexFlow"
+  },
+  {
+   "field": "levels.short_gamma_next / next_exp_hvl|call_res|put_sup",
+   "raw_derived": "RAW/alias",
+   "market": "ES_DIRECT",
+   "dte": "next",
+   "freshness": "FRESH",
+   "lineage": "orderflow next",
+   "double_counting_risk": "MEDIUM",
+   "jev_class": "SUPPORTING_CONTEXT",
+   "used_by": "short_gamma_next: DexGexFlow; next_exp_*: nenhum"
+  },
+  {
+   "field": "levels quinFields (hvl, call/put wall, *_0dte)",
+   "raw_derived": "MenthorQ (anti-stale)",
+   "market": "UNKNOWN",
+   "dte": "-",
+   "freshness": "STALE/NULL (401)",
+   "lineage": "merge_menthorq_api",
+   "double_counting_risk": "HIGH (rotulo GexBot)",
+   "jev_class": "UNSUITABLE (fora do pacote; MenthorQ = confirmacao positiva so)",
+   "used_by": "DexGexFlow (7 linhas null)"
+  },
+  {
+   "field": "dex.net_0dte",
+   "raw_derived": "RAW",
+   "market": "ES_DIRECT",
+   "dte": "0DTE",
+   "freshness": "FRESH",
+   "lineage": "orderflow",
+   "double_counting_risk": "MEDIUM",
+   "jev_class": "HIGH_VALUE_CANDIDATE (hedge direction condicionado ao regime)",
+   "used_by": "DexGexFlow (texto)"
+  },
+  {
+   "field": "dex net/agg x call/put x 0dte/next",
+   "raw_derived": "RAW",
+   "market": "ES_DIRECT",
+   "dte": "0DTE/next",
+   "freshness": "FRESH",
+   "lineage": "orderflow",
+   "double_counting_risk": "MEDIUM",
+   "jev_class": "SUPPORTING_CONTEXT (decomposicao call/put)",
+   "used_by": "nenhum"
+  },
+  {
+   "field": "pc_oi",
+   "raw_derived": "DERIVED |net_put_dex_0dte|/|net_call_dex_0dte| (3,62 = 3,6202 medido)",
+   "market": "ES_DIRECT",
+   "dte": "0DTE",
+   "freshness": "FRESH",
+   "lineage": "darkcode-sync",
+   "double_counting_risk": "HIGH",
+   "jev_class": "DERIVED_DUPLICATE (rotulo OI errado: e DEX)",
+   "used_by": "nenhum dos 4"
+  },
+  {
+   "field": "gex.cvr_0dte/next, oflow, dex.oflow, orderflow.cvr_oflow",
+   "raw_derived": "RAW",
+   "market": "ES_DIRECT",
+   "dte": "0DTE/next",
+   "freshness": "FRESH",
+   "lineage": "orderflow",
+   "double_counting_risk": "MEDIUM",
+   "jev_class": "UNKNOWN (semantica vendor nao documentada)",
+   "used_by": "nenhum"
+  },
+  {
+   "field": "vanna.net_0dte / charm.net_0dte",
+   "raw_derived": "RAW",
+   "market": "ES_DIRECT",
+   "dte": "0DTE",
+   "freshness": "FRESH",
+   "lineage": "orderflow",
+   "double_counting_risk": "MEDIUM (x state por strike)",
+   "jev_class": "SUPPORTING_CONTEXT",
+   "used_by": "DexGexFlow (texto)"
+  },
+  {
+   "field": "state <greek>_zero|_one mini_contracts (delta/gamma/vanna/charm por strike)",
+   "raw_derived": "RAW",
+   "market": "ES_DIRECT",
+   "dte": "0DTE/next",
+   "freshness": "FRESH",
+   "lineage": "state",
+   "double_counting_risk": "MEDIUM",
+   "jev_class": "HIGH_VALUE_CANDIDATE (ΔDelta_dealer; sinal UNKNOWN)",
+   "used_by": "State"
+  },
+  {
+   "field": "strikes gex_vol/gex_oi + 5 priors; max_priors",
+   "raw_derived": "RAW",
+   "market": "ES_DIRECT (strike SPX + basis)",
+   "dte": "0DTE/next/90d",
+   "freshness": "FRESH",
+   "lineage": "classic/state",
+   "double_counting_risk": "LOW",
+   "jev_class": "HIGH_VALUE_CANDIDATE (POSITIONING_CHANGE)",
+   "used_by": "Classic, State"
+  },
+  {
+   "field": "delta_risk_reversal, min_dte, sec_min_dte",
+   "raw_derived": "RAW",
+   "market": "ES_DIRECT",
+   "dte": "meta",
+   "freshness": "FRESH",
+   "lineage": "classic",
+   "double_counting_risk": "LOW",
+   "jev_class": "LOW_VALUE (min_dte = SUPPORTING p/ confirmar 0DTE)",
+   "used_by": "Classic"
+  },
+  {
+   "field": "SPY classic/state",
+   "raw_derived": "RAW",
+   "market": "SPY_PROXY (escala SPY, sem conversao)",
+   "dte": "0DTE",
+   "freshness": "FRESH",
+   "lineage": "GammaGex SPY",
+   "double_counting_risk": "MEDIUM (mesma familia SPX)",
+   "jev_class": "SUPPORTING_CONTEXT",
+   "used_by": "Classic/State se escolhido"
+  },
+  {
+   "field": "/api/gamma dealer_positioning",
+   "raw_derived": "DERIVED",
+   "market": "UNKNOWN",
+   "dte": "-",
+   "freshness": "STALE provavel: SHORT_GAMMA com gamma_condition POSITIVE e net_0dte +22.406 (24/09)",
+   "lineage": "bloco spotgamma 22/06",
+   "double_counting_risk": "HIGH",
+   "jev_class": "UNSUITABLE",
+   "used_by": "nenhum dos 4"
+  },
+  {
+   "field": "extended_zone, spotgamma.*, qscore, iv30d, dark_pool_analysis",
+   "raw_derived": "congelado 22/06",
+   "market": "UNKNOWN",
+   "dte": "-",
+   "freshness": "STALE",
+   "lineage": "MAPA/FoundersNote",
+   "double_counting_risk": "HIGH",
+   "jev_class": "UNSUITABLE",
+   "used_by": "nenhum dos 4"
+  },
+  {
+   "field": "rotulo COMPRA/VENDA (NetGex0DTE)",
+   "raw_derived": "DERIVED no indicador",
+   "market": "ES_DIRECT",
+   "dte": "0DTE",
+   "freshness": "-",
+   "lineage": "sign(net_0dte)",
+   "double_counting_risk": "HIGH",
+   "jev_class": "UNSUITABLE (GEX nao tem lado no contrato)",
+   "used_by": "NetGex0DTE"
+  },
+  {
+   "field": "rastro heat (DexGexFlow)",
+   "raw_derived": "DERIVED no indicador",
+   "market": "ES_DIRECT",
+   "dte": "-",
+   "freshness": "-",
+   "lineage": "permanencia de niveis",
+   "double_counting_risk": "HIGH",
+   "jev_class": "LOW_VALUE",
+   "used_by": "DexGexFlow"
+  },
+  {
+   "field": "AoClassicCache (t,sp,zg,majors,sv,so,cm,ca)",
+   "raw_derived": "RAW persistido",
+   "market": "ES_DIRECT pos 10/09; SPX antes",
+   "dte": "full (90d)",
+   "freshness": "historico",
+   "lineage": "Classic PersistCache",
+   "double_counting_risk": "LOW",
+   "jev_class": "SUPPORTING_CONTEXT (unico historico local; 7 pregoes)",
+   "used_by": "Classic"
+  }
+ ]
+}

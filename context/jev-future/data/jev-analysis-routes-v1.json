@@ -1,0 +1,4833 @@
+{
+  "_meta": {
+    "project": "ALFA OMEGA JEV FUTURE",
+    "version": "v1",
+    "date": "2026-09-23",
+    "status": "DEFINITION ONLY",
+    "implementation": "NONE",
+    "production": "UNCHANGED",
+    "f5": "NOT PERFORMED",
+    "doc": "JEV_DECISION_LOGIC_V1_20260923.md",
+    "source": [
+      "jev-feature-contract-v1.json",
+      "jev-double-counting-groups-v1.json"
+    ]
+  },
+  "summary": {
+    "total_input_fields": 190,
+    "fields_routed": 190,
+    "unassigned": 0,
+    "by_stage": {
+      "B_JEV_NATIVE_DEALER_ANALYSIS": 174,
+      "C_SPX_FINAL_CONTEXT": 16
+    },
+    "by_dimension": {
+      "PRICE_REFERENCE": 6,
+      "METADATA": 56,
+      "GAMMA_REGIME": 14,
+      "DELTA_POSITIONING": 15,
+      "FLOW_UNKNOWN_SEMANTICS": 8,
+      "SECOND_ORDER_FLOWS": 8,
+      "STRUCTURE_LOCATION": 43,
+      "MENTHORQ_CONFIRMATION_LEVELS": 10,
+      "VOL_SKEW": 5,
+      "DIAGNOSTIC_UNRESOLVED": 10,
+      "SPX_FINAL_GAMMA": 3,
+      "SPX_FINAL_TRACE": 6,
+      "SPX_FINAL_VOLSIGNALS": 6
+    },
+    "menthorq_overlay_fields": 12,
+    "evidence_families_total": 102,
+    "evidence_families_by_kind": {
+      "SEPARATE_UNVERIFIED": 62,
+      "SEPARATE_SUSPECTED_OVERLAP": 16,
+      "CONSOLIDATED": 8,
+      "NON_EVIDENCE": 5,
+      "SEPARATE_SUSPECTED": 8,
+      "SEPARATE_PARTIAL_ANALOG": 3
+    },
+    "note": "190 campos analisados != 190 votos; is_vote=false em todos"
+  },
+  "routes": [
+    {
+      "feature_id": "abot.root.spot",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "PRICE_REFERENCE",
+      "possible_contribution_areas": [
+        "CONTEXT"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_SPOT_PRICE",
+      "evidence_families": [
+        "EF_DC_SPOT_PRICE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.timestamp",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.gamma_condition",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "GAMMA_REGIME",
+      "possible_contribution_areas": [
+        "REGIME"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "REGIME_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_GEX0_SIGN",
+      "evidence_families": [
+        "EF_DC_GEX0_SIGN"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.pc_oi",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DELTA_POSITIONING",
+      "possible_contribution_areas": [
+        "FLOW",
+        "SENSITIVITY",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "MISLABELED",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_DEX_0DTE",
+      "evidence_families": [
+        "EF_DC_DEX_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.gex.net_0dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "GAMMA_REGIME",
+      "possible_contribution_areas": [
+        "REGIME",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "PRIMARY_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_GEX0_SIGN",
+      "evidence_families": [
+        "EF_DC_GEX0_SIGN"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.gex.net_next",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "GAMMA_REGIME",
+      "possible_contribution_areas": [
+        "REGIME",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "REGIME_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_GEX_NEXT",
+      "evidence_families": [
+        "EF_DC_GEX_NEXT"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.gex.cvr_0dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "possible_contribution_areas": [
+        "FLOW",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "UNKNOWN",
+      "quality_state": "UNKNOWN_SEMANTICS",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_OFLOW_CVR_UNKNOWN",
+      "evidence_families": [
+        "EF_DC_OFLOW_CVR_UNKNOWN__abot.root.gex.cvr_0dte"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.gex.cvr_next",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "possible_contribution_areas": [
+        "FLOW",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "UNKNOWN",
+      "quality_state": "UNKNOWN_SEMANTICS",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_OFLOW_CVR_UNKNOWN",
+      "evidence_families": [
+        "EF_DC_OFLOW_CVR_UNKNOWN__abot.root.gex.cvr_next"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.gex.oflow",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "possible_contribution_areas": [
+        "FLOW",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "UNKNOWN",
+      "quality_state": "UNKNOWN_SEMANTICS",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_OFLOW_CVR_UNKNOWN",
+      "evidence_families": [
+        "EF_DC_OFLOW_CVR_UNKNOWN__abot.root.gex.oflow"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.gex.oflow_next",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "possible_contribution_areas": [
+        "FLOW",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "UNKNOWN",
+      "quality_state": "UNKNOWN_SEMANTICS",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_OFLOW_CVR_UNKNOWN",
+      "evidence_families": [
+        "EF_DC_OFLOW_CVR_UNKNOWN__abot.root.gex.oflow_next"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.dex.net_0dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DELTA_POSITIONING",
+      "possible_contribution_areas": [
+        "FLOW",
+        "SENSITIVITY",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "CONFIRMATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_DEX_0DTE",
+      "evidence_families": [
+        "EF_DC_DEX_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.dex.agg_0dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DELTA_POSITIONING",
+      "possible_contribution_areas": [
+        "FLOW",
+        "SENSITIVITY",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_DEX_0DTE",
+      "evidence_families": [
+        "EF_DC_DEX_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.dex.net_call_0dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DELTA_POSITIONING",
+      "possible_contribution_areas": [
+        "FLOW",
+        "SENSITIVITY",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_DEX_0DTE",
+      "evidence_families": [
+        "EF_DC_DEX_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.dex.net_put_0dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DELTA_POSITIONING",
+      "possible_contribution_areas": [
+        "FLOW",
+        "SENSITIVITY",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_DEX_0DTE",
+      "evidence_families": [
+        "EF_DC_DEX_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.dex.agg_call_0dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DELTA_POSITIONING",
+      "possible_contribution_areas": [
+        "FLOW",
+        "SENSITIVITY",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_DEX_0DTE",
+      "evidence_families": [
+        "EF_DC_DEX_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.dex.agg_put_0dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DELTA_POSITIONING",
+      "possible_contribution_areas": [
+        "FLOW",
+        "SENSITIVITY",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_DEX_0DTE",
+      "evidence_families": [
+        "EF_DC_DEX_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.dex.net_next",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DELTA_POSITIONING",
+      "possible_contribution_areas": [
+        "FLOW",
+        "SENSITIVITY",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_DEX_NEXT",
+      "evidence_families": [
+        "EF_DC_DEX_NEXT__abot.root.dex.net_next"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.dex.agg_next",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DELTA_POSITIONING",
+      "possible_contribution_areas": [
+        "FLOW",
+        "SENSITIVITY",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_DEX_NEXT",
+      "evidence_families": [
+        "EF_DC_DEX_NEXT__abot.root.dex.agg_next"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.dex.net_call_next",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DELTA_POSITIONING",
+      "possible_contribution_areas": [
+        "FLOW",
+        "SENSITIVITY",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_DEX_NEXT",
+      "evidence_families": [
+        "EF_DC_DEX_NEXT__abot.root.dex.net_call_next"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.dex.net_put_next",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DELTA_POSITIONING",
+      "possible_contribution_areas": [
+        "FLOW",
+        "SENSITIVITY",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_DEX_NEXT",
+      "evidence_families": [
+        "EF_DC_DEX_NEXT__abot.root.dex.net_put_next"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.dex.agg_call_next",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DELTA_POSITIONING",
+      "possible_contribution_areas": [
+        "FLOW",
+        "SENSITIVITY",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_DEX_NEXT",
+      "evidence_families": [
+        "EF_DC_DEX_NEXT__abot.root.dex.agg_call_next"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.dex.agg_put_next",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DELTA_POSITIONING",
+      "possible_contribution_areas": [
+        "FLOW",
+        "SENSITIVITY",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_DEX_NEXT",
+      "evidence_families": [
+        "EF_DC_DEX_NEXT__abot.root.dex.agg_put_next"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.dex.oflow",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "possible_contribution_areas": [
+        "FLOW",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "UNKNOWN",
+      "quality_state": "UNKNOWN_SEMANTICS",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_OFLOW_CVR_UNKNOWN",
+      "evidence_families": [
+        "EF_DC_OFLOW_CVR_UNKNOWN__abot.root.dex.oflow"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.dex.oflow_next",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "possible_contribution_areas": [
+        "FLOW",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "UNKNOWN",
+      "quality_state": "UNKNOWN_SEMANTICS",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_OFLOW_CVR_UNKNOWN",
+      "evidence_families": [
+        "EF_DC_OFLOW_CVR_UNKNOWN__abot.root.dex.oflow_next"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.vanna.net_0dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "possible_contribution_areas": [
+        "SENSITIVITY",
+        "CHANGE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_VANNA_0DTE",
+      "evidence_families": [
+        "EF_DC_VANNA_0DTE__abot.root.vanna.net_0dte"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.vanna.net_next",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "possible_contribution_areas": [
+        "SENSITIVITY",
+        "CHANGE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_VANNA_NEXT",
+      "evidence_families": [
+        "EF_DC_VANNA_NEXT__abot.root.vanna.net_next"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.charm.net_0dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "possible_contribution_areas": [
+        "SENSITIVITY",
+        "CHANGE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_CHARM_0DTE",
+      "evidence_families": [
+        "EF_DC_CHARM_0DTE__abot.root.charm.net_0dte"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.charm.net_next",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "possible_contribution_areas": [
+        "SENSITIVITY",
+        "CHANGE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_CHARM_NEXT",
+      "evidence_families": [
+        "EF_DC_CHARM_NEXT__abot.root.charm.net_next"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.orderflow.cvr_oflow",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "possible_contribution_areas": [
+        "FLOW",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "UNKNOWN",
+      "quality_state": "UNKNOWN_SEMANTICS",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_OFLOW_CVR_UNKNOWN",
+      "evidence_families": [
+        "EF_DC_OFLOW_CVR_UNKNOWN__abot.root.orderflow.cvr_oflow"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.orderflow.cvr_oflow_next",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "possible_contribution_areas": [
+        "FLOW",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "UNKNOWN",
+      "quality_state": "UNKNOWN_SEMANTICS",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_OFLOW_CVR_UNKNOWN",
+      "evidence_families": [
+        "EF_DC_OFLOW_CVR_UNKNOWN__abot.root.orderflow.cvr_oflow_next"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.orderflow.zero_mcall",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_MAJORS_0DTE",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.orderflow.zero_mput",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "UNKNOWN_SEMANTICS",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_MAJORS_0DTE",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.orderflow.z_mlgamma",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_MAJORS_0DTE",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.orderflow.z_msgamma",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_MAJORS_0DTE",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.levels.hvl",
+      "source_system": "MenthorQ (merge anti-stale dentro do bloco levels do relay)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "possible_contribution_areas": [
+        "LOCATION"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "NULL",
+      "availability": "NULL_AT_SOURCE",
+      "freshness_rule": "FR_MENTHORQ_MERGE",
+      "lineage_group": "LG_MENTHORQ_MERGE",
+      "double_counting_group": "DC_MENTHORQ_LEVELS",
+      "evidence_families": [
+        "EF_DC_MENTHORQ_LEVELS__abot.root.levels.hvl"
+      ],
+      "policy_overlay": "MENTHORQ_POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING",
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.levels.call_resistance",
+      "source_system": "MenthorQ (merge anti-stale dentro do bloco levels do relay)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "possible_contribution_areas": [
+        "LOCATION"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "NULL",
+      "availability": "NULL_AT_SOURCE",
+      "freshness_rule": "FR_MENTHORQ_MERGE",
+      "lineage_group": "LG_MENTHORQ_MERGE",
+      "double_counting_group": "DC_MENTHORQ_LEVELS",
+      "evidence_families": [
+        "EF_DC_MENTHORQ_LEVELS__abot.root.levels.call_resistance"
+      ],
+      "policy_overlay": "MENTHORQ_POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING",
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.levels.put_support",
+      "source_system": "MenthorQ (merge anti-stale dentro do bloco levels do relay)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "possible_contribution_areas": [
+        "LOCATION"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "NULL",
+      "availability": "NULL_AT_SOURCE",
+      "freshness_rule": "FR_MENTHORQ_MERGE",
+      "lineage_group": "LG_MENTHORQ_MERGE",
+      "double_counting_group": "DC_MENTHORQ_LEVELS",
+      "evidence_families": [
+        "EF_DC_MENTHORQ_LEVELS__abot.root.levels.put_support"
+      ],
+      "policy_overlay": "MENTHORQ_POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING",
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.levels.gamma_wall_0dte",
+      "source_system": "MenthorQ (merge anti-stale dentro do bloco levels do relay)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "possible_contribution_areas": [
+        "LOCATION"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "NULL",
+      "availability": "NULL_AT_SOURCE",
+      "freshness_rule": "FR_MENTHORQ_MERGE",
+      "lineage_group": "LG_MENTHORQ_MERGE",
+      "double_counting_group": "DC_MENTHORQ_LEVELS",
+      "evidence_families": [
+        "EF_DC_MENTHORQ_LEVELS__abot.root.levels.gamma_wall_0dte"
+      ],
+      "policy_overlay": "MENTHORQ_POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING",
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.levels.put_support_0dte",
+      "source_system": "MenthorQ (merge anti-stale dentro do bloco levels do relay)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "possible_contribution_areas": [
+        "LOCATION"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "NULL",
+      "availability": "NULL_AT_SOURCE",
+      "freshness_rule": "FR_MENTHORQ_MERGE",
+      "lineage_group": "LG_MENTHORQ_MERGE",
+      "double_counting_group": "DC_MENTHORQ_LEVELS",
+      "evidence_families": [
+        "EF_DC_MENTHORQ_LEVELS__abot.root.levels.put_support_0dte"
+      ],
+      "policy_overlay": "MENTHORQ_POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING",
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.levels.hvl_0dte",
+      "source_system": "MenthorQ (merge anti-stale dentro do bloco levels do relay)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "possible_contribution_areas": [
+        "LOCATION"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "NULL",
+      "availability": "NULL_AT_SOURCE",
+      "freshness_rule": "FR_MENTHORQ_MERGE",
+      "lineage_group": "LG_MENTHORQ_MERGE",
+      "double_counting_group": "DC_MENTHORQ_LEVELS",
+      "evidence_families": [
+        "EF_DC_MENTHORQ_LEVELS__abot.root.levels.hvl_0dte"
+      ],
+      "policy_overlay": "MENTHORQ_POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING",
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.levels.call_resistance_0dte",
+      "source_system": "MenthorQ (merge anti-stale dentro do bloco levels do relay)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "possible_contribution_areas": [
+        "LOCATION"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "NULL",
+      "availability": "NULL_AT_SOURCE",
+      "freshness_rule": "FR_MENTHORQ_MERGE",
+      "lineage_group": "LG_MENTHORQ_MERGE",
+      "double_counting_group": "DC_MENTHORQ_LEVELS",
+      "evidence_families": [
+        "EF_DC_MENTHORQ_LEVELS__abot.root.levels.call_resistance_0dte"
+      ],
+      "policy_overlay": "MENTHORQ_POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING",
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.levels.day_min",
+      "source_system": "MenthorQ (merge anti-stale dentro do bloco levels do relay)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "possible_contribution_areas": [
+        "LOCATION"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "NULL",
+      "availability": "NULL_AT_SOURCE",
+      "freshness_rule": "FR_MENTHORQ_MERGE",
+      "lineage_group": "LG_MENTHORQ_MERGE",
+      "double_counting_group": "DC_MENTHORQ_LEVELS",
+      "evidence_families": [
+        "EF_DC_MENTHORQ_LEVELS__abot.root.levels.day_min"
+      ],
+      "policy_overlay": "MENTHORQ_POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING",
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.levels.day_max",
+      "source_system": "MenthorQ (merge anti-stale dentro do bloco levels do relay)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "possible_contribution_areas": [
+        "LOCATION"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "NULL",
+      "availability": "NULL_AT_SOURCE",
+      "freshness_rule": "FR_MENTHORQ_MERGE",
+      "lineage_group": "LG_MENTHORQ_MERGE",
+      "double_counting_group": "DC_MENTHORQ_LEVELS",
+      "evidence_families": [
+        "EF_DC_MENTHORQ_LEVELS__abot.root.levels.day_max"
+      ],
+      "policy_overlay": "MENTHORQ_POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING",
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.levels.distance_to_hvl_pct",
+      "source_system": "MenthorQ (merge anti-stale dentro do bloco levels do relay)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "possible_contribution_areas": [
+        "LOCATION"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "NULL",
+      "availability": "NULL_AT_SOURCE",
+      "freshness_rule": "FR_MENTHORQ_MERGE",
+      "lineage_group": "LG_MENTHORQ_MERGE",
+      "double_counting_group": "DC_MENTHORQ_LEVELS",
+      "evidence_families": [
+        "EF_DC_MENTHORQ_LEVELS__abot.root.levels.distance_to_hvl_pct"
+      ],
+      "policy_overlay": "MENTHORQ_POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING",
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.levels._menthorq_source",
+      "source_system": "MenthorQ (merge anti-stale dentro do bloco levels do relay)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "NULL",
+      "availability": "NULL_AT_SOURCE",
+      "freshness_rule": "FR_MENTHORQ_MERGE",
+      "lineage_group": "LG_MENTHORQ_MERGE",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": "MENTHORQ_POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING",
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.levels._asof",
+      "source_system": "MenthorQ (merge anti-stale dentro do bloco levels do relay)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_MENTHORQ_MERGE",
+      "lineage_group": "LG_MENTHORQ_MERGE",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": "MENTHORQ_POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING",
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.levels.short_gamma_0dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_MAJORS_0DTE",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.levels.short_gamma_next",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_MAJORS_NEXT",
+      "evidence_families": [
+        "EF_DC_MAJORS_NEXT"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.levels.next_exp_hvl",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_MAJORS_NEXT",
+      "evidence_families": [
+        "EF_DC_MAJORS_NEXT"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.levels.next_exp_call_res",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_MAJORS_NEXT",
+      "evidence_families": [
+        "EF_DC_MAJORS_NEXT"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.levels.next_exp_put_sup",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_ROOT_ORDERFLOW",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_MAJORS_NEXT",
+      "evidence_families": [
+        "EF_DC_MAJORS_NEXT"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.classic.zero_gamma",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "GAMMA_REGIME",
+      "possible_contribution_areas": [
+        "REGIME"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "REGIME_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_CLASSIC_COPY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_ZERO_GAMMA_0DTE",
+      "evidence_families": [
+        "EF_DC_ZERO_GAMMA_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.classic.major_pos_vol",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_CLASSIC_COPY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_MAJORS_0DTE",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.classic.major_neg_vol",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_CLASSIC_COPY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_MAJORS_0DTE",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.classic.major_pos_oi",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_CLASSIC_COPY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_MAJORS_0DTE",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.classic.major_neg_oi",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_CLASSIC_COPY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_MAJORS_0DTE",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.classic.sum_gex_vol",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_CLASSIC_COPY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_CLASSIC_GEX_PROFILE_ZERO",
+      "evidence_families": [
+        "EF_DC_CLASSIC_GEX_PROFILE_ZERO"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.classic.sum_gex_oi",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_CLASSIC_COPY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_CLASSIC_GEX_PROFILE_ZERO",
+      "evidence_families": [
+        "EF_DC_CLASSIC_GEX_PROFILE_ZERO"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.classic.delta_risk_reversal",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "VOL_SKEW",
+      "possible_contribution_areas": [
+        "SENSITIVITY",
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_CLASSIC_COPY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_RISK_REVERSAL",
+      "evidence_families": [
+        "EF_DC_RISK_REVERSAL__abot.root.classic.delta_risk_reversal"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.classic.min_dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_CLASSIC_COPY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.classic.sec_min_dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_CLASSIC_COPY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.classic.spot",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "PRICE_REFERENCE",
+      "possible_contribution_areas": [
+        "CONTEXT"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_CLASSIC_COPY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_SPOT_PRICE",
+      "evidence_families": [
+        "EF_DC_SPOT_PRICE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.classic.timestamp",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_CLASSIC_COPY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.classic.strikes",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_CLASSIC_COPY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_CLASSIC_GEX_PROFILE_ZERO",
+      "evidence_families": [
+        "EF_DC_CLASSIC_GEX_PROFILE_ZERO"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.classic.max_priors",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE",
+        "CHANGE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_ROOT_CLASSIC_COPY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_CLASSIC_GEX_PROFILE_ZERO",
+      "evidence_families": [
+        "EF_DC_CLASSIC_GEX_PROFILE_ZERO"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.iv30d",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "FROZEN",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_FROZEN_BLOCK",
+      "lineage_group": "LG_ROOT_LEGACY_BLOCKS",
+      "double_counting_group": "DC_ROOT_LEGACY_BLOCKS",
+      "evidence_families": [
+        "EF_DC_ROOT_LEGACY_BLOCKS"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.extended_zone",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "STALE",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_FROZEN_BLOCK",
+      "lineage_group": "LG_ROOT_LEGACY_BLOCKS",
+      "double_counting_group": "DC_ROOT_LEGACY_BLOCKS",
+      "evidence_families": [
+        "EF_DC_ROOT_LEGACY_BLOCKS"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.spotgamma",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "STALE",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_FROZEN_BLOCK",
+      "lineage_group": "LG_ROOT_LEGACY_BLOCKS",
+      "double_counting_group": "DC_ROOT_LEGACY_BLOCKS",
+      "evidence_families": [
+        "EF_DC_ROOT_LEGACY_BLOCKS"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.qscore",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "STALE",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_FROZEN_BLOCK",
+      "lineage_group": "LG_ROOT_LEGACY_BLOCKS",
+      "double_counting_group": "DC_ROOT_LEGACY_BLOCKS",
+      "evidence_families": [
+        "EF_DC_ROOT_LEGACY_BLOCKS"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.dark_pool_analysis",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "STALE",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_FROZEN_BLOCK",
+      "lineage_group": "LG_ROOT_LEGACY_BLOCKS",
+      "double_counting_group": "DC_ROOT_LEGACY_BLOCKS",
+      "evidence_families": [
+        "EF_DC_ROOT_LEGACY_BLOCKS"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.blind_spots",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "UNKNOWN",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_FROZEN_BLOCK",
+      "lineage_group": "LG_ROOT_LEGACY_BLOCKS",
+      "double_counting_group": "DC_ROOT_LEGACY_BLOCKS",
+      "evidence_families": [
+        "EF_DC_ROOT_LEGACY_BLOCKS"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.bl_scores",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "UNKNOWN",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_FROZEN_BLOCK",
+      "lineage_group": "LG_ROOT_LEGACY_BLOCKS",
+      "double_counting_group": "DC_ROOT_LEGACY_BLOCKS",
+      "evidence_families": [
+        "EF_DC_ROOT_LEGACY_BLOCKS"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.root.implied_vol",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "ROOT / (bloco instruments.<ES|NQ>) — lido por AlfaOmegaNetGex0DTE e AlfaOmegaDexGexFlow",
+      "market_origin": "UNKNOWN",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "UNKNOWN",
+      "availability": "LIVE_UNUSED",
+      "freshness_rule": "FR_FROZEN_BLOCK",
+      "lineage_group": "LG_ROOT_LEGACY_BLOCKS",
+      "double_counting_group": "DC_ROOT_LEGACY_BLOCKS",
+      "evidence_families": [
+        "EF_DC_ROOT_LEGACY_BLOCKS"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.ind.netgex0dte.label_color",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "derivado DENTRO do indicador (nao vem da API) — AlfaOmegaNetGex0DTE",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "GAMMA_REGIME",
+      "possible_contribution_areas": [
+        "REGIME",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "SEMANTIC_CONFLICT",
+      "availability": "INDICATOR_ONLY",
+      "freshness_rule": "FR_INDICATOR_DERIVED",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_GEX0_SIGN",
+      "evidence_families": [
+        "EF_DC_GEX0_SIGN"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.ind.dexgexflow.heat_trail",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "derivado DENTRO do indicador (nao vem da API) — AlfaOmegaDexGexFlow",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "INDICATOR_ONLY",
+      "freshness_rule": "FR_INDICATOR_DERIVED",
+      "lineage_group": "LG_ORDERFLOW_SPX",
+      "double_counting_group": "DC_MAJORS_0DTE",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.timestamp",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.ticker",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.min_dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.sec_min_dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.spot",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "PRICE_REFERENCE",
+      "possible_contribution_areas": [
+        "CONTEXT"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_SPOT_PRICE",
+      "evidence_families": [
+        "EF_DC_SPOT_PRICE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.zero_gamma",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "GAMMA_REGIME",
+      "possible_contribution_areas": [
+        "REGIME"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "REGIME_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_ZERO_GAMMA::{zero->0DTE|one->NEXT|full->FULL}",
+      "evidence_families": [
+        "EF_DC_ZERO_GAMMA_0DTE",
+        "EF_DC_ZERO_GAMMA_NEXT__abot.classic.zero_gamma@one",
+        "EF_DC_ZERO_GAMMA_FULL__abot.classic.zero_gamma@full"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.major_pos_vol",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_MAJORS::{zero->0DTE|one->NEXT|full->FULL}",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE",
+        "EF_DC_MAJORS_NEXT",
+        "EF_DC_MAJORS_FULL"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.major_pos_oi",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_MAJORS::{zero->0DTE|one->NEXT|full->FULL}",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE",
+        "EF_DC_MAJORS_NEXT",
+        "EF_DC_MAJORS_FULL"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.major_neg_vol",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_MAJORS::{zero->0DTE|one->NEXT|full->FULL}",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE",
+        "EF_DC_MAJORS_NEXT",
+        "EF_DC_MAJORS_FULL"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.major_neg_oi",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_MAJORS::{zero->0DTE|one->NEXT|full->FULL}",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE",
+        "EF_DC_MAJORS_NEXT",
+        "EF_DC_MAJORS_FULL"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.strikes[].strike",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_CLASSIC_GEX_PROFILE::{zero->0DTE|one->NEXT|full->FULL}",
+      "evidence_families": [
+        "EF_DC_CLASSIC_GEX_PROFILE_ZERO",
+        "EF_DC_CLASSIC_GEX_PROFILE_NEXT__abot.classic.strikes[].strike@one",
+        "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.classic.strikes[].strike@full"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.strikes[].gex_vol",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_CLASSIC_GEX_PROFILE::{zero->0DTE|one->NEXT|full->FULL}",
+      "evidence_families": [
+        "EF_DC_CLASSIC_GEX_PROFILE_ZERO",
+        "EF_DC_CLASSIC_GEX_PROFILE_NEXT__abot.classic.strikes[].gex_vol@one",
+        "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.classic.strikes[].gex_vol@full"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.strikes[].gex_oi",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_CLASSIC_GEX_PROFILE::{zero->0DTE|one->NEXT|full->FULL}",
+      "evidence_families": [
+        "EF_DC_CLASSIC_GEX_PROFILE_ZERO",
+        "EF_DC_CLASSIC_GEX_PROFILE_NEXT__abot.classic.strikes[].gex_oi@one",
+        "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.classic.strikes[].gex_oi@full"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.strikes[].priors[0..4]",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE",
+        "CHANGE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_CLASSIC_GEX_PROFILE::{zero->0DTE|one->NEXT|full->FULL}",
+      "evidence_families": [
+        "EF_DC_CLASSIC_GEX_PROFILE_ZERO",
+        "EF_DC_CLASSIC_GEX_PROFILE_NEXT__abot.classic.strikes[].priors[0..4]@one",
+        "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.classic.strikes[].priors[0..4]@full"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.sum_gex_vol",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_CLASSIC_GEX_PROFILE::{zero->0DTE|one->NEXT|full->FULL}",
+      "evidence_families": [
+        "EF_DC_CLASSIC_GEX_PROFILE_ZERO",
+        "EF_DC_CLASSIC_GEX_PROFILE_NEXT__abot.classic.sum_gex_vol@one",
+        "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.classic.sum_gex_vol@full"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.sum_gex_oi",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_CLASSIC_GEX_PROFILE::{zero->0DTE|one->NEXT|full->FULL}",
+      "evidence_families": [
+        "EF_DC_CLASSIC_GEX_PROFILE_ZERO",
+        "EF_DC_CLASSIC_GEX_PROFILE_NEXT__abot.classic.sum_gex_oi@one",
+        "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.classic.sum_gex_oi@full"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.delta_risk_reversal",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "VOL_SKEW",
+      "possible_contribution_areas": [
+        "SENSITIVITY",
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_RISK_REVERSAL",
+      "evidence_families": [
+        "EF_DC_RISK_REVERSAL__abot.classic.delta_risk_reversal"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.max_priors[0..5]",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE",
+        "CHANGE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_CLASSIC_GEX_PROFILE::{zero->0DTE|one->NEXT|full->FULL}",
+      "evidence_families": [
+        "EF_DC_CLASSIC_GEX_PROFILE_ZERO",
+        "EF_DC_CLASSIC_GEX_PROFILE_NEXT__abot.classic.max_priors[0..5]@one",
+        "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.classic.max_priors[0..5]@full"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic.conversion",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic._relay.ticker",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic._relay.cat",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic._relay.cached",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic._relay.stale",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic._relay.age_ms",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic._relay.ttl_ms",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.classic._relay.served",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "CLASSIC /gexbot/classic/{T}/{zero|one|full} — AlfaOmegaClassic",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_CLASSIC",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.cache.t",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "AoClassicCache (PersistCache do AlfaOmegaClassic) — historico local",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "HISTORY_LOCAL",
+      "freshness_rule": "FR_CACHE_HISTORY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.cache.sp",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "AoClassicCache (PersistCache do AlfaOmegaClassic) — historico local",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "PRICE_REFERENCE",
+      "possible_contribution_areas": [
+        "CONTEXT"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "HISTORY_LOCAL",
+      "freshness_rule": "FR_CACHE_HISTORY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_SPOT_PRICE",
+      "evidence_families": [
+        "EF_DC_SPOT_PRICE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.cache.zg",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "AoClassicCache (PersistCache do AlfaOmegaClassic) — historico local",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "GAMMA_REGIME",
+      "possible_contribution_areas": [
+        "REGIME"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "REGIME_CONTEXT",
+      "quality_state": "OK",
+      "availability": "HISTORY_LOCAL",
+      "freshness_rule": "FR_CACHE_HISTORY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_ZERO_GAMMA_FULL",
+      "evidence_families": [
+        "EF_DC_ZERO_GAMMA_FULL__abot.cache.zg"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.cache.mpv",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "AoClassicCache (PersistCache do AlfaOmegaClassic) — historico local",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "HISTORY_LOCAL",
+      "freshness_rule": "FR_CACHE_HISTORY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_MAJORS_FULL",
+      "evidence_families": [
+        "EF_DC_MAJORS_FULL"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.cache.mnv",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "AoClassicCache (PersistCache do AlfaOmegaClassic) — historico local",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "HISTORY_LOCAL",
+      "freshness_rule": "FR_CACHE_HISTORY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_MAJORS_FULL",
+      "evidence_families": [
+        "EF_DC_MAJORS_FULL"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.cache.mpo",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "AoClassicCache (PersistCache do AlfaOmegaClassic) — historico local",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "HISTORY_LOCAL",
+      "freshness_rule": "FR_CACHE_HISTORY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_MAJORS_FULL",
+      "evidence_families": [
+        "EF_DC_MAJORS_FULL"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.cache.mno",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "AoClassicCache (PersistCache do AlfaOmegaClassic) — historico local",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "HISTORY_LOCAL",
+      "freshness_rule": "FR_CACHE_HISTORY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_MAJORS_FULL",
+      "evidence_families": [
+        "EF_DC_MAJORS_FULL"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.cache.sv",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "AoClassicCache (PersistCache do AlfaOmegaClassic) — historico local",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "HISTORY_LOCAL",
+      "freshness_rule": "FR_CACHE_HISTORY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+      "evidence_families": [
+        "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.cache.sv"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.cache.so",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "AoClassicCache (PersistCache do AlfaOmegaClassic) — historico local",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "HISTORY_LOCAL",
+      "freshness_rule": "FR_CACHE_HISTORY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+      "evidence_families": [
+        "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.cache.so"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.cache.cm",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "AoClassicCache (PersistCache do AlfaOmegaClassic) — historico local",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "HISTORY_LOCAL",
+      "freshness_rule": "FR_CACHE_HISTORY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.cache.ca",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "AoClassicCache (PersistCache do AlfaOmegaClassic) — historico local",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "HISTORY_LOCAL",
+      "freshness_rule": "FR_CACHE_HISTORY",
+      "lineage_group": "LG_CLASSIC_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.timestamp",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.ticker",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.min_dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.sec_min_dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.spot",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "PRICE_REFERENCE",
+      "possible_contribution_areas": [
+        "CONTEXT"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_SPOT_PRICE",
+      "evidence_families": [
+        "EF_DC_SPOT_PRICE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.zero_gamma",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "DEGENERATE",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.major_pos_vol",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_MAJORS::{gex_zero->0DTE|gex_one->NEXT|gex_full->FULL}",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE",
+        "EF_DC_MAJORS_NEXT",
+        "EF_DC_MAJORS_FULL"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.major_pos_oi",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "DEGENERATE",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_MAJORS::{gex_zero->0DTE|gex_one->NEXT|gex_full->FULL}",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE",
+        "EF_DC_MAJORS_NEXT",
+        "EF_DC_MAJORS_FULL"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.major_neg_vol",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_MAJORS::{gex_zero->0DTE|gex_one->NEXT|gex_full->FULL}",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE",
+        "EF_DC_MAJORS_NEXT",
+        "EF_DC_MAJORS_FULL"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.major_neg_oi",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "DEGENERATE",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_MAJORS::{gex_zero->0DTE|gex_one->NEXT|gex_full->FULL}",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE",
+        "EF_DC_MAJORS_NEXT",
+        "EF_DC_MAJORS_FULL"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.strikes[].strike",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "GAMMA_REGIME",
+      "possible_contribution_areas": [
+        "REGIME"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_STATE_GEX_PROFILE::{gex_zero->0DTE|gex_one->NEXT|gex_full->FULL}",
+      "evidence_families": [
+        "EF_DC_GEX0_SIGN",
+        "EF_DC_GEX_NEXT",
+        "EF_DC_STATE_GEX_PROFILE_FULL__abot.state_gex.strikes[].strike@gex_full"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.strikes[].gex_vol",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "GAMMA_REGIME",
+      "possible_contribution_areas": [
+        "REGIME",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_STATE_GEX_PROFILE::{gex_zero->0DTE|gex_one->NEXT|gex_full->FULL}",
+      "evidence_families": [
+        "EF_DC_GEX0_SIGN",
+        "EF_DC_GEX_NEXT",
+        "EF_DC_STATE_GEX_PROFILE_FULL__abot.state_gex.strikes[].gex_vol@gex_full"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.strikes[].gex_oi",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "DEGENERATE",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.strikes[].priors[0..4]",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "GAMMA_REGIME",
+      "possible_contribution_areas": [
+        "REGIME",
+        "CHANGE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_STATE_GEX_PROFILE::{gex_zero->0DTE|gex_one->NEXT|gex_full->FULL}",
+      "evidence_families": [
+        "EF_DC_GEX0_SIGN",
+        "EF_DC_GEX_NEXT",
+        "EF_DC_STATE_GEX_PROFILE_FULL__abot.state_gex.strikes[].priors[0..4]@gex_full"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.sum_gex_vol",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "GAMMA_REGIME",
+      "possible_contribution_areas": [
+        "REGIME",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "REGIME_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_STATE_GEX_PROFILE::{gex_zero->0DTE|gex_one->NEXT|gex_full->FULL}",
+      "evidence_families": [
+        "EF_DC_GEX0_SIGN",
+        "EF_DC_GEX_NEXT",
+        "EF_DC_STATE_GEX_PROFILE_FULL__abot.state_gex.sum_gex_vol@gex_full"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.sum_gex_oi",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "DEGENERATE",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.delta_risk_reversal",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "VOL_SKEW",
+      "possible_contribution_areas": [
+        "SENSITIVITY",
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_RISK_REVERSAL",
+      "evidence_families": [
+        "EF_DC_RISK_REVERSAL__abot.state_gex.delta_risk_reversal"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.max_priors[0..5]",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "GAMMA_REGIME",
+      "possible_contribution_areas": [
+        "REGIME",
+        "CHANGE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_STATE_GEX_PROFILE::{gex_zero->0DTE|gex_one->NEXT|gex_full->FULL}",
+      "evidence_families": [
+        "EF_DC_GEX0_SIGN",
+        "EF_DC_GEX_NEXT",
+        "EF_DC_STATE_GEX_PROFILE_FULL__abot.state_gex.max_priors[0..5]@gex_full"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex.conversion",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.ticker",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.cat",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.cached",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.stale",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.age_ms",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.ttl_ms",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.served",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.grade",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.n",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_gex._relay.tem_majors",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/gex_{zero|one|full} (GexProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.timestamp",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.ticker",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.spot",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "PRICE_REFERENCE",
+      "possible_contribution_areas": [
+        "CONTEXT"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_SPOT_PRICE",
+      "evidence_families": [
+        "EF_DC_SPOT_PRICE"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.min_dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.sec_min_dte",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.major_positive",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_MAJORS::{*_zero->0DTE|*_one->NEXT}",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE",
+        "EF_DC_MAJORS_NEXT"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.major_negative",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_MAJORS::{*_zero->0DTE|*_one->NEXT}",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE",
+        "EF_DC_MAJORS_NEXT"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.major_long_gamma",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_MAJORS::{*_zero->0DTE|*_one->NEXT}",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE",
+        "EF_DC_MAJORS_NEXT"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.major_short_gamma",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "STRUCTURE_LOCATION",
+      "possible_contribution_areas": [
+        "LOCATION",
+        "STRUCTURE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "LOCATION_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_MAJORS::{*_zero->0DTE|*_one->NEXT}",
+      "evidence_families": [
+        "EF_DC_MAJORS_0DTE",
+        "EF_DC_MAJORS_NEXT"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.mini_contracts[].strike",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.mini_contracts[].call_ivol",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "VOL_SKEW",
+      "possible_contribution_areas": [
+        "SENSITIVITY",
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_STATE_IVOL::{*_zero->0DTE|*_one->NEXT}",
+      "evidence_families": [
+        "EF_DC_STATE_IVOL__abot.state_greek.mini_contracts[].call_ivol@*_zero",
+        "EF_DC_STATE_IVOL__abot.state_greek.mini_contracts[].call_ivol@*_one"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.mini_contracts[].put_ivol",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "VOL_SKEW",
+      "possible_contribution_areas": [
+        "SENSITIVITY",
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "SUPPORTING_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_STATE_IVOL::{*_zero->0DTE|*_one->NEXT}",
+      "evidence_families": [
+        "EF_DC_STATE_IVOL__abot.state_greek.mini_contracts[].put_ivol@*_zero",
+        "EF_DC_STATE_IVOL__abot.state_greek.mini_contracts[].put_ivol@*_one"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.mini_contracts[].col5",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "UNKNOWN",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_UNKNOWN_COLUMNS",
+      "evidence_families": [
+        "EF_DC_UNKNOWN_COLUMNS"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.mini_contracts[].col6",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "UNKNOWN",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_UNKNOWN_COLUMNS",
+      "evidence_families": [
+        "EF_DC_UNKNOWN_COLUMNS"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.conversion",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.delta.mini_contracts[].greek_value",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DELTA_POSITIONING",
+      "possible_contribution_areas": [
+        "FLOW",
+        "SENSITIVITY",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_DEX::{*_zero->0DTE|*_one->NEXT} (SUSPECTED: delta por strike vs dex agregado)",
+      "evidence_families": [
+        "EF_DC_DEX_0DTE__SUSPECTED__abot.state_greek.delta.mini_contracts[].greek_value@*_zero",
+        "EF_DC_DEX_NEXT__SUSPECTED__abot.state_greek.delta.mini_contracts[].greek_value@*_one"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.delta.mini_contracts[].priors[0..2]",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "DELTA_POSITIONING",
+      "possible_contribution_areas": [
+        "FLOW",
+        "SENSITIVITY",
+        "CHANGE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_DEX::{*_zero->0DTE|*_one->NEXT} (SUSPECTED: delta por strike vs dex agregado)",
+      "evidence_families": [
+        "EF_DC_DEX_0DTE__SUSPECTED__abot.state_greek.delta.mini_contracts[].priors[0..2]@*_zero",
+        "EF_DC_DEX_NEXT__SUSPECTED__abot.state_greek.delta.mini_contracts[].priors[0..2]@*_one"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.gamma.mini_contracts[].greek_value",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "GAMMA_REGIME",
+      "possible_contribution_areas": [
+        "REGIME",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_GEX_SIGN::{*_zero->0DTE|*_one->NEXT} (SUSPECTED)",
+      "evidence_families": [
+        "EF_DC_GEX0_SIGN__SUSPECTED__abot.state_greek.gamma.mini_contracts[].greek_value@*_zero",
+        "EF_DC_GEX_NEXT__SUSPECTED__abot.state_greek.gamma.mini_contracts[].greek_value@*_one"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.gamma.mini_contracts[].priors[0..2]",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "GAMMA_REGIME",
+      "possible_contribution_areas": [
+        "REGIME",
+        "CHANGE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_GEX_SIGN::{*_zero->0DTE|*_one->NEXT} (SUSPECTED)",
+      "evidence_families": [
+        "EF_DC_GEX0_SIGN__SUSPECTED__abot.state_greek.gamma.mini_contracts[].priors[0..2]@*_zero",
+        "EF_DC_GEX_NEXT__SUSPECTED__abot.state_greek.gamma.mini_contracts[].priors[0..2]@*_one"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.vanna.mini_contracts[].greek_value",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "possible_contribution_areas": [
+        "SENSITIVITY",
+        "CHANGE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_VANNA::{*_zero->0DTE|*_one->NEXT} (SUSPECTED)",
+      "evidence_families": [
+        "EF_DC_VANNA_0DTE__SUSPECTED__abot.state_greek.vanna.mini_contracts[].greek_value@*_zero",
+        "EF_DC_VANNA_NEXT__SUSPECTED__abot.state_greek.vanna.mini_contracts[].greek_value@*_one"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.vanna.mini_contracts[].priors[0..2]",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "possible_contribution_areas": [
+        "SENSITIVITY",
+        "CHANGE",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_VANNA::{*_zero->0DTE|*_one->NEXT} (SUSPECTED)",
+      "evidence_families": [
+        "EF_DC_VANNA_0DTE__SUSPECTED__abot.state_greek.vanna.mini_contracts[].priors[0..2]@*_zero",
+        "EF_DC_VANNA_NEXT__SUSPECTED__abot.state_greek.vanna.mini_contracts[].priors[0..2]@*_one"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.charm.mini_contracts[].greek_value",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "possible_contribution_areas": [
+        "SENSITIVITY",
+        "CHANGE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_CHARM::{*_zero->0DTE|*_one->NEXT} (SUSPECTED)",
+      "evidence_families": [
+        "EF_DC_CHARM_0DTE__SUSPECTED__abot.state_greek.charm.mini_contracts[].greek_value@*_zero",
+        "EF_DC_CHARM_NEXT__SUSPECTED__abot.state_greek.charm.mini_contracts[].greek_value@*_one"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek.charm.mini_contracts[].priors[0..2]",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "possible_contribution_areas": [
+        "SENSITIVITY",
+        "CHANGE"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "STRUCTURE_CONTEXT",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_CHARM::{*_zero->0DTE|*_one->NEXT} (SUSPECTED)",
+      "evidence_families": [
+        "EF_DC_CHARM_0DTE__SUSPECTED__abot.state_greek.charm.mini_contracts[].priors[0..2]@*_zero",
+        "EF_DC_CHARM_NEXT__SUSPECTED__abot.state_greek.charm.mini_contracts[].priors[0..2]@*_one"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.ticker",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.cat",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.cached",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.stale",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.age_ms",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.ttl_ms",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.served",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.grade",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.n",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "abot.state_greek._relay.tem_majors",
+      "source_system": "A-Bot/GammaGex (GexBot vendor -> GammaGex :3530 -> relay :3457)",
+      "source_component": "STATE /gexbot/state/{T}/{delta|gamma|vanna|charm}_{zero|one} (OptionsProfile) — AlfaOmegaState",
+      "market_origin": "SPX",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "OK",
+      "availability": "LIVE",
+      "freshness_rule": "FR_STATE",
+      "lineage_group": "LG_STATE_SPX",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.gamma_mm",
+      "source_system": "SpotGamma_TRACE",
+      "source_component": "SpotGamma TRACE (vendor; captura aditiva 1D em ~/.claude/sg-directional-capture/raw/TRACE*)",
+      "market_origin": "SPX",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SPX_FINAL_GAMMA",
+      "possible_contribution_areas": [
+        "REGIME",
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "FINAL_DECISION_CONTEXT",
+      "quality_state": "PENDING_REVISION_AUDIT",
+      "availability": "CAPTURED_1D",
+      "freshness_rule": "FR_TRACE",
+      "lineage_group": "LG_SPX_OPTIONS_TRADES_SPOTGAMMA",
+      "double_counting_group": "DC_SPX_FINAL_GAMMA",
+      "evidence_families": [
+        "EF_DC_SPX_FINAL_GAMMA__spx_final_context.trace.gamma_mm"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.gamma_cust",
+      "source_system": "SpotGamma_TRACE",
+      "source_component": "SpotGamma TRACE (vendor; captura aditiva 1D em ~/.claude/sg-directional-capture/raw/TRACE*)",
+      "market_origin": "SPX",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SPX_FINAL_TRACE",
+      "possible_contribution_areas": [
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "FINAL_DECISION_CONTEXT",
+      "quality_state": "PENDING_REVISION_AUDIT",
+      "availability": "CAPTURED_1D",
+      "freshness_rule": "FR_TRACE",
+      "lineage_group": "LG_SPX_OPTIONS_TRADES_SPOTGAMMA",
+      "double_counting_group": "DC_SPX_TRACE_PARTICIPANTS",
+      "evidence_families": [
+        "EF_DC_SPX_TRACE_PARTICIPANTS__spx_final_context.trace.gamma_cust"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.gamma_procust",
+      "source_system": "SpotGamma_TRACE",
+      "source_component": "SpotGamma TRACE (vendor; captura aditiva 1D em ~/.claude/sg-directional-capture/raw/TRACE*)",
+      "market_origin": "SPX",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SPX_FINAL_TRACE",
+      "possible_contribution_areas": [
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "FINAL_DECISION_CONTEXT",
+      "quality_state": "PENDING_REVISION_AUDIT",
+      "availability": "CAPTURED_1D",
+      "freshness_rule": "FR_TRACE",
+      "lineage_group": "LG_SPX_OPTIONS_TRADES_SPOTGAMMA",
+      "double_counting_group": "DC_SPX_TRACE_PARTICIPANTS",
+      "evidence_families": [
+        "EF_DC_SPX_TRACE_PARTICIPANTS__spx_final_context.trace.gamma_procust"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.gamma_firm",
+      "source_system": "SpotGamma_TRACE",
+      "source_component": "SpotGamma TRACE (vendor; captura aditiva 1D em ~/.claude/sg-directional-capture/raw/TRACE*)",
+      "market_origin": "SPX",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SPX_FINAL_TRACE",
+      "possible_contribution_areas": [
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "FINAL_DECISION_CONTEXT",
+      "quality_state": "PENDING_REVISION_AUDIT",
+      "availability": "CAPTURED_1D",
+      "freshness_rule": "FR_TRACE",
+      "lineage_group": "LG_SPX_OPTIONS_TRADES_SPOTGAMMA",
+      "double_counting_group": "DC_SPX_TRACE_PARTICIPANTS",
+      "evidence_families": [
+        "EF_DC_SPX_TRACE_PARTICIPANTS__spx_final_context.trace.gamma_firm"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.gamma_bd",
+      "source_system": "SpotGamma_TRACE",
+      "source_component": "SpotGamma TRACE (vendor; captura aditiva 1D em ~/.claude/sg-directional-capture/raw/TRACE*)",
+      "market_origin": "SPX",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SPX_FINAL_TRACE",
+      "possible_contribution_areas": [
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "FINAL_DECISION_CONTEXT",
+      "quality_state": "PENDING_REVISION_AUDIT",
+      "availability": "CAPTURED_1D",
+      "freshness_rule": "FR_TRACE",
+      "lineage_group": "LG_SPX_OPTIONS_TRADES_SPOTGAMMA",
+      "double_counting_group": "DC_SPX_TRACE_PARTICIPANTS",
+      "evidence_families": [
+        "EF_DC_SPX_TRACE_PARTICIPANTS__spx_final_context.trace.gamma_bd"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.delta_pressure",
+      "source_system": "SpotGamma_TRACE",
+      "source_component": "SpotGamma TRACE (vendor; captura aditiva 1D em ~/.claude/sg-directional-capture/raw/TRACE*)",
+      "market_origin": "SPX",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SPX_FINAL_TRACE",
+      "possible_contribution_areas": [
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "FINAL_DECISION_CONTEXT",
+      "quality_state": "INSUFFICIENT_INFORMATION",
+      "availability": "NOT_CAPTURED",
+      "freshness_rule": "FR_TRACE",
+      "lineage_group": "LG_SPX_OPTIONS_TRADES_SPOTGAMMA",
+      "double_counting_group": "DC_SPX_TRACE_DELTA",
+      "evidence_families": [
+        "EF_DC_SPX_TRACE_DELTA__spx_final_context.trace.delta_pressure"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.charm_pressure",
+      "source_system": "SpotGamma_TRACE",
+      "source_component": "SpotGamma TRACE (vendor; captura aditiva 1D em ~/.claude/sg-directional-capture/raw/TRACE*)",
+      "market_origin": "SPX",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SPX_FINAL_TRACE",
+      "possible_contribution_areas": [
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "FINAL_DECISION_CONTEXT",
+      "quality_state": "INSUFFICIENT_INFORMATION",
+      "availability": "NOT_CAPTURED",
+      "freshness_rule": "FR_TRACE",
+      "lineage_group": "LG_SPX_OPTIONS_TRADES_SPOTGAMMA",
+      "double_counting_group": "DC_SPX_TRACE_CHARM",
+      "evidence_families": [
+        "EF_DC_SPX_TRACE_CHARM__spx_final_context.trace.charm_pressure"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.stats",
+      "source_system": "SpotGamma_TRACE",
+      "source_component": "SpotGamma TRACE (vendor; captura aditiva 1D em ~/.claude/sg-directional-capture/raw/TRACE*)",
+      "market_origin": "SPX",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SPX_FINAL_GAMMA",
+      "possible_contribution_areas": [
+        "REGIME",
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "FINAL_DECISION_CONTEXT",
+      "quality_state": "PENDING_REVISION_AUDIT",
+      "availability": "CAPTURED_1D",
+      "freshness_rule": "FR_TRACE",
+      "lineage_group": "LG_SPX_OPTIONS_TRADES_SPOTGAMMA",
+      "double_counting_group": "DC_SPX_FINAL_GAMMA",
+      "evidence_families": [
+        "EF_DC_SPX_FINAL_GAMMA__spx_final_context.trace.stats"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "spx_final_context.trace.timestamps",
+      "source_system": "SpotGamma_TRACE",
+      "source_component": "SpotGamma TRACE (vendor; captura aditiva 1D em ~/.claude/sg-directional-capture/raw/TRACE*)",
+      "market_origin": "SPX",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "METADATA",
+      "possible_contribution_areas": [
+        "DIAGNOSTIC",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "DIAGNOSTIC_ONLY",
+      "quality_state": "PENDING_REVISION_AUDIT",
+      "availability": "CAPTURED_1D",
+      "freshness_rule": "FR_TRACE",
+      "lineage_group": "LG_SPX_OPTIONS_TRADES_SPOTGAMMA",
+      "double_counting_group": "DC_NON_EVIDENCE_META",
+      "evidence_families": [
+        "EF_DC_NON_EVIDENCE_META"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "spx_final_context.volsignals.gammaExposure",
+      "source_system": "VolSignals",
+      "source_component": "VolSignals (protobuf/RPC; pipeline identificado)",
+      "market_origin": "SPX",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SPX_FINAL_GAMMA",
+      "possible_contribution_areas": [
+        "REGIME",
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "FINAL_DECISION_CONTEXT",
+      "quality_state": "PARTIAL_ANALOG",
+      "availability": "PIPELINE_IDENTIFIED",
+      "freshness_rule": "FR_VOLSIGNALS",
+      "lineage_group": "LG_SPX_OPTIONS_VOLSIGNALS",
+      "double_counting_group": "DC_SPX_FINAL_GAMMA",
+      "evidence_families": [
+        "EF_DC_SPX_FINAL_GAMMA__spx_final_context.volsignals.gammaExposure"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "spx_final_context.volsignals.charmExposure",
+      "source_system": "VolSignals",
+      "source_component": "VolSignals (protobuf/RPC; pipeline identificado)",
+      "market_origin": "SPX",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "possible_contribution_areas": [
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "FINAL_DECISION_CONTEXT",
+      "quality_state": "INSUFFICIENT_INFORMATION",
+      "availability": "PIPELINE_IDENTIFIED",
+      "freshness_rule": "FR_VOLSIGNALS",
+      "lineage_group": "LG_SPX_OPTIONS_VOLSIGNALS",
+      "double_counting_group": "DC_SPX_VOLSIGNALS_CHARM",
+      "evidence_families": [
+        "EF_DC_SPX_VOLSIGNALS_CHARM__spx_final_context.volsignals.charmExposure"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "spx_final_context.volsignals.deltaChangeExposure",
+      "source_system": "VolSignals",
+      "source_component": "VolSignals (protobuf/RPC; pipeline identificado)",
+      "market_origin": "SPX",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "possible_contribution_areas": [
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "FINAL_DECISION_CONTEXT",
+      "quality_state": "INSUFFICIENT_INFORMATION",
+      "availability": "PIPELINE_IDENTIFIED",
+      "freshness_rule": "FR_VOLSIGNALS",
+      "lineage_group": "LG_SPX_OPTIONS_VOLSIGNALS",
+      "double_counting_group": "DC_SPX_VOLSIGNALS_DELTACHANGE",
+      "evidence_families": [
+        "EF_DC_SPX_VOLSIGNALS_DELTACHANGE__spx_final_context.volsignals.deltaChangeExposure"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "spx_final_context.volsignals.deltaTotalExposure",
+      "source_system": "VolSignals",
+      "source_component": "VolSignals (protobuf/RPC; pipeline identificado)",
+      "market_origin": "SPX",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "possible_contribution_areas": [
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "FINAL_DECISION_CONTEXT",
+      "quality_state": "INSUFFICIENT_INFORMATION",
+      "availability": "PIPELINE_IDENTIFIED",
+      "freshness_rule": "FR_VOLSIGNALS",
+      "lineage_group": "LG_SPX_OPTIONS_VOLSIGNALS",
+      "double_counting_group": "DC_SPX_VOLSIGNALS_DELTATOTAL",
+      "evidence_families": [
+        "EF_DC_SPX_VOLSIGNALS_DELTATOTAL__spx_final_context.volsignals.deltaTotalExposure"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "spx_final_context.volsignals.vannaExposure",
+      "source_system": "VolSignals",
+      "source_component": "VolSignals (protobuf/RPC; pipeline identificado)",
+      "market_origin": "SPX",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "possible_contribution_areas": [
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "FINAL_DECISION_CONTEXT",
+      "quality_state": "INSUFFICIENT_INFORMATION",
+      "availability": "PIPELINE_IDENTIFIED",
+      "freshness_rule": "FR_VOLSIGNALS",
+      "lineage_group": "LG_SPX_OPTIONS_VOLSIGNALS",
+      "double_counting_group": "DC_SPX_VOLSIGNALS_VANNA",
+      "evidence_families": [
+        "EF_DC_SPX_VOLSIGNALS_VANNA__spx_final_context.volsignals.vannaExposure"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "spx_final_context.volsignals.volgaExposure",
+      "source_system": "VolSignals",
+      "source_component": "VolSignals (protobuf/RPC; pipeline identificado)",
+      "market_origin": "SPX",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "possible_contribution_areas": [
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "FINAL_DECISION_CONTEXT",
+      "quality_state": "INSUFFICIENT_INFORMATION",
+      "availability": "PIPELINE_IDENTIFIED",
+      "freshness_rule": "FR_VOLSIGNALS",
+      "lineage_group": "LG_SPX_OPTIONS_VOLSIGNALS",
+      "double_counting_group": "DC_SPX_VOLSIGNALS_VOLGA",
+      "evidence_families": [
+        "EF_DC_SPX_VOLSIGNALS_VOLGA__spx_final_context.volsignals.volgaExposure"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    },
+    {
+      "feature_id": "spx_final_context.volsignals.deltaExposureDiff",
+      "source_system": "VolSignals",
+      "source_component": "VolSignals (protobuf/RPC; pipeline identificado)",
+      "market_origin": "SPX",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "analysis_use": "ANALYZED_IN_FULL",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "possible_contribution_areas": [
+        "CONTEXT",
+        "UNRESOLVED"
+      ],
+      "possible_contribution_areas_status": "PROVISIONAL_DESIGN_MAPPING",
+      "jev_role_label": "FINAL_DECISION_CONTEXT",
+      "quality_state": "INSUFFICIENT_INFORMATION",
+      "availability": "PIPELINE_IDENTIFIED",
+      "freshness_rule": "FR_VOLSIGNALS",
+      "lineage_group": "LG_SPX_OPTIONS_VOLSIGNALS",
+      "double_counting_group": "DC_SPX_VOLSIGNALS_DELTADIFF",
+      "evidence_families": [
+        "EF_DC_SPX_VOLSIGNALS_DELTADIFF"
+      ],
+      "policy_overlay": null,
+      "is_vote": false
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "_meta": {
+    "project": "ALFA OMEGA JEV FUTURE",
+    "version": "v1",
+    "date": "2026-09-23",
+    "status": "DEFINITION ONLY",
+    "implementation": "NONE",
+    "production": "UNCHANGED",
+    "f5": "NOT PERFORMED",
+    "doc": "JEV_DECISION_LOGIC_V1_20260923.md",
+    "schema": "jev-future/output/v1",
+    "nature": "CLASSIFICACAO DE ESTADO/CONFLUENCIA — nao e ordem de trade"
+  },
+  "enums": {
+    "jev_directional_context": [
+      "LONG_CONTEXT",
+      "SHORT_CONTEXT",
+      "NEUTRAL_CONTEXT",
+      "CONFLICTED_CONTEXT",
+      "NO_TRADE_CONTEXT",
+      "UNKNOWN"
+    ],
+    "state_distinctions": {
+      "DATA_INVALID": "dados insuficientes/invalidos para classificar (vive em data_quality.status; jev_directional_context = UNKNOWN com reason DATA_INVALID)",
+      "UNKNOWN": "dados validos, mas o Jev nao consegue classificar (semantica/lineage insuficiente)",
+      "NEUTRAL_CONTEXT": "dados validos, sem inclinacao direcional",
+      "CONFLICTED_CONTEXT": "dados validos, familias com leituras opostas",
+      "NO_TRADE_CONTEXT": "dados validos; o Jev classifica o estado como desfavoravel a exposicao direcional (criterios TO_BE_PREREGISTERED)"
+    },
+    "data_quality_status": [
+      "VALID",
+      "DEGRADED",
+      "DATA_INVALID"
+    ],
+    "freshness_state": [
+      "FRESH",
+      "STALE",
+      "FROZEN",
+      "FROZEN_VALUES",
+      "MARKET_CLOSED",
+      "UNKNOWN"
+    ],
+    "spx_effect_on_native": [
+      "CONFIRMS",
+      "CONTRADICTS",
+      "ENRICHES",
+      "NO_EFFECT",
+      "UNAVAILABLE"
+    ],
+    "core_comparison": [
+      "ALIGNED",
+      "CONTRARY",
+      "MIXED",
+      "UNKNOWN",
+      "NOT_AVAILABLE"
+    ],
+    "conviction": [
+      "UNCALIBRATED"
+    ],
+    "menthorq_confirmation": [
+      "POSITIVE",
+      "ZERO"
+    ]
+  },
+  "shape": {
+    "jev_market_state": {
+      "target": "ES",
+      "evaluated_at": "<ts de avaliacao>",
+      "gamma_regime": "...",
+      "structure_location": "...",
+      "delta_positioning": "...",
+      "second_order_flows": "...",
+      "vol_skew": "...",
+      "flow_unknown_semantics": "..."
+    },
+    "native_directional_context": "jev_directional_context (so estagio B, antes do SPX final context)",
+    "jev_directional_context": "jev_directional_context (apos estagio C)",
+    "native_dealer_state": {
+      "<dimension>": {
+        "reading": "...",
+        "families": [
+          "EF_*"
+        ],
+        "freshness_state": "...",
+        "notes": []
+      }
+    },
+    "spx_final_context": {
+      "trace": {
+        "market_origin": "SPX",
+        "reading": "...",
+        "families": [
+          "EF_*"
+        ],
+        "freshness_state": "..."
+      },
+      "volsignals": {
+        "market_origin": "SPX",
+        "reading": "...",
+        "families": [
+          "EF_*"
+        ],
+        "freshness_state": "..."
+      },
+      "numeric_equivalence_allowed": false,
+      "effect_on_native": "CONFIRMS|CONTRADICTS|ENRICHES|NO_EFFECT|UNAVAILABLE"
+    },
+    "evidence_families": [
+      {
+        "family_id": "EF_*",
+        "kind": "...",
+        "reading": "...",
+        "overlap_risk": "..."
+      }
+    ],
+    "conflicts": [
+      {
+        "between": [
+          "EF_*",
+          "EF_*"
+        ],
+        "description": "..."
+      }
+    ],
+    "data_quality": {
+      "role": "DATA QUALITY / CLASSIFICATION INPUT (sem gate operacional)",
+      "status": "VALID|DEGRADED|DATA_INVALID",
+      "session": "RTH|OUTSIDE_RTH (informativo)",
+      "per_source": {
+        "<source_component>": {
+          "freshness_state": "...",
+          "basis": "VENDOR_TIMESTAMP"
+        }
+      }
+    },
+    "reason_codes": [],
+    "source_contributions": [
+      {
+        "source_component": "...",
+        "families": [
+          "EF_*"
+        ],
+        "role_in_this_reading": "..."
+      }
+    ],
+    "unresolved_fields": [
+      {
+        "feature_id": "...",
+        "why": "UNKNOWN_SEMANTICS|UNKNOWN_UNIT|SIGN_CONVENTION_UNKNOWN|..."
+      }
+    ],
+    "menthorq": {
+      "confirmation": "POSITIVE|ZERO",
+      "policy": "POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING"
+    },
+    "conviction": "UNCALIBRATED",
+    "core_comparison": "ALIGNED|CONTRARY|MIXED|UNKNOWN|NOT_AVAILABLE",
+    "core_comparison_pair": {
+      "futures_core_side": "LONG|SHORT|NONE|null",
+      "jev_directional_context": "..."
+    },
+    "versions": {
+      "decision_logic": "v1",
+      "feature_contract": "v1",
+      "dc_groups": "v1",
+      "evidence_families": "v1"
+    }
+  },
+  "core_comparison_mapping": {
+    "note": "COMPARACAO, nao regra operacional",
+    "core LONG  x LONG_CONTEXT": "ALIGNED",
+    "core SHORT x SHORT_CONTEXT": "ALIGNED",
+    "core LONG  x SHORT_CONTEXT": "CONTRARY",
+    "core SHORT x LONG_CONTEXT": "CONTRARY",
+    "core LONG|SHORT x CONFLICTED_CONTEXT": "MIXED",
+    "core LONG|SHORT x NEUTRAL_CONTEXT|NO_TRADE_CONTEXT|UNKNOWN": "UNKNOWN (par preservado em core_comparison_pair)",
+    "core NONE ou ausente": "NOT_AVAILABLE"
+  },
+  "not_in_v1": [
+    "direcao final de trade",
+    "precedencia Core x Jev",
+    "pesos",
+    "regra de conviction",
+    "probabilidade",
+    "gate operacional"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+ "_meta": {
+  "project": "ALFA OMEGA JEV FUTURE",
+  "session": "507b9f4b",
+  "date": "2026-09-24",
+  "read_only": true,
+  "implementation": "NONE",
+  "evidence": "data/abot-gammagex-audit/{probe-4ind-out,basis-classic-vs-nt8,graphify-crossfile}.json"
+ },
+ "clusters": [
+  {
+   "id": "GEX0_SIGN",
+   "members": [
+    "gex.net_0dte",
+    "gamma_condition",
+    "state gex_zero.sum_gex_vol",
+    "rotulo COMPRA/VENDA"
+   ],
+   "risk": "HIGH",
+   "count_as": 1
+  },
+  {
+   "id": "MAJORS_0DTE",
+   "members": [
+    "zero_mcall=classic major_pos_vol",
+    "zero_mput=state major_neg_vol",
+    "z_mlgamma=state major_long_gamma",
+    "z_msgamma=state major_short_gamma=levels.short_gamma_0dte"
+   ],
+   "risk": "HIGH",
+   "count_as": 1
+  },
+  {
+   "id": "DEX_0DTE",
+   "members": [
+    "dex.net_0dte",
+    "pc_oi",
+    "dex call/put"
+   ],
+   "risk": "HIGH",
+   "count_as": 1
+  },
+  {
+   "id": "SECOND_ORDER",
+   "members": [
+    "vanna/charm.net_0dte",
+    "state vanna/charm por strike"
+   ],
+   "risk": "MEDIUM",
+   "count_as": 1
+  },
+  {
+   "id": "CLASSIC_ROOT",
+   "members": [
+    "raiz classic.*",
+    "/gexbot/classic/SPX/zero"
+   ],
+   "risk": "HIGH",
+   "note": "mesmo payload, mesmo instante"
+  },
+  {
+   "id": "SPX_vs_SPY",
+   "members": [
+    "ES_SPX",
+    "SPY"
+   ],
+   "risk": "MEDIUM",
+   "note": "ecossistemas correlatos; medir antes de somar"
+  },
+  {
+   "id": "ABOT_vs_SPOTGAMMA",
+   "members": [
+    "GammaGex",
+    "SpotGamma :3500"
+   ],
+   "risk": "MEDIUM",
+   "note": "mesmo upstream SPX_OPTIONS_TRADES"
+  }
+ ],
+ "rule": "uma evidencia por cluster; derivados do mesmo raw nunca sao confirmacoes independentes"
+}

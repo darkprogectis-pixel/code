@@ -1,0 +1,102 @@
+{
+  "purpose": "JEV Future research snapshot",
+  "read_only": true,
+  "implementation": "NONE",
+  "source_path": "C:\\Users\\ADM\\Documents\\NinjaTrader 8\\bin\\Custom\\AoClassicCache",
+  "snapshot_date": "2026-09-23",
+  "frozen_at_utc": "2026-09-24T00:53:33.465Z",
+  "file_count": 16,
+  "total_bytes": 6453452,
+  "date_range": "2026-09-02T19:59:59.000Z .. 2026-09-23T19:59:58.000Z (campo t, epoch s UTC)",
+  "aggregate_sha256": "992462a431e3800871e6ac2870ce564d5637a4af0a6ace2bdee91c68874df6d7",
+  "aggregate_sha256_method": "sha256 do texto \"<sha256>  <relative_path>\\n\" por arquivo, em ordem alfabetica",
+  "integrity": {
+    "source_count_before": 16,
+    "frozen_count": 16,
+    "count_match": true,
+    "hash_match": true,
+    "source_changed_after_copy": []
+  },
+  "files": [
+    {
+      "relative_path": "aoclassic_NDX_full_20260903.jsonl",
+      "bytes": 579815,
+      "sha256": "d04aad6561a52d6e87caf58c15e14603b612af7f7f6991a8103b6c24a4701625"
+    },
+    {
+      "relative_path": "aoclassic_NDX_full_20260904.jsonl",
+      "bytes": 794166,
+      "sha256": "e5d1f9d387e395be0e12e44cfddab291ed217638466c149eae72e31fe963bdee"
+    },
+    {
+      "relative_path": "aoclassic_NDX_full_20260922.jsonl",
+      "bytes": 366794,
+      "sha256": "1c3d9d0392c944310c50268f23bcbc9e57e33bde56004ec992890429512b3e15"
+    },
+    {
+      "relative_path": "aoclassic_NDX_full_20260923.jsonl",
+      "bytes": 473072,
+      "sha256": "83d6c01e0a2b82f0a1bb8e1f7d16729201f34c2869aed3dca172aec35252c1de"
+    },
+    {
+      "relative_path": "aoclassic_SPX_full_20260903.jsonl",
+      "bytes": 318486,
+      "sha256": "88b8f22579ced25d51d103f3a3be214804afe6fe12318c159cce6c64a4afbb5c"
+    },
+    {
+      "relative_path": "aoclassic_SPX_full_20260904.jsonl",
+      "bytes": 134970,
+      "sha256": "47e841d1c148d1cdf240ffac7238037ec35ba7e7b2dfdaafaa99c777c173ea0c"
+    },
+    {
+      "relative_path": "aoclassic_SPX_full_20260905.jsonl",
+      "bytes": 225683,
+      "sha256": "4186c644d00d0a1d35c52e8c302e8f2bdcdb1846ace350cb36f0bad84f27c1ad"
+    },
+    {
+      "relative_path": "aoclassic_SPX_full_20260911.jsonl",
+      "bytes": 40745,
+      "sha256": "56b8dfb850508a2d3b5ec0ce7e6d8a8469f778a6625e7db9a82d8b07dca2b92f"
+    },
+    {
+      "relative_path": "aoclassic_SPX_full_20260916.jsonl",
+      "bytes": 162503,
+      "sha256": "18e7c0763be420a3ec970171163460c5d377583f63bb55b115e509db974d3f5c"
+    },
+    {
+      "relative_path": "aoclassic_SPX_full_20260917.jsonl",
+      "bytes": 350984,
+      "sha256": "fd2c0ac7f51aa08a75c25936b27e914b26ca004b8eeaf5a629030991bae72af8"
+    },
+    {
+      "relative_path": "aoclassic_SPX_full_20260918.jsonl",
+      "bytes": 280830,
+      "sha256": "bd4eb1bc282576682cee782408ad63d734036225c5cd9ba64ee3a03f07708f8c"
+    },
+    {
+      "relative_path": "aoclassic_SPX_full_20260919.jsonl",
+      "bytes": 190659,
+      "sha256": "a23e33c1d078eb99d2b02905d82dc5337dcb23218d00a8e8363ae89ced2d5719"
+    },
+    {
+      "relative_path": "aoclassic_SPX_full_20260920.jsonl",
+      "bytes": 684003,
+      "sha256": "d9bf1818d6751a9f8c1efd35008b8f5eb1b52d7d83a5e0ce9eaf6c0d4d9dca3c"
+    },
+    {
+      "relative_path": "aoclassic_SPX_full_20260921.jsonl",
+      "bytes": 849656,
+      "sha256": "9adc126e7845f1536cb06ec4ee61c321be68ad5955e968bf1136d95502a82ca4"
+    },
+    {
+      "relative_path": "aoclassic_SPX_full_20260922.jsonl",
+      "bytes": 394329,
+      "sha256": "54eca333b3b5dd7cdcca78e18111209246dc268b706535496600a81153a97883"
+    },
+    {
+      "relative_path": "aoclassic_SPX_full_20260923.jsonl",
+      "bytes": 606757,
+      "sha256": "6db9f1d733ea9ddbf6aaade10b13834996b423b042be90f20efd7d5d6cd5092c"
+    }
+  ]
+}

@@ -1,0 +1,1787 @@
+{
+  "_meta": {
+    "project": "ALFA OMEGA JEV FUTURE",
+    "version": "v1",
+    "date": "2026-09-23",
+    "status": "DEFINITION ONLY",
+    "implementation": "NONE",
+    "production": "UNCHANGED",
+    "f5": "NOT PERFORMED",
+    "doc": "JEV_DECISION_LOGIC_V1_20260923.md",
+    "rule": "CONFIRMED ou BY_CONSTRUCTION => consolida em 1 familia; SUSPECTED, UNVERIFIED (sem status) e PARTIAL_ANALOG => membros separados com overlap_risk; count_as 0 => NON_EVIDENCE",
+    "rule_change_vs_feature_contract": "feature contract §2.5 (\"SUSPECTED conta junto\") trocado por ordem do operador 23/09: preservar separado e marcar risco",
+    "usage": "familias organizam a analise; contagem de familias NAO e decisao operacional"
+  },
+  "cross_group_relations": [
+    {
+      "a": "instancias SPX",
+      "b": "instancias SPY",
+      "relation": "ECOSSISTEMAS CORRELATOS (MEDIUM)",
+      "rule": "medir antes de somar; SPY market_origin=SPY"
+    },
+    {
+      "a": "abot.* (GammaGex)",
+      "b": "SpotGamma :3500 / spx_final_context.trace.*",
+      "relation": "MESMO UPSTREAM SPX_OPTIONS_TRADES (MEDIUM)",
+      "rule": "independencia UNKNOWN; nao contar como confirmacoes independentes sem medir lineage"
+    },
+    {
+      "a": "abot.* (GammaGex gamma/vanna/charm)",
+      "b": "spx_final_context.volsignals.*",
+      "relation": "UPSTREAM SPX PROVAVEL; metodologia distinta (Simulated)",
+      "rule": "independencia UNKNOWN"
+    },
+    {
+      "a": "DC_ZERO_GAMMA_0DTE",
+      "b": "DC_GEX0_SIGN",
+      "relation": "mesma familia de regime",
+      "rule": "1 familia de independencia"
+    },
+    {
+      "a": "abot.* antes de 09/09",
+      "b": "abot.* depois de 09/09",
+      "relation": "QUEBRA DE FONTE/ESCALA (GexBot->GammaGex; SPX cru -> ESZ6)",
+      "rule": "nunca misturar sem ajuste"
+    }
+  ],
+  "summary": {
+    "total": 102,
+    "by_kind": {
+      "SEPARATE_UNVERIFIED": 62,
+      "SEPARATE_SUSPECTED_OVERLAP": 16,
+      "CONSOLIDATED": 8,
+      "NON_EVIDENCE": 5,
+      "SEPARATE_SUSPECTED": 8,
+      "SEPARATE_PARTIAL_ANALOG": 3
+    }
+  },
+  "families": [
+    {
+      "family_id": "EF_DC_CHARM_0DTE__abot.root.charm.net_0dte",
+      "dc_group": "DC_CHARM_0DTE",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CHARM_0DTE",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.charm.net_0dte"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CHARM_0DTE__SUSPECTED__abot.state_greek.charm.mini_contracts[].greek_value@*_zero",
+      "dc_group": "DC_CHARM_0DTE",
+      "kind": "SEPARATE_SUSPECTED_OVERLAP",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CHARM_0DTE",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.charm.mini_contracts[].greek_value@*_zero"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CHARM_0DTE__SUSPECTED__abot.state_greek.charm.mini_contracts[].priors[0..2]@*_zero",
+      "dc_group": "DC_CHARM_0DTE",
+      "kind": "SEPARATE_SUSPECTED_OVERLAP",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CHARM_0DTE",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.charm.mini_contracts[].priors[0..2]@*_zero"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CHARM_NEXT__abot.root.charm.net_next",
+      "dc_group": "DC_CHARM_NEXT",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CHARM_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.charm.net_next"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CHARM_NEXT__SUSPECTED__abot.state_greek.charm.mini_contracts[].greek_value@*_one",
+      "dc_group": "DC_CHARM_NEXT",
+      "kind": "SEPARATE_SUSPECTED_OVERLAP",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CHARM_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.charm.mini_contracts[].greek_value@*_one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CHARM_NEXT__SUSPECTED__abot.state_greek.charm.mini_contracts[].priors[0..2]@*_one",
+      "dc_group": "DC_CHARM_NEXT",
+      "kind": "SEPARATE_SUSPECTED_OVERLAP",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CHARM_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.charm.mini_contracts[].priors[0..2]@*_one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.cache.so",
+      "dc_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.cache.so"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.cache.sv",
+      "dc_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.cache.sv"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.classic.max_priors[0..5]@full",
+      "dc_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.classic.max_priors[0..5]@full"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.classic.strikes[].gex_oi@full",
+      "dc_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.classic.strikes[].gex_oi@full"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.classic.strikes[].gex_vol@full",
+      "dc_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.classic.strikes[].gex_vol@full"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.classic.strikes[].priors[0..4]@full",
+      "dc_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.classic.strikes[].priors[0..4]@full"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.classic.strikes[].strike@full",
+      "dc_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.classic.strikes[].strike@full"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.classic.sum_gex_oi@full",
+      "dc_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.classic.sum_gex_oi@full"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CLASSIC_GEX_PROFILE_FULL__abot.classic.sum_gex_vol@full",
+      "dc_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CLASSIC_GEX_PROFILE_FULL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.classic.sum_gex_vol@full"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CLASSIC_GEX_PROFILE_NEXT__abot.classic.max_priors[0..5]@one",
+      "dc_group": "DC_CLASSIC_GEX_PROFILE_NEXT",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CLASSIC_GEX_PROFILE_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.classic.max_priors[0..5]@one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CLASSIC_GEX_PROFILE_NEXT__abot.classic.strikes[].gex_oi@one",
+      "dc_group": "DC_CLASSIC_GEX_PROFILE_NEXT",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CLASSIC_GEX_PROFILE_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.classic.strikes[].gex_oi@one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CLASSIC_GEX_PROFILE_NEXT__abot.classic.strikes[].gex_vol@one",
+      "dc_group": "DC_CLASSIC_GEX_PROFILE_NEXT",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CLASSIC_GEX_PROFILE_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.classic.strikes[].gex_vol@one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CLASSIC_GEX_PROFILE_NEXT__abot.classic.strikes[].priors[0..4]@one",
+      "dc_group": "DC_CLASSIC_GEX_PROFILE_NEXT",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CLASSIC_GEX_PROFILE_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.classic.strikes[].priors[0..4]@one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CLASSIC_GEX_PROFILE_NEXT__abot.classic.strikes[].strike@one",
+      "dc_group": "DC_CLASSIC_GEX_PROFILE_NEXT",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CLASSIC_GEX_PROFILE_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.classic.strikes[].strike@one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CLASSIC_GEX_PROFILE_NEXT__abot.classic.sum_gex_oi@one",
+      "dc_group": "DC_CLASSIC_GEX_PROFILE_NEXT",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CLASSIC_GEX_PROFILE_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.classic.sum_gex_oi@one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CLASSIC_GEX_PROFILE_NEXT__abot.classic.sum_gex_vol@one",
+      "dc_group": "DC_CLASSIC_GEX_PROFILE_NEXT",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_CLASSIC_GEX_PROFILE_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.classic.sum_gex_vol@one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_CLASSIC_GEX_PROFILE_ZERO",
+      "dc_group": "DC_CLASSIC_GEX_PROFILE_ZERO",
+      "kind": "CONSOLIDATED",
+      "lineage_basis": "CONFIRMED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": null,
+      "members": [
+        "abot.root.classic.sum_gex_vol",
+        "abot.root.classic.sum_gex_oi",
+        "abot.root.classic.strikes",
+        "abot.root.classic.max_priors",
+        "abot.classic.strikes[].strike@zero",
+        "abot.classic.strikes[].gex_vol@zero",
+        "abot.classic.strikes[].gex_oi@zero",
+        "abot.classic.strikes[].priors[0..4]@zero",
+        "abot.classic.sum_gex_vol@zero",
+        "abot.classic.sum_gex_oi@zero",
+        "abot.classic.max_priors[0..5]@zero"
+      ]
+    },
+    {
+      "family_id": "EF_DC_DEX_0DTE",
+      "dc_group": "DC_DEX_0DTE",
+      "kind": "CONSOLIDATED",
+      "lineage_basis": "CONFIRMED",
+      "dimension": "DELTA_POSITIONING",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": null,
+      "members": [
+        "abot.root.pc_oi",
+        "abot.root.dex.net_0dte",
+        "abot.root.dex.agg_0dte",
+        "abot.root.dex.net_call_0dte",
+        "abot.root.dex.net_put_0dte",
+        "abot.root.dex.agg_call_0dte",
+        "abot.root.dex.agg_put_0dte"
+      ]
+    },
+    {
+      "family_id": "EF_DC_DEX_0DTE__SUSPECTED__abot.state_greek.delta.mini_contracts[].greek_value@*_zero",
+      "dc_group": "DC_DEX_0DTE",
+      "kind": "SEPARATE_SUSPECTED_OVERLAP",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "DELTA_POSITIONING",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_DEX_0DTE",
+        "level": "HIGH",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.delta.mini_contracts[].greek_value@*_zero"
+      ]
+    },
+    {
+      "family_id": "EF_DC_DEX_0DTE__SUSPECTED__abot.state_greek.delta.mini_contracts[].priors[0..2]@*_zero",
+      "dc_group": "DC_DEX_0DTE",
+      "kind": "SEPARATE_SUSPECTED_OVERLAP",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "DELTA_POSITIONING",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_DEX_0DTE",
+        "level": "HIGH",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.delta.mini_contracts[].priors[0..2]@*_zero"
+      ]
+    },
+    {
+      "family_id": "EF_DC_DEX_NEXT__abot.root.dex.agg_call_next",
+      "dc_group": "DC_DEX_NEXT",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "DELTA_POSITIONING",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_DEX_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.dex.agg_call_next"
+      ]
+    },
+    {
+      "family_id": "EF_DC_DEX_NEXT__abot.root.dex.agg_next",
+      "dc_group": "DC_DEX_NEXT",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "DELTA_POSITIONING",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_DEX_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.dex.agg_next"
+      ]
+    },
+    {
+      "family_id": "EF_DC_DEX_NEXT__abot.root.dex.agg_put_next",
+      "dc_group": "DC_DEX_NEXT",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "DELTA_POSITIONING",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_DEX_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.dex.agg_put_next"
+      ]
+    },
+    {
+      "family_id": "EF_DC_DEX_NEXT__abot.root.dex.net_call_next",
+      "dc_group": "DC_DEX_NEXT",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "DELTA_POSITIONING",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_DEX_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.dex.net_call_next"
+      ]
+    },
+    {
+      "family_id": "EF_DC_DEX_NEXT__abot.root.dex.net_next",
+      "dc_group": "DC_DEX_NEXT",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "DELTA_POSITIONING",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_DEX_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.dex.net_next"
+      ]
+    },
+    {
+      "family_id": "EF_DC_DEX_NEXT__abot.root.dex.net_put_next",
+      "dc_group": "DC_DEX_NEXT",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "DELTA_POSITIONING",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_DEX_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.dex.net_put_next"
+      ]
+    },
+    {
+      "family_id": "EF_DC_DEX_NEXT__SUSPECTED__abot.state_greek.delta.mini_contracts[].greek_value@*_one",
+      "dc_group": "DC_DEX_NEXT",
+      "kind": "SEPARATE_SUSPECTED_OVERLAP",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "DELTA_POSITIONING",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_DEX_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.delta.mini_contracts[].greek_value@*_one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_DEX_NEXT__SUSPECTED__abot.state_greek.delta.mini_contracts[].priors[0..2]@*_one",
+      "dc_group": "DC_DEX_NEXT",
+      "kind": "SEPARATE_SUSPECTED_OVERLAP",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "DELTA_POSITIONING",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_DEX_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.delta.mini_contracts[].priors[0..2]@*_one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_GEX_NEXT",
+      "dc_group": "DC_GEX_NEXT",
+      "kind": "CONSOLIDATED",
+      "lineage_basis": "BY_CONSTRUCTION",
+      "dimension": "GAMMA_REGIME",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": null,
+      "members": [
+        "abot.root.gex.net_next",
+        "abot.state_gex.strikes[].strike@gex_one",
+        "abot.state_gex.strikes[].gex_vol@gex_one",
+        "abot.state_gex.strikes[].priors[0..4]@gex_one",
+        "abot.state_gex.sum_gex_vol@gex_one",
+        "abot.state_gex.max_priors[0..5]@gex_one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_GEX_NEXT__SUSPECTED__abot.state_greek.gamma.mini_contracts[].greek_value@*_one",
+      "dc_group": "DC_GEX_NEXT",
+      "kind": "SEPARATE_SUSPECTED_OVERLAP",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "GAMMA_REGIME",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_GEX_NEXT",
+        "level": "MEDIUM",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.gamma.mini_contracts[].greek_value@*_one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_GEX_NEXT__SUSPECTED__abot.state_greek.gamma.mini_contracts[].priors[0..2]@*_one",
+      "dc_group": "DC_GEX_NEXT",
+      "kind": "SEPARATE_SUSPECTED_OVERLAP",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "GAMMA_REGIME",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_GEX_NEXT",
+        "level": "MEDIUM",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.gamma.mini_contracts[].priors[0..2]@*_one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_GEX0_SIGN",
+      "dc_group": "DC_GEX0_SIGN",
+      "kind": "CONSOLIDATED",
+      "lineage_basis": "CONFIRMED",
+      "dimension": "GAMMA_REGIME",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": null,
+      "members": [
+        "abot.root.gamma_condition",
+        "abot.root.gex.net_0dte",
+        "abot.ind.netgex0dte.label_color",
+        "abot.state_gex.strikes[].strike@gex_zero",
+        "abot.state_gex.strikes[].gex_vol@gex_zero",
+        "abot.state_gex.strikes[].priors[0..4]@gex_zero",
+        "abot.state_gex.sum_gex_vol@gex_zero",
+        "abot.state_gex.max_priors[0..5]@gex_zero"
+      ]
+    },
+    {
+      "family_id": "EF_DC_GEX0_SIGN__SUSPECTED__abot.state_greek.gamma.mini_contracts[].greek_value@*_zero",
+      "dc_group": "DC_GEX0_SIGN",
+      "kind": "SEPARATE_SUSPECTED_OVERLAP",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "GAMMA_REGIME",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_GEX0_SIGN",
+        "level": "HIGH",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.gamma.mini_contracts[].greek_value@*_zero"
+      ]
+    },
+    {
+      "family_id": "EF_DC_GEX0_SIGN__SUSPECTED__abot.state_greek.gamma.mini_contracts[].priors[0..2]@*_zero",
+      "dc_group": "DC_GEX0_SIGN",
+      "kind": "SEPARATE_SUSPECTED_OVERLAP",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "GAMMA_REGIME",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_GEX0_SIGN",
+        "level": "HIGH",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.gamma.mini_contracts[].priors[0..2]@*_zero"
+      ]
+    },
+    {
+      "family_id": "EF_DC_MAJORS_0DTE",
+      "dc_group": "DC_MAJORS_0DTE",
+      "kind": "CONSOLIDATED",
+      "lineage_basis": "CONFIRMED",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": null,
+      "members": [
+        "abot.root.orderflow.zero_mcall",
+        "abot.root.orderflow.zero_mput",
+        "abot.root.orderflow.z_mlgamma",
+        "abot.root.orderflow.z_msgamma",
+        "abot.root.levels.short_gamma_0dte",
+        "abot.root.classic.major_pos_vol",
+        "abot.root.classic.major_neg_vol",
+        "abot.root.classic.major_pos_oi",
+        "abot.root.classic.major_neg_oi",
+        "abot.ind.dexgexflow.heat_trail",
+        "abot.classic.major_pos_vol@zero",
+        "abot.classic.major_pos_oi@zero",
+        "abot.classic.major_neg_vol@zero",
+        "abot.classic.major_neg_oi@zero",
+        "abot.state_gex.major_pos_vol@gex_zero",
+        "abot.state_gex.major_pos_oi@gex_zero",
+        "abot.state_gex.major_neg_vol@gex_zero",
+        "abot.state_gex.major_neg_oi@gex_zero",
+        "abot.state_greek.major_positive@*_zero",
+        "abot.state_greek.major_negative@*_zero",
+        "abot.state_greek.major_long_gamma@*_zero",
+        "abot.state_greek.major_short_gamma@*_zero"
+      ]
+    },
+    {
+      "family_id": "EF_DC_MAJORS_FULL",
+      "dc_group": "DC_MAJORS_FULL",
+      "kind": "CONSOLIDATED",
+      "lineage_basis": "BY_CONSTRUCTION",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": null,
+      "members": [
+        "abot.classic.major_pos_vol@full",
+        "abot.classic.major_pos_oi@full",
+        "abot.classic.major_neg_vol@full",
+        "abot.classic.major_neg_oi@full",
+        "abot.cache.mpv",
+        "abot.cache.mnv",
+        "abot.cache.mpo",
+        "abot.cache.mno",
+        "abot.state_gex.major_pos_vol@gex_full",
+        "abot.state_gex.major_pos_oi@gex_full",
+        "abot.state_gex.major_neg_vol@gex_full",
+        "abot.state_gex.major_neg_oi@gex_full"
+      ]
+    },
+    {
+      "family_id": "EF_DC_MAJORS_NEXT",
+      "dc_group": "DC_MAJORS_NEXT",
+      "kind": "CONSOLIDATED",
+      "lineage_basis": "BY_CONSTRUCTION",
+      "dimension": "STRUCTURE_LOCATION",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": null,
+      "members": [
+        "abot.root.levels.short_gamma_next",
+        "abot.root.levels.next_exp_hvl",
+        "abot.root.levels.next_exp_call_res",
+        "abot.root.levels.next_exp_put_sup",
+        "abot.classic.major_pos_vol@one",
+        "abot.classic.major_pos_oi@one",
+        "abot.classic.major_neg_vol@one",
+        "abot.classic.major_neg_oi@one",
+        "abot.state_gex.major_pos_vol@gex_one",
+        "abot.state_gex.major_pos_oi@gex_one",
+        "abot.state_gex.major_neg_vol@gex_one",
+        "abot.state_gex.major_neg_oi@gex_one",
+        "abot.state_greek.major_positive@*_one",
+        "abot.state_greek.major_negative@*_one",
+        "abot.state_greek.major_long_gamma@*_one",
+        "abot.state_greek.major_short_gamma@*_one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_MENTHORQ_LEVELS__abot.root.levels.call_resistance",
+      "dc_group": "DC_MENTHORQ_LEVELS",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_MENTHORQ_LEVELS",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.levels.call_resistance"
+      ]
+    },
+    {
+      "family_id": "EF_DC_MENTHORQ_LEVELS__abot.root.levels.call_resistance_0dte",
+      "dc_group": "DC_MENTHORQ_LEVELS",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_MENTHORQ_LEVELS",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.levels.call_resistance_0dte"
+      ]
+    },
+    {
+      "family_id": "EF_DC_MENTHORQ_LEVELS__abot.root.levels.day_max",
+      "dc_group": "DC_MENTHORQ_LEVELS",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_MENTHORQ_LEVELS",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.levels.day_max"
+      ]
+    },
+    {
+      "family_id": "EF_DC_MENTHORQ_LEVELS__abot.root.levels.day_min",
+      "dc_group": "DC_MENTHORQ_LEVELS",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_MENTHORQ_LEVELS",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.levels.day_min"
+      ]
+    },
+    {
+      "family_id": "EF_DC_MENTHORQ_LEVELS__abot.root.levels.distance_to_hvl_pct",
+      "dc_group": "DC_MENTHORQ_LEVELS",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_MENTHORQ_LEVELS",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.levels.distance_to_hvl_pct"
+      ]
+    },
+    {
+      "family_id": "EF_DC_MENTHORQ_LEVELS__abot.root.levels.gamma_wall_0dte",
+      "dc_group": "DC_MENTHORQ_LEVELS",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_MENTHORQ_LEVELS",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.levels.gamma_wall_0dte"
+      ]
+    },
+    {
+      "family_id": "EF_DC_MENTHORQ_LEVELS__abot.root.levels.hvl",
+      "dc_group": "DC_MENTHORQ_LEVELS",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_MENTHORQ_LEVELS",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.levels.hvl"
+      ]
+    },
+    {
+      "family_id": "EF_DC_MENTHORQ_LEVELS__abot.root.levels.hvl_0dte",
+      "dc_group": "DC_MENTHORQ_LEVELS",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_MENTHORQ_LEVELS",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.levels.hvl_0dte"
+      ]
+    },
+    {
+      "family_id": "EF_DC_MENTHORQ_LEVELS__abot.root.levels.put_support",
+      "dc_group": "DC_MENTHORQ_LEVELS",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_MENTHORQ_LEVELS",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.levels.put_support"
+      ]
+    },
+    {
+      "family_id": "EF_DC_MENTHORQ_LEVELS__abot.root.levels.put_support_0dte",
+      "dc_group": "DC_MENTHORQ_LEVELS",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "MENTHORQ_CONFIRMATION_LEVELS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_MENTHORQ_LEVELS",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.levels.put_support_0dte"
+      ]
+    },
+    {
+      "family_id": "EF_DC_NON_EVIDENCE_META",
+      "dc_group": "DC_NON_EVIDENCE_META",
+      "kind": "NON_EVIDENCE",
+      "lineage_basis": "N/A",
+      "dimension": "METADATA",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": null,
+      "members": [
+        "abot.root.timestamp",
+        "abot.root.levels._menthorq_source",
+        "abot.root.levels._asof",
+        "abot.root.classic.min_dte",
+        "abot.root.classic.sec_min_dte",
+        "abot.root.classic.timestamp",
+        "abot.classic.timestamp",
+        "abot.classic.ticker",
+        "abot.classic.min_dte",
+        "abot.classic.sec_min_dte",
+        "abot.classic.conversion",
+        "abot.classic._relay.ticker",
+        "abot.classic._relay.cat",
+        "abot.classic._relay.cached",
+        "abot.classic._relay.stale",
+        "abot.classic._relay.age_ms",
+        "abot.classic._relay.ttl_ms",
+        "abot.classic._relay.served",
+        "abot.cache.t",
+        "abot.cache.cm",
+        "abot.cache.ca",
+        "abot.state_gex.timestamp",
+        "abot.state_gex.ticker",
+        "abot.state_gex.min_dte",
+        "abot.state_gex.sec_min_dte",
+        "abot.state_gex.zero_gamma",
+        "abot.state_gex.strikes[].gex_oi",
+        "abot.state_gex.sum_gex_oi",
+        "abot.state_gex.conversion",
+        "abot.state_gex._relay.ticker",
+        "abot.state_gex._relay.cat",
+        "abot.state_gex._relay.cached",
+        "abot.state_gex._relay.stale",
+        "abot.state_gex._relay.age_ms",
+        "abot.state_gex._relay.ttl_ms",
+        "abot.state_gex._relay.served",
+        "abot.state_gex._relay.grade",
+        "abot.state_gex._relay.n",
+        "abot.state_gex._relay.tem_majors",
+        "abot.state_greek.timestamp",
+        "abot.state_greek.ticker",
+        "abot.state_greek.min_dte",
+        "abot.state_greek.sec_min_dte",
+        "abot.state_greek.mini_contracts[].strike",
+        "abot.state_greek.conversion",
+        "abot.state_greek._relay.ticker",
+        "abot.state_greek._relay.cat",
+        "abot.state_greek._relay.cached",
+        "abot.state_greek._relay.stale",
+        "abot.state_greek._relay.age_ms",
+        "abot.state_greek._relay.ttl_ms",
+        "abot.state_greek._relay.served",
+        "abot.state_greek._relay.grade",
+        "abot.state_greek._relay.n",
+        "abot.state_greek._relay.tem_majors",
+        "spx_final_context.trace.timestamps"
+      ]
+    },
+    {
+      "family_id": "EF_DC_OFLOW_CVR_UNKNOWN__abot.root.dex.oflow",
+      "dc_group": "DC_OFLOW_CVR_UNKNOWN",
+      "kind": "SEPARATE_SUSPECTED",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_OFLOW_CVR_UNKNOWN",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.dex.oflow"
+      ]
+    },
+    {
+      "family_id": "EF_DC_OFLOW_CVR_UNKNOWN__abot.root.dex.oflow_next",
+      "dc_group": "DC_OFLOW_CVR_UNKNOWN",
+      "kind": "SEPARATE_SUSPECTED",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_OFLOW_CVR_UNKNOWN",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.dex.oflow_next"
+      ]
+    },
+    {
+      "family_id": "EF_DC_OFLOW_CVR_UNKNOWN__abot.root.gex.cvr_0dte",
+      "dc_group": "DC_OFLOW_CVR_UNKNOWN",
+      "kind": "SEPARATE_SUSPECTED",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_OFLOW_CVR_UNKNOWN",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.gex.cvr_0dte"
+      ]
+    },
+    {
+      "family_id": "EF_DC_OFLOW_CVR_UNKNOWN__abot.root.gex.cvr_next",
+      "dc_group": "DC_OFLOW_CVR_UNKNOWN",
+      "kind": "SEPARATE_SUSPECTED",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_OFLOW_CVR_UNKNOWN",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.gex.cvr_next"
+      ]
+    },
+    {
+      "family_id": "EF_DC_OFLOW_CVR_UNKNOWN__abot.root.gex.oflow",
+      "dc_group": "DC_OFLOW_CVR_UNKNOWN",
+      "kind": "SEPARATE_SUSPECTED",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_OFLOW_CVR_UNKNOWN",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.gex.oflow"
+      ]
+    },
+    {
+      "family_id": "EF_DC_OFLOW_CVR_UNKNOWN__abot.root.gex.oflow_next",
+      "dc_group": "DC_OFLOW_CVR_UNKNOWN",
+      "kind": "SEPARATE_SUSPECTED",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_OFLOW_CVR_UNKNOWN",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.gex.oflow_next"
+      ]
+    },
+    {
+      "family_id": "EF_DC_OFLOW_CVR_UNKNOWN__abot.root.orderflow.cvr_oflow",
+      "dc_group": "DC_OFLOW_CVR_UNKNOWN",
+      "kind": "SEPARATE_SUSPECTED",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_OFLOW_CVR_UNKNOWN",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.orderflow.cvr_oflow"
+      ]
+    },
+    {
+      "family_id": "EF_DC_OFLOW_CVR_UNKNOWN__abot.root.orderflow.cvr_oflow_next",
+      "dc_group": "DC_OFLOW_CVR_UNKNOWN",
+      "kind": "SEPARATE_SUSPECTED",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "FLOW_UNKNOWN_SEMANTICS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_OFLOW_CVR_UNKNOWN",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.orderflow.cvr_oflow_next"
+      ]
+    },
+    {
+      "family_id": "EF_DC_RISK_REVERSAL__abot.classic.delta_risk_reversal",
+      "dc_group": "DC_RISK_REVERSAL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "VOL_SKEW",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_RISK_REVERSAL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.classic.delta_risk_reversal"
+      ]
+    },
+    {
+      "family_id": "EF_DC_RISK_REVERSAL__abot.root.classic.delta_risk_reversal",
+      "dc_group": "DC_RISK_REVERSAL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "VOL_SKEW",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_RISK_REVERSAL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.classic.delta_risk_reversal"
+      ]
+    },
+    {
+      "family_id": "EF_DC_RISK_REVERSAL__abot.state_gex.delta_risk_reversal",
+      "dc_group": "DC_RISK_REVERSAL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "VOL_SKEW",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_RISK_REVERSAL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_gex.delta_risk_reversal"
+      ]
+    },
+    {
+      "family_id": "EF_DC_ROOT_LEGACY_BLOCKS",
+      "dc_group": "DC_ROOT_LEGACY_BLOCKS",
+      "kind": "NON_EVIDENCE",
+      "lineage_basis": "N/A",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": null,
+      "members": [
+        "abot.root.iv30d",
+        "abot.root.extended_zone",
+        "abot.root.spotgamma",
+        "abot.root.qscore",
+        "abot.root.dark_pool_analysis",
+        "abot.root.blind_spots",
+        "abot.root.bl_scores",
+        "abot.root.implied_vol"
+      ]
+    },
+    {
+      "family_id": "EF_DC_SPOT_PRICE",
+      "dc_group": "DC_SPOT_PRICE",
+      "kind": "NON_EVIDENCE",
+      "lineage_basis": "N/A",
+      "dimension": "PRICE_REFERENCE",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": null,
+      "members": [
+        "abot.root.spot",
+        "abot.root.classic.spot",
+        "abot.classic.spot",
+        "abot.cache.sp",
+        "abot.state_gex.spot",
+        "abot.state_greek.spot"
+      ]
+    },
+    {
+      "family_id": "EF_DC_SPX_FINAL_GAMMA__spx_final_context.trace.gamma_mm",
+      "dc_group": "DC_SPX_FINAL_GAMMA",
+      "kind": "SEPARATE_PARTIAL_ANALOG",
+      "lineage_basis": "PARTIAL_ANALOG",
+      "dimension": "SPX_FINAL_GAMMA",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "overlap_risk": {
+        "with_group": "DC_SPX_FINAL_GAMMA",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "numeric_equivalence_allowed": false,
+      "members": [
+        "spx_final_context.trace.gamma_mm"
+      ]
+    },
+    {
+      "family_id": "EF_DC_SPX_FINAL_GAMMA__spx_final_context.trace.stats",
+      "dc_group": "DC_SPX_FINAL_GAMMA",
+      "kind": "SEPARATE_PARTIAL_ANALOG",
+      "lineage_basis": "PARTIAL_ANALOG",
+      "dimension": "SPX_FINAL_GAMMA",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "overlap_risk": {
+        "with_group": "DC_SPX_FINAL_GAMMA",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "numeric_equivalence_allowed": false,
+      "members": [
+        "spx_final_context.trace.stats"
+      ]
+    },
+    {
+      "family_id": "EF_DC_SPX_FINAL_GAMMA__spx_final_context.volsignals.gammaExposure",
+      "dc_group": "DC_SPX_FINAL_GAMMA",
+      "kind": "SEPARATE_PARTIAL_ANALOG",
+      "lineage_basis": "PARTIAL_ANALOG",
+      "dimension": "SPX_FINAL_GAMMA",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "overlap_risk": {
+        "with_group": "DC_SPX_FINAL_GAMMA",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "numeric_equivalence_allowed": false,
+      "members": [
+        "spx_final_context.volsignals.gammaExposure"
+      ]
+    },
+    {
+      "family_id": "EF_DC_SPX_TRACE_CHARM__spx_final_context.trace.charm_pressure",
+      "dc_group": "DC_SPX_TRACE_CHARM",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "SPX_FINAL_TRACE",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "overlap_risk": {
+        "with_group": "DC_SPX_TRACE_CHARM",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "spx_final_context.trace.charm_pressure"
+      ]
+    },
+    {
+      "family_id": "EF_DC_SPX_TRACE_DELTA__spx_final_context.trace.delta_pressure",
+      "dc_group": "DC_SPX_TRACE_DELTA",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "SPX_FINAL_TRACE",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "overlap_risk": {
+        "with_group": "DC_SPX_TRACE_DELTA",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "spx_final_context.trace.delta_pressure"
+      ]
+    },
+    {
+      "family_id": "EF_DC_SPX_TRACE_PARTICIPANTS__spx_final_context.trace.gamma_bd",
+      "dc_group": "DC_SPX_TRACE_PARTICIPANTS",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "SPX_FINAL_TRACE",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "overlap_risk": {
+        "with_group": "DC_SPX_TRACE_PARTICIPANTS",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "spx_final_context.trace.gamma_bd"
+      ]
+    },
+    {
+      "family_id": "EF_DC_SPX_TRACE_PARTICIPANTS__spx_final_context.trace.gamma_cust",
+      "dc_group": "DC_SPX_TRACE_PARTICIPANTS",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "SPX_FINAL_TRACE",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "overlap_risk": {
+        "with_group": "DC_SPX_TRACE_PARTICIPANTS",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "spx_final_context.trace.gamma_cust"
+      ]
+    },
+    {
+      "family_id": "EF_DC_SPX_TRACE_PARTICIPANTS__spx_final_context.trace.gamma_firm",
+      "dc_group": "DC_SPX_TRACE_PARTICIPANTS",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "SPX_FINAL_TRACE",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "overlap_risk": {
+        "with_group": "DC_SPX_TRACE_PARTICIPANTS",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "spx_final_context.trace.gamma_firm"
+      ]
+    },
+    {
+      "family_id": "EF_DC_SPX_TRACE_PARTICIPANTS__spx_final_context.trace.gamma_procust",
+      "dc_group": "DC_SPX_TRACE_PARTICIPANTS",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "SPX_FINAL_TRACE",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "overlap_risk": {
+        "with_group": "DC_SPX_TRACE_PARTICIPANTS",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "spx_final_context.trace.gamma_procust"
+      ]
+    },
+    {
+      "family_id": "EF_DC_SPX_VOLSIGNALS_CHARM__spx_final_context.volsignals.charmExposure",
+      "dc_group": "DC_SPX_VOLSIGNALS_CHARM",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "overlap_risk": {
+        "with_group": "DC_SPX_VOLSIGNALS_CHARM",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "spx_final_context.volsignals.charmExposure"
+      ]
+    },
+    {
+      "family_id": "EF_DC_SPX_VOLSIGNALS_DELTACHANGE__spx_final_context.volsignals.deltaChangeExposure",
+      "dc_group": "DC_SPX_VOLSIGNALS_DELTACHANGE",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "overlap_risk": {
+        "with_group": "DC_SPX_VOLSIGNALS_DELTACHANGE",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "spx_final_context.volsignals.deltaChangeExposure"
+      ]
+    },
+    {
+      "family_id": "EF_DC_SPX_VOLSIGNALS_DELTADIFF",
+      "dc_group": "DC_SPX_VOLSIGNALS_DELTADIFF",
+      "kind": "NON_EVIDENCE",
+      "lineage_basis": "N/A",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "overlap_risk": null,
+      "members": [
+        "spx_final_context.volsignals.deltaExposureDiff"
+      ]
+    },
+    {
+      "family_id": "EF_DC_SPX_VOLSIGNALS_DELTATOTAL__spx_final_context.volsignals.deltaTotalExposure",
+      "dc_group": "DC_SPX_VOLSIGNALS_DELTATOTAL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "overlap_risk": {
+        "with_group": "DC_SPX_VOLSIGNALS_DELTATOTAL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "spx_final_context.volsignals.deltaTotalExposure"
+      ]
+    },
+    {
+      "family_id": "EF_DC_SPX_VOLSIGNALS_VANNA__spx_final_context.volsignals.vannaExposure",
+      "dc_group": "DC_SPX_VOLSIGNALS_VANNA",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "overlap_risk": {
+        "with_group": "DC_SPX_VOLSIGNALS_VANNA",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "spx_final_context.volsignals.vannaExposure"
+      ]
+    },
+    {
+      "family_id": "EF_DC_SPX_VOLSIGNALS_VOLGA__spx_final_context.volsignals.volgaExposure",
+      "dc_group": "DC_SPX_VOLSIGNALS_VOLGA",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "SPX_FINAL_VOLSIGNALS",
+      "stage": "C_SPX_FINAL_CONTEXT",
+      "overlap_risk": {
+        "with_group": "DC_SPX_VOLSIGNALS_VOLGA",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "spx_final_context.volsignals.volgaExposure"
+      ]
+    },
+    {
+      "family_id": "EF_DC_STATE_GEX_PROFILE_FULL__abot.state_gex.max_priors[0..5]@gex_full",
+      "dc_group": "DC_STATE_GEX_PROFILE_FULL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "GAMMA_REGIME",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_STATE_GEX_PROFILE_FULL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_gex.max_priors[0..5]@gex_full"
+      ]
+    },
+    {
+      "family_id": "EF_DC_STATE_GEX_PROFILE_FULL__abot.state_gex.strikes[].gex_vol@gex_full",
+      "dc_group": "DC_STATE_GEX_PROFILE_FULL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "GAMMA_REGIME",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_STATE_GEX_PROFILE_FULL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_gex.strikes[].gex_vol@gex_full"
+      ]
+    },
+    {
+      "family_id": "EF_DC_STATE_GEX_PROFILE_FULL__abot.state_gex.strikes[].priors[0..4]@gex_full",
+      "dc_group": "DC_STATE_GEX_PROFILE_FULL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "GAMMA_REGIME",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_STATE_GEX_PROFILE_FULL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_gex.strikes[].priors[0..4]@gex_full"
+      ]
+    },
+    {
+      "family_id": "EF_DC_STATE_GEX_PROFILE_FULL__abot.state_gex.strikes[].strike@gex_full",
+      "dc_group": "DC_STATE_GEX_PROFILE_FULL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "GAMMA_REGIME",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_STATE_GEX_PROFILE_FULL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_gex.strikes[].strike@gex_full"
+      ]
+    },
+    {
+      "family_id": "EF_DC_STATE_GEX_PROFILE_FULL__abot.state_gex.sum_gex_vol@gex_full",
+      "dc_group": "DC_STATE_GEX_PROFILE_FULL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "GAMMA_REGIME",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_STATE_GEX_PROFILE_FULL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_gex.sum_gex_vol@gex_full"
+      ]
+    },
+    {
+      "family_id": "EF_DC_STATE_IVOL__abot.state_greek.mini_contracts[].call_ivol@*_one",
+      "dc_group": "DC_STATE_IVOL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "VOL_SKEW",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_STATE_IVOL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.mini_contracts[].call_ivol@*_one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_STATE_IVOL__abot.state_greek.mini_contracts[].call_ivol@*_zero",
+      "dc_group": "DC_STATE_IVOL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "VOL_SKEW",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_STATE_IVOL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.mini_contracts[].call_ivol@*_zero"
+      ]
+    },
+    {
+      "family_id": "EF_DC_STATE_IVOL__abot.state_greek.mini_contracts[].put_ivol@*_one",
+      "dc_group": "DC_STATE_IVOL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "VOL_SKEW",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_STATE_IVOL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.mini_contracts[].put_ivol@*_one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_STATE_IVOL__abot.state_greek.mini_contracts[].put_ivol@*_zero",
+      "dc_group": "DC_STATE_IVOL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "VOL_SKEW",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_STATE_IVOL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.mini_contracts[].put_ivol@*_zero"
+      ]
+    },
+    {
+      "family_id": "EF_DC_UNKNOWN_COLUMNS",
+      "dc_group": "DC_UNKNOWN_COLUMNS",
+      "kind": "NON_EVIDENCE",
+      "lineage_basis": "N/A",
+      "dimension": "DIAGNOSTIC_UNRESOLVED",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": null,
+      "members": [
+        "abot.state_greek.mini_contracts[].col5",
+        "abot.state_greek.mini_contracts[].col6"
+      ]
+    },
+    {
+      "family_id": "EF_DC_VANNA_0DTE__abot.root.vanna.net_0dte",
+      "dc_group": "DC_VANNA_0DTE",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_VANNA_0DTE",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.vanna.net_0dte"
+      ]
+    },
+    {
+      "family_id": "EF_DC_VANNA_0DTE__SUSPECTED__abot.state_greek.vanna.mini_contracts[].greek_value@*_zero",
+      "dc_group": "DC_VANNA_0DTE",
+      "kind": "SEPARATE_SUSPECTED_OVERLAP",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_VANNA_0DTE",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.vanna.mini_contracts[].greek_value@*_zero"
+      ]
+    },
+    {
+      "family_id": "EF_DC_VANNA_0DTE__SUSPECTED__abot.state_greek.vanna.mini_contracts[].priors[0..2]@*_zero",
+      "dc_group": "DC_VANNA_0DTE",
+      "kind": "SEPARATE_SUSPECTED_OVERLAP",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_VANNA_0DTE",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.vanna.mini_contracts[].priors[0..2]@*_zero"
+      ]
+    },
+    {
+      "family_id": "EF_DC_VANNA_NEXT__abot.root.vanna.net_next",
+      "dc_group": "DC_VANNA_NEXT",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_VANNA_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.root.vanna.net_next"
+      ]
+    },
+    {
+      "family_id": "EF_DC_VANNA_NEXT__SUSPECTED__abot.state_greek.vanna.mini_contracts[].greek_value@*_one",
+      "dc_group": "DC_VANNA_NEXT",
+      "kind": "SEPARATE_SUSPECTED_OVERLAP",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_VANNA_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.vanna.mini_contracts[].greek_value@*_one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_VANNA_NEXT__SUSPECTED__abot.state_greek.vanna.mini_contracts[].priors[0..2]@*_one",
+      "dc_group": "DC_VANNA_NEXT",
+      "kind": "SEPARATE_SUSPECTED_OVERLAP",
+      "lineage_basis": "SUSPECTED",
+      "dimension": "SECOND_ORDER_FLOWS",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_VANNA_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.state_greek.vanna.mini_contracts[].priors[0..2]@*_one"
+      ]
+    },
+    {
+      "family_id": "EF_DC_ZERO_GAMMA_0DTE",
+      "dc_group": "DC_ZERO_GAMMA_0DTE",
+      "kind": "CONSOLIDATED",
+      "lineage_basis": "CONFIRMED",
+      "dimension": "GAMMA_REGIME",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": null,
+      "members": [
+        "abot.root.classic.zero_gamma",
+        "abot.classic.zero_gamma@zero"
+      ]
+    },
+    {
+      "family_id": "EF_DC_ZERO_GAMMA_FULL__abot.cache.zg",
+      "dc_group": "DC_ZERO_GAMMA_FULL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "GAMMA_REGIME",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_ZERO_GAMMA_FULL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.cache.zg"
+      ]
+    },
+    {
+      "family_id": "EF_DC_ZERO_GAMMA_FULL__abot.classic.zero_gamma@full",
+      "dc_group": "DC_ZERO_GAMMA_FULL",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "GAMMA_REGIME",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_ZERO_GAMMA_FULL",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.classic.zero_gamma@full"
+      ]
+    },
+    {
+      "family_id": "EF_DC_ZERO_GAMMA_NEXT__abot.classic.zero_gamma@one",
+      "dc_group": "DC_ZERO_GAMMA_NEXT",
+      "kind": "SEPARATE_UNVERIFIED",
+      "lineage_basis": "UNVERIFIED",
+      "dimension": "GAMMA_REGIME",
+      "stage": "B_JEV_NATIVE_DEALER_ANALYSIS",
+      "overlap_risk": {
+        "with_group": "DC_ZERO_GAMMA_NEXT",
+        "level": "UNKNOWN",
+        "rule": "preservar separado; independencia UNKNOWN ate medicao"
+      },
+      "members": [
+        "abot.classic.zero_gamma@one"
+      ]
+    }
+  ]
+}
