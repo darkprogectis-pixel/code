@@ -1,5 +1,9 @@
 // Laco LIVE DRY-RUN: adapter -> jev-input/v1 -> MESMO motor (runtime.run) -> jev-output/v1, em intervalo configuravel.
 // Sem escrita em disco aqui (quem grava e a CLI via onCycle). Nunca envia ordem. Parada limpa por AbortSignal.
+// snapshot_id canonico: identifica UM ciclo do motor; toda leitura (bridge, robo, agente) referencia o mesmo id.
+const RUN_TAG = Date.now().toString(36);
+export const makeSnapshotId = (output, cycle, runTag = RUN_TAG) => `${(output && output.evaluated_at) || 'NA'}#${runTag}-${cycle}`;
+
 export async function runLive({ adapter, runtime, intervalMs, cycles = Infinity, signal, onCycle }) {
   let previousInput;
   let n = 0;
@@ -10,6 +14,7 @@ export async function runLive({ adapter, runtime, intervalMs, cycles = Infinity,
       const built = await adapter.buildInput();
       report = built.report;
       result = runtime.run(built.input, previousInput === undefined ? {} : { previousInput });
+      result.snapshot_id = makeSnapshotId(result.output, n);
       previousInput = built.input;
     } catch (e) {
       // FATAL estrutural (artefato/config) sobe; qualquer outra falha do ciclo e registrada e o laco continua

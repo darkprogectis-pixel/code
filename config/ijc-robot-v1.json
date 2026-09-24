@@ -1,0 +1,19 @@
+{
+  "schema": "ijc-robot-config/v1",
+  "_note": "INVICTUS JEV CODE Robot V1. Limites de risco UNSET (null) de proposito: sem valores definidos pelo operador o robo NAO arma. Nenhuma chave aqui liga execucao (JEV_CAN_SEND_ORDER e constante false no codigo).",
+  "risk": {
+    "max_position_contracts": null,
+    "max_open_positions": null,
+    "max_orders_per_session": null,
+    "daily_loss_limit_usd": null
+  },
+  "policies": {
+    "session_policy": "RTH",
+    "emergency_flatten_owned": null,
+    "session_close_owned": null
+  },
+  "execution_policy_ref": null,
+  "engine_max_age_ms": 90000,
+  "executor_heartbeat_max_age_ms": 5000,
+  "kill_file": null
+}

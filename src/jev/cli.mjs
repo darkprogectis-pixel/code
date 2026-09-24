@@ -12,7 +12,8 @@ import { REPO_ROOT } from './config.mjs';
 function parseArgs(argv) {
   const a = { input: null, previous: null, config: path.join(REPO_ROOT, 'config', 'jev-runtime-v1.json'), out: null, outputOnly: false,
     live: false, liveConfig: path.join(REPO_ROOT, 'config', 'jev-live-input-v1.json'), cycles: Infinity, intervalMs: null, print: false, reportOut: null,
-    serve: false, bridgeConfig: path.join(REPO_ROOT, 'config', 'jev-bridge-v1.json'), replay: null, port: null };
+    serve: false, bridgeConfig: path.join(REPO_ROOT, 'config', 'jev-bridge-v1.json'), replay: null, port: null,
+    robotConfig: path.join(REPO_ROOT, 'config', 'ijc-robot-v1.json'), cpPort: null };
   for (let i = 0; i < argv.length; i++) {
     const k = argv[i];
     if (k === '--live') a.live = true;
@@ -20,6 +21,8 @@ function parseArgs(argv) {
     else if (k === '--bridge-config') a.bridgeConfig = argv[++i];
     else if (k === '--replay') a.replay = argv[++i];
     else if (k === '--port') a.port = Number(argv[++i]);
+    else if (k === '--robot-config') a.robotConfig = argv[++i];
+    else if (k === '--cp-port') a.cpPort = Number(argv[++i]);
     else if (k === '--live-config') a.liveConfig = argv[++i];
     else if (k === '--cycles') a.cycles = Number(argv[++i]);
     else if (k === '--interval-ms') a.intervalMs = Number(argv[++i]);
@@ -51,6 +54,12 @@ if (args.serve) {
   const { runLive } = await import('./adapters/live-loop.mjs');
   const { createBridge } = await import('./bridge/server.mjs');
   const { readInputFile } = await import('./ingest.mjs');
+  const { createLogger } = await import('../ijc/common/jsonl-log.mjs');
+  const { subDir } = await import('../ijc/common/paths.mjs');
+  const { loadRobotConfig } = await import('../ijc/robot/config.mjs');
+  const { createRobotCore } = await import('../ijc/robot/robot-core.mjs');
+  const { loadOrCreateToken } = await import('../ijc/control-plane/auth.mjs');
+  const { createControlPlane } = await import('../ijc/control-plane/server.mjs');
   try {
     let bcfg;
     try { bcfg = JSON.parse(readFileSync(args.bridgeConfig, 'utf8')); } catch (e) { throw new JevFatalError(`bridge config ilegivel: ${args.bridgeConfig}`); }
@@ -61,15 +70,26 @@ if (args.serve) {
     const adapter = args.replay
       ? { buildInput: async () => { const r = readInputFile(args.replay); return { input: r.input, report: { mode: 'REPLAY', replay: path.basename(args.replay), issues: r.issues } }; } }
       : createLiveRelayAdapter(lc, { featureContract: rt.art.feature_contract });
-    const bridge = createBridge({ host: bcfg.host, port: args.port ?? bcfg.port, mode: args.replay ? 'REPLAY' : 'LIVE' });
+    // INVICTUS JEV CODE: Robot Core (mesmo processo, consome o snapshot) + control plane :3591 (token; pull do executor NT8)
+    const token = loadOrCreateToken(); // nunca impresso nem logado
+    const logs = Object.fromEntries(['engine', 'bridge', 'robot', 'control-plane'].map((c) => [c, createLogger(c, { forbidden: [token] })]));
+    const robotCfg = loadRobotConfig(args.robotConfig);
+    const core = createRobotCore({ config: robotCfg, stateDir: subDir('state'), logger: logs.robot, activeSideRules: rt.engine.activeSideRules });
+    const bridge = createBridge({ host: bcfg.host, port: args.port ?? bcfg.port, mode: args.replay ? 'REPLAY' : 'LIVE' }, { robotStatus: () => core.publicStatus() });
     const addr = await bridge.listen();
+    const cp = createControlPlane({ host: '127.0.0.1', port: args.cpPort ?? 3591, token, core, logger: logs['control-plane'] });
+    const cpAddr = await cp.listen();
+    logs.bridge.log('bridge_start', { state: 'LISTENING', reason: `${addr.address}:${addr.port} GET/HEAD` });
+    logs['control-plane'].log('cp_start', { state: 'LISTENING', reason: `${cpAddr.address}:${cpAddr.port} token+loopback; ORDER_PATH HARD_DISABLED` });
     const ac = new AbortController();
     process.on('SIGINT', () => { process.stderr.write('\n[jev] Ctrl+C: parando\n'); ac.abort(); });
-    process.stderr.write(`[jev] BRIDGE read-only em http://${addr.address}:${addr.port}/ (Control Center) · modo ${args.replay ? 'REPLAY' : 'LIVE'} · ordens: DESABILITADAS · robo: OFF (travado)\n`);
+    process.stderr.write(`[ijc] INVICTUS JEV CODE · bridge read-only http://${addr.address}:${addr.port}/ · control plane ${cpAddr.address}:${cpAddr.port} (token local) · modo ${args.replay ? 'REPLAY' : 'LIVE'} · ordens: HARD_DISABLED · robo: OFF\n`);
     const interval = Math.max(args.replay ? 1000 : 5000, args.intervalMs || (lc ? lc.poll_interval_ms : 3000));
     const n = await runLive({ adapter, runtime: rt, intervalMs: interval, cycles: args.cycles, signal: ac.signal,
       onCycle: ({ cycle, result, report }) => {
         bridge.update({ result, report, error: result ? null : report && report.error });
+        if (result) { core.onSnapshot(result); logs.engine.log('engine_cycle', { snapshot_id: result.snapshot_id, state: result.output.jev_directional_context, reason: result.output.data_quality.status }); }
+        else logs.engine.log('engine_cycle_error', { severity: 'error', reason: report && report.error });
         if (result) process.stderr.write(`[jev] ciclo ${cycle} · ${result.output.jev_directional_context} · dq=${result.output.data_quality.status} · orders=0\n`);
       } });
     if (args.cycles !== Infinity && !ac.signal.aborted) {
@@ -77,11 +97,13 @@ if (args.serve) {
       await new Promise((resolve) => { const t = setTimeout(resolve, interval); ac.signal.addEventListener('abort', () => { clearTimeout(t); resolve(); }, { once: true }); });
     }
     await bridge.close();
+    await cp.close();
+    logs.robot.log('robot_stop', { state: 'OFF', reason: 'shutdown' });
     process.stderr.write(`[jev] bridge encerrada apos ${n} ciclo(s)\n`);
     process.exit(0);
   } catch (e) {
     if (e instanceof JevFatalError) { process.stderr.write(`[jev] FATAL: ${e.message}\n`); process.exit(2); }
-    if (e && e.code === 'EADDRINUSE') { process.stderr.write(`[jev] FATAL: porta da bridge em uso\n`); process.exit(2); }
+    if (e && e.code === 'EADDRINUSE') { process.stderr.write(`[jev] FATAL: porta em uso (bridge ou control plane)\n`); process.exit(2); }
     throw e;
   }
 }

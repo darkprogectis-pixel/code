@@ -2,14 +2,14 @@
   "name": "alfaomega-jev-future",
   "version": "1.0.0",
   "private": true,
-  "description": "ALFA OMEGA JEV FUTURE — runtime V1 (classificador separado de estado/confluencia; sem execucao de trade)",
+  "description": "INVICTUS JEV CODE — Market Analyzer / Robot Control Center (motor JEV unico; robo sem execucao neste build)",
   "engines": {
     "node": ">=22"
   },
   "scripts": {
     "jev": "node src/jev/cli.mjs",
     "jev:example": "node src/jev/cli.mjs --input fixtures/jev/C_valid_multi_source.json --output-only",
-    "test": "node --test \"test/jev/*.test.mjs\"",
+    "test": "node --test \"test/jev/*.test.mjs\" \"test/ijc/*.test.mjs\"",
     "smoke": "node test/jev/smoke.mjs",
     "build:prereg": "node context/jev-future/scripts/build-jev-preregistration-design-v1.js",
     "live": "node src/jev/cli.mjs --live",
@@ -19,6 +19,8 @@
     "serve": "node src/jev/cli.mjs --serve",
     "serve:replay": "node src/jev/cli.mjs --serve --replay fixtures/jev/C_valid_multi_source.json",
     "smoke:bridge": "node test/jev/bridge-smoke.mjs",
-    "check:nt8": "dotnet build nt8/check/JevControlCenter.check.csproj -nologo -v q"
+    "check:nt8": "dotnet build nt8/check/InvictusJevCode.check.csproj -nologo -v q",
+    "test:nt8": "dotnet run --project nt8/check/IjcPureTests -nologo -v q",
+    "agent": "node src/ijc/agent-gateway/cli.mjs"
   }
 }

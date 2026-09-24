@@ -11,7 +11,8 @@ Then the most recent phase handoffs in `handoffs/` (newest last):
 - `handoffs/HANDOFF_JEV_PREREG_INTEGRATED_20260924.md` — preregistration REVIEWED / STRUCTURALLY CONSOLIDATED
 - `handoffs/HANDOFF_JEV_RUNTIME_V1_20260924.md` — JEV Runtime V1 implemented
 - `handoffs/HANDOFF_JEV_LIVE_INPUT_V1_20260924.md` — live input adapter (done, `6ecb18d`)
-- `handoffs/HANDOFF_JEV_CONTROL_CENTER_V1_20260924.md` — NT8 Agent / Bot Control Center V1 (current)
+- `handoffs/HANDOFF_JEV_CONTROL_CENTER_V1_20260924.md` — Control Center V1 (superseded by INVICTUS JEV CODE V1)
+- `handoffs/HANDOFF_INVICTUS_JEV_CODE_V1_20260924.md` — **INVICTUS JEV CODE V1 (current)**
 
 Then read only the minimum canonical files referenced by those handoffs.
 
@@ -41,7 +42,9 @@ TRADE EXECUTION: DISABLED (JEV_CAN_SEND_ORDER / EXECUTE_TRADE / MODIFY_NT8 / OVE
 
 REAL MARKET ADAPTER: LIVE INPUT ADAPTER V1 OPERATIONAL (read-only relay 127.0.0.1:3457 /gexbot/*, commit 6ecb18d)
 
-CONTROL CENTER V1: JEV Bridge 127.0.0.1:3590 (GET/HEAD only) + web Analyzer; NT8 AddOn SOURCE ONLY (not installed, no F5); robot button LOCKED OFF
+PRODUCT: INVICTUS JEV CODE V1 — Analyzer IMPLEMENTED · Robot Core IMPLEMENTED / EXECUTION HARD DISABLED · control plane 127.0.0.1:3591 (token, pull) · NT8 executor READ-ONLY (source only, not installed, no F5) · Agent Gateway 127.0.0.1:3592 OPTIONAL/ADVISORY · robot accounts Simulator/Playback ONLY · real orders IMPOSSIBLE in this build
+
+Product docs: `context/jev-future/INVICTUS_JEV_CODE_V1_20260924.md`
 
 PRODUCTION: OUT OF SCOPE / UNCHANGED
 
@@ -250,16 +253,15 @@ POST_LAUNCH_REFINEMENT_BACKLOG (non-blocking): R2, R6 materialization, G1/G2, E1
 
 ## Current phase
 
-LIVE INPUT ADAPTER V1: DONE (6ecb18d).
-
-JEV NT8 AGENT / BOT CONTROL CENTER V1: Analyzer delivered (bridge + web Control Center + NT8 AddOn source compile-checked outside NT8).
+INVICTUS JEV CODE V1: DONE (Fronts A Codex UI · B architecture · C implementation). See `handoffs/HANDOFF_INVICTUS_JEV_CODE_V1_20260924.md`.
 
 Still NOT allowed without explicit operator order:
 
 - installing/compiling anything inside NT8 (F5) or touching current production
-- enabling the robot / any order path (JEV_CAN_SEND_ORDER=false; Robot Executor needs its own phase, preregistration and order)
+- any order path: JEV_CAN_SEND_ORDER=false and ORDER_PATH=HARD_DISABLED are code constants; enabling SIMULATED execution requires an active side rule + preregistered execution policy + risk limits + operator order (separate phase)
+- real (non Simulator/Playback) accounts: out of scope of V1
 - defining final Core×JEV fusion
-- putting external agents (Hermes, OpenClaw, LLMs) in any critical path — they are optional async consumers of the bridge
+- putting external agents (Hermes, OpenClaw, LLMs) in any critical path — optional async ADVISORY consumers of :3590 only
 
 ---
 

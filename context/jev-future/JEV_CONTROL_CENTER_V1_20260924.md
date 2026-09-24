@@ -1,5 +1,7 @@
 # JEV FUTURE — NT8 AGENT / BOT CONTROL CENTER V1 (24/09/2026)
 
+> **SUPERSEDED (24/09):** a UI e o AddOn deste documento evoluíram para o **INVICTUS JEV CODE V1** — ver `INVICTUS_JEV_CODE_V1_20260924.md`. O arquivo `nt8/AddOns/JevControlCenter.cs` foi substituído por `nt8/AddOns/InvictusJevCode/`.
+
 | | |
 |---|---|
 | JEV BRIDGE | **OPERATIONAL**: local, somente leitura (GET/HEAD), só loopback `127.0.0.1:3590` |

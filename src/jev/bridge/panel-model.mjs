@@ -23,20 +23,28 @@ const LABELS = {
 };
 const label = (code) => LABELS[code] || (/^RC_SPX_/.test(code) ? 'Efeito SPX por fonte/dimensão' : code);
 
+// Status padrao do robo quando o Robot Core nao esta presente (ex.: --live sem --serve). Sempre OFF/travado.
 export function robotStatus() {
   return {
     state: 'OFF', can_enable: false,
-    locked_reason: 'JEV_CAN_SEND_ORDER=false — o Robot Executor exige fase própria, pré-registro e ordem explícita do operador',
+    locked_reason: 'Executor ainda não operacional — JEV_CAN_SEND_ORDER=false; ORDER_PATH=HARD_DISABLED',
+    execution: 'DISABLED', order_path: 'HARD_DISABLED', strategy: 'NONE (NOT AVAILABLE)',
+    position: { state: 'NOT_REPORTED', source: 'NOT_REPORTED' }, executor: { state: 'NOT_REPORTED' }, gates: [], failed_gates: [],
     safety: { ...SAFETY },
   };
 }
 
-export function buildPanel(result, meta = {}) {
+// extras.robot = Robot Core publicStatus() (sem conta/ordem/token). O agente e reportado pelo proprio gateway (:3592), nao aqui.
+export function buildPanel(result, meta = {}, extras = {}) {
+  const robot = extras.robot || robotStatus();
+  if (robot.can_enable !== false) throw new Error('invariante: can_enable deve ser false neste build');
   const base = {
-    schema: PANEL_SCHEMA, runtime_version: RUNTIME_VERSION, generated_at: new Date().toISOString(),
+    schema: PANEL_SCHEMA, product: 'INVICTUS JEV CODE', runtime_version: RUNTIME_VERSION, generated_at: new Date().toISOString(),
+    snapshot_id: result ? result.snapshot_id || null : null,
     bridge: { mode: meta.mode || 'UNKNOWN', started_at: meta.started_at || null, cycles: meta.cycles || 0, last_cycle_at: meta.last_cycle_at || null,
       last_cycle_error: meta.last_cycle_error || null, relay: meta.relay || null },
-    robot: robotStatus(),
+    robot,
+    agent: { status: 'NOT_REPORTED', note: 'telemetria do agente vem do Agent Gateway (:3592), opcional' },
     conviction: 'UNCALIBRATED', probability_display: 'NOT_SHOWN (sem probabilidade calibrada)',
   };
   if (!result) return { ...base, status: 'STARTING', jev: { directional_context: 'UNKNOWN', context_reason: null, context_explanation: 'Aguardando o primeiro ciclo do motor' } };

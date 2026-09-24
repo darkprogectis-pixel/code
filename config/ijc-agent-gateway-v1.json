@@ -1,0 +1,12 @@
+{
+  "schema": "ijc-agent-gateway-config/v1",
+  "_note": "Agent Gateway OPCIONAL e ADVISORY. Le so a bridge :3590. Chaves de provider somente por variavel de ambiente (KIMI_API_KEY, credenciais do SDK Anthropic, OPENAI_COMPATIBLE_API_KEY). Sem provider = NOT_CONFIGURED (valido).",
+  "host": "127.0.0.1",
+  "port": 3592,
+  "bridge_url": "http://127.0.0.1:3590",
+  "poll_interval_ms": 15000,
+  "min_provider_gap_ms": 60000,
+  "provider_timeout_ms": 20000,
+  "provider": { "id": "none", "model": null },
+  "messaging": { "openclaw": { "enabled": false, "status": "REGISTERED_NOT_WIRED" } }
+}

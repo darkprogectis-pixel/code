@@ -1,0 +1,15 @@
+<!-- Testes das pecas PURAS do AddOn (IjcPure.cs) FORA do NT8. Nao instala nada; so le Newtonsoft do NT8. Uso: npm run test:nt8 -->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <LangVersion>7.3</LangVersion>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <NT8Bin Condition="'$(NT8Bin)' == ''">C:\Program Files\NinjaTrader 8\bin</NT8Bin>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AddOns\InvictusJevCode\IjcPure.cs" />
+    <Compile Include="Program.cs" />
+    <Reference Include="Newtonsoft.Json"><HintPath>$(NT8Bin)\Newtonsoft.Json.dll</HintPath><Private>true</Private></Reference>
+  </ItemGroup>
+</Project>

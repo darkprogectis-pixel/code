@@ -11,9 +11,11 @@ import { buildPanel, robotStatus } from './panel-model.mjs';
 const HTML = path.join(path.dirname(fileURLToPath(import.meta.url)), 'control-center.html');
 const LOOPBACK = new Set(['127.0.0.1', '::1', 'localhost']);
 
-export function createBridge(cfg) {
+// providers.robotStatus: () => Robot Core publicStatus() (opcional). Sem ele, robo = OFF/travado padrao.
+export function createBridge(cfg, providers = {}) {
   if (!LOOPBACK.has(cfg.host)) throw new JevFatalError('bridge so pode escutar em loopback (127.0.0.1/::1): ' + cfg.host);
   if (!Number.isInteger(cfg.port) || cfg.port < 0 || cfg.port > 65535) throw new JevFatalError('porta da bridge invalida');
+  const robotPublic = () => { try { return providers.robotStatus ? providers.robotStatus() : robotStatus(); } catch { return robotStatus(); } };
   const state = { result: null, report: null, meta: { mode: cfg.mode || 'UNKNOWN', started_at: new Date().toISOString(), cycles: 0, last_cycle_at: null, last_cycle_error: null, relay: null } };
   let html = null;
   const send = (res, code, body, type = 'application/json; charset=utf-8', head = false) => {
@@ -31,10 +33,10 @@ export function createBridge(cfg) {
       return send(res, 200, html, 'text/html; charset=utf-8', head);
     }
     if (url === '/jev/v1/health') return json(res, 200, { ok: true, status: state.result ? 'RUNNING' : 'STARTING', mode: state.meta.mode, cycles: state.meta.cycles, last_cycle_at: state.meta.last_cycle_at, last_cycle_error: state.meta.last_cycle_error, read_only: true, orders_enabled: false }, head);
-    if (url === '/jev/v1/state') return json(res, 200, buildPanel(state.result, state.meta), head);
+    if (url === '/jev/v1/state') return json(res, 200, buildPanel(state.result, state.meta, { robot: robotPublic() }), head);
     if (url === '/jev/v1/output') return state.result ? json(res, 200, state.result.output, head) : json(res, 503, { ok: false, status: 'STARTING' }, head);
     if (url === '/jev/v1/audit') return state.result ? json(res, 200, { ...state.result.audit, adapter_report: state.report }, head) : json(res, 503, { ok: false, status: 'STARTING' }, head);
-    if (url === '/jev/v1/robot') return json(res, 200, robotStatus(), head);
+    if (url === '/jev/v1/robot') return json(res, 200, robotPublic(), head);
     return json(res, 404, { ok: false, error: 'rota desconhecida', routes: ['/', '/jev/v1/health', '/jev/v1/state', '/jev/v1/output', '/jev/v1/audit', '/jev/v1/robot'] }, head);
   });
 

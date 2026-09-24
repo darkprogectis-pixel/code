@@ -75,17 +75,6 @@ test('B05 robo sempre OFF e nao habilitavel; travas todas false', async () => {
   assert.ok(!/robot.*=\s*['"]ON|can_enable:\s*true/.test(src));
 });
 
-test('B06 Control Center: servido pela bridge, sem recursos externos, robo desabilitado, sem probabilidade', async () => {
-  const { port } = await start();
-  const r = await req(port, '/');
-  assert.equal(r.status, 200); assert.match(r.headers['content-type'], /text\/html/);
-  assert.ok(!/(src|href)=["']https?:\/\//.test(r.body), 'recurso externo');
-  assert.ok(!/fetch\(['"]https?:/.test(r.body));
-  assert.match(r.body, /class="switch" disabled/);
-  assert.match(r.body, /probabilidade não exibida/);
-  assert.ok(!/method:\s*['"](POST|PUT|DELETE)/.test(r.body));
-});
-
 test('B07 bridge continua servindo com relay offline (UNKNOWN / DATA_INVALID)', async () => {
   const { b, port } = await start('LIVE');
   const offlineAdapter = { buildInput: async () => ({ input: { schema: 'jev-input/v1', evaluated_at: new Date().toISOString(), session: 'RTH', sources: {}, fields: {}, adapter_issues: [{ code: 'RC_RELAY_OFFLINE', detail: 'teste' }] }, report: { routes: [{ result: 'OFFLINE' }], relay: 'x' } }) };
@@ -105,40 +94,3 @@ test('B08 painel construido para todas as fixtures sem erro', () => {
   }
 });
 
-test('B09 NT8 AddOn (source-only): sem APIs de ordem/conta, robo travado, rede so loopback em background', () => {
-  const cs = readFileSync(path.join(REPO_ROOT, 'nt8', 'AddOns', 'JevControlCenter.cs'), 'utf8');
-  const code = cs.replace(/^\s*\/\/.*$/gm, '').replace(/\s\/\/\s.*$/gm, ''); // ignora comentarios (sem tocar no // de http://)
-  assert.ok(!/\bAccount\b|SubmitOrder|CreateOrder|EnterLong|EnterShort|ExitLong|ExitShort|\bAtm|OrderAction|\.Cancel\(\s*order|Change\(\s*order/i.test(code), 'API de ordem/conta');
-  assert.match(code, /IsEnabled = false/);
-  assert.match(code, /IsChecked = false/);
-  const urls = code.match(/https?:\/\/[^"\s]+/g) || [];
-  assert.deepEqual(urls, ['http://127.0.0.1:3590/jev/v1/state']);
-  assert.match(code, /Task\.Run\(\(\) => PollLoop/);
-  assert.ok(!/File\.(Write|Append|Delete)|StreamWriter|Process\.Start/.test(code));
-  assert.ok(!/GetAsync|PostAsync|PutAsync|SendAsync/.test(code.replace('GetStringAsync', '')), 'somente GetStringAsync');
-});
-
-test('B10 script do Control Center executa e renderiza o painel real (DOM simulado)', async () => {
-  const html = readFileSync(path.join(REPO_ROOT, 'src', 'jev', 'bridge', 'control-center.html'), 'utf8');
-  const script = html.match(/<script>([\s\S]*)<\/script>/)[1];
-  const els = {};
-  const el = (id) => (els[id] = els[id] || { id, textContent: '', innerHTML: '', className: '', value: '', style: {}, addEventListener() {} });
-  const panel = buildPanel(rt.run(fx('E_trace_vs_volsignals_different.json')), { mode: 'REPLAY', cycles: 1 });
-  const document = { getElementById: el };
-  const fetch = async () => ({ ok: true, json: async () => panel });
-  const localStorage = { getItem: () => null, setItem() {} };
-  const timers = [];
-  const setInterval = (f) => { timers.push(f); return 1; }; const clearInterval = () => {};
-  new Function('document', 'fetch', 'localStorage', 'setInterval', 'clearInterval', script)(document, fetch, localStorage, setInterval, clearInterval);
-  await new Promise((r) => setTimeout(r, 20));
-  assert.equal(els.ctx.textContent, 'UNKNOWN');
-  assert.match(els.robotwhy.textContent, /JEV_CAN_SEND_ORDER=false/);
-  assert.match(els.dq.innerHTML, /DEGRADED/);
-  assert.match(els.spx.innerHTML, /TRACE·GAMMA_REGIME/);
-  assert.match(els.reasons.innerHTML, /RC_NO_ACTIVE_DIRECTIONAL_RULE/);
-  assert.equal(els.offline.style.display, 'none');
-  // bridge fora do ar => banner offline, sem excecao
-  new Function('document', 'fetch', 'localStorage', 'setInterval', 'clearInterval', script)(document, async () => { throw new Error('down'); }, localStorage, setInterval, clearInterval);
-  await new Promise((r) => setTimeout(r, 20));
-  assert.equal(els.offline.style.display, 'block');
-});

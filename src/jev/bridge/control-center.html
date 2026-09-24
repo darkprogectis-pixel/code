@@ -3,113 +3,248 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JEV Control Center</title>
+<title>INVICTUS JEV CODE</title>
 <style>
-  :root { --bg:#0e1116; --panel:#161b22; --line:#262d36; --text:#e6edf3; --muted:#8b949e; --ok:#3fb950; --warn:#d29922; --bad:#f85149; --info:#58a6ff; --lock:#6e7681; }
-  * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--text); font:13px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
-  .side { max-width:420px; min-height:100vh; border-right:1px solid var(--line); background:var(--panel); padding:14px 14px 28px; }
-  header { display:flex; align-items:center; gap:8px; margin-bottom:10px; }
-  header h1 { font-size:15px; margin:0; letter-spacing:.3px; }
-  .dot { width:9px; height:9px; border-radius:50%; background:var(--lock); flex:none; }
-  .dot.ok { background:var(--ok); } .dot.warn { background:var(--warn); } .dot.bad { background:var(--bad); }
-  .muted { color:var(--muted); } .small { font-size:11.5px; }
-  section { border-top:1px solid var(--line); padding:10px 0; }
-  h2 { font-size:11px; text-transform:uppercase; letter-spacing:.8px; color:var(--muted); margin:0 0 6px; font-weight:600; }
-  .ctx { font-size:22px; font-weight:700; letter-spacing:.5px; }
-  .ctx.UNKNOWN { color:var(--muted); }
-  .row { display:flex; justify-content:space-between; gap:8px; padding:2px 0; }
-  .row span:last-child { text-align:right; font-variant-numeric:tabular-nums; }
-  .chips { display:flex; flex-wrap:wrap; gap:4px; }
-  .chip { border:1px solid var(--line); border-radius:10px; padding:1px 7px; font-size:11px; }
-  .chip.FRESH,.chip.USABLE,.chip.VALID,.chip.CONFIRMS,.chip.ENRICHES { border-color:var(--ok); color:var(--ok); }
-  .chip.MARKET_CLOSED,.chip.PARTIAL,.chip.DEGRADED,.chip.NO_EFFECT { border-color:var(--warn); color:var(--warn); }
-  .chip.STALE,.chip.FROZEN,.chip.UNAVAILABLE,.chip.DATA_INVALID,.chip.CONTRADICTS { border-color:var(--bad); color:var(--bad); }
-  .robot { display:flex; align-items:center; justify-content:space-between; gap:10px; background:#0f1318; border:1px solid var(--line); border-radius:8px; padding:9px 10px; }
-  .switch { width:44px; height:24px; border-radius:12px; background:#30363d; position:relative; opacity:.6; cursor:not-allowed; flex:none; border:0; }
-  .switch::after { content:""; position:absolute; top:3px; left:3px; width:18px; height:18px; border-radius:50%; background:var(--lock); }
-  ul { margin:0; padding-left:16px; } li { margin:1px 0; }
-  code { font:11px ui-monospace, Consolas, monospace; color:var(--info); }
-  .banner { border:1px solid var(--bad); color:var(--bad); border-radius:6px; padding:6px 8px; margin-bottom:8px; display:none; }
-  select { background:#0f1318; color:var(--text); border:1px solid var(--line); border-radius:4px; }
+  :root { --bg:#10151C; --card:#171E28; --line:#2B3543; --text:#E7EDF4; --muted:#AAB7C7; --cyan:#68CFE5; --brass:#D0B478;
+          --long:#6ED3A6; --short:#FF8A8A; --amber:#F0BC62; --unknown:#AFC4DA; --bad:#FF8A8A; --ok:#6ED3A6; --fs:13px; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:var(--fs)/1.45 "Segoe UI", system-ui, sans-serif; font-variant-numeric:tabular-nums; }
+  .app { max-width:560px; min-height:100vh; display:flex; flex-direction:column; border-right:1px solid var(--line); }
+  header { display:flex; align-items:center; gap:12px; padding:16px 16px 10px; }
+  .mono { width:28px; height:28px; border:1.5px solid var(--brass); border-radius:6px; display:grid; place-items:center; color:var(--brass); font-weight:700; font-size:12px; letter-spacing:.5px; flex:none; }
+  h1 { margin:0; font-size:18px; font-weight:600; letter-spacing:.4px; } .sub { color:var(--muted); font-size:11px; }
+  .badge-shared { margin-left:auto; border:1px solid var(--line); color:var(--muted); border-radius:10px; padding:1px 8px; font-size:10.5px; white-space:nowrap; }
+  .status { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; padding:0 16px 10px; }
+  .cell { background:var(--card); border:1px solid var(--line); border-radius:6px; padding:6px 8px; min-height:48px; }
+  .cell .k { color:var(--muted); font-size:10.5px; letter-spacing:.6px; } .cell .v { font-weight:600; font-size:12.5px; display:flex; gap:6px; align-items:center; }
+  .dot { width:8px; height:8px; border-radius:50%; background:var(--unknown); flex:none; } .dot.ok { background:var(--ok); } .dot.warn { background:var(--amber); } .dot.bad { background:var(--bad); }
+  nav { display:flex; gap:2px; padding:0 16px; border-bottom:1px solid var(--line); }
+  nav button { background:none; border:0; color:var(--muted); padding:9px 10px; font:inherit; cursor:pointer; border-bottom:2px solid transparent; }
+  nav button[aria-selected="true"] { color:var(--text); border-bottom-color:var(--cyan); }
+  nav button:focus-visible, .rowbtn:focus-visible { outline:2px solid var(--cyan); outline-offset:-2px; }
+  main { flex:1; overflow-y:auto; padding:12px 16px; }
+  .banner { display:none; border:1px solid var(--amber); color:var(--amber); border-radius:6px; padding:8px 10px; margin-bottom:12px; }
+  .stale main .card, .stale .robot { opacity:.55; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:6px; padding:12px; margin-bottom:12px; }
+  .card h2 { margin:0 0 8px; font-size:11px; letter-spacing:.9px; color:var(--muted); font-weight:600; text-transform:uppercase; }
+  .row { display:flex; justify-content:space-between; gap:12px; min-height:28px; align-items:center; border-top:1px solid rgba(43,53,67,.55); }
+  .row:first-of-type { border-top:0; } .row .l { color:var(--muted); } .row .r { text-align:right; }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:4px 16px; }
+  .ctx { font-size:24px; font-weight:700; letter-spacing:.6px; display:flex; align-items:center; gap:10px; }
+  .ctx.LONG_CONTEXT { color:var(--long); } .ctx.SHORT_CONTEXT { color:var(--short); } .ctx.NEUTRAL_CONTEXT { color:#D5DCE5; }
+  .ctx.CONFLICTED_CONTEXT, .ctx.NO_TRADE_CONTEXT { color:var(--amber); } .ctx.UNKNOWN { color:var(--unknown); }
+  .foot { color:var(--muted); font-size:11px; margin-top:6px; }
+  .chip { display:inline-flex; gap:4px; align-items:center; border:1px solid var(--line); border-radius:10px; padding:0 8px; font-size:11px; white-space:nowrap; }
+  .VALID,.FRESH,.USABLE,.CONFIRMS,.ENRICHES,.PASS { color:var(--ok); border-color:var(--ok); }
+  .DEGRADED,.PARTIAL,.MARKET_CLOSED,.STALE,.FROZEN,.FROZEN_VALUES,.NO_EFFECT,.CONTRADICTS { color:var(--amber); border-color:var(--amber); }
+  .DATA_INVALID,.UNAVAILABLE,.FAIL { color:var(--bad); border-color:var(--bad); } .UNKNOWN,.NOT_REPORTED { color:var(--unknown); }
+  .sub2 { border-top:1px dashed var(--line); margin-top:8px; padding-top:8px; }
+  .rowbtn { all:unset; cursor:pointer; display:flex; width:100%; justify-content:space-between; min-height:28px; align-items:center; border-top:1px solid rgba(43,53,67,.55); }
+  .rowbtn .r::after { content:" ›"; color:var(--cyan); }
+  .robot { background:#131922; border-top:1px solid var(--line); padding:12px 16px; }
+  .robot .head { display:flex; justify-content:space-between; align-items:center; }
+  .seg { display:inline-flex; border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+  .seg button { font:inherit; font-weight:600; padding:5px 14px; border:0; background:none; color:var(--muted); }
+  .seg .on { background:#2B3543; color:var(--text); } .seg button:disabled { cursor:not-allowed; opacity:.55; }
+  .snap { color:var(--muted); font-size:11px; padding:6px 16px 10px; border-top:1px solid var(--line); }
+  ul { margin:4px 0 0; padding-left:18px; } li { margin:2px 0; } code { font:11.5px Consolas, ui-monospace, monospace; color:var(--cyan); }
+  .hidden { display:none; } .note { color:var(--muted); font-size:11.5px; }
+  @media (max-width:440px) { .status { grid-template-columns:1fr 1fr; } .grid2 { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
-<aside class="side">
-  <header><span id="dot" class="dot"></span><h1>JEV Control Center</h1><span id="mode" class="muted small"></span></header>
-  <div id="offline" class="banner">Bridge JEV indisponível — nenhum sistema de trading é afetado.</div>
+<div class="app" id="app">
+  <header>
+    <div class="mono" aria-hidden="true">IJ</div>
+    <div><h1>INVICTUS JEV CODE</h1><div class="sub">Market Analyzer / Robot Control Center</div></div>
+    <span class="badge-shared" title="Analyzer e Robot usam exatamente o mesmo motor">ONE SHARED ENGINE</span>
+  </header>
+  <div class="status">
+    <div class="cell"><div class="k">ENGINE</div><div class="v"><span class="dot" id="st-engine-dot"></span><span id="st-engine">—</span></div></div>
+    <div class="cell"><div class="k">LIVE DATA</div><div class="v"><span class="dot" id="st-live-dot"></span><span id="st-live">—</span></div></div>
+    <div class="cell" title="Agente opcional/assíncrono; não é o motor"><div class="k">JEV AGENT</div><div class="v"><span class="dot" id="st-agent-dot"></span><span id="st-agent">NOT REPORTED</span></div></div>
+    <div class="cell"><div class="k">ROBOT</div><div class="v"><span aria-hidden="true">🔒</span><span id="st-robot">OFF</span></div></div>
+  </div>
+  <nav role="tablist" id="tabs">
+    <button role="tab" data-tab="analyzer" aria-selected="true">Analyzer</button>
+    <button role="tab" data-tab="robot" aria-selected="false">Robot</button>
+    <button role="tab" data-tab="details" aria-selected="false">Details</button>
+    <button role="tab" data-tab="settings" aria-selected="false">Settings</button>
+    <button role="tab" data-tab="logs" aria-selected="false">Logs</button>
+  </nav>
+  <main>
+    <div class="banner" id="offline">Bridge indisponível — exibindo o <b>último conhecido</b> (não atual). Nenhum sistema de trading é afetado.</div>
 
-  <section>
-    <h2>Contexto direcional</h2>
-    <div id="ctx" class="ctx UNKNOWN">—</div>
-    <div id="ctxwhy" class="muted small"></div>
-    <div class="small muted" style="margin-top:4px">Classificação, não ordem de trade · conviction <b>UNCALIBRATED</b> · probabilidade não exibida</div>
-  </section>
+    <section data-panel="analyzer">
+      <div class="card"><h2>Market</h2><div class="grid2">
+        <div class="row"><span class="l">Instrument</span><span class="r" id="mk-instrument">—</span></div>
+        <div class="row"><span class="l">Timeframe</span><span class="r" id="mk-timeframe">—</span></div>
+        <div class="row"><span class="l">Market state</span><span class="r" id="mk-state">—</span></div>
+        <div class="row"><span class="l">Data quality</span><span class="r" id="mk-dq">—</span></div>
+      </div></div>
+      <div class="card"><h2>Directional context</h2>
+        <div class="ctx UNKNOWN" id="ctx"><span id="ctx-icon" aria-hidden="true">ⓘ</span><span id="ctx-label">UNKNOWN</span></div>
+        <div id="ctxwhy" class="note">Aguardando primeiro snapshot</div>
+        <div class="foot">Contexto, não ordem · sem probabilidade (conviction UNCALIBRATED)</div>
+      </div>
+      <div class="card"><h2>JEV Native Dealer</h2><div id="dealer"></div></div>
+      <div class="card"><h2>SPX Final Context</h2><div id="spx"></div>
+        <div class="sub2"><div class="row"><span class="l">MENTHORQ · CONFIRMATION OVERLAY</span><span class="r" id="mq">—</span></div>
+        <div class="note">Positive only · Non-blocking · ZERO não é erro, veto nem penalidade</div></div>
+      </div>
+      <div class="card"><h2>Analysis</h2><div id="analysis"></div></div>
+    </section>
 
-  <section>
-    <h2>Robô</h2>
-    <div class="robot">
-      <div><b>ROBÔ OFF</b><div id="robotwhy" class="muted small"></div></div>
-      <button class="switch" disabled aria-disabled="true" title="Travado: execução desabilitada no JEV V1"></button>
+    <section data-panel="robot" class="hidden">
+      <div class="card"><h2>Robot · estado</h2><div id="robot-detail"></div></div>
+      <div class="card"><h2>Gates de habilitação (todos obrigatórios)</h2><div id="robot-gates"></div>
+        <div class="note">ON só pode ser solicitado pela janela do NinjaTrader. Esta página é somente leitura.</div></div>
+    </section>
+
+    <section data-panel="details" class="hidden">
+      <div class="card" id="d-reasons"><h2>Reason codes</h2><ul id="reasons" class="note"></ul></div>
+      <div class="card" id="d-conflicts"><h2>Conflicts (descritivos)</h2><div id="conflicts" class="note">—</div></div>
+      <div class="card" id="d-unresolved"><h2>Unresolved</h2><div id="unresolved" class="note">—</div></div>
+      <div class="card" id="d-quality"><h2>Source quality</h2><div id="quality"></div></div>
+      <div class="card"><h2>Agent · ADVISORY (não é estado canônico)</h2><div id="agent-notes" class="note">NOT REPORTED</div></div>
+      <div class="card"><h2>Auditoria</h2><div id="audit" class="note"></div></div>
+    </section>
+
+    <section data-panel="settings" class="hidden">
+      <div class="card"><h2>Preferências</h2>
+        <div class="row"><span class="l">Atualização</span><span class="r"><select id="poll"><option value="2000">2 s</option><option value="3000">3 s</option><option value="5000">5 s</option><option value="10000">10 s</option></select></span></div>
+        <div class="row"><span class="l">Tamanho da fonte</span><span class="r"><select id="font"><option value="13">13</option><option value="14">14</option><option value="15">15</option></select></span></div>
+      </div>
+      <div class="card"><h2>Endereços (somente leitura)</h2>
+        <div class="row"><span class="l">Bridge</span><span class="r"><code>127.0.0.1:3590</code> GET/HEAD</span></div>
+        <div class="row"><span class="l">Agent Gateway</span><span class="r"><code>127.0.0.1:3592</code> opcional</span></div>
+        <div class="row"><span class="l">Control plane</span><span class="r">NT8 apenas (token local)</span></div>
+        <div class="row"><span class="l">Runtime</span><span class="r" id="ver">—</span></div>
+      </div>
+    </section>
+
+    <section data-panel="logs" class="hidden">
+      <div class="card"><h2>Eventos locais desta página</h2><ul id="logs" class="note"></ul></div>
+    </section>
+  </main>
+
+  <div class="robot" aria-label="Robot">
+    <div class="head"><b>ROBOT</b>
+      <span class="seg" role="group" aria-label="Robot OFF/ON"><button class="on" aria-pressed="true" disabled>OFF</button><button id="btn-on" disabled aria-disabled="true" title="Executor ainda não operacional">🔒 ON</button></span>
     </div>
-  </section>
-
-  <section><h2>Market state</h2><div id="market"></div></section>
-  <section><h2>Data quality</h2><div id="dq"></div></section>
-  <section><h2>Dealer context (descritivo)</h2><div id="dealer"></div></section>
-  <section><h2>SPX context (TRACE / VolSignals · origem SPX)</h2><div id="spx"></div></section>
-  <section><h2>Reason codes</h2><ul id="reasons" class="small"></ul></section>
-  <section><h2>Unresolved</h2><div id="unres" class="small"></div></section>
-  <section>
-    <h2>Configurações</h2>
-    <div class="row"><span>Atualização</span><span><select id="poll"><option value="2000">2 s</option><option value="3000">3 s</option><option value="5000">5 s</option><option value="10000">10 s</option></select></span></div>
-    <div class="row small muted"><span>Bridge</span><span id="bridge"></span></div>
-    <div class="row small muted"><span>Runtime</span><span id="ver"></span></div>
-  </section>
-</aside>
+    <div class="note" id="robot-why">Executor ainda não operacional.</div>
+    <div class="row"><span class="l">Execution</span><span class="r" id="robot-exec">DISABLED</span></div>
+    <div class="row"><span class="l">Strategy</span><span class="r" id="robot-strategy">NOT AVAILABLE</span></div>
+    <div class="row"><span class="l">Position</span><span class="r" id="robot-position">UNKNOWN · Não reportada</span></div>
+    <div class="foot">Execução bloqueada · Analyzer ativo · Analyzer e Robot usam o mesmo motor</div>
+  </div>
+  <div class="snap" id="footer-snap">Último snapshot: —</div>
+</div>
 <script>
 (() => {
   const $ = (id) => document.getElementById(id);
-  const esc = (s) => String(s == null ? '—' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-  const chip = (v, label) => `<span class="chip ${esc(v)}">${label ? esc(label) + ': ' : ''}${esc(v)}</span>`;
-  const row = (k, v) => `<div class="row"><span class="muted">${esc(k)}</span><span>${v}</span></div>`;
-  let pollMs = 3000; let timer = null;
-  try { const s = localStorage.getItem('jev.poll'); if (s) pollMs = Number(s) || 3000; } catch (e) {}
+  const esc = (s) => String(s === null || s === undefined || s === '' ? '—' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const chip = (v, pre) => `<span class="chip ${esc(v)}">${pre ? esc(pre) + ' · ' : ''}${esc(v)}</span>`;
+  const row = (l, r, id) => `<div class="row"${id ? ` id="${id}"` : ''}><span class="l">${esc(l)}</span><span class="r">${r}</span></div>`;
+  const ICON = { LONG_CONTEXT: '↑', SHORT_CONTEXT: '↓', NEUTRAL_CONTEXT: '—', CONFLICTED_CONTEXT: '⇅', NO_TRADE_CONTEXT: '⏸', UNKNOWN: 'ⓘ' };
+  const NO_TRADE_TEXT = 'Contexto desfavorável à exposição direcional; não é ordem';
+  let pollMs = 3000, timer = null, last = null, lastAt = null, output = null;
+  const logs = [];
+  const logEv = (m) => { logs.unshift(`${new Date().toISOString()} · ${m}`); logs.length = Math.min(logs.length, 200); $('logs').innerHTML = logs.map((x) => `<li>${esc(x)}</li>`).join(''); };
+  try { pollMs = Number(localStorage.getItem('ijc.poll')) || 3000; const f = localStorage.getItem('ijc.font'); if (f) document.documentElement.style.setProperty('--fs', f + 'px'); } catch (e) {}
   $('poll').value = String(pollMs);
-  $('poll').addEventListener('change', (e) => { pollMs = Number(e.target.value); try { localStorage.setItem('jev.poll', String(pollMs)); } catch (x) {} schedule(); });
+  $('poll').addEventListener('change', (e) => { pollMs = Number(e.target.value); try { localStorage.setItem('ijc.poll', String(pollMs)); } catch (x) {} schedule(); });
+  $('font').addEventListener('change', (e) => { document.documentElement.style.setProperty('--fs', e.target.value + 'px'); try { localStorage.setItem('ijc.font', e.target.value); } catch (x) {} });
+
+  function selectTab(name, anchor) {
+    document.querySelectorAll('nav button').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.tab === name)));
+    document.querySelectorAll('[data-panel]').forEach((s) => s.classList.toggle('hidden', s.dataset.panel !== name));
+    if (name === 'details') loadDetails();
+    if (anchor && $(anchor) && $(anchor).scrollIntoView) $(anchor).scrollIntoView();
+  }
+  document.querySelectorAll('nav button').forEach((b) => b.addEventListener('click', () => selectTab(b.dataset.tab)));
+
+  function renderStatus(p, transportOk) {
+    $('st-engine').textContent = !transportOk ? 'UNKNOWN · last known' : p.status === 'STARTING' ? 'STARTING' : 'OPERATIONAL';
+    $('st-engine-dot').className = 'dot ' + (!transportOk ? '' : p.status === 'STARTING' ? 'warn' : 'ok');
+    $('st-live').textContent = !transportOk ? 'OFFLINE' : `${p.bridge.mode}${p.bridge.relay ? ' · ' + p.bridge.relay.ok_routes + '/' + p.bridge.relay.total_routes : ''}`;
+    $('st-live-dot').className = 'dot ' + (!transportOk ? 'bad' : p.bridge.last_cycle_error ? 'warn' : 'ok');
+    $('st-robot').textContent = (p.robot && p.robot.state) || 'OFF';
+  }
 
   function render(p) {
-    $('offline').style.display = 'none';
-    $('dot').className = 'dot ' + (p.status === 'RUNNING' ? (p.data_quality && p.data_quality.status === 'VALID' ? 'ok' : 'warn') : p.status === 'STARTING' ? '' : 'bad');
-    $('mode').textContent = `${p.bridge.mode} · ciclo ${p.bridge.cycles}`;
-    $('ctx').textContent = p.jev.directional_context; $('ctx').className = 'ctx ' + p.jev.directional_context;
-    $('ctxwhy').textContent = p.jev.context_explanation || '';
-    $('robotwhy').textContent = p.robot.locked_reason;
-    $('ver').textContent = p.runtime_version;
-    $('bridge').textContent = p.bridge.relay ? `relay ${p.bridge.relay.ok_routes}/${p.bridge.relay.total_routes} rotas` : (p.bridge.last_cycle_error || 'sem relay (replay)');
-    if (p.status === 'STARTING') { ['market', 'dq', 'dealer', 'spx', 'unres'].forEach((k) => ($(k).innerHTML = '<span class="muted">aguardando ciclo…</span>')); $('reasons').innerHTML = ''; return; }
-    const m = p.market_state;
-    $('market').innerHTML = row('Avaliado em', esc(p.jev.evaluated_at)) + row('Sessão', esc(p.jev.session)) + row('Regime 0DTE', esc(m.gamma_regime))
-      + row('Nível acima / abaixo', m.structure_location && typeof m.structure_location === 'object' ? `${esc(m.structure_location.nearest_above)} / ${esc(m.structure_location.nearest_below)}` : esc(m.structure_location));
-    const dq = p.data_quality;
-    $('dq').innerHTML = row('Status', chip(dq.status)) + '<div class="small muted" style="margin:4px 0 2px">Fontes</div><div class="chips">'
-      + Object.entries(dq.per_source).filter(([k]) => !/FROZEN_BLOCK|CACHE_HISTORY|INDICATOR/.test(k)).map(([k, v]) => chip(v, k.replace('FR_', ''))).join('') + '</div>'
-      + '<div class="small muted" style="margin:6px 0 2px">Dimensões</div><div class="chips">' + Object.entries(dq.dimensions).map(([k, v]) => chip(v, k)).join('') + '</div>';
-    const d = p.dealer_context; const lv = (x) => (x ? `${esc(x.level)} (${x.distance_pts > 0 ? '+' : ''}${Number(x.distance_pts).toFixed(2)} pts)${x.flag ? ' ⚠' : ''}` : '—');
-    const g = d.gamma_regime && typeof d.gamma_regime === 'object' ? d.gamma_regime : { zero: d.gamma_regime };
-    $('dealer').innerHTML = row('Regime 0DTE / next / full', `${esc(g.zero)} / ${esc(g.next)} / ${esc(g.full)}`) + row('Mais próximo acima', lv(d.nearest_above)) + row('Mais próximo abaixo', lv(d.nearest_below))
-      + row('DEX put/call ratio', d.put_call_dex_ratio == null ? '—' : Number(d.put_call_dex_ratio).toFixed(3)) + row('Direção DEX / 2ª ordem / skew', 'UNRESOLVED')
-      + `<div class="small muted">${esc(d.note)}</div>`;
-    const s = p.spx_context;
-    $('spx').innerHTML = row('Efeito escalar', s.effect_on_native === null ? '<span class="muted">não derivado (efeitos distintos)</span>' : chip(s.effect_on_native))
-      + '<div class="chips" style="margin-top:4px">' + s.effects.map((e) => chip(e.effect, `${e.source}·${e.dimension}`)).join('') + '</div>'
-      + row('Freshness TRACE / VolSignals', `${esc(s.trace_freshness)} / ${esc(s.volsignals_freshness)}`);
-    $('reasons').innerHTML = p.reason_codes.map((r) => `<li><code>${esc(r.code)}</code> — ${esc(r.label)}</li>`).join('');
-    $('unres').innerHTML = `${esc(p.unresolved.count)} campos com semântica/sinal UNKNOWN (leitura UNRESOLVED)`;
+    $('ver').textContent = p.runtime_version || '—';
+    const r = p.robot || {};
+    $('robot-why').textContent = r.locked_reason || 'Executor ainda não operacional.';
+    $('robot-exec').innerHTML = chip(r.execution || 'DISABLED');
+    $('robot-strategy').textContent = r.strategy || 'NOT AVAILABLE';
+    $('robot-position').textContent = r.position && r.position.state && r.position.state !== 'NOT_REPORTED' ? r.position.state : 'UNKNOWN · Não reportada';
+    $('robot-detail').innerHTML = row('Modo', esc(r.state)) + row('Execution', chip(r.execution || 'DISABLED')) + row('Order path', esc(r.order_path)) + row('Decisão (snapshot)', r.decision ? `${esc(r.decision.action)} · <code>${esc(r.decision.snapshot_id)}</code>` : '—')
+      + row('Executor NT8', r.executor ? esc(r.executor.state) + (r.executor.heartbeat_age_ms != null ? ` · ${Math.round(r.executor.heartbeat_age_ms / 1000)} s` : '') : 'NOT_REPORTED')
+      + row('Reconciliação', r.executor && r.executor.reconciliation ? esc(r.executor.reconciliation.status) : '—')
+      + row('Contas elegíveis (Sim/Playback)', r.executor && r.executor.accounts_eligible != null ? `${r.executor.accounts_eligible}/${r.executor.accounts_reported}` : '—');
+    $('robot-gates').innerHTML = (r.gates || []).map((g) => row(g.id, `${chip(g.pass ? 'PASS' : 'FAIL')} <span class="note">${esc(g.detail)}</span>`)).join('') || '<span class="note">—</span>';
+    if (p.status === 'STARTING') { $('ctxwhy').textContent = 'Aguardando primeiro snapshot'; return; }
+    const ms = p.market_state || {};
+    $('mk-instrument').textContent = ms.target || '—';
+    $('mk-timeframe').textContent = '—';
+    $('mk-state').textContent = ms.gamma_regime ? `Descritivo · ${ms.gamma_regime}` : '—';
+    $('mk-dq').innerHTML = chip(p.data_quality.status);
+    const c = p.jev.directional_context;
+    $('ctx').className = 'ctx ' + c; $('ctx-icon').textContent = ICON[c] || 'ⓘ'; $('ctx-label').textContent = c;
+    $('ctxwhy').textContent = c === 'NO_TRADE_CONTEXT' ? NO_TRADE_TEXT : c === 'UNKNOWN' && p.jev.context_reason === 'RC_NO_ACTIVE_DIRECTIONAL_RULE' ? 'Sem regra direcional ativa — estado operacional legítimo' : (p.jev.context_explanation || '—');
+    const d = p.dealer_context || {}; const g = d.gamma_regime && typeof d.gamma_regime === 'object' ? d.gamma_regime : { zero: d.gamma_regime };
+    const lv = (x) => (x ? `${esc(x.level)} (${x.distance_pts > 0 ? '+' : ''}${Number(x.distance_pts).toFixed(2)} pts)${x.flag ? ' ⚠' : ''}` : '—');
+    const tr = Array.isArray(d.change_transition) ? (d.change_transition.length ? d.change_transition.map((e) => esc(e.type)).join(', ') : 'Nenhuma transição reportada') : d.change_transition === 'NONE' ? 'Nenhuma transição reportada' : esc(d.change_transition);
+    $('dealer').innerHTML = row('Gamma regime', `${esc(g.zero)} <span class="note">· next ${esc(g.next)} · full ${esc(g.full)}</span>`)
+      + row('Structure', `acima ${lv(d.nearest_above)} · abaixo ${lv(d.nearest_below)}`)
+      + row('Delta positioning', `${d.put_call_dex_ratio == null ? '—' : 'DEX put/call ' + Number(d.put_call_dex_ratio).toFixed(3)} · direção ${esc(d.dex_direction)}`)
+      + row('Second-order flows', esc(d.second_order_flows)) + row('Vol / skew', esc(d.vol_skew)) + row('Transitions', tr);
+    const s = p.spx_context || {}; const eff = (src) => (s.effects || []).filter((e) => e.source === src).map((e) => chip(e.effect, e.dimension)).join(' ') || '—';
+    $('spx').innerHTML = row('TRACE', `${chip(s.trace_freshness)} ${eff('TRACE')}`) + row('VolSignals', `${chip(s.volsignals_freshness)} ${eff('VOLSIGNALS')}`)
+      + row('Efeito sobre o nativo', s.effect_on_native === null ? '<span class="note">Efeitos por dimensão (sem agregado)</span>' : chip(s.effect_on_native));
+    $('mq').innerHTML = chip((p.menthorq && p.menthorq.confirmation) || '—');
+    const btn = (l, r, anchor) => `<button class="rowbtn" data-anchor="${anchor}"><span class="l">${esc(l)}</span><span class="r">${r}</span></button>`;
+    $('analysis').innerHTML = btn('Current context', esc(c), 'd-reasons') + btn('Reason codes', esc((p.reason_codes[0] || {}).label), 'd-reasons')
+      + btn('Conflicts', 'Ver detalhes', 'd-conflicts') + btn('Unresolved', `${esc(p.unresolved.count)} campos`, 'd-unresolved') + btn('Source quality', 'Por fonte', 'd-quality');
+    document.querySelectorAll('.rowbtn').forEach((b) => b.addEventListener('click', () => selectTab('details', b.dataset.anchor)));
+    $('reasons').innerHTML = p.reason_codes.map((x) => `<li><code>${esc(x.code)}</code> — ${esc(x.label)}</li>`).join('');
+    $('unresolved').innerHTML = `${esc(p.unresolved.count)} campos com semântica/sinal UNKNOWN. Amostra (máx. 12): ${(p.unresolved.sample || []).map((f) => `<code>${esc(f)}</code>`).join(', ')}`;
+    $('quality').innerHTML = Object.entries(p.data_quality.per_source).map(([k, v]) => row(k.replace('FR_', ''), chip(v))).join('')
+      + Object.entries(p.data_quality.dimensions).map(([k, v]) => row(k, chip(v))).join('');
+    $('audit').innerHTML = `core_comparison ${esc(p.core_comparison)} · ordens emitidas ${esc(p.guarantees && p.guarantees.orders_emitted)} · snapshot <code>${esc(p.snapshot_id)}</code>`;
+    $('footer-snap').innerHTML = `Último snapshot: ${esc(p.jev.evaluated_at)} · <code>${esc(p.snapshot_id)}</code>`;
+  }
+
+  async function loadDetails() {
+    try { const r = await fetch('/jev/v1/output', { cache: 'no-store' }); if (r.ok) { output = await r.json(); $('conflicts').innerHTML = (output.conflicts || []).length ? output.conflicts.map((x) => `<div>${esc(x.kind)} — ${esc(x.description)}</div>`).join('') : 'Nenhum conflito descritivo no último output (isto não é CONFLICTED_CONTEXT).'; } }
+    catch (e) { $('conflicts').textContent = 'Output indisponível (bridge offline)'; }
+    try { const r = await fetchTimeout('http://127.0.0.1:3592/agent/v1/notes', 1000); const j = await r.json(); $('agent-notes').innerHTML = (j.notes || []).length ? j.notes.map((n) => `<div><b>ADVISORY</b> · ${esc(n.provider)} · <code>${esc(n.snapshot_id)}</code><br>${esc(n.text)}</div>`).join('<hr>') : 'Sem notas (agente sem provider ou ainda sem snapshot novo).'; }
+    catch (e) { $('agent-notes').textContent = 'NOT REPORTED (agente opcional indisponível)'; }
+  }
+  function fetchTimeout(url, ms) { const ac = new AbortController(); const t = setTimeout(() => ac.abort(), ms); return fetch(url, { cache: 'no-store', signal: ac.signal }).finally(() => clearTimeout(t)); }
+
+  async function agent() {
+    try { const r = await fetchTimeout('http://127.0.0.1:3592/agent/v1/health', 1000); const h = await r.json(); $('st-agent').textContent = h.status + (h.provider ? ' · ' + h.provider.id : ''); $('st-agent-dot').className = 'dot ' + (h.status === 'ONLINE' ? 'ok' : 'warn'); }
+    catch (e) { $('st-agent').textContent = 'NOT REPORTED'; $('st-agent-dot').className = 'dot'; }
   }
   async function tick() {
-    try { const r = await fetch('/jev/v1/state', { cache: 'no-store' }); if (!r.ok) throw new Error(r.status); render(await r.json()); }
-    catch (e) { $('offline').style.display = 'block'; $('dot').className = 'dot bad'; }
+    try {
+      const r = await fetch('/jev/v1/state', { cache: 'no-store' }); if (!r.ok) throw new Error('HTTP ' + r.status);
+      const p = await r.json();
+      if (!last || last.snapshot_id !== p.snapshot_id) logEv(`snapshot ${p.snapshot_id || '—'} · ${p.jev.directional_context} · dq ${p.data_quality ? p.data_quality.status : '—'}`);
+      if (lastAt === 'OFFLINE') logEv('bridge reconectada');
+      last = p; lastAt = Date.now();
+      $('offline').style.display = 'none'; $('app').classList.remove('stale');
+      renderStatus(p, true); render(p);
+    } catch (e) {
+      if (lastAt !== 'OFFLINE') logEv('bridge indisponível: ' + (e && e.message));
+      lastAt = 'OFFLINE';
+      $('offline').style.display = 'block'; $('app').classList.add('stale');
+      if (last) { renderStatus(last, false); render(last); $('footer-snap').innerHTML = `Último conhecido: ${esc(last.jev.evaluated_at)} · <code>${esc(last.snapshot_id)}</code>`; }
+      else renderStatus({ bridge: {}, robot: { state: 'OFF' } }, false);
+    }
+    agent();
   }
   function schedule() { clearInterval(timer); timer = setInterval(tick, pollMs); }
   tick(); schedule();

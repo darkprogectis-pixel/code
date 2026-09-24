@@ -34,5 +34,5 @@ Thumbs.db
 .vscode/
 
 # NT8 AddOn compile-check (fora do NT8)
-nt8/check/bin/
-nt8/check/obj/
+nt8/check/**/bin/
+nt8/check/**/obj/
