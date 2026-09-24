@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JEV Control Center</title>
+<style>
+  :root { --bg:#0e1116; --panel:#161b22; --line:#262d36; --text:#e6edf3; --muted:#8b949e; --ok:#3fb950; --warn:#d29922; --bad:#f85149; --info:#58a6ff; --lock:#6e7681; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:13px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .side { max-width:420px; min-height:100vh; border-right:1px solid var(--line); background:var(--panel); padding:14px 14px 28px; }
+  header { display:flex; align-items:center; gap:8px; margin-bottom:10px; }
+  header h1 { font-size:15px; margin:0; letter-spacing:.3px; }
+  .dot { width:9px; height:9px; border-radius:50%; background:var(--lock); flex:none; }
+  .dot.ok { background:var(--ok); } .dot.warn { background:var(--warn); } .dot.bad { background:var(--bad); }
+  .muted { color:var(--muted); } .small { font-size:11.5px; }
+  section { border-top:1px solid var(--line); padding:10px 0; }
+  h2 { font-size:11px; text-transform:uppercase; letter-spacing:.8px; color:var(--muted); margin:0 0 6px; font-weight:600; }
+  .ctx { font-size:22px; font-weight:700; letter-spacing:.5px; }
+  .ctx.UNKNOWN { color:var(--muted); }
+  .row { display:flex; justify-content:space-between; gap:8px; padding:2px 0; }
+  .row span:last-child { text-align:right; font-variant-numeric:tabular-nums; }
+  .chips { display:flex; flex-wrap:wrap; gap:4px; }
+  .chip { border:1px solid var(--line); border-radius:10px; padding:1px 7px; font-size:11px; }
+  .chip.FRESH,.chip.USABLE,.chip.VALID,.chip.CONFIRMS,.chip.ENRICHES { border-color:var(--ok); color:var(--ok); }
+  .chip.MARKET_CLOSED,.chip.PARTIAL,.chip.DEGRADED,.chip.NO_EFFECT { border-color:var(--warn); color:var(--warn); }
+  .chip.STALE,.chip.FROZEN,.chip.UNAVAILABLE,.chip.DATA_INVALID,.chip.CONTRADICTS { border-color:var(--bad); color:var(--bad); }
+  .robot { display:flex; align-items:center; justify-content:space-between; gap:10px; background:#0f1318; border:1px solid var(--line); border-radius:8px; padding:9px 10px; }
+  .switch { width:44px; height:24px; border-radius:12px; background:#30363d; position:relative; opacity:.6; cursor:not-allowed; flex:none; border:0; }
+  .switch::after { content:""; position:absolute; top:3px; left:3px; width:18px; height:18px; border-radius:50%; background:var(--lock); }
+  ul { margin:0; padding-left:16px; } li { margin:1px 0; }
+  code { font:11px ui-monospace, Consolas, monospace; color:var(--info); }
+  .banner { border:1px solid var(--bad); color:var(--bad); border-radius:6px; padding:6px 8px; margin-bottom:8px; display:none; }
+  select { background:#0f1318; color:var(--text); border:1px solid var(--line); border-radius:4px; }
+</style>
+</head>
+<body>
+<aside class="side">
+  <header><span id="dot" class="dot"></span><h1>JEV Control Center</h1><span id="mode" class="muted small"></span></header>
+  <div id="offline" class="banner">Bridge JEV indisponível — nenhum sistema de trading é afetado.</div>
+
+  <section>
+    <h2>Contexto direcional</h2>
+    <div id="ctx" class="ctx UNKNOWN">—</div>
+    <div id="ctxwhy" class="muted small"></div>
+    <div class="small muted" style="margin-top:4px">Classificação, não ordem de trade · conviction <b>UNCALIBRATED</b> · probabilidade não exibida</div>
+  </section>
+
+  <section>
+    <h2>Robô</h2>
+    <div class="robot">
+      <div><b>ROBÔ OFF</b><div id="robotwhy" class="muted small"></div></div>
+      <button class="switch" disabled aria-disabled="true" title="Travado: execução desabilitada no JEV V1"></button>
+    </div>
+  </section>
+
+  <section><h2>Market state</h2><div id="market"></div></section>
+  <section><h2>Data quality</h2><div id="dq"></div></section>
+  <section><h2>Dealer context (descritivo)</h2><div id="dealer"></div></section>
+  <section><h2>SPX context (TRACE / VolSignals · origem SPX)</h2><div id="spx"></div></section>
+  <section><h2>Reason codes</h2><ul id="reasons" class="small"></ul></section>
+  <section><h2>Unresolved</h2><div id="unres" class="small"></div></section>
+  <section>
+    <h2>Configurações</h2>
+    <div class="row"><span>Atualização</span><span><select id="poll"><option value="2000">2 s</option><option value="3000">3 s</option><option value="5000">5 s</option><option value="10000">10 s</option></select></span></div>
+    <div class="row small muted"><span>Bridge</span><span id="bridge"></span></div>
+    <div class="row small muted"><span>Runtime</span><span id="ver"></span></div>
+  </section>
+</aside>
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const esc = (s) => String(s == null ? '—' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const chip = (v, label) => `<span class="chip ${esc(v)}">${label ? esc(label) + ': ' : ''}${esc(v)}</span>`;
+  const row = (k, v) => `<div class="row"><span class="muted">${esc(k)}</span><span>${v}</span></div>`;
+  let pollMs = 3000; let timer = null;
+  try { const s = localStorage.getItem('jev.poll'); if (s) pollMs = Number(s) || 3000; } catch (e) {}
+  $('poll').value = String(pollMs);
+  $('poll').addEventListener('change', (e) => { pollMs = Number(e.target.value); try { localStorage.setItem('jev.poll', String(pollMs)); } catch (x) {} schedule(); });
+
+  function render(p) {
+    $('offline').style.display = 'none';
+    $('dot').className = 'dot ' + (p.status === 'RUNNING' ? (p.data_quality && p.data_quality.status === 'VALID' ? 'ok' : 'warn') : p.status === 'STARTING' ? '' : 'bad');
+    $('mode').textContent = `${p.bridge.mode} · ciclo ${p.bridge.cycles}`;
+    $('ctx').textContent = p.jev.directional_context; $('ctx').className = 'ctx ' + p.jev.directional_context;
+    $('ctxwhy').textContent = p.jev.context_explanation || '';
+    $('robotwhy').textContent = p.robot.locked_reason;
+    $('ver').textContent = p.runtime_version;
+    $('bridge').textContent = p.bridge.relay ? `relay ${p.bridge.relay.ok_routes}/${p.bridge.relay.total_routes} rotas` : (p.bridge.last_cycle_error || 'sem relay (replay)');
+    if (p.status === 'STARTING') { ['market', 'dq', 'dealer', 'spx', 'unres'].forEach((k) => ($(k).innerHTML = '<span class="muted">aguardando ciclo…</span>')); $('reasons').innerHTML = ''; return; }
+    const m = p.market_state;
+    $('market').innerHTML = row('Avaliado em', esc(p.jev.evaluated_at)) + row('Sessão', esc(p.jev.session)) + row('Regime 0DTE', esc(m.gamma_regime))
+      + row('Nível acima / abaixo', m.structure_location && typeof m.structure_location === 'object' ? `${esc(m.structure_location.nearest_above)} / ${esc(m.structure_location.nearest_below)}` : esc(m.structure_location));
+    const dq = p.data_quality;
+    $('dq').innerHTML = row('Status', chip(dq.status)) + '<div class="small muted" style="margin:4px 0 2px">Fontes</div><div class="chips">'
+      + Object.entries(dq.per_source).filter(([k]) => !/FROZEN_BLOCK|CACHE_HISTORY|INDICATOR/.test(k)).map(([k, v]) => chip(v, k.replace('FR_', ''))).join('') + '</div>'
+      + '<div class="small muted" style="margin:6px 0 2px">Dimensões</div><div class="chips">' + Object.entries(dq.dimensions).map(([k, v]) => chip(v, k)).join('') + '</div>';
+    const d = p.dealer_context; const lv = (x) => (x ? `${esc(x.level)} (${x.distance_pts > 0 ? '+' : ''}${Number(x.distance_pts).toFixed(2)} pts)${x.flag ? ' ⚠' : ''}` : '—');
+    const g = d.gamma_regime && typeof d.gamma_regime === 'object' ? d.gamma_regime : { zero: d.gamma_regime };
+    $('dealer').innerHTML = row('Regime 0DTE / next / full', `${esc(g.zero)} / ${esc(g.next)} / ${esc(g.full)}`) + row('Mais próximo acima', lv(d.nearest_above)) + row('Mais próximo abaixo', lv(d.nearest_below))
+      + row('DEX put/call ratio', d.put_call_dex_ratio == null ? '—' : Number(d.put_call_dex_ratio).toFixed(3)) + row('Direção DEX / 2ª ordem / skew', 'UNRESOLVED')
+      + `<div class="small muted">${esc(d.note)}</div>`;
+    const s = p.spx_context;
+    $('spx').innerHTML = row('Efeito escalar', s.effect_on_native === null ? '<span class="muted">não derivado (efeitos distintos)</span>' : chip(s.effect_on_native))
+      + '<div class="chips" style="margin-top:4px">' + s.effects.map((e) => chip(e.effect, `${e.source}·${e.dimension}`)).join('') + '</div>'
+      + row('Freshness TRACE / VolSignals', `${esc(s.trace_freshness)} / ${esc(s.volsignals_freshness)}`);
+    $('reasons').innerHTML = p.reason_codes.map((r) => `<li><code>${esc(r.code)}</code> — ${esc(r.label)}</li>`).join('');
+    $('unres').innerHTML = `${esc(p.unresolved.count)} campos com semântica/sinal UNKNOWN (leitura UNRESOLVED)`;
+  }
+  async function tick() {
+    try { const r = await fetch('/jev/v1/state', { cache: 'no-store' }); if (!r.ok) throw new Error(r.status); render(await r.json()); }
+    catch (e) { $('offline').style.display = 'block'; $('dot').className = 'dot bad'; }
+  }
+  function schedule() { clearInterval(timer); timer = setInterval(tick, pollMs); }
+  tick(); schedule();
+})();
+</script>
+</body>
+</html>

@@ -15,6 +15,10 @@
     "live": "node src/jev/cli.mjs --live",
     "live:once": "node src/jev/cli.mjs --live --cycles 1 --output-only --print",
     "smoke:live": "node test/jev/live-smoke.mjs --cycles 3",
-    "build:mapping": "node context/jev-future/scripts/build-jev-live-relay-mapping-v1.mjs"
+    "build:mapping": "node context/jev-future/scripts/build-jev-live-relay-mapping-v1.mjs",
+    "serve": "node src/jev/cli.mjs --serve",
+    "serve:replay": "node src/jev/cli.mjs --serve --replay fixtures/jev/C_valid_multi_source.json",
+    "smoke:bridge": "node test/jev/bridge-smoke.mjs",
+    "check:nt8": "dotnet build nt8/check/JevControlCenter.check.csproj -nologo -v q"
   }
 }

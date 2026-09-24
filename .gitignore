@@ -32,3 +32,7 @@ context/jev-future/data/aoclassiccache-frozen/20260923/*
 .DS_Store
 Thumbs.db
 .vscode/
+
+# NT8 AddOn compile-check (fora do NT8)
+nt8/check/bin/
+nt8/check/obj/

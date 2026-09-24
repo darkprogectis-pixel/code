@@ -1,0 +1,19 @@
+<!-- VERIFICACAO DE COMPILACAO FORA DO NT8 (nao instala, nao copia nada para o NT8, nao e F5).
+     Referencia os DLLs do NT8 somente para leitura. Uso: dotnet build nt8/check/JevControlCenter.check.csproj -->
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <OutputType>Library</OutputType>
+    <LangVersion>7.3</LangVersion>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <NT8Bin Condition="'$(NT8Bin)' == ''">C:\Program Files\NinjaTrader 8\bin</NT8Bin>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\AddOns\JevControlCenter.cs" />
+    <Reference Include="NinjaTrader.Core"><HintPath>$(NT8Bin)\NinjaTrader.Core.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="NinjaTrader.Gui"><HintPath>$(NT8Bin)\NinjaTrader.Gui.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Newtonsoft.Json"><HintPath>$(NT8Bin)\Newtonsoft.Json.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+</Project>

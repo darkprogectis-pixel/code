@@ -3,7 +3,7 @@
 //   node src/jev/cli.mjs --input fixtures/jev/C_valid_multi_source.json [--previous prev.json] [--config config/jev-runtime-v1.json] [--out result.json] [--output-only]
 // Exit 0 = output produzido (inclusive UNKNOWN, que e estado operacional seguro). Exit 2 = FATAL (config/artefato/invariante). Exit 64 = uso.
 // Nunca envia ordem, nunca executa trade, nunca toca NT8/producao.
-import { writeFileSync } from 'node:fs';
+import { writeFileSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { createRuntime } from './engine.mjs';
 import { JevFatalError } from './artifacts.mjs';
@@ -11,10 +11,15 @@ import { REPO_ROOT } from './config.mjs';
 
 function parseArgs(argv) {
   const a = { input: null, previous: null, config: path.join(REPO_ROOT, 'config', 'jev-runtime-v1.json'), out: null, outputOnly: false,
-    live: false, liveConfig: path.join(REPO_ROOT, 'config', 'jev-live-input-v1.json'), cycles: Infinity, intervalMs: null, print: false, reportOut: null };
+    live: false, liveConfig: path.join(REPO_ROOT, 'config', 'jev-live-input-v1.json'), cycles: Infinity, intervalMs: null, print: false, reportOut: null,
+    serve: false, bridgeConfig: path.join(REPO_ROOT, 'config', 'jev-bridge-v1.json'), replay: null, port: null };
   for (let i = 0; i < argv.length; i++) {
     const k = argv[i];
     if (k === '--live') a.live = true;
+    else if (k === '--serve') a.serve = true;
+    else if (k === '--bridge-config') a.bridgeConfig = argv[++i];
+    else if (k === '--replay') a.replay = argv[++i];
+    else if (k === '--port') a.port = Number(argv[++i]);
     else if (k === '--live-config') a.liveConfig = argv[++i];
     else if (k === '--cycles') a.cycles = Number(argv[++i]);
     else if (k === '--interval-ms') a.intervalMs = Number(argv[++i]);
@@ -33,11 +38,52 @@ function parseArgs(argv) {
 
 const USAGE = 'uso:\n  node src/jev/cli.mjs --input <jev-input.json> [--previous <json>] [--config <json>] [--out <arquivo>] [--output-only]\n'
   + '  node src/jev/cli.mjs --live [--live-config config/jev-live-input-v1.json] [--cycles N] [--interval-ms MS] [--out ultimo-resultado.json] [--report-out relatorio.json] [--output-only] [--print]\n'
-  + '  (--live = SOMENTE LEITURA do relay; Ctrl+C para parar; nenhuma ordem e enviada)\n';
+  + '  node src/jev/cli.mjs --serve [--replay <jev-input.json>] [--bridge-config config/jev-bridge-v1.json] [--port N] [--live-config ...] [--interval-ms MS] [--cycles N]\n'
+  + '  (--live = SOMENTE LEITURA do relay; --serve = live/replay + JEV Bridge local read-only + Control Center em http://127.0.0.1:<porta>/; Ctrl+C para parar; nenhuma ordem e enviada)\n';
 const args = parseArgs(process.argv.slice(2));
-if (args.help || args.bad || (!args.input && !args.live) || (args.live && args.input)) {
+const modes = [args.input && 'input', args.live && 'live', args.serve && 'serve'].filter(Boolean);
+if (args.help || args.bad || modes.length !== 1) {
   process.stderr.write((args.bad ? `argumento desconhecido: ${args.bad}\n` : '') + USAGE);
   process.exit(args.help ? 0 : 64);
+}
+if (args.serve) {
+  const { loadLiveConfig, createLiveRelayAdapter } = await import('./adapters/live-relay-adapter.mjs');
+  const { runLive } = await import('./adapters/live-loop.mjs');
+  const { createBridge } = await import('./bridge/server.mjs');
+  const { readInputFile } = await import('./ingest.mjs');
+  try {
+    let bcfg;
+    try { bcfg = JSON.parse(readFileSync(args.bridgeConfig, 'utf8')); } catch (e) { throw new JevFatalError(`bridge config ilegivel: ${args.bridgeConfig}`); }
+    if (bcfg.schema !== 'jev-bridge-config/v1') throw new JevFatalError('bridge config schema desconhecido');
+    const lc = args.replay ? null : loadLiveConfig(args.liveConfig);
+    const rt = createRuntime(lc ? lc.runtime_config_abs : args.config, lc ? lc.runtime_config_overrides || null : null);
+    // replay: re-le o mesmo jev-input/v1 a cada ciclo (demo/teste sem relay); live: adapter read-only
+    const adapter = args.replay
+      ? { buildInput: async () => { const r = readInputFile(args.replay); return { input: r.input, report: { mode: 'REPLAY', replay: path.basename(args.replay), issues: r.issues } }; } }
+      : createLiveRelayAdapter(lc, { featureContract: rt.art.feature_contract });
+    const bridge = createBridge({ host: bcfg.host, port: args.port ?? bcfg.port, mode: args.replay ? 'REPLAY' : 'LIVE' });
+    const addr = await bridge.listen();
+    const ac = new AbortController();
+    process.on('SIGINT', () => { process.stderr.write('\n[jev] Ctrl+C: parando\n'); ac.abort(); });
+    process.stderr.write(`[jev] BRIDGE read-only em http://${addr.address}:${addr.port}/ (Control Center) · modo ${args.replay ? 'REPLAY' : 'LIVE'} · ordens: DESABILITADAS · robo: OFF (travado)\n`);
+    const interval = Math.max(args.replay ? 1000 : 5000, args.intervalMs || (lc ? lc.poll_interval_ms : 3000));
+    const n = await runLive({ adapter, runtime: rt, intervalMs: interval, cycles: args.cycles, signal: ac.signal,
+      onCycle: ({ cycle, result, report }) => {
+        bridge.update({ result, report, error: result ? null : report && report.error });
+        if (result) process.stderr.write(`[jev] ciclo ${cycle} · ${result.output.jev_directional_context} · dq=${result.output.data_quality.status} · orders=0\n`);
+      } });
+    if (args.cycles !== Infinity && !ac.signal.aborted) {
+      // execucao limitada (smoke): mantem a bridge no ar ate Ctrl+C ou por --interval-ms apos o ultimo ciclo
+      await new Promise((resolve) => { const t = setTimeout(resolve, interval); ac.signal.addEventListener('abort', () => { clearTimeout(t); resolve(); }, { once: true }); });
+    }
+    await bridge.close();
+    process.stderr.write(`[jev] bridge encerrada apos ${n} ciclo(s)\n`);
+    process.exit(0);
+  } catch (e) {
+    if (e instanceof JevFatalError) { process.stderr.write(`[jev] FATAL: ${e.message}\n`); process.exit(2); }
+    if (e && e.code === 'EADDRINUSE') { process.stderr.write(`[jev] FATAL: porta da bridge em uso\n`); process.exit(2); }
+    throw e;
+  }
 }
 if (args.live) {
   const { loadLiveConfig, createLiveRelayAdapter } = await import('./adapters/live-relay-adapter.mjs');
