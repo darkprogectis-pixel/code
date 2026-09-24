@@ -1,0 +1,14 @@
+{
+  "name": "alfaomega-jev-future",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ALFA OMEGA JEV FUTURE — runtime V1 (classificador separado de estado/confluencia; sem execucao de trade)",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "jev": "node src/jev/cli.mjs",
+    "jev:example": "node src/jev/cli.mjs --input fixtures/jev/C_valid_multi_source.json --output-only",
+    "test": "node --test \"test/jev/*.test.mjs\"",
+    "smoke": "node test/jev/smoke.mjs",
+    "build:prereg": "node context/jev-future/scripts/build-jev-preregistration-design-v1.js"
+  }
+}

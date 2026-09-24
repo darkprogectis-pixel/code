@@ -1,0 +1,10 @@
+{
+  "schema": "jev-runtime-config/v1",
+  "_note": "SO PARA FIXTURES: limiar PROVISIONAL fornecido pelo operador para FR_TRACE (o contrato nao define stale_after_sec para TRACE)",
+  "artifacts_dir": "context/jev-future/data",
+  "target": "ES",
+  "primary_ticker": "SPX",
+  "provisional_stale_after_sec_overrides": {
+    "FR_TRACE": 300
+  }
+}

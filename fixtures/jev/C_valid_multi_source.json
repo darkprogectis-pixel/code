@@ -1,0 +1,466 @@
+{
+  "schema": "jev-input/v1",
+  "_note": "FIXTURE SINTETICA ESTRUTURAL — numeros arbitrarios; nao representa mercado nem semantica financeira",
+  "evaluated_at": "2026-09-24T15:00:00Z",
+  "session": "RTH",
+  "sources": {
+    "FR_ROOT_ORDERFLOW": {
+      "vendor_timestamp": 1790261995
+    },
+    "FR_ROOT_CLASSIC_COPY": {
+      "vendor_timestamp": 1790261970
+    },
+    "FR_CLASSIC": {
+      "vendor_timestamp": 1790261970
+    },
+    "FR_STATE": {
+      "vendor_timestamp": 1790261960
+    },
+    "FR_MENTHORQ_MERGE": {
+      "vendor_timestamp": 1790261940
+    },
+    "FR_TRACE": {
+      "vendor_timestamp": 1790261940
+    }
+  },
+  "core": {
+    "side": "LONG"
+  },
+  "fields": {
+    "abot.root.spot": 6601.5,
+    "abot.root.timestamp": 1790261995,
+    "abot.root.gex.net_0dte": 1200.5,
+    "abot.root.gex.net_next": 800.25,
+    "abot.root.gamma_condition": "POSITIVE",
+    "abot.root.pc_oi": 1.4,
+    "abot.root.dex.net_0dte": -300.1,
+    "abot.root.dex.net_call_0dte": 250,
+    "abot.root.dex.net_put_0dte": -350,
+    "abot.root.dex.net_next": 90,
+    "abot.root.vanna.net_0dte": 12.5,
+    "abot.root.charm.net_0dte": -4.2,
+    "abot.root.gex.cvr_0dte": 3.3,
+    "abot.root.dex.oflow": 1.1,
+    "abot.root.orderflow.zero_mcall": 6612.4,
+    "abot.root.orderflow.zero_mput": 6607.9,
+    "abot.root.orderflow.z_mlgamma": 6597.3,
+    "abot.root.orderflow.z_msgamma": 6583.6,
+    "abot.root.levels.short_gamma_0dte": 6580,
+    "abot.root.levels.hvl": null,
+    "abot.root.levels.call_resistance": null,
+    "abot.root.classic.zero_gamma": 6590,
+    "abot.root.classic.spot": 6601.5,
+    "abot.root.classic.timestamp": 1790261970,
+    "abot.root.classic.major_pos_vol": 6620,
+    "abot.root.classic.major_neg_vol": 6575,
+    "abot.root.classic.delta_risk_reversal": 0.12,
+    "abot.root.classic.strikes": [
+      [
+        6590,
+        40,
+        5,
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      [
+        6600,
+        -15,
+        4,
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      [
+        6610,
+        60,
+        6,
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ]
+    ],
+    "abot.classic.timestamp": {
+      "SPX/zero": 1790261970,
+      "SPX/one": 1790261970,
+      "SPX/full": 1790261970
+    },
+    "abot.classic.spot": {
+      "SPX/zero": 6601.5,
+      "SPX/one": 6601.5,
+      "SPX/full": 6601.5
+    },
+    "abot.classic.zero_gamma": {
+      "SPX/zero": 6590,
+      "SPX/one": 6570,
+      "SPX/full": 6555
+    },
+    "abot.classic.major_pos_vol": {
+      "SPX/zero": 6620,
+      "SPX/one": 6640,
+      "SPX/full": 6650
+    },
+    "abot.classic.major_neg_vol": {
+      "SPX/zero": 6575,
+      "SPX/one": 6560,
+      "SPX/full": 6550
+    },
+    "abot.classic.delta_risk_reversal": {
+      "SPX/zero": 0.12
+    },
+    "abot.classic.strikes[]": {
+      "SPX/zero": [
+        {
+          "strike": 6590,
+          "gex_vol": 10,
+          "gex_oi": 3,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6595,
+          "gex_vol": -17,
+          "gex_oi": 4,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6600,
+          "gex_vol": 24,
+          "gex_oi": 5,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6605,
+          "gex_vol": -31,
+          "gex_oi": 6,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6610,
+          "gex_vol": 38,
+          "gex_oi": 7,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6615,
+          "gex_vol": -45,
+          "gex_oi": 8,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "SPX/one": [
+        {
+          "strike": 6590,
+          "gex_vol": -10,
+          "gex_oi": 3,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6595,
+          "gex_vol": 17,
+          "gex_oi": 4,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6600,
+          "gex_vol": -24,
+          "gex_oi": 5,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6605,
+          "gex_vol": 31,
+          "gex_oi": 6,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6610,
+          "gex_vol": -38,
+          "gex_oi": 7,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6615,
+          "gex_vol": 45,
+          "gex_oi": 8,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "SPX/full": [
+        {
+          "strike": 6590,
+          "gex_vol": 10,
+          "gex_oi": 3,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6595,
+          "gex_vol": -17,
+          "gex_oi": 4,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6600,
+          "gex_vol": 24,
+          "gex_oi": 5,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6605,
+          "gex_vol": -31,
+          "gex_oi": 6,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6610,
+          "gex_vol": 38,
+          "gex_oi": 7,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6615,
+          "gex_vol": -45,
+          "gex_oi": 8,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    "abot.state_gex.timestamp": {
+      "SPX/gex_zero": 1790261960
+    },
+    "abot.state_gex.spot": {
+      "SPX/gex_zero": 6601.5
+    },
+    "abot.state_gex.sum_gex_vol": {
+      "SPX/gex_zero": 1199,
+      "SPX/gex_one": 790
+    },
+    "abot.state_gex.major_pos_vol": {
+      "SPX/gex_zero": 6615
+    },
+    "abot.state_gex.major_neg_vol": {
+      "SPX/gex_zero": 6580
+    },
+    "abot.state_gex.strikes[]": {
+      "SPX/gex_zero": [
+        {
+          "strike": 6590,
+          "gex_vol": 10,
+          "gex_oi": 3,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6595,
+          "gex_vol": -17,
+          "gex_oi": 4,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6600,
+          "gex_vol": 24,
+          "gex_oi": 5,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6605,
+          "gex_vol": -31,
+          "gex_oi": 6,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6610,
+          "gex_vol": 38,
+          "gex_oi": 7,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "strike": 6615,
+          "gex_vol": -45,
+          "gex_oi": 8,
+          "priors": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ]
+    },
+    "abot.state_greek.major_long_gamma": {
+      "SPX/gamma_zero": 6605
+    },
+    "abot.state_greek.gamma.mini_contracts[]": {
+      "SPX/gamma_zero": [
+        {
+          "greek_value": 5.5,
+          "priors": [
+            1,
+            2,
+            3
+          ]
+        }
+      ]
+    },
+    "abot.state_greek.mini_contracts[]": {
+      "SPX/gamma_zero": [
+        {
+          "strike": 6600,
+          "call_ivol": 0.2,
+          "put_ivol": 0.25
+        }
+      ]
+    },
+    "spx_final_context.trace.gamma_mm": 150,
+    "spx_final_context.trace.gamma_cust": -20
+  }
+}

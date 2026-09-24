@@ -1,0 +1,26 @@
+{
+  "schema": "jev-input/v1",
+  "_note": "FIXTURE SINTETICA ESTRUTURAL — numeros arbitrarios; nao representa mercado nem semantica financeira",
+  "evaluated_at": "2026-09-24T15:00:00Z",
+  "session": "RTH",
+  "sources": {
+    "FR_ROOT_ORDERFLOW": {
+      "vendor_timestamp": 1790261995
+    },
+    "FR_VOLSIGNALS": {
+      "vendor_timestamp": 1790261995
+    },
+    "FR_MENTHORQ_MERGE": {
+      "vendor_timestamp": 1790261995
+    }
+  },
+  "fields": {
+    "abot.root.spot": 6601.5,
+    "abot.root.timestamp": 1790261995,
+    "abot.root.iv30d": 14.47,
+    "abot.root.levels._asof": 1790261995,
+    "abot.root.levels.hvl": 6600,
+    "spx_final_context.volsignals.gammaExposure": 1,
+    "spx_final_context.volsignals.deltaExposureDiff": 0
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "schema": "jev-input/v1",
+  "_note": "FIXTURE SINTETICA ESTRUTURAL — numeros arbitrarios; nao representa mercado nem semantica financeira",
+  "evaluated_at": "2026-09-24T15:00:00Z",
+  "session": "RTH",
+  "sources": {
+    "FR_ROOT_ORDERFLOW": {
+      "vendor_timestamp": 1790261995
+    },
+    "FR_ROOT_CLASSIC_COPY": {
+      "vendor_timestamp": 1790261970
+    },
+    "FR_CLASSIC": {
+      "vendor_timestamp": 1790261970
+    },
+    "FR_STATE": {
+      "vendor_timestamp": 1790261960
+    },
+    "FR_MENTHORQ_MERGE": {
+      "vendor_timestamp": 1790261940
+    },
+    "FR_TRACE": {
+      "vendor_timestamp": 1790261940
+    }
+  },
+  "fields": {
+    "abot.root.spot": 6601.5,
+    "abot.root.timestamp": 1790261995,
+    "abot.root.gex.net_0dte": 1200.5,
+    "abot.root.gex.net_next": 800.25,
+    "abot.root.gamma_condition": "POSITIVE",
+    "abot.root.pc_oi": 1.4,
+    "abot.root.dex.net_0dte": -300.1,
+    "abot.root.dex.net_call_0dte": 250,
+    "abot.root.dex.net_put_0dte": -350,
+    "abot.root.dex.net_next": 90,
+    "abot.root.vanna.net_0dte": 12.5,
+    "abot.root.charm.net_0dte": -4.2,
+    "abot.root.gex.cvr_0dte": 3.3,
+    "abot.root.dex.oflow": 1.1,
+    "abot.root.orderflow.zero_mcall": 6612.4,
+    "abot.root.orderflow.zero_mput": 6607.9,
+    "abot.root.orderflow.z_mlgamma": 6597.3,
+    "abot.root.orderflow.z_msgamma": 6583.6,
+    "abot.root.levels.short_gamma_0dte": 6580,
+    "abot.root.levels.hvl": null,
+    "abot.root.levels.call_resistance": null,
+    "abot.root.classic.zero_gamma": 6590,
+    "abot.root.classic.spot": 6601.5,
+    "abot.root.classic.timestamp": 1790261970,
+    "abot.root.classic.major_pos_vol": 6620,
+    "abot.root.classic.major_neg_vol": 6575,
+    "abot.root.classic.delta_risk_reversal": 0.12,
+    "abot.root.classic.strikes": [
+      [
+        6590,
+        40,
+        5,
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      [
+        6600,
+        -15,
+        4,
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ],
+      [
+        6610,
+        60,
+        6,
+        [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      ]
+    ],
+    "spx_final_context.trace.gamma_firm": 7.5,
+    "spx_final_context.trace.gamma_bd": -2
+  }
+}

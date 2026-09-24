@@ -1,0 +1,7 @@
+{
+  "schema": "jev-runtime-config/v1",
+  "artifacts_dir": "context/jev-future/data",
+  "target": "ES",
+  "primary_ticker": "SPX",
+  "provisional_stale_after_sec_overrides": {}
+}
