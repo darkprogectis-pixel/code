@@ -825,3 +825,97 @@ Somente estado. Nada foi implementado, nenhum serviço foi reiniciado, sem F5, N
 1. Ler `CLAUDE.md` e esta §14.13.
 2. Checar `:3590` (`GET /jev/v1/health`). Se estiver fora do ar, subir `npm run serve`.
 3. Aguardar a ordem do operador para o item 1 da sequência. **Zero F5.**
+
+### 14.14 JEV_RUNTIME_PERSISTENCE (24/09/2026 ~19:00–19:24Z, ordem do operador · etapa 1 de readiness)
+
+Somente infraestrutura de execução. Lógica JEV intocada (`src/` sem diff), NT8 não tocado, sem F5, 0 ordens. Não alterados: `quality.mjs`, cache histórico, TRACE, VolSignals, Agent `:3592`, regras de lado, Robot, boleta, conta/PNL, W32Time.
+
+**Before (reconciliação pós-rotação, 18:28–19:00Z)**
+- `:3590`/`:3591` UP · PID **30468** (`node src/jev/cli.mjs --serve`) · **UNMANAGED_ORPHAN**: pais cmd 55228 ← npm 24188 ← bash 37280/79892 vivos, ancestral 75448 (sessão Claude anterior) morto. Sobreviveu à rotação por acaso; nada o recuperaria.
+- Captura antes da transição (snapshot `…#mufslpj2-183`): `read_only` true · `orders_enabled` false · `last_cycle_error` null · DQ DEGRADED (só cache: zg / so / sv) · DATA_INVALID 0 · ORDERFLOW/CLASSIC/STATE/INDICATOR_DERIVED FRESH · Robot OFF · `orders_emitted` 0.
+
+**Artefatos (novos, `tools/jev-runtime/`)**
+- `Start-JevRuntime.ps1`: supervisor. Sobe **o mesmo comando de `npm run serve`** (`"C:\Program Files\nodejs\node.exe" src/jev/cli.mjs --serve`, cwd `C:\Users\ADM\Claude-JEV\code`), sem npm/cmd/bash intermediários. Caminhos absolutos.
+  - Single-instance em duas camadas:
+    - mutex `Local\INVICTUS_JEV_RUNTIME_SUPERVISOR`: um segundo launcher sai com `NO_SECOND_INSTANCE`, exit 0;
+    - listener `:3590` já é JEV: **ADOPTED_EXISTING**, sem spawn.
+  - Identidade JEV: `node.exe` + CommandLine `src/jev/cli.mjs … --serve` (sem `--replay`). Se a CommandLine for ilegível (processo nascido no token restrito da sessão Claude, caso do 30468), a identidade vem da API (`IDENTITY_VIA_HEALTH_API`): o node é dono do `:3590` e o health tem o schema JEV em LIVE.
+  - Saúde (probe 15 s): `ok`, `mode=LIVE`, `read_only=true`, `orders_enabled=false`, `:3591` listen e `last_cycle_at` ≤ 300 s.
+  - Recuperação controlada:
+    - processo morreu ⇒ `NODE_EXITED` + backoff de 5→60 s + `NODE_STARTED`;
+    - 4 probes ruins seguidos (após 90 s de tolerância) ⇒ `NODE_KILL_CONTROLLED` só se for JEV ⇒ restart;
+    - porta ocupada por não-JEV ⇒ `PORT_CONFLICT_FOREIGN`, nada é morto, exit 3.
+  - Exit codes: 0 = NO_SECOND_INSTANCE / `-Once` OK · 3 = PORT_CONFLICT_FOREIGN · 4 = node/repo ausente.
+  - O node roda com console **próprio e oculto** (`-WindowStyle Hidden`, não `-NoNewWindow`). Ver o defeito D1 abaixo.
+- `Install-JevRuntimeTask.ps1`: registra (idempotente, `-Force` só na própria tarefa) ou remove (`-Uninstall`) a tarefa. Não toca em nenhuma outra tarefa, no PM2 nem em outro projeto.
+
+**Task Scheduler**
+- `\InvictusJev\INVICTUS_JEV_RUNTIME`: única tarefa nessa pasta; não há outras tarefas JEV/INVICTUS.
+- Principal: `OLIVER\ADM` · Interactive · RunLevel Limited (sem admin; roda enquanto o usuário estiver logado).
+- Gatilhos:
+  - AtLogOn do usuário;
+  - watchdog Once + repetição de 5 min, indefinida.
+- Settings: MultipleInstances **IgnoreNew** · RestartOnFailure **999 × 1 min** · ExecutionTimeLimit **0 (ilimitado)** · roda em bateria · StartWhenAvailable · não para em idle.
+- Ação: `conhost.exe --headless powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File "C:\Users\ADM\Claude-JEV\code\tools\jev-runtime\Start-JevRuntime.ps1" -RepoRoot "C:\Users\ADM\Claude-JEV\code"`. Sem janela, sem depender de terminal.
+- Reinstalar ou remover: `powershell -NoProfile -ExecutionPolicy Bypass -File tools\jev-runtime\Install-JevRuntimeTask.ps1 [-Uninstall]`.
+
+**Logs**
+- Supervisor: `%LOCALAPPDATA%\InvictusJevCode\runtime\supervisor-YYYYMMDD.log`.
+- Node: `%LOCALAPPDATA%\InvictusJevCode\runtime\node-<ts>.out.log` / `.err.log`, um par de arquivos por start, retenção de 40 pares.
+- Os logs JSONL do runtime continuam em `%LOCALAPPDATA%\InvictusJevCode\logs\`, sem mudança.
+
+**Transição do PID 30468**
+1. Tarefa registrada e iniciada.
+2. O supervisor 78592 adotou o 30468 (`IDENTITY_VIA_HEALTH_API` + `ADOPTED_EXISTING`).
+3. Só então foi feito `Stop-Process` **somente no node 30468**.
+4. O supervisor fez `NODE_EXITED` e subiu o **PID gerenciado 9680** em ~7 s. Os pais antigos (cmd/npm/bash) morreram junto.
+5. Executor NT8 reconectou sozinho (`executor_report` READ_ONLY / COMPLETE a cada 2 s). NT8 não foi reiniciado.
+
+**Testes**
+
+| Teste | Resultado | Evidência |
+|---|---|---|
+| T1 tarefa existe/enabled | PASS | Enabled=True, IgnoreNew, 999×PT1M, ExecTimeLimit PT0S |
+| T2 `:3590`/`:3591` UP gerenciado | PASS | listener = PID do supervisor; `:3591` 401 sem token (esperado) |
+| T3 ≥ 3 ciclos | PASS | `#mufwgjp9-2→6` (4 avanços, ~34 s) |
+| T4 `last_cycle_error` | PASS | null em todas as amostras |
+| T5 DATA_INVALID | PASS | 0 |
+| T6 ORDERFLOW/CLASSIC/STATE | PASS | FRESH |
+| T7 launcher de novo | PASS | manual: `NO_SECOND_INSTANCE` EXIT 0 (2×) · `Start-ScheduledTask` extra ignorado · 1 supervisor, 1 node |
+| T8 matar só o node gerenciado | PASS | 9680 → 26576 (~7 s); após a correção D1: 26576 → **25316** (~8 s) |
+| T9 pós-restart | PASS | `#mufwm341-2→5` e `#mufx0d9i-6→10`; err null; DATA_INVALID 0; FRESH |
+| T10 independe de Claude/bash | PASS | cadeia `25316 node ← 27376 powershell ← conhost ← svchost -s Schedule` |
+| Extra: matar o supervisor | PASS (após D1) | watchdog subiu o supervisor 27376 em ~147 s; `ADOPTED_EXISTING` 25316; runtime sem interrupção |
+
+**Defeito D1 (achado e corrigido nesta etapa)**
+- Na 1ª versão, o node era iniciado com `-NoNewWindow` e ficava preso ao console do `conhost --headless` da tarefa.
+- Com o supervisor morto, o conhost continuava vivo. O Scheduler via a tarefa como "Running" e ignorava o watchdog: `LastTaskResult 0x800710E0`, instância já em execução.
+- Correção: o node passa a ter console próprio oculto. Revalidado: supervisor morto ⇒ conhost sai ⇒ tarefa Ready ⇒ watchdog recupera.
+
+**Não testado:** reboot/logoff (fora do escopo desta rodada). A tarefa é Interactive, então só roda com o usuário logado. "Rodar sem login" exigiria S4U/admin, que não está disponível nesta sessão.
+
+**Estado final (19:24Z)**
+
+| Item | Estado |
+|---|---|
+| Runtime | **PERSISTENT / AUTO-RECOVERABLE / SINGLE-INSTANCE** · supervisor 27376 · node gerenciado **25316** |
+| Portas | `:3590` UP · `:3591` UP |
+| Snapshot / erros | snapshot avançando · `last_cycle_error` null · `read_only` true · `orders_enabled` false |
+| DQ | DEGRADED, só cache: `abot.cache.zg` / `so` / `sv` · DATA_INVALID 0 |
+| Fontes | ORDERFLOW / CLASSIC / STATE FRESH |
+| Robot / ordens | Robot OFF · 0 ordens · executor READ_ONLY |
+
+- **Suítes:** Node/C# não re-rodadas; o código JEV não mudou.
+
+**Próximo passo:** o `npm run serve` manual **não é mais o mecanismo**. Se `:3590` cair, o supervisor e a tarefa recuperam sozinhos. Diagnóstico: `Get-Content $env:LOCALAPPDATA\InvictusJevCode\runtime\supervisor-*.log -Tail 20`. Próxima etapa da sequência §14.13 (item 2 em paralelo ou item 4, decisão do cache histórico) **só com ordem do operador**. Zero F5.
+
+## 14. ROTAÇÃO DE SESSÃO (24/09/2026, WARNING 220k)
+
+- **Estado JEV exato:** lote RTH de 4 arquivos INSTALADO (backup `20260924-124658`) · F5 feito pelo operador (F5_COUNT_THIS_LOT=1, SECOND_F5_ALLOWED=NO) · `04-verify PostF5` PASS · backend PASS (bridge :3590 LIVE, control plane :3591 UP, JEV UNKNOWN, Robot OFF, decisão NONE, 0 ordens) · checagens VISUAIS da janela IJC pendentes do operador (§13.5) · FINAL do lote = PARTIAL até o operador confirmar.
+- **Serve:** o processo atual em :3590/:3591 (PID 30468) NÃO foi iniciado por esta sessão (nota §13.5).
+- **Commit:** HEAD `62973f3` (main; commit feito fora desta sessão, já inclui §13.4–§13.5 e a linha do `CLAUDE.md`). Só a §14 deste handoff fica pendente de commit. Nenhum código JEV alterado. Untracked alheios (Kimi, `scripts/`, Codex V2, `handoffs/rotation/`) continuam fora de commit.
+- **Testes nesta sessão:** `01-precheck -ForInstall` PASS · `02-backup` PASS · `03-install -WhatIf`/`-Confirm` PASS · `04-verify PreF5` PASS · `04-verify PostF5` PASS. Suítes Node/C# não re-rodadas (código inalterado).
+- **Fora do JEV nesta sessão (registrado nos handoffs próprios, não neste repo):**
+  - VolSignals RTH capture COMPLETE → `C:\Users\ADM\.claude\volsignals-audit\SESSION_PACK_TRACE_COMPARISON_HANDOFF_V2.md` §7 (run canônico `data/runs/rth-20260924T155720Z/market-frames.ndjson`).
+  - Copy Engine order storm: root cause REENTRY + self-copy; patch planejado NÃO aplicado, testes 0/6 → `C:\Users\ADM\Downloads\Club gamma\Handof TTW\HANDOFF_COPY_ENGINE_ORDER_STORM_20260924.md` (último checkpoint). NT8 aberto: não editar `bin\Custom`.
+- **Próximo passo exato:** (1) operador confirma os itens visuais da janela IJC (§13.5) → marcar RTH_TEST_READY; (2) commitar docs desta sessão com stage explícito (`CLAUDE.md`, este handoff) só com ordem; (3) Copy Engine: nova sessão executa o NEXT_STEP do handoff ORDER_STORM. Zero F5.
