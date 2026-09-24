@@ -94,8 +94,7 @@ export function createLiveRelayAdapter(cfg, deps = {}) {
 
   async function buildInput() {
     cycle++;
-    const t0 = now();
-    const session = sessionAt(t0, cfg);
+    const t0 = now(); // inicio do ciclo (so para a observacao de FROZEN); NAO e o evaluated_at
     const fields = {}; const issues = []; const routes = []; const vendorTs = { FR_ROOT_ORDERFLOW: [], FR_CLASSIC: [], FR_STATE: [] };
     for (const rt of routesToRead()) {
       const rec = { kind: rt.kind, path: cfg.relay.base_path + rt.path, ticker: rt.ticker, cat: rt.cat };
@@ -126,6 +125,11 @@ export function createLiveRelayAdapter(cfg, deps = {}) {
       rec.unmapped_payload_keys = Object.keys(j).filter((k) => !used.has(k));
       routes.push(rec);
     }
+    // FRESHNESS_FIX_V1 (EVALUATED_AT_AFTER_FETCH): evaluated_at e fixado DEPOIS da ultima leitura do ciclo.
+    // Antes, evaluated_at = t0 (pre-fetch) e todo vendor ts gerado durante as ~15 leituras sequenciais saia com idade
+    // negativa => UNKNOWN (DATA_INVALID justamente com dado mais fresco). vendor ts, min por fonte e age<0 => UNKNOWN nao mudam.
+    const tEval = now();
+    const session = sessionAt(tEval, cfg);
     // um vendor ts por regra de freshness: o MAIS ANTIGO entre as rotas lidas (conservador); ts ausente em qualquer rota => ausente
     const sources = {};
     for (const [fr, list] of Object.entries(vendorTs)) {
@@ -143,7 +147,7 @@ export function createLiveRelayAdapter(cfg, deps = {}) {
         }
       }
     }
-    const input = { schema: INPUT_SCHEMA, evaluated_at: t0.toISOString(), session, sources, fields, adapter_issues: issues };
+    const input = { schema: INPUT_SCHEMA, evaluated_at: tEval.toISOString(), session, sources, fields, adapter_issues: issues };
     return { input, report: makeReport(input, routes) };
   }
 

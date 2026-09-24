@@ -480,3 +480,267 @@ Nesta etapa, nenhum desses problemas foi investigado nem corrigido. Nenhuma alte
 Regras para a próxima etapa:
 - **ZERO novos F5.** Qualquer correção que exija recompilar o NT8 é um lote novo, com ordem própria.
 - O rollback continua sendo o da §7.E, **sem** F5.
+
+## 14. RUNTIME_DATA_PLANE_DIAGNOSIS_20260924 (somente leitura · zero F5 · zero alteração)
+
+Base: commit `82a2064` e §13.6. A instalação não foi reauditada.
+- Nesta etapa: só GETs em `:3590`, leitura de código, de config e dos logs locais (`%LOCALAPPDATA%\InvictusJevCode\logs`).
+- Não houve: edição de C#/Node/JSON, início ou reinício de serviço, F5, ordem.
+- `:3591` não foi consultado com token: o token é segredo e não foi lido. Os dados do executor vieram do `/jev/v1/state`.
+
+### 14.1 Snapshot real
+
+| | |
+|---|---|
+| Endpoints | `GET :3590/jev/v1/{health,state,output,audit}` (`/health` na raiz = 404, não existe) |
+| snapshot_id (amostra) | `2026-09-24T16:47:46.766Z#mufphwso-103` → ciclo 104 às 16:48:26Z |
+| schema / versão | `jev-output/v1` · `jev-runtime/v1.0.0` · input `jev-input/v1` · decision_logic v1 · feature_contract v1 |
+| jev_market_state | target ES · gamma_regime POSITIVE_GAMMA · delta_positioning UNAVAILABLE · second_order_flows / vol_skew / flow_unknown_semantics UNRESOLVED |
+| jev_directional_context / native_directional_context | UNKNOWN / UNKNOWN |
+| spx_final_context | TRACE e VolSignals `freshness_state` UNKNOWN, `families` [] · `effect_on_native` UNAVAILABLE · `numeric_equivalence_allowed` false |
+| data_quality | **alterna** entre DEGRADED e DATA_INVALID (ver 14.2) |
+| reason_codes | `RC_NO_ACTIVE_DIRECTIONAL_RULE` (ou `RC_DATA_INVALID`) · `RC_SPX_TRACE_*_UNAVAILABLE` · `RC_SPX_VOLSIGNALS_*_UNAVAILABLE` · `RC_DQ_DEGRADED` · `RC_MENTHORQ_ZERO` |
+| inputs | 122 recebidos / 68 ausentes / 3 null_at_source / 0 não reconhecidos (total 190) |
+| menthorq | confirmation ZERO · levels_available false · effect NONE |
+| core_comparison | NOT_AVAILABLE |
+| SNAPSHOT_ADVANCING | **YES** (ciclo ≈ 35 s, `last_cycle_error` null, relay 15/15 rotas OK) |
+
+### 14.2 DATA_INVALID: causa raiz exata (PROVADA)
+
+**Fato 1.** `DATA_INVALID` é **intermitente**, não um estado permanente.
+- Log `engine_cycle` de 15:48Z a ~17:05Z: DEGRADED ×109, DATA_INVALID ×21 (~16%).
+- Transições isoladas a cada 3–10 min, voltando a DEGRADED no ciclo seguinte.
+- O print do operador pegou um ciclo DATA_INVALID. A UI está correta: lê `data_quality.status` de `/jev/v1/state` sem transformar (`IjcControlCenterWindow.cs:713`).
+
+**Fato 2.** Ciclo DATA_INVALID capturado ao vivo: `evaluated_at` 2026-09-24T17:01:38.092Z.
+- As 15 rotas do relay vieram `OK`, todas **não cacheadas**, e o adapter não registrou nenhum issue.
+- Mesmo assim, todas as fontes dealer ficaram `UNKNOWN` com o motivo *"vendor_timestamp no futuro relativo a evaluated_at"*.
+- Por consequência, as 6 dimensões dealer ficaram UNAVAILABLE e o status foi DATA_INVALID (`quality.mjs:113`).
+
+| SOURCE (FR) | rotas | vendor_ts mín. | vendor_ts − evaluated_at | FRESH | PARSED | REACHED_ENGINE | motivo |
+|---|---|---|---|---|---|---|---|
+| FR_ROOT_ORDERFLOW | 1 | 17:01:40Z | **+1,91 s** | NO (UNKNOWN) | YES | YES | idade negativa |
+| FR_CLASSIC | 3 | 17:01:40Z | **+1,91 s** | NO (UNKNOWN) | YES | YES | idade negativa |
+| FR_STATE | 11 | 17:01:40Z | **+1,91 s** | NO (UNKNOWN) | YES | YES | idade negativa |
+
+No ciclo DEGRADED, que é o normal, há rotas **cacheadas** no relay (`cached:true`, ~8 s de idade). Elas puxam o `min(vendor_ts)` de FR_CLASSIC e FR_STATE para antes de `evaluated_at`: idade +4,8 s e +6,8 s, FRESH. Já FR_ROOT_ORDERFLOW (1 rota, não cacheada) fica **UNKNOWN em todos os ciclos observados**.
+
+**Mecanismo, com três fatores combinados:**
+1. `live-relay-adapter.mjs:98`: `t0 = now()` e `evaluated_at = t0` são fixados **antes** das 15 leituras sequenciais do relay (~4–5 s no total). Todo dado gerado depois de t0 tem `vendor_ts > evaluated_at`.
+2. `live-relay-adapter.mjs:133`: `vendor_timestamp` por fonte = `min` das rotas. Só fica ≤ t0 se ao menos uma rota da fonte vier do cache do relay.
+3. `quality.mjs:30`: `age_sec < 0` ⇒ `UNKNOWN`, que não é utilizável. Não há tolerância para desvio de relógio. Agravante: o `vendor_ts` chega até **+1,9 s à frente da hora local de chegada**, e o serviço **W32Time está Stopped** (relógio local sem sincronização).
+
+⇒ **Paradoxo:** o `DATA_INVALID` acontece justamente quando os dados estão **mais frescos**, com nenhuma rota vinda do cache.
+
+**Primeiro salto quebrado:**
+- Estão OK: SOURCE → relay `:3457` → adapter (fetch/parse) → normalized input → engine.
+- A quebra está no **carimbo temporal do adapter (`evaluated_at` pré-fetch) combinado com a regra de freshness do engine (idade negativa ⇒ UNKNOWN)**.
+- Snapshot → NT8 UI: OK (fiel).
+
+### 14.3 Four-source / native dealer
+
+- NATIVE_SOURCE_PRESENT = **YES**. Campos recebidos por bloco: root 38, classic 25, state_gex 28, state_greek 31.
+- Ausentes: root 35 (inclui os níveis MenthorQ, que só existem na raiz composta), cache 11 (histórico local do NT8, não lido), ind 2, classic 1, state_gex 1, state_greek 2.
+- Campos SPX ausentes: TRACE 9 e VolSignals 7.
+- NATIVE_REACHED_ENGINE = **YES**.
+- NATIVE_INPUT_VALID = **INTERMITENTE**:
+  - FRESH nos ciclos em que alguma rota vem do cache;
+  - UNKNOWN nos demais.
+- FR_ROOT_ORDERFLOW (root/orderflow, 38 campos) = UNKNOWN em todos os ciclos observados, pela mesma causa. Por isso `delta_positioning` fica UNAVAILABLE e o gate do Robot `SOURCE_NOT_FROZEN` aparece como FAIL (`FR_ROOT_ORDERFLOW=UNKNOWN`).
+- NATIVE_DATA_QUALITY_REASON: *vendor_timestamp no futuro relativo a evaluated_at* (e não dado ausente, stale ou frozen).
+
+### 14.4 VolSignals
+
+| | |
+|---|---|
+| VOLSIGNALS_SOURCE_AVAILABLE | YES |
+| VOLSIGNALS_CAPTURE_EXISTS | YES: `C:\Users\ADM\.claude\volsignals-audit\data\runs\rth-20260924T155720Z\market-frames.ndjson` (10,7 MB). O `*.v1-lossy-int64.ndjson` não foi usado |
+| VOLSIGNALS_RUNTIME_ADAPTER_EXISTS | **NO** (`relay-mapping.mjs:64`: `SOURCE_NOT_AVAILABLE` — "não é servido pelo relay") |
+| VOLSIGNALS_RUNTIME_BINDING | **NO** (nenhuma referência a volsignals-audit/market-frames em `src/` ou `config/`) |
+| VOLSIGNALS_RUNTIME_INPUT_PRESENT / REACHED_ENGINE | NO / NO |
+| Contrato | `FR_VOLSIGNALS` freshness_basis UNKNOWN ⇒ nunca FRESH por default, mesmo com binding |
+
+Não é falha do VolSignals: a integração com o runtime não existe.
+
+### 14.5 TRACE
+
+TRACE_SOURCE_AVAILABLE = NO no runtime. A única captura é a 1D, feita fora do adapter.
+
+| Item | Estado |
+|---|---|
+| TRACE_RUNTIME_ADAPTER_EXISTS | **NO** (`relay-mapping.mjs:62`: "SpotGamma TRACE não é servido pelo relay") |
+| TRACE_INPUT_PRESENT | NO |
+| TRACE_TIMESTAMP | — |
+| TRACE_FRESH | NO (UNKNOWN, "fonte ausente no input") |
+| TRACE_PARSED | NO |
+| TRACE_REACHED_ENGINE | NO |
+
+Não há produtor conectado ao runtime. Nenhum dado TRACE foi inventado.
+
+### 14.6 MenthorQ
+
+- confirmation ZERO · levels_available false · effect_on_context NONE · `RC_MENTHORQ_ZERO`. A fonte `FR_MENTHORQ_MERGE` está ausente: os níveis só existem na raiz composta, que o JEV não lê.
+- As famílias `DC_MENTHORQ_LEVELS` ficam na dimensão `MENTHORQ_CONFIRMATION_LEVELS`, **fora** das 6 dimensões dealer usadas pelo `DATA_INVALID` (`quality.mjs:4`). ⇒ MENTHORQ_CAUSES_DATA_INVALID = **NO**.
+- Ausente, neutra, stale ou desalinhada: não bloqueia, não gera NO_TRADE e não reduz conviction (UNCALIBRATED). O efeito é **ZERO**, conforme `POSITIVE_CONFIRMATION_ONLY_NON_BLOCKING`.
+
+### 14.7 JEV Agent `:3592`
+
+- `:3592` não está escutando: o `npm run serve` sobe só `:3590`/`:3591`, e o gateway é um processo separado (`npm run agent`).
+- Config: provider `none` ⇒ NOT_CONFIGURED mesmo se estivesse rodando.
+- O painel (`panel-model.mjs:47`) fixa `agent.status = NOT_REPORTED`. A janela consulta `:3592/agent/v1/health` e mostra "NOT REPORTED" quando não há resposta.
+
+| | |
+|---|---|
+| AGENT_EXPECTED_TO_RUN | NO (não faz parte do `serve`; opcional/advisory) |
+| AGENT_OPTIONAL | YES |
+| AGENT_REQUIRED_FOR_ENGINE | NO (engine/quality não leem o agente) |
+| AGENT_REQUIRED_FOR_DATA_QUALITY | **NO** |
+
+Conclusão: a ausência do agente não tem relação com o `DATA_INVALID`. O agente não foi iniciado.
+
+### 14.8 Contas
+
+Trajeto: NT8 `Account.All` → `IjcExecutor`, que faz a varredura a cada 10 s e reporta ao control plane → `IjcAccounts.List()`, que alimenta o seletor da UI.
+
+| | |
+|---|---|
+| NT8_ACCOUNT_COUNT | 27 (via `Account.All`, reportado pelo executor) |
+| IJC_ACCOUNT_COUNT | 27 reportadas · 5 elegíveis (Sim/Playback) |
+| UI_ACCOUNT_COUNT | Esperado 27 + "Selecione conta": mesma fonte `Account.All`, sem filtro (`IjcExecutor.cs:257`). **Não confirmado visualmente** |
+| Nomes | não lidos (exigiriam o token do `:3591` ou a tela do NT8) |
+| Gate `ACCOUNT_SIMULATOR_OR_PLAYBACK` | FAIL, "nenhuma conta selecionada/reportada". Esperado: a V1 não autoescolhe conta e o `selected_account` é null |
+
+Nada foi selecionado e nenhuma ordem foi enviada.
+
+### 14.9 Causas raiz
+
+1. **DATA_INVALID intermitente e FR_ROOT_ORDERFLOW sempre UNKNOWN.** São causados por idade negativa de freshness: `evaluated_at` é fixado antes do fetch sequencial, o `vendor_timestamp` da fonte é o `min` das rotas, e a regra `age<0 ⇒ UNKNOWN` não tem tolerância.
+2. **Relógio local sem sincronização.** Com o W32Time parado, o `vendor_ts` chega até +1,9 s à frente da hora local de chegada, o que amplia o problema 1.
+3. **TRACE e VolSignals** não têm adapter nem binding no runtime. A captura do VolSignals existe, mas não está ligada.
+4. **JEV Agent** não é iniciado pelo `serve` e não tem provider. Isso é opcional e não afeta a DQ.
+5. **Conta:** nenhuma foi selecionada pelo operador, então PNL, posição e preço médio não podem ser validados.
+
+### 14.10 Correções necessárias (NÃO implementadas)
+
+1. **Semântica temporal da freshness (decisão canônica do operador).** Opções:
+   - (a) fixar `evaluated_at` **depois** do fetch;
+   - (b) usar a chegada por rota como referência;
+   - (c) tolerância explícita e PROVISIONAL para idade negativa pequena.
+
+   Mexe em R_S10/freshness e no adapter, portanto exige pré-registro e ordem. **Não** afrouxar o `min` por conta própria.
+2. **Sincronizar o relógio do Windows** (W32Time), ação de ambiente do operador. Depois, medir de novo o desvio `vendor_ts − chegada`.
+3. **Binding de runtime para TRACE e VolSignals** (fase própria). VolSignals também precisa definir `freshness_basis`, hoje UNKNOWN no contrato.
+4. **Agent:** opcional. Se desejado, iniciar `npm run agent` com provider configurado.
+5. **Conta:** o operador seleciona uma conta Sim/Playback na UI para validar PNL e posição. Somente leitura, sem ordem.
+
+**Próximo passo exato:** com a ordem do operador, decidir a correção 1 (a, b ou c) e executar a correção 2. Depois, implementar, testar e smoke **somente em Node**: a correção fica no adapter/quality e não exige F5, porque o C# não muda. Por fim, revalidar a proporção de DATA_INVALID nos logs `engine_cycle`. **Zero F5.**
+
+### 14.11 Pré-registro FRESHNESS_FIX_V1 (decisão do operador, 24/09/2026, ANTES do código)
+
+| | |
+|---|---|
+| FRESHNESS_FIX_V1 | **EVALUATED_AT_AFTER_FETCH**: `evaluated_at` é definido **depois** que as leituras das rotas do ciclo terminam |
+| RATIONALE | Preservar o `vendor_timestamp` como referência canônica de freshness e corrigir a causalidade temporal. O bug é a ordem: o `evaluated_at` era congelado antes das 15 leituras |
+| Invariante | `evaluated_at >= conclusão da última leitura do ciclo` |
+| (b) ROUTE_ARRIVAL_REFERENCE | **REJECTED**: o tempo de chegada não substitui adequadamente o `vendor_timestamp` para freshness |
+| (c) NEGATIVE_AGE_TOLERANCE | **DEFERRED**: não usar tolerância para mascarar o erro antes de corrigir a ordem temporal |
+| W32TIME | **Separado do fix.** Pode amplificar o skew, mas não justifica mudança semântica. Nesta etapa, só diagnóstico read-only |
+
+**Continua inalterado:**
+- `vendor_timestamp` e a escolha do timestamp da fonte (mínimo das rotas);
+- thresholds, enums de qualidade e regra `age<0 ⇒ UNKNOWN`;
+- Feature Contract, Decision Logic, pesos e side rules;
+- MenthorQ, TRACE e VolSignals.
+
+**Regra do patch:** um timestamp genuinamente futuro, mesmo depois do fix, continua UNKNOWN.
+
+**Nota 17:15Z:** o `npm run serve` iniciado por esta sessão (15:48Z) saiu com código 255 após o ciclo 149, sem erro no log (último dq DEGRADED, orders=0). No mesmo segundo, outro `npm run serve` foi iniciado por um shell externo a esta sessão (bash → npm → node PID 30468, 17:15:14Z) e hoje responde em `:3590` (RUNNING, LIVE) e `:3591` (401 sem token). A bridge/control plane estão **UP**; o contador de ciclos reiniciou. Esta sessão não reiniciou nada.
+
+### 14.12 FRESHNESS_FIX_V1: patch, testes e validação ao vivo (24/09/2026)
+
+**Patch** (somente Node; C# e NT8 intocados; zero F5)
+
+`src/jev/adapters/live-relay-adapter.mjs`:
+- `t0` continua marcando o início do ciclo, usado só na observação de FROZEN;
+- `tEval = now()` passa a ser tomado **depois** do laço de fetch e define `evaluated_at` e `session`.
+
+Não mudaram:
+- `vendor_timestamp` e o mínimo por fonte;
+- thresholds, enums e a regra `age<0 ⇒ UNKNOWN`;
+- contrato, Decision Logic, MenthorQ, TRACE e VolSignals.
+
+**Testes** (`test/jev/adapter.test.mjs`, F01–F06). O relógio sintético avança durante o fetch, e cada rota live carimba o `vendor_ts` na leitura.
+
+| Teste | Caso | Resultado com o patch | Código antigo |
+|---|---|---|---|
+| F01 | A: 15 rotas live, idade ≥ 0, sem DATA_INVALID por ts futuro | PASS | FAIL |
+| F02 | B: rota cacheada, freshness normal | PASS | FAIL |
+| F03 | C: ts genuinamente futuro continua UNKNOWN | PASS | PASS (invariante) |
+| F04 | D: stale continua STALE | PASS | FAIL |
+| F05 | E: ts ausente continua UNKNOWN | PASS | PASS (invariante) |
+| F06 | F: FR_ROOT_ORDERFLOW lido primeiro, com latência de 1,5 s, fica FRESH | PASS | FAIL |
+
+Suíte Node completa (`npm test`): **107/107 PASS** (antes 101 + 6 novos). `smoke` e `smoke:bridge`: PASS.
+
+**Validação ao vivo**
+- Reinício: só o runtime Node. `node src/jev/cli.mjs --serve` (PID 3860) foi parado às 17:14:56Z e o `npm run serve` subiu de novo às 17:15Z.
+- O executor NT8 reconectou sozinho: READ_ONLY, `nt8_ready` true.
+- Observação com GETs em `:3590/jev/v1/{output,audit}`, 25 ciclos consecutivos entre 17:15:19Z e 17:29:12Z.
+
+| | ANTES (15:48–17:14Z, código antigo) | DEPOIS (25 ciclos, patch) |
+|---|---|---|
+| DATA_INVALID | 25/149 (~17%); 21/130 (~16%) no momento do diagnóstico | **0/25** |
+| Falhas por "vendor_timestamp no futuro relativo a evaluated_at" (nível fonte) | todas as fontes dealer nos ciclos DATA_INVALID | **0/25** |
+| Distribuição DQ | DEGRADED/DATA_INVALID alternando | DEGRADED 25/25 |
+| FR_ROOT_ORDERFLOW | UNKNOWN em todos os ciclos observados | **FRESH 25/25** |
+| FR_CLASSIC / FR_STATE | FRESH ou UNKNOWN (intermitente) | FRESH 25/25 / FRESH 25/25 |
+| Rotas | 15/15 | 15/15 |
+| last_cycle_error / engine_cycle_error | null / 0 | null / 0 |
+| SNAPSHOT_ADVANCING | YES | YES (ciclos 1→25, ~35 s) |
+| Robot / ordens | OFF · HARD_DISABLED / 0 | OFF · HARD_DISABLED · decisão NONE / 0 (órfãs 0) |
+
+Faixas por rota, pós-patch:
+
+| Medida | Faixa |
+|---|---|
+| min_age (`evaluated_at` − maior vendor_ts) | −1,93 s … +0,82 s |
+| max_age (`evaluated_at` − menor vendor_ts) | 2,97 s … 26,07 s |
+| `vendor_ts − chegada local` | até +2,48 s |
+
+**Resíduo, fora do escopo do fix.** Algumas rotas individuais ainda chegam com `vendor_ts` até ~1,9 s à frente do `evaluated_at` local. Isso é skew do relógio local, não ordenação. A freshness por fonte usa o mínimo das rotas, então nenhuma fonte ficou UNKNOWN por isso nos 25 ciclos. **Nenhuma tolerância foi adicionada.**
+
+DEGRADED continua sendo o estado esperado nesta etapa. Continuam não utilizáveis:
+- cache histórico (AoClassicCache);
+- MenthorQ, TRACE e VolSignals;
+- `FR_FROZEN_BLOCK`.
+
+Nenhuma dessas é bug de ordenação.
+
+**Critérios de PASS**
+
+| Critério | Resultado |
+|---|---|
+| 1. DATA_INVALID por ts futuro | 0/25 ✅ |
+| 2. FR_ROOT_ORDERFLOW | FRESH 25/25 ✅ |
+| 3. stale / missing / futuro real | regras mantidas (F03, F04, F05) ✅ |
+| 4. 15/15 rotas e snapshot avançando | ✅ |
+| 5. Regressão Node | 107/107 ✅ |
+
+⇒ **FRESHNESS_TIMESTAMP_FIX_VALIDATED**
+
+**W32TIME** (registro separado; não entra no resultado do patch)
+
+| | |
+|---|---|
+| SERVICE | STOPPED (StartType Manual; NtpServer `time.windows.com,0x9`) |
+| MEASURED_OFFSET | ≈ −3,6 s: relógio local atrás da referência (`w32tm /stripchart`, 3 amostras +3,61 s, read-only) |
+| ACTION | NONE |
+
+Se o skew residual vier a causar falha na fonte, decidir entre sincronizar o Windows ou, só com evidência, pré-registrar uma tolerância.
+
+**Próximo passo:** com ordem do operador, escolher uma das frentes:
+- sincronização do relógio (W32Time);
+- binding de runtime para TRACE e VolSignals (§14.4–14.5);
+- validação de conta/PNL na UI (§14.8).
+
+Zero F5.

@@ -218,3 +218,77 @@ test('A16 config live invalida e FATAL estrutural; rota sem ticker proibida', ()
   assert.equal(make(bad).routesToRead()[0].ticker, '');
   assert.throws(() => loadLiveConfig(path.join(REPO_ROOT, 'config', 'jev-runtime-v1.json')), /live config schema/);
 });
+
+// ---- FRESHNESS_FIX_V1 (EVALUATED_AT_AFTER_FETCH): relogio avanca durante o fetch; rota "live" carimba vendor ts na leitura ----
+const liveClock = () => {
+  const c = { ms: NOW.getTime() };
+  const stamp = (mk, dtSec = 0) => () => { c.ms += 300; const p = mk(); p.timestamp = Math.floor(c.ms / 1000) + dtSec; return p; };
+  const r = {};
+  for (const [k, h] of Object.entries(defaultRoutes())) r[k] = stamp(h);
+  return { c, r, stamp, now: () => new Date(c.ms) };
+};
+const fresh = (o, fr) => o.data_quality.per_source[fr];
+
+test('F01 (caso A) 15 rotas LIVE com vendor ts gerado durante o fetch: idade >= 0, sem DATA_INVALID por ts futuro', async () => {
+  const L = liveClock(); routes = L.r;
+  const { input, report } = await make(baseCfg(), L.now).buildInput();
+  assert.equal(report.routes.filter((x) => x.result === 'OK').length, 15);
+  const ev = Date.parse(input.evaluated_at) / 1000;
+  assert.ok(Math.max(...report.routes.map((x) => x.vendor_timestamp)) <= ev, 'evaluated_at >= ultimo vendor ts lido');
+  const o = rt.run(input).output;
+  for (const fr of ['FR_ROOT_ORDERFLOW', 'FR_CLASSIC', 'FR_STATE']) {
+    assert.equal(fresh(o, fr).freshness_state, 'FRESH', fr);
+    assert.ok(fresh(o, fr).age_sec >= 0, fr);
+  }
+  assert.notEqual(o.data_quality.status, 'DATA_INVALID');
+  assert.ok(!Object.values(o.data_quality.per_source).some((p) => /no futuro/.test(p.why || '')));
+});
+
+test('F02 (caso B) rota cacheada (vendor ts antigo) continua calculando freshness normalmente', async () => {
+  const L = liveClock(); routes = L.r;
+  routes['/gexbot/classic/SPX/full'] = () => { L.c.ms += 300; return classic('full', { timestamp: Math.floor(L.c.ms / 1000) - 8, _relay: { cached: true, stale: false, age_ms: 8000 } }); };
+  const { input } = await make(baseCfg(), L.now).buildInput();
+  const f = fresh(rt.run(input).output, 'FR_CLASSIC');
+  assert.equal(f.freshness_state, 'FRESH');
+  assert.ok(f.age_sec >= 8 && f.age_sec < 20, `age ${f.age_sec}`);
+});
+
+test('F03 (caso C) vendor ts genuinamente futuro, mesmo apos evaluated_at pos-fetch, continua UNKNOWN', async () => {
+  const L = liveClock(); routes = L.r;
+  routes['/gexbot/orderflow/ES_SPX'] = L.stamp(() => orderflow(), 60);
+  const { input } = await make(baseCfg(), L.now).buildInput();
+  const f = fresh(rt.run(input).output, 'FR_ROOT_ORDERFLOW');
+  assert.equal(f.freshness_state, 'UNKNOWN');
+  assert.ok(f.age_sec < 0);
+  assert.match(f.why, /no futuro/);
+});
+
+test('F04 (caso D) stale continua STALE', async () => {
+  const L = liveClock(); routes = L.r;
+  for (const c of ['zero', 'one', 'full']) routes[`/gexbot/classic/SPX/${c}`] = () => { L.c.ms += 300; return classic(c, { timestamp: Math.floor(L.c.ms / 1000) - 1000 }); };
+  const { input } = await make(baseCfg(), L.now).buildInput();
+  const o = rt.run(input).output;
+  assert.equal(fresh(o, 'FR_CLASSIC').freshness_state, 'STALE');
+  assert.equal(fresh(o, 'FR_STATE').freshness_state, 'FRESH');
+});
+
+test('F05 (caso E) timestamp ausente continua UNKNOWN (sem inventar pelo evaluated_at)', async () => {
+  const L = liveClock(); routes = L.r;
+  routes['/gexbot/orderflow/ES_SPX'] = () => { L.c.ms += 300; const p = orderflow(); delete p.timestamp; return p; };
+  const { input } = await make(baseCfg(), L.now).buildInput();
+  assert.equal(input.sources.FR_ROOT_ORDERFLOW.vendor_timestamp, null);
+  assert.equal(fresh(rt.run(input).output, 'FR_ROOT_ORDERFLOW').freshness_state, 'UNKNOWN');
+});
+
+test('F06 (caso F) FR_ROOT_ORDERFLOW lido primeiro (ts > inicio do ciclo) nao fica UNKNOWN por causa do evaluated_at', async () => {
+  const L = liveClock(); routes = L.r;
+  // latencia realista do relay na 1a leitura (ao vivo: vendor ts ate +1,9 s apos o inicio do ciclo)
+  routes['/gexbot/orderflow/ES_SPX'] = () => { L.c.ms += 1500; const p = orderflow(); p.timestamp = Math.floor(L.c.ms / 1000); return p; };
+  const start = L.c.ms / 1000;
+  const { input, report } = await make(baseCfg(), L.now).buildInput();
+  assert.ok(report.routes[0].vendor_timestamp > start, 'vendor ts da 1a rota posterior ao inicio do ciclo');
+  const f = fresh(rt.run(input).output, 'FR_ROOT_ORDERFLOW');
+  assert.equal(f.freshness_state, 'FRESH');
+  assert.ok(f.age_sec >= 0);
+  assert.equal(input.session, 'RTH');
+});
