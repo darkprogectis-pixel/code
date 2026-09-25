@@ -28,11 +28,11 @@ export function createRuntime(configPath, configOverrides = null) {
 }
 
 // estagios B/qualidade para um snapshot (usado tambem para o snapshot anterior das transicoes)
-function evaluateSnapshot(rt, input, issues, previous) {
+function evaluateSnapshot(rt, input, issues, previous, runMode) {
   const { cfg, art } = rt;
   const ing = ingest(input, issues);
   const norm = normalize(ing, art, cfg);
-  const q = assessQuality(ing, norm, art, cfg);
+  const q = assessQuality(ing, norm, art, cfg, { runMode });
   const rd = makeReader(norm, q, cfg.primary_ticker);
   const ctx = { rd, results: {}, previous, evaluated_at: ing.evaluated_at, errors: [] };
   for (const id of STAGE_B_ORDER) {
@@ -46,10 +46,10 @@ function run(rt, input, opts) {
   const t0 = Date.now();
   let previous = null;
   if (opts.previousInput !== undefined) {
-    const p = evaluateSnapshot(rt, opts.previousInput, opts.previousIssues || [], null);
+    const p = evaluateSnapshot(rt, opts.previousInput, opts.previousIssues || [], null, opts.runMode);
     previous = { evaluated_at: p.ing.evaluated_at, results: p.ctx.results, rd: p.rd, data_quality_status: p.q.status };
   }
-  const { ing, norm, q, rd, ctx } = evaluateSnapshot(rt, input, opts.issues || [], previous);
+  const { ing, norm, q, rd, ctx } = evaluateSnapshot(rt, input, opts.issues || [], previous, opts.runMode);
   const R = ctx.results;
   const reasons = [];
 

@@ -909,6 +909,63 @@ Somente infraestrutura de execução. Lógica JEV intocada (`src/` sem diff), NT
 
 **Próximo passo:** o `npm run serve` manual **não é mais o mecanismo**. Se `:3590` cair, o supervisor e a tarefa recuperam sozinhos. Diagnóstico: `Get-Content $env:LOCALAPPDATA\InvictusJevCode\runtime\supervisor-*.log -Tail 20`. Próxima etapa da sequência §14.13 (item 2 em paralelo ou item 4, decisão do cache histórico) **só com ordem do operador**. Zero F5.
 
+### 14.15 LIVE_DQ_HISTORY_ONLY_POLICY: cache histórico na DQ ao vivo (24–25/09/2026, ordem do operador · item 4 da §14.13)
+
+**Decisão canônica (operador):**
+- Uma família em que **todos** os membros são `availability === 'HISTORY_LOCAL'` no Feature Contract é **HISTORICAL_ONLY / NON_LIVE** para a DATA_QUALITY em runtime **LIVE**. Na prática, isso vale para `abot.cache.zg`, `abot.cache.so` e `abot.cache.sv`.
+- Essas famílias continuam no contrato e no lineage, sem voto e `SOURCE_NOT_AVAILABLE` ao vivo. Em LIVE, **não** contam como activeUnusable da R_S10 e **não** degradam a DQ.
+- Famílias mistas continuam avaliadas pelos membros ao vivo.
+- **REPLAY/HISTORICAL SEMANTICS = NOT DECIDED IN THIS STEP.**
+- A decisão foi registrada em:
+  - `context/jev-future/JEV_RUNTIME_V1_20260924.md` §5;
+  - `JEV_PREREGISTRATION_DESIGN_V1_20260923.md`, na linha R_S10, como nota interpretativa.
+
+**Análise (read-only, antes do patch)**
+- zg, so e sv são espelhos de `abot.classic.zero_gamma@full`, `sum_gex_oi@full` e `sum_gex_vol@full`. Esses três equivalentes ao vivo estão utilizáveis e são o que `native.mjs` lê. `abot.cache.*` nunca é lido.
+- Nenhum dos três é LIVE_REQUIRED.
+- A causa do DEGRADED: "família ativa" era decidida pelo `dc_group`. `DC_ZERO_GAMMA_FULL` (R_M02/M03/M06) e `DC_CLASSIC_GEX_PROFILE_FULL` (R_M04) são grupos ativos, então as famílias do cache, que ficam sozinhas neles, entravam como ativas e nunca utilizáveis.
+- `mpv/mnv/mpo/mno` não degradavam porque estão CONSOLIDATED em `EF_DC_MAJORS_FULL`, junto com membros ao vivo.
+
+**Patch (4 arquivos em `src/`, +18/−10)**
+- `quality.mjs`:
+  - `assessQuality(..., opts)` com `live = opts.runMode === 'LIVE'`;
+  - `historyOnly(f)` = todos os membros com `availability === 'HISTORY_LOCAL'`;
+  - em LIVE, essas famílias saem de `active_reading_families_unusable`;
+  - em LIVE, `dimensions.<dim>.history_only_families` passa a ser exposto, só informativo;
+  - a `availability` da dimensão não mudou.
+- `engine.mjs`: `opts.runMode` é repassado ao `assessQuality`, tanto para o snapshot atual quanto para o anterior.
+- `adapters/live-loop.mjs`: `runLive({ …, runMode })`.
+- `cli.mjs`: `--serve` passa `runMode: 'LIVE'`, ou `'REPLAY'` com `--replay`. `--live` passa `'LIVE'`.
+- `--input`, testes e fixtures não passam `runMode`, então o comportamento anterior continua.
+- Não mudaram: thresholds, pesos, votos, gates, `sourceFreshness`, `FR_CACHE_HISTORY`, o Feature Contract JSON (`context/jev-future/data/` sem diff), regras nativas, TRACE e VolSignals.
+
+**Testes** (`test/jev/quality-history.test.mjs`, 8 novos)
+- Antes do patch, H1 (cenário mínimo e fixture real) e a parte nova do H2 **FALHARAM** contra o código antigo.
+- Depois do patch:
+  - H1 PASS: a família só-histórica não degrada a DQ LIVE (cenário mínimo ⇒ VALID; fixture real sem zg/so/sv na degradação);
+  - H2 PASS: família ao vivo ativa e não utilizável continua DEGRADED;
+  - H3 PASS: a família só-histórica nunca conta como utilizável, mesmo presente;
+  - H4 PASS: zg/so/sv continuam no contrato, lineage, famílias e rotas, com `SOURCE_NOT_AVAILABLE`;
+  - H5 PASS: 190/190;
+  - H6 PASS: decisão, regras, votos e contexto idênticos entre LIVE e default; 0 regras de lado ativas;
+  - H7 PASS: sem LIVE, o comportamento anterior é preservado.
+- `npm test`: **115/115 PASS** (107 antigos + 8 novos). Nenhuma expectativa antiga precisou mudar: os testes antigos que esperam DEGRADED têm outras causas reais. `smoke` e `smoke:bridge` PASS.
+
+**Validação ao vivo (25/09 ~03:00Z, fora do RTH)**
+- Before (PID 25316, código antigo):
+  - DQ **DEGRADED**;
+  - degradação = só zg / so+sv;
+  - sessão OUTSIDE_RTH, fontes MARKET_CLOSED.
+- Restart: só o node gerenciado foi parado. O supervisor subiu o PID **62980** em ~7 s. Tarefa e supervisor intocados; NT8 intocado; sem F5.
+- After (`#mugdhlui-1→4`, 3 avanços):
+  - DQ **VALID**, `degradation: []`, `last_cycle_error` null;
+  - `:3590`/`:3591` UP (`:3591` 401 sem token);
+  - DATA_INVALID 0 · Robot OFF · 0 ordens · executor READ_ONLY reconectado;
+  - `history_only_families`: gamma_regime = [zg] · structure_location = [so, sv].
+- Mesmas condições de sessão antes e depois (OUTSIDE_RTH / MARKET_CLOSED). Então a mudança DEGRADED → VALID se deve só à política.
+
+**Pendente:** confirmar ORDERFLOW/CLASSIC/STATE **FRESH** + DQ VALID no **próximo RTH**. Na validação estavam MARKET_CLOSED por horário, o que é utilizável pela R_S11, mas não é FRESH. No RTH, qualquer causa real ao vivo (STALE, FROZEN, família ao vivo caída) continua degradando normalmente.
+
 ## 14. ROTAÇÃO DE SESSÃO (24/09/2026, WARNING 220k)
 
 - **Estado JEV exato:** lote RTH de 4 arquivos INSTALADO (backup `20260924-124658`) · F5 feito pelo operador (F5_COUNT_THIS_LOT=1, SECOND_F5_ALLOWED=NO) · `04-verify PostF5` PASS · backend PASS (bridge :3590 LIVE, control plane :3591 UP, JEV UNKNOWN, Robot OFF, decisão NONE, 0 ordens) · checagens VISUAIS da janela IJC pendentes do operador (§13.5) · FINAL do lote = PARTIAL até o operador confirmar.

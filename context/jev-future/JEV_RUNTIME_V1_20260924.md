@@ -161,6 +161,14 @@ Nenhum segredo é lido nem logado.
 - **Dimensão:** USABLE / PARTIAL / UNAVAILABLE.
   - Família ou spot ausente degrada só o dependente.
   - DATA_INVALID global só sem dimensão dealer utilizável.
+- **LIVE_DQ_HISTORY_ONLY_POLICY** (operador, 24/09/2026; handoff NT8 §14.15):
+  - Família cujos membros são **todos** `availability = HISTORY_LOCAL` no Feature Contract é HISTORICAL_ONLY / NON_LIVE para a DQ em runtime **LIVE**. Hoje são três: `abot.cache.zg`, `abot.cache.so` e `abot.cache.sv`.
+  - Em LIVE ela não conta como "família ativa não utilizável" da R_S10, então não degrada a DQ. Aparece só como `data_quality.dimensions.<dim>.history_only_families`, que é informativo.
+  - Continua no contrato, no lineage e nas 190/190 rotas, sem voto e `SOURCE_NOT_AVAILABLE` ao vivo. Continua nunca utilizável: `FR_CACHE_HISTORY` segue UNKNOWN, sem freshness inventada.
+  - Famílias mistas (histórico + ao vivo) seguem avaliadas pelos membros ao vivo.
+  - A `availability` da dimensão (USABLE/PARTIAL) não mudou.
+  - O modo LIVE vem do laço ao vivo (`runMode: 'LIVE'` em `--serve` sem `--replay` e em `--live`).
+  - **REPLAY/HISTORICAL SEMANTICS = NOT DECIDED IN THIS STEP**: `--input`, `--serve --replay` e fixtures mantêm o comportamento anterior.
 - **FATAL só para:** config inválida, artefato obrigatório ilegível/corrompido e invariante interno quebrado.
 - **Fail-soft:**
   - erro de avaliador vira `RC_RULE_EVALUATION_ERROR` + audit;

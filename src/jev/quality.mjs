@@ -77,7 +77,8 @@ export function familyStatus(fam, norm, fresh, ticker) {
   return { present: present > 0, usable: usable > 0, usable_members: [...new Set(usableMembers)] };
 }
 
-export function assessQuality(ing, norm, art, cfg) {
+// opts.runMode === 'LIVE' so e passado pelo laco live (CLI --serve/--live sem --replay).
+export function assessQuality(ing, norm, art, cfg, opts = {}) {
   const fresh = sourceFreshness(ing, art, cfg);
   const ticker = cfg.primary_ticker;
   const fams = art.evidence_families.families;
@@ -86,14 +87,20 @@ export function assessQuality(ing, norm, art, cfg) {
 
   // familias com leitura ATIVA = grupos DC lidos por regras SUPPORTED_SEMANTIC do estagio nativo
   const activeGroups = new Set(art.rules.rules.filter((r) => r.status === 'SUPPORTED_SEMANTIC' && r.stage === 'NATIVE_DEALER_STATE').flatMap((r) => r.input_families));
+  // LIVE_DQ_HISTORY_ONLY_POLICY: familia com TODOS os membros availability=HISTORY_LOCAL e HISTORICAL_ONLY / NON_LIVE;
+  // em runtime LIVE nao e familia ativa da R_S10 (nao degrada a DQ). Replay/historico: NAO decidido (comportamento anterior).
+  const live = opts.runMode === 'LIVE';
+  const availability = new Map(art.feature_contract.fields.map((f) => [f.feature_id, f.availability]));
+  const historyOnly = (f) => f.members.length > 0 && f.members.every((m) => availability.get(m.split('@')[0]) === 'HISTORY_LOCAL');
   const dims = {};
   for (const [D, key] of Object.entries(DEALER_DIMENSIONS)) {
     const inDim = fams.filter((f) => f.dimension === D && f.kind !== 'NON_EVIDENCE');
     const usable = inDim.filter((f) => famState[f.family_id].usable);
-    const activeUnusable = inDim.filter((f) => activeGroups.has(f.dc_group) && !famState[f.family_id].usable).map((f) => f.family_id);
+    const activeUnusable = inDim.filter((f) => activeGroups.has(f.dc_group) && !famState[f.family_id].usable && !(live && historyOnly(f))).map((f) => f.family_id);
     dims[key] = {
       availability: !usable.length ? 'UNAVAILABLE' : (usable.length === inDim.length ? 'USABLE' : 'PARTIAL'),
       usable_families: usable.map((f) => f.family_id), active_reading_families_unusable: activeUnusable,
+      ...(live ? { history_only_families: inDim.filter(historyOnly).map((f) => f.family_id) } : {}),
     };
   }
   const dcUsable = (g) => fams.some((f) => f.dc_group === g && famState[f.family_id].usable);

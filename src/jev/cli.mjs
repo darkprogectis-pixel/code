@@ -85,7 +85,7 @@ if (args.serve) {
     process.on('SIGINT', () => { process.stderr.write('\n[jev] Ctrl+C: parando\n'); ac.abort(); });
     process.stderr.write(`[ijc] INVICTUS JEV CODE · bridge read-only http://${addr.address}:${addr.port}/ · control plane ${cpAddr.address}:${cpAddr.port} (token local) · modo ${args.replay ? 'REPLAY' : 'LIVE'} · ordens: HARD_DISABLED · robo: OFF\n`);
     const interval = Math.max(args.replay ? 1000 : 5000, args.intervalMs || (lc ? lc.poll_interval_ms : 3000));
-    const n = await runLive({ adapter, runtime: rt, intervalMs: interval, cycles: args.cycles, signal: ac.signal,
+    const n = await runLive({ adapter, runtime: rt, intervalMs: interval, cycles: args.cycles, signal: ac.signal, runMode: args.replay ? 'REPLAY' : 'LIVE',
       onCycle: ({ cycle, result, report }) => {
         bridge.update({ result, report, error: result ? null : report && report.error });
         if (result) { core.onSnapshot(result); logs.engine.log('engine_cycle', { snapshot_id: result.snapshot_id, state: result.output.jev_directional_context, reason: result.output.data_quality.status }); }
@@ -118,7 +118,7 @@ if (args.live) {
     const ac = new AbortController();
     process.on('SIGINT', () => { process.stderr.write('\n[jev] Ctrl+C: parando apos o ciclo atual\n'); ac.abort(); });
     process.stderr.write(`[jev] LIVE read-only · relay ${lc.relay.host}:${lc.relay.port}${lc.relay.base_path} · intervalo ${args.intervalMs || lc.poll_interval_ms} ms · ordens: DESABILITADAS\n`);
-    const n = await runLive({ adapter, runtime: rt, intervalMs: Math.max(5000, args.intervalMs || lc.poll_interval_ms), cycles: args.cycles, signal: ac.signal,
+    const n = await runLive({ adapter, runtime: rt, intervalMs: Math.max(5000, args.intervalMs || lc.poll_interval_ms), cycles: args.cycles, signal: ac.signal, runMode: 'LIVE',
       onCycle: ({ cycle, result, report }) => {
         if (!result) { process.stderr.write(`[jev] ciclo ${cycle}: erro de ciclo (continua): ${report.error}\n`); return; }
         const o = result.output;

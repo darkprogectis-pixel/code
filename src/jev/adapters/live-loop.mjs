@@ -4,7 +4,8 @@
 const RUN_TAG = Date.now().toString(36);
 export const makeSnapshotId = (output, cycle, runTag = RUN_TAG) => `${(output && output.evaluated_at) || 'NA'}#${runTag}-${cycle}`;
 
-export async function runLive({ adapter, runtime, intervalMs, cycles = Infinity, signal, onCycle }) {
+// runMode: 'LIVE' so quando o adapter e o relay ao vivo (afeta so a DQ: LIVE_DQ_HISTORY_ONLY_POLICY); replay/testes omitem.
+export async function runLive({ adapter, runtime, intervalMs, cycles = Infinity, signal, onCycle, runMode }) {
   let previousInput;
   let n = 0;
   while (!(signal && signal.aborted) && n < cycles) {
@@ -13,7 +14,7 @@ export async function runLive({ adapter, runtime, intervalMs, cycles = Infinity,
     try {
       const built = await adapter.buildInput();
       report = built.report;
-      result = runtime.run(built.input, previousInput === undefined ? {} : { previousInput });
+      result = runtime.run(built.input, { ...(previousInput === undefined ? {} : { previousInput }), ...(runMode ? { runMode } : {}) });
       result.snapshot_id = makeSnapshotId(result.output, n);
       previousInput = built.input;
     } catch (e) {
