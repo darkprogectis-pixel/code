@@ -26,6 +26,8 @@
     "nt8:shadow": "node nt8/install/shadow-compile.mjs",
     "test:rotation": "node --test \"test/rotation/*.test.mjs\"",
     "rotation:status": "node tools/jev-rotation/status.mjs",
-    "test:rotation:live": "node test/rotation/live-spawn.mjs"
+    "test:rotation:live": "node test/rotation/live-spawn.mjs",
+    "test:rotation:transcript": "node test/rotation/live-transcript.mjs",
+    "test:rotation:real": "node test/rotation/live-transcript.mjs --real-parent"
   }
 }

@@ -235,6 +235,33 @@ test('RT11 successor launcher: isolated config dir, repo cwd, pre-assigned sessi
   assert.equal(lock.cwd, sb.dir);
 });
 
+test('RT18 REGRESSION 48909bd5: successor launcher strips the parent Claude Code session markers (transcript persistence)', () => {
+  // A hook process runs with the markers Claude Code injects; reproduce them.
+  const markers = { CLAUDECODE: '1', CLAUDE_CODE_CHILD_SESSION: '1', CLAUDE_CODE_SESSION_ID: 'parent-sid', CLAUDE_CODE_SESSION_ATTENDED: '1',
+    CLAUDE_PID: '4242', CLAUDE_EFFORT: 'medium', CLAUDE_PROJECT_DIR: 'X:/parent', CLAUDE_CODE_ENTRYPOINT: 'cli' };
+  const sb = sandbox(markers);
+  sb.usage(241000);
+  sb.pre('Bash', {});
+  const lock = sb.lock();
+  // Execute the generated launcher for real with a recording "claude" and a passing verify gate.
+  const rec = path.join(sb.dir, 'rec.json');
+  const bin = path.join(sb.dir, 'claude-rec.ps1');
+  fs.writeFileSync(bin, `$e=@{}; foreach ($n in @(${Object.keys(markers).map((k) => `'${k}'`).join(',')},'CLAUDE_CONFIG_DIR','JEV_ROTATION_TEST')) { $e[$n] = [Environment]::GetEnvironmentVariable($n) }; @{ env = $e; cwd = (Get-Location).Path; args = $args } | ConvertTo-Json -Depth 4 | Set-Content -Encoding UTF8 -LiteralPath '${rec}'`);
+  const ps = fs.readFileSync(lock.launch, 'utf8')
+    .replace(/^node .*install-hooks\.mjs.*--verify$/m, 'cmd /c exit 0')
+    .replace(/^& '[^']*claude[^']*'/m, `& '${bin}'`);
+  const runner = path.join(sb.dir, 'run-launch.ps1');
+  fs.writeFileSync(runner, ps);
+  const r = spawnSync('powershell.exe', ['-NoProfile', '-ExecutionPolicy', 'Bypass', '-File', runner], { encoding: 'utf8', env: sb.env });
+  assert.equal(r.status, 0, r.stderr);
+  const got = JSON.parse(fs.readFileSync(rec, 'utf8').replace(/^\uFEFF/, ''));
+  for (const k of Object.keys(markers)) assert.equal(got.env[k], null, `${k} must not reach the successor`);
+  assert.equal(got.env.JEV_ROTATION_TEST, null);
+  assert.equal(got.env.CLAUDE_CONFIG_DIR, sb.env.CLAUDE_CONFIG_DIR, 'isolated config kept');
+  assert.equal(got.cwd.toLowerCase(), sb.dir.toLowerCase(), 'repo cwd kept');
+  assert.ok([].concat(got.args).includes(lock.successor), 'pre-assigned session id kept');
+});
+
 test('RT12 successor handshake: SessionStart of the successor gets lineage context and confirms the start', () => {
   const sb = sandbox();
   sb.usage(241000);

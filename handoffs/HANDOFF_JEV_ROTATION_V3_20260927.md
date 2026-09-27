@@ -78,3 +78,26 @@ M `START_JEV_CLAUDE.ps1`, `package.json` (+`test:rotation:live`), `tools/jev-rot
 ## 7. Exact next step
 
 Operator: review, then commit (`Add JEV Rotation Controller V3: automatic successor session`). Optional: `npm run rotation:status`. Then resume the TypeSafe/Jev audit from `handoffs/HANDOFF_TYPESAFE_JEV_AUDIT_20260927.md` (unchanged by this phase).
+
+## 8. Regression fix 27/09: successor transcript persistence
+
+- **Sintoma** (sucessora automática 48909bd5): "Transcript saving is off — inherited CLAUDE_CODE_CHILD_SESSION marker". Nenhum `48909bd5….jsonl` foi gravado.
+- **Causa:**
+  - O Claude Code 2.1.283 injeta em todo processo de hook/ferramenta: `CLAUDECODE`, `CLAUDE_CODE_SESSION_ID`, `CLAUDE_CODE_CHILD_SESSION=1`, `CLAUDE_CODE_SESSION_ATTENDED`, `CLAUDE_PID`, `CLAUDE_EFFORT` (+ `TRACEPARENT`/`AI_AGENT`/`CLAUDE_PROJECT_DIR`).
+  - O hook abre a sucessora via wt ⇒ `launch.ps1`, e o ambiente é herdado.
+  - O `launch.ps1` removia só `CLAUDECODE`/`CLAUDE_CODE_ENTRYPOINT`/`CLAUDE_CODE_SSE_PORT`.
+  - Um `claude` **interativo** com `CLAUDE_CODE_CHILD_SESSION` desliga a persistência do transcript.
+- **Por que a V3 passou:** o `live-spawn.mjs` rodava a sucessora com `claude -p`, que é não interativo e persiste mesmo com o marcador.
+- **Fix:**
+  - `hook.mjs` exporta `CLAUDE_SESSION_ENV`;
+  - o `launch.ps1` remove essa lista junto com as variáveis de teste;
+  - `CLAUDE_CONFIG_DIR`, cwd, `--session-id`, brief e o verify gate ficam inalterados;
+  - `CLAUDE_CODE_FORCE_SESSION_PERSISTENCE` **não** é usado: a sessão fica canônica, como se aberta pelo `START_JEV_CLAUDE.ps1`.
+- **Testes:**
+  - RT18 (unit): executa o `launch.ps1` gerado e confirma os marcadores ausentes; falha no código anterior;
+  - `npm run test:rotation:transcript` (ROTATED_SUCCESSOR_TRANSCRIPT_PERSISTENCE): sucessora interativa real;
+  - `npm run test:rotation:real`: pai `claude` real com thresholds reduzidos.
+- **Resultados:**
+  - RED antes do fix: marcador herdado, transcript OFF;
+  - GREEN depois: marcador ausente, transcript criado e crescendo, exatamente uma sucessora;
+  - rotation 18/18; suíte completa 123/123; live-spawn PASS.
