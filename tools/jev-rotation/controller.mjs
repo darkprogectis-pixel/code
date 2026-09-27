@@ -1,4 +1,4 @@
-// JEV Rotation Controller V2 — pure logic (no I/O except measureTranscript).
+// JEV Rotation Controller V3 — pure logic (no I/O except measureTranscript).
 // Measurement source: the Anthropic API `usage` block that Claude Code writes on
 // every assistant message of the session transcript (JSONL). Context occupied
 // after a response = input_tokens + cache_creation_input_tokens
@@ -8,21 +8,23 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 export const HERE = path.dirname(fileURLToPath(import.meta.url));
-export const LEVELS = ['OK', 'WARNING', 'SOFT_STOP', 'HARD_ROTATION', 'CEILING_BREACH'];
+export const LEVELS = ['OK', 'PREPARE', 'WARNING', 'SOFT_STOP', 'HARD_ROTATION', 'CEILING_BREACH'];
 export const rank = (l) => Math.max(0, LEVELS.indexOf(l));
 export const maxLevel = (a, b) => (rank(a) >= rank(b) ? a : b);
 export const ROTATE = 'ROTATE_SESSION_NOW';
+export const ROTATED = 'ROTATED_READ_ONLY';
 
 export function loadConfig(env = process.env) {
   const cfg = JSON.parse(fs.readFileSync(path.join(HERE, 'config.json'), 'utf8'));
   let th = { ...cfg.thresholds };
   // Test-only override, ignored unless JEV_ROTATION_TEST=1 (the launcher clears both).
   if (env.JEV_ROTATION_TEST === '1' && env.JEV_ROTATION_THRESHOLDS) {
-    const [warning, soft_stop, hard_rotation, ceiling] = env.JEV_ROTATION_THRESHOLDS.split(',').map(Number);
-    th = { warning, soft_stop, hard_rotation, ceiling };
+    const v = env.JEV_ROTATION_THRESHOLDS.split(',').map(Number);
+    const [prepare, warning, soft_stop, hard_rotation, ceiling] = v.length === 4 ? [v[0], ...v] : v;
+    th = { prepare, warning, soft_stop, hard_rotation, ceiling };
   }
-  const ok = [th.warning, th.soft_stop, th.hard_rotation, th.ceiling].every((n) => Number.isFinite(n) && n > 0)
-    && th.warning < th.soft_stop && th.soft_stop < th.hard_rotation && th.hard_rotation < th.ceiling;
+  const ok = [th.prepare, th.warning, th.soft_stop, th.hard_rotation, th.ceiling].every((n) => Number.isFinite(n) && n > 0)
+    && th.prepare <= th.warning && th.warning < th.soft_stop && th.soft_stop < th.hard_rotation && th.hard_rotation < th.ceiling;
   if (!ok) throw new Error(`invalid thresholds ${JSON.stringify(th)}`);
   return { ...cfg, thresholds: th };
 }
@@ -32,6 +34,7 @@ export function levelFor(tokens, th) {
   if (tokens >= th.hard_rotation) return 'HARD_ROTATION';
   if (tokens >= th.soft_stop) return 'SOFT_STOP';
   if (tokens >= th.warning) return 'WARNING';
+  if (tokens >= th.prepare) return 'PREPARE';
   return 'OK';
 }
 
@@ -77,6 +80,32 @@ export function measureTranscript(transcriptPath) {
   }
 }
 
+// The measured value is the context of the LAST API call; what the hook is about
+// to let in (the prompt being submitted, the tool result just produced) is not in
+// it yet. Session 9f12a31f was measured at 234 964 on UserPromptSubmit, the prompt
+// itself took it to 240 501 in one step. Rotation decisions use this projection.
+export function estimatePending(event, input, cfg) {
+  const cpt = cfg.rotation?.chars_per_token || 3;
+  let chars = 0;
+  if (event === 'UserPromptSubmit') chars = String(input.prompt || '').length;
+  else if (event === 'PostToolUse') chars = JSON.stringify(input.tool_response ?? '').length;
+  return Math.ceil(chars / cpt);
+}
+
+// Whether the hook must rotate NOW (spawn the successor) given the sticky level.
+export function shouldRotate(event, input, level, ctx) {
+  // SessionStart never spawns: a resumed exhausted session rotates on its first prompt (carried over).
+  if (ctx.cfg.rotation?.enabled === false || event === 'SessionStart') return false;
+  const r = rank(level);
+  if (r >= rank('HARD_ROTATION')) return true;
+  if (r < rank('SOFT_STOP')) return false;
+  // SOFT_STOP: rotate at the next atomic boundary — a new operator prompt, or the
+  // end of the current turn (after the one mandatory handoff attempt).
+  if (event === 'UserPromptSubmit') return !String(input.prompt || '').includes(ctx.cfg.handoff_only_prompt_token);
+  if (event === 'Stop') return ctx.handoffFresh || !!input.stop_hook_active;
+  return false;
+}
+
 const norm = (p) => path.resolve(p).replace(/\\/g, '/').toLowerCase();
 
 export function isHandoffPath(filePath, repoRoot) {
@@ -104,15 +133,42 @@ export function isHandoffOp(tool, input, ctx) {
 
 function tokStr(n) { return n === null || n === undefined ? 'UNKNOWN' : `${n}`; }
 
-// ctx: { level, tokens, cfg, repoRoot, fileSize(p)->bytes|null, handoffFresh:boolean, nag:boolean, measurement }
+// Session already rotated (successor spawned): read-only for good.
+function decideRotated(event, ctx) {
+  const rot = ctx.rotation;
+  const msg = `${ROTATE} — ${ROTATED}: this session was rotated at ${tokStr(rot.tokens)} tokens (${rot.level}, trigger ${rot.trigger}). `
+    + `Successor session ${rot.successor} was opened automatically in a new window (brief: ${rot.brief}). `
+    + `Nothing else runs here; continue in the successor. Do NOT use /clear.`;
+  const out = (o) => ({ output: o, exitCode: 0 });
+  switch (event) {
+    case 'SessionStart':
+      return out({ hookSpecificOutput: { hookEventName: 'SessionStart', additionalContext: msg } });
+    case 'UserPromptSubmit':
+      return out({ decision: 'block', reason: rot.carried_prompt ? `${msg} Your prompt was forwarded to the successor.` : msg });
+    case 'PreToolUse':
+      return out({ continue: false, stopReason: msg, hookSpecificOutput: { hookEventName: 'PreToolUse', permissionDecision: 'deny', permissionDecisionReason: msg } });
+    case 'PostToolUse':
+      return out({ continue: false, stopReason: msg });
+    case 'Stop':
+      return out({ systemMessage: msg });
+    default:
+      return out(null);
+  }
+}
+
+// ctx: { level, tokens, cfg, repoRoot, fileSize(p)->bytes|null, handoffFresh:boolean, nag:boolean, measurement,
+//        rotation: null | { successor, brief, tokens, level, trigger, carried_prompt }, spawnError: string|null }
 // Returns { output: object|null, exitCode: 0 }.
 export function decide(event, input, ctx) {
+  if (ctx.rotation) return decideRotated(event, ctx);
   const th = ctx.cfg.thresholds;
   const t = tokStr(ctx.tokens);
   const lvl = ctx.level;
   const r = rank(lvl);
   const handoffOnly = ctx.cfg.handoff_only_prompt_token;
+  // Reached only if the automatic spawn failed (or rotation is disabled): manual fallback.
   const rotateMsg = `${ROTATE} — JEV context ${t} tokens (level ${lvl}; hard ${th.hard_rotation}, ceiling ${th.ceiling}). `
+    + (ctx.spawnError ? `AUTOMATIC SUCCESSOR SPAWN FAILED (${ctx.spawnError}); it is retried on the next hook event. ` : '')
     + `This instance is locked: only handoff edits (handoffs/*.md) are allowed. Update the handoff, then /exit and `
     + `start a new instance with START_JEV_CLAUDE.ps1. Do NOT use /clear.`;
   const out = (o) => ({ output: o, exitCode: 0 });
@@ -125,10 +181,15 @@ export function decide(event, input, ctx) {
     ? `JEV_ROTATION_MEASUREMENT_UNAVAILABLE (${ctx.measurement.error}) — enforcement uses last known level ${lvl}.` : null;
 
   switch (event) {
-    case 'SessionStart':
+    case 'SessionStart': {
+      const p = ctx.predecessor;
       return out({ hookSpecificOutput: { hookEventName: 'SessionStart', additionalContext:
-        `JEV Rotation Controller V2 active (external hook). Absolute thresholds: warning ${th.warning}, soft stop ${th.soft_stop}, `
-        + `hard rotation ${th.hard_rotation}, ceiling ${th.ceiling} tokens. Blocking is enforced by hooks, not by the model.` } });
+        `JEV Rotation Controller V3 active (external hook). Absolute thresholds: prepare ${th.prepare}, warning ${th.warning}, soft stop ${th.soft_stop}, `
+        + `hard rotation ${th.hard_rotation}, ceiling ${th.ceiling} tokens. Blocking and rotation are enforced by hooks, not by the model; `
+        + `at rotation the controller opens the successor session itself.`
+        + (p ? ` THIS SESSION IS THE AUTOMATIC SUCCESSOR (rotation #${p.depth}) of session ${p.from}, which is now ${ROTATED}. `
+          + `Continuation brief (also appended to the system prompt): ${p.brief}.` : '') } });
+    }
 
     case 'UserPromptSubmit': {
       const prompt = String(input.prompt || '');
@@ -147,6 +208,11 @@ export function decide(event, input, ctx) {
         const msg = `JEV_ROTATION_WARNING — context ${t} tokens >= ${th.warning}. Handoff update is mandatory now; `
           + `new batches are blocked at ${th.soft_stop}, rotation forced at ${th.hard_rotation}.`;
         return out({ systemMessage: msg, hookSpecificOutput: { hookEventName: 'UserPromptSubmit', additionalContext: msg } });
+      }
+      if (r >= rank('PREPARE')) {
+        return out({ hookSpecificOutput: { hookEventName: 'UserPromptSubmit', additionalContext:
+          `JEV_ROTATION_PREPARE — context ${t} tokens >= ${th.prepare}. Keep the current handoffs/*.md up to date after each completed step `
+          + `(state, files, tests, exact next step): at ${th.soft_stop}/${th.hard_rotation} the controller rotates automatically to a new session that continues from it.` } });
       }
       return out(degraded ? { systemMessage: degraded } : null);
     }
@@ -176,8 +242,10 @@ export function decide(event, input, ctx) {
       if (r >= rank('HARD_ROTATION') && isHandoffOp(input.tool_name, input.tool_input || {}, ctx) && WRITE_TOOLS.has(input.tool_name)) {
         return out({ continue: false, stopReason: `${ROTATE} — handoff updated at ${t} tokens. /exit this instance and start a new one with START_JEV_CLAUDE.ps1.` });
       }
-      if (r >= rank('WARNING') && ctx.nag) {
-        const msg = r >= rank('SOFT_STOP')
+      if (r >= rank('PREPARE') && ctx.nag) {
+        const msg = r < rank('WARNING')
+          ? `JEV_ROTATION_PREPARE (${t} tokens): keep the handoff incremental; automatic rotation at ${th.soft_stop}-${th.hard_rotation}.`
+          : r >= rank('SOFT_STOP')
           ? `JEV_SOFT_STOP active (${t} tokens). Wrap up now: update the handoff and report ${ROTATE}.`
           : `JEV_ROTATION_WARNING (${t} tokens >= ${th.warning}): update the handoff before starting anything new.`;
         return out({ hookSpecificOutput: { hookEventName: 'PostToolUse', additionalContext: msg } });

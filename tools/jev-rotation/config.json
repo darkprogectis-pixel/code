@@ -1,7 +1,8 @@
 {
-  "schema": "jev-rotation-controller/v2",
+  "schema": "jev-rotation-controller/v3",
   "unit": "tokens (absolute, not percent)",
   "thresholds": {
+    "prepare": 200000,
     "warning": 220000,
     "soft_stop": 235000,
     "hard_rotation": 240000,
@@ -13,5 +14,14 @@
   "soft_stop_read_max_bytes": 24000,
   "handoff_nag_every_tokens": 5000,
   "handoff_reserve_tokens": 4000,
-  "handoff_only_prompt_token": "JEV_HANDOFF_ONLY"
+  "handoff_only_prompt_token": "JEV_HANDOFF_ONLY",
+  "rotation": {
+    "enabled": true,
+    "chars_per_token": 3,
+    "spawn_retry_max": 3,
+    "carry_last_assistant_texts": 4,
+    "carry_text_max_chars": 2500,
+    "confirm_timeout_s": 90,
+    "respawn_max": 2
+  }
 }

@@ -25,6 +25,7 @@
     "nt8:manifest": "node nt8/install/build-payload-manifest.mjs",
     "nt8:shadow": "node nt8/install/shadow-compile.mjs",
     "test:rotation": "node --test \"test/rotation/*.test.mjs\"",
-    "rotation:status": "node tools/jev-rotation/status.mjs"
+    "rotation:status": "node tools/jev-rotation/status.mjs",
+    "test:rotation:live": "node test/rotation/live-spawn.mjs"
   }
 }

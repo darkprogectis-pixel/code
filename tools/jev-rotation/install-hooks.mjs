@@ -1,14 +1,14 @@
 #!/usr/bin/env node
-// Installs / verifies the JEV Rotation Controller V2 hooks in the ISOLATED JEV
+// Installs / verifies the JEV Rotation Controller V3 hooks in the ISOLATED JEV
 // Claude config dir (never the default ~/.claude).
 //   node tools/jev-rotation/install-hooks.mjs --config-dir <dir> [--verify] [--uninstall]
 // --verify: hooks present + pointing to this hook.mjs + live self-test of the hook
-//           process (warning / soft stop / hard rotation). Exit 0 = PASS, 1 = FAIL.
+//           process (warning / soft stop / hard rotation + dry-run successor spawn). Exit 0 = PASS, 1 = FAIL.
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import { spawnSync } from 'node:child_process';
-import { HERE } from './controller.mjs';
+import { HERE, loadConfig } from './controller.mjs';
 
 const MARK = 'jev-rotation-controller-v2';
 const EVENTS = { SessionStart: null, UserPromptSubmit: null, PreToolUse: '*', PostToolUse: '*', Stop: null };
@@ -74,7 +74,10 @@ function verify() {
   // Live self-test against synthetic transcripts with the REAL thresholds.
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'jev-rot-verify-'));
   fs.mkdirSync(path.join(tmp, 'handoffs'));
-  const env = { JEV_ROTATION_STATE_DIR: path.join(tmp, 'state'), JEV_ROTATION_REPO_ROOT: tmp, JEV_ROTATION_TEST: '', JEV_ROTATION_THRESHOLDS: '' };
+  // Real thresholds (passed explicitly), successor spawn in dry-run: verify never opens a window.
+  const th = loadConfig({}).thresholds;
+  const env = { JEV_ROTATION_STATE_DIR: path.join(tmp, 'state'), JEV_ROTATION_REPO_ROOT: tmp, JEV_ROTATION_TEST: '1', JEV_ROTATION_SPAWN: 'dry', JEV_ROTATION_WATCHDOG: 'off',
+    JEV_ROTATION_THRESHOLDS: [th.prepare, th.warning, th.soft_stop, th.hard_rotation, th.ceiling].join(','), CLAUDE_CONFIG_DIR: path.join(tmp, 'cfg') };
   const case_ = (tokens, i) => {
     const tp = path.join(tmp, `t${i}.jsonl`);
     fs.writeFileSync(tp, JSON.stringify({ type: 'assistant', uuid: `u${i}`, message: { usage: { input_tokens: 1, cache_read_input_tokens: tokens - 1, output_tokens: 0 } } }) + '\n');
@@ -83,13 +86,17 @@ function verify() {
   const w = runHook({ ...case_(221000, 1), hook_event_name: 'UserPromptSubmit', prompt: 'x' }, env);
   if (!/JEV_ROTATION_WARNING/.test(w.out?.systemMessage || '')) problems.push('self-test WARNING failed');
   const sp = runHook({ ...case_(236000, 2), hook_event_name: 'UserPromptSubmit', prompt: 'x' }, env);
-  if (sp.out?.decision !== 'block') problems.push('self-test SOFT_STOP failed');
+  if (sp.out?.decision !== 'block' || !/ROTATED_READ_ONLY/.test(sp.out.reason)) problems.push('self-test SOFT_STOP rotation failed');
+  let lock = null;
+  try { lock = JSON.parse(fs.readFileSync(path.join(tmp, 'state', 'rotation', 'verify-2.lock'), 'utf8')); } catch { /* checked below */ }
+  const launch = lock?.launch && fs.existsSync(lock.launch) ? fs.readFileSync(lock.launch, 'utf8') : '';
+  if (lock?.status !== 'SPAWNED' || !launch.includes(env.CLAUDE_CONFIG_DIR) || !launch.includes(`--session-id '${lock.successor}'`)) problems.push('self-test successor launcher failed');
   const h = runHook({ ...case_(241000, 3), hook_event_name: 'PreToolUse', tool_name: 'Bash', tool_input: { command: 'ls' } }, env);
-  if (h.out?.hookSpecificOutput?.permissionDecision !== 'deny' || !/ROTATE_SESSION_NOW/.test(h.out.hookSpecificOutput.permissionDecisionReason)) problems.push('self-test HARD_ROTATION failed');
+  if (h.out?.hookSpecificOutput?.permissionDecision !== 'deny' || h.out.continue !== false || !/ROTATED_READ_ONLY/.test(h.out.hookSpecificOutput.permissionDecisionReason)) problems.push('self-test HARD_ROTATION failed');
   fs.rmSync(tmp, { recursive: true, force: true });
 
   if (problems.length) { console.error(`VERIFY: FAIL\n - ${problems.join('\n - ')}`); process.exit(1); }
-  console.log(`VERIFY: PASS (5 hooks in ${settingsFile}; self-test warning/soft-stop/hard-rotation PASS)`);
+  console.log(`VERIFY: PASS (5 hooks in ${settingsFile}; self-test warning/soft-stop rotation/hard-rotation/successor launcher PASS, dry-run)`);
 }
 
 if (args.includes('--uninstall')) {

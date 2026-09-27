@@ -13,17 +13,19 @@ Then the most recent phase handoffs in `handoffs/` (newest last):
 - `handoffs/HANDOFF_JEV_LIVE_INPUT_V1_20260924.md` — live input adapter (done, `6ecb18d`)
 - `handoffs/HANDOFF_JEV_CONTROL_CENTER_V1_20260924.md` — Control Center V1 (superseded by INVICTUS JEV CODE V1)
 - `handoffs/HANDOFF_INVICTUS_JEV_CODE_V1_20260924.md` — INVICTUS JEV CODE V1
+- `handoffs/HANDOFF_JEV_ROTATION_V3_20260927.md` — rotation controller V3 (automatic successor)
 - `handoffs/HANDOFF_INVICTUS_JEV_NT8_INSTALL_20260924.md` — **NT8 install, current lot = RTH test, 4-file payload, no manual order execution (current; see §13.6 + §14 — runtime data-plane diagnosis + freshness fix validated)**
 
 Then read only the minimum canonical files referenced by those handoffs.
 
 Do not reconstruct the project from old conversations or unrelated workspaces.
 
-## Session rotation — JEV Rotation Controller V2 (mandatory)
+## Session rotation — JEV Rotation Controller V3 (mandatory, automatic)
 
 Always start via `START_JEV_CLAUDE.ps1` (installs + verifies hooks in the isolated CLAUDE_CONFIG_DIR; no verified enforcement ⇒ no session).
-Absolute thresholds (API usage from the session transcript): 220k WARNING (handoff mandatory) · 235k SOFT_STOP (new batch blocked) · 240k HARD_ROTATION (ROTATE_SESSION_NOW; only handoffs/*.md edits) · 250k never.
-Enforced by hooks, not by the model. Never /clear. Details: `handoffs/HANDOFF_JEV_ROTATION_V2_20260924.md` · `npm run test:rotation` · `npm run rotation:status`.
+Absolute thresholds (API usage from the session transcript + pending prompt/tool-result projection): 200k PREPARE (incremental handoff) · 220k WARNING · 235k SOFT_STOP (rotate at next prompt/turn end) · 240k HARD_ROTATION (rotate now) · 250k never.
+At rotation the HOOK opens the successor session itself (new window, same config/cwd, lineage + brief, exactly once, watchdog-confirmed); the old session becomes ROTATED_READ_ONLY. No /exit, no operator action. Never /clear.
+Details: `handoffs/HANDOFF_JEV_ROTATION_V3_20260927.md` · `npm run test:rotation` · `npm run test:rotation:live` · `npm run rotation:status`.
 
 ---
 
