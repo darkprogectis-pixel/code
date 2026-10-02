@@ -148,7 +148,26 @@ Foi negada a AUTO-CERTIFICAÇÃO de sucesso:
 - tests_fail = [], tests_pending = [], blockers_open = []. JEV diff A, JEV final A.
 - REAL_TEST = **PASS** · FINAL_LOOP_STATUS = **COMPLETE**.
 
+### Commit (ordem do operador)
+- **dc83967** `feat(jev): add autonomous jev-finish run-to-completion workflow`. 15 arquivos, +1865/−1, sem push, sem tag, branch main.
+- Escopo:
+  - `.claude/settings.json`, `.claude/skills/jev-finish/SKILL.md`;
+  - `tools/jev-finish/*` (5 arquivos), `test/jev-finish/jev-finish.test.mjs`;
+  - `handoffs/jev-finish/*` (5 arquivos), este handoff;
+  - `package.json`, só as 2 linhas jev-finish (`test` + `test:jev-finish`).
+- Fora do commit, preservados:
+  - `rotation:force` em package.json, `tools/jev-rotation/force.mjs` e as demais mudanças de rotation/START_JEV/NT8 handoff;
+  - handoffs não relacionados, kimi, scripts;
+  - `.claude/settings.local.json` (ignorado globalmente).
+- Pré-commit:
+  - a árvore do índice, exportada isolada, deu jev-finish 29/29;
+  - `npm test` nessa árvore deu 151/152. A falha é C06, que também falha no export do próprio HEAD: artefato de ambiente, porque o export não é repo git. No repo real C06 passa (156/156);
+  - install-hooks --verify PASS;
+  - os SHAs do índice são iguais aos avaliados no JEV FINAL;
+  - live AOT intocado.
+- Esta nota foi escrita DEPOIS do commit dc83967 e commitada à parte, num commit só de documentação, por ordem do operador.
+
 ### Próximo passo exato
-Commit, só se o operador ordenar. Nada pendente no /jev-finish.
+Nada pendente no /jev-finish. Uso: `START_JEV_CLAUDE.ps1` → `/jev-finish "<objetivo>"`.
 
 Rollback: remover `.claude/settings.json`, `.claude/skills/jev-finish/`, `tools/jev-finish/`, `test/jev-finish/` e `handoffs/jev-finish/`, e reverter as 2 linhas `jev-finish` do `package.json`. O estado runtime fica em `$CLAUDE_CONFIG_DIR/jev-finish/`. Rotation Controller e thresholds: NÃO alterados. Live/F5/ordens: NÃO tocados.
