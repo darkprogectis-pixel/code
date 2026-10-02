@@ -9,7 +9,7 @@
   "scripts": {
     "jev": "node src/jev/cli.mjs",
     "jev:example": "node src/jev/cli.mjs --input fixtures/jev/C_valid_multi_source.json --output-only",
-    "test": "node --test \"test/jev/*.test.mjs\" \"test/ijc/*.test.mjs\" \"test/rotation/*.test.mjs\"",
+    "test": "node --test \"test/jev/*.test.mjs\" \"test/ijc/*.test.mjs\" \"test/rotation/*.test.mjs\" \"test/jev-finish/*.test.mjs\"",
     "smoke": "node test/jev/smoke.mjs",
     "build:prereg": "node context/jev-future/scripts/build-jev-preregistration-design-v1.js",
     "live": "node src/jev/cli.mjs --live",
@@ -25,6 +25,7 @@
     "nt8:manifest": "node nt8/install/build-payload-manifest.mjs",
     "nt8:shadow": "node nt8/install/shadow-compile.mjs",
     "test:rotation": "node --test \"test/rotation/*.test.mjs\"",
+    "test:jev-finish": "node --test \"test/jev-finish/*.test.mjs\"",
     "rotation:status": "node tools/jev-rotation/status.mjs",
     "test:rotation:live": "node test/rotation/live-spawn.mjs",
     "test:rotation:transcript": "node test/rotation/live-transcript.mjs",

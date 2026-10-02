@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "SessionStart": [
+      { "hooks": [ { "type": "command", "command": "node \"C:/Users/ADM/Claude-JEV/code/tools/jev-finish/hook.mjs\" # jev-finish-v1", "timeout": 15 } ] }
+    ],
+    "PreToolUse": [
+      { "matcher": "Write|Edit|MultiEdit|NotebookEdit|Bash|PowerShell", "hooks": [ { "type": "command", "command": "node \"C:/Users/ADM/Claude-JEV/code/tools/jev-finish/hook.mjs\" # jev-finish-v1", "timeout": 15 } ] }
+    ],
+    "PostToolUse": [
+      { "matcher": "Write|Edit|MultiEdit|NotebookEdit", "hooks": [ { "type": "command", "command": "node \"C:/Users/ADM/Claude-JEV/code/tools/jev-finish/hook.mjs\" # jev-finish-v1", "timeout": 15 } ] }
+    ],
+    "Stop": [
+      { "hooks": [ { "type": "command", "command": "node \"C:/Users/ADM/Claude-JEV/code/tools/jev-finish/hook.mjs\" # jev-finish-v1", "timeout": 15 } ] }
+    ]
+  }
+}

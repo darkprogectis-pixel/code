@@ -1,0 +1,17 @@
+{
+  "schema": "jev-finish/v1",
+  "max_iterations": 40,
+  "stall_limit": 6,
+  "stale_owner_s": 900,
+  "mutex_stale_ms": 10000,
+  "mutex_wait_ms": 8000,
+  "test_timeout_s": 1800,
+  "test_tail_lines": 40,
+  "allow_write_prefixes": [],
+  "forbidden_write_prefixes": [
+    "C:/Users/ADM/.claude/aot/",
+    "C:/Users/ADM/Documents/NinjaTrader 8/",
+    "C:/Users/ADM/Desktop/Handof TTW/HANDOFF/install-package/"
+  ],
+  "block_causes": ["EXTERNAL_DEPENDENCY", "HUMAN_DECISION_MISSING", "RUNTIME_DENIED", "JEV_REJECTED"]
+}
