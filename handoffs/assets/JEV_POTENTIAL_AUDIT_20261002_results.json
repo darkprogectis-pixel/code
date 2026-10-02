@@ -1,0 +1,1058 @@
+[
+ {
+  "id": "Q1_stopgate_outcome_shadow",
+  "request_id": "req_01a0fe87b1a77ac89823df98ce5e36d0",
+  "model": "jev-1.13.0",
+  "usage": {
+   "input_tokens": 984,
+   "output_tokens": 241
+  },
+  "http": 200,
+  "answers": {
+   "improves_autonomy": {
+    "type": "noul",
+    "noul": 0.47
+   },
+   "reduces_error": {
+    "type": "noul",
+    "noul": 0.52
+   },
+   "reduces_operator_dependency": {
+    "type": "noul",
+    "noul": 0.28
+   },
+   "reduces_claude_tokens": {
+    "type": "noul",
+    "noul": 0.22
+   },
+   "increases_observability": {
+    "type": "noul",
+    "noul": 0.92
+   },
+   "evidence_sufficient": {
+    "type": "noul",
+    "noul": 0.42
+   },
+   "reversible": {
+    "type": "noul",
+    "noul": 0.92
+   },
+   "testable_isolated": {
+    "type": "noul",
+    "noul": 0.89
+   },
+   "added_risk": {
+    "type": "score",
+    "score": 0.27,
+    "confidence": 0.73,
+    "legend": {
+     "0": "nenhum ou desprezível",
+     "1": "baixo",
+     "2": "moderado",
+     "3": "alto"
+    },
+    "probabilities": {
+     "0": 0.75,
+     "1": 0.23,
+     "2": 0.02,
+     "3": 0
+    }
+   },
+   "evidence_quality": {
+    "type": "score",
+    "score": 1.79,
+    "confidence": 0.67,
+    "legend": {
+     "0": "sem evidência ou só suposição",
+     "1": "evidência indireta ou parcial",
+     "2": "evidência direta mas incompleta",
+     "3": "evidência direta, medida e suficiente"
+    },
+    "probabilities": {
+     "0": 0,
+     "1": 0.27,
+     "2": 0.67,
+     "3": 0.06
+    }
+   },
+   "verdict": {
+    "type": "choice",
+    "choice": "run_experiment",
+    "confidence": 0.82,
+    "probabilities": {
+     "reject": 0.03,
+     "defer_more_evidence": 0.09,
+     "run_experiment": 0.88
+    }
+   }
+  }
+ },
+ {
+  "id": "Q2_confidence_margin_shadow",
+  "request_id": "req_01a0fe87b1aa7dbbb44c802613d14b0b",
+  "model": "jev-1.13.0",
+  "usage": {
+   "input_tokens": 1020,
+   "output_tokens": 241
+  },
+  "http": 200,
+  "answers": {
+   "improves_autonomy": {
+    "type": "noul",
+    "noul": 0.24
+   },
+   "reduces_error": {
+    "type": "noul",
+    "noul": 0.54
+   },
+   "reduces_operator_dependency": {
+    "type": "noul",
+    "noul": 0.17
+   },
+   "reduces_claude_tokens": {
+    "type": "noul",
+    "noul": 0.12
+   },
+   "increases_observability": {
+    "type": "noul",
+    "noul": 0.94
+   },
+   "evidence_sufficient": {
+    "type": "noul",
+    "noul": 0.64
+   },
+   "reversible": {
+    "type": "noul",
+    "noul": 0.94
+   },
+   "testable_isolated": {
+    "type": "noul",
+    "noul": 0.93
+   },
+   "added_risk": {
+    "type": "score",
+    "score": 0.12,
+    "confidence": 0.88,
+    "legend": {
+     "0": "nenhum ou desprezível",
+     "1": "baixo",
+     "2": "moderado",
+     "3": "alto"
+    },
+    "probabilities": {
+     "0": 0.89,
+     "1": 0.11,
+     "2": 0,
+     "3": 0
+    }
+   },
+   "evidence_quality": {
+    "type": "score",
+    "score": 2.25,
+    "confidence": 0.62,
+    "legend": {
+     "0": "sem evidência ou só suposição",
+     "1": "evidência indireta ou parcial",
+     "2": "evidência direta mas incompleta",
+     "3": "evidência direta, medida e suficiente"
+    },
+    "probabilities": {
+     "0": 0,
+     "1": 0.06,
+     "2": 0.62,
+     "3": 0.32
+    }
+   },
+   "verdict": {
+    "type": "choice",
+    "choice": "run_experiment",
+    "confidence": 0.98,
+    "probabilities": {
+     "run_experiment": 0.99,
+     "defer_more_evidence": 0.01,
+     "reject": 0
+    }
+   }
+  }
+ },
+ {
+  "id": "Q3_adhoc_answer_ledger",
+  "request_id": "req_01a0fe87b1b3767c84690bf047744e3a",
+  "model": "jev-1.13.0",
+  "usage": {
+   "input_tokens": 995,
+   "output_tokens": 241
+  },
+  "http": 200,
+  "answers": {
+   "improves_autonomy": {
+    "type": "noul",
+    "noul": 0.32
+   },
+   "reduces_operator_dependency": {
+    "type": "noul",
+    "noul": 0.26
+   },
+   "reduces_claude_tokens": {
+    "type": "noul",
+    "noul": 0.18
+   },
+   "increases_observability": {
+    "type": "noul",
+    "noul": 0.93
+   },
+   "reversible": {
+    "type": "noul",
+    "noul": 0.82
+   },
+   "testable_isolated": {
+    "type": "noul",
+    "noul": 0.83
+   },
+   "added_risk": {
+    "type": "score",
+    "score": 0.89,
+    "confidence": 0.68,
+    "legend": {
+     "0": "nenhum ou desprezível",
+     "1": "baixo",
+     "2": "moderado",
+     "3": "alto"
+    },
+    "probabilities": {
+     "0": 0.21,
+     "1": 0.68,
+     "2": 0.1,
+     "3": 0.01
+    }
+   },
+   "evidence_quality": {
+    "type": "score",
+    "score": 2.14,
+    "confidence": 0.74,
+    "legend": {
+     "0": "sem evidência ou só suposição",
+     "1": "evidência indireta ou parcial",
+     "2": "evidência direta mas incompleta",
+     "3": "evidência direta, medida e suficiente"
+    },
+    "probabilities": {
+     "0": 0,
+     "1": 0.06,
+     "2": 0.74,
+     "3": 0.2
+    }
+   },
+   "reduces_error": {
+    "type": "noul",
+    "noul": 0.69
+   },
+   "evidence_sufficient": {
+    "type": "noul",
+    "noul": 0.68
+   },
+   "verdict": {
+    "type": "choice",
+    "choice": "run_experiment",
+    "confidence": 0.93,
+    "probabilities": {
+     "reject": 0.01,
+     "run_experiment": 0.95,
+     "defer_more_evidence": 0.04
+    }
+   }
+  }
+ },
+ {
+  "id": "Q4_decompose_diff_final",
+  "request_id": "req_01a0fe87b1a679f39f26b4c0d074b314",
+  "model": "jev-1.13.0",
+  "usage": {
+   "input_tokens": 1018,
+   "output_tokens": 241
+  },
+  "http": 200,
+  "answers": {
+   "improves_autonomy": {
+    "type": "noul",
+    "noul": 0.5
+   },
+   "reduces_error": {
+    "type": "noul",
+    "noul": 0.73
+   },
+   "reduces_operator_dependency": {
+    "type": "noul",
+    "noul": 0.3
+   },
+   "reduces_claude_tokens": {
+    "type": "noul",
+    "noul": 0.54
+   },
+   "increases_observability": {
+    "type": "noul",
+    "noul": 0.85
+   },
+   "evidence_sufficient": {
+    "type": "noul",
+    "noul": 0.52
+   },
+   "reversible": {
+    "type": "noul",
+    "noul": 0.88
+   },
+   "testable_isolated": {
+    "type": "noul",
+    "noul": 0.85
+   },
+   "added_risk": {
+    "type": "score",
+    "score": 0.5,
+    "confidence": 0.5,
+    "legend": {
+     "0": "nenhum ou desprezível",
+     "1": "baixo",
+     "2": "moderado",
+     "3": "alto"
+    },
+    "probabilities": {
+     "0": 0.53,
+     "1": 0.45,
+     "2": 0.02,
+     "3": 0
+    }
+   },
+   "evidence_quality": {
+    "type": "score",
+    "score": 1.87,
+    "confidence": 0.67,
+    "legend": {
+     "0": "sem evidência ou só suposição",
+     "1": "evidência indireta ou parcial",
+     "2": "evidência direta mas incompleta",
+     "3": "evidência direta, medida e suficiente"
+    },
+    "probabilities": {
+     "0": 0,
+     "1": 0.22,
+     "2": 0.68,
+     "3": 0.1
+    }
+   },
+   "verdict": {
+    "type": "choice",
+    "choice": "run_experiment",
+    "confidence": 0.97,
+    "probabilities": {
+     "defer_more_evidence": 0.01,
+     "run_experiment": 0.99,
+     "reject": 0
+    }
+   }
+  }
+ },
+ {
+  "id": "Q5_pin_model",
+  "request_id": "req_01a0fe87b1857c5da479fdf2941d0a4b",
+  "model": "jev-1.13.0",
+  "usage": {
+   "input_tokens": 931,
+   "output_tokens": 241
+  },
+  "http": 200,
+  "answers": {
+   "improves_autonomy": {
+    "type": "noul",
+    "noul": 0.39
+   },
+   "reduces_error": {
+    "type": "noul",
+    "noul": 0.74
+   },
+   "reduces_operator_dependency": {
+    "type": "noul",
+    "noul": 0.25
+   },
+   "reduces_claude_tokens": {
+    "type": "noul",
+    "noul": 0.19
+   },
+   "increases_observability": {
+    "type": "noul",
+    "noul": 0.3
+   },
+   "evidence_sufficient": {
+    "type": "noul",
+    "noul": 0.66
+   },
+   "reversible": {
+    "type": "noul",
+    "noul": 0.94
+   },
+   "testable_isolated": {
+    "type": "noul",
+    "noul": 0.83
+   },
+   "added_risk": {
+    "type": "score",
+    "score": 0.57,
+    "confidence": 0.53,
+    "legend": {
+     "0": "nenhum ou desprezível",
+     "1": "baixo",
+     "2": "moderado",
+     "3": "alto"
+    },
+    "probabilities": {
+     "0": 0.45,
+     "1": 0.54,
+     "2": 0.01,
+     "3": 0
+    }
+   },
+   "evidence_quality": {
+    "type": "score",
+    "score": 1.75,
+    "confidence": 0.72,
+    "legend": {
+     "0": "sem evidência ou só suposição",
+     "1": "evidência indireta ou parcial",
+     "2": "evidência direta mas incompleta",
+     "3": "evidência direta, medida e suficiente"
+    },
+    "probabilities": {
+     "0": 0,
+     "1": 0.26,
+     "2": 0.72,
+     "3": 0.02
+    }
+   },
+   "verdict": {
+    "type": "choice",
+    "choice": "run_experiment",
+    "confidence": 0.95,
+    "probabilities": {
+     "defer_more_evidence": 0.03,
+     "reject": 0,
+     "run_experiment": 0.97
+    }
+   }
+  }
+ },
+ {
+  "id": "Q6_labeled_calibration_set",
+  "request_id": "req_01a0fe87b1ae7d839bce89829f17f6d5",
+  "model": "jev-1.13.0",
+  "usage": {
+   "input_tokens": 981,
+   "output_tokens": 241
+  },
+  "http": 200,
+  "answers": {
+   "improves_autonomy": {
+    "type": "noul",
+    "noul": 0.55
+   },
+   "reduces_error": {
+    "type": "noul",
+    "noul": 0.71
+   },
+   "reduces_operator_dependency": {
+    "type": "noul",
+    "noul": 0.3
+   },
+   "reduces_claude_tokens": {
+    "type": "noul",
+    "noul": 0.21
+   },
+   "increases_observability": {
+    "type": "noul",
+    "noul": 0.84
+   },
+   "evidence_sufficient": {
+    "type": "noul",
+    "noul": 0.55
+   },
+   "reversible": {
+    "type": "noul",
+    "noul": 0.87
+   },
+   "testable_isolated": {
+    "type": "noul",
+    "noul": 0.89
+   },
+   "added_risk": {
+    "type": "score",
+    "score": 0.41,
+    "confidence": 0.59,
+    "legend": {
+     "0": "nenhum ou desprezível",
+     "1": "baixo",
+     "2": "moderado",
+     "3": "alto"
+    },
+    "probabilities": {
+     "0": 0.61,
+     "1": 0.38,
+     "2": 0.01,
+     "3": 0
+    }
+   },
+   "evidence_quality": {
+    "type": "score",
+    "score": 1.64,
+    "confidence": 0.61,
+    "legend": {
+     "0": "sem evidência ou só suposição",
+     "1": "evidência indireta ou parcial",
+     "2": "evidência direta mas incompleta",
+     "3": "evidência direta, medida e suficiente"
+    },
+    "probabilities": {
+     "0": 0.01,
+     "1": 0.36,
+     "2": 0.61,
+     "3": 0.02
+    }
+   },
+   "verdict": {
+    "type": "choice",
+    "choice": "run_experiment",
+    "confidence": 0.74,
+    "probabilities": {
+     "reject": 0,
+     "run_experiment": 0.83,
+     "defer_more_evidence": 0.17
+    }
+   }
+  }
+ },
+ {
+  "id": "Q7_router_pass2_low_margin",
+  "request_id": "req_01a0fe87b1bb7192b8fb2f478b6a4e11",
+  "model": "jev-1.13.0",
+  "usage": {
+   "input_tokens": 955,
+   "output_tokens": 241
+  },
+  "http": 200,
+  "answers": {
+   "reduces_error": {
+    "type": "noul",
+    "noul": 0.62
+   },
+   "reduces_operator_dependency": {
+    "type": "noul",
+    "noul": 0.2
+   },
+   "reduces_claude_tokens": {
+    "type": "noul",
+    "noul": 0.56
+   },
+   "increases_observability": {
+    "type": "noul",
+    "noul": 0.78
+   },
+   "evidence_sufficient": {
+    "type": "noul",
+    "noul": 0.51
+   },
+   "added_risk": {
+    "type": "score",
+    "score": 0.35,
+    "confidence": 0.65,
+    "legend": {
+     "0": "nenhum ou desprezível",
+     "1": "baixo",
+     "2": "moderado",
+     "3": "alto"
+    },
+    "probabilities": {
+     "0": 0.66,
+     "1": 0.34,
+     "2": 0,
+     "3": 0
+    }
+   },
+   "improves_autonomy": {
+    "type": "noul",
+    "noul": 0.36
+   },
+   "reversible": {
+    "type": "noul",
+    "noul": 0.9
+   },
+   "testable_isolated": {
+    "type": "noul",
+    "noul": 0.87
+   },
+   "evidence_quality": {
+    "type": "score",
+    "score": 1.83,
+    "confidence": 0.73,
+    "legend": {
+     "0": "sem evidência ou só suposição",
+     "1": "evidência indireta ou parcial",
+     "2": "evidência direta mas incompleta",
+     "3": "evidência direta, medida e suficiente"
+    },
+    "probabilities": {
+     "0": 0,
+     "1": 0.22,
+     "2": 0.73,
+     "3": 0.05
+    }
+   },
+   "verdict": {
+    "type": "choice",
+    "choice": "run_experiment",
+    "confidence": 0.94,
+    "probabilities": {
+     "run_experiment": 0.96,
+     "defer_more_evidence": 0.04,
+     "reject": 0
+    }
+   }
+  }
+ },
+ {
+  "id": "A1_confidence_tiered_routing",
+  "request_id": "req_01a0fe87b1ab7c929055be454b570118",
+  "model": "jev-1.13.0",
+  "usage": {
+   "input_tokens": 933,
+   "output_tokens": 241
+  },
+  "http": 200,
+  "answers": {
+   "improves_autonomy": {
+    "type": "noul",
+    "noul": 0.7
+   },
+   "reduces_error": {
+    "type": "noul",
+    "noul": 0.77
+   },
+   "reduces_operator_dependency": {
+    "type": "noul",
+    "noul": 0.42
+   },
+   "reduces_claude_tokens": {
+    "type": "noul",
+    "noul": 0.36
+   },
+   "increases_observability": {
+    "type": "noul",
+    "noul": 0.68
+   },
+   "evidence_sufficient": {
+    "type": "noul",
+    "noul": 0.53
+   },
+   "reversible": {
+    "type": "noul",
+    "noul": 0.77
+   },
+   "testable_isolated": {
+    "type": "noul",
+    "noul": 0.77
+   },
+   "added_risk": {
+    "type": "score",
+    "score": 1.06,
+    "confidence": 0.64,
+    "legend": {
+     "0": "nenhum ou desprezível",
+     "1": "baixo",
+     "2": "moderado",
+     "3": "alto"
+    },
+    "probabilities": {
+     "0": 0.15,
+     "1": 0.64,
+     "2": 0.2,
+     "3": 0.01
+    }
+   },
+   "evidence_quality": {
+    "type": "score",
+    "score": 1.53,
+    "confidence": 0.51,
+    "legend": {
+     "0": "sem evidência ou só suposição",
+     "1": "evidência indireta ou parcial",
+     "2": "evidência direta mas incompleta",
+     "3": "evidência direta, medida e suficiente"
+    },
+    "probabilities": {
+     "0": 0.03,
+     "1": 0.42,
+     "2": 0.54,
+     "3": 0.01
+    }
+   },
+   "verdict": {
+    "type": "choice",
+    "choice": "run_experiment",
+    "confidence": 0.85,
+    "probabilities": {
+     "run_experiment": 0.9,
+     "reject": 0,
+     "defer_more_evidence": 0.1
+    }
+   }
+  }
+ },
+ {
+  "id": "A2_decision_layer_isolated_config",
+  "request_id": "req_01a0fe87b1b27453b690bc47e254ed34",
+  "model": "jev-1.13.0",
+  "usage": {
+   "input_tokens": 998,
+   "output_tokens": 241
+  },
+  "http": 200,
+  "answers": {
+   "reduces_operator_dependency": {
+    "type": "noul",
+    "noul": 0.19
+   },
+   "reduces_claude_tokens": {
+    "type": "noul",
+    "noul": 0.3
+   },
+   "reversible": {
+    "type": "noul",
+    "noul": 0.86
+   },
+   "added_risk": {
+    "type": "score",
+    "score": 0.74,
+    "confidence": 0.65,
+    "legend": {
+     "0": "nenhum ou desprezível",
+     "1": "baixo",
+     "2": "moderado",
+     "3": "alto"
+    },
+    "probabilities": {
+     "0": 0.3,
+     "1": 0.66,
+     "2": 0.04,
+     "3": 0
+    }
+   },
+   "evidence_quality": {
+    "type": "score",
+    "score": 2.08,
+    "confidence": 0.72,
+    "legend": {
+     "0": "sem evidência ou só suposição",
+     "1": "evidência indireta ou parcial",
+     "2": "evidência direta mas incompleta",
+     "3": "evidência direta, medida e suficiente"
+    },
+    "probabilities": {
+     "0": 0,
+     "1": 0.1,
+     "2": 0.72,
+     "3": 0.18
+    }
+   },
+   "reduces_error": {
+    "type": "noul",
+    "noul": 0.7
+   },
+   "increases_observability": {
+    "type": "noul",
+    "noul": 0.78
+   },
+   "evidence_sufficient": {
+    "type": "noul",
+    "noul": 0.4
+   },
+   "testable_isolated": {
+    "type": "noul",
+    "noul": 0.83
+   },
+   "verdict": {
+    "type": "choice",
+    "choice": "run_experiment",
+    "confidence": 0.97,
+    "probabilities": {
+     "reject": 0,
+     "run_experiment": 0.98,
+     "defer_more_evidence": 0.02
+    }
+   },
+   "improves_autonomy": {
+    "type": "noul",
+    "noul": 0.21
+   }
+  }
+ },
+ {
+  "id": "A3_handoff_citation_contradiction_check",
+  "request_id": "req_01a0fe87b1a77f91967d4c4bd30edd12",
+  "model": "jev-1.13.0",
+  "usage": {
+   "input_tokens": 956,
+   "output_tokens": 241
+  },
+  "http": 200,
+  "answers": {
+   "improves_autonomy": {
+    "type": "noul",
+    "noul": 0.5
+   },
+   "reduces_error": {
+    "type": "noul",
+    "noul": 0.74
+   },
+   "reduces_operator_dependency": {
+    "type": "noul",
+    "noul": 0.5
+   },
+   "reduces_claude_tokens": {
+    "type": "noul",
+    "noul": 0.25
+   },
+   "increases_observability": {
+    "type": "noul",
+    "noul": 0.75
+   },
+   "evidence_sufficient": {
+    "type": "noul",
+    "noul": 0.47
+   },
+   "reversible": {
+    "type": "noul",
+    "noul": 0.87
+   },
+   "testable_isolated": {
+    "type": "noul",
+    "noul": 0.84
+   },
+   "added_risk": {
+    "type": "score",
+    "score": 0.49,
+    "confidence": 0.51,
+    "legend": {
+     "0": "nenhum ou desprezível",
+     "1": "baixo",
+     "2": "moderado",
+     "3": "alto"
+    },
+    "probabilities": {
+     "0": 0.53,
+     "1": 0.46,
+     "2": 0.01,
+     "3": 0
+    }
+   },
+   "evidence_quality": {
+    "type": "score",
+    "score": 1.24,
+    "confidence": 0.74,
+    "legend": {
+     "0": "sem evidência ou só suposição",
+     "1": "evidência indireta ou parcial",
+     "2": "evidência direta mas incompleta",
+     "3": "evidência direta, medida e suficiente"
+    },
+    "probabilities": {
+     "0": 0.01,
+     "1": 0.74,
+     "2": 0.25,
+     "3": 0
+    }
+   },
+   "verdict": {
+    "type": "choice",
+    "choice": "run_experiment",
+    "confidence": 0.89,
+    "probabilities": {
+     "reject": 0.01,
+     "run_experiment": 0.92,
+     "defer_more_evidence": 0.07
+    }
+   }
+  }
+ },
+ {
+  "id": "A4_self_consistency_high_stakes",
+  "request_id": "req_01a0fe87b1a373d7b04119237f37d84e",
+  "model": "jev-1.13.0",
+  "usage": {
+   "input_tokens": 939,
+   "output_tokens": 241
+  },
+  "http": 200,
+  "answers": {
+   "improves_autonomy": {
+    "type": "noul",
+    "noul": 0.38
+   },
+   "reduces_error": {
+    "type": "noul",
+    "noul": 0.8
+   },
+   "reduces_operator_dependency": {
+    "type": "noul",
+    "noul": 0.23
+   },
+   "reduces_claude_tokens": {
+    "type": "noul",
+    "noul": 0.16
+   },
+   "increases_observability": {
+    "type": "noul",
+    "noul": 0.71
+   },
+   "evidence_sufficient": {
+    "type": "noul",
+    "noul": 0.43
+   },
+   "reversible": {
+    "type": "noul",
+    "noul": 0.74
+   },
+   "testable_isolated": {
+    "type": "noul",
+    "noul": 0.74
+   },
+   "added_risk": {
+    "type": "score",
+    "score": 1.03,
+    "confidence": 0.53,
+    "legend": {
+     "0": "nenhum ou desprezível",
+     "1": "baixo",
+     "2": "moderado",
+     "3": "alto"
+    },
+    "probabilities": {
+     "0": 0.22,
+     "1": 0.57,
+     "2": 0.17,
+     "3": 0.04
+    }
+   },
+   "evidence_quality": {
+    "type": "score",
+    "score": 1.31,
+    "confidence": 0.67,
+    "legend": {
+     "0": "sem evidência ou só suposição",
+     "1": "evidência indireta ou parcial",
+     "2": "evidência direta mas incompleta",
+     "3": "evidência direta, medida e suficiente"
+    },
+    "probabilities": {
+     "0": 0.01,
+     "1": 0.67,
+     "2": 0.32,
+     "3": 0
+    }
+   },
+   "verdict": {
+    "type": "choice",
+    "choice": "run_experiment",
+    "confidence": 0.92,
+    "probabilities": {
+     "run_experiment": 0.95,
+     "defer_more_evidence": 0.03,
+     "reject": 0.02
+    }
+   }
+  }
+ },
+ {
+  "id": "A5_official_sdk_retry_visibility",
+  "request_id": "req_01a0fe87b1b57f1d8daa4a63de969246",
+  "model": "jev-1.13.0",
+  "usage": {
+   "input_tokens": 938,
+   "output_tokens": 241
+  },
+  "http": 200,
+  "answers": {
+   "improves_autonomy": {
+    "type": "noul",
+    "noul": 0.45
+   },
+   "reduces_error": {
+    "type": "noul",
+    "noul": 0.66
+   },
+   "reduces_operator_dependency": {
+    "type": "noul",
+    "noul": 0.23
+   },
+   "reduces_claude_tokens": {
+    "type": "noul",
+    "noul": 0.23
+   },
+   "increases_observability": {
+    "type": "noul",
+    "noul": 0.65
+   },
+   "evidence_sufficient": {
+    "type": "noul",
+    "noul": 0.61
+   },
+   "reversible": {
+    "type": "noul",
+    "noul": 0.78
+   },
+   "testable_isolated": {
+    "type": "noul",
+    "noul": 0.56
+   },
+   "added_risk": {
+    "type": "score",
+    "score": 1.58,
+    "confidence": 0.39,
+    "legend": {
+     "0": "nenhum ou desprezível",
+     "1": "baixo",
+     "2": "moderado",
+     "3": "alto"
+    },
+    "probabilities": {
+     "0": 0.08,
+     "1": 0.35,
+     "2": 0.47,
+     "3": 0.1
+    }
+   },
+   "evidence_quality": {
+    "type": "score",
+    "score": 1.96,
+    "confidence": 0.86,
+    "legend": {
+     "0": "sem evidência ou só suposição",
+     "1": "evidência indireta ou parcial",
+     "2": "evidência direta mas incompleta",
+     "3": "evidência direta, medida e suficiente"
+    },
+    "probabilities": {
+     "0": 0,
+     "1": 0.09,
+     "2": 0.86,
+     "3": 0.05
+    }
+   },
+   "verdict": {
+    "type": "choice",
+    "choice": "run_experiment",
+    "confidence": 0.82,
+    "probabilities": {
+     "reject": 0.01,
+     "defer_more_evidence": 0.11,
+     "run_experiment": 0.88
+    }
+   }
+  }
+ }
+]
