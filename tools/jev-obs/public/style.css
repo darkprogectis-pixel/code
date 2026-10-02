@@ -1,0 +1,16 @@
+:root{--bg:#0f1218;--panel:#171c25;--ink:#e6e9ef;--mut:#8a94a6;--line:#2a3140;--a:#5b9cf5;--b:#e8a33d;--c:#53c28b;--w:#e5604f;--watch:#e8a33d;--info:#5b9cf5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,Segoe UI,sans-serif}
+header{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 16px;z-index:2}
+h1{font-size:17px;margin:0 0 8px}.tag{font-size:11px;color:var(--mut);border:1px solid var(--line);border-radius:4px;padding:1px 6px;margin-left:6px}
+form{display:flex;flex-wrap:wrap;gap:6px;align-items:center}input,select,button{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:4px 6px}
+button{cursor:pointer}#status{color:var(--mut);font-size:12px}
+nav{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}nav a{padding:4px 9px;border-radius:4px;color:var(--mut);text-decoration:none;border:1px solid transparent}nav a.on{color:var(--ink);border-color:var(--line);background:var(--panel)}
+main{padding:16px;max-width:1400px;margin:0 auto}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px;margin-bottom:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px}.card b{display:block;font-size:20px;font-variant-numeric:tabular-nums}.card span{color:var(--mut);font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));gap:14px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px;overflow:auto}.panel h3{margin:0 0 8px;font-size:13px;color:var(--mut);font-weight:600}
+table{border-collapse:collapse;width:100%;font-size:12px;font-variant-numeric:tabular-nums}th,td{border-bottom:1px solid var(--line);padding:3px 6px;text-align:left;white-space:nowrap}th{color:var(--mut);font-weight:600}
+svg{width:100%;height:auto;display:block}svg text{fill:var(--mut);font-size:10px}
+.zero{color:var(--mut);font-style:italic}.lv{font-weight:700;padding:1px 6px;border-radius:3px;font-size:11px}.WARNING{background:var(--w);color:#fff}.WATCH{background:var(--watch);color:#111}.INFO{background:var(--info);color:#fff}
+@media (max-width:600px){.grid{grid-template-columns:1fr}main{padding:10px 16px}}

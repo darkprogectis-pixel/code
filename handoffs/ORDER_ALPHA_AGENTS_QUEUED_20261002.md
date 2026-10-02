@@ -1,0 +1,54 @@
+# ORDEM DO OPERADOR NA FILA (recebida 2026-10-02 ~22:35Z, sessão 4ac35a75, durante a Phase 1 de observabilidade)
+NOVA FASE — 5 API SPECIALIST AGENTS + 1 FUSION AGENT. Executar DEPOIS do COMPLETE da Phase 1 (loop jf-20261002221926-59e158). Resumo fiel (texto integral no transcript 4ac35a75, última mensagem do operador):
+- 6 agentes: AGENT_QUANT, AGENT_GAMMA, AGENT_BOT, AGENT_Q e AGENT_DATA (um por API: α Quant, α Gamma, α Bot, α Q, α Data), mais AGENT_FUSION (BUY/SELL/NO_SIGNAL com evidência, confidence e explicação estruturada).
+- Restrições:
+  - projeto existente; não alterar live; não enviar ordens; não acoplar ao executor;
+  - não inventar semântica, endpoints ou significado financeiro;
+  - não mexer em contas nem em AOT/INVICTUS; não reduzir proteções;
+  - sem dependência externa sem autorização; sem Agent Teams;
+  - subagentes reais só em fase própria, com medição de custo/contexto.
+- Fluxo: AUDITORIA → PROPOSTA → JEV DIFF → STAGING → TESTES → JEV FINAL.
+- FASE 0 auditoria por fonte: processo/serviço, host/porta, endpoints, métodos, schemas req/resp, campos, tipo/unidade, timestamps, frequência, freshness/stale, erros, auth, histórico, campos usados/não usados pelo frontend, semântica conhecida/não documentada, se algum campo já é BUY/SELL, raw/indicador/classificação/decisão.
+  - Tabela: API, ENDPOINT, FIELD, TYPE, UNIT, UPDATE_RATE, MEANING, VALID_RANGE, STALE_AFTER, CURRENTLY_USED, SIGNAL_RELEVANCE, EVIDENCE.
+  - Campo desconhecido = UNKNOWN.
+- FASE 1 skills (estrutura oficial do projeto): skill-alpha-quant, skill-alpha-gamma, skill-alpha-bot, skill-alpha-q, skill-alpha-data. Cada uma com 18 itens:
+  - identidade, finalidade, endpoints, schemas, dicionário, unidade/escala, frequência, freshness;
+  - missing/stale/error, significado documentado, relações entre campos, padrões históricos;
+  - sinais extraíveis e não inferíveis, exemplos sanitizados;
+  - regras de evidência e de confidence, contrato de output.
+- FASE 2 envelope `alpha-specialist/v1`:
+  - campos: schema, source, timestamp, source_timestamp, age_ms, fresh, health OK|PARTIAL|STALE|ERROR, market, timeframe, direction BUY|SELL|NEUTRAL|UNKNOWN, strength 0..1, confidence 0..1, evidence[{field,value,meaning,effect BULLISH|BEARISH|NEUTRAL}], contradictions, missing_fields, warnings, raw_ref{endpoint,snapshot_id};
+  - regras: confidence nunca fabricada (fórmula explícita); UNKNOWN sem evidência; STALE nunca vira sinal; determinístico.
+- FASE 3 cada especialista vê SÓ a própria API:
+  - não consulta outras APIs, não decide ordem, não altera config, não escreve no runtime;
+  - BOT respeita PARTIAL; Q respeita CLOSED/offline (sem falso BUY/SELL); DATA separa fato de inferência.
+- FASE 4 Fusion `alpha-fusion/v1`:
+  - campos: schema, timestamp, market, signal BUY|SELL|NO_SIGNAL, confidence, agreement, sources{quant,gamma,bot,q,data}, bullish/bearish/neutral/ignored_sources, contradictions, reasoning_summary, freshness_ok, jev{request_id, probabilities, confidence};
+  - sem votação simples 3×2; pesa qualidade, freshness, confidence, (in)dependência, contradições, ausência, regime e redundância;
+  - número de campos não dá peso;
+  - consome envelopes, não payload bruto.
+- FASE 5 JEV decomposto: Q1–Q5 evidência por fonte BUY/SELL/NEUTRAL; Q6 frescor; Q7 contradição material; Q8 independência; Q9 evidência suficiente; Q10 direção BUY/SELL/INDETERMINATE; Q11 qualidade; Q12 risco de falso consenso.
+  - Registrar distribuição, pwinner, confidence, top1, top2, margin, request_id.
+  - SHADOW; sem execução.
+- FASE 6 pipeline realtime:
+  - API → snapshot imutável → skill → agente → envelope → Fusion → JEV → alpha-fusion/v1 → painel;
+  - por ciclo: cycle_id, snapshot_id, timestamps por estágio, latência por agente e total;
+  - timeout/fallback OK/PARTIAL/STALE/ERROR; um agente não trava os outros.
+- FASE 7 painel: aba "ALPHA SIGNAL INTELLIGENCE" no Observability Control Plane.
+  - 5 linhas (direção, strength, confidence, age) → FUSION (sinal, confidence, agreement, probabilidades JEV);
+  - evidências, campos causais, contradições, ignoradas, stale/error, timeline, mudança e duração de sinal, latência, JEV confidence, margem top1−top2;
+  - histórico: cycle_id, tempo, 5 outputs, fusion, JEV, outcome posterior.
+- FASE 8 feedback: SIGNAL → OUTCOME → LABEL → CALIBRATION, sem otimização automática.
+  - Preço em t, +1m, +5m, +15m, +30m e +60m quando existir; sem preço confiável, não inventar outcome.
+  - Métricas futuras: accuracy BUY/SELL, NO_SIGNAL quality, precision/recall, false BUY/SELL, calibração, por agente/combinação/regime.
+- FASE 9: 100 % SHADOW (lê, interpreta, registra, mostra; nunca ordem/robô/posição/risco/INVICTUS/AOT).
+- FASE 10 testes:
+  - cada API; payload válido, incompleto, stale, offline, erro; mudança rápida; campos contraditórios;
+  - 5 OK, 1 offline, 2 offline, todos neutros, consenso, conflito 3×2, fonte forte × 4 fracas, stale não vota;
+  - Fusion reproduzível; JEV failure; timeout; painel; histórico; nenhuma ordem emitida.
+- FASE 11 observabilidade:
+  - por agente: calls, cycles, latência p50/p95, tokens, cache_read, output, JEV requests, errors, timeouts, contagem de sinais BUY/SELL/NEUTRAL, distribuição de confidence, falhas de freshness, contradições;
+  - Fusion: BUY/SELL/NO_SIGNAL, distribuições de agreement e confidence, flips, fontes usadas/ignoradas.
+- FASE 12, antes de implementar, entregar auditoria factual: API_MAP, FIELD_DICTIONARY, CURRENT_ENDPOINTS, CURRENT_SCHEMAS, UNKNOWN_FIELDS, PROPOSED_SKILLS, PROPOSED_AGENT_CONTRACT, PROPOSED_FUSION_CONTRACT, DATA_FLOW, FILES_TO_CREATE, FILES_TO_MODIFY, RISKS, TEST_PLAN. Depois JEV DIFF; implementar só se o JEV permitir.
+- DoD (13): APIs mapeadas, skill por API, envelopes, fusion, JEV registrado, pipeline realtime SHADOW, painel 6 agentes, histórico persistido, feedback preparado, testes PASS, zero ordens, JEV FINAL, handoff.
+- Executar autonomamente até COMPLETE_AND_VERIFIED ou BLOCKED_EXTERNAL real.

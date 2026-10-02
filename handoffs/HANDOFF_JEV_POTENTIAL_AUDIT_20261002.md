@@ -449,3 +449,62 @@ Escopo medido: config isolada `C:\Users\ADM\.claude-darkprogectis` (Claude Code 
   - (a) bloco de custo zero (`/usage`, `/insights`, B1);
   - (b) shadow Q2 + Q3 + Q1;
   - (c) commit dos handoffs e assets das sessões 1131cf45 e 4ac35a75 (`HANDOFF_JEV_USAGE_AUDIT_20261002.md`, `HANDOFF_JEV_POTENTIAL_AUDIT_20261002.md`, `assets/JEV_POTENTIAL_AUDIT_20261002_*.json`, `assets/JEV_WEB_BENCHMARK_NOTES_20261002.md`).
+
+## OBSERVABILITY CONTROL PLANE — PHASE 1 (ordem do operador 2026-10-02; sessão 4ac35a75) — COMPLETE (ver seção final)
+- Loop jev-finish: `jf-20261002221926-59e158` (testes exigidos: obs-unit, rotation-suite, jev-finish-suite, hook-bench).
+- Proposta exata: `handoffs/PROPOSAL_JEV_OBS_PHASE1_20261002.md` (sha16 73502e37c548adef).
+- JEV DIFF: `req_01a0feb387497992916765b621057bdd`, jev-1.13.0, **A (SAFE_TO_APPLY)**, conf 0.32, probabilidades A 0.40 · F 0.25 · G 0.19 · E 0.08 · D 0.04 · C 0.02 · B 0.01 · H 0.01.
+  - Pela regra vigente (A ⇒ aplicar) a execução segue.
+  - Margem baixa A−F = 0.15: os riscos F (incompleta) e G (cobertura de testes) são tratados com testes extras e com a reconciliação exata.
+- Arquitetura: tudo em `tools/jev-obs/` + `test/jev-obs/`. Servidor 127.0.0.1:3593. Derivados em `<CLAUDE_CONFIG_DIR>/jev-obs/`. Única edição em arquivo existente: 1 linha de probe (import dinâmico try/catch) em cada hook.
+- Próximo passo exato: implementar `tools/jev-obs/` conforme a proposta. Se rotacionar, a sucessora continua o loop (stage atual no `finish.mjs status`).
+- Progresso (≈209k, PREPARE):
+  - Escritos: `tools/jev-obs/sources.mjs`, `tools/jev-obs/hook-probe.mjs` e `tools/jev-obs/aggregate.mjs` (pure: jevUsage, jevDecisions, decisionQuality, parseTranscript, claudeAgg, hookAgg, rotationAgg, anomalies, loadAll, summarize).
+  - Faltam: server.mjs, public/, shadow-ledger.mjs, baseline.mjs, bench-hooks.mjs, README, testes, a linha de probe nos 2 hooks, testes pelo CLI, recheck, JEV FINAL e complete.
+- Nota de método (reconciliação): o benchmark 1131cf45 somou usage por **entrada** do transcript (o mesmo `message.id` se repete por bloco de conteúdo). O painel mostra as duas contagens: `usage_legacy_per_entry` (reproduz o baseline) e `usage_dedup_by_message` (a correta).
+- Progresso (≈217k, WARNING):
+  - Escritos também `tools/jev-obs/server.mjs` (127.0.0.1:3593, Host check, GET only, redator, cache por fingerprint) e `tools/jev-obs/public/{index.html,app.js,style.css}` (13 tabs).
+  - Smoke do aggregate reproduziu o baseline **exato**: 6030 entradas, cache_read 841.657.729, output 7.262.397, Bash:read 71,3 %, Read 14,3 %, 29 > 20k, 0 agentes, 100 % Opus.
+  - Dedupe por message.id: 2712 respostas, cache_read 376.576.004, output 2.762.357.
+  - Ainda NÃO feitos, nesta ordem:
+    1. smoke HTTP do server;
+    2. `shadow-ledger.mjs`;
+    3. `baseline.mjs` (reconcile com cutoff 2026-10-02T21:06:43Z para JEV e 21:56:51Z para Claude);
+    4. `bench-hooks.mjs`;
+    5. linha de probe nos 2 hooks: `try { await import('../jev-obs/hook-probe.mjs'); } catch {}` após os imports;
+    6. `test/jev-obs/*.test.mjs`;
+    7. `finish.mjs test --name obs-unit|rotation-suite|jev-finish-suite|hook-bench`;
+    8. recheck, JEV FINAL, handoff e complete.
+- Progresso (≈226k):
+  - Server smoke PASS: /api/health 200, /api/summary 200 (560 ms), / 200, Host estranho 403, varredura de segredos negativa.
+  - Escritos também `tools/jev-obs/shadow-ledger.mjs` e `tools/jev-obs/baseline.mjs` (este ainda não executado).
+  - Próximo passo exato:
+    1. `node tools/jev-obs/baseline.mjs` (reconcile; esperado FAIL 0);
+    2. `node tools/jev-obs/shadow-ledger.mjs`;
+    3. bench-hooks + linha de probe nos 2 hooks;
+    4. testes `test/jev-obs/`;
+    5. `finish.mjs test` ×4, recheck, JEV FINAL e complete.
+- **ORDEM NOVA NA FILA:** `handoffs/ORDER_ALPHA_AGENTS_QUEUED_20261002.md` (5 especialistas α + Fusion). Começar pela FASE 0 (auditoria factual) só depois do COMPLETE da Phase 1.
+- Progresso (sessão sucessora c205d615, rotação #14):
+  - Feitos: reconcile do `baseline.mjs` (15 PASS, 0 FAIL); `cache.mjs` (memo de parse + `derived/summary.json`); `bench-hooks.mjs`; `README.md`; `test/jev-obs/obs.test.mjs` (18 testes).
+  - Linha de probe nos 2 hooks: `tools/jev-finish/hook.mjs:12`, e `tools/jev-rotation/hook.mjs:372` dentro de `if (isEntry)`.
+  - O probe fica silencioso em `JEV_*_TEST=1` sem `JEV_OBS_DIR`.
+  - Shadow ledger importou 5 respostas.
+  - Server ao vivo: 127.0.0.1:3593, /api/summary em 0,66 s.
+
+## OBSERVABILITY CONTROL PLANE — PHASE 1 — COMPLETE (loop `jf-20261002221926-59e158`, aceito pelo CLI 2026-10-02; antes: RECHECK PASS)
+- Testes registrados e executados pelo CLI; `finish.mjs recheck` = **RECHECK_PASS 4/4**:
+  - obs-unit: 18/18;
+  - rotation-suite: PASS;
+  - jev-finish-suite: PASS;
+  - hook-bench (n=30): PASS, decision_neutral=true, 0 mismatches em 4 cenários × 30 pares.
+- Custo do probe: p95 in-process ≈ 3,7 ms; delta p50 de wall 4–6 ms. Fica abaixo do limiar de 10 ms, então o probe fica **ON**. Asset: `handoffs/assets/JEV_OBS_PHASE1_hookbench_20261002.json`.
+- JEV FINAL: `req_01a0fec27746743f96c137a186aded3d`, jev-1.13.0, **A** (p(A)=0.96). Evidência: `handoffs/RESULT_JEV_OBS_PHASE1_20261002.md` (sha16 3fc8dd0cb2ac06dc), com SHAs de todos os arquivos.
+- Comando de uso: `node tools/jev-obs/server.mjs` abre http://127.0.0.1:3593/ (Ctrl+C para parar). Rollback do probe: `JEV_OBS_PROBE=0`, ou remover a linha em cada hook.
+- Limitações:
+  - event=null nos runs "allow" silenciosos;
+  - retries JEV = NOT_RECORDED_BY_CLIENT;
+  - 0 labels, logo calibration = NO_LABELS_YET;
+  - UI não verificada visualmente em navegador.
+- Commit: NÃO feito (exige ordem). `tools/jev-rotation/hook.mjs` tem mudanças pré-existentes do operador; a linha do probe deve ir em commit separado.
+- Próximo passo exato: `finish.mjs complete`. Depois, a ordem na fila `handoffs/ORDER_ALPHA_AGENTS_QUEUED_20261002.md`, FASE 0, que exige a leitura dessa ordem.

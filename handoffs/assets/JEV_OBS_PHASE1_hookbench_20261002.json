@@ -1,0 +1,163 @@
+{
+  "at": "2026-10-02T22:35:21.649Z",
+  "node": "v26.4.0",
+  "n": 30,
+  "decision_neutral": true,
+  "probe_recorded_every_run": true,
+  "probe_inprocess": {
+    "import_ms": 2.63,
+    "exit_handler_ms": {
+      "p50": 0.32,
+      "p95": 0.63,
+      "max": 14.36
+    },
+    "records_written": 200,
+    "total_p95_ms": 3.26
+  },
+  "wall_delta_p95_ms_noisy": 12.3,
+  "wall_delta_p50_ms": 17.3,
+  "threshold_ms": 10,
+  "probe_default": "ON",
+  "rows": [
+    {
+      "scenario": "rotation:PreToolUse:below",
+      "n": 30,
+      "mismatches": 0,
+      "probe_records": 30,
+      "wall_ms_without_probe": {
+        "p50": 87.8,
+        "p95": 119.3,
+        "mean": 90
+      },
+      "wall_ms_with_probe": {
+        "p50": 90.3,
+        "p95": 127.4,
+        "mean": 95.4
+      },
+      "overhead_ms": {
+        "p50": 2.5,
+        "p95": 8.1,
+        "mean": 5.4
+      },
+      "sample": {
+        "probe": {
+          "at": "2026-10-02T22:34:52.033Z",
+          "hook": "jev-rotation",
+          "event": null,
+          "duration_ms": 40.1,
+          "exit_code": 0,
+          "blocked": false,
+          "injected_chars": 0,
+          "stdout_chars": 0,
+          "error": null,
+          "pid": 26292
+        }
+      }
+    },
+    {
+      "scenario": "rotation:Stop:warning",
+      "n": 30,
+      "mismatches": 0,
+      "probe_records": 30,
+      "wall_ms_without_probe": {
+        "p50": 185.8,
+        "p95": 232,
+        "mean": 190.5
+      },
+      "wall_ms_with_probe": {
+        "p50": 186.9,
+        "p95": 223.8,
+        "mean": 190.1
+      },
+      "overhead_ms": {
+        "p50": 1.1,
+        "p95": -8.2,
+        "mean": -0.4
+      },
+      "sample": {
+        "probe": {
+          "at": "2026-10-02T22:34:58.275Z",
+          "hook": "jev-rotation",
+          "event": null,
+          "duration_ms": 178.8,
+          "exit_code": 0,
+          "blocked": true,
+          "injected_chars": 239,
+          "stdout_chars": 271,
+          "error": null,
+          "pid": 56616
+        }
+      }
+    },
+    {
+      "scenario": "finish:PreToolUse:Edit:noloop",
+      "n": 30,
+      "mismatches": 0,
+      "probe_records": 30,
+      "wall_ms_without_probe": {
+        "p50": 85.6,
+        "p95": 152.4,
+        "mean": 96.2
+      },
+      "wall_ms_with_probe": {
+        "p50": 102.9,
+        "p95": 148.8,
+        "mean": 103.9
+      },
+      "overhead_ms": {
+        "p50": 17.3,
+        "p95": -3.6,
+        "mean": 7.7
+      },
+      "sample": {
+        "probe": {
+          "at": "2026-10-02T22:35:09.827Z",
+          "hook": "jev-finish",
+          "event": null,
+          "duration_ms": 48.9,
+          "exit_code": 0,
+          "blocked": false,
+          "injected_chars": 0,
+          "stdout_chars": 0,
+          "error": null,
+          "pid": 73908
+        }
+      }
+    },
+    {
+      "scenario": "finish:Stop:noloop",
+      "n": 30,
+      "mismatches": 0,
+      "probe_records": 30,
+      "wall_ms_without_probe": {
+        "p50": 79.4,
+        "p95": 100.7,
+        "mean": 82.7
+      },
+      "wall_ms_with_probe": {
+        "p50": 77.1,
+        "p95": 113,
+        "mean": 85.9
+      },
+      "overhead_ms": {
+        "p50": -2.3,
+        "p95": 12.3,
+        "mean": 3.2
+      },
+      "sample": {
+        "probe": {
+          "at": "2026-10-02T22:35:16.232Z",
+          "hook": "jev-finish",
+          "event": null,
+          "duration_ms": 46.9,
+          "exit_code": 0,
+          "blocked": false,
+          "injected_chars": 0,
+          "stdout_chars": 0,
+          "error": null,
+          "pid": 74304
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "rows": [
+    {
+      "metric": "jev.requests",
+      "baseline": 1297,
+      "recomputed": 1297,
+      "diff": 0,
+      "tolerance": 0,
+      "kind": "EXACT",
+      "pass": true
+    },
+    {
+      "metric": "jev.input_tokens",
+      "baseline": 5529326,
+      "recomputed": 5529326,
+      "diff": 0,
+      "tolerance": 0,
+      "kind": "EXACT",
+      "pass": true
+    },
+    {
+      "metric": "jev.output_tokens",
+      "baseline": 811330,
+      "recomputed": 811330,
+      "diff": 0,
+      "tolerance": 0,
+      "kind": "EXACT",
+      "pass": true
+    },
+    {
+      "metric": "jev.spend_usd",
+      "baseline": 0.23223169,
+      "recomputed": 0.23223169,
+      "diff": 0,
+      "tolerance": 1e-8,
+      "kind": "EXACT",
+      "pass": true
+    },
+    {
+      "metric": "claude.sessions (main transcripts with in-window events)",
+      "baseline": 41,
+      "recomputed": 41,
+      "diff": 0,
+      "tolerance": 0,
+      "kind": "EXACT",
+      "pass": true
+    },
+    {
+      "metric": "claude.assistant_entries",
+      "baseline": 6030,
+      "recomputed": 6030,
+      "diff": 0,
+      "tolerance": 0,
+      "kind": "EXACT",
+      "pass": true
+    },
+    {
+      "metric": "claude.opus_entries",
+      "baseline": 6030,
+      "recomputed": 6030,
+      "diff": 0,
+      "tolerance": 0,
+      "kind": "EXACT",
+      "pass": true
+    },
+    {
+      "metric": "claude.subagents",
+      "baseline": 0,
+      "recomputed": 0,
+      "diff": 0,
+      "tolerance": 0,
+      "kind": "EXACT",
+      "pass": true
+    },
+    {
+      "metric": "claude.results_over_20k",
+      "baseline": 29,
+      "recomputed": 29,
+      "diff": 0,
+      "tolerance": 0,
+      "kind": "EXACT",
+      "pass": true
+    },
+    {
+      "metric": "claude.bash_read_pct (1 decimal)",
+      "baseline": 71.3,
+      "recomputed": 71.3,
+      "diff": 0,
+      "tolerance": 0,
+      "kind": "ROUNDED_1DP",
+      "pass": true
+    },
+    {
+      "metric": "claude.read_pct (1 decimal)",
+      "baseline": 14.3,
+      "recomputed": 14.3,
+      "diff": 0,
+      "tolerance": 0,
+      "kind": "ROUNDED_1DP",
+      "pass": true
+    },
+    {
+      "metric": "claude.cache_read legacy per-entry (0.1M)",
+      "baseline": 841700000,
+      "recomputed": 841700000,
+      "diff": 0,
+      "tolerance": 0,
+      "kind": "ROUNDED_0.1M",
+      "pass": true
+    },
+    {
+      "metric": "claude.output legacy per-entry (0.01M)",
+      "baseline": 7260000,
+      "recomputed": 7260000,
+      "diff": 0,
+      "tolerance": 0,
+      "kind": "ROUNDED_0.01M",
+      "pass": true
+    },
+    {
+      "metric": "decisions.labeled",
+      "baseline": 0,
+      "recomputed": 0,
+      "diff": 0,
+      "tolerance": 0,
+      "kind": "EXACT",
+      "pass": true
+    },
+    {
+      "metric": "router_feedback.labels",
+      "baseline": 25,
+      "recomputed": 25,
+      "diff": 0,
+      "tolerance": 0,
+      "kind": "EXACT",
+      "pass": true
+    },
+    {
+      "metric": "jev.DIFF+FINAL questions/request (ad-hoc, 2dp)",
+      "baseline": 1.11,
+      "recomputed": 1.11,
+      "diff": 0,
+      "tolerance": 0,
+      "kind": "NOT_RECOMPUTED_SEE_NOTE",
+      "pass": null
+    }
+  ],
+  "pass": 15,
+  "fail": 0,
+  "not_recomputed": 1,
+  "exact_values": {
+    "claude_usage_legacy_per_entry": {
+      "input": 12082,
+      "cache_read": 841657729,
+      "cache_creation": 18782578,
+      "output": 7262397
+    },
+    "claude_usage_dedup_by_message": {
+      "input": 5438,
+      "cache_read": 376576004,
+      "cache_creation": 7928753,
+      "output": 2762357
+    },
+    "responses_dedup": 2712,
+    "jev_by_type_to_cutoff": {
+      "router": 687,
+      "test": 5,
+      "other": 34,
+      "decide": 550,
+      "FINAL": 7,
+      "DIFF": 12,
+      "RECHECK": 2
+    }
+  },
+  "notes": [
+    "Claude usage legacy = soma por entrada do transcript (método do benchmark 1131cf45); cada message.id aparece em várias entradas (1 por bloco). Valor correto = usage_dedup_by_message.",
+    "DIFF/FINAL 1,11 pergunta/req veio de classificação manual de 57 consultas avulsas (Fase 3); o painel mostra perguntas/request por tipo regex (by type), não a mesma amostra.",
+    "Densidade JEV 0,05–0,09 depende da contagem manual de shells mutáveis; não recalculada automaticamente nesta fase."
+  ]
+}

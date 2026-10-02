@@ -368,6 +368,7 @@ async function main() {
 }
 
 const isEntry = !!process.argv[1] && path.resolve(process.argv[1]).toLowerCase() === fileURLToPath(import.meta.url).toLowerCase();
+if (isEntry) { try { await import('../jev-obs/hook-probe.mjs'); } catch { /* observability only — never affects the hook */ } }
 if (isEntry) main().catch((e) => {
   // Internal error: visible, logged, non-blocking (a controller bug must not brick the session silently).
   try {

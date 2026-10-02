@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JEV Observability</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>JEV / Claude Observability <span class="tag">OBSERVATIONAL ONLY · 127.0.0.1</span></h1>
+  <form id="filters">
+    <select name="range"><option value="all">all</option><option value="30d">30d</option><option value="7d">7d</option><option value="today">today</option></select>
+    <input name="session" placeholder="session (prefixo)" size="12">
+    <input name="purpose" placeholder="purpose contém" size="14">
+    <input name="model" placeholder="model JEV" size="10">
+    <select name="type"><option value="">request type</option><option>router</option><option>decide</option><option>DIFF</option><option>FINAL</option><option>RECHECK</option><option>audit</option><option>test</option><option>other</option></select>
+    <button>aplicar</button> <span id="status"></span>
+  </form>
+  <nav id="tabs"></nav>
+</header>
+<main id="view"></main>
+<script src="app.js"></script>
+</body>
+</html>

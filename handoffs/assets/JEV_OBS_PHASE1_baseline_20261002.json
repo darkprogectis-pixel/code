@@ -1,0 +1,28 @@
+{
+  "source": "HANDOFF_JEV_USAGE_AUDIT_20261002.md + HANDOFF_JEV_POTENTIAL_AUDIT_20261002.md (commit ce6c0fe)",
+  "jev_cutoff": "2026-10-02T21:06:43Z",
+  "claude_cutoff": "2026-10-02T21:56:51Z",
+  "jev": {
+    "requests": 1297,
+    "input_tokens": 5529326,
+    "output_tokens": 811330,
+    "spend_usd": 0.23223169
+  },
+  "claude": {
+    "sessions": 41,
+    "assistant_entries": 6030,
+    "opus_entries": 6030,
+    "subagents": 0,
+    "bash_read_pct": 71.3,
+    "read_pct": 14.3,
+    "results_over_20k": 29,
+    "cache_read_approx": 841700000,
+    "output_approx": 7260000
+  },
+  "decisions": {
+    "outcome_labels": 0,
+    "router_labels": 25,
+    "jev_density": "0.05–0.09 (manual, Edit/Write × consultas avulsas)",
+    "diff_final_questions_per_req": 1.11
+  }
+}

@@ -9,6 +9,7 @@ import {
   cfg, stateDir, activeLoopId, loadLoop, saveLoop, withMutex, log, heartbeat, clearActive, mutate, tryClaim, isRotated, isSuperseded,
   rotationLevel, rotState, rank, isAllowlisted, isForbiddenPath, bashHitsForbidden, latestHandoffMtime, summary, nowIso, TERMINAL, jevRejectedFor,
 } from './lib.mjs';
+try { await import('../jev-obs/hook-probe.mjs'); } catch { /* observability only — never affects the hook */ }
 
 const WRITE_TOOLS = new Set(['Write', 'Edit', 'MultiEdit', 'NotebookEdit']);
 const SHELL_TOOLS = new Set(['Bash', 'PowerShell']);
