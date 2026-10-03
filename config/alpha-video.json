@@ -1,0 +1,83 @@
+{
+  "schema": "alpha-video-config/v1",
+  "mode": "STUDY_MATERIAL_ONLY",
+  "content_trust": "UNTRUSTED_EVIDENCE",
+  "corpus_dir": "knowledge/video",
+  "watch": {
+    "plugin": "watch@claude-video",
+    "engine": "local",
+    "speech_fallback": "none",
+    "short_max_s": 600,
+    "short_detail": "balanced",
+    "long_detail": "efficient",
+    "allow_token_burner": false,
+    "resolution": 512
+  },
+  "stt": { "model": "whisper-small", "fallback": "whisper-base", "language": "", "threads": 4, "chunk_s": 600, "cloud": "FORBIDDEN_UNTIL_OPERATOR_ORDER" },
+  "ocr": { "enabled": true, "bin": "C:\\Program Files\\Tesseract-OCR\\tesseract.exe", "lang": "eng" },
+  "segmentation": { "pause_ms": 2000, "max_ms": 90000, "min_ms": 8000 },
+  "extraction": { "statement_max_chars": 300, "confidence_cap_stt": 0.6, "confidence_cap_ocr": 0.5 },
+  "apis": {
+    "quant": { "vendor_patterns": ["alfa omega consolidator", "alpha omega consolidator", "consolidator", "alfa quant", "alpha quant"] },
+    "gamma": { "vendor_patterns": ["spotgamma", "spot gamma"] },
+    "bot":   { "vendor_patterns": ["gexbot", "gex bot", "gammagex", "gamma gex"] },
+    "q":     { "vendor_patterns": ["menthorq", "menthor q", "mentor q"] },
+    "data":  { "vendor_patterns": ["quantdata", "quant data"] }
+  },
+  "concept_hints": {
+    "HIRO": { "api": "gamma", "basis": "SOURCE_API_DOCS: skill-alpha-gamma (HIRO = SpotGamma)" }
+  },
+  "concepts": {
+    "Call Wall": ["call wall", "callwall", "parede de call", "parede de calls"],
+    "Put Wall": ["put wall", "putwall", "parede de put", "parede de puts"],
+    "Gamma Exposure": ["gamma exposure", "exposicao gamma", "exposição gamma", "exposição de gama", "exposicao de gama"],
+    "GEX": ["gex"],
+    "Zero Gamma": ["zero gamma", "zero gama", "gamma zero", "gama zero"],
+    "Gamma Flip": ["gamma flip", "flip de gamma", "flip de gama", "virada de gama", "gamma flip point"],
+    "Gamma": ["gamma", "gama"],
+    "Charm": ["charm"],
+    "Vanna": ["vanna"],
+    "HIRO": ["hiro"],
+    "Dealer Positioning": ["dealer positioning", "posicionamento do dealer", "posicionamento dos dealers", "posicionamento dos market makers"],
+    "Dealer Flow": ["dealer flow", "fluxo do dealer", "fluxo dos dealers", "dealer hedging", "hedge do dealer", "hedge dos dealers"],
+    "Support": ["support", "suporte"],
+    "Resistance": ["resistance", "resistencia", "resistência"],
+    "Pressure": ["pressure", "pressao", "pressão", "pressão compradora", "pressão vendedora", "buying pressure", "selling pressure"],
+    "Volatility": ["volatility", "volatilidade", "implied volatility", "volatilidade implícita"],
+    "Open Interest": ["open interest", "contratos em aberto", "interesse em aberto"],
+    "Delta": ["delta", "dex"],
+    "Options Flow": ["options flow", "fluxo de opções", "fluxo de opcoes", "order flow de opções"],
+    "Market Regime": ["market regime", "regime de mercado", "regime de gamma", "regime de gama", "positive gamma regime", "negative gamma regime"],
+    "BUY": ["buy", "compra", "comprar", "comprado", "compradora", "buying"],
+    "SELL": ["sell", "venda", "vender", "vendido", "vendedora", "selling"],
+    "NEUTRAL": ["neutral", "neutro"],
+    "Delta Hedging": ["delta hedging", "delta hedge", "delta-hedging", "delta-hedge", "hedge de delta"],
+    "Theta": ["theta", "time decay"],
+    "Vega": ["vega"],
+    "Rho": ["rho"],
+    "Moneyness": ["moneyness", "at the money", "in the money", "out of the money", "atm", "itm", "otm"],
+    "OPEX": ["opex", "option expiration", "options expiration", "monthly expiration"],
+    "0DTE": ["0dte", "zero dte", "zero days to expiration"],
+    "Skew": ["skew", "volatility skew", "put skew", "call skew"],
+    "Term Structure": ["term structure", "estrutura a termo"],
+    "Tail Risk": ["tail risk", "risco de cauda"],
+    "Market Maker": ["market maker", "market makers", "market-maker", "market-makers"],
+    "Liquidity": ["liquidity", "liquidez"],
+    "HVL": ["hvl", "high vol level", "high volatility level"],
+    "Call Resistance": ["call resistance"],
+    "Put Support": ["put support"],
+    "Q-Models": ["q-models", "q models", "qmodels"],
+    "Blind Spots": ["blind spot", "blind spots"]
+  },
+  "polarity_pairs": [
+    ["positive", "negative"], ["positivo", "negativo"], ["above", "below"], ["acima", "abaixo"],
+    ["bullish", "bearish"], ["support", "resistance"], ["suporte", "resistência"], ["buy", "sell"],
+    ["compra", "venda"], ["alta", "baixa"], ["increases", "decreases"], ["aumenta", "diminui"], ["sobe", "cai"]
+  ],
+  "untrusted_patterns": {
+    "PROMPT_INJECTION": ["ignore (all )?(the )?previous instructions", "ignore (as|todas as) instru[cç][oõ]es", "system prompt", "you are now", "voc[eê] agora [eé]", "disregard (the|your) (rules|instructions)", "esque[cç]a (as|suas) (regras|instru[cç][oõ]es)", "assistant[,:] (run|execute)", "claude[,:] ?(run|execute|rode|execute)"],
+    "SHELL_COMMAND": ["rm -rf", "curl [^ ]+ ?\\| ?(ba)?sh", "wget ", "powershell( -c| -command| -enc)", "\\biex\\b", "invoke-expression", "\\bnpm (i|install)\\b", "\\bpip install\\b", "\\bsudo\\b", "\\bchmod\\b", "\\bdel /", "format c:", "\\bnode -e\\b", "\\bpython -c\\b", "crie o arquivo", "create (a|the) file", "execute (o|este|this) (comando|command|script)", "rode (o|este) (comando|script)"],
+    "URL": ["https?://", "hxxps?://", "\\bwww\\.", "\\b[a-z0-9-]+\\.(com|net|org|io|xyz|ru|br)(/|\\b)"],
+    "ORDER_LANGUAGE": ["send (an |the )?order", "enviar (uma |a )?ordem", "envie (uma |a )?ordem", "place (a |the )?trade", "buy now", "sell now", "compre agora", "venda agora", "execute (the |a )?trade", "executar (o |a )?trade"]
+  }
+}

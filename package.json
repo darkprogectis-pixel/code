@@ -9,7 +9,7 @@
   "scripts": {
     "jev": "node src/jev/cli.mjs",
     "jev:example": "node src/jev/cli.mjs --input fixtures/jev/C_valid_multi_source.json --output-only",
-    "test": "node --test \"test/jev/*.test.mjs\" \"test/ijc/*.test.mjs\" \"test/rotation/*.test.mjs\" \"test/jev-finish/*.test.mjs\" \"test/alpha/*.test.mjs\" \"test/jarvis/*.test.mjs\" \"test/jev-obs/*.test.mjs\"",
+    "test": "node --test \"test/jev/*.test.mjs\" \"test/ijc/*.test.mjs\" \"test/rotation/*.test.mjs\" \"test/jev-finish/*.test.mjs\" \"test/alpha/*.test.mjs\" \"test/jarvis/*.test.mjs\" \"test/jev-obs/*.test.mjs\" \"test/alpha-video/*.test.mjs\"",
     "smoke": "node test/jev/smoke.mjs",
     "build:prereg": "node context/jev-future/scripts/build-jev-preregistration-design-v1.js",
     "live": "node src/jev/cli.mjs --live",
@@ -41,7 +41,11 @@
     "jarvis:bench": "node tools/jarvis/bench.mjs",
     "stack:start": "node scripts/jev-stack.mjs start",
     "stack:stop": "node scripts/jev-stack.mjs stop",
-    "stack:status": "node scripts/jev-stack.mjs status"
+    "stack:status": "node scripts/jev-stack.mjs status",
+    "alpha-video-ingest": "node tools/alpha-video/ingest.mjs",
+    "alpha-video-ask": "node tools/alpha-video/ask.mjs",
+    "alpha-video-stats": "node tools/alpha-video/stats.mjs",
+    "test:alpha-video": "node --test \"test/alpha-video/*.test.mjs\""
   },
   "dependencies": {
     "sherpa-onnx-node": "1.13.8"
