@@ -1,0 +1,104 @@
+# HANDOFF — ALPHA VIDEO KNOWLEDGE INGESTION — 2026-10-02
+
+Ordem do operador: `/jev-finish "VIDEO KNOWLEDGE INGESTION — ALPHA SKILLS"` (sessão 17d88be4 → sucessora 6c1c95bd, rotação #19). Objetivo verbatim no loop (`node tools/jev-finish/finish.mjs status`).
+Escopo: só material de estudo/evidência. Zero trading, zero ordens, nada em AOT/INVICTUS/NT8, sem F5. Conteúdo de vídeo = UNTRUSTED_EVIDENCE, nunca executado.
+
+## Estado — BLOCKED_EXTERNAL (infraestrutura COMPLETA e VERIFICADA; falta material real)
+- Loop `jf-20261003012131-dfa566` · JEV DIFF **A** `req_01a0ff5dbd6078b0b940f7fbc66ef4e6` · recheck **RECHECK_PASS 7/7**.
+- JEV FINAL: 1ª consulta **D** `req_01a0ff740c0f70448eb2c7b72406cd39` (I03 e flake do JARVIS apontados sem prova de baseline) ⇒ baseline provado em HEAD limpo ⇒ 2ª consulta **B OBJECTIVE_NOT_MET** `req_01a0ff75df787f00808ed21316606fe7` (B .24 / A .23 / C .23 / H .14 / D .04). B é coerente: nenhum vídeo real processado. Não repetir a consulta para "buscar A".
+- Resultado com evidências: `handoffs/alpha-video/RESULT_ALPHA_VIDEO_KNOWLEDGE_20261002.md` (tabela item da ordem → entrega → teste, SHAs, baseline).
+- Proposta: `handoffs/alpha-video/PROPOSAL_ALPHA_VIDEO_KNOWLEDGE_20261002.md`.
+
+## ONE_ACTION_REQUIRED (operador)
+Informe **somente** o caminho da pasta dos vídeos **ou** um arquivo manifest de URLs (.json `{ "urls": [...] }` ou .txt com uma URL por linha).
+
+## Próximo passo exato (após o operador informar o caminho)
+1. Amostra pequena: `npm run alpha-video-ingest -- "<1 vídeo da pasta>"` (corpus default `knowledge/video`). Validar transcript, frames, timestamps e itens por código/evidência (`npm run alpha-video-ask -- "Call Wall"`, `npm run alpha-video-stats`).
+2. Se PASS: `npm run alpha-video-ingest -- "<pasta>" [--recursive]` ou `-- "<manifest>"`. Idempotente (mesmo hash ⇒ SKIP).
+3. Decidir com o operador se `knowledge/video/` (frames + derivados de material de terceiros) entra no git ou no `.gitignore`.
+4. Novo `/jev-finish` (ou `start` adotando este loop) para fechar COMPLETE com o corpus real, com novo recheck e JEV FINAL.
+
+## Instalação (fases 1–2)
+- Pre-flight: Claude Code 2.1.288; py 3.12.10; ffmpeg/ffprobe 8.1.2; JARVIS sherpa-onnx-node 1.13.8 + whisper small/base + silero; Tesseract 5.4.0 (`C:\Program Files\Tesseract-OCR`, fora do PATH); i7-11370H, 39,7 GB, RTX 3050 Ti. Vídeos nos paths autorizados: **0**.
+- `claude plugin marketplace add bradautomates/claude-video` + `claude plugin install watch@claude-video` ⇒ **watch 0.3.2**, MIT, commit `03ceb42f7fa2c4439aca01752118044baabffb8f`, `C:\Users\ADM\.claude-darkprogectis\plugins\cache\claude-video\watch\0.3.2` (idêntico ao clone auditado; código não modificado).
+- yt-dlp 2026.08.19 via winget (+ Deno). `~/.config/watch/.env`: WATCH_ENGINE=local, WATCH_WHISPER_BACKEND=none, WATCH_DETAIL=balanced. Rotation hooks verify PASS após o install. WhisperX NÃO instalado.
+
+## Pipeline (arquivos)
+- `config/alpha-video.json` — política (modes, stt, ocr, segmentação, vendors→API, glossário 23 conceitos pt/en, polaridades, padrões UNTRUSTED).
+- `tools/alpha-video/watch_bridge.py` (importa o plugin, JSON com ms exatos) · `stt.mjs` (VAD+Whisper do JARVIS, camada de correção com `raw` preservado) · `ocr.mjs` · `lib.mjs` (conceitos, segmentação, extração `video-knowledge/v1`, atribuição, validação, contradições, BM25) · `ingest.mjs` (comando único) · `ask.mjs` (retrieval citado, `--api`, `--jev` opcional ⇒ `evidence/jev-decisions.jsonl`) · `stats.mjs`.
+- npm: `alpha-video-ingest`, `alpha-video-ask`, `alpha-video-stats`, `test:alpha-video`; `npm test` inclui `test/alpha-video`.
+- Skills: seção `## VIDEO_DERIVED_KNOWLEDGE` anexada às 5 `.claude/skills/skill-alpha-*/SKILL.md` (18 itens canônicos intactos; precedência SOURCE_API_DOCS/CODE > VIDEO > INFERENCE).
+- Corpus (criado no 1º ingest real): `knowledge/video/{manifest.json,sources,transcripts,frames,segments,evidence,concepts,indexes}`; agregadores `indexes/alpha-{quant,gamma,bot,q,data,cross-api,unknown}-video-knowledge.json`; `evidence/contradictions.json`; `concepts/{catalog,unknown-terms,jarvis-lexicon-candidates}.json`; `indexes/{inverted,stats}.json`.
+
+## Testes
+- `test/alpha-video/alpha-video.test.mjs` AV1–AV22 **22/22 PASS** (vídeos sintéticos via `test/alpha-video/synth.mjs`: ffmpeg lavfi+drawtext + voz Piper do JARVIS; URL via servidor http local; trap server prova 0 acessos a URLs do vídeo).
+- Registrados no loop e re-executados no recheck: alpha-video-av1-av22, regress-alpha, regress-jarvis (suite menos 1 teste live flaky), regress-rotation, regress-jev-finish, regress-jev-obs, regress-jev-runtime ⇒ 7/7 PASS.
+
+## Pendências fora do escopo (pré-existentes, provadas em HEAD limpo 32bc83d)
+- `npm test` I03 falha em `src/alpha/specialists/quant.mjs` (palavra "Consolidator", commit f250faf). Precisa de decisão do operador (ajustar o regex do I03 ou o texto do especialista) — não tocado.
+- JARVIS "real voice models" round-trip: flake ~5–10% (HEAD 19/20).
+- Hook SessionStart do plugin watch imprime "Python 3.10+ is needed" no Windows (detecção de python do plugin); pipeline usa `py -3` e funciona (AV21). Plugin não modificado.
+- Nada commitado nesta missão.
+
+## FASE 2 — CORPUS REAL (ordem do operador 2026-10-03, loop `jf-20261003142710-cd58c7`, JEV DIFF A adotado `req_01a0ff5dbd6078b0b940f7fbc66ef4e6`)
+- Objetivo verbatim: scratchpad `objective-real-corpus.txt` e `finish.mjs status`. Fonte: `C:\Users\ADM\Downloads\Telegram Desktop\1q2we34rt5y\MenthorQ course` (somente leitura).
+- Inventário: 7 seções; 29 arquivos; **23 mp4** (h264 1280x720 + aac; 203–1135 s; soma ≈ 3,6 h), 5 pdf, 1 png; **0 legendas**; **0 duplicados** (sha256 únicos); 0 não suportados entre vídeos.
+- Amostra: `Section 2 How to use Option Greeks\5 - Gamma.mp4` (491 s) ⇒ `knowledge/video` v_d32c161a3231: INGESTED, stt whisper-small, 56 cues, 8 segmentos, 18 frames, 134 itens, 0 rejeitados; 5 min de processamento (threads 2).
+- ACHADOS DA AMOSTRA (bugs corrigíveis): (1) language auto por chunk ⇒ alucinações em esloveno/húngaro/italiano/português dentro do vídeo em inglês ⇒ travar idioma por vídeo; (2) correção do JARVIS só muda caixa ("Gamma"→"gamma") ⇒ manter texto original quando a diferença é só caixa; (3) misrecognitions de domínio: "jacks"=GEX, "data hedging"=delta hedging, "coal"=call, "Q-Moders"/"RQ models"=Q-Models, "high-volve/high wall"=? (não corrigir sem base); (4) unknown-terms com ruído (WITH, SS) ⇒ filtrar stopwords; (5) threads 2 ⇒ ~2,2 h para o corpus.
+- PRÓXIMO: proposta de fix ⇒ JEV DIFF (novo, só para o fix) ⇒ apagar corpus `knowledge/video` (gerado por mim, só a amostra) ⇒ reprocessar amostra ⇒ corpus completo em background.
+
+### Atualização (sessão 6c1c95bd, ~221k tokens — rotação próxima) — loop jf-20261003142710-cd58c7, estágio EXECUTE
+- JEV DIFF do fix: **A** 0.69 `req_01a1022f784375e49f73e1967e5a1119` (proposta `handoffs/alpha-video/PROPOSAL_FIX_REAL_SAMPLE_20261003.md`). NÃO repetir.
+- FIX APLICADO (não commitado): `tools/alpha-video/stt.mjs` (language lock por maioria dos 6 primeiros segmentos ⇒ `majorityLang`, `out.language_lock`; correção só-caixa ignorada; VIDEO_FIX + jacks/jax→GEX, data hedging→delta hedging, "<verbo> a coal"→call, Q-Moders/RQ models→Q-Models); `ingest.mjs` (lock reutilizado entre chunks de 600 s; `language_lock` no registro do vídeo); `lib.mjs` (COMMON_CAPS em unknownTerms); `config/alpha-video.json` stt.threads 2→4; `test/alpha-video/alpha-video.test.mjs` (asserts novos no AV4 + **AV23** language lock) — testes AINDA NÃO rodados após o fix.
+- `knowledge/video` apagado (só tinha a amostra gerada) e amostra RE-INGERIDA em background (saída `/tmp/sample2.json`, log `/tmp/sample2.err` = `C:\tmp\...`). Se a sucessora encontrar o corpus incompleto/sem manifest: `rm -rf knowledge/video` e re-rodar `node tools/alpha-video/ingest.mjs "<...>\Section 2 How to use Option Greeks\5 - Gamma.mp4"`.
+- PRÓXIMO EXATO: (1) validar amostra (transcript sem idiomas estranhos, `language_lock.lang=en`, correções com raw, itens/provenance, consultas `ask.mjs`: gamma, Call Wall, Put Wall, HIRO, Charm, conceitos, API explícita) ⇒ (2) `npm run test:alpha-video` (23 testes) ⇒ (3) corpus inteiro em background: `node tools/alpha-video/ingest.mjs "C:\Users\ADM\Downloads\Telegram Desktop\1q2we34rt5y\MenthorQ course" --recursive` (~1,5 h; idempotente, a amostra vira SKIPPED_DUPLICATE) ⇒ (4) storage: proposta + JEV DIFF para `.gitignore` (versionar manifest/indexes/concepts/evidence items+contradictions; ignorar frames/, transcripts/, segments/, sources/, rejected.jsonl — conteúdo de curso pago de terceiros + tamanho) ⇒ (5) testes reais (novo arquivo test/alpha-video/real-corpus.test.mjs, skip se corpus ausente) ⇒ (6) skills §VIDEO_DERIVED_KNOWLEDGE com resumo/stats reais ⇒ (7) léxico JARVIS candidates ⇒ (8) registrar testes+regressões via finish.mjs, recheck, JEV FINAL, commits por função (excluir pendências antigas do working tree: START_JEV_CLAUDE.ps1, test/rotation/*, handoffs alheios, kimi, etc.), push origin/main, handoff/RESULT, complete.
+- Storage: JEV DIFF A 0.54 `req_01a1023188427f78a14ad54cc629e601` (proposta `handoffs/alpha-video/PROPOSAL_STORAGE_GITIGNORE_20261003.md`) ⇒ .gitignore APLICADO (frames/transcripts/segments/sources/rejected/jev-decisions fora do git).
+
+### Atualização (sessão 22bf5177, rotação #20) — loop jf-20261003142710-cd58c7, EXECUTE
+- Amostra re-ingerida com fix #1: language_lock en (votos en 5/pt 1), 56 cues, 7 segmentos, 18 frames, 140 itens, 0 rejeitados; sem alucinação de outro idioma; correções com raw preservado. Consultas: gamma ⇒ OK; HIRO/Charm/Vanna ⇒ NO_EVIDENCE (correto).
+- Defeitos achados na validação ⇒ fix #2, JEV DIFF **A** `req_01a10237cc59755ea00b17baf0ff95b9` (A .32 / E .29 / C .16; proposta `handoffs/alpha-video/PROPOSAL_FIX_REAL_SAMPLE2_20261003.md`; edição feita minutos ANTES da consulta — quebra de processo registrada na proposta). NÃO repetir.
+  1. `ask.mjs` concept-strict (Call Wall/Put Wall respondiam com itens de Gamma por sobreposição de palavras) + status `NO_EVIDENCE_FOR_CONCEPT` + `concept_coverage`.
+  2. `lib.mjs attribute(..., segmentSpeech)`: vendor só na tela (logo "menthorQ" no OCR) ⇒ API_UNKNOWN (antes 26 itens de teoria geral viravam q/API_PROBABLE).
+  3. `config/alpha-video.json`: +17 conceitos (Delta Hedging, Theta, Vega, Rho, Moneyness, OPEX, 0DTE, Skew, Term Structure, Tail Risk, Market Maker, Liquidity, HVL, Call Resistance, Put Support, Q-Models, Blind Spots).
+  4. `ingest.mjs --reextract` (re-extração a partir de transcripts/frames salvos; sem STT).
+  5. Testes AV24–AV26.
+- `rm -rf knowledge/video` foi NEGADO pelo classificador de permissão ⇒ corpus mantido; a amostra fica SKIPPED_DUPLICATE no ingest completo e recebe as regras novas via `--reextract`.
+- Ingest completo em background (saída `<scratchpad 22bf5177>/corpus.json`, log `corpus.err`). PRÓXIMO: ao terminar ⇒ `node tools/alpha-video/ingest.mjs --reextract` ⇒ auditoria ⇒ testes reais ⇒ skills/léxico ⇒ regressões ⇒ recheck ⇒ JEV FINAL ⇒ commits ⇒ push.
+
+### Atualização 2 (sessão 22bf5177, ~200k tokens — rotação próxima) — loop jf-20261003142710-cd58c7, EXECUTE
+- Fix #2 (JEV A `req_01a10237cc59755ea00b17baf0ff95b9`) APLICADO + testes: `finish.mjs test alpha-video-av1-av26` = **26/26 PASS** (registrado). Depois disso (ainda não registrado no CLI):
+  - `lib.mjs correctionPairs(raw, corrected)` (diff LCS por palavra) + `ingest.mjs rebuild` enriquece `concepts/jarvis-lexicon-candidates.json`: `stt_misrecognitions` por termo (heard⇒corrected, contagem, exemplos com video_id/start_ms), `stt_corrections`, termos UNKNOWN deduplicados com contagem, `related_api` só com API_CONFIRMED. `tools/jarvis/*` NÃO alterado (AV22 exige; integração no runtime do JARVIS = revisão do operador).
+  - `stats.mjs --audit "<pasta>"` ⇒ `indexes/inventory.json` (todo arquivo: tamanho, sha256, ffprobe, tipo; duplicados) + `indexes/audit.json` (VIDEOS_DISCOVERED…UNSUPPORTED_FILES, por arquivo; OCR_FAILURES = re-OCR dos frames vazios).
+  - Testes: AV27 (léxico/misrecognitions) e `test/alpha-video/real-corpus.test.mjs` RC1–RC10 (skip se não houver audit/camadas locais). Execução direta: 27 pass / 10 skip / 0 fail.
+- Ingest completo rodando em background desde 11:44 (início do 5º de 23 vídeos às ~12:25; ~2,3 h no total; saída `C:/Users/ADM/AppData/Local/Temp/claude/C--Users-ADM-Claude-JEV-code/22bf5177-6dcd-4705-98d5-b1e3575a1e96/scratchpad/corpus.json`, log `corpus.err`). Se o processo tiver morrido (corpus.json vazio e nenhum node `ingest.mjs` vivo): re-rodar `node tools/alpha-video/ingest.mjs "C:\Users\ADM\Downloads\Telegram Desktop\1q2we34rt5y\MenthorQ course" --recursive` (idempotente: já ingeridos ⇒ SKIPPED_DUPLICATE).
+- Correções observadas até agora (vídeos 1–3 + amostra): RQ models/Q-Moders⇒Q-Models, jacks⇒GEX, data⇒delta (só em "data hedging"), coal⇒call, Mentor Q⇒MenthorQ. Nenhum HIRO/Charm fabricado pelo normalizador pt-BR do JARVIS — RECONFERIR no corpus inteiro (se aparecer termo inventado ⇒ proposta + JEV DIFF para aplicar o normalizador do JARVIS só a pt e re-corrigir a partir do raw no --reextract).
+- PRÓXIMO EXATO (sucessora): (1) esperar corpus.json; (2) `node tools/alpha-video/ingest.mjs --reextract` (aplica fix #2 à amostra e a todos); (3) `node tools/alpha-video/stats.mjs --audit "C:\Users\ADM\Downloads\Telegram Desktop\1q2we34rt5y\MenthorQ course"`; (4) conferir correções/conceitos/atribuição, consultas (gamma, Call Wall, Put Wall, HIRO, Charm, conceitos, API explícita); (5) `finish.mjs test --name alpha-video-real-corpus --shell bash --cmd "npm run test:alpha-video"` (AV1–27 + RC1–10, nenhum skip esperado); (6) skills §VIDEO_DERIVED_KNOWLEDGE com estatísticas reais por API (sem tocar itens 1–18); (7) regressões via finish.mjs: regress-alpha `npm run test:alpha`, regress-jarvis, regress-rotation, regress-jev-finish, regress-jev-obs, regress-jev-runtime (mesmos comandos do loop anterior, ver RESULT §testes); (8) `finish.mjs recheck` ⇒ RESULT atualizado ⇒ JEV FINAL (`jev-diff.mjs --kind final --proposal handoffs/alpha-video/RESULT_ALPHA_VIDEO_KNOWLEDGE_20261002.md`) ⇒ commits por função (alpha-video tools+config+tests; skills; knowledge/video versionável; .gitignore; handoffs/alpha-video + este handoff; package.json só as linhas alpha-video) excluindo START_JEV_CLAUDE.ps1, test/rotation/*, handoffs alheios, kimi, etc. ⇒ push ⇒ handoff final ⇒ `finish.mjs complete`.
+- Regressões registradas no loop (12:3x): regress-alpha, regress-jarvis (skip "real voice models"), regress-rotation, regress-jev-finish, regress-jev-obs, regress-jev-runtime ⇒ **6/6 PASS**. Falta registrar o teste final `alpha-video-real-corpus` (`npm run test:alpha-video`) depois do --reextract + --audit.
+
+### Atualização 3 (sessão 22bf5177, ~224k — rotação iminente) — loop jf-20261003142710-cd58c7, estágio TEST
+- Ingest completo TERMINOU 14:19: 23 descobertos ⇒ 22 INGESTED + 1 SKIPPED_DUPLICATE (amostra), 0 FAILED. `--reextract` executado (fix #2 aplicado a todos). `stats.mjs --audit` executado ⇒ `knowledge/video/indexes/{inventory,audit}.json`:
+  VIDEOS_DISCOVERED 23 · PROCESSED 23 · SKIPPED 0 · TOTAL_HOURS 3.35 · SEGMENTS 246 · FRAMES 434 · ITEMS 2158 · CONCEPTS 29 · API_CONFIRMED 5 · API_PROBABLE 111 · CROSS_API 0 · API_UNKNOWN 2042 · CONTRADICTIONS 770 · QUARANTINED 1 · TRANSCRIPTION_FAILURES 0 · OCR_EMPTY 46 · OCR_FAILURES 0 · DUPLICATES 0 · UNSUPPORTED_FILES 6 (5 pdf + 1 png, fora do pipeline de vídeo).
+- ⚠ ACHADO A INVESTIGAR ANTES DO RECHECK: **770 contradições** é implausível (heurística de polaridade: ex. "positive gamma" vs "negative gamma" ensinados em vídeos diferentes viram "contradição"). Verificar amostra de `evidence/contradictions.json`; se for ruído do detector ⇒ proposta + JEV DIFF (ex.: exigir mesma frase-sujeito / excluir pares onde ambos os polos aparecem como ensino de dois regimes) ⇒ --reextract/rebuild ⇒ audit. Não resolver contradições silenciosamente — só corrigir o DETECTOR com evidência.
+- Também conferir: correções do normalizador do JARVIS no corpus inteiro (HIRO/Charm/Call Wall fabricados?) via `jarvis-lexicon-candidates.json stt_corrections`; as 5 API_CONFIRMED; o 1 QUARANTINED; consultas de validação.
+- Depois: `finish.mjs test --name alpha-video-real-corpus --shell bash --cmd "npm run test:alpha-video"` ⇒ skills ⇒ recheck ⇒ JEV FINAL ⇒ commits ⇒ push ⇒ complete (ver "PRÓXIMO EXATO" na Atualização 2).
+- Contradições confirmadas como RUÍDO do detector (Gamma positive/negative 193, GEX positive/negative 106, Moneyness 85…; nomes compostos de regime "positive gamma"/"negative gamma" contados como claims opostos). Fix #3 JEV DIFF **A 0.75 `req_01a102c89ecd75afb9f26601d7dccd2d`** (proposta `handoffs/alpha-video/PROPOSAL_FIX_CONTRADICTION_DETECTOR_20261003.md`) — NÃO repetir. A IMPLEMENTAR pela sucessora: em `lib.mjs findContradictions` (1) ignorar palavra de polaridade adjacente ao surface/sinônimo do conceito (antes ou depois) ⇒ nome, não predicado; (2) frase com os dois polos = 0 (já é); (3) só itens com `evidence.text_source` stt/captions; (4) teste AV28 (compostos não contradizem; AV12 continua passando). Depois `node tools/alpha-video/ingest.mjs --reextract` + `stats.mjs --audit "<pasta>"` e seguir o PRÓXIMO EXATO.
+- ESTADO NO SOFT_STOP (22bf5177): fix #3 PARCIALMENTE aplicado em `lib.mjs findContradictions` (filtro OCR + `unglue` de polaridade colada ao conceito; `pol(t, concept)`). FALTA: trocar a chamada `const pa = pol(a.statement), pb = pol(b.statement);` por `pol(a.statement, concept)` / `pol(b.statement, concept)`; `node --check`; adicionar AV28 (findContradictions: "Positive gamma…" × "…always negative gamma." ⇒ 0; OCR × fala ⇒ 0; "Call Wall works as support" × "…resistance" ⇒ 1) e exportar nada novo (findContradictions já é export); `--reextract` + `--audit`; conferir CONTRADICTIONS caiu e é plausível; então teste registrado + PRÓXIMO EXATO.
+
+### Atualização 4 (sessão 3e626e2e, rotação #21) — loop jf-20261003142710-cd58c7, TEST
+- Fix #3 CONCLUÍDO (`lib.mjs` chamada `pol(x.statement, concept)`) + AV28. `--reextract` + `--audit` reexecutados: CONTRADICTIONS 770 ⇒ **248** (restantes = candidatas da heurística de polaridade entre sujeitos diferentes, todas UNRESOLVED; não resolvidas silenciosamente; revisão humana). Demais números iguais (23/23, 3.35 h, 246 seg, 2158 itens, 29 conceitos, CONFIRMED 5, PROBABLE 111, UNKNOWN 2042, QUARANTINED 1).
+- Correções STT no corpus inteiro: jacks/Jax⇒GEX 78, Q-Moders/RQ models⇒Q-Models 11, data⇒delta 5, coal⇒call 3, Mentor Q⇒MenthorQ 6. NENHUM HIRO/Charm/Call Wall fabricado. Consultas: gamma ANSWERED (169 itens); Call Wall/Put Wall NO_EVIDENCE_FOR_CONCEPT; HIRO/Charm NO_EVIDENCE (corretos — o curso MenthorQ não ensina esses termos).
+- Teste registrado `alpha-video-real-corpus` (`npm run test:alpha-video`) = **38/38 PASS** (AV1–AV28 + RC1–RC10, 0 skip).
+- PRÓXIMO: skills §VIDEO_DERIVED_KNOWLEDGE com stats reais ⇒ recheck ⇒ RESULT ⇒ JEV FINAL ⇒ commits ⇒ push ⇒ complete.
+
+### Atualização 5 (sessão 3e626e2e) — loop jf-20261003142710-cd58c7, JEV_FINAL
+- Skills: bloco "Corpus real ingerido" anexado ao §VIDEO_DERIVED_KNOWLEDGE das 5 skills (stats reais, conceitos presentes/ausentes, atribuição por API; itens 1–18 intactos).
+- `finish.mjs recheck` ⇒ **RECHECK_PASS 8/8** (alpha-video-real-corpus 38/38, alpha-video-av1-av26, regress-alpha, -jarvis, -rotation, -jev-finish, -jev-obs, -jev-runtime).
+- RESULT fase 2 escrito (`handoffs/alpha-video/RESULT_ALPHA_VIDEO_KNOWLEDGE_20261002.md` §PHASE 2: inventário, auditoria, conhecimento, storage, arquivos+sha, testes, limitações, checklist DoD, passos restantes).
+- JEV FINAL 1: **F HANDOFF_INCOMPLETE** `req_01a102cfb7227467839fca95678149c8` (F .37 / A .31). Lacuna real corrigida (este registro + checklist/passos restantes no RESULT) ⇒ recheck ⇒ JEV FINAL 2 (única nova consulta).
+- PRÓXIMO EXATO: se FINAL 2 = A ⇒ commits por função (lista no RESULT §"exact remaining steps") ⇒ push origin main ⇒ SHAs aqui ⇒ recheck se exigido ⇒ `finish.mjs complete`. Se ≠ A ⇒ não repetir; registrar e bloquear/decidir conforme o rótulo.
+
+### Atualização 6 — BLOCKED (JEV_REJECTED) — loop jf-20261003142710-cd58c7
+- RECHECK_PASS 8/8 (2ª vez, após correção do handoff). JEV FINAL 2: **F HANDOFF_INCOMPLETE 0.51** `req_01a102d2bca97530bcd27509becd130f` (F .58 / A .20 / B .11 / H .04 / E .05 / G .02). NÃO repetir a consulta (sem query fishing).
+- Leitura: a única lacuna restante no RESULT/handoff são commits, push e SHAs — que a ordem (item 14) só permite "depois de tudo PASS". Ciclo: FINAL exige o registro dos commits; os commits exigem um FINAL A.
+- Nada commitado, nada enviado. Corpus, testes, skills e RESULT prontos (ver RESULT §PHASE 2 e §"exact remaining steps").
+- DECISÃO DO OPERADOR (uma de): (a) autorizar commits+push por função com FINAL F registrado, depois um FINAL 3 sobre o handoff com SHAs; (b) autorizar commits locais sem push ⇒ FINAL 3 ⇒ push só se A; (c) outra instrução.
