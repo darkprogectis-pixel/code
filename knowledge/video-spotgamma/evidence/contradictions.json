@@ -1,0 +1,2450 @@
+{
+  "schema": "spotgamma-contradictions/v1",
+  "policy": "NEVER_AUTO_RESOLVED; TRUE_CONTRADICTION never auto-assigned",
+  "contradictions": [
+    {
+      "contradiction_id": "sgc_9c8bbe31bb444d39",
+      "concept": "Market Maker",
+      "axis": "above/below",
+      "category": "REGIME_DEPENDENT",
+      "category_basis": "regime wording: \"negative gamma\" / \"\"",
+      "claim_a": "We admittedly thought that would be more of a ‘late May’ test, not so much an ‘early May’ test — but here we are… The lack of negative gamma ‘above 5900’ infers market makers have less to buy into a rally.… This potential topping zone comes",
+      "evidence_a": {
+        "knowledge_id": "sgk_d741b68824e90c65",
+        "lesson": "Winning trade Example",
+        "lesson_id": "18100",
+        "timestamp": "00:00:22.480–00:00:41.360",
+        "pointer": "sources/18100.json#transcript[3]"
+      },
+      "claim_b": "Case Studies: Below is a list of case studies that leveraged HIRO to understand dealer hedging behavior, helping better time trade entries and exits.",
+      "evidence_b": {
+        "knowledge_id": "sgk_a0089bd3753e9aa0",
+        "lesson": "Resources: HIRO",
+        "lesson_id": "19150",
+        "timestamp": null,
+        "pointer": "sources/19150.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_ba57c1ac8d6db847",
+      "concept": "Market Maker",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Look for where the call or put gamma curves flatten out, as these areas indicate a reduction in expected market maker activity, and therefore, lower volatility.",
+      "evidence_a": {
+        "knowledge_id": "sgk_7774dcdb3eeb5967",
+        "lesson": "Sample Workflow - Spot Trade Setups in 4 Steps",
+        "lesson_id": "18688",
+        "timestamp": "00:00:48.000–00:01:00.960",
+        "pointer": "sources/18688.json#transcript[7]"
+      },
+      "claim_b": "Squeezes can happen when options market makers are forced into a cycle of stock purchases to protect against losing money if stocks go higher.",
+      "evidence_b": {
+        "knowledge_id": "sgk_8aa6afe77562e713",
+        "lesson": "Squeeze Scanner",
+        "lesson_id": "18657",
+        "timestamp": "00:00:16.000–00:00:26.960",
+        "pointer": "sources/18657.json#transcript[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_d29c3a6cb5f456e2",
+      "concept": "Market Maker",
+      "axis": "support/resistance",
+      "category": "REGIME_DEPENDENT",
+      "category_basis": "regime wording: \"positive gamma\" / \"\"",
+      "claim_a": "level. The call wall is the strike with the largest net positive gamma. It can act as resistance since market makers will most likely have to increase delta",
+      "evidence_a": {
+        "knowledge_id": "sgk_b91345d970d46790",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:04:59.440–00:05:13.120",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[107]"
+      },
+      "claim_b": "The market initially declined from open until hitting strong positive delta pressure around 10:30 AM ET, where market maker buying support created a floor and sparked a rally.",
+      "evidence_b": {
+        "knowledge_id": "sgk_c39fd4b4aa47d17d",
+        "lesson": "Delta Pressure in Action",
+        "lesson_id": "18702",
+        "timestamp": "00:00:08.400–00:00:20.640",
+        "pointer": "sources/18702.json#transcript[0]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_06e8761f2dbd9628",
+      "concept": "Gamma",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Look for where the call or put gamma curves flatten out, as these areas indicate a reduction in expected market maker activity, and therefore, lower volatility.",
+      "evidence_a": {
+        "knowledge_id": "sgk_44a96d0e961280b1",
+        "lesson": "Sample Workflow - Spot Trade Setups in 4 Steps",
+        "lesson_id": "18688",
+        "timestamp": "00:00:48.000–00:01:00.960",
+        "pointer": "sources/18688.json#transcript[7]"
+      },
+      "claim_b": "levels. A high SG acceleration indicator indicates G gamma changes more rapidly at that price level. It also indicates higher expected volatility. The SG acceleration indicator is shown",
+      "evidence_b": {
+        "knowledge_id": "sgk_5ae2d53ef1d337ce",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:05:36.240–00:05:55.600",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[120]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_982da366679d6b84",
+      "concept": "Gamma",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Look for where the call or put gamma curves flatten out, as these areas indicate a reduction in expected market maker activity, and therefore, lower volatility.",
+      "evidence_a": {
+        "knowledge_id": "sgk_44a96d0e961280b1",
+        "lesson": "Sample Workflow - Spot Trade Setups in 4 Steps",
+        "lesson_id": "18688",
+        "timestamp": "00:00:48.000–00:01:00.960",
+        "pointer": "sources/18688.json#transcript[7]"
+      },
+      "claim_b": "steeper or more vertical a line, the higher the rate of change of gamma and volatility at that level. The risk reversal chart shows the difference in implied volatility or IV",
+      "evidence_b": {
+        "knowledge_id": "sgk_37a212a6b283ad06",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:06:18.560–00:06:38.080",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[134]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_1b67ff2241131a74",
+      "concept": "Gamma",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Look for where the call or put gamma curves flatten out, as these areas indicate a reduction in expected market maker activity, and therefore, lower volatility.",
+      "evidence_a": {
+        "knowledge_id": "sgk_44a96d0e961280b1",
+        "lesson": "Sample Workflow - Spot Trade Setups in 4 Steps",
+        "lesson_id": "18688",
+        "timestamp": "00:00:48.000–00:01:00.960",
+        "pointer": "sources/18688.json#transcript[7]"
+      },
+      "claim_b": "Doug notes that Coinbase moved higher above a Key Delta Strike and Call Wall on May 28th, with Call Notional Gamma dominant above that level.",
+      "evidence_b": {
+        "knowledge_id": "sgk_82a3b29495c6c967",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": null,
+        "pointer": "sources/18693.json#body[6]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_aedfa647d541206d",
+      "concept": "Gamma",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Look for where the call or put gamma curves flatten out, as these areas indicate a reduction in expected market maker activity, and therefore, lower volatility.",
+      "evidence_a": {
+        "knowledge_id": "sgk_44a96d0e961280b1",
+        "lesson": "Sample Workflow - Spot Trade Setups in 4 Steps",
+        "lesson_id": "18688",
+        "timestamp": "00:00:48.000–00:01:00.960",
+        "pointer": "sources/18688.json#transcript[7]"
+      },
+      "claim_b": "First, the Gamma lens shows you which strikes or zones will have higher realized volatility vs.",
+      "evidence_b": {
+        "knowledge_id": "sgk_d2ad5ee3debf0097",
+        "lesson": "Synthetic OI - Prepare for Intraday Volatility",
+        "lesson_id": "18695",
+        "timestamp": "00:00:33.280–00:00:41.920",
+        "pointer": "sources/18695.json#transcript[3]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_070de8b139f013bb",
+      "concept": "Call Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Going one layer deeper, the Call Wall holds as resistance for the S&P in 83% of trading sessions based on SpotGamma statistics, with 88% of the time the S&P closing below the Call Wall.",
+      "evidence_a": {
+        "knowledge_id": "sgk_67ce865afe25179c",
+        "lesson": "Call Wall",
+        "lesson_id": "18649",
+        "timestamp": "00:00:37.840–00:00:52.239",
+        "pointer": "sources/18649.json#transcript[3]"
+      },
+      "claim_b": "When a stock is within 1pct of the Call Wall, selling covered calls above the call wall expire worthless the majority of the time.",
+      "evidence_b": {
+        "knowledge_id": "sgk_c5b24d7fc5ae2f72",
+        "lesson": "Intermediate Trade Structures",
+        "lesson_id": "18691",
+        "timestamp": "00:00:15.065–00:00:27.510",
+        "pointer": "sources/18691.json#transcript[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_298419be90abd7bb",
+      "concept": "Call Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Going one layer deeper, the Call Wall holds as resistance for the S&P in 83% of trading sessions based on SpotGamma statistics, with 88% of the time the S&P closing below the Call Wall.",
+      "evidence_a": {
+        "knowledge_id": "sgk_67ce865afe25179c",
+        "lesson": "Call Wall",
+        "lesson_id": "18649",
+        "timestamp": "00:00:37.840–00:00:52.239",
+        "pointer": "sources/18649.json#transcript[3]"
+      },
+      "claim_b": "In this scenario, we look for names which are (a) above it’s Hedge Wall (b) Within 2pct of the Absolute Gamma level, and (c) Between the Call Wall and Put Wall.",
+      "evidence_b": {
+        "knowledge_id": "sgk_512b1dd4afcd1449",
+        "lesson": "Advanced Trade Structures",
+        "lesson_id": "18692",
+        "timestamp": "00:00:24.640–00:00:38.559",
+        "pointer": "sources/18692.json#transcript[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_e32d42142f65046b",
+      "concept": "Call Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Going one layer deeper, the Call Wall holds as resistance for the S&P in 83% of trading sessions based on SpotGamma statistics, with 88% of the time the S&P closing below the Call Wall.",
+      "evidence_a": {
+        "knowledge_id": "sgk_67ce865afe25179c",
+        "lesson": "Call Wall",
+        "lesson_id": "18649",
+        "timestamp": "00:00:37.840–00:00:52.239",
+        "pointer": "sources/18649.json#transcript[3]"
+      },
+      "claim_b": "Doug notes that Coinbase moved higher above a Key Delta Strike and Call Wall on May 28th, with Call Notional Gamma dominant above that level.",
+      "evidence_b": {
+        "knowledge_id": "sgk_1df0c4c30b4d3b01",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": null,
+        "pointer": "sources/18693.json#body[6]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_84079691634af466",
+      "concept": "Call Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Going one layer deeper, the Call Wall holds as resistance for the S&P in 83% of trading sessions based on SpotGamma statistics, with 88% of the time the S&P closing below the Call Wall.",
+      "evidence_a": {
+        "knowledge_id": "sgk_67ce865afe25179c",
+        "lesson": "Call Wall",
+        "lesson_id": "18649",
+        "timestamp": "00:00:37.840–00:00:52.239",
+        "pointer": "sources/18649.json#transcript[3]"
+      },
+      "claim_b": "While the Call Wall did it’s job for the following week, PLTR ultimately surged above $180 in August.",
+      "evidence_b": {
+        "knowledge_id": "sgk_8f09d1ff8cd17341",
+        "lesson": "See Breakouts Before They Happen",
+        "lesson_id": "19068",
+        "timestamp": "00:00:46.960–00:00:55.680",
+        "pointer": "sources/19068.json#transcript[4]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_9109509a3c4bd969",
+      "concept": "Call Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "When a stock is within 1pct of the Call Wall, selling covered calls above the call wall expire worthless the majority of the time.",
+      "evidence_a": {
+        "knowledge_id": "sgk_c5b24d7fc5ae2f72",
+        "lesson": "Intermediate Trade Structures",
+        "lesson_id": "18691",
+        "timestamp": "00:00:15.065–00:00:27.510",
+        "pointer": "sources/18691.json#transcript[2]"
+      },
+      "claim_b": "As PLTR traded near $153 and approached the $155 Call Wall, short-term resistance would have typically kept the stock below the Call Wall.",
+      "evidence_b": {
+        "knowledge_id": "sgk_1358a81d61975451",
+        "lesson": "See Breakouts Before They Happen",
+        "lesson_id": "19068",
+        "timestamp": "00:00:08.160–00:00:20.320",
+        "pointer": "sources/19068.json#transcript[0]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_e49437e9e18eb0df",
+      "concept": "Call Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "In this scenario, we look for names which are (a) above it’s Hedge Wall (b) Within 2pct of the Absolute Gamma level, and (c) Between the Call Wall and Put Wall.",
+      "evidence_a": {
+        "knowledge_id": "sgk_512b1dd4afcd1449",
+        "lesson": "Advanced Trade Structures",
+        "lesson_id": "18692",
+        "timestamp": "00:00:24.640–00:00:38.559",
+        "pointer": "sources/18692.json#transcript[2]"
+      },
+      "claim_b": "As PLTR traded near $153 and approached the $155 Call Wall, short-term resistance would have typically kept the stock below the Call Wall.",
+      "evidence_b": {
+        "knowledge_id": "sgk_1358a81d61975451",
+        "lesson": "See Breakouts Before They Happen",
+        "lesson_id": "19068",
+        "timestamp": "00:00:08.160–00:00:20.320",
+        "pointer": "sources/19068.json#transcript[0]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_82de085f7c36d2cf",
+      "concept": "Call Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Doug notes that Coinbase moved higher above a Key Delta Strike and Call Wall on May 28th, with Call Notional Gamma dominant above that level.",
+      "evidence_a": {
+        "knowledge_id": "sgk_1df0c4c30b4d3b01",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": null,
+        "pointer": "sources/18693.json#body[6]"
+      },
+      "claim_b": "As PLTR traded near $153 and approached the $155 Call Wall, short-term resistance would have typically kept the stock below the Call Wall.",
+      "evidence_b": {
+        "knowledge_id": "sgk_1358a81d61975451",
+        "lesson": "See Breakouts Before They Happen",
+        "lesson_id": "19068",
+        "timestamp": "00:00:08.160–00:00:20.320",
+        "pointer": "sources/19068.json#transcript[0]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_809edefcae99d659",
+      "concept": "Resistance",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "It is the strongest level of resistance where sellers will enter the market, often providing a near term level where traders take profits, short stocks or sell options above this price.",
+      "evidence_a": {
+        "knowledge_id": "sgk_811dd91292b27c14",
+        "lesson": "Call Wall",
+        "lesson_id": "18649",
+        "timestamp": "00:00:11.759–00:00:25.760",
+        "pointer": "sources/18649.json#transcript[1]"
+      },
+      "claim_b": "As PLTR traded near $153 and approached the $155 Call Wall, short-term resistance would have typically kept the stock below the Call Wall.",
+      "evidence_b": {
+        "knowledge_id": "sgk_4c21a75ee688e457",
+        "lesson": "See Breakouts Before They Happen",
+        "lesson_id": "19068",
+        "timestamp": "00:00:08.160–00:00:20.320",
+        "pointer": "sources/19068.json#transcript[0]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_ae68b39b3028a5a6",
+      "concept": "Resistance",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "It is the strongest level of resistance where sellers will enter the market, often providing a near term level where traders take profits, short stocks or sell options above this price.",
+      "evidence_a": {
+        "knowledge_id": "sgk_811dd91292b27c14",
+        "lesson": "Call Wall",
+        "lesson_id": "18649",
+        "timestamp": "00:00:11.759–00:00:25.760",
+        "pointer": "sources/18649.json#transcript[1]"
+      },
+      "claim_b": "Case Studies: Below is a list of case studies where TRACE was instrumental in providing an edge when evaluating support, resistance, and volatility for the S&P 500.",
+      "evidence_b": {
+        "knowledge_id": "sgk_45a2ed73c83af024",
+        "lesson": "Resources: TRACE",
+        "lesson_id": "19152",
+        "timestamp": null,
+        "pointer": "sources/19152.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_785a6f3267fc743d",
+      "concept": "Resistance",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Going one layer deeper, the Call Wall holds as resistance for the S&P in 83% of trading sessions based on SpotGamma statistics, with 88% of the time the S&P closing below the Call Wall.",
+      "evidence_a": {
+        "knowledge_id": "sgk_ceccf273dd4ca7d4",
+        "lesson": "Call Wall",
+        "lesson_id": "18649",
+        "timestamp": "00:00:37.840–00:00:52.239",
+        "pointer": "sources/18649.json#transcript[3]"
+      },
+      "claim_b": "In this example, we saw the market unable to break out above the resistance created by the top end of the range on the GEX bars.",
+      "evidence_b": {
+        "knowledge_id": "sgk_248538e9ae078949",
+        "lesson": "Gamma in Action",
+        "lesson_id": "18701",
+        "timestamp": "00:00:31.840–00:00:43.239",
+        "pointer": "sources/18701.json#transcript[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_7dbfb1a49c089bf8",
+      "concept": "Resistance",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Going one layer deeper, the Call Wall holds as resistance for the S&P in 83% of trading sessions based on SpotGamma statistics, with 88% of the time the S&P closing below the Call Wall.",
+      "evidence_a": {
+        "knowledge_id": "sgk_ceccf273dd4ca7d4",
+        "lesson": "Call Wall",
+        "lesson_id": "18649",
+        "timestamp": "00:00:37.840–00:00:52.239",
+        "pointer": "sources/18649.json#transcript[3]"
+      },
+      "claim_b": "In this June 26th example, significant overhead selling pressure developed above 6,140 on SPX, creating a dynamic resistance zone that prevented the market from breaking higher.",
+      "evidence_b": {
+        "knowledge_id": "sgk_90f32a950417a3cc",
+        "lesson": "Charm in Action",
+        "lesson_id": "18703",
+        "timestamp": "00:00:18.640–00:00:32.239",
+        "pointer": "sources/18703.json#transcript[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_8618cd3188416335",
+      "concept": "Resistance",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "As PLTR traded near $153 and approached the $155 Call Wall, short-term resistance would have typically kept the stock below the Call Wall.",
+      "evidence_a": {
+        "knowledge_id": "sgk_4c21a75ee688e457",
+        "lesson": "See Breakouts Before They Happen",
+        "lesson_id": "19068",
+        "timestamp": "00:00:08.160–00:00:20.320",
+        "pointer": "sources/19068.json#transcript[0]"
+      },
+      "claim_b": "In this example, we saw the market unable to break out above the resistance created by the top end of the range on the GEX bars.",
+      "evidence_b": {
+        "knowledge_id": "sgk_248538e9ae078949",
+        "lesson": "Gamma in Action",
+        "lesson_id": "18701",
+        "timestamp": "00:00:31.840–00:00:43.239",
+        "pointer": "sources/18701.json#transcript[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_afcda907c33629a0",
+      "concept": "Resistance",
+      "axis": "above/below",
+      "category": "INSTRUMENT_DIFFERENCE",
+      "category_basis": "one claim about index/futures, the other about single stocks",
+      "claim_a": "As PLTR traded near $153 and approached the $155 Call Wall, short-term resistance would have typically kept the stock below the Call Wall.",
+      "evidence_a": {
+        "knowledge_id": "sgk_4c21a75ee688e457",
+        "lesson": "See Breakouts Before They Happen",
+        "lesson_id": "19068",
+        "timestamp": "00:00:08.160–00:00:20.320",
+        "pointer": "sources/19068.json#transcript[0]"
+      },
+      "claim_b": "In this June 26th example, significant overhead selling pressure developed above 6,140 on SPX, creating a dynamic resistance zone that prevented the market from breaking higher.",
+      "evidence_b": {
+        "knowledge_id": "sgk_90f32a950417a3cc",
+        "lesson": "Charm in Action",
+        "lesson_id": "18703",
+        "timestamp": "00:00:18.640–00:00:32.239",
+        "pointer": "sources/18703.json#transcript[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_801721ad5b14afc9",
+      "concept": "Resistance",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "In this example, we saw the market unable to break out above the resistance created by the top end of the range on the GEX bars.",
+      "evidence_a": {
+        "knowledge_id": "sgk_248538e9ae078949",
+        "lesson": "Gamma in Action",
+        "lesson_id": "18701",
+        "timestamp": "00:00:31.840–00:00:43.239",
+        "pointer": "sources/18701.json#transcript[2]"
+      },
+      "claim_b": "Case Studies: Below is a list of case studies where TRACE was instrumental in providing an edge when evaluating support, resistance, and volatility for the S&P 500.",
+      "evidence_b": {
+        "knowledge_id": "sgk_45a2ed73c83af024",
+        "lesson": "Resources: TRACE",
+        "lesson_id": "19152",
+        "timestamp": null,
+        "pointer": "sources/19152.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_1a4c5e980654944a",
+      "concept": "Resistance",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "In this June 26th example, significant overhead selling pressure developed above 6,140 on SPX, creating a dynamic resistance zone that prevented the market from breaking higher.",
+      "evidence_a": {
+        "knowledge_id": "sgk_90f32a950417a3cc",
+        "lesson": "Charm in Action",
+        "lesson_id": "18703",
+        "timestamp": "00:00:18.640–00:00:32.239",
+        "pointer": "sources/18703.json#transcript[1]"
+      },
+      "claim_b": "Case Studies: Below is a list of case studies where TRACE was instrumental in providing an edge when evaluating support, resistance, and volatility for the S&P 500.",
+      "evidence_b": {
+        "knowledge_id": "sgk_45a2ed73c83af024",
+        "lesson": "Resources: TRACE",
+        "lesson_id": "19152",
+        "timestamp": null,
+        "pointer": "sources/19152.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_c1049949b12ea9b4",
+      "concept": "Put Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "The Put Wall is the strongest level of support where buyers will enter the market, often providing a near term level where traders may want to take profits from short trades, enter stocks or sell options below this price.",
+      "evidence_a": {
+        "knowledge_id": "sgk_ea43c6a02f50e546",
+        "lesson": "Put Wall",
+        "lesson_id": "18650",
+        "timestamp": "00:00:07.919–00:00:24.160",
+        "pointer": "sources/18650.json#transcript[1]"
+      },
+      "claim_b": "In this scenario, we look for names which are (a) above it’s Hedge Wall (b) Within 2pct of the Absolute Gamma level, and (c) Between the Call Wall and Put Wall.",
+      "evidence_b": {
+        "knowledge_id": "sgk_e7bb8ed50d8b4201",
+        "lesson": "Advanced Trade Structures",
+        "lesson_id": "18692",
+        "timestamp": "00:00:24.640–00:00:38.559",
+        "pointer": "sources/18692.json#transcript[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_103e665b0f3f727b",
+      "concept": "Put Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "The Put Wall is the strongest level of support where buyers will enter the market, often providing a near term level where traders may want to take profits from short trades, enter stocks or sell options below this price.",
+      "evidence_a": {
+        "knowledge_id": "sgk_ea43c6a02f50e546",
+        "lesson": "Put Wall",
+        "lesson_id": "18650",
+        "timestamp": "00:00:07.919–00:00:24.160",
+        "pointer": "sources/18650.json#transcript[1]"
+      },
+      "claim_b": "between the 210 put wall and 270. It also showed that call notional gamma, the orange vertical bars, was dominant above the 230 key delta strike, but notional gamma, the blue vertical bars,",
+      "evidence_b": {
+        "knowledge_id": "sgk_968c203d5e67b76f",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:09:36.560–00:09:58.200",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[198]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_23651fe5e8d6a841",
+      "concept": "Put Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "The Put Wall is the strongest level of support where buyers will enter the market, often providing a near term level where traders may want to take profits from short trades, enter stocks or sell options below this price.",
+      "evidence_a": {
+        "knowledge_id": "sgk_ea43c6a02f50e546",
+        "lesson": "Put Wall",
+        "lesson_id": "18650",
+        "timestamp": "00:00:07.919–00:00:24.160",
+        "pointer": "sources/18650.json#transcript[1]"
+      },
+      "claim_b": "With the stock price above $9, and the Put Wall at $7, traders could have profited by selling the next expiry $8 by $7 put spread expiring the following Friday.",
+      "evidence_b": {
+        "knowledge_id": "sgk_e330743d4238c1ba",
+        "lesson": "Volatility Risk Premium",
+        "lesson_id": "18658",
+        "timestamp": null,
+        "pointer": "sources/18658.json#body[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_e901cabcd8be286b",
+      "concept": "Put Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Going one layer deeper, the Put Wall holds as support for the S&P in 89% of trading sessions based on SpotGamma statistics, with 93% of the time the S&P closing above the Put Wall.",
+      "evidence_a": {
+        "knowledge_id": "sgk_a530309511381f25",
+        "lesson": "Put Wall",
+        "lesson_id": "18650",
+        "timestamp": "00:00:36.239–00:00:51.760",
+        "pointer": "sources/18650.json#transcript[3]"
+      },
+      "claim_b": "Conversely, for names where your stock of interest is within 1pct of the Put Wall, statistically speaking, selling covered puts below the put wall will expire worthless the majority of the time.",
+      "evidence_b": {
+        "knowledge_id": "sgk_d618ba386f8b4eaa",
+        "lesson": "Intermediate Trade Structures",
+        "lesson_id": "18691",
+        "timestamp": "00:00:22.400–00:00:36.719",
+        "pointer": "sources/18691.json#transcript[3]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_ce9ecdbd558d6be1",
+      "concept": "Put Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Going one layer deeper, the Put Wall holds as support for the S&P in 89% of trading sessions based on SpotGamma statistics, with 93% of the time the S&P closing above the Put Wall.",
+      "evidence_a": {
+        "knowledge_id": "sgk_a530309511381f25",
+        "lesson": "Put Wall",
+        "lesson_id": "18650",
+        "timestamp": "00:00:36.239–00:00:51.760",
+        "pointer": "sources/18650.json#transcript[3]"
+      },
+      "claim_b": "When you see HIRO streaking downward toward a SpotGamma Put Wall and then flatlining or reversing at the Put Wall, this may be an ideal time to sell a 0DTE put spread below the Put Wall.",
+      "evidence_b": {
+        "knowledge_id": "sgk_7e1659908f7269b6",
+        "lesson": "Intermediate Trade Strategy",
+        "lesson_id": "18737",
+        "timestamp": "00:00:25.440–00:00:38.640",
+        "pointer": "sources/18737.json#transcript[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_a72c999f374af3c7",
+      "concept": "Put Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Conversely, for names where your stock of interest is within 1pct of the Put Wall, statistically speaking, selling covered puts below the put wall will expire worthless the majority of the time.",
+      "evidence_a": {
+        "knowledge_id": "sgk_d618ba386f8b4eaa",
+        "lesson": "Intermediate Trade Structures",
+        "lesson_id": "18691",
+        "timestamp": "00:00:22.400–00:00:36.719",
+        "pointer": "sources/18691.json#transcript[3]"
+      },
+      "claim_b": "In this scenario, we look for names which are (a) above it’s Hedge Wall (b) Within 2pct of the Absolute Gamma level, and (c) Between the Call Wall and Put Wall.",
+      "evidence_b": {
+        "knowledge_id": "sgk_e7bb8ed50d8b4201",
+        "lesson": "Advanced Trade Structures",
+        "lesson_id": "18692",
+        "timestamp": "00:00:24.640–00:00:38.559",
+        "pointer": "sources/18692.json#transcript[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_4f0a53c9fdcea025",
+      "concept": "Put Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Conversely, for names where your stock of interest is within 1pct of the Put Wall, statistically speaking, selling covered puts below the put wall will expire worthless the majority of the time.",
+      "evidence_a": {
+        "knowledge_id": "sgk_d618ba386f8b4eaa",
+        "lesson": "Intermediate Trade Structures",
+        "lesson_id": "18691",
+        "timestamp": "00:00:22.400–00:00:36.719",
+        "pointer": "sources/18691.json#transcript[3]"
+      },
+      "claim_b": "between the 210 put wall and 270. It also showed that call notional gamma, the orange vertical bars, was dominant above the 230 key delta strike, but notional gamma, the blue vertical bars,",
+      "evidence_b": {
+        "knowledge_id": "sgk_968c203d5e67b76f",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:09:36.560–00:09:58.200",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[198]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_2721b743dcb0f27f",
+      "concept": "Put Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Conversely, for names where your stock of interest is within 1pct of the Put Wall, statistically speaking, selling covered puts below the put wall will expire worthless the majority of the time.",
+      "evidence_a": {
+        "knowledge_id": "sgk_d618ba386f8b4eaa",
+        "lesson": "Intermediate Trade Structures",
+        "lesson_id": "18691",
+        "timestamp": "00:00:22.400–00:00:36.719",
+        "pointer": "sources/18691.json#transcript[3]"
+      },
+      "claim_b": "With the stock price above $9, and the Put Wall at $7, traders could have profited by selling the next expiry $8 by $7 put spread expiring the following Friday.",
+      "evidence_b": {
+        "knowledge_id": "sgk_e330743d4238c1ba",
+        "lesson": "Volatility Risk Premium",
+        "lesson_id": "18658",
+        "timestamp": null,
+        "pointer": "sources/18658.json#body[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_5647bebbdb4bed91",
+      "concept": "Put Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "In this scenario, we look for names which are (a) above it’s Hedge Wall (b) Within 2pct of the Absolute Gamma level, and (c) Between the Call Wall and Put Wall.",
+      "evidence_a": {
+        "knowledge_id": "sgk_e7bb8ed50d8b4201",
+        "lesson": "Advanced Trade Structures",
+        "lesson_id": "18692",
+        "timestamp": "00:00:24.640–00:00:38.559",
+        "pointer": "sources/18692.json#transcript[2]"
+      },
+      "claim_b": "When you see HIRO streaking downward toward a SpotGamma Put Wall and then flatlining or reversing at the Put Wall, this may be an ideal time to sell a 0DTE put spread below the Put Wall.",
+      "evidence_b": {
+        "knowledge_id": "sgk_7e1659908f7269b6",
+        "lesson": "Intermediate Trade Strategy",
+        "lesson_id": "18737",
+        "timestamp": "00:00:25.440–00:00:38.640",
+        "pointer": "sources/18737.json#transcript[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_7fede3d56af42deb",
+      "concept": "Put Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "between the 210 put wall and 270. It also showed that call notional gamma, the orange vertical bars, was dominant above the 230 key delta strike, but notional gamma, the blue vertical bars,",
+      "evidence_a": {
+        "knowledge_id": "sgk_968c203d5e67b76f",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:09:36.560–00:09:58.200",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[198]"
+      },
+      "claim_b": "When you see HIRO streaking downward toward a SpotGamma Put Wall and then flatlining or reversing at the Put Wall, this may be an ideal time to sell a 0DTE put spread below the Put Wall.",
+      "evidence_b": {
+        "knowledge_id": "sgk_7e1659908f7269b6",
+        "lesson": "Intermediate Trade Strategy",
+        "lesson_id": "18737",
+        "timestamp": "00:00:25.440–00:00:38.640",
+        "pointer": "sources/18737.json#transcript[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_abce4d9d3dab6990",
+      "concept": "Put Wall",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "With the stock price above $9, and the Put Wall at $7, traders could have profited by selling the next expiry $8 by $7 put spread expiring the following Friday.",
+      "evidence_a": {
+        "knowledge_id": "sgk_e330743d4238c1ba",
+        "lesson": "Volatility Risk Premium",
+        "lesson_id": "18658",
+        "timestamp": null,
+        "pointer": "sources/18658.json#body[2]"
+      },
+      "claim_b": "When you see HIRO streaking downward toward a SpotGamma Put Wall and then flatlining or reversing at the Put Wall, this may be an ideal time to sell a 0DTE put spread below the Put Wall.",
+      "evidence_b": {
+        "knowledge_id": "sgk_7e1659908f7269b6",
+        "lesson": "Intermediate Trade Strategy",
+        "lesson_id": "18737",
+        "timestamp": "00:00:25.440–00:00:38.640",
+        "pointer": "sources/18737.json#transcript[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_c234f32c67a354bd",
+      "concept": "Support",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Going one layer deeper, the Put Wall holds as support for the S&P in 89% of trading sessions based on SpotGamma statistics, with 93% of the time the S&P closing above the Put Wall.",
+      "evidence_a": {
+        "knowledge_id": "sgk_63323648167a31a6",
+        "lesson": "Put Wall",
+        "lesson_id": "18650",
+        "timestamp": "00:00:36.239–00:00:51.760",
+        "pointer": "sources/18650.json#transcript[3]"
+      },
+      "claim_b": "Case Studies: Below is a list of case studies where TRACE was instrumental in providing an edge when evaluating support, resistance, and volatility for the S&P 500.",
+      "evidence_b": {
+        "knowledge_id": "sgk_53e0e810ae2fb672",
+        "lesson": "Resources: TRACE",
+        "lesson_id": "19152",
+        "timestamp": null,
+        "pointer": "sources/19152.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_ff4097fad4660c64",
+      "concept": "Volatility",
+      "axis": "above/below",
+      "category": "REGIME_DEPENDENT",
+      "category_basis": "regime wording: \"negative gamma\" / \"below the volatility trigger\"",
+      "claim_a": "Drop below it, and the tone shifts: negative gamma sets in, volatility increases, and downside risk picks up.",
+      "evidence_a": {
+        "knowledge_id": "sgk_0e6793e88b1aecf8",
+        "lesson": "Vol Trigger",
+        "lesson_id": "18651",
+        "timestamp": "00:00:27.519–00:00:37.040",
+        "pointer": "sources/18651.json#transcript[2]"
+      },
+      "claim_b": "Trader Tip: On the SPX Historical Chart, look to see when the SPX is below the Volatility Trigger for higher volatility or above it for calmer market moves.",
+      "evidence_b": {
+        "knowledge_id": "sgk_2c00804e85104d77",
+        "lesson": "Spot Flow Shifts Before the Market Reacts",
+        "lesson_id": "17920",
+        "timestamp": null,
+        "pointer": "sources/17920.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_a0eae4bda1c891b3",
+      "concept": "Volatility",
+      "axis": "above/below",
+      "category": "REGIME_DEPENDENT",
+      "category_basis": "regime wording: \"negative gamma\" / \"\"",
+      "claim_a": "Drop below it, and the tone shifts: negative gamma sets in, volatility increases, and downside risk picks up.",
+      "evidence_a": {
+        "knowledge_id": "sgk_0e6793e88b1aecf8",
+        "lesson": "Vol Trigger",
+        "lesson_id": "18651",
+        "timestamp": "00:00:27.519–00:00:37.040",
+        "pointer": "sources/18651.json#transcript[2]"
+      },
+      "claim_b": "If you’re long the stock, you can look to sell out-of-the-money call options above the current price where volatility is elevated.",
+      "evidence_b": {
+        "knowledge_id": "sgk_8682ea0da05eb4f8",
+        "lesson": "Match Strategies to Volatility",
+        "lesson_id": "18902",
+        "timestamp": "00:00:39.600–00:00:48.800",
+        "pointer": "sources/18902.json#transcript[5]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_8a0d9d9ca25c5116",
+      "concept": "Volatility",
+      "axis": "higher/lower",
+      "category": "REGIME_DEPENDENT",
+      "category_basis": "regime wording: \"above the vol trigger\" / \"\"",
+      "claim_a": "One key statistic is that the amount of daily volatility below the Vol Trigger is nearly 40% higher than when above the Vol Trigger.",
+      "evidence_a": {
+        "knowledge_id": "sgk_b730df6612a7b270",
+        "lesson": "Vol Trigger",
+        "lesson_id": "18651",
+        "timestamp": "00:00:41.280–00:00:51.840",
+        "pointer": "sources/18651.json#transcript[4]"
+      },
+      "claim_b": "This strategy is most effective around event-driven scenarios—such as earnings releases or FDA approvals—when you believe actual volatility will be lower than what the market is expecting.",
+      "evidence_b": {
+        "knowledge_id": "sgk_93ba92e98f25d80f",
+        "lesson": "Trader Volatility Across Expirations",
+        "lesson_id": "18905",
+        "timestamp": "00:01:16.080–00:01:29.600",
+        "pointer": "sources/18905.json#transcript[10]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_d30a59131c876d76",
+      "concept": "Volatility",
+      "axis": "above/below",
+      "category": "REGIME_DEPENDENT",
+      "category_basis": "regime wording: \"below the volatility trigger\" / \"\"",
+      "claim_a": "Trader Tip: On the SPX Historical Chart, look to see when the SPX is below the Volatility Trigger for higher volatility or above it for calmer market moves.",
+      "evidence_a": {
+        "knowledge_id": "sgk_2c00804e85104d77",
+        "lesson": "Spot Flow Shifts Before the Market Reacts",
+        "lesson_id": "17920",
+        "timestamp": null,
+        "pointer": "sources/17920.json#body[1]"
+      },
+      "claim_b": "Then, below the SpotGamma scanners you can see a list of actionable stock scanners that help surface directional and volatility-based setups.",
+      "evidence_b": {
+        "knowledge_id": "sgk_3e339f7cee4eac92",
+        "lesson": "Overview of Scanners",
+        "lesson_id": "18655",
+        "timestamp": "00:00:29.359–00:00:40.960",
+        "pointer": "sources/18655.json#transcript[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_1428d07d1bea7d1a",
+      "concept": "Volatility",
+      "axis": "above/below",
+      "category": "REGIME_DEPENDENT",
+      "category_basis": "regime wording: \"below the volatility trigger\" / \"\"",
+      "claim_a": "Trader Tip: On the SPX Historical Chart, look to see when the SPX is below the Volatility Trigger for higher volatility or above it for calmer market moves.",
+      "evidence_a": {
+        "knowledge_id": "sgk_2c00804e85104d77",
+        "lesson": "Spot Flow Shifts Before the Market Reacts",
+        "lesson_id": "17920",
+        "timestamp": null,
+        "pointer": "sources/17920.json#body[1]"
+      },
+      "claim_b": "Case Studies: The below case studies relied on Compass to understand the market’s outlook for volatility and directional bias for the name traded.",
+      "evidence_b": {
+        "knowledge_id": "sgk_5d0631428739b100",
+        "lesson": "Resources: Scanners",
+        "lesson_id": "19148",
+        "timestamp": null,
+        "pointer": "sources/19148.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_8704e1e4ea8fb5ed",
+      "concept": "Volatility",
+      "axis": "above/below",
+      "category": "REGIME_DEPENDENT",
+      "category_basis": "regime wording: \"below the volatility trigger\" / \"\"",
+      "claim_a": "Trader Tip: On the SPX Historical Chart, look to see when the SPX is below the Volatility Trigger for higher volatility or above it for calmer market moves.",
+      "evidence_a": {
+        "knowledge_id": "sgk_2c00804e85104d77",
+        "lesson": "Spot Flow Shifts Before the Market Reacts",
+        "lesson_id": "17920",
+        "timestamp": null,
+        "pointer": "sources/17920.json#body[1]"
+      },
+      "claim_b": "Case Studies: Below is a list of case studies where TRACE was instrumental in providing an edge when evaluating support, resistance, and volatility for the S&P 500.",
+      "evidence_b": {
+        "knowledge_id": "sgk_fb066d87cd37b86e",
+        "lesson": "Resources: TRACE",
+        "lesson_id": "19152",
+        "timestamp": null,
+        "pointer": "sources/19152.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_038c39d30b4a399e",
+      "concept": "Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Trader Tip: The composite view green zones show where calls tend to be less volatile, while red zones show where puts dominate and volatility runs higher Always check where the Call Wall and Put Wall sit for your stock of interest.",
+      "evidence_a": {
+        "knowledge_id": "sgk_a51ac11f5f60ad79",
+        "lesson": "Main Chart",
+        "lesson_id": "18686",
+        "timestamp": null,
+        "pointer": "sources/18686.json#body[0]"
+      },
+      "claim_b": "This strategy is most effective around event-driven scenarios—such as earnings releases or FDA approvals—when you believe actual volatility will be lower than what the market is expecting.",
+      "evidence_b": {
+        "knowledge_id": "sgk_93ba92e98f25d80f",
+        "lesson": "Trader Volatility Across Expirations",
+        "lesson_id": "18905",
+        "timestamp": "00:01:16.080–00:01:29.600",
+        "pointer": "sources/18905.json#transcript[10]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_fa86af55a4273c9e",
+      "concept": "Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "levels. A high SG acceleration indicator indicates G gamma changes more rapidly at that price level. It also indicates higher expected volatility. The SG acceleration indicator is shown",
+      "evidence_a": {
+        "knowledge_id": "sgk_f521d40c487a169d",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:05:36.240–00:05:55.600",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[120]"
+      },
+      "claim_b": "This strategy is most effective around event-driven scenarios—such as earnings releases or FDA approvals—when you believe actual volatility will be lower than what the market is expecting.",
+      "evidence_b": {
+        "knowledge_id": "sgk_93ba92e98f25d80f",
+        "lesson": "Trader Volatility Across Expirations",
+        "lesson_id": "18905",
+        "timestamp": "00:01:16.080–00:01:29.600",
+        "pointer": "sources/18905.json#transcript[10]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_be7a0b5306654cc1",
+      "concept": "Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "steeper or more vertical a line, the higher the rate of change of gamma and volatility at that level. The risk reversal chart shows the difference in implied volatility or IV",
+      "evidence_a": {
+        "knowledge_id": "sgk_d0c7860b0cbebb20",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:06:18.560–00:06:38.080",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[134]"
+      },
+      "claim_b": "This strategy is most effective around event-driven scenarios—such as earnings releases or FDA approvals—when you believe actual volatility will be lower than what the market is expecting.",
+      "evidence_b": {
+        "knowledge_id": "sgk_93ba92e98f25d80f",
+        "lesson": "Trader Volatility Across Expirations",
+        "lesson_id": "18905",
+        "timestamp": "00:01:16.080–00:01:29.600",
+        "pointer": "sources/18905.json#transcript[10]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_5a0dd92f565e7285",
+      "concept": "Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "First, the Gamma lens shows you which strikes or zones will have higher realized volatility vs.",
+      "evidence_a": {
+        "knowledge_id": "sgk_b9befaff8c7a6e59",
+        "lesson": "Synthetic OI - Prepare for Intraday Volatility",
+        "lesson_id": "18695",
+        "timestamp": "00:00:33.280–00:00:41.920",
+        "pointer": "sources/18695.json#transcript[3]"
+      },
+      "claim_b": "This strategy is most effective around event-driven scenarios—such as earnings releases or FDA approvals—when you believe actual volatility will be lower than what the market is expecting.",
+      "evidence_b": {
+        "knowledge_id": "sgk_93ba92e98f25d80f",
+        "lesson": "Trader Volatility Across Expirations",
+        "lesson_id": "18905",
+        "timestamp": "00:01:16.080–00:01:29.600",
+        "pointer": "sources/18905.json#transcript[10]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_49a4c266131c1127",
+      "concept": "Volatility",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Then, below the SpotGamma scanners you can see a list of actionable stock scanners that help surface directional and volatility-based setups.",
+      "evidence_a": {
+        "knowledge_id": "sgk_3e339f7cee4eac92",
+        "lesson": "Overview of Scanners",
+        "lesson_id": "18655",
+        "timestamp": "00:00:29.359–00:00:40.960",
+        "pointer": "sources/18655.json#transcript[2]"
+      },
+      "claim_b": "If you’re long the stock, you can look to sell out-of-the-money call options above the current price where volatility is elevated.",
+      "evidence_b": {
+        "knowledge_id": "sgk_8682ea0da05eb4f8",
+        "lesson": "Match Strategies to Volatility",
+        "lesson_id": "18902",
+        "timestamp": "00:00:39.600–00:00:48.800",
+        "pointer": "sources/18902.json#transcript[5]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_980b5c1e66f6cc02",
+      "concept": "Volatility",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Case Studies: The below case studies relied on Compass to understand the market’s outlook for volatility and directional bias for the name traded.",
+      "evidence_a": {
+        "knowledge_id": "sgk_5d0631428739b100",
+        "lesson": "Resources: Scanners",
+        "lesson_id": "19148",
+        "timestamp": null,
+        "pointer": "sources/19148.json#body[1]"
+      },
+      "claim_b": "If you’re long the stock, you can look to sell out-of-the-money call options above the current price where volatility is elevated.",
+      "evidence_b": {
+        "knowledge_id": "sgk_8682ea0da05eb4f8",
+        "lesson": "Match Strategies to Volatility",
+        "lesson_id": "18902",
+        "timestamp": "00:00:39.600–00:00:48.800",
+        "pointer": "sources/18902.json#transcript[5]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_32bd219c1501cada",
+      "concept": "Volatility",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "If you’re long the stock, you can look to sell out-of-the-money call options above the current price where volatility is elevated.",
+      "evidence_a": {
+        "knowledge_id": "sgk_8682ea0da05eb4f8",
+        "lesson": "Match Strategies to Volatility",
+        "lesson_id": "18902",
+        "timestamp": "00:00:39.600–00:00:48.800",
+        "pointer": "sources/18902.json#transcript[5]"
+      },
+      "claim_b": "Case Studies: Below is a list of case studies where TRACE was instrumental in providing an edge when evaluating support, resistance, and volatility for the S&P 500.",
+      "evidence_b": {
+        "knowledge_id": "sgk_fb066d87cd37b86e",
+        "lesson": "Resources: TRACE",
+        "lesson_id": "19152",
+        "timestamp": null,
+        "pointer": "sources/19152.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_23da2b783db75089",
+      "concept": "Volatility",
+      "axis": "higher/lower",
+      "category": "REGIME_DEPENDENT",
+      "category_basis": "regime wording: \"\" / \"negative gamma\"",
+      "claim_a": "This strategy is most effective around event-driven scenarios—such as earnings releases or FDA approvals—when you believe actual volatility will be lower than what the market is expecting.",
+      "evidence_a": {
+        "knowledge_id": "sgk_93ba92e98f25d80f",
+        "lesson": "Trader Volatility Across Expirations",
+        "lesson_id": "18905",
+        "timestamp": "00:01:16.080–00:01:29.600",
+        "pointer": "sources/18905.json#transcript[10]"
+      },
+      "claim_b": "As for the negative gamma zones, seen here in red, these are characterized by higher realized volatility and sharper price action.",
+      "evidence_b": {
+        "knowledge_id": "sgk_524de08f22c59786",
+        "lesson": "Main Chart",
+        "lesson_id": "18699",
+        "timestamp": "00:01:16.880–00:01:27.480",
+        "pointer": "sources/18699.json#transcript[10]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_7a235f96cb62364b",
+      "concept": "Calls",
+      "axis": "buy/sell",
+      "category": "WORDING_ONLY",
+      "category_basis": "one statement already contains both poles of the axis",
+      "claim_a": "If you buy 10 AMZN calls and the market maker sells them to you through your brokerage platform, the market maker will next buy a specific number of shares of stock to reduce or eliminate their directional risk.",
+      "evidence_a": {
+        "knowledge_id": "sgk_e700e0dde0d42210",
+        "lesson": "Market Makers",
+        "lesson_id": "18646",
+        "timestamp": "00:00:51.440–00:01:04.320",
+        "pointer": "sources/18646.json#transcript[6]"
+      },
+      "claim_b": "If the positioning is bullish, you might choose to buy calls or sell a put spread.",
+      "evidence_b": {
+        "knowledge_id": "sgk_29934f0659ab08d4",
+        "lesson": "Trading Approach",
+        "lesson_id": "18689",
+        "timestamp": "00:00:34.320–00:00:40.960",
+        "pointer": "sources/18689.json#transcript[3]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_36b902966186880a",
+      "concept": "Calls",
+      "axis": "buy/sell",
+      "category": "WORDING_ONLY",
+      "category_basis": "one statement already contains both poles of the axis",
+      "claim_a": "If you buy 10 AMZN calls and the market maker sells them to you through your brokerage platform, the market maker will next buy a specific number of shares of stock to reduce or eliminate their directional risk.",
+      "evidence_a": {
+        "knowledge_id": "sgk_e700e0dde0d42210",
+        "lesson": "Market Makers",
+        "lesson_id": "18646",
+        "timestamp": "00:00:51.440–00:01:04.320",
+        "pointer": "sources/18646.json#transcript[6]"
+      },
+      "claim_b": "If you’re long the stock, you can look to sell out-of-the-money call options above the current price where volatility is elevated.",
+      "evidence_b": {
+        "knowledge_id": "sgk_5c1eefe00cada94f",
+        "lesson": "Match Strategies to Volatility",
+        "lesson_id": "18902",
+        "timestamp": "00:00:39.600–00:00:48.800",
+        "pointer": "sources/18902.json#transcript[5]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_266b48605b83152f",
+      "concept": "Index",
+      "axis": "support/resistance",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis support/resistance: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "stocks and indices, you can spot key resistance zones before the market opens — and trade with more confidence, timing, and precision.",
+      "evidence_a": {
+        "knowledge_id": "sgk_06444064693d158d",
+        "lesson": "Call Wall",
+        "lesson_id": "18649",
+        "timestamp": null,
+        "pointer": "sources/18649.json#body[4]"
+      },
+      "claim_b": "so, it’s a key area where buyers will support the S&P 500.",
+      "evidence_b": {
+        "knowledge_id": "sgk_8d4df2f32f493cf8",
+        "lesson": "Put Wall",
+        "lesson_id": "18650",
+        "timestamp": "00:00:59.039–00:01:03.600",
+        "pointer": "sources/18650.json#transcript[5]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_ddfe86aeee87f035",
+      "concept": "Index",
+      "axis": "support/resistance",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis support/resistance: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "stocks and indices, you can spot key resistance zones before the market opens — and trade with more confidence, timing, and precision.",
+      "evidence_a": {
+        "knowledge_id": "sgk_06444064693d158d",
+        "lesson": "Call Wall",
+        "lesson_id": "18649",
+        "timestamp": null,
+        "pointer": "sources/18649.json#body[4]"
+      },
+      "claim_b": "In the following trading session, the SPX next collapsed and only found support at the 5,000 support level.",
+      "evidence_b": {
+        "knowledge_id": "sgk_6a436ce8985aad8e",
+        "lesson": "Real Calls, Real Wins",
+        "lesson_id": "18102",
+        "timestamp": "00:00:25.840–00:00:35.200",
+        "pointer": "sources/18102.json#transcript[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_61acdc74ccd03db2",
+      "concept": "Index",
+      "axis": "support/resistance",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis support/resistance: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "stocks and indices, you can spot key resistance zones before the market opens — and trade with more confidence, timing, and precision.",
+      "evidence_a": {
+        "knowledge_id": "sgk_06444064693d158d",
+        "lesson": "Call Wall",
+        "lesson_id": "18649",
+        "timestamp": null,
+        "pointer": "sources/18649.json#body[4]"
+      },
+      "claim_b": "Support Center: Review each individual chart from the SpotGamma Indices page to support how you trade the S&P 500, Nasdaq, or Russell.",
+      "evidence_b": {
+        "knowledge_id": "sgk_a2fabc5321fb91ed",
+        "lesson": "Resources: Indices",
+        "lesson_id": "19146",
+        "timestamp": null,
+        "pointer": "sources/19146.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_52a386d52eba70c2",
+      "concept": "Index",
+      "axis": "support/resistance",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis support/resistance: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "so, it’s a key area where buyers will support the S&P 500.",
+      "evidence_a": {
+        "knowledge_id": "sgk_8d4df2f32f493cf8",
+        "lesson": "Put Wall",
+        "lesson_id": "18650",
+        "timestamp": "00:00:59.039–00:01:03.600",
+        "pointer": "sources/18650.json#transcript[5]"
+      },
+      "claim_b": "After we watched 5,900 on the SPX provide resistance on May 13th, as we expected and wrote about ahead of time in the Macro Theme, the market continued to trade sideways throughout the rest of May and closed near 5,900 two weeks later.",
+      "evidence_b": {
+        "knowledge_id": "sgk_b48d0b484e577c5f",
+        "lesson": "Winning trade Example",
+        "lesson_id": "18100",
+        "timestamp": "00:00:38.719–00:00:55.280",
+        "pointer": "sources/18100.json#transcript[4]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_f5fe045a583ec018",
+      "concept": "Index",
+      "axis": "support/resistance",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis support/resistance: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "so, it’s a key area where buyers will support the S&P 500.",
+      "evidence_a": {
+        "knowledge_id": "sgk_8d4df2f32f493cf8",
+        "lesson": "Put Wall",
+        "lesson_id": "18650",
+        "timestamp": "00:00:59.039–00:01:03.600",
+        "pointer": "sources/18650.json#transcript[5]"
+      },
+      "claim_b": "In this June 26th example, significant overhead selling pressure developed above 6,140 on SPX, creating a dynamic resistance zone that prevented the market from breaking higher.",
+      "evidence_b": {
+        "knowledge_id": "sgk_8c115ca631b7142f",
+        "lesson": "Charm in Action",
+        "lesson_id": "18703",
+        "timestamp": "00:00:18.640–00:00:32.239",
+        "pointer": "sources/18703.json#transcript[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_8b040ee77405ad5d",
+      "concept": "Index",
+      "axis": "support/resistance",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis support/resistance: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "stocks and indices, you can spot key resistance zones before the market opens — and trade with more confidence, timing, and precision.",
+      "evidence_a": {
+        "knowledge_id": "sgk_95c82b0b5c9ff5a4",
+        "lesson": "Put Wall",
+        "lesson_id": "18650",
+        "timestamp": null,
+        "pointer": "sources/18650.json#body[4]"
+      },
+      "claim_b": "In the following trading session, the SPX next collapsed and only found support at the 5,000 support level.",
+      "evidence_b": {
+        "knowledge_id": "sgk_6a436ce8985aad8e",
+        "lesson": "Real Calls, Real Wins",
+        "lesson_id": "18102",
+        "timestamp": "00:00:25.840–00:00:35.200",
+        "pointer": "sources/18102.json#transcript[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_454ffca6b2af09db",
+      "concept": "Index",
+      "axis": "support/resistance",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis support/resistance: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "stocks and indices, you can spot key resistance zones before the market opens — and trade with more confidence, timing, and precision.",
+      "evidence_a": {
+        "knowledge_id": "sgk_95c82b0b5c9ff5a4",
+        "lesson": "Put Wall",
+        "lesson_id": "18650",
+        "timestamp": null,
+        "pointer": "sources/18650.json#body[4]"
+      },
+      "claim_b": "Support Center: Review each individual chart from the SpotGamma Indices page to support how you trade the S&P 500, Nasdaq, or Russell.",
+      "evidence_b": {
+        "knowledge_id": "sgk_a2fabc5321fb91ed",
+        "lesson": "Resources: Indices",
+        "lesson_id": "19146",
+        "timestamp": null,
+        "pointer": "sources/19146.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_869722e1fe5c756e",
+      "concept": "Index",
+      "axis": "support/resistance",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis support/resistance: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "After we watched 5,900 on the SPX provide resistance on May 13th, as we expected and wrote about ahead of time in the Macro Theme, the market continued to trade sideways throughout the rest of May and closed near 5,900 two weeks later.",
+      "evidence_a": {
+        "knowledge_id": "sgk_b48d0b484e577c5f",
+        "lesson": "Winning trade Example",
+        "lesson_id": "18100",
+        "timestamp": "00:00:38.719–00:00:55.280",
+        "pointer": "sources/18100.json#transcript[4]"
+      },
+      "claim_b": "In the following trading session, the SPX next collapsed and only found support at the 5,000 support level.",
+      "evidence_b": {
+        "knowledge_id": "sgk_6a436ce8985aad8e",
+        "lesson": "Real Calls, Real Wins",
+        "lesson_id": "18102",
+        "timestamp": "00:00:25.840–00:00:35.200",
+        "pointer": "sources/18102.json#transcript[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_ff846fa188895fe1",
+      "concept": "Index",
+      "axis": "support/resistance",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis support/resistance: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "After we watched 5,900 on the SPX provide resistance on May 13th, as we expected and wrote about ahead of time in the Macro Theme, the market continued to trade sideways throughout the rest of May and closed near 5,900 two weeks later.",
+      "evidence_a": {
+        "knowledge_id": "sgk_b48d0b484e577c5f",
+        "lesson": "Winning trade Example",
+        "lesson_id": "18100",
+        "timestamp": "00:00:38.719–00:00:55.280",
+        "pointer": "sources/18100.json#transcript[4]"
+      },
+      "claim_b": "Support Center: Review each individual chart from the SpotGamma Indices page to support how you trade the S&P 500, Nasdaq, or Russell.",
+      "evidence_b": {
+        "knowledge_id": "sgk_a2fabc5321fb91ed",
+        "lesson": "Resources: Indices",
+        "lesson_id": "19146",
+        "timestamp": null,
+        "pointer": "sources/19146.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_252155249c905769",
+      "concept": "Index",
+      "axis": "support/resistance",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis support/resistance: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "In the following trading session, the SPX next collapsed and only found support at the 5,000 support level.",
+      "evidence_a": {
+        "knowledge_id": "sgk_6a436ce8985aad8e",
+        "lesson": "Real Calls, Real Wins",
+        "lesson_id": "18102",
+        "timestamp": "00:00:25.840–00:00:35.200",
+        "pointer": "sources/18102.json#transcript[2]"
+      },
+      "claim_b": "In this June 26th example, significant overhead selling pressure developed above 6,140 on SPX, creating a dynamic resistance zone that prevented the market from breaking higher.",
+      "evidence_b": {
+        "knowledge_id": "sgk_8c115ca631b7142f",
+        "lesson": "Charm in Action",
+        "lesson_id": "18703",
+        "timestamp": "00:00:18.640–00:00:32.239",
+        "pointer": "sources/18703.json#transcript[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_e703ffbf1387ae2d",
+      "concept": "Index",
+      "axis": "above/below",
+      "category": "REGIME_DEPENDENT",
+      "category_basis": "regime wording: \"below the volatility trigger\" / \"\"",
+      "claim_a": "Trader Tip: On the SPX Historical Chart, look to see when the SPX is below the Volatility Trigger for higher volatility or above it for calmer market moves.",
+      "evidence_a": {
+        "knowledge_id": "sgk_9bf4ba1ba8b1db1f",
+        "lesson": "Spot Flow Shifts Before the Market Reacts",
+        "lesson_id": "17920",
+        "timestamp": null,
+        "pointer": "sources/17920.json#body[1]"
+      },
+      "claim_b": "Case Studies: Below is a list of case studies where TRACE was instrumental in providing an edge when evaluating support, resistance, and volatility for the S&P 500.",
+      "evidence_b": {
+        "knowledge_id": "sgk_f829215914bc8b2d",
+        "lesson": "Resources: TRACE",
+        "lesson_id": "19152",
+        "timestamp": null,
+        "pointer": "sources/19152.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_15598faa4f75ab5c",
+      "concept": "Index",
+      "axis": "support/resistance",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis support/resistance: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Support Center: Review each individual chart from the SpotGamma Indices page to support how you trade the S&P 500, Nasdaq, or Russell.",
+      "evidence_a": {
+        "knowledge_id": "sgk_a2fabc5321fb91ed",
+        "lesson": "Resources: Indices",
+        "lesson_id": "19146",
+        "timestamp": null,
+        "pointer": "sources/19146.json#body[1]"
+      },
+      "claim_b": "In this June 26th example, significant overhead selling pressure developed above 6,140 on SPX, creating a dynamic resistance zone that prevented the market from breaking higher.",
+      "evidence_b": {
+        "knowledge_id": "sgk_8c115ca631b7142f",
+        "lesson": "Charm in Action",
+        "lesson_id": "18703",
+        "timestamp": "00:00:18.640–00:00:32.239",
+        "pointer": "sources/18703.json#transcript[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_20bbf5d4702792a7",
+      "concept": "Index",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "In this June 26th example, significant overhead selling pressure developed above 6,140 on SPX, creating a dynamic resistance zone that prevented the market from breaking higher.",
+      "evidence_a": {
+        "knowledge_id": "sgk_8c115ca631b7142f",
+        "lesson": "Charm in Action",
+        "lesson_id": "18703",
+        "timestamp": "00:00:18.640–00:00:32.239",
+        "pointer": "sources/18703.json#transcript[1]"
+      },
+      "claim_b": "Case Studies: Below is a list of case studies where TRACE was instrumental in providing an edge when evaluating support, resistance, and volatility for the S&P 500.",
+      "evidence_b": {
+        "knowledge_id": "sgk_f829215914bc8b2d",
+        "lesson": "Resources: TRACE",
+        "lesson_id": "19152",
+        "timestamp": null,
+        "pointer": "sources/19152.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_86eb0d558743aee5",
+      "concept": "Equity Hub",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "from equity hub showed more call notional gamma that's the orange curve than put notional gamma the blue curve above the 230 key delta strike that's the bar with a green label in the middle",
+      "evidence_a": {
+        "knowledge_id": "sgk_826d944807aaf0f2",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:09:07.839–00:09:24.800",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[188]"
+      },
+      "claim_b": "Case Studies: Below is a list of case studies that leveraged Equity Hub to help evaluate the trade.",
+      "evidence_b": {
+        "knowledge_id": "sgk_248c552334e7fba7",
+        "lesson": "Resources: Equity Hub",
+        "lesson_id": "19147",
+        "timestamp": null,
+        "pointer": "sources/19147.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_b22e389da5c928c4",
+      "concept": "Market Regime",
+      "axis": "above/below",
+      "category": "REGIME_DEPENDENT",
+      "category_basis": "regime wording: \"negative gamma\" / \"negative gamma\"",
+      "claim_a": "Drop below it, and the tone shifts: negative gamma sets in, volatility increases, and downside risk picks up.",
+      "evidence_a": {
+        "knowledge_id": "sgk_433da325cde4b699",
+        "lesson": "Vol Trigger",
+        "lesson_id": "18651",
+        "timestamp": "00:00:27.519–00:00:37.040",
+        "pointer": "sources/18651.json#transcript[2]"
+      },
+      "claim_b": "We admittedly thought that would be more of a ‘late May’ test, not so much an ‘early May’ test — but here we are… The lack of negative gamma ‘above 5900’ infers market makers have less to buy into a rally.… This potential topping zone comes",
+      "evidence_b": {
+        "knowledge_id": "sgk_346d82be485101ef",
+        "lesson": "Winning trade Example",
+        "lesson_id": "18100",
+        "timestamp": "00:00:22.480–00:00:41.360",
+        "pointer": "sources/18100.json#transcript[3]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_f446be5a85a2dc5e",
+      "concept": "Market Regime",
+      "axis": "buy/sell",
+      "category": "REGIME_DEPENDENT",
+      "category_basis": "regime wording: \"negative gamma\" / \"positive gamma\"",
+      "claim_a": "We admittedly thought that would be more of a ‘late May’ test, not so much an ‘early May’ test — but here we are… The lack of negative gamma ‘above 5900’ infers market makers have less to buy into a rally.… This potential topping zone comes",
+      "evidence_a": {
+        "knowledge_id": "sgk_346d82be485101ef",
+        "lesson": "Winning trade Example",
+        "lesson_id": "18100",
+        "timestamp": "00:00:22.480–00:00:41.360",
+        "pointer": "sources/18100.json#transcript[3]"
+      },
+      "claim_b": "Look to sell covered premium in positive gamma environments where options are providing more stability.",
+      "evidence_b": {
+        "knowledge_id": "sgk_059020d4704417a0",
+        "lesson": "Trading Approach",
+        "lesson_id": "18700",
+        "timestamp": null,
+        "pointer": "sources/18700.json#body[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_240f3664685f8f88",
+      "concept": "Market Regime",
+      "axis": "support/resistance",
+      "category": "REGIME_DEPENDENT",
+      "category_basis": "regime wording: \"negative gamma\" / \"positive gamma\"",
+      "claim_a": "“When we check the TRACE map this AM, we see lots of negative gamma across the whole strike range, with the only significant support level at 5,000 (that’s not a typo).”",
+      "evidence_a": {
+        "knowledge_id": "sgk_5d878b12c83c54b7",
+        "lesson": "Real Calls, Real Wins",
+        "lesson_id": "18102",
+        "timestamp": "00:00:16.560–00:00:28.240",
+        "pointer": "sources/18102.json#transcript[1]"
+      },
+      "claim_b": "level. The call wall is the strike with the largest net positive gamma. It can act as resistance since market makers will most likely have to increase delta",
+      "evidence_b": {
+        "knowledge_id": "sgk_7fc2966b4d943230",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:04:59.440–00:05:13.120",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[107]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_9fc1624ffa9ad719",
+      "concept": "Market Regime",
+      "axis": "support/resistance",
+      "category": "REGIME_DEPENDENT",
+      "category_basis": "regime wording: \"negative gamma\" / \"positive gamma\"",
+      "claim_a": "“When we check the TRACE map this AM, we see lots of negative gamma across the whole strike range, with the only significant support level at 5,000 (that’s not a typo).”",
+      "evidence_a": {
+        "knowledge_id": "sgk_5d878b12c83c54b7",
+        "lesson": "Real Calls, Real Wins",
+        "lesson_id": "18102",
+        "timestamp": "00:00:16.560–00:00:28.240",
+        "pointer": "sources/18102.json#transcript[1]"
+      },
+      "claim_b": "Trader Tip: As a stock approaches a high positive gamma area, expect increased resistance and a potential reversal.",
+      "evidence_b": {
+        "knowledge_id": "sgk_3bfbd66baee363a3",
+        "lesson": "Synthetic OI - Track Hedging Flows in Based on Dealer Positioning",
+        "lesson_id": "18694",
+        "timestamp": null,
+        "pointer": "sources/18694.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_a3dc0b47c2e78cf5",
+      "concept": "Market Regime",
+      "axis": "support/resistance",
+      "category": "REGIME_DEPENDENT",
+      "category_basis": "regime wording: \"negative gamma\" / \"positive gamma\"",
+      "claim_a": "hedging at this level. The put wall is the strike with largest net negative gamma. It can act as support. There are variety of charts available in equity hub. They're also proprietary to",
+      "evidence_a": {
+        "knowledge_id": "sgk_8b274cf034f1c859",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:05:09.919–00:05:28.479",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[111]"
+      },
+      "claim_b": "Trader Tip: As a stock approaches a high positive gamma area, expect increased resistance and a potential reversal.",
+      "evidence_b": {
+        "knowledge_id": "sgk_3bfbd66baee363a3",
+        "lesson": "Synthetic OI - Track Hedging Flows in Based on Dealer Positioning",
+        "lesson_id": "18694",
+        "timestamp": null,
+        "pointer": "sources/18694.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_ae5270d824da7062",
+      "concept": "Market Regime",
+      "axis": "higher/lower",
+      "category": "REGIME_DEPENDENT",
+      "category_basis": "regime wording: \"positive gamma\" / \"positive gamma\"",
+      "claim_a": "The positive gamma zones, seen here in dark blue, are characterized by lower volatility.",
+      "evidence_a": {
+        "knowledge_id": "sgk_8d63f3aba6a49b72",
+        "lesson": "Main Chart",
+        "lesson_id": "18699",
+        "timestamp": "00:01:12.400–00:01:19.000",
+        "pointer": "sources/18699.json#transcript[9]"
+      },
+      "claim_b": "This shows where the market reflects zones of positive gamma and low volatility in blue or negative gamma and higher volatility in red.",
+      "evidence_b": {
+        "knowledge_id": "sgk_033788627199adbd",
+        "lesson": "Trading Approach",
+        "lesson_id": "18700",
+        "timestamp": "00:00:24.920–00:00:36.160",
+        "pointer": "sources/18700.json#transcript[3]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_0af5b853e52ea8d9",
+      "concept": "Scanners",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "The first of two scanners identifies stocks that are most likely to squeeze higher, meaning names that could move sharply upward due to short covering or positioning imbalances, within the Squeeze Candidates table.",
+      "evidence_a": {
+        "knowledge_id": "sgk_b66cc306b82643fe",
+        "lesson": "Data Into Direction",
+        "lesson_id": "19013",
+        "timestamp": "00:01:41.280–00:01:52.960",
+        "pointer": "sources/19013.json#transcript[12]"
+      },
+      "claim_b": "by applying the central viewing page, lower data tables, and SpotGamma scanners to your watchlist.",
+      "evidence_b": {
+        "knowledge_id": "sgk_9313055a3376936a",
+        "lesson": "Layout",
+        "lesson_id": "18684",
+        "timestamp": "00:00:54.320–00:01:00.960",
+        "pointer": "sources/18684.json#transcript[6]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_8ab328710b35b2c5",
+      "concept": "Scanners",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "The first of two scanners identifies stocks that are most likely to squeeze higher, meaning names that could move sharply upward due to short covering or positioning imbalances, within the Squeeze Candidates table.",
+      "evidence_a": {
+        "knowledge_id": "sgk_b66cc306b82643fe",
+        "lesson": "Data Into Direction",
+        "lesson_id": "19013",
+        "timestamp": "00:01:41.280–00:01:52.960",
+        "pointer": "sources/19013.json#transcript[12]"
+      },
+      "claim_b": "Lastly, before we unpack each tool individually, you can scroll lower to see all the key metrics for any name flagged within Compass or Scanners to find names that fit your trading approach.",
+      "evidence_b": {
+        "knowledge_id": "sgk_aa1af29623afb80d",
+        "lesson": "Overview of Scanners",
+        "lesson_id": "18655",
+        "timestamp": "00:00:38.320–00:00:51.600",
+        "pointer": "sources/18655.json#transcript[3]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_5c16ec2629ad4bfa",
+      "concept": "Scanners",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "by applying the central viewing page, lower data tables, and SpotGamma scanners to your watchlist.",
+      "evidence_a": {
+        "knowledge_id": "sgk_9313055a3376936a",
+        "lesson": "Layout",
+        "lesson_id": "18684",
+        "timestamp": "00:00:54.320–00:01:00.960",
+        "pointer": "sources/18684.json#transcript[6]"
+      },
+      "claim_b": "The VRP scanner, which provides insights into which names have relatively higher options prices, is one of the favorite tools SpotGamma traders utilize to find opportunities to sell premium.",
+      "evidence_b": {
+        "knowledge_id": "sgk_cd16a8117982889b",
+        "lesson": "Volatility Risk Premium",
+        "lesson_id": "18658",
+        "timestamp": "00:00:06.960–00:00:19.840",
+        "pointer": "sources/18658.json#transcript[0]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_9a87ec4b72ef6aec",
+      "concept": "Scanners",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Lastly, before we unpack each tool individually, you can scroll lower to see all the key metrics for any name flagged within Compass or Scanners to find names that fit your trading approach.",
+      "evidence_a": {
+        "knowledge_id": "sgk_aa1af29623afb80d",
+        "lesson": "Overview of Scanners",
+        "lesson_id": "18655",
+        "timestamp": "00:00:38.320–00:00:51.600",
+        "pointer": "sources/18655.json#transcript[3]"
+      },
+      "claim_b": "The VRP scanner, which provides insights into which names have relatively higher options prices, is one of the favorite tools SpotGamma traders utilize to find opportunities to sell premium.",
+      "evidence_b": {
+        "knowledge_id": "sgk_cd16a8117982889b",
+        "lesson": "Volatility Risk Premium",
+        "lesson_id": "18658",
+        "timestamp": "00:00:06.960–00:00:19.840",
+        "pointer": "sources/18658.json#transcript[0]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_da9fd6a930f3786e",
+      "concept": "HIRO",
+      "axis": "bullish/bearish",
+      "category": "POSSIBLE_DETECTOR_FALSE_POSITIVE",
+      "category_basis": "statements share almost no vocabulary beyond the concept (different subjects)",
+      "claim_a": "This sustained bullish flow—highlighted by a $175M HIRO reading and over $40M in longer-dated calls—suggested traders should ride momentum rather than fade it.",
+      "evidence_a": {
+        "knowledge_id": "sgk_b8c32065d638c300",
+        "lesson": "See Breakouts Before They Happen",
+        "lesson_id": "19068",
+        "timestamp": "00:00:36.000–00:00:48.960",
+        "pointer": "sources/19068.json#transcript[3]"
+      },
+      "claim_b": "Lastly, the Stock Screener tab shows the full list of tickers available within HIRO, including a gauge where the last five days are overlaid against the grey background, and the white circle reflects today’s positioning from bearish to bull",
+      "evidence_b": {
+        "knowledge_id": "sgk_fd5afb328197c713",
+        "lesson": "Find What Moves Markets, Fast",
+        "lesson_id": "18733",
+        "timestamp": "00:01:27.000–00:01:42.360",
+        "pointer": "sources/18733.json#transcript[9]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_79a422a2c76f8b51",
+      "concept": "HIRO",
+      "axis": "bullish/bearish",
+      "category": "INSTRUMENT_DIFFERENCE",
+      "category_basis": "one claim about index/futures, the other about single stocks",
+      "claim_a": "Lastly, the Stock Screener tab shows the full list of tickers available within HIRO, including a gauge where the last five days are overlaid against the grey background, and the white circle reflects today’s positioning from bearish to bull",
+      "evidence_a": {
+        "knowledge_id": "sgk_fd5afb328197c713",
+        "lesson": "Find What Moves Markets, Fast",
+        "lesson_id": "18733",
+        "timestamp": "00:01:27.000–00:01:42.360",
+        "pointer": "sources/18733.json#transcript[9]"
+      },
+      "claim_b": "TRACE signaled a high-volatility environment, with a low Stability Index and elevated Gamma sensitivity, while HIRO showed early bullish flow that confirmed market maker hedging pressure.",
+      "evidence_b": {
+        "knowledge_id": "sgk_53861f2b3b77f41b",
+        "lesson": "ES Futures (S&P 500) Case Study & Trade Analysis",
+        "lesson_id": "19475",
+        "timestamp": null,
+        "pointer": "sources/19475.json#transcript[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_a07159f9d35f188b",
+      "concept": "TRACE",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Next, directly above the TRACE heatmap you can find the Market Participant toggle.",
+      "evidence_a": {
+        "knowledge_id": "sgk_5d980d72ff8b2b4e",
+        "lesson": "Main Chart",
+        "lesson_id": "18699",
+        "timestamp": "00:00:46.800–00:00:52.280",
+        "pointer": "sources/18699.json#transcript[5]"
+      },
+      "claim_b": "Case Studies: Below is a list of case studies where TRACE was instrumental in providing an edge when evaluating support, resistance, and volatility for the S&P 500.",
+      "evidence_b": {
+        "knowledge_id": "sgk_4cf597ec97466926",
+        "lesson": "Resources: TRACE",
+        "lesson_id": "19152",
+        "timestamp": null,
+        "pointer": "sources/19152.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_cd3cdc2dce4c9a97",
+      "concept": "Compass",
+      "axis": "above/below",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis above/below: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Additionally, to see the recent history for your names of interest in Compass, you can click on the toggle above the viewing grid and choose to see the past 3, 5 or 10 day positioning for any name.",
+      "evidence_a": {
+        "knowledge_id": "sgk_42593d74ceeffdc5",
+        "lesson": "Compass",
+        "lesson_id": "18656",
+        "timestamp": "00:00:53.840–00:01:06.560",
+        "pointer": "sources/18656.json#transcript[6]"
+      },
+      "claim_b": "Case Studies: The below case studies relied on Compass to understand the market’s outlook for volatility and directional bias for the name traded.",
+      "evidence_b": {
+        "knowledge_id": "sgk_4cdec8abd12e99cb",
+        "lesson": "Resources: Scanners",
+        "lesson_id": "19148",
+        "timestamp": null,
+        "pointer": "sources/19148.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_7ed0053c84491a20",
+      "concept": "Implied Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Once you are in the IV settings window, you can change your reference point, shift implied volatility higher or lower, or adjust call and put skew for a specific expiration.",
+      "evidence_a": {
+        "knowledge_id": "sgk_7de5b7e0f5936c3c",
+        "lesson": "Legs, IV, & Saved Positions",
+        "lesson_id": "18876",
+        "timestamp": "00:01:53.520–00:02:06.399",
+        "pointer": "sources/18876.json#transcript[10]"
+      },
+      "claim_b": "steeper or more vertical a line, the higher the rate of change of gamma and volatility at that level. The risk reversal chart shows the difference in implied volatility or IV",
+      "evidence_b": {
+        "knowledge_id": "sgk_98a22114ec1c81cb",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:06:18.560–00:06:38.080",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[134]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_878fcc5ca562e343",
+      "concept": "Implied Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Once you are in the IV settings window, you can change your reference point, shift implied volatility higher or lower, or adjust call and put skew for a specific expiration.",
+      "evidence_a": {
+        "knowledge_id": "sgk_7de5b7e0f5936c3c",
+        "lesson": "Legs, IV, & Saved Positions",
+        "lesson_id": "18876",
+        "timestamp": "00:01:53.520–00:02:06.399",
+        "pointer": "sources/18876.json#transcript[10]"
+      },
+      "claim_b": "between a 25 delta call and a 25 delta put. A rising risk reversal line and higher numbers indicate higher IV for calls relative to puts and increasing",
+      "evidence_b": {
+        "knowledge_id": "sgk_c3bdcf34ca67d5d5",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:06:34.400–00:06:50.560",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[139]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_d88ca6eb159265d3",
+      "concept": "Implied Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Once you are in the IV settings window, you can change your reference point, shift implied volatility higher or lower, or adjust call and put skew for a specific expiration.",
+      "evidence_a": {
+        "knowledge_id": "sgk_7de5b7e0f5936c3c",
+        "lesson": "Legs, IV, & Saved Positions",
+        "lesson_id": "18876",
+        "timestamp": "00:01:53.520–00:02:06.399",
+        "pointer": "sources/18876.json#transcript[10]"
+      },
+      "claim_b": "The volatility skew chart displays IV for options at all strike prices for single expiration. Higher IV is indicative of higher demand. A rising skew line to the left indicates",
+      "evidence_b": {
+        "knowledge_id": "sgk_44437d146d6766ee",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:07:14.960–00:07:33.360",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[152]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_4537f9cc8207fc05",
+      "concept": "Implied Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Once you are in the IV settings window, you can change your reference point, shift implied volatility higher or lower, or adjust call and put skew for a specific expiration.",
+      "evidence_a": {
+        "knowledge_id": "sgk_7de5b7e0f5936c3c",
+        "lesson": "Legs, IV, & Saved Positions",
+        "lesson_id": "18876",
+        "timestamp": "00:01:53.520–00:02:06.399",
+        "pointer": "sources/18876.json#transcript[10]"
+      },
+      "claim_b": "series of higher lows and highs and currently swinging higher. The white line is price. This indicated higher IV for calls relative to puts and increasing demand for calls relative to puts.",
+      "evidence_b": {
+        "knowledge_id": "sgk_f7feb8eef7740607",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:10:09.519–00:10:26.440",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[208]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_8f27512acb99cf99",
+      "concept": "Implied Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Once you are in the IV settings window, you can change your reference point, shift implied volatility higher or lower, or adjust call and put skew for a specific expiration.",
+      "evidence_a": {
+        "knowledge_id": "sgk_7de5b7e0f5936c3c",
+        "lesson": "Legs, IV, & Saved Positions",
+        "lesson_id": "18876",
+        "timestamp": "00:01:53.520–00:02:06.399",
+        "pointer": "sources/18876.json#transcript[10]"
+      },
+      "claim_b": "That's a shaded area above 150 and higher below 150. IV for calls was around the 30th percentile of the range. This chart indicated moderate demand for calls",
+      "evidence_b": {
+        "knowledge_id": "sgk_d0d351ae1fb653a4",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:10:50.399–00:11:09.839",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[222]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_05b9a86beb4e05ca",
+      "concept": "Implied Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Once you are in the IV settings window, you can change your reference point, shift implied volatility higher or lower, or adjust call and put skew for a specific expiration.",
+      "evidence_a": {
+        "knowledge_id": "sgk_7de5b7e0f5936c3c",
+        "lesson": "Legs, IV, & Saved Positions",
+        "lesson_id": "18876",
+        "timestamp": "00:01:53.520–00:02:06.399",
+        "pointer": "sources/18876.json#transcript[10]"
+      },
+      "claim_b": "If the cell is green, Implied Volatility is higher than the implied volatility over the past two months, indicating options may be attractive to sell and the market may be more volatile.",
+      "evidence_b": {
+        "knowledge_id": "sgk_8e2d32674e532b9c",
+        "lesson": "Spot Cheap vs. Expensive Options",
+        "lesson_id": "18890",
+        "timestamp": "00:00:42.800–00:00:57.520",
+        "pointer": "sources/18890.json#transcript[6]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_ad998b4efc58385f",
+      "concept": "Implied Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "Once you are in the IV settings window, you can change your reference point, shift implied volatility higher or lower, or adjust call and put skew for a specific expiration.",
+      "evidence_a": {
+        "knowledge_id": "sgk_7de5b7e0f5936c3c",
+        "lesson": "Legs, IV, & Saved Positions",
+        "lesson_id": "18876",
+        "timestamp": "00:01:53.520–00:02:06.399",
+        "pointer": "sources/18876.json#transcript[10]"
+      },
+      "claim_b": "Trader Tip: Check the grey shaded area (cone) to see if IV is higher for nearterm expiration dates or further out expirations, paying attention to upcoming earnings or economic events.",
+      "evidence_b": {
+        "knowledge_id": "sgk_ba47287455a0b01c",
+        "lesson": "Read Volatility Across Time Horizons",
+        "lesson_id": "18893",
+        "timestamp": null,
+        "pointer": "sources/18893.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_3576fb3eb132f432",
+      "concept": "Implied Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "steeper or more vertical a line, the higher the rate of change of gamma and volatility at that level. The risk reversal chart shows the difference in implied volatility or IV",
+      "evidence_a": {
+        "knowledge_id": "sgk_98a22114ec1c81cb",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:06:18.560–00:06:38.080",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[134]"
+      },
+      "claim_b": "If the cell is red, Implied Volatility is lower than the average implied volatility over the past two months, meaning options may be attractive to purchase and the market may be more stable.",
+      "evidence_b": {
+        "knowledge_id": "sgk_568d9db9b95aa17d",
+        "lesson": "Spot Cheap vs. Expensive Options",
+        "lesson_id": "18890",
+        "timestamp": "00:00:33.440–00:00:47.840",
+        "pointer": "sources/18890.json#transcript[5]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_5c60dce93478f62e",
+      "concept": "Implied Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "between a 25 delta call and a 25 delta put. A rising risk reversal line and higher numbers indicate higher IV for calls relative to puts and increasing",
+      "evidence_a": {
+        "knowledge_id": "sgk_c3bdcf34ca67d5d5",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:06:34.400–00:06:50.560",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[139]"
+      },
+      "claim_b": "If the cell is red, Implied Volatility is lower than the average implied volatility over the past two months, meaning options may be attractive to purchase and the market may be more stable.",
+      "evidence_b": {
+        "knowledge_id": "sgk_568d9db9b95aa17d",
+        "lesson": "Spot Cheap vs. Expensive Options",
+        "lesson_id": "18890",
+        "timestamp": "00:00:33.440–00:00:47.840",
+        "pointer": "sources/18890.json#transcript[5]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_1e4d34def08f06b8",
+      "concept": "Implied Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "demand for calls relative to puts. A falling risk reversal line and lower numbers indicate higher IV for puts relative to calls and increasing demand for puts relative to calls. A rising",
+      "evidence_a": {
+        "knowledge_id": "sgk_0def2f6f8f4e2bf5",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:06:47.520–00:07:06.080",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[143]"
+      },
+      "claim_b": "If the cell is green, Implied Volatility is higher than the implied volatility over the past two months, indicating options may be attractive to sell and the market may be more volatile.",
+      "evidence_b": {
+        "knowledge_id": "sgk_8e2d32674e532b9c",
+        "lesson": "Spot Cheap vs. Expensive Options",
+        "lesson_id": "18890",
+        "timestamp": "00:00:42.800–00:00:57.520",
+        "pointer": "sources/18890.json#transcript[6]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_90bba64a51cc1647",
+      "concept": "Implied Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "demand for calls relative to puts. A falling risk reversal line and lower numbers indicate higher IV for puts relative to calls and increasing demand for puts relative to calls. A rising",
+      "evidence_a": {
+        "knowledge_id": "sgk_0def2f6f8f4e2bf5",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:06:47.520–00:07:06.080",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[143]"
+      },
+      "claim_b": "Trader Tip: Check the grey shaded area (cone) to see if IV is higher for nearterm expiration dates or further out expirations, paying attention to upcoming earnings or economic events.",
+      "evidence_b": {
+        "knowledge_id": "sgk_ba47287455a0b01c",
+        "lesson": "Read Volatility Across Time Horizons",
+        "lesson_id": "18893",
+        "timestamp": null,
+        "pointer": "sources/18893.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_9de994c9f7cea7ad",
+      "concept": "Implied Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "The volatility skew chart displays IV for options at all strike prices for single expiration. Higher IV is indicative of higher demand. A rising skew line to the left indicates",
+      "evidence_a": {
+        "knowledge_id": "sgk_44437d146d6766ee",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:07:14.960–00:07:33.360",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[152]"
+      },
+      "claim_b": "If the cell is red, Implied Volatility is lower than the average implied volatility over the past two months, meaning options may be attractive to purchase and the market may be more stable.",
+      "evidence_b": {
+        "knowledge_id": "sgk_568d9db9b95aa17d",
+        "lesson": "Spot Cheap vs. Expensive Options",
+        "lesson_id": "18890",
+        "timestamp": "00:00:33.440–00:00:47.840",
+        "pointer": "sources/18890.json#transcript[5]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_110298cdda884a77",
+      "concept": "Implied Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "series of higher lows and highs and currently swinging higher. The white line is price. This indicated higher IV for calls relative to puts and increasing demand for calls relative to puts.",
+      "evidence_a": {
+        "knowledge_id": "sgk_f7feb8eef7740607",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:10:09.519–00:10:26.440",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[208]"
+      },
+      "claim_b": "If the cell is red, Implied Volatility is lower than the average implied volatility over the past two months, meaning options may be attractive to purchase and the market may be more stable.",
+      "evidence_b": {
+        "knowledge_id": "sgk_568d9db9b95aa17d",
+        "lesson": "Spot Cheap vs. Expensive Options",
+        "lesson_id": "18890",
+        "timestamp": "00:00:33.440–00:00:47.840",
+        "pointer": "sources/18890.json#transcript[5]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_793fbe66e27ecef0",
+      "concept": "Implied Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "That's a shaded area above 150 and higher below 150. IV for calls was around the 30th percentile of the range. This chart indicated moderate demand for calls",
+      "evidence_a": {
+        "knowledge_id": "sgk_d0d351ae1fb653a4",
+        "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+        "lesson_id": "18693",
+        "timestamp": "00:10:50.399–00:11:09.839",
+        "pointer": "transcripts/AOqTZVZSN48.json#cues[222]"
+      },
+      "claim_b": "If the cell is red, Implied Volatility is lower than the average implied volatility over the past two months, meaning options may be attractive to purchase and the market may be more stable.",
+      "evidence_b": {
+        "knowledge_id": "sgk_568d9db9b95aa17d",
+        "lesson": "Spot Cheap vs. Expensive Options",
+        "lesson_id": "18890",
+        "timestamp": "00:00:33.440–00:00:47.840",
+        "pointer": "sources/18890.json#transcript[5]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_402d6c0849ab784f",
+      "concept": "Implied Volatility",
+      "axis": "higher/lower",
+      "category": "CONTEXT_DEPENDENT",
+      "category_basis": "axis higher/lower: location words describe where price is relative to the level, not opposite definitions",
+      "claim_a": "If the cell is red, Implied Volatility is lower than the average implied volatility over the past two months, meaning options may be attractive to purchase and the market may be more stable.",
+      "evidence_a": {
+        "knowledge_id": "sgk_568d9db9b95aa17d",
+        "lesson": "Spot Cheap vs. Expensive Options",
+        "lesson_id": "18890",
+        "timestamp": "00:00:33.440–00:00:47.840",
+        "pointer": "sources/18890.json#transcript[5]"
+      },
+      "claim_b": "Trader Tip: Check the grey shaded area (cone) to see if IV is higher for nearterm expiration dates or further out expirations, paying attention to upcoming earnings or economic events.",
+      "evidence_b": {
+        "knowledge_id": "sgk_ba47287455a0b01c",
+        "lesson": "Read Volatility Across Time Horizons",
+        "lesson_id": "18893",
+        "timestamp": null,
+        "pointer": "sources/18893.json#body[1]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    },
+    {
+      "contradiction_id": "sgc_bdde6c0f7a93f014",
+      "concept": "Puts",
+      "axis": "bullish/bearish",
+      "category": "UNRESOLVED",
+      "category_basis": "polarity opposition without regime/instrument/horizon/context evidence — human review",
+      "claim_a": "If it’s bearish, you may choose to buy puts, short stock or sell a call spread.",
+      "evidence_a": {
+        "knowledge_id": "sgk_8b9dc0484ad65295",
+        "lesson": "Trading Approach",
+        "lesson_id": "18689",
+        "timestamp": "00:00:38.800–00:00:46.000",
+        "pointer": "sources/18689.json#transcript[4]"
+      },
+      "claim_b": "First, you can gauge directional sentiment by observing whether Tape’s flow data unveils more aggressive call buying or put selling, suggesting a bullish outlook for any name, or conversely, more aggressive call selling or put buying reflec",
+      "evidence_b": {
+        "knowledge_id": "sgk_9ba0fc10755823ee",
+        "lesson": "Spot Bullish vs Bearish Pressure",
+        "lesson_id": "19044",
+        "timestamp": "00:00:18.960–00:00:38.559",
+        "pointer": "sources/19044.json#transcript[2]"
+      },
+      "status": "UNRESOLVED",
+      "resolution": null,
+      "policy": "NEVER_AUTO_RESOLVED"
+    }
+  ]
+}

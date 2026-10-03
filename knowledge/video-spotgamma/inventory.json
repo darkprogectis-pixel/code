@@ -1,0 +1,6361 @@
+{
+  "schema": "spotgamma-course-inventory/v1",
+  "source": "SPOTGAMMA",
+  "source_class": "FIRST_PARTY_COURSE",
+  "knowledge_scope": "SPOTGAMMA_ONLY",
+  "content_trust": "UNTRUSTED_EVIDENCE",
+  "course_title": "How to Use SpotGamma",
+  "course_url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/",
+  "captured_at": "2026-10-03T22:11:27.675Z",
+  "built_at": "2026-10-03T22:41:02.390Z",
+  "structure": [
+    {
+      "module_index": 1,
+      "module": "Key Levels",
+      "lessons": 10
+    },
+    {
+      "module_index": 2,
+      "module": "Market Overview",
+      "lessons": 6
+    },
+    {
+      "module_index": 3,
+      "module": "Founder's Note",
+      "lessons": 12
+    },
+    {
+      "module_index": 4,
+      "module": "Options Calculator",
+      "lessons": 8
+    },
+    {
+      "module_index": 5,
+      "module": "Indices",
+      "lessons": 7
+    },
+    {
+      "module_index": 6,
+      "module": "Equity Hub",
+      "lessons": 17
+    },
+    {
+      "module_index": 7,
+      "module": "Scanners",
+      "lessons": 8
+    },
+    {
+      "module_index": 8,
+      "module": "Tape",
+      "lessons": 9
+    },
+    {
+      "module_index": 9,
+      "module": "HIRO",
+      "lessons": 8
+    },
+    {
+      "module_index": 10,
+      "module": "Volatility Dashboard",
+      "lessons": 10
+    },
+    {
+      "module_index": 11,
+      "module": "TRACE",
+      "lessons": 11
+    },
+    {
+      "module_index": 12,
+      "module": "Conclusion",
+      "lessons": 1
+    }
+  ],
+  "counts": {
+    "modules": 12,
+    "lessons": 107,
+    "video_lessons": 76,
+    "text_lessons": 20,
+    "mission_lessons": 11,
+    "videos": 76,
+    "pdfs": 4,
+    "downloads": 4,
+    "slides": 0,
+    "images": 0,
+    "embeds": 85,
+    "feedback_forms": 9,
+    "quizzes": 11,
+    "resource_links": 61,
+    "support_docs": 9,
+    "platform_links": 52,
+    "first_party_transcripts": 75
+  },
+  "lessons": [
+    {
+      "lesson_id": "18676",
+      "module": "Key Levels",
+      "module_index": 1,
+      "lesson_index": 1,
+      "title": "Welcome: Key Levels",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/welcome-to-key-levels/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 1091,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 12,
+      "items": 14,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18645",
+      "module": "Key Levels",
+      "module_index": 1,
+      "lesson_index": 2,
+      "title": "6 Signals That Move The Markets",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/6-signals-that-move-the-markets/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "kfq8ppeCCbU",
+          "provider": "youtube",
+          "duration_s": 65,
+          "title": "6 Signals That Move The Markets | Key Levels #1",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 51,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 65,
+      "has_first_party_transcript": true,
+      "body_chars": 31,
+      "transcript_chars": 979,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 26,
+      "asr_cues_aligned": 26,
+      "transcript_sentences": 7,
+      "transcript_aligned": 7,
+      "units": 14,
+      "items": 11,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18646",
+      "module": "Key Levels",
+      "module_index": 1,
+      "lesson_index": 3,
+      "title": "Market Makers",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/market-makers/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "5fY6GfPHelQ",
+          "provider": "youtube",
+          "duration_s": 113,
+          "title": "Market Makers | Key Levels #2",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 81,
+          "frames": 3,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 113,
+      "has_first_party_transcript": true,
+      "body_chars": 13,
+      "transcript_chars": 1506,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 40,
+      "asr_cues_aligned": 40,
+      "transcript_sentences": 11,
+      "transcript_aligned": 11,
+      "units": 20,
+      "items": 11,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18647",
+      "module": "Key Levels",
+      "module_index": 1,
+      "lesson_index": 4,
+      "title": "Delta",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/delta/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "ZlgHBCocUuQ",
+          "provider": "youtube",
+          "duration_s": 71,
+          "title": "Delta | Key Levels #3",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 49,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 71,
+      "has_first_party_transcript": true,
+      "body_chars": 5,
+      "transcript_chars": 922,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 25,
+      "asr_cues_aligned": 25,
+      "transcript_sentences": 9,
+      "transcript_aligned": 9,
+      "units": 17,
+      "items": 11,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18648",
+      "module": "Key Levels",
+      "module_index": 1,
+      "lesson_index": 5,
+      "title": "Gamma",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/gamma/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "tetIUMchpiI",
+          "provider": "youtube",
+          "duration_s": 78,
+          "title": "Gamma | Key Levels #4",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 63,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 78,
+      "has_first_party_transcript": true,
+      "body_chars": 5,
+      "transcript_chars": 1131,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 31,
+      "asr_cues_aligned": 31,
+      "transcript_sentences": 9,
+      "transcript_aligned": 9,
+      "units": 12,
+      "items": 11,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18649",
+      "module": "Key Levels",
+      "module_index": 1,
+      "lesson_index": 6,
+      "title": "Call Wall",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/call-wall/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "DlnKc9ET46o",
+          "provider": "youtube",
+          "duration_s": 102,
+          "title": "Call Wall | Key Levels #5",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 79,
+          "frames": 3,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 102,
+      "has_first_party_transcript": true,
+      "body_chars": 439,
+      "transcript_chars": 1073,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 40,
+      "asr_cues_aligned": 29,
+      "transcript_sentences": 7,
+      "transcript_aligned": 7,
+      "units": 26,
+      "items": 19,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18650",
+      "module": "Key Levels",
+      "module_index": 1,
+      "lesson_index": 7,
+      "title": "Put Wall",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/put-wall/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "zfbWVNPmBwI",
+          "provider": "youtube",
+          "duration_s": 95,
+          "title": "Put Wall | Key Levels #6",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 71,
+          "frames": 3,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 95,
+      "has_first_party_transcript": true,
+      "body_chars": 412,
+      "transcript_chars": 947,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 36,
+      "asr_cues_aligned": 25,
+      "transcript_sentences": 7,
+      "transcript_aligned": 7,
+      "units": 20,
+      "items": 19,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18651",
+      "module": "Key Levels",
+      "module_index": 1,
+      "lesson_index": 8,
+      "title": "Vol Trigger",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/vol-trigger/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "CfmmrY9C4BQ",
+          "provider": "youtube",
+          "duration_s": 83,
+          "title": "Vol Trigger |  Key Levels #7",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 65,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 83,
+      "has_first_party_transcript": true,
+      "body_chars": 164,
+      "transcript_chars": 915,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 32,
+      "asr_cues_aligned": 25,
+      "transcript_sentences": 8,
+      "transcript_aligned": 8,
+      "units": 14,
+      "items": 11,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18652",
+      "module": "Key Levels",
+      "module_index": 1,
+      "lesson_index": 9,
+      "title": "Learning & Support, Anytime You Need It",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/learning-support-any-time-you-need-it/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "CWf3WnwCDqk",
+          "provider": "youtube",
+          "duration_s": 63,
+          "title": "Learning & Support, Any Time You Need It | Key Levels #8",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 53,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 63,
+      "has_first_party_transcript": true,
+      "body_chars": 39,
+      "transcript_chars": 964,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 26,
+      "asr_cues_aligned": 26,
+      "transcript_sentences": 6,
+      "transcript_aligned": 6,
+      "units": 9,
+      "items": 3,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18679",
+      "module": "Key Levels",
+      "module_index": 1,
+      "lesson_index": 10,
+      "title": "Mission: Identify Today’s Key Options Environment",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/mission-identify-todays-key-options-environment/",
+      "type": "MISSION",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 600,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 9,
+      "items": 10,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19009",
+      "module": "Market Overview",
+      "module_index": 2,
+      "lesson_index": 1,
+      "title": "Welcome: Market Overview",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/welcome-market-overview/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 1154,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 13,
+      "items": 8,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19012",
+      "module": "Market Overview",
+      "module_index": 2,
+      "lesson_index": 2,
+      "title": "Key Market Dynamics & Trading Insights",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/key-market-dynamics-trading-insights/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "lgpeqQ4hHgs",
+          "provider": "youtube",
+          "duration_s": 87,
+          "title": "Key Market Dynamics & Trading Insights | Market Overview Walkthru #1",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 71,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 87,
+      "has_first_party_transcript": true,
+      "body_chars": 273,
+      "transcript_chars": 1091,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 36,
+      "asr_cues_aligned": 29,
+      "transcript_sentences": 10,
+      "transcript_aligned": 10,
+      "units": 20,
+      "items": 10,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19013",
+      "module": "Market Overview",
+      "module_index": 2,
+      "lesson_index": 3,
+      "title": "Data Into Direction",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/data-into-direction/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "Eu9RoHNQQNw",
+          "provider": "youtube",
+          "duration_s": 161,
+          "title": "Data Into Direction | Market Overview Walkthru #2",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 151,
+          "frames": 5,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 161,
+      "has_first_party_transcript": true,
+      "body_chars": 168,
+      "transcript_chars": 2568,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 74,
+      "asr_cues_aligned": 69,
+      "transcript_sentences": 16,
+      "transcript_aligned": 16,
+      "units": 42,
+      "items": 22,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19014",
+      "module": "Market Overview",
+      "module_index": 2,
+      "lesson_index": 4,
+      "title": "Your Top Names, Tools, & Support",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/your-top-names-tools-support/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "DsUcqy5_zLs",
+          "provider": "youtube",
+          "duration_s": 75,
+          "title": "Your Top Names, Tools, & Support | Market Overview Walkthru #3",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 61,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 75,
+      "has_first_party_transcript": true,
+      "body_chars": 32,
+      "transcript_chars": 1186,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 31,
+      "asr_cues_aligned": 31,
+      "transcript_sentences": 9,
+      "transcript_aligned": 9,
+      "units": 24,
+      "items": 7,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19054",
+      "module": "Market Overview",
+      "module_index": 2,
+      "lesson_index": 5,
+      "title": "Leveraging Your Toolkit",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/leveraging-your-toolkit/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "PrSNNmXy5MI",
+          "provider": "youtube",
+          "duration_s": 201,
+          "title": "Leveraging Your Toolkit | Market Overview Walkthru #4",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 181,
+          "frames": 6,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 201,
+      "has_first_party_transcript": true,
+      "body_chars": 23,
+      "transcript_chars": 3396,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 90,
+      "asr_cues_aligned": 90,
+      "transcript_sentences": 28,
+      "transcript_aligned": 28,
+      "units": 52,
+      "items": 22,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19017",
+      "module": "Market Overview",
+      "module_index": 2,
+      "lesson_index": 6,
+      "title": "Mission: Build Your Daily Market Framework",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/mission-build-your-daily-market-framework/",
+      "type": "MISSION",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 662,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 10,
+      "items": 8,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18770",
+      "module": "Founder's Note",
+      "module_index": 3,
+      "lesson_index": 1,
+      "title": "Welcome: Founder's Note",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/welcome-founders-note/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 1075,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 13,
+      "items": 8,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18097",
+      "module": "Founder's Note",
+      "module_index": 3,
+      "lesson_index": 2,
+      "title": "Overview, Your Daily Edge",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/founders-notes-1-overview-your-daily-edge/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "hSfsbNySInY",
+          "provider": "youtube",
+          "duration_s": 39,
+          "title": "Overview, Your Daily Edge | Founder's Notes Walkthru #1",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 27,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 39,
+      "has_first_party_transcript": true,
+      "body_chars": 25,
+      "transcript_chars": 501,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 13,
+      "asr_cues_aligned": 12,
+      "transcript_sentences": 4,
+      "transcript_aligned": 4,
+      "units": 23,
+      "items": 10,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18098",
+      "module": "Founder's Note",
+      "module_index": 3,
+      "lesson_index": 3,
+      "title": "AM/PM Notes, Morning Setups, Evening Recaps",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/founders-notes-2-am-pm-notes-morning-setups-evening-recaps/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "xxcDx56z6ho",
+          "provider": "youtube",
+          "duration_s": 50,
+          "title": "AM/PM Notes, Morning Setups, Evening Recaps | Founder's Notes Walkthru #2",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 41,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 50,
+      "has_first_party_transcript": true,
+      "body_chars": 43,
+      "transcript_chars": 738,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 20,
+      "asr_cues_aligned": 20,
+      "transcript_sentences": 5,
+      "transcript_aligned": 5,
+      "units": 34,
+      "items": 13,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18099",
+      "module": "Founder's Note",
+      "module_index": 3,
+      "lesson_index": 4,
+      "title": "Macro Theme - Spot Big Moves Early",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/founders-notes-3-macro-theme-spot-big-moves-early/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "X2kAGT8vmJA",
+          "provider": "youtube",
+          "duration_s": 59,
+          "title": "Macro Theme - Spot Big Moves Early | Founder's Notes Walkthru #3",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 45,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 59,
+      "has_first_party_transcript": true,
+      "body_chars": 199,
+      "transcript_chars": 672,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 22,
+      "asr_cues_aligned": 17,
+      "transcript_sentences": 4,
+      "transcript_aligned": 4,
+      "units": 22,
+      "items": 22,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18100",
+      "module": "Founder's Note",
+      "module_index": 3,
+      "lesson_index": 5,
+      "title": "Winning trade Example",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/founders-notes-4-winning-trade-example/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "bUkxKqD0DNg",
+          "provider": "youtube",
+          "duration_s": 68,
+          "title": "Winning Trade Example | Founder's Notes Walkthru #4",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 51,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 68,
+      "has_first_party_transcript": true,
+      "body_chars": 21,
+      "transcript_chars": 973,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 25,
+      "asr_cues_aligned": 25,
+      "transcript_sentences": 6,
+      "transcript_aligned": 6,
+      "units": 25,
+      "items": 13,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18101",
+      "module": "Founder's Note",
+      "module_index": 3,
+      "lesson_index": 6,
+      "title": "Intent, Application, & Style",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/founders-notes-5-intent-application-style/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "-Yqn9U4_tpA",
+          "provider": "youtube",
+          "duration_s": 63,
+          "title": "Intent, Application, & Style | Founder's Notes Walkthru #5",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 47,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 63,
+      "has_first_party_transcript": true,
+      "body_chars": 28,
+      "transcript_chars": 869,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 23,
+      "asr_cues_aligned": 23,
+      "transcript_sentences": 6,
+      "transcript_aligned": 6,
+      "units": 10,
+      "items": 8,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18102",
+      "module": "Founder's Note",
+      "module_index": 3,
+      "lesson_index": 7,
+      "title": "Real Calls, Real Wins",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/founders-notes-6-real-calls-real-wins/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "lF6vyG1TE2E",
+          "provider": "youtube",
+          "duration_s": 47,
+          "title": "Real Calls, Real Wins | Founder's Notes Walkthru #6",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 31,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 47,
+      "has_first_party_transcript": true,
+      "body_chars": 21,
+      "transcript_chars": 551,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 15,
+      "asr_cues_aligned": 15,
+      "transcript_sentences": 4,
+      "transcript_aligned": 4,
+      "units": 22,
+      "items": 12,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18103",
+      "module": "Founder's Note",
+      "module_index": 3,
+      "lesson_index": 8,
+      "title": "The Founder's Note Tables",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/founders-notes-7-the-founders-note-tables/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "6r86APfij3o",
+          "provider": "youtube",
+          "duration_s": 59,
+          "title": "The Founder's Note Tables | Founder's Notes Walkthru #7",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 47,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 59,
+      "has_first_party_transcript": true,
+      "body_chars": 144,
+      "transcript_chars": 737,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 23,
+      "asr_cues_aligned": 19,
+      "transcript_sentences": 5,
+      "transcript_aligned": 5,
+      "units": 19,
+      "items": 16,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18104",
+      "module": "Founder's Note",
+      "module_index": 3,
+      "lesson_index": 9,
+      "title": "Track Record",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/founders-notes-8-track-record/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "ESvJDY4DbkQ",
+          "provider": "youtube",
+          "duration_s": 55,
+          "title": "Track Record | Founder's Notes Walkthru #8",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 37,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 55,
+      "has_first_party_transcript": true,
+      "body_chars": 187,
+      "transcript_chars": 514,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 19,
+      "asr_cues_aligned": 13,
+      "transcript_sentences": 4,
+      "transcript_aligned": 4,
+      "units": 17,
+      "items": 4,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19225",
+      "module": "Founder's Note",
+      "module_index": 3,
+      "lesson_index": 10,
+      "title": "Reports",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/reports/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "6-_2V4HL944",
+          "provider": "youtube",
+          "duration_s": 54,
+          "title": "Reports | Founder's Notes Walkthru #9",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 41,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 54,
+      "has_first_party_transcript": true,
+      "body_chars": 7,
+      "transcript_chars": 755,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 21,
+      "asr_cues_aligned": 21,
+      "transcript_sentences": 7,
+      "transcript_aligned": 7,
+      "units": 18,
+      "items": 11,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18798",
+      "module": "Founder's Note",
+      "module_index": 3,
+      "lesson_index": 11,
+      "title": "Mission: Build a Trade Plan Using the Founder’s Note",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/mission-build-a-trade-plan-using-the-founders-note/",
+      "type": "MISSION",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 580,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 9,
+      "items": 7,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19144",
+      "module": "Founder's Note",
+      "module_index": 3,
+      "lesson_index": 12,
+      "title": "Resources: Founder’s Note",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/resource-founders-note/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 831,
+      "transcript_chars": 0,
+      "resource_links": [
+        {
+          "text": "SpotGamma Report Card:",
+          "href": "hxxps://spotgamma.spotcloud.online/spotgamma-quarterly-report-card/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Support Center:",
+          "href": "hxxps://support.spotgamma[.]com/hc/en-us/categories/360006240953-Founder-s-Note",
+          "kind": "SUPPORT_DOC"
+        },
+        {
+          "text": "Sharpen Your Skills — The Founder’s Note:",
+          "href": "hxxps://spotgamma.spotcloud.online/sharpen-your-skills-founders-note-session/",
+          "kind": "PLATFORM_LINK"
+        }
+      ],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [
+        {
+          "host": "form.typeform.com",
+          "kind": "FEEDBACK_FORM"
+        }
+      ],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 5,
+      "items": 6,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18859",
+      "module": "Options Calculator",
+      "module_index": 4,
+      "lesson_index": 1,
+      "title": "Welcome: Options Calculator",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/welcome-options-calculator/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 948,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 12,
+      "items": 6,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18862",
+      "module": "Options Calculator",
+      "module_index": 4,
+      "lesson_index": 2,
+      "title": "Overview",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/overview-3/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "umeoVWpRYcU",
+          "provider": "youtube",
+          "duration_s": 107,
+          "title": "Overview | Options Calculator Walkthru #1",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 83,
+          "frames": 3,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 107,
+      "has_first_party_transcript": true,
+      "body_chars": 8,
+      "transcript_chars": 1541,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 42,
+      "asr_cues_aligned": 40,
+      "transcript_sentences": 11,
+      "transcript_aligned": 11,
+      "units": 20,
+      "items": 10,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18867",
+      "module": "Options Calculator",
+      "module_index": 4,
+      "lesson_index": 3,
+      "title": "Key Metrics for Any Name",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/key-metrics-for-any-name/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "rxsQkGxEipU",
+          "provider": "youtube",
+          "duration_s": 100,
+          "title": "Key Metrics for Any Name | Options Calculator Walkthru #2",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 77,
+          "frames": 3,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 100,
+      "has_first_party_transcript": true,
+      "body_chars": 24,
+      "transcript_chars": 1471,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 39,
+      "asr_cues_aligned": 39,
+      "transcript_sentences": 12,
+      "transcript_aligned": 12,
+      "units": 20,
+      "items": 6,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18870",
+      "module": "Options Calculator",
+      "module_index": 4,
+      "lesson_index": 4,
+      "title": "Options Strategies",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/options-strategies/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "nt2o2KodYxA",
+          "provider": "youtube",
+          "duration_s": 66,
+          "title": "Options Strategies | Options Calculator Walkthru #3",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 47,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 66,
+      "has_first_party_transcript": true,
+      "body_chars": 18,
+      "transcript_chars": 886,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 24,
+      "asr_cues_aligned": 24,
+      "transcript_sentences": 8,
+      "transcript_aligned": 8,
+      "units": 12,
+      "items": 3,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18873",
+      "module": "Options Calculator",
+      "module_index": 4,
+      "lesson_index": 5,
+      "title": "Profit and Loss Chart",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/profit-and-loss-chart/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "xrArtlbXlIU",
+          "provider": "youtube",
+          "duration_s": 212,
+          "title": "Profit and Loss Chart | Options Calculator Walkthru #4",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 175,
+          "frames": 7,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 212,
+      "has_first_party_transcript": true,
+      "body_chars": 21,
+      "transcript_chars": 3330,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 87,
+      "asr_cues_aligned": 86,
+      "transcript_sentences": 22,
+      "transcript_aligned": 22,
+      "units": 33,
+      "items": 5,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18876",
+      "module": "Options Calculator",
+      "module_index": 4,
+      "lesson_index": 6,
+      "title": "Legs, IV, & Saved Positions",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/legs-iv-saved-positions/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "jbLR5pAwxP0",
+          "provider": "youtube",
+          "duration_s": 225,
+          "title": "Legs, IV, & Saved Positions | Options Calculator Walkthru #5",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 201,
+          "frames": 7,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 225,
+      "has_first_party_transcript": true,
+      "body_chars": 27,
+      "transcript_chars": 3746,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 100,
+      "asr_cues_aligned": 99,
+      "transcript_sentences": 21,
+      "transcript_aligned": 21,
+      "units": 35,
+      "items": 22,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18879",
+      "module": "Options Calculator",
+      "module_index": 4,
+      "lesson_index": 7,
+      "title": "Mission: Model a Trade Before Execution",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/mission-model-a-trade-before-execution/",
+      "type": "MISSION",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 506,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 9,
+      "items": 6,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19145",
+      "module": "Options Calculator",
+      "module_index": 4,
+      "lesson_index": 8,
+      "title": "Resources: Options Calculator",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/resources-options-calculator/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 1127,
+      "transcript_chars": 0,
+      "resource_links": [
+        {
+          "text": "Total OI Model: Microsoft Reversal at Key Gamma Resistance Delivers Profit Using a Structured Options Spread",
+          "href": "hxxps://spotgamma.spotcloud.online/microsoft-reversal-at-key-gamma-resistance-delivers-profit/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Meta Holds Key Support and Delivers Profit on Post-Earnings Bullish Run",
+          "href": "hxxps://spotgamma.spotcloud.online/meta-holds-key-support-delivers-profit-post-earnings-bullish-run/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "User Guide",
+          "href": "hxxps://spotgamma.spotcloud.online/wp-content/uploads/2025/10/Options-Calculator-User-Guide.pdf",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Support Center:",
+          "href": "hxxps://support.spotgamma[.]com/hc/en-us/categories/45971043014931-Options-Calculator",
+          "kind": "SUPPORT_DOC"
+        },
+        {
+          "text": "Sharpen Your Skills — Options Calculator:",
+          "href": "hxxps://spotgamma.spotcloud.online/mastering-option-pricing-and-strategic-trade-setups-using-spotgamma-compass-scanner-and-options-calculator/",
+          "kind": "PLATFORM_LINK"
+        }
+      ],
+      "files": [
+        {
+          "text": "User Guide",
+          "href": "hxxps://spotgamma.spotcloud.online/wp-content/uploads/2025/10/Options-Calculator-User-Guide.pdf"
+        }
+      ],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [
+        {
+          "host": "form.typeform.com",
+          "kind": "FEEDBACK_FORM"
+        }
+      ],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 9,
+      "items": 11,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18775",
+      "module": "Indices",
+      "module_index": 5,
+      "lesson_index": 1,
+      "title": "Welcome: Indices",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/welcome-indices/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 912,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 11,
+      "items": 14,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "17918",
+      "module": "Indices",
+      "module_index": 5,
+      "lesson_index": 2,
+      "title": "Read The Charts Driving Market Moves",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/read-the-charts-driving-market-moves/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "-n7qta9eC6o",
+          "provider": "youtube",
+          "duration_s": 36,
+          "title": "Read The Charts Driving Market Moves | Indices Walkthru #1",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 27,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 36,
+      "has_first_party_transcript": true,
+      "body_chars": 36,
+      "transcript_chars": 463,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 13,
+      "asr_cues_aligned": 13,
+      "transcript_sentences": 2,
+      "transcript_aligned": 2,
+      "units": 15,
+      "items": 9,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "17919",
+      "module": "Indices",
+      "module_index": 5,
+      "lesson_index": 3,
+      "title": "Use Greeks, Volatility, & OI to Sharpen Trades",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/use-greeks-volatility-oi-to-sharpen-trades/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "WXdsg8FHAmk",
+          "provider": "youtube",
+          "duration_s": 76,
+          "title": "Use Greeks, Volatility, & OI to Sharpen Trades | Indices Walkthru #2",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 55,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 76,
+      "has_first_party_transcript": true,
+      "body_chars": 247,
+      "transcript_chars": 787,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 26,
+      "asr_cues_aligned": 20,
+      "transcript_sentences": 6,
+      "transcript_aligned": 6,
+      "units": 14,
+      "items": 15,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "17920",
+      "module": "Indices",
+      "module_index": 5,
+      "lesson_index": 4,
+      "title": "Spot Flow Shifts Before the Market Reacts",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/spot-flow-shifts-before-the-market-reacts/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "pJK9v7XvX-g",
+          "provider": "youtube",
+          "duration_s": 76,
+          "title": "Spot Flow Shifts Before the Market Reacts | Indices Walkthru #3",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 49,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 76,
+      "has_first_party_transcript": true,
+      "body_chars": 198,
+      "transcript_chars": 718,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 23,
+      "asr_cues_aligned": 19,
+      "transcript_sentences": 5,
+      "transcript_aligned": 5,
+      "units": 13,
+      "items": 17,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19071",
+      "module": "Indices",
+      "module_index": 5,
+      "lesson_index": 5,
+      "title": "Integrations",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/integrations/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "1O2Q_u3W6NQ",
+          "provider": "youtube",
+          "duration_s": 47,
+          "title": "Integrations | Indices Walkthru #4",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 33,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 47,
+      "has_first_party_transcript": true,
+      "body_chars": 12,
+      "transcript_chars": 608,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 17,
+      "asr_cues_aligned": 16,
+      "transcript_sentences": 4,
+      "transcript_aligned": 4,
+      "units": 11,
+      "items": 4,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18808",
+      "module": "Indices",
+      "module_index": 5,
+      "lesson_index": 6,
+      "title": "Mission: Assess Index Risk and Volatility Conditions",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/mission-assess-index-risk-and-volatility-conditions/",
+      "type": "MISSION",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 578,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 9,
+      "items": 12,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19146",
+      "module": "Indices",
+      "module_index": 5,
+      "lesson_index": 7,
+      "title": "Resources: Indices",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/resources-indices/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 262,
+      "transcript_chars": 0,
+      "resource_links": [
+        {
+          "text": "Support Center:",
+          "href": "hxxps://support.spotgamma[.]com/hc/en-us/categories/15335253092243-Indicies",
+          "kind": "SUPPORT_DOC"
+        }
+      ],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [
+        {
+          "host": "form.typeform.com",
+          "kind": "FEEDBACK_FORM"
+        }
+      ],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 3,
+      "items": 6,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18931",
+      "module": "Equity Hub",
+      "module_index": 6,
+      "lesson_index": 1,
+      "title": "Welcome: Equity Hub",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/welcome-equity-hub/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 1088,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 12,
+      "items": 17,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18684",
+      "module": "Equity Hub",
+      "module_index": 6,
+      "lesson_index": 2,
+      "title": "Layout",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/layout/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "QFLhNQC-gRE",
+          "provider": "youtube",
+          "duration_s": 76,
+          "title": "Layout | Equity Hub Walkthru #1",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 53,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 76,
+      "has_first_party_transcript": true,
+      "body_chars": 6,
+      "transcript_chars": 1000,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 27,
+      "asr_cues_aligned": 27,
+      "transcript_sentences": 8,
+      "transcript_aligned": 8,
+      "units": 14,
+      "items": 14,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18685",
+      "module": "Equity Hub",
+      "module_index": 6,
+      "lesson_index": 3,
+      "title": "Overview",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/overview/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "o-CyAyY2j4w",
+          "provider": "youtube",
+          "duration_s": 52,
+          "title": "Overview | Equity Hub Walkthru #2",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 37,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 52,
+      "has_first_party_transcript": true,
+      "body_chars": 8,
+      "transcript_chars": 624,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 18,
+      "asr_cues_aligned": 17,
+      "transcript_sentences": 5,
+      "transcript_aligned": 5,
+      "units": 7,
+      "items": 7,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18686",
+      "module": "Equity Hub",
+      "module_index": 6,
+      "lesson_index": 4,
+      "title": "Main Chart",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/main-chart/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "zzS3auS9Y5A",
+          "provider": "youtube",
+          "duration_s": 83,
+          "title": "Main Chart | Equity Hub Walkthru #3",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 67,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 83,
+      "has_first_party_transcript": true,
+      "body_chars": 242,
+      "transcript_chars": 931,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 33,
+      "asr_cues_aligned": 26,
+      "transcript_sentences": 7,
+      "transcript_aligned": 7,
+      "units": 13,
+      "items": 15,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18687",
+      "module": "Equity Hub",
+      "module_index": 6,
+      "lesson_index": 5,
+      "title": "Table",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/table/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "ECszNQh0YNg",
+          "provider": "youtube",
+          "duration_s": 90,
+          "title": "Table | Equity Hub Walkthru #4",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 75,
+          "frames": 3,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 90,
+      "has_first_party_transcript": true,
+      "body_chars": 5,
+      "transcript_chars": 1289,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 37,
+      "asr_cues_aligned": 37,
+      "transcript_sentences": 9,
+      "transcript_aligned": 9,
+      "units": 19,
+      "items": 5,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18688",
+      "module": "Equity Hub",
+      "module_index": 6,
+      "lesson_index": 6,
+      "title": "Sample Workflow - Spot Trade Setups in 4 Steps",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/sample-workflow-spot-trade-setups-in-4-steps/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "DBH8FA9wCIY",
+          "provider": "youtube",
+          "duration_s": 96,
+          "title": "Sample Workflow - Spot Trade Setups in 4 Steps | Equity Hub Walkthru #5",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 75,
+          "frames": 3,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 96,
+      "has_first_party_transcript": true,
+      "body_chars": 46,
+      "transcript_chars": 1321,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 37,
+      "asr_cues_aligned": 37,
+      "transcript_sentences": 12,
+      "transcript_aligned": 12,
+      "units": 26,
+      "items": 14,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18689",
+      "module": "Equity Hub",
+      "module_index": 6,
+      "lesson_index": 7,
+      "title": "Trading Approach",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/trading-approach/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "C72yH-NUNGc",
+          "provider": "youtube",
+          "duration_s": 59,
+          "title": "Trading Approach | Equity Hub Walkthru #6",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 43,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 59,
+      "has_first_party_transcript": true,
+      "body_chars": 16,
+      "transcript_chars": 764,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 21,
+      "asr_cues_aligned": 21,
+      "transcript_sentences": 6,
+      "transcript_aligned": 6,
+      "units": 12,
+      "items": 7,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18690",
+      "module": "Equity Hub",
+      "module_index": 6,
+      "lesson_index": 8,
+      "title": "Personalization",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/personalization/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "FbfXqrVTApU",
+          "provider": "youtube",
+          "duration_s": 74,
+          "title": "Personalization | Equity Hub Walkthru #7",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 59,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 74,
+      "has_first_party_transcript": true,
+      "body_chars": 15,
+      "transcript_chars": 1077,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 30,
+      "asr_cues_aligned": 29,
+      "transcript_sentences": 9,
+      "transcript_aligned": 9,
+      "units": 21,
+      "items": 5,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18691",
+      "module": "Equity Hub",
+      "module_index": 6,
+      "lesson_index": 9,
+      "title": "Intermediate Trade Structures",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/intermediate-trade-structures/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "hmx7-Hw0FGw",
+          "provider": "youtube",
+          "duration_s": 71,
+          "title": "Intermediate Trade Structures | Equity Hub Walkthru #8",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 55,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 71,
+      "has_first_party_transcript": true,
+      "body_chars": 29,
+      "transcript_chars": 965,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 27,
+      "asr_cues_aligned": 26,
+      "transcript_sentences": 7,
+      "transcript_aligned": 7,
+      "units": 14,
+      "items": 13,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18692",
+      "module": "Equity Hub",
+      "module_index": 6,
+      "lesson_index": 10,
+      "title": "Advanced Trade Structures",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/advanced-trade-structures/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "H-fgSDBMvKM",
+          "provider": "youtube",
+          "duration_s": 79,
+          "title": "Advanced Trade Structures | Equity Hub Walkthru #9",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 57,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 79,
+      "has_first_party_transcript": true,
+      "body_chars": 25,
+      "transcript_chars": 1545,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 28,
+      "asr_cues_aligned": 27,
+      "transcript_sentences": 11,
+      "transcript_aligned": 8,
+      "units": 19,
+      "items": 12,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18693",
+      "module": "Equity Hub",
+      "module_index": 6,
+      "lesson_index": 11,
+      "title": "Coinbase (COIN) Case Study & Trade Analysis",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/coinbase-coin-case-study-trade-analysis/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "AOqTZVZSN48",
+          "provider": "youtube",
+          "duration_s": 918,
+          "title": "How SpotGamma Turned a COIN Setup into a 39% Swing Trade",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 605,
+          "frames": 12,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 918,
+      "has_first_party_transcript": false,
+      "body_chars": 1141,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 303,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 117,
+      "items": 147,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18694",
+      "module": "Equity Hub",
+      "module_index": 6,
+      "lesson_index": 12,
+      "title": "Synthetic OI - Track Hedging Flows in Based on Dealer Positioning",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/synthetic-oi-track-hedging-flows-in-real-time/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "LZ-WjYlLS1o",
+          "provider": "youtube",
+          "duration_s": 101,
+          "title": "Synthetic OI - Track Hedging Flows in Based on Dealer Positioning | Equity Hub Walkthru #11",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 79,
+          "frames": 3,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 101,
+      "has_first_party_transcript": true,
+      "body_chars": 292,
+      "transcript_chars": 1226,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 40,
+      "asr_cues_aligned": 33,
+      "transcript_sentences": 8,
+      "transcript_aligned": 8,
+      "units": 21,
+      "items": 23,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18695",
+      "module": "Equity Hub",
+      "module_index": 6,
+      "lesson_index": 13,
+      "title": "Synthetic OI - Prepare for Intraday Volatility",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/synthetic-oi-see-intraday-volatility-unfolding/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "r92cs_WHQdk",
+          "provider": "youtube",
+          "duration_s": 89,
+          "title": "Synthetic OI - Prepare for Intraday Volatility | Equity Hub Walkthru #12",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 69,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 89,
+      "has_first_party_transcript": true,
+      "body_chars": 46,
+      "transcript_chars": 1250,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 35,
+      "asr_cues_aligned": 35,
+      "transcript_sentences": 11,
+      "transcript_aligned": 11,
+      "units": 22,
+      "items": 17,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18696",
+      "module": "Equity Hub",
+      "module_index": 6,
+      "lesson_index": 14,
+      "title": "Trade Example - May 28, 2025",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/trade-example-may-28-2025/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "Votqc_cw6Cg",
+          "provider": "youtube",
+          "duration_s": 59,
+          "title": "Trade Example - May 28, 2025 | Equity Hub Walkthru #13",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 41,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 59,
+      "has_first_party_transcript": true,
+      "body_chars": 28,
+      "transcript_chars": 674,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 20,
+      "asr_cues_aligned": 20,
+      "transcript_sentences": 4,
+      "transcript_aligned": 4,
+      "units": 13,
+      "items": 12,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19474",
+      "module": "Equity Hub",
+      "module_index": 6,
+      "lesson_index": 15,
+      "title": "Tesla (TSLA) Case Study & Trade Analysis",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/tesla-tsla-case-study-trade-analysis/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "C0--O8V40Ug",
+          "provider": "youtube",
+          "duration_s": 532,
+          "title": "Tesla (TSLA) Breaks Gamma Pin And Nails Precision Intraday Short | SpotGamma",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 421,
+          "frames": 12,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 532,
+      "has_first_party_transcript": true,
+      "body_chars": 40,
+      "transcript_chars": 656,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 211,
+      "asr_cues_aligned": 4,
+      "transcript_sentences": 4,
+      "transcript_aligned": 1,
+      "units": 74,
+      "items": 64,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18932",
+      "module": "Equity Hub",
+      "module_index": 6,
+      "lesson_index": 16,
+      "title": "Mission: Identify a Key Options-Driven Level",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/mission-identify-a-key-options-driven-level/",
+      "type": "MISSION",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 553,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 10,
+      "items": 8,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19147",
+      "module": "Equity Hub",
+      "module_index": 6,
+      "lesson_index": 17,
+      "title": "Resources: Equity Hub",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/resources-equity-hub/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 2103,
+      "transcript_chars": 0,
+      "resource_links": [
+        {
+          "text": "Total OI Model: AMZN Reversal play off of Key Gamma Strike",
+          "href": "hxxps://spotgamma.spotcloud.online/amzn-reversal-trade-at-gamma-wall-delivers-8-1-intraday-short/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Total OI Model: Key levels determine entry and exit points for PLTR trade",
+          "href": "hxxps://spotgamma.spotcloud.online/pltr-swing-trade-max-profit/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Synthetic OI Model: TSLA accelerates towards the High Volatility Point",
+          "href": "hxxps://spotgamma.spotcloud.online/tsla-trade-10-1-intraday-breakout/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Synthetic OI Model: Equity Hub shows increasing volatility as TSLA rallies",
+          "href": "hxxps://spotgamma.spotcloud.online/tesla-breaks-gamma-pin-intraday-short/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Total OI Model: Microsoft Reversal at Key Gamma Resistance Delivers Profit Using a Structured Options Spread",
+          "href": "hxxps://spotgamma.spotcloud.online/microsoft-reversal-at-key-gamma-resistance-delivers-profit/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "SpotGamma Flags the Breakdown in Strategy (MSTR) – Traders Capture 5:1 to 9:1 Downside Move",
+          "href": "hxxps://spotgamma.spotcloud.online/spotgamma-flags-breakdown-in-strategy-mstr-stock-trade/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "User Guide",
+          "href": "hxxps://spotgamma.spotcloud.online/wp-content/uploads/2025/04/SpotGamma-Equity-Hub-User-Guide-1.pdf",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Support Center:",
+          "href": "hxxps://support.spotgamma[.]com/hc/en-us/categories/360006259813-Equity-Hub",
+          "kind": "SUPPORT_DOC"
+        },
+        {
+          "text": "Sharpen Your Skills",
+          "href": "hxxps://spotgamma.spotcloud.online/sharpen-your-skills/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Session 1:",
+          "href": "hxxps://spotgamma.spotcloud.online/sharpen-your-skills-equity-hub-session/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Session 2:",
+          "href": "hxxps://spotgamma.spotcloud.online/sharpen-your-skills-equity-hub/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Session 3:",
+          "href": "hxxps://spotgamma.spotcloud.online/sharpen-your-skills-support-resistance-fishbone-or-wishbone/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Session 4:",
+          "href": "hxxps://spotgamma.spotcloud.online/sharpen-your-skills-starting-the-day-with-spotgamma/",
+          "kind": "PLATFORM_LINK"
+        }
+      ],
+      "files": [
+        {
+          "text": "User Guide",
+          "href": "hxxps://spotgamma.spotcloud.online/wp-content/uploads/2025/04/SpotGamma-Equity-Hub-User-Guide-1.pdf"
+        }
+      ],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [
+        {
+          "host": "form.typeform.com",
+          "kind": "FEEDBACK_FORM"
+        }
+      ],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 19,
+      "items": 37,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18818",
+      "module": "Scanners",
+      "module_index": 7,
+      "lesson_index": 1,
+      "title": "Welcome: Scanners",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/welcome-scanners/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 979,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 11,
+      "items": 12,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18655",
+      "module": "Scanners",
+      "module_index": 7,
+      "lesson_index": 2,
+      "title": "Overview of Scanners",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/overview-of-scanners/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "kjZ5eDtLIr4",
+          "provider": "youtube",
+          "duration_s": 66,
+          "title": "Overview of Scanners | Scanners Walkthru #1",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 49,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 66,
+      "has_first_party_transcript": true,
+      "body_chars": 20,
+      "transcript_chars": 923,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 25,
+      "asr_cues_aligned": 25,
+      "transcript_sentences": 5,
+      "transcript_aligned": 5,
+      "units": 19,
+      "items": 13,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18656",
+      "module": "Scanners",
+      "module_index": 7,
+      "lesson_index": 3,
+      "title": "Compass",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/compass/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "Sv66fHsIkOQ",
+          "provider": "youtube",
+          "duration_s": 100,
+          "title": "Compass | Scanners Walkthru #2",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 85,
+          "frames": 3,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 100,
+      "has_first_party_transcript": true,
+      "body_chars": 7,
+      "transcript_chars": 1265,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 42,
+      "asr_cues_aligned": 31,
+      "transcript_sentences": 8,
+      "transcript_aligned": 8,
+      "units": 25,
+      "items": 11,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18657",
+      "module": "Scanners",
+      "module_index": 7,
+      "lesson_index": 4,
+      "title": "Squeeze Scanner",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/squeeze-scanner/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "tLo17wSImgQ",
+          "provider": "youtube",
+          "duration_s": 60,
+          "title": "Squeeze Scanner | Scanners Walkthru #3",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 47,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 60,
+      "has_first_party_transcript": true,
+      "body_chars": 250,
+      "transcript_chars": 558,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 22,
+      "asr_cues_aligned": 15,
+      "transcript_sentences": 3,
+      "transcript_aligned": 3,
+      "units": 14,
+      "items": 11,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18658",
+      "module": "Scanners",
+      "module_index": 7,
+      "lesson_index": 5,
+      "title": "Volatility Risk Premium",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/volatility-risk-premium/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "-PlsupL1GcQ",
+          "provider": "youtube",
+          "duration_s": 58,
+          "title": "Volatility Risk Premium | Scanners Walkthru #4",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 43,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 58,
+      "has_first_party_transcript": true,
+      "body_chars": 369,
+      "transcript_chars": 412,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 21,
+      "asr_cues_aligned": 11,
+      "transcript_sentences": 2,
+      "transcript_aligned": 2,
+      "units": 17,
+      "items": 15,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18659",
+      "module": "Scanners",
+      "module_index": 7,
+      "lesson_index": 6,
+      "title": "Scanner Tables",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/scanner-tables/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "l1b0_c0q_2k",
+          "provider": "youtube",
+          "duration_s": 58,
+          "title": "Scanner Tables | Scanners Walkthru #5",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 47,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 58,
+      "has_first_party_transcript": true,
+      "body_chars": 14,
+      "transcript_chars": 868,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 23,
+      "asr_cues_aligned": 23,
+      "transcript_sentences": 6,
+      "transcript_aligned": 6,
+      "units": 13,
+      "items": 5,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18831",
+      "module": "Scanners",
+      "module_index": 7,
+      "lesson_index": 7,
+      "title": "Mission: Generate One Trade Idea Using Scanners",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/mission-generate-one-trade-idea-using-scanners/",
+      "type": "MISSION",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 577,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 9,
+      "items": 7,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19148",
+      "module": "Scanners",
+      "module_index": 7,
+      "lesson_index": 8,
+      "title": "Resources: Scanners",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/resources-scanners/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 1245,
+      "transcript_chars": 0,
+      "resource_links": [
+        {
+          "text": "Swing Trade With PLTR Gained for 50% Profit in 6 Days",
+          "href": "hxxps://spotgamma.spotcloud.online/pltr-swing-trade-max-profit/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "The AMZN Trade Compass Nailed for 900%+ Upside",
+          "href": "hxxps://spotgamma.spotcloud.online/case-study-the-amzn-trade-compass-nailed-for-900-upside/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "SpotGamma Flags the Breakdown in Strategy (MSTR) – Traders Capture 5:1 to 9:1 Downside Move",
+          "href": "hxxps://spotgamma.spotcloud.online/spotgamma-flags-breakdown-in-strategy-mstr-stock-trade/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Meta Holds Key Support and Delivers Profit on Post-Earnings Bullish Run",
+          "href": "hxxps://spotgamma.spotcloud.online/meta-holds-key-support-delivers-profit-post-earnings-bullish-run/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Apple Breaks Out, Delivering 18:1 Intraday Trade",
+          "href": "hxxps://spotgamma.spotcloud.online/apple-breaks-gamma-support-delivers-18-1-intraday-trade/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "HIMS Breakout Delivers 10:1 Intraday Return as Negative Gamma Fuels Post-News Momentum",
+          "href": "hxxps://spotgamma.spotcloud.online/hims-10-1-trade-after-news-momentum/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "User Guide:",
+          "href": "hxxps://spotgamma.spotcloud.online/wp-content/uploads/2025/10/Compass-Scanners-User-Guide-October-13-2025.pdf",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Support Center:",
+          "href": "hxxps://support.spotgamma[.]com/hc/en-us/categories/27544271731219-Scanners-Compass",
+          "kind": "SUPPORT_DOC"
+        },
+        {
+          "text": "Sharpen Your Skills — Compass & Scanners",
+          "href": "hxxps://spotgamma.spotcloud.online/sharpen-your-skills-compass-scanners-session/",
+          "kind": "PLATFORM_LINK"
+        }
+      ],
+      "files": [
+        {
+          "text": "User Guide:",
+          "href": "hxxps://spotgamma.spotcloud.online/wp-content/uploads/2025/10/Compass-Scanners-User-Guide-October-13-2025.pdf"
+        }
+      ],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [
+        {
+          "host": "form.typeform.com",
+          "kind": "FEEDBACK_FORM"
+        }
+      ],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 12,
+      "items": 14,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19029",
+      "module": "Tape",
+      "module_index": 8,
+      "lesson_index": 1,
+      "title": "Welcome: Tape",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/welcome-tape/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 1056,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 13,
+      "items": 17,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19032",
+      "module": "Tape",
+      "module_index": 8,
+      "lesson_index": 2,
+      "title": "Visualize Momentum Through Options Flow",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/visualize-momentum-through-options-flow/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "2-18i83ZPGg",
+          "provider": "youtube",
+          "duration_s": 75,
+          "title": "Visualize Momentum Through Options Flow | Tape Walkthru #1",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 59,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 75,
+      "has_first_party_transcript": true,
+      "body_chars": 39,
+      "transcript_chars": 1057,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 30,
+      "asr_cues_aligned": 30,
+      "transcript_sentences": 7,
+      "transcript_aligned": 7,
+      "units": 8,
+      "items": 13,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19033",
+      "module": "Tape",
+      "module_index": 8,
+      "lesson_index": 3,
+      "title": "Surface High-Impact Flow Fast",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/surface-high-impact-flow-fast/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "4sy8JIiWqic",
+          "provider": "youtube",
+          "duration_s": 67,
+          "title": "Surface High-Impact Flow Fast | Tape Walkthru #2",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 53,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 67,
+      "has_first_party_transcript": true,
+      "body_chars": 223,
+      "transcript_chars": 755,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 27,
+      "asr_cues_aligned": 21,
+      "transcript_sentences": 6,
+      "transcript_aligned": 6,
+      "units": 13,
+      "items": 9,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19038",
+      "module": "Tape",
+      "module_index": 8,
+      "lesson_index": 4,
+      "title": "Gauge Market Posture",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/gauge-market-posture/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "Sz0jSiyRV_M",
+          "provider": "youtube",
+          "duration_s": 64,
+          "title": "Gauge Market Posture | Tape Walkthru #3",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 49,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 64,
+      "has_first_party_transcript": true,
+      "body_chars": 171,
+      "transcript_chars": 713,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 25,
+      "asr_cues_aligned": 20,
+      "transcript_sentences": 4,
+      "transcript_aligned": 4,
+      "units": 18,
+      "items": 11,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19041",
+      "module": "Tape",
+      "module_index": 8,
+      "lesson_index": 5,
+      "title": "Filter For Real Trading Edge",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/filter-for-real-trading-edge/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "tJRtTa3lS98",
+          "provider": "youtube",
+          "duration_s": 59,
+          "title": "Filter For Real Trading Edge | Tape Walkthru #4",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 45,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 59,
+      "has_first_party_transcript": true,
+      "body_chars": 28,
+      "transcript_chars": 817,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 23,
+      "asr_cues_aligned": 23,
+      "transcript_sentences": 6,
+      "transcript_aligned": 6,
+      "units": 18,
+      "items": 6,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19044",
+      "module": "Tape",
+      "module_index": 8,
+      "lesson_index": 6,
+      "title": "Spot Bullish vs Bearish Pressure",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/spot-bullish-vs-bearish-pressure/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "xMFSCl_R1_U",
+          "provider": "youtube",
+          "duration_s": 81,
+          "title": "Spot Bullish vs Bearish Pressure | Tape Walkthru #5",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 65,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 81,
+      "has_first_party_transcript": true,
+      "body_chars": 32,
+      "transcript_chars": 1144,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 32,
+      "asr_cues_aligned": 32,
+      "transcript_sentences": 7,
+      "transcript_aligned": 7,
+      "units": 24,
+      "items": 10,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19068",
+      "module": "Tape",
+      "module_index": 8,
+      "lesson_index": 7,
+      "title": "See Breakouts Before They Happen",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/see-breakouts-before-they-happen/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "Vyryczz9L_E",
+          "provider": "youtube",
+          "duration_s": 68,
+          "title": "See Breakouts Before They Happen | Tape Walkthru #6",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 45,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 68,
+      "has_first_party_transcript": true,
+      "body_chars": 32,
+      "transcript_chars": 801,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 23,
+      "asr_cues_aligned": 22,
+      "transcript_sentences": 6,
+      "transcript_aligned": 6,
+      "units": 18,
+      "items": 18,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19051",
+      "module": "Tape",
+      "module_index": 8,
+      "lesson_index": 8,
+      "title": "Mission: Identify High-Conviction Options Flow",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/mission-identify-high-conviction-options-flow-2/",
+      "type": "MISSION",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 517,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 9,
+      "items": 4,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19149",
+      "module": "Tape",
+      "module_index": 8,
+      "lesson_index": 9,
+      "title": "Resources: Tape",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/resources-tape/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 892,
+      "transcript_chars": 0,
+      "resource_links": [
+        {
+          "text": "Case Study — TSLA Ignites 10:1 Intraday Breakout:",
+          "href": "hxxps://spotgamma.spotcloud.online/tsla-trade-10-1-intraday-breakout/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "User Guide",
+          "href": "hxxps://spotgamma.spotcloud.online/wp-content/uploads/2024/12/SpotGamma-Tape-User-Guide.pdf",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Support Center:",
+          "href": "hxxps://support.spotgamma[.]com/hc/en-us/categories/36232999873555-Tape",
+          "kind": "SUPPORT_DOC"
+        },
+        {
+          "text": "Sharpen Your Skills — Tape:",
+          "href": "hxxps://spotgamma.spotcloud.online/sharpen-your-skills-tape-follow-the-flow-in-real-time/",
+          "kind": "PLATFORM_LINK"
+        }
+      ],
+      "files": [
+        {
+          "text": "User Guide",
+          "href": "hxxps://spotgamma.spotcloud.online/wp-content/uploads/2024/12/SpotGamma-Tape-User-Guide.pdf"
+        }
+      ],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [
+        {
+          "host": "form.typeform.com",
+          "kind": "FEEDBACK_FORM"
+        }
+      ],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 7,
+      "items": 11,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18746",
+      "module": "HIRO",
+      "module_index": 9,
+      "lesson_index": 1,
+      "title": "Welcome: HIRO",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/welcome-2/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 904,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 13,
+      "items": 22,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18732",
+      "module": "HIRO",
+      "module_index": 9,
+      "lesson_index": 2,
+      "title": "See Options Flow Drive Price",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/see-options-flow-drive-price/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "GGPJ9YHlDWA",
+          "provider": "youtube",
+          "duration_s": 63,
+          "title": "See Options Flow Drive Price | HIRO Walkthru #1",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 43,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 63,
+      "has_first_party_transcript": true,
+      "body_chars": 28,
+      "transcript_chars": 578,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 21,
+      "asr_cues_aligned": 15,
+      "transcript_sentences": 5,
+      "transcript_aligned": 5,
+      "units": 14,
+      "items": 10,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18733",
+      "module": "HIRO",
+      "module_index": 9,
+      "lesson_index": 3,
+      "title": "Find What Moves Markets, Fast",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/find-what-moves-markets-fast/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "OmNWxHUppss",
+          "provider": "youtube",
+          "duration_s": 106,
+          "title": "Find What Moves Markets, Fast | HIRO Walkthru #2",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 91,
+          "frames": 3,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 106,
+      "has_first_party_transcript": true,
+      "body_chars": 29,
+      "transcript_chars": 1648,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 45,
+      "asr_cues_aligned": 44,
+      "transcript_sentences": 10,
+      "transcript_aligned": 10,
+      "units": 29,
+      "items": 23,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18734",
+      "module": "HIRO",
+      "module_index": 9,
+      "lesson_index": 4,
+      "title": "Read Calls, Puts & 0DTE",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/read-calls-puts-0dte/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "lTbvuvbqtxw",
+          "provider": "youtube",
+          "duration_s": 351,
+          "title": "Read Calls, Puts & 0DTE | HIRO Walkthru #3",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 315,
+          "frames": 11,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 351,
+      "has_first_party_transcript": true,
+      "body_chars": 178,
+      "transcript_chars": 2204,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 157,
+      "asr_cues_aligned": 14,
+      "transcript_sentences": 16,
+      "transcript_aligned": 6,
+      "units": 79,
+      "items": 52,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18736",
+      "module": "HIRO",
+      "module_index": 9,
+      "lesson_index": 5,
+      "title": "Beginner Trade Strategy",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/beginner-trade-strategy/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "fNhmZcpu7dY",
+          "provider": "youtube",
+          "duration_s": 59,
+          "title": "Beginner Trade Strategy | HIRO Walkthru #4",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 41,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 59,
+      "has_first_party_transcript": true,
+      "body_chars": 23,
+      "transcript_chars": 766,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 21,
+      "asr_cues_aligned": 19,
+      "transcript_sentences": 5,
+      "transcript_aligned": 5,
+      "units": 10,
+      "items": 7,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18737",
+      "module": "HIRO",
+      "module_index": 9,
+      "lesson_index": 6,
+      "title": "Intermediate Trade Strategy",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/intermediate-trade-strategy/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "kUNSXAnQRbU",
+          "provider": "youtube",
+          "duration_s": 62,
+          "title": "Intermediate Trade Strategy | HIRO Walkthru #5",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 45,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 62,
+      "has_first_party_transcript": true,
+      "body_chars": 27,
+      "transcript_chars": 652,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 23,
+      "asr_cues_aligned": 23,
+      "transcript_sentences": 5,
+      "transcript_aligned": 5,
+      "units": 17,
+      "items": 11,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18854",
+      "module": "HIRO",
+      "module_index": 9,
+      "lesson_index": 7,
+      "title": "Mission: Spot a Momentum Shift Using HIRO",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/mission-spot-a-momentum-shift-using-hiro/",
+      "type": "MISSION",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 440,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 9,
+      "items": 17,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19150",
+      "module": "HIRO",
+      "module_index": 9,
+      "lesson_index": 8,
+      "title": "Resources: HIRO",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/resources-hiro/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 1804,
+      "transcript_chars": 0,
+      "resource_links": [
+        {
+          "text": "This SPX Trade Hit Big With 12:1 Reward-to-Risk Payoff",
+          "href": "hxxps://spotgamma.spotcloud.online/case-study-spx-trade-12-1-reward-risk-payoff/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Tesla Breaks Gamma Pin Leading To Precision Intraday Short",
+          "href": "hxxps://spotgamma.spotcloud.online/tesla-breaks-gamma-pin-intraday-short/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "ES Futures Rocket At The Opening & SpotGamma Nails The Top",
+          "href": "hxxps://spotgamma.spotcloud.online/es-futures-rocket-at-open-spotgamma-nails-top-1-day-high/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "The AMZN Trade Compass Results in 900%+ Upside",
+          "href": "hxxps://spotgamma.spotcloud.online/case-study-the-amzn-trade-compass-nailed-for-900-upside/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "How an Options Flow Flip on MSFT Delivered Fast Intraday Gains",
+          "href": "hxxps://spotgamma.spotcloud.online/case-study-options-flow-flip-msft-hiro-reversal-for-fast-intraday-gains/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Total OI Model: Microsoft Reversal at Key Gamma Resistance Delivers Profit Using a Structured Options Spread",
+          "href": "hxxps://spotgamma.spotcloud.online/microsoft-reversal-at-key-gamma-resistance-delivers-profit/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "SpotGamma Flags the Breakdown in Strategy (MSTR) – Traders Capture 5:1 to 9:1 Downside Move",
+          "href": "hxxps://spotgamma.spotcloud.online/spotgamma-flags-breakdown-in-strategy-mstr-stock-trade/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Meta Holds Key Support and Delivers Profit on Post-Earnings Bullish Run",
+          "href": "hxxps://spotgamma.spotcloud.online/meta-holds-key-support-delivers-profit-post-earnings-bullish-run/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Palantir Reversal at Call Wall Delivers 10:1 Intraday Trade Using SpotGamma Options Flow",
+          "href": "hxxps://spotgamma.spotcloud.online/palantir-reversal-at-call-wall-delivers-10-1-intraday-trade/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Apple Breaks Out, Delivering 18:1 Intraday Trade",
+          "href": "hxxps://spotgamma.spotcloud.online/apple-breaks-gamma-support-delivers-18-1-intraday-trade/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "HIMS Breakout Delivers 10:1 Intraday Return as Negative Gamma Fuels Post-News Momentum",
+          "href": "hxxps://spotgamma.spotcloud.online/hims-10-1-trade-after-news-momentum/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "ES Calls Surge 406% as SpotGamma Identifies the 6830 Gamma Magnet Before the Move",
+          "href": "hxxps://spotgamma.spotcloud.online/es-call-surges-406-percent/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "User Guide",
+          "href": "hxxps://spotgamma.spotcloud.online/hiro-user-guide",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Support Center:",
+          "href": "hxxps://support.spotgamma[.]com/hc/en-us/categories/4418014983187-HIRO-Indicator",
+          "kind": "SUPPORT_DOC"
+        },
+        {
+          "text": "Sharpen Your Skills",
+          "href": "hxxps://spotgamma.spotcloud.online/sharpen-your-skills/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Session 1:",
+          "href": "hxxps://spotgamma.spotcloud.online/sharpen-your-skills-hiro-real-time-options-pressure-visualized/",
+          "kind": "PLATFORM_LINK"
+        }
+      ],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [
+        {
+          "host": "form.typeform.com",
+          "kind": "FEEDBACK_FORM"
+        }
+      ],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 20,
+      "items": 28,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18884",
+      "module": "Volatility Dashboard",
+      "module_index": 10,
+      "lesson_index": 1,
+      "title": "Welcome: Volatility Dashboard",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/welcome-volatility-dashboard/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 1073,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 13,
+      "items": 13,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18887",
+      "module": "Volatility Dashboard",
+      "module_index": 10,
+      "lesson_index": 2,
+      "title": "See Where Volatility is Mispriced",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/see-where-volatility-is-mispriced/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "PcmpuBXfdlc",
+          "provider": "youtube",
+          "duration_s": 59,
+          "title": "See Where Volatility is Mispriced | Volatility Dashboard Walkthru #1",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 43,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 59,
+      "has_first_party_transcript": true,
+      "body_chars": 33,
+      "transcript_chars": 713,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 20,
+      "asr_cues_aligned": 20,
+      "transcript_sentences": 6,
+      "transcript_aligned": 6,
+      "units": 11,
+      "items": 7,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18890",
+      "module": "Volatility Dashboard",
+      "module_index": 10,
+      "lesson_index": 3,
+      "title": "Spot Cheap vs. Expensive Options",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/spot-cheap-vs-expensive-options/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "2TRQ0L2SxIY",
+          "provider": "youtube",
+          "duration_s": 144,
+          "title": "Spot Cheap vs. Expensive Options | Volatility Dashboard Walkthru #2",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 123,
+          "frames": 4,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 144,
+      "has_first_party_transcript": true,
+      "body_chars": 234,
+      "transcript_chars": 1965,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 60,
+      "asr_cues_aligned": 53,
+      "transcript_sentences": 16,
+      "transcript_aligned": 16,
+      "units": 33,
+      "items": 10,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18893",
+      "module": "Volatility Dashboard",
+      "module_index": 10,
+      "lesson_index": 4,
+      "title": "Read Volatility Across Time Horizons",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/read-volatility-across-time-horizons/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "fFtA3DnH4SI",
+          "provider": "youtube",
+          "duration_s": 111,
+          "title": "Read Volatility Across Time Horizons | Volatility Dashboard Walkthru #3",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 91,
+          "frames": 3,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 111,
+      "has_first_party_transcript": true,
+      "body_chars": 221,
+      "transcript_chars": 1352,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 44,
+      "asr_cues_aligned": 39,
+      "transcript_sentences": 11,
+      "transcript_aligned": 11,
+      "units": 21,
+      "items": 10,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18896",
+      "module": "Volatility Dashboard",
+      "module_index": 10,
+      "lesson_index": 5,
+      "title": "See Where Tail Risk is Priced",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/see-where-tail-risk-is-priced/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "DJ4_X8UtvB8",
+          "provider": "youtube",
+          "duration_s": 101,
+          "title": "See Where Tail Risk is Priced | Volatility Dashboard Walkthru #4",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 87,
+          "frames": 3,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 101,
+      "has_first_party_transcript": true,
+      "body_chars": 224,
+      "transcript_chars": 1307,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 43,
+      "asr_cues_aligned": 37,
+      "transcript_sentences": 8,
+      "transcript_aligned": 8,
+      "units": 20,
+      "items": 16,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18899",
+      "module": "Volatility Dashboard",
+      "module_index": 10,
+      "lesson_index": 6,
+      "title": "Spot Shifts in Volatility Expectations",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/spot-shifts-in-volatility-expectations/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "yV_5ULT0R_c",
+          "provider": "youtube",
+          "duration_s": 88,
+          "title": "Spot Shifts in Volatility Expectations | Volatility Dashboard Walkthru #5",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 69,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 88,
+      "has_first_party_transcript": true,
+      "body_chars": 38,
+      "transcript_chars": 1235,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 35,
+      "asr_cues_aligned": 35,
+      "transcript_sentences": 9,
+      "transcript_aligned": 9,
+      "units": 18,
+      "items": 9,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18902",
+      "module": "Volatility Dashboard",
+      "module_index": 10,
+      "lesson_index": 7,
+      "title": "Match Strategies to Volatility",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/match-strategies-to-volatility/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "UOKnO2TlRzg",
+          "provider": "youtube",
+          "duration_s": 72,
+          "title": "Match Strategies to Volatility | Volatility Dashboard Walkthru #6",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 53,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 72,
+      "has_first_party_transcript": true,
+      "body_chars": 30,
+      "transcript_chars": 998,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 27,
+      "asr_cues_aligned": 26,
+      "transcript_sentences": 9,
+      "transcript_aligned": 9,
+      "units": 18,
+      "items": 7,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18905",
+      "module": "Volatility Dashboard",
+      "module_index": 10,
+      "lesson_index": 8,
+      "title": "Trader Volatility Across Expirations",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/trader-volatility-across-expirations/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "kheqm3r-V5U",
+          "provider": "youtube",
+          "duration_s": 105,
+          "title": "Trader Volatility Across Expirations | Volatility Dashboard Walkthru #7",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 83,
+          "frames": 3,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 105,
+      "has_first_party_transcript": true,
+      "body_chars": 36,
+      "transcript_chars": 1553,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 42,
+      "asr_cues_aligned": 41,
+      "transcript_sentences": 12,
+      "transcript_aligned": 12,
+      "units": 25,
+      "items": 10,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18910",
+      "module": "Volatility Dashboard",
+      "module_index": 10,
+      "lesson_index": 9,
+      "title": "Mission: Identify a Volatility Mispricing",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/mission-identify-a-volatility-mispricing/",
+      "type": "MISSION",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 523,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 10,
+      "items": 9,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19151",
+      "module": "Volatility Dashboard",
+      "module_index": 10,
+      "lesson_index": 10,
+      "title": "Resources: Volatility Dashboard",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/resources-volatility-dashboard/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 722,
+      "transcript_chars": 0,
+      "resource_links": [
+        {
+          "text": "Support Center:",
+          "href": "hxxps://support.spotgamma[.]com/hc/en-us/categories/23981957172499-Volatility-Dashboard",
+          "kind": "SUPPORT_DOC"
+        },
+        {
+          "text": "Sharpen Your Skills — Volatility Dashboard",
+          "href": "hxxps://spotgamma.spotcloud.online/sharpen-your-skills-volatility-dashboard/",
+          "kind": "PLATFORM_LINK"
+        }
+      ],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [
+        {
+          "host": "form.typeform.com",
+          "kind": "FEEDBACK_FORM"
+        }
+      ],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 4,
+      "items": 8,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18834",
+      "module": "TRACE",
+      "module_index": 11,
+      "lesson_index": 1,
+      "title": "Welcome: TRACE",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/welcome-trace/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 1106,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 12,
+      "items": 22,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18697",
+      "module": "TRACE",
+      "module_index": 11,
+      "lesson_index": 2,
+      "title": "Overview",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/overview-2/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "LkbLv5Aai6s",
+          "provider": "youtube",
+          "duration_s": 48,
+          "title": "Overview | TRACE Walkthru #1",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 31,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 48,
+      "has_first_party_transcript": true,
+      "body_chars": 8,
+      "transcript_chars": 539,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 15,
+      "asr_cues_aligned": 15,
+      "transcript_sentences": 4,
+      "transcript_aligned": 4,
+      "units": 11,
+      "items": 12,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18698",
+      "module": "TRACE",
+      "module_index": 11,
+      "lesson_index": 3,
+      "title": "GEX Lens",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/gex-lens/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "_9gPKqMbyBg",
+          "provider": "youtube",
+          "duration_s": 90,
+          "title": "GEX Lens | TRACE Walkthru #2",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 69,
+          "frames": 3,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 90,
+      "has_first_party_transcript": true,
+      "body_chars": 8,
+      "transcript_chars": 1078,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 35,
+      "asr_cues_aligned": 29,
+      "transcript_sentences": 9,
+      "transcript_aligned": 9,
+      "units": 19,
+      "items": 15,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18699",
+      "module": "TRACE",
+      "module_index": 11,
+      "lesson_index": 4,
+      "title": "Main Chart",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/main-chart-2/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "o6sCIXElbUE",
+          "provider": "youtube",
+          "duration_s": 162,
+          "title": "Main Chart | TRACE Walkthru #3",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 137,
+          "frames": 5,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 162,
+      "has_first_party_transcript": true,
+      "body_chars": 10,
+      "transcript_chars": 2466,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 67,
+      "asr_cues_aligned": 67,
+      "transcript_sentences": 20,
+      "transcript_aligned": 20,
+      "units": 32,
+      "items": 34,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18700",
+      "module": "TRACE",
+      "module_index": 11,
+      "lesson_index": 5,
+      "title": "Trading Approach",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/trading-approach-2/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "NL-DPXrxmM0",
+          "provider": "youtube",
+          "duration_s": 91,
+          "title": "Trading Approach | TRACE Walkthru #4",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 73,
+          "frames": 3,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 91,
+      "has_first_party_transcript": true,
+      "body_chars": 268,
+      "transcript_chars": 1109,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 36,
+      "asr_cues_aligned": 29,
+      "transcript_sentences": 8,
+      "transcript_aligned": 8,
+      "units": 20,
+      "items": 18,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18701",
+      "module": "TRACE",
+      "module_index": 11,
+      "lesson_index": 6,
+      "title": "Gamma in Action",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/gamma-in-action/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "DCSCA9yiZPs",
+          "provider": "youtube",
+          "duration_s": 46,
+          "title": "Gamma in Action | TRACE Walkthru #5",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 27,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 46,
+      "has_first_party_transcript": true,
+      "body_chars": 15,
+      "transcript_chars": 495,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 13,
+      "asr_cues_aligned": 13,
+      "transcript_sentences": 3,
+      "transcript_aligned": 3,
+      "units": 8,
+      "items": 14,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18702",
+      "module": "TRACE",
+      "module_index": 11,
+      "lesson_index": 7,
+      "title": "Delta Pressure in Action",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/delta-pressure-in-action/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "5Eyu1ZkRPds",
+          "provider": "youtube",
+          "duration_s": 46,
+          "title": "Delta Pressure in Action | TRACE Walkthru #6",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 29,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 46,
+      "has_first_party_transcript": true,
+      "body_chars": 24,
+      "transcript_chars": 510,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 15,
+      "asr_cues_aligned": 14,
+      "transcript_sentences": 3,
+      "transcript_aligned": 3,
+      "units": 14,
+      "items": 11,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18703",
+      "module": "TRACE",
+      "module_index": 11,
+      "lesson_index": 8,
+      "title": "Charm in Action",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/charm-in-action/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "iNEm7SGaylg",
+          "provider": "youtube",
+          "duration_s": 46,
+          "title": "Charm in Action | TRACE Walkthru #7",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 25,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 46,
+      "has_first_party_transcript": true,
+      "body_chars": 15,
+      "transcript_chars": 490,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 13,
+      "asr_cues_aligned": 13,
+      "transcript_sentences": 3,
+      "transcript_aligned": 3,
+      "units": 8,
+      "items": 10,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19475",
+      "module": "TRACE",
+      "module_index": 11,
+      "lesson_index": 9,
+      "title": "ES Futures (S&P 500) Case Study & Trade Analysis",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/es-futures-sp-500-case-study-trade-analysis-2/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "ngLDgQN7sJ8",
+          "provider": "youtube",
+          "duration_s": 496,
+          "title": "ES Futures Rocket at the Open & SpotGamma Calls the 1‑Day High",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 383,
+          "frames": 12,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 496,
+      "has_first_party_transcript": true,
+      "body_chars": 48,
+      "transcript_chars": 513,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 192,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 3,
+      "transcript_aligned": 0,
+      "units": 63,
+      "items": 59,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18851",
+      "module": "TRACE",
+      "module_index": 11,
+      "lesson_index": 10,
+      "title": "Mission: Map Today’s Intraday Risk Zones",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/mission-map-todays-intraday-risk-zones/",
+      "type": "MISSION",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 535,
+      "transcript_chars": 0,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 10,
+      "items": 10,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "19152",
+      "module": "TRACE",
+      "module_index": 11,
+      "lesson_index": 11,
+      "title": "Resources: TRACE",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/resources-trace/",
+      "type": "TEXT",
+      "access_status": "ACCESSIBLE",
+      "video_provider": null,
+      "videos": [],
+      "duration_s": null,
+      "has_first_party_transcript": false,
+      "body_chars": 1504,
+      "transcript_chars": 0,
+      "resource_links": [
+        {
+          "text": "TRACE Unveils When To Short The S&P 500",
+          "href": "hxxps://spotgamma.spotcloud.online/trace-unveils-when-to-short-sp-500/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "This SPX Trade Hit Big With 12:1 Reward-to-Risk Payoff",
+          "href": "hxxps://spotgamma.spotcloud.online/case-study-spx-trade-12-1-reward-risk-payoff/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "ES Futures Rocket At The Opening And SpotGamma Nails The Top",
+          "href": "hxxps://spotgamma.spotcloud.online/es-futures-rocket-at-open-spotgamma-nails-top-1-day-high/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "ES Calls Surge 406% as SpotGamma Identifies the 6830 Gamma Magnet Before the Move",
+          "href": "hxxps://spotgamma.spotcloud.online/es-call-surges-406-percent/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "User Guide:",
+          "href": "hxxps://spotgamma.spotcloud.online/trace-user-guide",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Support Center:",
+          "href": "hxxps://support.spotgamma[.]com/hc/en-us/categories/33607754385939-TRACE-Heatmap",
+          "kind": "SUPPORT_DOC"
+        },
+        {
+          "text": "Sharpen Your Skills — TRACE:",
+          "href": "hxxps://spotgamma.spotcloud.online/sharpen-your-skills-trace/",
+          "kind": "PLATFORM_LINK"
+        },
+        {
+          "text": "Sharpen Your Skills — Support & Resistance: Fishbone or Wishbone?:",
+          "href": "hxxps://spotgamma.spotcloud.online/sharpen-your-skills-support-resistance-fishbone-or-wishbone/",
+          "kind": "PLATFORM_LINK"
+        }
+      ],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [
+        {
+          "host": "form.typeform.com",
+          "kind": "FEEDBACK_FORM"
+        }
+      ],
+      "asr_cues": 0,
+      "asr_cues_aligned": 0,
+      "transcript_sentences": 0,
+      "transcript_aligned": 0,
+      "units": 14,
+      "items": 29,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    },
+    {
+      "lesson_id": "18993",
+      "module": "Conclusion",
+      "module_index": 12,
+      "lesson_index": 1,
+      "title": "Congratulations, Course Complete!",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/lessons/congratulations-course-complete/",
+      "type": "VIDEO",
+      "access_status": "ACCESSIBLE",
+      "video_provider": "youtube",
+      "videos": [
+        {
+          "video_id": "J9o2KU-ievI",
+          "provider": "youtube",
+          "duration_s": 48,
+          "title": "Congratulations, Course Complete! | SpotGamma",
+          "caption_track": {
+            "lang": "en",
+            "kind": "asr"
+          },
+          "caption_events": 39,
+          "frames": 2,
+          "capture_status": "CAPTIONS_CAPTURED",
+          "capture_error": null
+        }
+      ],
+      "duration_s": 48,
+      "has_first_party_transcript": true,
+      "body_chars": 33,
+      "transcript_chars": 745,
+      "resource_links": [],
+      "files": [],
+      "images": [],
+      "tables": 0,
+      "other_embeds": [],
+      "asr_cues": 20,
+      "asr_cues_aligned": 20,
+      "transcript_sentences": 5,
+      "transcript_aligned": 5,
+      "units": 10,
+      "items": 2,
+      "processing_status": "PROCESSED",
+      "processing_note": null
+    }
+  ],
+  "videos": [
+    {
+      "video_id": "kfq8ppeCCbU",
+      "provider": "youtube",
+      "duration_s": 65,
+      "title": "6 Signals That Move The Markets | Key Levels #1",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 51,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18645"
+      ],
+      "cues": 26,
+      "segments": 4,
+      "frames_ocr_lines": 6
+    },
+    {
+      "video_id": "5fY6GfPHelQ",
+      "provider": "youtube",
+      "duration_s": 113,
+      "title": "Market Makers | Key Levels #2",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 81,
+      "frames": 3,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18646"
+      ],
+      "cues": 40,
+      "segments": 3,
+      "frames_ocr_lines": 8
+    },
+    {
+      "video_id": "ZlgHBCocUuQ",
+      "provider": "youtube",
+      "duration_s": 71,
+      "title": "Delta | Key Levels #3",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 49,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18647"
+      ],
+      "cues": 25,
+      "segments": 3,
+      "frames_ocr_lines": 8
+    },
+    {
+      "video_id": "tetIUMchpiI",
+      "provider": "youtube",
+      "duration_s": 78,
+      "title": "Gamma | Key Levels #4",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 63,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18648"
+      ],
+      "cues": 31,
+      "segments": 4,
+      "frames_ocr_lines": 3
+    },
+    {
+      "video_id": "DlnKc9ET46o",
+      "provider": "youtube",
+      "duration_s": 102,
+      "title": "Call Wall | Key Levels #5",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 79,
+      "frames": 3,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18649"
+      ],
+      "cues": 40,
+      "segments": 6,
+      "frames_ocr_lines": 14
+    },
+    {
+      "video_id": "zfbWVNPmBwI",
+      "provider": "youtube",
+      "duration_s": 95,
+      "title": "Put Wall | Key Levels #6",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 71,
+      "frames": 3,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18650"
+      ],
+      "cues": 36,
+      "segments": 7,
+      "frames_ocr_lines": 8
+    },
+    {
+      "video_id": "CfmmrY9C4BQ",
+      "provider": "youtube",
+      "duration_s": 83,
+      "title": "Vol Trigger |  Key Levels #7",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 65,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18651"
+      ],
+      "cues": 32,
+      "segments": 3,
+      "frames_ocr_lines": 5
+    },
+    {
+      "video_id": "CWf3WnwCDqk",
+      "provider": "youtube",
+      "duration_s": 63,
+      "title": "Learning & Support, Any Time You Need It | Key Levels #8",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 53,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18652"
+      ],
+      "cues": 26,
+      "segments": 3,
+      "frames_ocr_lines": 2
+    },
+    {
+      "video_id": "lgpeqQ4hHgs",
+      "provider": "youtube",
+      "duration_s": 87,
+      "title": "Key Market Dynamics & Trading Insights | Market Overview Walkthru #1",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 71,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "19012"
+      ],
+      "cues": 36,
+      "segments": 6,
+      "frames_ocr_lines": 8
+    },
+    {
+      "video_id": "Eu9RoHNQQNw",
+      "provider": "youtube",
+      "duration_s": 161,
+      "title": "Data Into Direction | Market Overview Walkthru #2",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 151,
+      "frames": 5,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "19013"
+      ],
+      "cues": 74,
+      "segments": 8,
+      "frames_ocr_lines": 24
+    },
+    {
+      "video_id": "DsUcqy5_zLs",
+      "provider": "youtube",
+      "duration_s": 75,
+      "title": "Your Top Names, Tools, & Support | Market Overview Walkthru #3",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 61,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "19014"
+      ],
+      "cues": 31,
+      "segments": 3,
+      "frames_ocr_lines": 14
+    },
+    {
+      "video_id": "PrSNNmXy5MI",
+      "provider": "youtube",
+      "duration_s": 201,
+      "title": "Leveraging Your Toolkit | Market Overview Walkthru #4",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 181,
+      "frames": 6,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "19054"
+      ],
+      "cues": 90,
+      "segments": 11,
+      "frames_ocr_lines": 23
+    },
+    {
+      "video_id": "hSfsbNySInY",
+      "provider": "youtube",
+      "duration_s": 39,
+      "title": "Overview, Your Daily Edge | Founder's Notes Walkthru #1",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 27,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18097"
+      ],
+      "cues": 13,
+      "segments": 1,
+      "frames_ocr_lines": 18
+    },
+    {
+      "video_id": "xxcDx56z6ho",
+      "provider": "youtube",
+      "duration_s": 50,
+      "title": "AM/PM Notes, Morning Setups, Evening Recaps | Founder's Notes Walkthru #2",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 41,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18098"
+      ],
+      "cues": 20,
+      "segments": 2,
+      "frames_ocr_lines": 28
+    },
+    {
+      "video_id": "X2kAGT8vmJA",
+      "provider": "youtube",
+      "duration_s": 59,
+      "title": "Macro Theme - Spot Big Moves Early | Founder's Notes Walkthru #3",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 45,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18099"
+      ],
+      "cues": 22,
+      "segments": 4,
+      "frames_ocr_lines": 16
+    },
+    {
+      "video_id": "bUkxKqD0DNg",
+      "provider": "youtube",
+      "duration_s": 68,
+      "title": "Winning Trade Example | Founder's Notes Walkthru #4",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 51,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18100"
+      ],
+      "cues": 25,
+      "segments": 4,
+      "frames_ocr_lines": 18
+    },
+    {
+      "video_id": "-Yqn9U4_tpA",
+      "provider": "youtube",
+      "duration_s": 63,
+      "title": "Intent, Application, & Style | Founder's Notes Walkthru #5",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 47,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18101"
+      ],
+      "cues": 23,
+      "segments": 5,
+      "frames_ocr_lines": 3
+    },
+    {
+      "video_id": "lF6vyG1TE2E",
+      "provider": "youtube",
+      "duration_s": 47,
+      "title": "Real Calls, Real Wins | Founder's Notes Walkthru #6",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 31,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18102"
+      ],
+      "cues": 15,
+      "segments": 3,
+      "frames_ocr_lines": 17
+    },
+    {
+      "video_id": "6r86APfij3o",
+      "provider": "youtube",
+      "duration_s": 59,
+      "title": "The Founder's Note Tables | Founder's Notes Walkthru #7",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 47,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18103"
+      ],
+      "cues": 23,
+      "segments": 3,
+      "frames_ocr_lines": 12
+    },
+    {
+      "video_id": "ESvJDY4DbkQ",
+      "provider": "youtube",
+      "duration_s": 55,
+      "title": "Track Record | Founder's Notes Walkthru #8",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 37,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18104"
+      ],
+      "cues": 19,
+      "segments": 2,
+      "frames_ocr_lines": 11
+    },
+    {
+      "video_id": "6-_2V4HL944",
+      "provider": "youtube",
+      "duration_s": 54,
+      "title": "Reports | Founder's Notes Walkthru #9",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 41,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "19225"
+      ],
+      "cues": 21,
+      "segments": 2,
+      "frames_ocr_lines": 11
+    },
+    {
+      "video_id": "umeoVWpRYcU",
+      "provider": "youtube",
+      "duration_s": 107,
+      "title": "Overview | Options Calculator Walkthru #1",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 83,
+      "frames": 3,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18862"
+      ],
+      "cues": 42,
+      "segments": 6,
+      "frames_ocr_lines": 9
+    },
+    {
+      "video_id": "rxsQkGxEipU",
+      "provider": "youtube",
+      "duration_s": 100,
+      "title": "Key Metrics for Any Name | Options Calculator Walkthru #2",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 77,
+      "frames": 3,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18867"
+      ],
+      "cues": 39,
+      "segments": 4,
+      "frames_ocr_lines": 7
+    },
+    {
+      "video_id": "nt2o2KodYxA",
+      "provider": "youtube",
+      "duration_s": 66,
+      "title": "Options Strategies | Options Calculator Walkthru #3",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 47,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18870"
+      ],
+      "cues": 24,
+      "segments": 2,
+      "frames_ocr_lines": 3
+    },
+    {
+      "video_id": "xrArtlbXlIU",
+      "provider": "youtube",
+      "duration_s": 212,
+      "title": "Profit and Loss Chart | Options Calculator Walkthru #4",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 175,
+      "frames": 7,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18873"
+      ],
+      "cues": 87,
+      "segments": 4,
+      "frames_ocr_lines": 10
+    },
+    {
+      "video_id": "jbLR5pAwxP0",
+      "provider": "youtube",
+      "duration_s": 225,
+      "title": "Legs, IV, & Saved Positions | Options Calculator Walkthru #5",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 201,
+      "frames": 7,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18876"
+      ],
+      "cues": 100,
+      "segments": 11,
+      "frames_ocr_lines": 13
+    },
+    {
+      "video_id": "-n7qta9eC6o",
+      "provider": "youtube",
+      "duration_s": 36,
+      "title": "Read The Charts Driving Market Moves | Indices Walkthru #1",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 27,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "17918"
+      ],
+      "cues": 13,
+      "segments": 2,
+      "frames_ocr_lines": 12
+    },
+    {
+      "video_id": "WXdsg8FHAmk",
+      "provider": "youtube",
+      "duration_s": 76,
+      "title": "Use Greeks, Volatility, & OI to Sharpen Trades | Indices Walkthru #2",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 55,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "17919"
+      ],
+      "cues": 26,
+      "segments": 3,
+      "frames_ocr_lines": 6
+    },
+    {
+      "video_id": "pJK9v7XvX-g",
+      "provider": "youtube",
+      "duration_s": 76,
+      "title": "Spot Flow Shifts Before the Market Reacts | Indices Walkthru #3",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 49,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "17920"
+      ],
+      "cues": 23,
+      "segments": 3,
+      "frames_ocr_lines": 6
+    },
+    {
+      "video_id": "1O2Q_u3W6NQ",
+      "provider": "youtube",
+      "duration_s": 47,
+      "title": "Integrations | Indices Walkthru #4",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 33,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "19071"
+      ],
+      "cues": 17,
+      "segments": 1,
+      "frames_ocr_lines": 6
+    },
+    {
+      "video_id": "QFLhNQC-gRE",
+      "provider": "youtube",
+      "duration_s": 76,
+      "title": "Layout | Equity Hub Walkthru #1",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 53,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18684"
+      ],
+      "cues": 27,
+      "segments": 5,
+      "frames_ocr_lines": 6
+    },
+    {
+      "video_id": "o-CyAyY2j4w",
+      "provider": "youtube",
+      "duration_s": 52,
+      "title": "Overview | Equity Hub Walkthru #2",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 37,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18685"
+      ],
+      "cues": 18,
+      "segments": 4,
+      "frames_ocr_lines": 2
+    },
+    {
+      "video_id": "zzS3auS9Y5A",
+      "provider": "youtube",
+      "duration_s": 83,
+      "title": "Main Chart | Equity Hub Walkthru #3",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 67,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18686"
+      ],
+      "cues": 33,
+      "segments": 6,
+      "frames_ocr_lines": 5
+    },
+    {
+      "video_id": "ECszNQh0YNg",
+      "provider": "youtube",
+      "duration_s": 90,
+      "title": "Table | Equity Hub Walkthru #4",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 75,
+      "frames": 3,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18687"
+      ],
+      "cues": 37,
+      "segments": 3,
+      "frames_ocr_lines": 10
+    },
+    {
+      "video_id": "DBH8FA9wCIY",
+      "provider": "youtube",
+      "duration_s": 96,
+      "title": "Sample Workflow - Spot Trade Setups in 4 Steps | Equity Hub Walkthru #5",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 75,
+      "frames": 3,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18688"
+      ],
+      "cues": 37,
+      "segments": 7,
+      "frames_ocr_lines": 13
+    },
+    {
+      "video_id": "C72yH-NUNGc",
+      "provider": "youtube",
+      "duration_s": 59,
+      "title": "Trading Approach | Equity Hub Walkthru #6",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 43,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18689"
+      ],
+      "cues": 21,
+      "segments": 3,
+      "frames_ocr_lines": 5
+    },
+    {
+      "video_id": "FbfXqrVTApU",
+      "provider": "youtube",
+      "duration_s": 74,
+      "title": "Personalization | Equity Hub Walkthru #7",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 59,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18690"
+      ],
+      "cues": 30,
+      "segments": 1,
+      "frames_ocr_lines": 11
+    },
+    {
+      "video_id": "hmx7-Hw0FGw",
+      "provider": "youtube",
+      "duration_s": 71,
+      "title": "Intermediate Trade Structures | Equity Hub Walkthru #8",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 55,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18691"
+      ],
+      "cues": 27,
+      "segments": 5,
+      "frames_ocr_lines": 6
+    },
+    {
+      "video_id": "H-fgSDBMvKM",
+      "provider": "youtube",
+      "duration_s": 79,
+      "title": "Advanced Trade Structures | Equity Hub Walkthru #9",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 57,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18692"
+      ],
+      "cues": 28,
+      "segments": 4,
+      "frames_ocr_lines": 7
+    },
+    {
+      "video_id": "AOqTZVZSN48",
+      "provider": "youtube",
+      "duration_s": 918,
+      "title": "How SpotGamma Turned a COIN Setup into a 39% Swing Trade",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 605,
+      "frames": 12,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18693"
+      ],
+      "cues": 303,
+      "segments": 43,
+      "frames_ocr_lines": 45
+    },
+    {
+      "video_id": "LZ-WjYlLS1o",
+      "provider": "youtube",
+      "duration_s": 101,
+      "title": "Synthetic OI - Track Hedging Flows in Based on Dealer Positioning | Equity Hub Walkthru #11",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 79,
+      "frames": 3,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18694"
+      ],
+      "cues": 40,
+      "segments": 8,
+      "frames_ocr_lines": 10
+    },
+    {
+      "video_id": "r92cs_WHQdk",
+      "provider": "youtube",
+      "duration_s": 89,
+      "title": "Synthetic OI - Prepare for Intraday Volatility | Equity Hub Walkthru #12",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 69,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18695"
+      ],
+      "cues": 35,
+      "segments": 7,
+      "frames_ocr_lines": 10
+    },
+    {
+      "video_id": "Votqc_cw6Cg",
+      "provider": "youtube",
+      "duration_s": 59,
+      "title": "Trade Example - May 28, 2025 | Equity Hub Walkthru #13",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 41,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18696"
+      ],
+      "cues": 20,
+      "segments": 6,
+      "frames_ocr_lines": 8
+    },
+    {
+      "video_id": "C0--O8V40Ug",
+      "provider": "youtube",
+      "duration_s": 532,
+      "title": "Tesla (TSLA) Breaks Gamma Pin And Nails Precision Intraday Short | SpotGamma",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 421,
+      "frames": 12,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "19474"
+      ],
+      "cues": 211,
+      "segments": 37,
+      "frames_ocr_lines": 69
+    },
+    {
+      "video_id": "kjZ5eDtLIr4",
+      "provider": "youtube",
+      "duration_s": 66,
+      "title": "Overview of Scanners | Scanners Walkthru #1",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 49,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18655"
+      ],
+      "cues": 25,
+      "segments": 6,
+      "frames_ocr_lines": 13
+    },
+    {
+      "video_id": "Sv66fHsIkOQ",
+      "provider": "youtube",
+      "duration_s": 100,
+      "title": "Compass | Scanners Walkthru #2",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 85,
+      "frames": 3,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18656"
+      ],
+      "cues": 42,
+      "segments": 4,
+      "frames_ocr_lines": 17
+    },
+    {
+      "video_id": "tLo17wSImgQ",
+      "provider": "youtube",
+      "duration_s": 60,
+      "title": "Squeeze Scanner | Scanners Walkthru #3",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 47,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18657"
+      ],
+      "cues": 22,
+      "segments": 4,
+      "frames_ocr_lines": 8
+    },
+    {
+      "video_id": "-PlsupL1GcQ",
+      "provider": "youtube",
+      "duration_s": 58,
+      "title": "Volatility Risk Premium | Scanners Walkthru #4",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 43,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18658"
+      ],
+      "cues": 21,
+      "segments": 4,
+      "frames_ocr_lines": 12
+    },
+    {
+      "video_id": "l1b0_c0q_2k",
+      "provider": "youtube",
+      "duration_s": 58,
+      "title": "Scanner Tables | Scanners Walkthru #5",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 47,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18659"
+      ],
+      "cues": 23,
+      "segments": 3,
+      "frames_ocr_lines": 6
+    },
+    {
+      "video_id": "2-18i83ZPGg",
+      "provider": "youtube",
+      "duration_s": 75,
+      "title": "Visualize Momentum Through Options Flow | Tape Walkthru #1",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 59,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "19032"
+      ],
+      "cues": 30,
+      "segments": 4,
+      "frames_ocr_lines": 0
+    },
+    {
+      "video_id": "4sy8JIiWqic",
+      "provider": "youtube",
+      "duration_s": 67,
+      "title": "Surface High-Impact Flow Fast | Tape Walkthru #2",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 53,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "19033"
+      ],
+      "cues": 27,
+      "segments": 6,
+      "frames_ocr_lines": 5
+    },
+    {
+      "video_id": "Sz0jSiyRV_M",
+      "provider": "youtube",
+      "duration_s": 64,
+      "title": "Gauge Market Posture | Tape Walkthru #3",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 49,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "19038"
+      ],
+      "cues": 25,
+      "segments": 4,
+      "frames_ocr_lines": 12
+    },
+    {
+      "video_id": "tJRtTa3lS98",
+      "provider": "youtube",
+      "duration_s": 59,
+      "title": "Filter For Real Trading Edge | Tape Walkthru #4",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 45,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "19041"
+      ],
+      "cues": 23,
+      "segments": 2,
+      "frames_ocr_lines": 11
+    },
+    {
+      "video_id": "xMFSCl_R1_U",
+      "provider": "youtube",
+      "duration_s": 81,
+      "title": "Spot Bullish vs Bearish Pressure | Tape Walkthru #5",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 65,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "19044"
+      ],
+      "cues": 32,
+      "segments": 4,
+      "frames_ocr_lines": 16
+    },
+    {
+      "video_id": "Vyryczz9L_E",
+      "provider": "youtube",
+      "duration_s": 68,
+      "title": "See Breakouts Before They Happen | Tape Walkthru #6",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 45,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "19068"
+      ],
+      "cues": 23,
+      "segments": 6,
+      "frames_ocr_lines": 11
+    },
+    {
+      "video_id": "GGPJ9YHlDWA",
+      "provider": "youtube",
+      "duration_s": 63,
+      "title": "See Options Flow Drive Price | HIRO Walkthru #1",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 43,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18732"
+      ],
+      "cues": 21,
+      "segments": 3,
+      "frames_ocr_lines": 8
+    },
+    {
+      "video_id": "OmNWxHUppss",
+      "provider": "youtube",
+      "duration_s": 106,
+      "title": "Find What Moves Markets, Fast | HIRO Walkthru #2",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 91,
+      "frames": 3,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18733"
+      ],
+      "cues": 45,
+      "segments": 5,
+      "frames_ocr_lines": 18
+    },
+    {
+      "video_id": "lTbvuvbqtxw",
+      "provider": "youtube",
+      "duration_s": 351,
+      "title": "Read Calls, Puts & 0DTE | HIRO Walkthru #3",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 315,
+      "frames": 11,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18734"
+      ],
+      "cues": 157,
+      "segments": 11,
+      "frames_ocr_lines": 61
+    },
+    {
+      "video_id": "fNhmZcpu7dY",
+      "provider": "youtube",
+      "duration_s": 59,
+      "title": "Beginner Trade Strategy | HIRO Walkthru #4",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 41,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18736"
+      ],
+      "cues": 21,
+      "segments": 1,
+      "frames_ocr_lines": 4
+    },
+    {
+      "video_id": "kUNSXAnQRbU",
+      "provider": "youtube",
+      "duration_s": 62,
+      "title": "Intermediate Trade Strategy | HIRO Walkthru #5",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 45,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18737"
+      ],
+      "cues": 23,
+      "segments": 4,
+      "frames_ocr_lines": 11
+    },
+    {
+      "video_id": "PcmpuBXfdlc",
+      "provider": "youtube",
+      "duration_s": 59,
+      "title": "See Where Volatility is Mispriced | Volatility Dashboard Walkthru #1",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 43,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18887"
+      ],
+      "cues": 20,
+      "segments": 3,
+      "frames_ocr_lines": 4
+    },
+    {
+      "video_id": "2TRQ0L2SxIY",
+      "provider": "youtube",
+      "duration_s": 144,
+      "title": "Spot Cheap vs. Expensive Options | Volatility Dashboard Walkthru #2",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 123,
+      "frames": 4,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18890"
+      ],
+      "cues": 60,
+      "segments": 5,
+      "frames_ocr_lines": 14
+    },
+    {
+      "video_id": "fFtA3DnH4SI",
+      "provider": "youtube",
+      "duration_s": 111,
+      "title": "Read Volatility Across Time Horizons | Volatility Dashboard Walkthru #3",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 91,
+      "frames": 3,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18893"
+      ],
+      "cues": 44,
+      "segments": 4,
+      "frames_ocr_lines": 8
+    },
+    {
+      "video_id": "DJ4_X8UtvB8",
+      "provider": "youtube",
+      "duration_s": 101,
+      "title": "See Where Tail Risk is Priced | Volatility Dashboard Walkthru #4",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 87,
+      "frames": 3,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18896"
+      ],
+      "cues": 43,
+      "segments": 4,
+      "frames_ocr_lines": 10
+    },
+    {
+      "video_id": "yV_5ULT0R_c",
+      "provider": "youtube",
+      "duration_s": 88,
+      "title": "Spot Shifts in Volatility Expectations | Volatility Dashboard Walkthru #5",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 69,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18899"
+      ],
+      "cues": 35,
+      "segments": 2,
+      "frames_ocr_lines": 8
+    },
+    {
+      "video_id": "UOKnO2TlRzg",
+      "provider": "youtube",
+      "duration_s": 72,
+      "title": "Match Strategies to Volatility | Volatility Dashboard Walkthru #6",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 53,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18902"
+      ],
+      "cues": 27,
+      "segments": 4,
+      "frames_ocr_lines": 8
+    },
+    {
+      "video_id": "kheqm3r-V5U",
+      "provider": "youtube",
+      "duration_s": 105,
+      "title": "Trader Volatility Across Expirations | Volatility Dashboard Walkthru #7",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 83,
+      "frames": 3,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18905"
+      ],
+      "cues": 42,
+      "segments": 4,
+      "frames_ocr_lines": 12
+    },
+    {
+      "video_id": "LkbLv5Aai6s",
+      "provider": "youtube",
+      "duration_s": 48,
+      "title": "Overview | TRACE Walkthru #1",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 31,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18697"
+      ],
+      "cues": 15,
+      "segments": 4,
+      "frames_ocr_lines": 7
+    },
+    {
+      "video_id": "_9gPKqMbyBg",
+      "provider": "youtube",
+      "duration_s": 90,
+      "title": "GEX Lens | TRACE Walkthru #2",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 69,
+      "frames": 3,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18698"
+      ],
+      "cues": 35,
+      "segments": 7,
+      "frames_ocr_lines": 10
+    },
+    {
+      "video_id": "o6sCIXElbUE",
+      "provider": "youtube",
+      "duration_s": 162,
+      "title": "Main Chart | TRACE Walkthru #3",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 137,
+      "frames": 5,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18699"
+      ],
+      "cues": 67,
+      "segments": 11,
+      "frames_ocr_lines": 12
+    },
+    {
+      "video_id": "NL-DPXrxmM0",
+      "provider": "youtube",
+      "duration_s": 91,
+      "title": "Trading Approach | TRACE Walkthru #4",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 73,
+      "frames": 3,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18700"
+      ],
+      "cues": 36,
+      "segments": 8,
+      "frames_ocr_lines": 9
+    },
+    {
+      "video_id": "DCSCA9yiZPs",
+      "provider": "youtube",
+      "duration_s": 46,
+      "title": "Gamma in Action | TRACE Walkthru #5",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 27,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18701"
+      ],
+      "cues": 13,
+      "segments": 5,
+      "frames_ocr_lines": 4
+    },
+    {
+      "video_id": "5Eyu1ZkRPds",
+      "provider": "youtube",
+      "duration_s": 46,
+      "title": "Delta Pressure in Action | TRACE Walkthru #6",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 29,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18702"
+      ],
+      "cues": 15,
+      "segments": 3,
+      "frames_ocr_lines": 10
+    },
+    {
+      "video_id": "iNEm7SGaylg",
+      "provider": "youtube",
+      "duration_s": 46,
+      "title": "Charm in Action | TRACE Walkthru #7",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 25,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18703"
+      ],
+      "cues": 13,
+      "segments": 3,
+      "frames_ocr_lines": 4
+    },
+    {
+      "video_id": "ngLDgQN7sJ8",
+      "provider": "youtube",
+      "duration_s": 496,
+      "title": "ES Futures Rocket at the Open & SpotGamma Calls the 1‑Day High",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 383,
+      "frames": 12,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "19475"
+      ],
+      "cues": 192,
+      "segments": 35,
+      "frames_ocr_lines": 59
+    },
+    {
+      "video_id": "J9o2KU-ievI",
+      "provider": "youtube",
+      "duration_s": 48,
+      "title": "Congratulations, Course Complete! | SpotGamma",
+      "caption_track": {
+        "lang": "en",
+        "kind": "asr"
+      },
+      "caption_events": 39,
+      "frames": 2,
+      "capture_status": "CAPTIONS_CAPTURED",
+      "capture_error": null,
+      "lessons": [
+        "18993"
+      ],
+      "cues": 20,
+      "segments": 2,
+      "frames_ocr_lines": 4
+    }
+  ],
+  "quizzes": [
+    {
+      "slug": "key-levels-quiz",
+      "title": "Quiz: Key Levels Continue",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/quizzes/key-levels-quiz/",
+      "module": "Key Levels",
+      "access_status": "ACCESSIBLE",
+      "interaction": "NONE",
+      "answer_key": "NOT_REVEALED",
+      "question_markers": 0,
+      "processing_status": "INVENTORIED_NO_CLAIMS"
+    },
+    {
+      "slug": "quiz-market-overview",
+      "title": "Quiz: Market Overview Continue",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/quizzes/quiz-market-overview/",
+      "module": "Market Overview",
+      "access_status": "ACCESSIBLE",
+      "interaction": "NONE",
+      "answer_key": "NOT_REVEALED",
+      "question_markers": 0,
+      "processing_status": "INVENTORIED_NO_CLAIMS"
+    },
+    {
+      "slug": "founders-notes-quiz",
+      "title": "Quiz: Founder's Note Continue",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/quizzes/founders-notes-quiz/",
+      "module": "Founder's Note",
+      "access_status": "ACCESSIBLE",
+      "interaction": "NONE",
+      "answer_key": "NOT_REVEALED",
+      "question_markers": 0,
+      "processing_status": "INVENTORIED_NO_CLAIMS"
+    },
+    {
+      "slug": "options-calculator-quiz",
+      "title": "Quiz: Options Calculator Continue",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/quizzes/options-calculator-quiz/",
+      "module": "Options Calculator",
+      "access_status": "ACCESSIBLE",
+      "interaction": "NONE",
+      "answer_key": "NOT_REVEALED",
+      "question_markers": 0,
+      "processing_status": "INVENTORIED_NO_CLAIMS"
+    },
+    {
+      "slug": "indices-quiz",
+      "title": "Quiz: Indices Continue",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/quizzes/indices-quiz/",
+      "module": "Indices",
+      "access_status": "ACCESSIBLE",
+      "interaction": "NONE",
+      "answer_key": "NOT_REVEALED",
+      "question_markers": 0,
+      "processing_status": "INVENTORIED_NO_CLAIMS"
+    },
+    {
+      "slug": "equity-hub-quiz",
+      "title": "Quiz: Equity Hub Continue",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/quizzes/equity-hub-quiz/",
+      "module": "Equity Hub",
+      "access_status": "ACCESSIBLE",
+      "interaction": "NONE",
+      "answer_key": "NOT_REVEALED",
+      "question_markers": 0,
+      "processing_status": "INVENTORIED_NO_CLAIMS"
+    },
+    {
+      "slug": "scanners-quiz",
+      "title": "Quiz: Scanners Continue",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/quizzes/scanners-quiz/",
+      "module": "Scanners",
+      "access_status": "ACCESSIBLE",
+      "interaction": "NONE",
+      "answer_key": "NOT_REVEALED",
+      "question_markers": 0,
+      "processing_status": "INVENTORIED_NO_CLAIMS"
+    },
+    {
+      "slug": "quiz-tape",
+      "title": "Quiz: Tape Continue",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/quizzes/quiz-tape/",
+      "module": "Tape",
+      "access_status": "ACCESSIBLE",
+      "interaction": "NONE",
+      "answer_key": "NOT_REVEALED",
+      "question_markers": 0,
+      "processing_status": "INVENTORIED_NO_CLAIMS"
+    },
+    {
+      "slug": "hiro-quiz",
+      "title": "Quiz: HIRO Continue",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/quizzes/hiro-quiz/",
+      "module": "HIRO",
+      "access_status": "ACCESSIBLE",
+      "interaction": "NONE",
+      "answer_key": "NOT_REVEALED",
+      "question_markers": 0,
+      "processing_status": "INVENTORIED_NO_CLAIMS"
+    },
+    {
+      "slug": "volatility-dashboard-quiz",
+      "title": "Quiz: Volatility Dashboard Continue",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/quizzes/volatility-dashboard-quiz/",
+      "module": "Volatility Dashboard",
+      "access_status": "ACCESSIBLE",
+      "interaction": "NONE",
+      "answer_key": "NOT_REVEALED",
+      "question_markers": 0,
+      "processing_status": "INVENTORIED_NO_CLAIMS"
+    },
+    {
+      "slug": "trace-quiz",
+      "title": "Quiz: TRACE Continue",
+      "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/quizzes/trace-quiz/",
+      "module": "TRACE",
+      "access_status": "ACCESSIBLE",
+      "interaction": "NONE",
+      "answer_key": "NOT_REVEALED",
+      "question_markers": 0,
+      "processing_status": "INVENTORIED_NO_CLAIMS"
+    }
+  ]
+}

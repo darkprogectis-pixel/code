@@ -1,0 +1,75 @@
+{
+  "schema": "spotgamma-term-classes/v1",
+  "basis": {
+    "SPOTGAMMA_PROPRIETARY_TERM": "SpotGamma-named level; requires course evidence naming it as a SpotGamma level (e.g. 'unique levels like the Call Wall, Put Wall, and Volatility Trigger', 'SpotGamma-specific levels') — recorded per term in concepts/term-classes.json",
+    "SPOTGAMMA_PRODUCT_TERM": "SpotGamma product/tool name (course module or lesson title)",
+    "GENERAL_OPTIONS_CONCEPT": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+    "GENERAL_MARKET_CONCEPT": "standard market concept"
+  },
+  "classes": {
+    "SPOTGAMMA_PROPRIETARY_TERM": [
+      "Call Wall",
+      "Put Wall",
+      "Volatility Trigger",
+      "Combo Strike",
+      "Key Gamma Strike",
+      "Hedge Wall",
+      "Key Delta Strike",
+      "Large Gamma"
+    ],
+    "SPOTGAMMA_PRODUCT_TERM": [
+      "Equity Hub",
+      "Scanners",
+      "Squeeze Scanner",
+      "HIRO",
+      "Volatility Dashboard",
+      "TRACE",
+      "Tape",
+      "Synthetic OI",
+      "Compass",
+      "Options Calculator",
+      "Founder's Note",
+      "Delta Pressure",
+      "GEX Lens"
+    ],
+    "GENERAL_OPTIONS_CONCEPT": [
+      "Market Maker",
+      "Delta",
+      "Gamma",
+      "Delta Hedging",
+      "Options Flow",
+      "Calls",
+      "Volatility Risk Premium",
+      "Absolute Gamma",
+      "Expected Move",
+      "OPEX",
+      "Open Interest",
+      "Implied Volatility",
+      "Puts",
+      "Vega",
+      "Skew",
+      "Theta",
+      "Vanna",
+      "Dealer Positioning",
+      "GEX",
+      "0DTE",
+      "Term Structure",
+      "Tail Risk",
+      "Charm"
+    ],
+    "GENERAL_MARKET_CONCEPT": [
+      "Resistance",
+      "Support",
+      "Single Stocks",
+      "Volatility",
+      "Momentum",
+      "Index",
+      "Market Regime",
+      "Futures",
+      "Macro",
+      "Breakout",
+      "Pin"
+    ],
+    "UNCLASSIFIED": []
+  }
+}

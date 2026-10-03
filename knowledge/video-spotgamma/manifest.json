@@ -1,0 +1,29 @@
+{
+  "schema": "spotgamma-course-manifest/v1",
+  "source": "SPOTGAMMA",
+  "source_class": "FIRST_PARTY_COURSE",
+  "knowledge_scope": "SPOTGAMMA_ONLY",
+  "content_trust": "UNTRUSTED_EVIDENCE",
+  "item_schema": "spotgamma-course-knowledge/v1",
+  "jev_diff": "req_01a103d036a5770f986230e2e6ead2ff",
+  "course": {
+    "title": "How to Use SpotGamma",
+    "url": "https://spotgamma.spotcloud.online/courses/how-to-use-spotgamma/"
+  },
+  "built_at": "2026-10-03T22:41:02.390Z",
+  "local_only": [
+    "raw/",
+    "sources/",
+    "transcripts/",
+    "segments/",
+    "frames/"
+  ],
+  "versioned": [
+    "manifest.json",
+    "inventory.json",
+    "evidence/",
+    "concepts/",
+    "indexes/"
+  ],
+  "isolation": "separate corpus from MenthorQ knowledge/video/; never merged automatically"
+}

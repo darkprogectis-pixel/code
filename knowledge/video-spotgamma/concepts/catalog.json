@@ -1,0 +1,3933 @@
+{
+  "schema": "spotgamma-concepts/v1",
+  "source": "SPOTGAMMA",
+  "concepts": [
+    {
+      "concept": "Volatility",
+      "term_class": "GENERAL_MARKET_CONCEPT",
+      "term_class_basis": "standard market concept",
+      "items": 130,
+      "quarantined": 0,
+      "lessons": [
+        "17918",
+        "17919",
+        "17920",
+        "18099",
+        "18100",
+        "18101",
+        "18651",
+        "18655",
+        "18658",
+        "18676",
+        "18679",
+        "18684",
+        "18685",
+        "18686",
+        "18687",
+        "18688",
+        "18693",
+        "18694",
+        "18695",
+        "18696",
+        "18697",
+        "18699",
+        "18700",
+        "18770",
+        "18775",
+        "18808",
+        "18818",
+        "18831",
+        "18834",
+        "18851",
+        "18859",
+        "18862",
+        "18870",
+        "18873",
+        "18876",
+        "18879",
+        "18884",
+        "18887",
+        "18890",
+        "18893",
+        "18896",
+        "18899",
+        "18902",
+        "18905",
+        "18910",
+        "18931",
+        "19009",
+        "19012",
+        "19029",
+        "19054",
+        "19144",
+        "19145",
+        "19146",
+        "19147",
+        "19148",
+        "19151",
+        "19152",
+        "19474",
+        "19475"
+      ],
+      "modules": [
+        "Key Levels",
+        "Market Overview",
+        "Founder's Note",
+        "Options Calculator",
+        "Indices",
+        "Equity Hub",
+        "Scanners",
+        "Tape",
+        "Volatility Dashboard",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 122,
+        "SPOTGAMMA_CONCEPTUAL": 8
+      },
+      "claim_types": {
+        "VOLATILITY_CONCEPT": 55,
+        "TRADING_INTERPRETATION": 34,
+        "DEFINITION": 9,
+        "EXAMPLE": 25,
+        "WORKFLOW": 4,
+        "RULE": 2,
+        "WARNING": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_b730df6612a7b270",
+          "statement": "One key statistic is that the amount of daily volatility below the Vol Trigger is nearly 40% higher than when above the Vol Trigger.",
+          "claim_type": "DEFINITION",
+          "lesson": "Vol Trigger",
+          "timestamp": "00:00:41.280–00:00:51.840",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_bc2fefe457923c88",
+          "statement": "Next, Volatility Dashboard gives you three different views to instantly spot which strikes are cheap or expensive, relative to their historical volatility — which is incredibly useful when you structure your trad es.",
+          "claim_type": "DEFINITION",
+          "lesson": "Leveraging Your Toolkit",
+          "timestamp": "00:00:43.520–00:00:56.960",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_97d6b198140fb69d",
+          "statement": "And to make sure you know for now, and later, that IV settings have been adjusted, a yellow gear icon appears — reminding you that customized volatility is in e ffect.",
+          "claim_type": "DEFINITION",
+          "lesson": "Legs, IV, & Saved Positions",
+          "timestamp": "00:02:37.040–00:02:49.599",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_e8a034178a5ef656",
+          "statement": "Along with the 14 graphs that help you assess the Greeks, Volatility, and Open Interest, there are three specific charts that help provide historical context around current market dynamics.",
+          "claim_type": "DEFINITION",
+          "lesson": "Spot Flow Shifts Before the Market Reacts",
+          "timestamp": "00:00:08.080–00:00:21.279",
+          "confidence": 0.75
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Index",
+      "term_class": "GENERAL_MARKET_CONCEPT",
+      "term_class_basis": "standard market concept",
+      "items": 115,
+      "quarantined": 0,
+      "lessons": [
+        "17918",
+        "17919",
+        "17920",
+        "18097",
+        "18098",
+        "18099",
+        "18100",
+        "18101",
+        "18102",
+        "18103",
+        "18104",
+        "18649",
+        "18650",
+        "18651",
+        "18679",
+        "18684",
+        "18685",
+        "18686",
+        "18697",
+        "18698",
+        "18699",
+        "18700",
+        "18701",
+        "18703",
+        "18732",
+        "18733",
+        "18746",
+        "18770",
+        "18775",
+        "18808",
+        "18834",
+        "18854",
+        "18873",
+        "19009",
+        "19012",
+        "19013",
+        "19014",
+        "19017",
+        "19044",
+        "19054",
+        "19071",
+        "19146",
+        "19150",
+        "19152",
+        "19475"
+      ],
+      "modules": [
+        "Key Levels",
+        "Market Overview",
+        "Founder's Note",
+        "Options Calculator",
+        "Indices",
+        "Equity Hub",
+        "Tape",
+        "HIRO",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_CONCEPTUAL": 12,
+        "GENERAL_MARKET_KNOWLEDGE": 103
+      },
+      "claim_types": {
+        "HEURISTIC": 25,
+        "TRADING_INTERPRETATION": 20,
+        "EXAMPLE": 41,
+        "PLATFORM_FEATURE": 10,
+        "WORKFLOW": 6,
+        "MARKET_STRUCTURE": 9,
+        "DEFINITION": 2,
+        "DEALER_POSITIONING": 1,
+        "RULE": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_5ad35b0684bb42d8",
+          "statement": "The Indices page is where you’ll find SpotGamma’s read on broader market flows, with charts and tables that help you analyze the major indices, including SPX, QQQ, IWM, and more.",
+          "claim_type": "DEFINITION",
+          "lesson": "Leveraging Your Toolkit",
+          "timestamp": "00:02:37.040–00:02:51.040",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_1e7c94366d2f0d1a",
+          "statement": "Next, the Live Price & SG Levels view provides a concise look into how any index or stock’s current price is behaving relative to key nearby market positions.",
+          "claim_type": "DEFINITION",
+          "lesson": "Main Chart",
+          "timestamp": "00:00:35.280–00:00:49.280",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_8d4df2f32f493cf8",
+          "statement": "so, it’s a key area where buyers will support the S&P 500.",
+          "claim_type": "HEURISTIC",
+          "lesson": "Put Wall",
+          "timestamp": "00:00:59.039–00:01:03.600",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_b52105a01210d037",
+          "statement": "These four key sections include the live price of the major indices, overlaid against our key levels, in the top left quadrant;",
+          "claim_type": "HEURISTIC",
+          "lesson": "Key Market Dynamics & Trading Insights",
+          "timestamp": "00:00:23.119–00:00:32.960",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Gamma",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 82,
+      "quarantined": 0,
+      "lessons": [
+        "18103",
+        "18645",
+        "18648",
+        "18676",
+        "18679",
+        "18686",
+        "18688",
+        "18691",
+        "18692",
+        "18693",
+        "18694",
+        "18695",
+        "18698",
+        "18699",
+        "18700",
+        "18701",
+        "18834",
+        "18851",
+        "18931",
+        "19013",
+        "19014",
+        "19029",
+        "19033",
+        "19038",
+        "19147",
+        "19150",
+        "19152",
+        "19225",
+        "19474",
+        "19475"
+      ],
+      "modules": [
+        "Key Levels",
+        "Market Overview",
+        "Founder's Note",
+        "Equity Hub",
+        "Tape",
+        "HIRO",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 67,
+        "SPOTGAMMA_CONCEPTUAL": 15
+      },
+      "claim_types": {
+        "DEFINITION": 7,
+        "EXAMPLE": 25,
+        "GAMMA_CONCEPT": 32,
+        "WORKFLOW": 3,
+        "TRADING_INTERPRETATION": 12,
+        "FORMULA": 1,
+        "RULE": 2
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_5d8259b18a4870be",
+          "statement": "The first three terms, Market Maker, Delta, and Gamma, are core concepts in the trading industry.",
+          "claim_type": "DEFINITION",
+          "lesson": "6 Signals That Move The Markets",
+          "timestamp": "00:00:29.080–00:00:38.880",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_74cd70525ee1ecdc",
+          "statement": "The Composite View uses red and green shading to show how gamma is evolving across any stock and whether puts or calls are driving price action in any name.",
+          "claim_type": "DEFINITION",
+          "lesson": "Main Chart",
+          "timestamp": "00:00:12.080–00:00:24.720",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_ec7ba40444eda138",
+          "statement": "Gamma measures how hedging pressure evolves, dynamically, and that shift can move markets fast, like we saw during the GameStop squeeze.",
+          "claim_type": "DEFINITION",
+          "lesson": "Gamma",
+          "timestamp": "00:00:31.599–00:00:41.840",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_d2ad5ee3debf0097",
+          "statement": "First, the Gamma lens shows you which strikes or zones will have higher realized volatility vs.",
+          "claim_type": "DEFINITION",
+          "lesson": "Synthetic OI - Prepare for Intraday Volatility",
+          "timestamp": "00:00:33.280–00:00:41.920",
+          "confidence": 0.55
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "HIRO",
+      "term_class": "SPOTGAMMA_PRODUCT_TERM",
+      "term_class_basis": "SpotGamma product/tool name (course module or lesson title)",
+      "items": 81,
+      "quarantined": 0,
+      "lessons": [
+        "18102",
+        "18103",
+        "18699",
+        "18732",
+        "18733",
+        "18734",
+        "18736",
+        "18737",
+        "18746",
+        "18854",
+        "19014",
+        "19029",
+        "19038",
+        "19054",
+        "19068",
+        "19149",
+        "19150",
+        "19474",
+        "19475"
+      ],
+      "modules": [
+        "Market Overview",
+        "Founder's Note",
+        "Equity Hub",
+        "Tape",
+        "HIRO",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_API_CONFIRMED": 81
+      },
+      "claim_types": {
+        "EXAMPLE": 4,
+        "DEFINITION": 5,
+        "PLATFORM_FEATURE": 39,
+        "INDICATOR": 29,
+        "WORKFLOW": 3,
+        "API_FIELD": 1
+      },
+      "api_field": "/hiro/:sym (candles ts,f1..f5)",
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_ff3e887ea1db2c33",
+          "statement": "HIRO is SpotGamma’s real time indicator of options hedging pressure.",
+          "claim_type": "DEFINITION",
+          "lesson": "See Options Flow Drive Price",
+          "timestamp": "00:00:08.360–00:00:14.420",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_7a4d8e39d08838ef",
+          "statement": "To the right of the HIRO visual, there is a short description of the name of interest, which includes the current price, price change, and the HIRO volume.Next on the bottom right, you have a new ideas section, where you can see what names ",
+          "claim_type": "DEFINITION",
+          "lesson": "Find What Moves Markets, Fast",
+          "timestamp": "00:00:33.760–00:00:58.280",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_ab14d9fff060f28b",
+          "statement": "Here, you’ll find HIRO, which shows you the hedging impact of options flow as it’s happening, empowering you to see which way buyers and sellers are driving prices.",
+          "claim_type": "DEFINITION",
+          "lesson": "Leveraging Your Toolkit",
+          "timestamp": "00:00:32.960–00:00:45.600",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_2bc57bd7b7e07472",
+          "statement": "Starting with the default view and easy to use toggles, HIRO shows you the total lens, which displays the impact of all trades with a single purple line.",
+          "claim_type": "DEFINITION",
+          "lesson": "Read Calls, Puts & 0DTE",
+          "timestamp": "00:00:28.360–00:00:34.840",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_API_CONFIRMED"
+    },
+    {
+      "concept": "Support",
+      "term_class": "GENERAL_MARKET_CONCEPT",
+      "term_class_basis": "standard market concept",
+      "items": 74,
+      "quarantined": 0,
+      "lessons": [
+        "17919",
+        "18098",
+        "18099",
+        "18101",
+        "18102",
+        "18103",
+        "18650",
+        "18652",
+        "18676",
+        "18684",
+        "18686",
+        "18687",
+        "18688",
+        "18691",
+        "18693",
+        "18696",
+        "18697",
+        "18698",
+        "18699",
+        "18701",
+        "18702",
+        "18703",
+        "18770",
+        "18798",
+        "18808",
+        "18834",
+        "18854",
+        "18862",
+        "18867",
+        "18893",
+        "18931",
+        "18932",
+        "18993",
+        "19009",
+        "19012",
+        "19013",
+        "19014",
+        "19017",
+        "19054",
+        "19144",
+        "19145",
+        "19146",
+        "19147",
+        "19148",
+        "19149",
+        "19150",
+        "19151",
+        "19152",
+        "19474"
+      ],
+      "modules": [
+        "Key Levels",
+        "Market Overview",
+        "Founder's Note",
+        "Options Calculator",
+        "Indices",
+        "Equity Hub",
+        "Scanners",
+        "Tape",
+        "HIRO",
+        "Volatility Dashboard",
+        "TRACE",
+        "Conclusion"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 59,
+        "SPOTGAMMA_CONCEPTUAL": 15
+      },
+      "claim_types": {
+        "LEVEL_INTERPRETATION": 62,
+        "EXAMPLE": 8,
+        "WORKFLOW": 4
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_b75d9eccee66e31a",
+          "statement": "The Put Wall is the strongest level of support where buyers will enter the market, often providing a near term level where traders may want to take profits from short trades, enter stocks or sell options below this price.",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Put Wall",
+          "timestamp": "00:00:07.919–00:00:24.160",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_63323648167a31a6",
+          "statement": "Going one layer deeper, the Put Wall holds as support for the S&P in 89% of trading sessions based on SpotGamma statistics, with 93% of the time the S&P closing above the Put Wall.",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Put Wall",
+          "timestamp": "00:00:36.239–00:00:51.760",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_0c555f8834756b36",
+          "statement": "so, it’s a key area where buyers will support the S&P 500.",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Put Wall",
+          "timestamp": "00:00:59.039–00:01:03.600",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_67748f59373aa436",
+          "statement": "Beyond this course, there are plenty of ways to keep building your knowledge passively: quick-hit videos inside the platform, strategy guides and walkthroughs in the dashboard, our searchable support center with thousands of Q&As, and real-",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Learning & Support, Anytime You Need It",
+          "timestamp": "00:00:23.199–00:00:38.960",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Implied Volatility",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 61,
+      "quarantined": 0,
+      "lessons": [
+        "18098",
+        "18658",
+        "18692",
+        "18693",
+        "18859",
+        "18862",
+        "18867",
+        "18876",
+        "18879",
+        "18890",
+        "18893",
+        "18896",
+        "18902",
+        "18905",
+        "18910",
+        "19145",
+        "19151"
+      ],
+      "modules": [
+        "Founder's Note",
+        "Options Calculator",
+        "Equity Hub",
+        "Scanners",
+        "Volatility Dashboard"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 56,
+        "SPOTGAMMA_CONCEPTUAL": 5
+      },
+      "claim_types": {
+        "EXAMPLE": 15,
+        "VOLATILITY_CONCEPT": 24,
+        "TRADING_INTERPRETATION": 7,
+        "DEFINITION": 7,
+        "WORKFLOW": 8
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_b4abae5357ba92d9",
+          "statement": "And, just to the right of the expiration toggle, you can see the IV at a glance, but this is just the start of ways to adjust your position.",
+          "claim_type": "DEFINITION",
+          "lesson": "Legs, IV, & Saved Positions",
+          "timestamp": "00:00:56.559–00:01:06.960",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_568d9db9b95aa17d",
+          "statement": "If the cell is red, Implied Volatility is lower than the average implied volatility over the past two months, meaning options may be attractive to purchase and the market may be more stable.",
+          "claim_type": "DEFINITION",
+          "lesson": "Spot Cheap vs. Expensive Options",
+          "timestamp": "00:00:33.440–00:00:47.840",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_8e2d32674e532b9c",
+          "statement": "If the cell is green, Implied Volatility is higher than the implied volatility over the past two months, indicating options may be attractive to sell and the market may be more volatile.",
+          "claim_type": "DEFINITION",
+          "lesson": "Spot Cheap vs. Expensive Options",
+          "timestamp": "00:00:42.800–00:00:57.520",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_bab03955193686b8",
+          "statement": "The Statistical Mode is on as a default setting, and indicates how high or low implied volatility is to the statistical mean.",
+          "claim_type": "DEFINITION",
+          "lesson": "Spot Cheap vs. Expensive Options",
+          "timestamp": "00:01:18.000–00:01:26.799",
+          "confidence": 0.75
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Scanners",
+      "term_class": "SPOTGAMMA_PRODUCT_TERM",
+      "term_class_basis": "SpotGamma product/tool name (course module or lesson title)",
+      "items": 59,
+      "quarantined": 0,
+      "lessons": [
+        "18097",
+        "18655",
+        "18656",
+        "18657",
+        "18658",
+        "18659",
+        "18684",
+        "18690",
+        "18693",
+        "18733",
+        "18818",
+        "18831",
+        "19009",
+        "19013",
+        "19029",
+        "19032",
+        "19033",
+        "19038",
+        "19041",
+        "19054",
+        "19148"
+      ],
+      "modules": [
+        "Market Overview",
+        "Founder's Note",
+        "Equity Hub",
+        "Scanners",
+        "Tape",
+        "HIRO"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_PLATFORM_ONLY": 59
+      },
+      "claim_types": {
+        "INDICATOR": 18,
+        "WORKFLOW": 6,
+        "DEFINITION": 1,
+        "PLATFORM_FEATURE": 31,
+        "EXAMPLE": 3
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_b66cc306b82643fe",
+          "statement": "The first of two scanners identifies stocks that are most likely to squeeze higher, meaning names that could move sharply upward due to short covering or positioning imbalances, within the Squeeze Candidates table.",
+          "claim_type": "DEFINITION",
+          "lesson": "Data Into Direction",
+          "timestamp": "00:01:41.280–00:01:52.960",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_c84b4ce7f5c42bd0",
+          "statement": "Turning to our scanner quadrant on the bottom left, this quadrant highlights two of our scanners with the goal of enabling active traders to see some new ideas each morning.",
+          "claim_type": "WORKFLOW",
+          "lesson": "Data Into Direction",
+          "timestamp": "00:01:31.600–00:01:43.280",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_104c5f40657313f5",
+          "statement": "Lastly under scanners, the VRP Scanner helps you spot where options may be overpriced, signaling potential mean reversion setups.",
+          "claim_type": "PLATFORM_FEATURE",
+          "lesson": "Leveraging Your Toolkit",
+          "timestamp": "00:01:54.960–00:02:03.840",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_9313055a3376936a",
+          "statement": "by applying the central viewing page, lower data tables, and SpotGamma scanners to your watchlist.",
+          "claim_type": "PLATFORM_FEATURE",
+          "lesson": "Layout",
+          "timestamp": "00:00:54.320–00:01:00.960",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_PLATFORM_ONLY"
+    },
+    {
+      "concept": "Options Flow",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 58,
+      "quarantined": 0,
+      "lessons": [
+        "17920",
+        "18101",
+        "18645",
+        "18693",
+        "18732",
+        "18733",
+        "18734",
+        "18736",
+        "18746",
+        "18854",
+        "18993",
+        "19029",
+        "19032",
+        "19033",
+        "19038",
+        "19041",
+        "19044",
+        "19051",
+        "19054",
+        "19068",
+        "19150",
+        "19225",
+        "19474",
+        "19475"
+      ],
+      "modules": [
+        "Key Levels",
+        "Market Overview",
+        "Founder's Note",
+        "Indices",
+        "Equity Hub",
+        "Tape",
+        "HIRO",
+        "TRACE",
+        "Conclusion"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_CONCEPTUAL": 9,
+        "GENERAL_MARKET_KNOWLEDGE": 49
+      },
+      "claim_types": {
+        "MARKET_STRUCTURE": 25,
+        "DEALER_POSITIONING": 1,
+        "TRADING_INTERPRETATION": 18,
+        "WORKFLOW": 3,
+        "EXAMPLE": 10,
+        "DEFINITION": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_fb2f964d0234030f",
+          "statement": "Use HIRO to identify when options flow is building, stalling, or reversing.",
+          "claim_type": "DEFINITION",
+          "lesson": "Mission: Spot a Momentum Shift Using HIRO",
+          "timestamp": null,
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_960a74108ef2d14c",
+          "statement": "Whether you’re new to options flow or just getting started with our platform, these definitions will help you cut through the noise and make faster sense of the metrics that matter.",
+          "claim_type": "MARKET_STRUCTURE",
+          "lesson": "6 Signals That Move The Markets",
+          "timestamp": "00:00:14.160–00:00:25.480",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_d060b62acd09bab8",
+          "statement": "Here, you’ll find HIRO, which shows you the hedging impact of options flow as it’s happening, empowering you to see which way buyers and sellers are driving prices.",
+          "claim_type": "DEALER_POSITIONING",
+          "lesson": "Leveraging Your Toolkit",
+          "timestamp": "00:00:32.960–00:00:45.600",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_11fa44b00ef4b4b8",
+          "statement": "Following Founder’s Notes, the Reports section has both the Flow Patrol Report, which unveils large market activity at key price levels and the Sunday Note, which recaps the biggest takeaways from the week.",
+          "claim_type": "MARKET_STRUCTURE",
+          "lesson": "Leveraging Your Toolkit",
+          "timestamp": "00:02:18.319–00:02:29.040",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Resistance",
+      "term_class": "GENERAL_MARKET_CONCEPT",
+      "term_class_basis": "standard market concept",
+      "items": 56,
+      "quarantined": 0,
+      "lessons": [
+        "17919",
+        "18098",
+        "18099",
+        "18100",
+        "18101",
+        "18103",
+        "18649",
+        "18650",
+        "18676",
+        "18684",
+        "18686",
+        "18687",
+        "18688",
+        "18691",
+        "18693",
+        "18694",
+        "18697",
+        "18699",
+        "18701",
+        "18703",
+        "18770",
+        "18798",
+        "18808",
+        "18834",
+        "18862",
+        "18867",
+        "18931",
+        "18932",
+        "19009",
+        "19012",
+        "19013",
+        "19017",
+        "19068",
+        "19145",
+        "19147",
+        "19150",
+        "19152",
+        "19474"
+      ],
+      "modules": [
+        "Key Levels",
+        "Market Overview",
+        "Founder's Note",
+        "Options Calculator",
+        "Indices",
+        "Equity Hub",
+        "Tape",
+        "HIRO",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 50,
+        "SPOTGAMMA_CONCEPTUAL": 6
+      },
+      "claim_types": {
+        "LEVEL_INTERPRETATION": 42,
+        "EXAMPLE": 12,
+        "WORKFLOW": 2
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_811dd91292b27c14",
+          "statement": "It is the strongest level of resistance where sellers will enter the market, often providing a near term level where traders take profits, short stocks or sell options above this price.",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Call Wall",
+          "timestamp": "00:00:11.759–00:00:25.760",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_ceccf273dd4ca7d4",
+          "statement": "Going one layer deeper, the Call Wall holds as resistance for the S&P in 83% of trading sessions based on SpotGamma statistics, with 88% of the time the S&P closing below the Call Wall.",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Call Wall",
+          "timestamp": "00:00:37.840–00:00:52.239",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_e882f01a95668982",
+          "statement": "a table of support and resistance levels for the major indices to the right;",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Key Market Dynamics & Trading Insights",
+          "timestamp": "00:00:29.039–00:00:36.960",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_57bb9e959e645e92",
+          "statement": "This is followed by a section of commen tary from Brent and our team of analysts that highlights the areas of resistance, support and volatility for the coming several weeks or into one of these major events.",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Macro Theme - Spot Big Moves Early",
+          "timestamp": "00:00:21.359–00:00:35.760",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Calls",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 56,
+      "quarantined": 0,
+      "lessons": [
+        "18098",
+        "18099",
+        "18102",
+        "18104",
+        "18646",
+        "18657",
+        "18686",
+        "18688",
+        "18689",
+        "18691",
+        "18693",
+        "18734",
+        "18746",
+        "18854",
+        "18862",
+        "18902",
+        "19044",
+        "19068",
+        "19150",
+        "19152",
+        "19474",
+        "19475"
+      ],
+      "modules": [
+        "Key Levels",
+        "Founder's Note",
+        "Options Calculator",
+        "Equity Hub",
+        "Scanners",
+        "Tape",
+        "HIRO",
+        "Volatility Dashboard",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 52,
+        "SPOTGAMMA_CONCEPTUAL": 4
+      },
+      "claim_types": {
+        "TRADING_INTERPRETATION": 11,
+        "EXAMPLE": 22,
+        "MARKET_STRUCTURE": 18,
+        "DEFINITION": 2,
+        "RULE": 2,
+        "WORKFLOW": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_25322bb47aacd761",
+          "statement": "The Composite View uses red and green shading to show how gamma is evolving across any stock and whether puts or calls are driving price action in any name.",
+          "claim_type": "DEFINITION",
+          "lesson": "Main Chart",
+          "timestamp": "00:00:12.080–00:00:24.720",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_f1fbefe7026f155d",
+          "statement": "When calls are in control, there tends to be more price stability versus puts, as put dominant names are often associated with higher volatility.",
+          "claim_type": "DEFINITION",
+          "lesson": "Sample Workflow - Spot Trade Setups in 4 Steps",
+          "timestamp": "00:00:26.480–00:00:37.360",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_c6af1795d87e2bd0",
+          "statement": "Each quarter, we publish our biggest market calls so you can see exactly how our insights helped traders position early and capture opportunity.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Track Record",
+          "timestamp": "00:00:30.760–00:00:39.760",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_20a380b85323a05e",
+          "statement": "Another great way is to add puts or calls right within frame by clicking on the upper left tabs.",
+          "claim_type": "MARKET_STRUCTURE",
+          "lesson": "Overview",
+          "timestamp": "00:00:38.640–00:00:45.920",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Equity Hub",
+      "term_class": "SPOTGAMMA_PRODUCT_TERM",
+      "term_class_basis": "SpotGamma product/tool name (course module or lesson title)",
+      "items": 55,
+      "quarantined": 0,
+      "lessons": [
+        "18097",
+        "18649",
+        "18650",
+        "18659",
+        "18684",
+        "18685",
+        "18686",
+        "18687",
+        "18689",
+        "18690",
+        "18691",
+        "18692",
+        "18693",
+        "18696",
+        "18931",
+        "18932",
+        "19038",
+        "19054",
+        "19147",
+        "19150",
+        "19474"
+      ],
+      "modules": [
+        "Key Levels",
+        "Market Overview",
+        "Founder's Note",
+        "Equity Hub",
+        "Scanners",
+        "Tape",
+        "HIRO"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_PLATFORM_ONLY": 55
+      },
+      "claim_types": {
+        "INDICATOR": 19,
+        "PLATFORM_FEATURE": 29,
+        "DEFINITION": 3,
+        "WORKFLOW": 2,
+        "EXAMPLE": 2
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_54c29db96e23754d",
+          "statement": "Equity Hub is your command center for SpotGamma daily insights across more than 3,500 US stocks and indices.",
+          "claim_type": "DEFINITION",
+          "lesson": "Layout",
+          "timestamp": "00:00:08.400–00:00:19.119",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_290c5921c5d7cba8",
+          "statement": "Synthetic OI Model: Equity Hub shows increasing volatility as TSLA rallies",
+          "claim_type": "DEFINITION",
+          "lesson": "Resources: Equity Hub",
+          "timestamp": null,
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_5581e0cd8216b0f7",
+          "statement": "briefly look at some background information and explanation of these levels and charts. The key daily levels are available in equity hub and are updated every day. They are proprietary to spot gamma. The",
+          "claim_type": "DEFINITION",
+          "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+          "timestamp": "00:04:30.240–00:04:49.759",
+          "confidence": 0.6
+        },
+        {
+          "knowledge_id": "sgk_a3da1c770749a743",
+          "statement": "Equity Hub offers two powerful lenses.",
+          "claim_type": "INDICATOR",
+          "lesson": "Leveraging Your Toolkit",
+          "timestamp": "00:01:19.280–00:01:24.479",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_PLATFORM_ONLY"
+    },
+    {
+      "concept": "TRACE",
+      "term_class": "SPOTGAMMA_PRODUCT_TERM",
+      "term_class_basis": "SpotGamma product/tool name (course module or lesson title)",
+      "items": 53,
+      "quarantined": 0,
+      "lessons": [
+        "18102",
+        "18103",
+        "18697",
+        "18698",
+        "18699",
+        "18700",
+        "18701",
+        "18702",
+        "18703",
+        "18834",
+        "18851",
+        "19054",
+        "19150",
+        "19152",
+        "19475"
+      ],
+      "modules": [
+        "Market Overview",
+        "Founder's Note",
+        "HIRO",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_API_CONFIRMED": 53
+      },
+      "claim_types": {
+        "DEFINITION": 3,
+        "INDICATOR": 17,
+        "PLATFORM_FEATURE": 29,
+        "WORKFLOW": 4
+      },
+      "api_field": "/trace/:sym/stats, /trace/:sym/timestamps",
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_29827f95e38ef59f",
+          "statement": "Turning to TRACE, which is an industry-leading heatmap for the S&P 500 — this SpotGamma tool shows you actual positioning as it builds and recedes throughout the day.",
+          "claim_type": "DEFINITION",
+          "lesson": "Leveraging Your Toolkit",
+          "timestamp": "00:00:54.559–00:01:08.880",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_9b2fd94639a34235",
+          "statement": "TRACE is a powerful heatmap that shows you how the options market exerts pressure on the SPX Index throughout the trading day by unveiling zones of buying & selling pressure, areas of heightened volatility, and points of price consolidation",
+          "claim_type": "DEFINITION",
+          "lesson": "Overview",
+          "timestamp": "00:00:08.400–00:00:26.855",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_441f5ca54ee4d9d8",
+          "statement": "Additionally, the blue line displayed on all three TRACE lenses is our HIRO indicator, and you can set it to display S&P equities, the S&P 500 or none depending on your preference.",
+          "claim_type": "DEFINITION",
+          "lesson": "Main Chart",
+          "timestamp": "00:00:35.000–00:00:48.520",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_f3d20d08a8b5afb8",
+          "statement": "“When we check the TRACE map this AM, we see lots of negative gamma across the whole strike range, with the only significant support level at 5,000 (that’s not a typo).”",
+          "claim_type": "INDICATOR",
+          "lesson": "Real Calls, Real Wins",
+          "timestamp": "00:00:16.560–00:00:28.240",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_API_CONFIRMED"
+    },
+    {
+      "concept": "Call Wall",
+      "term_class": "SPOTGAMMA_PROPRIETARY_TERM",
+      "term_class_basis": "SpotGamma-named level; requires course evidence naming it as a SpotGamma level (e.g. 'unique levels like the Call Wall, Put Wall, and Volatility Trigger', 'SpotGamma-specific levels') — recorded per term in concepts/term-classes.json",
+      "items": 50,
+      "quarantined": 0,
+      "lessons": [
+        "17920",
+        "18645",
+        "18648",
+        "18649",
+        "18650",
+        "18676",
+        "18679",
+        "18686",
+        "18688",
+        "18689",
+        "18691",
+        "18692",
+        "18693",
+        "18737",
+        "18746",
+        "18775",
+        "18854",
+        "18932",
+        "19009",
+        "19012",
+        "19017",
+        "19068",
+        "19150",
+        "19474",
+        "19475"
+      ],
+      "modules": [
+        "Key Levels",
+        "Market Overview",
+        "Indices",
+        "Equity Hub",
+        "Tape",
+        "HIRO",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_API_CONFIRMED": 50
+      },
+      "claim_types": {
+        "DEFINITION": 2,
+        "INDICATOR": 21,
+        "EXAMPLE": 19,
+        "LEVEL_INTERPRETATION": 5,
+        "API_FIELD": 2,
+        "WORKFLOW": 1
+      },
+      "api_field": "/levels/:sym futureLevels.callwallstrike (label 'Call Wall')",
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_a6539982b3d2dfd7",
+          "statement": "The Call Wall is one of the most important levels from SpotGamma.",
+          "claim_type": "DEFINITION",
+          "lesson": "Call Wall",
+          "timestamp": "00:00:07.839–00:00:13.840",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_a86537d867917a0e",
+          "statement": "What the Call Wall is, why it acts as powerful resistance, and how traders use it to manage upside risk",
+          "claim_type": "DEFINITION",
+          "lesson": "Welcome: Key Levels",
+          "timestamp": null,
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_15c66d2e21ccd46d",
+          "statement": "Additionally, SpotGamma data shows that when the Call Wall is breached, forward returns typically weaken — averaging -7bps one day later and just +5bps over five days.",
+          "claim_type": "API_FIELD",
+          "lesson": "Call Wall",
+          "timestamp": "00:00:50.399–00:01:04.159",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_67ce865afe25179c",
+          "statement": "Going one layer deeper, the Call Wall holds as resistance for the S&P in 83% of trading sessions based on SpotGamma statistics, with 88% of the time the S&P closing below the Call Wall.",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Call Wall",
+          "timestamp": "00:00:37.840–00:00:52.239",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_API_CONFIRMED"
+    },
+    {
+      "concept": "Put Wall",
+      "term_class": "SPOTGAMMA_PROPRIETARY_TERM",
+      "term_class_basis": "SpotGamma-named level; requires course evidence naming it as a SpotGamma level (e.g. 'unique levels like the Call Wall, Put Wall, and Volatility Trigger', 'SpotGamma-specific levels') — recorded per term in concepts/term-classes.json",
+      "items": 46,
+      "quarantined": 0,
+      "lessons": [
+        "17920",
+        "18103",
+        "18645",
+        "18648",
+        "18650",
+        "18658",
+        "18676",
+        "18679",
+        "18686",
+        "18688",
+        "18689",
+        "18691",
+        "18692",
+        "18693",
+        "18737",
+        "18746",
+        "18775",
+        "18854",
+        "18932",
+        "19009",
+        "19012",
+        "19017",
+        "19474",
+        "19475"
+      ],
+      "modules": [
+        "Key Levels",
+        "Market Overview",
+        "Founder's Note",
+        "Indices",
+        "Equity Hub",
+        "Scanners",
+        "HIRO",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_API_CONFIRMED": 46
+      },
+      "claim_types": {
+        "DEFINITION": 1,
+        "INDICATOR": 21,
+        "API_FIELD": 2,
+        "LEVEL_INTERPRETATION": 6,
+        "EXAMPLE": 14,
+        "WORKFLOW": 1,
+        "LIMITATION": 1
+      },
+      "api_field": "/levels/:sym futureLevels.putwallstrike (label 'Put Wall')",
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_22e6d3611d7e72a9",
+          "statement": "What the Put Wall is, why it acts as key support, and how it helps identify high-probability buying zones",
+          "claim_type": "DEFINITION",
+          "lesson": "Welcome: Key Levels",
+          "timestamp": null,
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_ea43c6a02f50e546",
+          "statement": "The Put Wall is the strongest level of support where buyers will enter the market, often providing a near term level where traders may want to take profits from short trades, enter stocks or sell options below this price.",
+          "claim_type": "API_FIELD",
+          "lesson": "Put Wall",
+          "timestamp": "00:00:07.919–00:00:24.160",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_a530309511381f25",
+          "statement": "Going one layer deeper, the Put Wall holds as support for the S&P in 89% of trading sessions based on SpotGamma statistics, with 93% of the time the S&P closing above the Put Wall.",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Put Wall",
+          "timestamp": "00:00:36.239–00:00:51.760",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_d618ba386f8b4eaa",
+          "statement": "Conversely, for names where your stock of interest is within 1pct of the Put Wall, statistically speaking, selling covered puts below the put wall will expire worthless the majority of the time.",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Intermediate Trade Structures",
+          "timestamp": "00:00:22.400–00:00:36.719",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_API_CONFIRMED"
+    },
+    {
+      "concept": "Puts",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 44,
+      "quarantined": 0,
+      "lessons": [
+        "18098",
+        "18102",
+        "18657",
+        "18686",
+        "18688",
+        "18689",
+        "18691",
+        "18693",
+        "18734",
+        "18746",
+        "18854",
+        "18862",
+        "18902",
+        "19044",
+        "19068",
+        "19474",
+        "19475"
+      ],
+      "modules": [
+        "Founder's Note",
+        "Options Calculator",
+        "Equity Hub",
+        "Scanners",
+        "Tape",
+        "HIRO",
+        "Volatility Dashboard",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 43,
+        "SPOTGAMMA_CONCEPTUAL": 1
+      },
+      "claim_types": {
+        "EXAMPLE": 19,
+        "MARKET_STRUCTURE": 14,
+        "DEFINITION": 2,
+        "TRADING_INTERPRETATION": 7,
+        "WORKFLOW": 1,
+        "RULE": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_0586d3a567196cab",
+          "statement": "The Composite View uses red and green shading to show how gamma is evolving across any stock and whether puts or calls are driving price action in any name.",
+          "claim_type": "DEFINITION",
+          "lesson": "Main Chart",
+          "timestamp": "00:00:12.080–00:00:24.720",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_6c1bd3f53008d098",
+          "statement": "When calls are in control, there tends to be more price stability versus puts, as put dominant names are often associated with higher volatility.",
+          "claim_type": "DEFINITION",
+          "lesson": "Sample Workflow - Spot Trade Setups in 4 Steps",
+          "timestamp": "00:00:26.480–00:00:37.360",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_371599560bdab7dd",
+          "statement": "Another great way is to add puts or calls right within frame by clicking on the upper left tabs.",
+          "claim_type": "MARKET_STRUCTURE",
+          "lesson": "Overview",
+          "timestamp": "00:00:38.640–00:00:45.920",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_568b6cc079a8aea4",
+          "statement": "Finally, the Risk Reversal chart shows you whether there are more puts or calls trading for each stock, giving traders an indication of potential bullish or bearish positioning.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Main Chart",
+          "timestamp": "00:00:53.920–00:01:06.080",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Market Maker",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 43,
+      "quarantined": 0,
+      "lessons": [
+        "18100",
+        "18101",
+        "18645",
+        "18646",
+        "18647",
+        "18648",
+        "18657",
+        "18676",
+        "18685",
+        "18688",
+        "18693",
+        "18694",
+        "18696",
+        "18699",
+        "18700",
+        "18702",
+        "19147",
+        "19150",
+        "19152",
+        "19225",
+        "19474",
+        "19475"
+      ],
+      "modules": [
+        "Key Levels",
+        "Founder's Note",
+        "Equity Hub",
+        "Scanners",
+        "HIRO",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 40,
+        "SPOTGAMMA_CONCEPTUAL": 3
+      },
+      "claim_types": {
+        "DEFINITION": 7,
+        "TRADING_INTERPRETATION": 12,
+        "EXAMPLE": 11,
+        "DEALER_POSITIONING": 12,
+        "FORMULA": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_c1f503f147c3eba7",
+          "statement": "The first three terms, Market Maker, Delta, and Gamma, are core concepts in the trading industry.",
+          "claim_type": "DEFINITION",
+          "lesson": "6 Signals That Move The Markets",
+          "timestamp": "00:00:29.080–00:00:38.880",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_31e859fac8a86ff9",
+          "statement": "The Total OI model assumes that all options are sold by market makers, and is especially useful for trading in the 1-week to 1-month timeframe.",
+          "claim_type": "DEFINITION",
+          "lesson": "Overview",
+          "timestamp": "00:00:10.320–00:00:22.560",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_1c58a5a8bbde3de3",
+          "statement": "The NVDA chart shows dealers are long significant positive gamma around the 135 strike, creating a “pinning” effect that suppresses volatility and encourages mean-reverting price action.",
+          "claim_type": "DEFINITION",
+          "lesson": "Trade Example - May 28, 2025",
+          "timestamp": "00:00:08.320–00:00:23.800",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_8aa6afe77562e713",
+          "statement": "Squeezes can happen when options market makers are forced into a cycle of stock purchases to protect against losing money if stocks go higher.",
+          "claim_type": "DEFINITION",
+          "lesson": "Squeeze Scanner",
+          "timestamp": "00:00:16.000–00:00:26.960",
+          "confidence": 0.75
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Tape",
+      "term_class": "SPOTGAMMA_PRODUCT_TERM",
+      "term_class_basis": "SpotGamma product/tool name (course module or lesson title)",
+      "items": 37,
+      "quarantined": 0,
+      "lessons": [
+        "18733",
+        "19029",
+        "19032",
+        "19033",
+        "19038",
+        "19041",
+        "19044",
+        "19051",
+        "19054",
+        "19068",
+        "19149"
+      ],
+      "modules": [
+        "Market Overview",
+        "Tape",
+        "HIRO"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_API_CONFIRMED": 37
+      },
+      "claim_types": {
+        "INDICATOR": 20,
+        "DEFINITION": 1,
+        "WORKFLOW": 2,
+        "PLATFORM_FEATURE": 10,
+        "EXAMPLE": 3,
+        "WARNING": 1
+      },
+      "api_field": "/tape/:sym, /tape/:sym/summary (sweeps, blocks, crosses, multileg)",
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_32d93649fe05df25",
+          "statement": "Tape is SpotGamma’s options flow tool, showing you options trades in real-time.",
+          "claim_type": "DEFINITION",
+          "lesson": "Visualize Momentum Through Options Flow",
+          "timestamp": "00:00:08.400–00:00:14.880",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_7f03c0564859c85f",
+          "statement": "And TAPE unveils each specific trade as it applies positive or negative pressure to your trading targets.",
+          "claim_type": "INDICATOR",
+          "lesson": "Leveraging Your Toolkit",
+          "timestamp": "00:01:06.640–00:01:15.840",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_e86e83d660948ae8",
+          "statement": "Tape was built by SpotGamma to empower traders to separate the signal from the noise and trade options flows with greater precision.",
+          "claim_type": "INDICATOR",
+          "lesson": "Visualize Momentum Through Options Flow",
+          "timestamp": "00:00:12.719–00:00:23.119",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_9a84625a5ee10739",
+          "statement": "And when you pair Tape’s options flows with our proprietary models you can get a true trading edge.",
+          "claim_type": "INDICATOR",
+          "lesson": "Visualize Momentum Through Options Flow",
+          "timestamp": "00:00:19.279–00:00:27.359",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_API_CONFIRMED"
+    },
+    {
+      "concept": "Open Interest",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 36,
+      "quarantined": 0,
+      "lessons": [
+        "17918",
+        "17919",
+        "17920",
+        "18684",
+        "18685",
+        "18688",
+        "18689",
+        "18692",
+        "18694",
+        "18695",
+        "18698",
+        "18775",
+        "18808",
+        "18834",
+        "18931",
+        "18932",
+        "19054",
+        "19145",
+        "19146",
+        "19147",
+        "19150"
+      ],
+      "modules": [
+        "Market Overview",
+        "Options Calculator",
+        "Indices",
+        "Equity Hub",
+        "HIRO",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 35,
+        "SPOTGAMMA_CONCEPTUAL": 1
+      },
+      "claim_types": {
+        "MARKET_STRUCTURE": 16,
+        "TRADING_INTERPRETATION": 12,
+        "EXAMPLE": 4,
+        "DEFINITION": 1,
+        "RULE": 2,
+        "WORKFLOW": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_83212cb488961e19",
+          "statement": "Along with the 14 graphs that help you assess the Greeks, Volatility, and Open Interest, there are three specific charts that help provide historical context around current market dynamics.",
+          "claim_type": "DEFINITION",
+          "lesson": "Spot Flow Shifts Before the Market Reacts",
+          "timestamp": "00:00:08.080–00:00:21.279",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_cbae60d711549876",
+          "statement": "The Total OI model captures broader positioning across all strikes and expirations, great for getting a structural read on a name.",
+          "claim_type": "MARKET_STRUCTURE",
+          "lesson": "Leveraging Your Toolkit",
+          "timestamp": "00:01:21.920–00:01:33.119",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_8fab4b641b7e477f",
+          "statement": "Lastly, we have two open interest graphs that act as sentiment indicators and help you decide where to position your trades and how much confidence you have to size your exposure.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Use Greeks, Volatility, & OI to Sharpen Trades",
+          "timestamp": "00:00:43.680–00:00:55.440",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_14ea14938dec96d2",
+          "statement": "The Total Open Interest Model empowers you to target the price levels where buying or selling pressure could develop.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Layout",
+          "timestamp": "00:00:31.119–00:00:41.920",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Delta",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 29,
+      "quarantined": 0,
+      "lessons": [
+        "17918",
+        "18645",
+        "18646",
+        "18647",
+        "18648",
+        "18676",
+        "18693",
+        "18695",
+        "18702",
+        "18867",
+        "18876",
+        "18896",
+        "19038",
+        "19225",
+        "19474",
+        "19475"
+      ],
+      "modules": [
+        "Key Levels",
+        "Founder's Note",
+        "Options Calculator",
+        "Indices",
+        "Equity Hub",
+        "Tape",
+        "Volatility Dashboard",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 28,
+        "SPOTGAMMA_CONCEPTUAL": 1
+      },
+      "claim_types": {
+        "TRADING_INTERPRETATION": 4,
+        "DEFINITION": 7,
+        "DEALER_POSITIONING": 7,
+        "EXAMPLE": 9,
+        "WORKFLOW": 2
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_b587cbaeda24be01",
+          "statement": "The first three terms, Market Maker, Delta, and Gamma, are core concepts in the trading industry.",
+          "claim_type": "DEFINITION",
+          "lesson": "6 Signals That Move The Markets",
+          "timestamp": "00:00:29.080–00:00:38.880",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_2dd29136ba8e3ad6",
+          "statement": "Next, we’ll break down Delta — which defines how trading is required by these market makers to reduce their risk.",
+          "claim_type": "DEFINITION",
+          "lesson": "Market Makers",
+          "timestamp": "00:01:15.800–00:01:25.640",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_6ebc8ce40d1e9a42",
+          "statement": "Delta is based on a well documented and public math calculation, and often displayed within your trading platform alongside any options you may wish to trade.",
+          "claim_type": "DEFINITION",
+          "lesson": "Delta",
+          "timestamp": "00:00:36.239–00:00:46.160",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_1f960e8f28757dcd",
+          "statement": "We’ll break down how Delta is calculated and what it means a bit later — but here’s the TL;DR.",
+          "claim_type": "DEFINITION",
+          "lesson": "Delta",
+          "timestamp": "00:00:44.239–00:00:54.239",
+          "confidence": 0.75
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Market Regime",
+      "term_class": "GENERAL_MARKET_CONCEPT",
+      "term_class_basis": "standard market concept",
+      "items": 27,
+      "quarantined": 0,
+      "lessons": [
+        "18100",
+        "18102",
+        "18651",
+        "18693",
+        "18694",
+        "18696",
+        "18699",
+        "18700",
+        "18834",
+        "19148",
+        "19150",
+        "19225",
+        "19474",
+        "19475"
+      ],
+      "modules": [
+        "Key Levels",
+        "Founder's Note",
+        "Equity Hub",
+        "Scanners",
+        "HIRO",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 27
+      },
+      "claim_types": {
+        "TRADING_INTERPRETATION": 5,
+        "RULE": 1,
+        "EXAMPLE": 8,
+        "GAMMA_CONCEPT": 11,
+        "DEFINITION": 2
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_4f83907f26a1049b",
+          "statement": "Then, as we head into the close, we advise checking the Charm lens to see where nodes of blue positive gamma or red negative gamma are forming.",
+          "claim_type": "DEFINITION",
+          "lesson": "Trading Approach",
+          "timestamp": "00:00:44.040–00:00:54.560",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_059020d4704417a0",
+          "statement": "Look to sell covered premium in positive gamma environments where options are providing more stability.",
+          "claim_type": "DEFINITION",
+          "lesson": "Trading Approach",
+          "timestamp": null,
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_9d46531c62c52348",
+          "statement": "Above it, we’re typically in a positive gamma enviro nment — calmer trading, tighter ranges, and more positive sessions.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Vol Trigger",
+          "timestamp": "00:00:19.760–00:00:29.760",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_433da325cde4b699",
+          "statement": "Drop below it, and the tone shifts: negative gamma sets in, volatility increases, and downside risk picks up.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Vol Trigger",
+          "timestamp": "00:00:27.519–00:00:37.040",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Founder's Note",
+      "term_class": "SPOTGAMMA_PRODUCT_TERM",
+      "term_class_basis": "SpotGamma product/tool name (course module or lesson title)",
+      "items": 27,
+      "quarantined": 0,
+      "lessons": [
+        "17918",
+        "18097",
+        "18098",
+        "18099",
+        "18100",
+        "18101",
+        "18102",
+        "18103",
+        "18770",
+        "18798",
+        "19144",
+        "19225"
+      ],
+      "modules": [
+        "Founder's Note",
+        "Indices"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_PLATFORM_ONLY": 27
+      },
+      "claim_types": {
+        "INDICATOR": 12,
+        "PLATFORM_FEATURE": 12,
+        "DEFINITION": 1,
+        "WORKFLOW": 2
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_f5c78a7f9cf56ec3",
+          "statement": "Within the Founder’s Note, there are several sections, and we will start with the Macro Theme.",
+          "claim_type": "DEFINITION",
+          "lesson": "Macro Theme - Spot Big Moves Early",
+          "timestamp": "00:00:08.400–00:00:16.880",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_b018c446f5ccd52d",
+          "statement": "The SpotGamma Founder’s Note, delivered every morning and afternoon to our subscribers, is one of the highest-rated SpotGamma products.",
+          "claim_type": "INDICATOR",
+          "lesson": "Overview, Your Daily Edge",
+          "timestamp": "00:00:10.480–00:00:17.359",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_22bec76d8e28f95e",
+          "statement": "The Founder’s Note can be accessed through the Dashboard on the left sidebar menu.",
+          "claim_type": "PLATFORM_FEATURE",
+          "lesson": "AM/PM Notes, Morning Setups, Evening Recaps",
+          "timestamp": "00:00:24.560–00:00:29.920",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_016f4faedd7b9ed9",
+          "statement": "The Macro Theme is often carried into Brent’s commentary in the daily Founder’s Note analysis.",
+          "claim_type": "INDICATOR",
+          "lesson": "Winning trade Example",
+          "timestamp": "00:00:06.160–00:00:12.639",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_PLATFORM_ONLY"
+    },
+    {
+      "concept": "Momentum",
+      "term_class": "GENERAL_MARKET_CONCEPT",
+      "term_class_basis": "standard market concept",
+      "items": 22,
+      "quarantined": 0,
+      "lessons": [
+        "18647",
+        "18649",
+        "18694",
+        "18703",
+        "18732",
+        "18734",
+        "18746",
+        "18818",
+        "18854",
+        "18931",
+        "19029",
+        "19032",
+        "19068",
+        "19148",
+        "19150"
+      ],
+      "modules": [
+        "Key Levels",
+        "Equity Hub",
+        "Scanners",
+        "Tape",
+        "HIRO",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 22
+      },
+      "claim_types": {
+        "TRADING_INTERPRETATION": 8,
+        "HEURISTIC": 9,
+        "MARKET_STRUCTURE": 3,
+        "WARNING": 1,
+        "EXAMPLE": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_2310c6ad71739771",
+          "statement": "Once you understand how that works as a trader, you can better anticipate where momentum might build … and position yourself to take advantage of it.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Delta",
+          "timestamp": "00:00:23.199–00:00:33.920",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_948e8f44c723d277",
+          "statement": "This reinforces the Call Wall as a high-probability zone where selling pressure builds and upside momentum often stalls.",
+          "claim_type": "HEURISTIC",
+          "lesson": "Call Wall",
+          "timestamp": "00:00:59.440–00:01:10.400",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_ab0da2462a912ede",
+          "statement": "Negative gamma often leads to intraday momentum and heightened volatility, while positive gamma tends to cause mean-reverting or “pinned” price action.",
+          "claim_type": "HEURISTIC",
+          "lesson": "Synthetic OI - Track Hedging Flows in Based on Dealer Positioning",
+          "timestamp": "00:01:03.680–00:01:15.200",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_ae63afabbeafba30",
+          "statement": "This sustained bullish flow—highlighted by a $175M HIRO reading and over $40M in longer-dated calls—suggested traders should ride momentum rather than fade it.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "See Breakouts Before They Happen",
+          "timestamp": "00:00:36.000–00:00:48.960",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Skew",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 22,
+      "quarantined": 0,
+      "lessons": [
+        "18693",
+        "18859",
+        "18876",
+        "18884",
+        "18887",
+        "18890",
+        "18896",
+        "18910"
+      ],
+      "modules": [
+        "Options Calculator",
+        "Equity Hub",
+        "Volatility Dashboard"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 22
+      },
+      "claim_types": {
+        "VOLATILITY_CONCEPT": 7,
+        "WORKFLOW": 3,
+        "TRADING_INTERPRETATION": 4,
+        "DEFINITION": 3,
+        "EXAMPLE": 5
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_7d9c79762f8e01fd",
+          "statement": "Next, the Skew Premium setting displays the dollar value of premium associated specifically with volatility skew, reflecting how much traders are paying for larger tail moves, rather than percentages.",
+          "claim_type": "DEFINITION",
+          "lesson": "Spot Cheap vs. Expensive Options",
+          "timestamp": "00:01:30.560–00:01:46.560",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_38998cd0da9850ef",
+          "statement": "Unlike the Term Structure Tab, which shows you options volatility over time at the same strike, the Volatility Skew tab shows you Implied Volatility readings at one point in time across many strikes.",
+          "claim_type": "DEFINITION",
+          "lesson": "See Where Tail Risk is Priced",
+          "timestamp": "00:00:12.960–00:00:26.560",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_0c5064af27cd8bb7",
+          "statement": "Equity Hub tools, such as Composite View, Put & Call Impact, Risk Reversal, and Volatility Skew Charts are used to identify key support and resistance levels based on Gamma readings.",
+          "claim_type": "DEFINITION",
+          "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+          "timestamp": null,
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_73037ff042ccb3b9",
+          "statement": "Once you are in the IV settings window, you can change your reference point, shift implied volatility higher or lower, or adjust call and put skew for a specific expiration.",
+          "claim_type": "WORKFLOW",
+          "lesson": "Legs, IV, & Saved Positions",
+          "timestamp": "00:01:53.520–00:02:06.399",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Pin",
+      "term_class": "GENERAL_MARKET_CONCEPT",
+      "term_class_basis": "standard market concept",
+      "items": 21,
+      "quarantined": 0,
+      "lessons": [
+        "18696",
+        "18699",
+        "18701",
+        "18834",
+        "18851",
+        "19150",
+        "19152",
+        "19474"
+      ],
+      "modules": [
+        "Equity Hub",
+        "HIRO",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 18,
+        "SPOTGAMMA_CONCEPTUAL": 3
+      },
+      "claim_types": {
+        "INDICATOR": 5,
+        "DEFINITION": 1,
+        "LEVEL_INTERPRETATION": 7,
+        "EXAMPLE": 8
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_16601e781e06b423",
+          "statement": "Traders should consider premium-selling strategies before expiration while the gamma pin is active, then pivot to long volatility strategies post-expiration when the hedging support disappears.",
+          "claim_type": "DEFINITION",
+          "lesson": "Trade Example - May 28, 2025",
+          "timestamp": "00:00:40.800–00:00:55.640",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_dfec9c1c14c067d8",
+          "statement": "SpotGamma identified a large 0DTE “Captain Condor” options position in SPX that created significant gamma exposure at specific strike levels (5910-5960), acting as a powerful price magnet.",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Gamma in Action",
+          "timestamp": "00:00:08.400–00:00:25.279",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_99287c2992e26131",
+          "statement": "Gamma-driven hedging behavior generates an intraday “magnet” that pulls the market back toward these gamma-heavy levels, providing traders with key support and resistance zones.",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Gamma in Action",
+          "timestamp": "00:00:23.199–00:00:34.880",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_7b1f1596aac5828a",
+          "statement": "What followed was a clean downside move from the gamma pin, delivering multiple reward‑to‑risk opportunities in a single session.",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Tesla (TSLA) Case Study & Trade Analysis",
+          "timestamp": null,
+          "confidence": 0.59
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Delta Hedging",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 20,
+      "quarantined": 0,
+      "lessons": [
+        "18646",
+        "18648",
+        "18676",
+        "18684",
+        "18694",
+        "18696",
+        "18699",
+        "18732",
+        "18746",
+        "18775",
+        "18808",
+        "18931",
+        "19225",
+        "19475"
+      ],
+      "modules": [
+        "Key Levels",
+        "Founder's Note",
+        "Indices",
+        "Equity Hub",
+        "HIRO",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 16,
+        "SPOTGAMMA_CONCEPTUAL": 4
+      },
+      "claim_types": {
+        "DEALER_POSITIONING": 9,
+        "DEFINITION": 4,
+        "EXAMPLE": 1,
+        "TRADING_INTERPRETATION": 6
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_8428076ebd137752",
+          "statement": "SpotGamma tracks Delta across all options trades, on every exchange, to uncover the price levels where hedging flows are most likely to attract buyers or sellers.",
+          "claim_type": "DEFINITION",
+          "lesson": "Market Makers",
+          "timestamp": "00:01:22.960–00:01:35.120",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_7bbdc751579782ce",
+          "statement": "How to interpret the Greeks charts to understand how hedging pressure is evolving",
+          "claim_type": "DEFINITION",
+          "lesson": "Welcome: Indices",
+          "timestamp": null,
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_e5fdbc3bf305c0ee",
+          "statement": "Review the Greeks charts to see how hedging pressure is changing",
+          "claim_type": "DEFINITION",
+          "lesson": "Mission: Assess Index Risk and Volatility Conditions",
+          "timestamp": null,
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_1d87f5f0d6fb1f25",
+          "statement": "You’ll learn how to interpret hedging flows, spot when pressure is building or fading, and approach entries and exits with greater precision.",
+          "claim_type": "DEFINITION",
+          "lesson": "Welcome: HIRO",
+          "timestamp": null,
+          "confidence": 0.75
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Volatility Trigger",
+      "term_class": "SPOTGAMMA_PROPRIETARY_TERM",
+      "term_class_basis": "SpotGamma-named level; requires course evidence naming it as a SpotGamma level (e.g. 'unique levels like the Call Wall, Put Wall, and Volatility Trigger', 'SpotGamma-specific levels') — recorded per term in concepts/term-classes.json",
+      "items": 18,
+      "quarantined": 0,
+      "lessons": [
+        "17920",
+        "18645",
+        "18648",
+        "18651",
+        "18676",
+        "18679",
+        "18775",
+        "18808",
+        "19475"
+      ],
+      "modules": [
+        "Key Levels",
+        "Indices",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_API_PROBABLE": 18
+      },
+      "claim_types": {
+        "INDICATOR": 9,
+        "EXAMPLE": 7,
+        "DEFINITION": 1,
+        "LEVEL_INTERPRETATION": 1
+      },
+      "api_field": null,
+      "api_absent_note": "not present in /levels/:sym fields",
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_6270d9ec20e9637c",
+          "statement": "One key statistic is that the amount of daily volatility below the Vol Trigger is nearly 40% higher than when above the Vol Trigger.",
+          "claim_type": "DEFINITION",
+          "lesson": "Vol Trigger",
+          "timestamp": "00:00:41.280–00:00:51.840",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_fca94b3a6ff921f6",
+          "statement": "Determine whether price is above or below the Vol Trigger",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Mission: Identify Today’s Key Options Environment",
+          "timestamp": null,
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_06d40da82e54128b",
+          "statement": "Other terms like Call Wall, Put Wall, and Volatility Trigger were coined years ago by SpotGamma and have since been adopted by the industry.",
+          "claim_type": "INDICATOR",
+          "lesson": "6 Signals That Move The Markets",
+          "timestamp": "00:00:36.440–00:00:47.640",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_e62ca2f5dd62fbea",
+          "statement": "Now, we will unpack the most important level to help you gauge when conditions are likely to change: the Vol Trigger.",
+          "claim_type": "INDICATOR",
+          "lesson": "Vol Trigger",
+          "timestamp": "00:00:13.840–00:00:21.439",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_API_PROBABLE"
+    },
+    {
+      "concept": "Futures",
+      "term_class": "GENERAL_MARKET_CONCEPT",
+      "term_class_basis": "standard market concept",
+      "items": 18,
+      "quarantined": 0,
+      "lessons": [
+        "17919",
+        "18097",
+        "18102",
+        "18775",
+        "18834",
+        "18884",
+        "18887",
+        "18899",
+        "19012",
+        "19014",
+        "19150",
+        "19152",
+        "19475"
+      ],
+      "modules": [
+        "Market Overview",
+        "Founder's Note",
+        "Indices",
+        "HIRO",
+        "Volatility Dashboard",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 13,
+        "SPOTGAMMA_CONCEPTUAL": 5
+      },
+      "claim_types": {
+        "PLATFORM_FEATURE": 3,
+        "HEURISTIC": 5,
+        "EXAMPLE": 7,
+        "TRADING_INTERPRETATION": 1,
+        "WARNING": 1,
+        "MARKET_STRUCTURE": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_a571e00148590bac",
+          "statement": "The top of the page includes a search function, live futures, and other account functionality.",
+          "claim_type": "PLATFORM_FEATURE",
+          "lesson": "Key Market Dynamics & Trading Insights",
+          "timestamp": "00:00:45.280–00:00:53.199",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_63c87b806bd2fc8f",
+          "statement": "Moving to the right, you can see there are live futures prices displayed throughout the day and post-market.",
+          "claim_type": "HEURISTIC",
+          "lesson": "Your Top Names, Tools, & Support",
+          "timestamp": "00:00:49.920–00:00:58.239",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_0a48492764a9002f",
+          "statement": "It’s a powerful tool for options traders and a valuable sentiment gauge for both futures and equities traders.",
+          "claim_type": "PLATFORM_FEATURE",
+          "lesson": "See Where Volatility is Mispriced",
+          "timestamp": "00:00:19.840–00:00:28.480",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_ca4ae29a59416870",
+          "statement": "SpotGamma’s VIX Term Structure chart displays the prices of forward VIX futures contracts across expiration dates.",
+          "claim_type": "PLATFORM_FEATURE",
+          "lesson": "Spot Shifts in Volatility Expectations",
+          "timestamp": "00:00:08.480–00:00:17.760",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Compass",
+      "term_class": "SPOTGAMMA_PRODUCT_TERM",
+      "term_class_basis": "SpotGamma product/tool name (course module or lesson title)",
+      "items": 18,
+      "quarantined": 0,
+      "lessons": [
+        "18655",
+        "18656",
+        "18818",
+        "18831",
+        "19054",
+        "19148",
+        "19150"
+      ],
+      "modules": [
+        "Market Overview",
+        "Scanners",
+        "HIRO"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_PLATFORM_ONLY": 18
+      },
+      "claim_types": {
+        "INDICATOR": 9,
+        "PLATFORM_FEATURE": 6,
+        "WORKFLOW": 2,
+        "EXAMPLE": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_cddfb1c93e22ba94",
+          "statement": "This includes tools like Compass, which helps you assess whether a stock is positioned bullish or bearish and whether its options are priced to move.",
+          "claim_type": "INDICATOR",
+          "lesson": "Leveraging Your Toolkit",
+          "timestamp": "00:01:40.000–00:01:49.040",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_757a53abafd4252d",
+          "statement": "Within the Scanners page, you’ll find one of our best idea generation tools, Compass, along with a long list of SpotGamma proprietary scanners, including Volatility Risk Premium, Squeeze and many other SpotGamma specific indicators.",
+          "claim_type": "PLATFORM_FEATURE",
+          "lesson": "Overview of Scanners",
+          "timestamp": "00:00:15.759–00:00:31.920",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_8744d99e27061590",
+          "statement": "Lastly, before we unpack each tool individually, you can scroll lower to see all the key metrics for any name flagged within Compass or Scanners to find names that fit your trading approach.",
+          "claim_type": "PLATFORM_FEATURE",
+          "lesson": "Overview of Scanners",
+          "timestamp": "00:00:38.320–00:00:51.600",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_a62f3337d7c5cbd1",
+          "statement": "Welcome to SpotGamma’s Compass Indicator.",
+          "claim_type": "INDICATOR",
+          "lesson": "Compass",
+          "timestamp": "00:00:06.879–00:00:11.599",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_PLATFORM_ONLY"
+    },
+    {
+      "concept": "Synthetic OI",
+      "term_class": "SPOTGAMMA_PRODUCT_TERM",
+      "term_class_basis": "SpotGamma product/tool name (course module or lesson title)",
+      "items": 17,
+      "quarantined": 0,
+      "lessons": [
+        "18684",
+        "18694",
+        "18695",
+        "18931",
+        "19054",
+        "19147"
+      ],
+      "modules": [
+        "Market Overview",
+        "Equity Hub"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_PLATFORM_ONLY": 17
+      },
+      "claim_types": {
+        "DEFINITION": 4,
+        "INDICATOR": 7,
+        "PLATFORM_FEATURE": 5,
+        "EXAMPLE": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_175a8707538dfcca",
+          "statement": "The Synthetic OI lens is more surgical, giving you short-term positioning data confirmed by the exchanges, ideal for intraday decisions.",
+          "claim_type": "DEFINITION",
+          "lesson": "Leveraging Your Toolkit",
+          "timestamp": "00:01:30.720–00:01:40.000",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_4504f923ae4865b2",
+          "statement": "The Synthetic OI Model is built to help you better understand short-term options positioning and hedging flows — so you can react faster, manage risk more precisely, and trade short-term setups with greater confidence.",
+          "claim_type": "DEFINITION",
+          "lesson": "Synthetic OI - Track Hedging Flows in Based on Dealer Positioning",
+          "timestamp": "00:00:13.040–00:00:28.160",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_fde1418adca036c2",
+          "statement": "Understanding synthetic OI is crucial for intraday and overnight trading because it helps unveil how hedging flows can amplify or dampen short-term price movements.",
+          "claim_type": "DEFINITION",
+          "lesson": "Synthetic OI - Track Hedging Flows in Based on Dealer Positioning",
+          "timestamp": "00:00:52.480–00:01:06.000",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_602bcad5b2537bb6",
+          "statement": "Synthetic OI Model: Equity Hub shows increasing volatility as TSLA rallies",
+          "claim_type": "DEFINITION",
+          "lesson": "Resources: Equity Hub",
+          "timestamp": null,
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_PLATFORM_ONLY"
+    },
+    {
+      "concept": "Volatility Dashboard",
+      "term_class": "SPOTGAMMA_PRODUCT_TERM",
+      "term_class_basis": "SpotGamma product/tool name (course module or lesson title)",
+      "items": 16,
+      "quarantined": 0,
+      "lessons": [
+        "18103",
+        "18884",
+        "18887",
+        "18896",
+        "18902",
+        "18910",
+        "19054",
+        "19151"
+      ],
+      "modules": [
+        "Market Overview",
+        "Founder's Note",
+        "Volatility Dashboard"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_PLATFORM_ONLY": 16
+      },
+      "claim_types": {
+        "PLATFORM_FEATURE": 10,
+        "DEFINITION": 3,
+        "WORKFLOW": 3
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_7912d0bac8f4c281",
+          "statement": "At its core, the Volatility Dashboard reveals whether options are relatively cheap or expensive across strikes and expirations, highlighting mispricings and revealing the potential for unexpected market moves.",
+          "claim_type": "DEFINITION",
+          "lesson": "See Where Volatility is Mispriced",
+          "timestamp": "00:00:26.080–00:00:41.840",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_f13d59b80efe1108",
+          "statement": "The third tab within the Volatility Dashboard is the Volatility Skew tab.",
+          "claim_type": "DEFINITION",
+          "lesson": "See Where Tail Risk is Priced",
+          "timestamp": "00:00:08.400–00:00:14.480",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_4a38855914707763",
+          "statement": "SpotGamma’s Volatility Dashboard helps identify which options are expensive and where premium-selling opportunities may exist.",
+          "claim_type": "DEFINITION",
+          "lesson": "Match Strategies to Volatility",
+          "timestamp": "00:00:16.320–00:00:25.600",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_60651576c5bb54de",
+          "statement": "Welcome to the SpotGamma Volatility Dashboard.",
+          "claim_type": "PLATFORM_FEATURE",
+          "lesson": "See Where Volatility is Mispriced",
+          "timestamp": "00:00:08.480–00:00:13.040",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_PLATFORM_ONLY"
+    },
+    {
+      "concept": "Options Calculator",
+      "term_class": "SPOTGAMMA_PRODUCT_TERM",
+      "term_class_basis": "SpotGamma product/tool name (course module or lesson title)",
+      "items": 16,
+      "quarantined": 0,
+      "lessons": [
+        "18859",
+        "18862",
+        "18867",
+        "18870",
+        "18873",
+        "18876",
+        "18879",
+        "19054",
+        "19145"
+      ],
+      "modules": [
+        "Market Overview",
+        "Options Calculator"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_PLATFORM_ONLY": 16
+      },
+      "claim_types": {
+        "INDICATOR": 9,
+        "PLATFORM_FEATURE": 4,
+        "DEFINITION": 1,
+        "WORKFLOW": 2
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_2961f4fcb44ae9ae",
+          "statement": "Next, we will dive into more functionality within the Options Calculator so you can make sure you are best prepared to optimize your trading approach with SpotGamma.",
+          "claim_type": "DEFINITION",
+          "lesson": "Key Metrics for Any Name",
+          "timestamp": "00:01:23.759–00:01:36.600",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_84af7dde5c4afcf1",
+          "statement": "And once you’ve landed on the name you want to trade, you can use the SpotGamma proprietary Options Calculator to model your return profile, from today through to its expiration date.",
+          "claim_type": "INDICATOR",
+          "lesson": "Leveraging Your Toolkit",
+          "timestamp": "00:02:27.280–00:02:38.879",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_9465e73a6ce20908",
+          "statement": "See your expected profit or loss before you make a trade — with SpotGamma’s, best-in-class Options Calculator.",
+          "claim_type": "INDICATOR",
+          "lesson": "Overview",
+          "timestamp": "00:00:08.559–00:00:18.080",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_01a923fa70458750",
+          "statement": "SpotGamma has designed the Options Calculator to provide a fast, data-rich view of how to model a trade for any symbol.",
+          "claim_type": "PLATFORM_FEATURE",
+          "lesson": "Key Metrics for Any Name",
+          "timestamp": "00:00:08.400–00:00:17.680",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_PLATFORM_ONLY"
+    },
+    {
+      "concept": "Macro",
+      "term_class": "GENERAL_MARKET_CONCEPT",
+      "term_class_basis": "standard market concept",
+      "items": 15,
+      "quarantined": 0,
+      "lessons": [
+        "18098",
+        "18099",
+        "18100",
+        "18770",
+        "18798",
+        "19144",
+        "19225"
+      ],
+      "modules": [
+        "Founder's Note"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 15
+      },
+      "claim_types": {
+        "TRADING_INTERPRETATION": 2,
+        "EXAMPLE": 7,
+        "HEURISTIC": 5,
+        "DEFINITION": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_8c7c21b84b1abc80",
+          "statement": "The Macro Theme is often carried into Brent’s commentary in the daily Founder’s Note analysis.",
+          "claim_type": "DEFINITION",
+          "lesson": "Winning trade Example",
+          "timestamp": "00:00:06.160–00:00:12.639",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_769be302f19dd49a",
+          "statement": "Within the Founder’s Note, there are several sections, and we will start with the Macro Theme.",
+          "claim_type": "HEURISTIC",
+          "lesson": "Macro Theme - Spot Big Moves Early",
+          "timestamp": "00:00:08.400–00:00:16.880",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_09177bca156ff131",
+          "statement": "The Macro Theme helps you see the key dates ah ead, including the biggest upcoming economic events, and is usually updated a few times per month.",
+          "claim_type": "HEURISTIC",
+          "lesson": "Macro Theme - Spot Big Moves Early",
+          "timestamp": "00:00:12.080–00:00:23.519",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_0bb4063f0e05904b",
+          "statement": "The last section of the Macro Theme lists out the major levels that align with where buyers and sellers may enter the market in the near term, and volatility zones— key insights straight to your inbox every trading day.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Macro Theme - Spot Big Moves Early",
+          "timestamp": "00:00:31.679–00:00:46.800",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Key Gamma Strike",
+      "term_class": "SPOTGAMMA_PROPRIETARY_TERM",
+      "term_class_basis": "SpotGamma-named level; requires course evidence naming it as a SpotGamma level (e.g. 'unique levels like the Call Wall, Put Wall, and Volatility Trigger', 'SpotGamma-specific levels') — recorded per term in concepts/term-classes.json",
+      "items": 15,
+      "quarantined": 0,
+      "lessons": [
+        "18693",
+        "19145",
+        "19147",
+        "19150",
+        "19474"
+      ],
+      "modules": [
+        "Options Calculator",
+        "Equity Hub",
+        "HIRO"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_API_CONFIRMED": 15
+      },
+      "claim_types": {
+        "LEVEL_INTERPRETATION": 3,
+        "INDICATOR": 2,
+        "EXAMPLE": 9,
+        "API_FIELD": 1
+      },
+      "api_field": "/levels/:sym futureLevels.topabs_strike (label 'Key Gamma Strike')",
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_ee18a2fadb7c7745",
+          "statement": "Total OI Model: Microsoft Reversal at Key Gamma Resistance Delivers Profit Using a Structured Options Spread",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Resources: Options Calculator",
+          "timestamp": null,
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_a94efdc284b82511",
+          "statement": "Total OI Model: Microsoft Reversal at Key Gamma Resistance Delivers Profit Using a Structured Options Spread",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Resources: Equity Hub",
+          "timestamp": null,
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_b678508c0e8d59b7",
+          "statement": "Total OI Model: Microsoft Reversal at Key Gamma Resistance Delivers Profit Using a Structured Options Spread",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Resources: HIRO",
+          "timestamp": null,
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_72d2883c67a8bf1a",
+          "statement": "key gamma strike is the strike with largest total gamma position. The hedge wall is the level where the largest change in gamma is detected. It is considered a major support or resistance",
+          "claim_type": "API_FIELD",
+          "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+          "timestamp": "00:04:47.919–00:05:02.479",
+          "confidence": 0.6
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_API_CONFIRMED"
+    },
+    {
+      "concept": "Squeeze Scanner",
+      "term_class": "SPOTGAMMA_PRODUCT_TERM",
+      "term_class_basis": "SpotGamma product/tool name (course module or lesson title)",
+      "items": 14,
+      "quarantined": 0,
+      "lessons": [
+        "18104",
+        "18657",
+        "18693",
+        "18818",
+        "19012",
+        "19013",
+        "19054"
+      ],
+      "modules": [
+        "Market Overview",
+        "Founder's Note",
+        "Equity Hub",
+        "Scanners"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_PLATFORM_ONLY": 14
+      },
+      "claim_types": {
+        "INDICATOR": 2,
+        "PLATFORM_FEATURE": 6,
+        "EXAMPLE": 3,
+        "DEFINITION": 2,
+        "FORMULA": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_acfb3cdb71027bda",
+          "statement": "Then, to see which names are most primed to springload upward, our Squeeze Scanner flag names where pressure is building under the surface.",
+          "claim_type": "DEFINITION",
+          "lesson": "Leveraging Your Toolkit",
+          "timestamp": "00:01:47.600–00:01:57.280",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_685650f6bb88d6c0",
+          "statement": "The SpotGamma squeeze scanner, updated daily, is a powerful tool that unveils names with the potentially to move sharply higher in the coming 1-2 weeks.",
+          "claim_type": "DEFINITION",
+          "lesson": "Squeeze Scanner",
+          "timestamp": "00:00:06.799–00:00:18.000",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_b5c17ad32fdadafb",
+          "statement": "Squeeze Candidates and stocks with high volatility within our Volatility Risk Premium (VRP) on the bottom left;",
+          "claim_type": "INDICATOR",
+          "lesson": "Key Market Dynamics & Trading Insights",
+          "timestamp": "00:00:35.040–00:00:43.520",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_cc355f3fdcaa9abd",
+          "statement": "The first of two scanners identifies stocks that are most likely to squeeze higher, meaning names that could move sharply upward due to short covering or positioning imbalances, within the Squeeze Candidates table.",
+          "claim_type": "PLATFORM_FEATURE",
+          "lesson": "Data Into Direction",
+          "timestamp": "00:01:41.280–00:01:52.960",
+          "confidence": 0.55
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_PLATFORM_ONLY"
+    },
+    {
+      "concept": "Volatility Risk Premium",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 13,
+      "quarantined": 0,
+      "lessons": [
+        "18104",
+        "18655",
+        "18658",
+        "18693",
+        "18818",
+        "19012",
+        "19013",
+        "19017",
+        "19054"
+      ],
+      "modules": [
+        "Market Overview",
+        "Founder's Note",
+        "Equity Hub",
+        "Scanners"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 11,
+        "SPOTGAMMA_CONCEPTUAL": 2
+      },
+      "claim_types": {
+        "TRADING_INTERPRETATION": 6,
+        "WORKFLOW": 1,
+        "VOLATILITY_CONCEPT": 2,
+        "EXAMPLE": 4
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_3c5f6b7fed3de19e",
+          "statement": "Squeeze Candidates and stocks with high volatility within our Volatility Risk Premium (VRP) on the bottom left;",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Key Market Dynamics & Trading Insights",
+          "timestamp": "00:00:35.040–00:00:43.520",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_8887b84570a63d8f",
+          "statement": "Lastly under scanners, the VRP Scanner helps you spot where options may be overpriced, signaling potential mean reversion setups.",
+          "claim_type": "VOLATILITY_CONCEPT",
+          "lesson": "Leveraging Your Toolkit",
+          "timestamp": "00:01:54.960–00:02:03.840",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_71ac91b83d0715bc",
+          "statement": "Within the Scanners page, you’ll find one of our best idea generation tools, Compass, along with a long list of SpotGamma proprietary scanners, including Volatility Risk Premium, Squeeze and many other SpotGamma specific indicators.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Overview of Scanners",
+          "timestamp": "00:00:15.759–00:00:31.920",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_54f76f56886fda98",
+          "statement": "The VRP scanner, which provides insights into which names have relatively higher options prices, is one of the favorite tools SpotGamma traders utilize to find opportunities to sell premium.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Volatility Risk Premium",
+          "timestamp": "00:00:06.960–00:00:19.840",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "GEX",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 13,
+      "quarantined": 0,
+      "lessons": [
+        "18695",
+        "18696",
+        "18698",
+        "18700",
+        "18701",
+        "18834",
+        "18851",
+        "19033",
+        "19152"
+      ],
+      "modules": [
+        "Equity Hub",
+        "Tape",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 11,
+        "SPOTGAMMA_CONCEPTUAL": 2
+      },
+      "claim_types": {
+        "GAMMA_CONCEPT": 7,
+        "WORKFLOW": 1,
+        "EXAMPLE": 3,
+        "TRADING_INTERPRETATION": 2
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_2c24dd14a84164b8",
+          "statement": "Additionally, you can check out the live GEX bars under the Live Price and SG Levels view or the total impact of options with a color gradient within the Composite view.",
+          "claim_type": "GAMMA_CONCEPT",
+          "lesson": "Synthetic OI - Prepare for Intraday Volatility",
+          "timestamp": "00:01:13.840–00:01:25.840",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_6c1277060c9d7c66",
+          "statement": "After Friday’s expiration (May 30), this gamma exposure will drop by 65%, removing the stabilizing hedging flows and likely leading to increased realized volatility.",
+          "claim_type": "GAMMA_CONCEPT",
+          "lesson": "Trade Example - May 28, 2025",
+          "timestamp": "00:00:19.920–00:00:36.025",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_2020f6db84558255",
+          "statement": "Top Gamma Notional highlights stocks where gamma exposure has changed significantly from the previous day.",
+          "claim_type": "GAMMA_CONCEPT",
+          "lesson": "Surface High-Impact Flow Fast",
+          "timestamp": "00:00:36.320–00:00:44.559",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_df3f7871ddc1f401",
+          "statement": "All the while, you can track the activity within the GEX bars on the left to see how the key positions and gamma bars change during the trading day.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Trading Approach",
+          "timestamp": "00:01:01.280–00:01:11.640",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Term Structure",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 13,
+      "quarantined": 0,
+      "lessons": [
+        "18884",
+        "18887",
+        "18893",
+        "18896",
+        "18899",
+        "18905",
+        "18910"
+      ],
+      "modules": [
+        "Volatility Dashboard"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 12,
+        "SPOTGAMMA_CONCEPTUAL": 1
+      },
+      "claim_types": {
+        "VOLATILITY_CONCEPT": 6,
+        "TRADING_INTERPRETATION": 3,
+        "DEFINITION": 1,
+        "WORKFLOW": 2,
+        "EXAMPLE": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_da30e50777ba2cb3",
+          "statement": "Unlike the Term Structure Tab, which shows you options volatility over time at the same strike, the Volatility Skew tab shows you Implied Volatility readings at one point in time across many strikes.",
+          "claim_type": "DEFINITION",
+          "lesson": "See Where Tail Risk is Priced",
+          "timestamp": "00:00:12.960–00:00:26.560",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_8a783e6e9418f3f9",
+          "statement": "The dashboard is organized into four primary views: Fixed Strike Matrix, Term Structure, Volatility Skew, and VIX Term Structure.",
+          "claim_type": "VOLATILITY_CONCEPT",
+          "lesson": "See Where Volatility is Mispriced",
+          "timestamp": "00:00:39.600–00:00:50.480",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_892cde1237d5a070",
+          "statement": "The Term Structure tab visualizes how implied volatility—and option pricing—evolves across expirations for at-the-money options.",
+          "claim_type": "VOLATILITY_CONCEPT",
+          "lesson": "Read Volatility Across Time Horizons",
+          "timestamp": "00:00:08.480–00:00:18.880",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_31390cbcb6698e3b",
+          "statement": "Similar to the Term Structure Tab, you can access the settings function to view statistics, and here you can choose to look deeper based on Strike, Delta or % Moneyness.",
+          "claim_type": "WORKFLOW",
+          "lesson": "See Where Tail Risk is Priced",
+          "timestamp": "00:00:54.879–00:01:06.240",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Single Stocks",
+      "term_class": "GENERAL_MARKET_CONCEPT",
+      "term_class_basis": "standard market concept",
+      "items": 11,
+      "quarantined": 0,
+      "lessons": [
+        "18098",
+        "18649",
+        "18650",
+        "18676",
+        "18699",
+        "18887",
+        "18931",
+        "19014",
+        "19033",
+        "19054",
+        "19149"
+      ],
+      "modules": [
+        "Key Levels",
+        "Market Overview",
+        "Founder's Note",
+        "Equity Hub",
+        "Tape",
+        "Volatility Dashboard",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 9,
+        "SPOTGAMMA_CONCEPTUAL": 2
+      },
+      "claim_types": {
+        "HEURISTIC": 5,
+        "EXAMPLE": 4,
+        "TRADING_INTERPRETATION": 1,
+        "PLATFORM_FEATURE": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_d926293ad2ca0d6b",
+          "statement": "Top Daily Movers surfaces individual stocks with notable price movement, and Largest Daily Trades captures when institutional-sized block trades occur.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Surface High-Impact Flow Fast",
+          "timestamp": "00:00:41.680–00:00:52.640",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_3828f99b6f6c0f69",
+          "statement": "It’s a powerful tool for options traders and a valuable sentiment gauge for both futures and equities traders.",
+          "claim_type": "PLATFORM_FEATURE",
+          "lesson": "See Where Volatility is Mispriced",
+          "timestamp": "00:00:19.840–00:00:28.480",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_82baa78a4976e2f2",
+          "statement": "Additionally, the blue line displayed on all three TRACE lenses is our HIRO indicator, and you can set it to display S&P equities, the S&P 500 or none depending on your preference.",
+          "claim_type": "HEURISTIC",
+          "lesson": "Main Chart",
+          "timestamp": "00:00:35.000–00:00:48.520",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_c893e014694371ce",
+          "statement": "Alpha subscribers, for example, will go right into HIRO, which helps traders see how real-time options flows are driving US indices or individual stocks.",
+          "claim_type": "EXAMPLE",
+          "lesson": "Your Top Names, Tools, & Support",
+          "timestamp": "00:00:41.040–00:00:51.680",
+          "confidence": 0.6
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Delta Pressure",
+      "term_class": "SPOTGAMMA_PRODUCT_TERM",
+      "term_class_basis": "SpotGamma product/tool name (course module or lesson title)",
+      "items": 10,
+      "quarantined": 0,
+      "lessons": [
+        "18699",
+        "18700",
+        "18702",
+        "18834",
+        "18851"
+      ],
+      "modules": [
+        "TRACE"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_PLATFORM_ONLY": 10
+      },
+      "claim_types": {
+        "INDICATOR": 6,
+        "PLATFORM_FEATURE": 2,
+        "DEFINITION": 2
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_36bd141593919bf0",
+          "statement": "However, around 12:30 PM ET, when touching levels with negative delta pressure, market makers are forced to become net sellers and creating selling pressure that capped the rally and began weighing on market.",
+          "claim_type": "DEFINITION",
+          "lesson": "Delta Pressure in Action",
+          "timestamp": "00:00:26.560–00:00:41.079",
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_39f6ad9b335456fc",
+          "statement": "Next, the Delta Pressure lens shows you how buying and selling zones above and below the current price are changing throughout the day.",
+          "claim_type": "DEFINITION",
+          "lesson": "Main Chart",
+          "timestamp": "00:01:25.280–00:01:36.080",
+          "confidence": 0.55
+        },
+        {
+          "knowledge_id": "sgk_3c99e90b542c2686",
+          "statement": "To utilize the main chart, TRACE projects three lenses, Gamma, Delta Pressure and Charm.",
+          "claim_type": "PLATFORM_FEATURE",
+          "lesson": "Main Chart",
+          "timestamp": "00:00:18.760–00:00:27.510",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_1453d9bed70fa0ab",
+          "statement": "The market initially declined from open until hitting strong positive delta pressure around 10:30 AM ET, where market maker buying support created a floor and sparked a rally.",
+          "claim_type": "INDICATOR",
+          "lesson": "Delta Pressure in Action",
+          "timestamp": "00:00:08.400–00:00:20.640",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_PLATFORM_ONLY"
+    },
+    {
+      "concept": "Breakout",
+      "term_class": "GENERAL_MARKET_CONCEPT",
+      "term_class_basis": "standard market concept",
+      "items": 9,
+      "quarantined": 0,
+      "lessons": [
+        "18101",
+        "18701",
+        "18770",
+        "18798",
+        "19038",
+        "19068",
+        "19148",
+        "19149",
+        "19150"
+      ],
+      "modules": [
+        "Founder's Note",
+        "Scanners",
+        "Tape",
+        "HIRO",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 8,
+        "SPOTGAMMA_CONCEPTUAL": 1
+      },
+      "claim_types": {
+        "HEURISTIC": 6,
+        "EXAMPLE": 3
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_f53aeae85a8ea847",
+          "statement": "Trader tip:  For active traders, Brent will often highlight daily catalysts and what key levels he’s watching for an intraday reversion or breakout.",
+          "claim_type": "EXAMPLE",
+          "lesson": "Intent, Application, & Style",
+          "timestamp": "00:00:49.200–00:01:00.039",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_5a97f139f0b0e578",
+          "statement": "In this example, we saw the market unable to break out above the resistance created by the top end of the range on the GEX bars.",
+          "claim_type": "EXAMPLE",
+          "lesson": "Gamma in Action",
+          "timestamp": "00:00:31.840–00:00:43.239",
+          "confidence": 0.6
+        },
+        {
+          "knowledge_id": "sgk_0d41072d53a3ae0f",
+          "statement": "The first shows the total number of options contracts traded across all names included, the second shows the total options premiums, and the last three break out the summary by segmenting Delta, Gamma, and Vega across all options traded in ",
+          "claim_type": "HEURISTIC",
+          "lesson": "Gauge Market Posture",
+          "timestamp": "00:00:18.880–00:00:35.760",
+          "confidence": 0.55
+        },
+        {
+          "knowledge_id": "sgk_6a81b49a91021ffe",
+          "statement": "How active traders use Founder’s Notes to better understand intraday breakouts, reversions, and market catalysts",
+          "claim_type": "HEURISTIC",
+          "lesson": "Welcome: Founder's Note",
+          "timestamp": null,
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Dealer Positioning",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 9,
+      "quarantined": 0,
+      "lessons": [
+        "18684",
+        "18694",
+        "18698",
+        "18834",
+        "18931",
+        "18932",
+        "19147",
+        "19474"
+      ],
+      "modules": [
+        "Equity Hub",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 9
+      },
+      "claim_types": {
+        "TRADING_INTERPRETATION": 3,
+        "DEALER_POSITIONING": 4,
+        "EXAMPLE": 1,
+        "DEFINITION": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_a861e4eb82c19028",
+          "statement": "How to use the TRACE heatmap to see where options positioning is applying buying or selling pressure on the S&P 500",
+          "claim_type": "DEFINITION",
+          "lesson": "Welcome: TRACE",
+          "timestamp": null,
+          "confidence": 0.75
+        },
+        {
+          "knowledge_id": "sgk_2ac49398dab896c3",
+          "statement": "The second is the Synthetic Open Interest Lens, which tracks dealer positioning and hedging flows, so you can anticipate potential short-term volatility and directional changes with greater precision.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Layout",
+          "timestamp": "00:00:39.600–00:00:52.160",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_076ccf7b3bbcf64d",
+          "statement": "The Synthetic OI Model is built to help you better understand short-term options positioning and hedging flows — so you can react faster, manage risk more precisely, and trade short-term setups with greater confidence.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Synthetic OI - Track Hedging Flows in Based on Dealer Positioning",
+          "timestamp": "00:00:13.040–00:00:28.160",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_80523bf9f5dc9a1c",
+          "statement": "Starting with the left hand side of the main viewing pane, the strike plot reveals current options positioning for the selected market participant type.",
+          "claim_type": "DEALER_POSITIONING",
+          "lesson": "GEX Lens",
+          "timestamp": "00:00:08.320–00:00:18.120",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Key Delta Strike",
+      "term_class": "SPOTGAMMA_PROPRIETARY_TERM",
+      "term_class_basis": "SpotGamma-named level; requires course evidence naming it as a SpotGamma level (e.g. 'unique levels like the Call Wall, Put Wall, and Volatility Trigger', 'SpotGamma-specific levels') — recorded per term in concepts/term-classes.json",
+      "items": 8,
+      "quarantined": 0,
+      "lessons": [
+        "18657",
+        "18693"
+      ],
+      "modules": [
+        "Equity Hub",
+        "Scanners"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_API_PROBABLE": 8
+      },
+      "claim_types": {
+        "EXAMPLE": 6,
+        "LEVEL_INTERPRETATION": 2
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_d5104e88712e7d13",
+          "statement": "from equity hub showed more call notional gamma that's the orange curve than put notional gamma the blue curve above the 230 key delta strike that's the bar with a green label in the middle",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+          "timestamp": "00:09:07.839–00:09:24.800",
+          "confidence": 0.6
+        },
+        {
+          "knowledge_id": "sgk_63482779862938dd",
+          "statement": "between the 210 put wall and 270. It also showed that call notional gamma, the orange vertical bars, was dominant above the 230 key delta strike, but notional gamma, the blue vertical bars,",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+          "timestamp": "00:09:36.560–00:09:58.200",
+          "confidence": 0.6
+        },
+        {
+          "knowledge_id": "sgk_5b8f4deed1c0f2fa",
+          "statement": "Doug notes that Coinbase moved higher above a Key Delta Strike and Call Wall on May 28th, with Call Notional Gamma dominant above that level.",
+          "claim_type": "EXAMPLE",
+          "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+          "timestamp": null,
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_37d3527322b11fd6",
+          "statement": "Trader Tip: On July 28th’s squeeze candidate list, we found that NBIS was holding the $50 key delta level quite well.",
+          "claim_type": "EXAMPLE",
+          "lesson": "Squeeze Scanner",
+          "timestamp": null,
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_API_PROBABLE"
+    },
+    {
+      "concept": "0DTE",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 8,
+      "quarantined": 0,
+      "lessons": [
+        "18698",
+        "18701",
+        "18734",
+        "18737",
+        "18746",
+        "19044"
+      ],
+      "modules": [
+        "Tape",
+        "HIRO",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 6,
+        "SPOTGAMMA_CONCEPTUAL": 2
+      },
+      "claim_types": {
+        "MARKET_STRUCTURE": 3,
+        "RULE": 1,
+        "TRADING_INTERPRETATION": 3,
+        "WORKFLOW": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_97e0abbcfab5b1a3",
+          "statement": "Third, you can visualize whether these larger options flows are 0DTE or longer-dated by adjusting the expiration slider.",
+          "claim_type": "MARKET_STRUCTURE",
+          "lesson": "Spot Bullish vs Bearish Pressure",
+          "timestamp": "00:00:44.960–00:00:57.280",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_05f3668b9514eb5d",
+          "statement": "SpotGamma identified a large 0DTE “Captain Condor” options position in SPX that created significant gamma exposure at specific strike levels (5910-5960), acting as a powerful price magnet.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Gamma in Action",
+          "timestamp": "00:00:08.400–00:00:25.279",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_ff5e011909aaa1c6",
+          "statement": "Also, you can choose to watch the 0DTE HIRO indicator by itself or along with all trades to look for divergences.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Read Calls, Puts & 0DTE",
+          "timestamp": null,
+          "confidence": 0.59
+        },
+        {
+          "knowledge_id": "sgk_5f59869167af3758",
+          "statement": "If you want to dial in just the next expiration flows, commonly referred to as 0DTE, you can enable this view via the “next expiry” function.",
+          "claim_type": "RULE",
+          "lesson": "Read Calls, Puts & 0DTE",
+          "timestamp": "00:00:43.800–00:00:55.760",
+          "confidence": 0.55
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "OPEX",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 7,
+      "quarantined": 0,
+      "lessons": [
+        "18098",
+        "18099",
+        "18100",
+        "19013"
+      ],
+      "modules": [
+        "Market Overview",
+        "Founder's Note"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 7
+      },
+      "claim_types": {
+        "EXAMPLE": 7
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_ffa87ec7b512a2f5",
+          "statement": "For example, right before the monthly OPEX in May, on May 14th, Brent unveiled;",
+          "claim_type": "EXAMPLE",
+          "lesson": "Winning trade Example",
+          "timestamp": "00:00:10.240–00:00:17.520",
+          "confidence": 0.6
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Charm",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 7,
+      "quarantined": 0,
+      "lessons": [
+        "18699",
+        "18700",
+        "18703",
+        "18834",
+        "18851"
+      ],
+      "modules": [
+        "TRACE"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_API_CONFIRMED": 7
+      },
+      "claim_types": {
+        "HEURISTIC": 5,
+        "PLATFORM_FEATURE": 1,
+        "TRADING_INTERPRETATION": 1
+      },
+      "api_field": "/trace/:sym/stats (charm distribution only, per API note)",
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_d5a50bc01730d226",
+          "statement": "To utilize the main chart, TRACE projects three lenses, Gamma, Delta Pressure and Charm.",
+          "claim_type": "PLATFORM_FEATURE",
+          "lesson": "Main Chart",
+          "timestamp": "00:00:18.760–00:00:27.510",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_a0b179a5ddbb65aa",
+          "statement": "Lastly, the Charm can help you trade into the close.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Main Chart",
+          "timestamp": "00:01:44.240–00:01:51.120",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_3d0b770283d1bb72",
+          "statement": "Based on the TRACE charm pressure heatmap, traders monitor concentrated buying and selling pressure zones (shown as red and purple areas) to identify potential support and resistance levels.",
+          "claim_type": "HEURISTIC",
+          "lesson": "Charm in Action",
+          "timestamp": "00:00:08.480–00:00:21.279",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_70a77f3654505287",
+          "statement": "Then, as we head into the close, we advise checking the Charm lens to see where nodes of blue positive gamma or red negative gamma are forming.",
+          "claim_type": "HEURISTIC",
+          "lesson": "Trading Approach",
+          "timestamp": "00:00:44.040–00:00:54.560",
+          "confidence": 0.55
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_API_CONFIRMED"
+    },
+    {
+      "concept": "Expected Move",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 5,
+      "quarantined": 0,
+      "lessons": [
+        "18103",
+        "18692",
+        "19013"
+      ],
+      "modules": [
+        "Market Overview",
+        "Founder's Note",
+        "Equity Hub"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_API_CONFIRMED": 5
+      },
+      "claim_types": {
+        "WORKFLOW": 1,
+        "VOLATILITY_CONCEPT": 2,
+        "TRADING_INTERPRETATION": 1,
+        "EXAMPLE": 1
+      },
+      "api_field": "/levels/:sym impliedMove{base,hi,lo,sig}",
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_866255a16d437f50",
+          "statement": "These are organized according to multiple SpotGamma proprietary levels including some really actionable metrics like our 1-day expected move.",
+          "claim_type": "VOLATILITY_CONCEPT",
+          "lesson": "The Founder's Note Tables",
+          "timestamp": "00:00:16.800–00:00:27.039",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_38b416e0f7038a42",
+          "statement": "This position has capped risk and can be sought out by filtering for stocks with high IV, whether that’s from a recent or expected move.",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Advanced Trade Structures",
+          "timestamp": "00:01:04.000–00:01:15.159",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_0c47488347cb35ef",
+          "statement": "Heading into NFLX earnings on January 21, 2025, the options market had priced in an implied move of 7.4%, establishing an expected range of $800 to $925.",
+          "claim_type": "EXAMPLE",
+          "lesson": "Advanced Trade Structures",
+          "timestamp": null,
+          "confidence": 0.59
+        },
+        {
+          "knowledge_id": "sgk_d5e8fe99e5d13d5d",
+          "statement": "You can click on the earnings tab to see upcoming company earnings, switch over to our proprietary earnings chart shows you the expected move for each name, and check out the @SpotGamma tab to make sure you don’t miss upcoming webinars that",
+          "claim_type": "WORKFLOW",
+          "lesson": "Data Into Direction",
+          "timestamp": "00:02:05.200–00:02:28.640",
+          "confidence": 0.55
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_API_CONFIRMED"
+    },
+    {
+      "concept": "Absolute Gamma",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 4,
+      "quarantined": 0,
+      "lessons": [
+        "18692",
+        "19013",
+        "19475"
+      ],
+      "modules": [
+        "Market Overview",
+        "Equity Hub",
+        "TRACE"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 4
+      },
+      "claim_types": {
+        "WORKFLOW": 1,
+        "EXAMPLE": 2,
+        "GAMMA_CONCEPT": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_0ee0e238121fcbc4",
+          "statement": "The second is that you can toggle between three additional views: the Gamma Model, Combo Strikes and Absolute Gamma charts, all which feature an “i” box that contains a short training video.",
+          "claim_type": "WORKFLOW",
+          "lesson": "Data Into Direction",
+          "timestamp": "00:00:38.559–00:00:51.680",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_108786d96f2baea0",
+          "statement": "In this scenario, we look for names which are (a) above it’s Hedge Wall (b) Within 2pct of the Absolute Gamma level, and (c) Between the Call Wall and Put Wall.",
+          "claim_type": "GAMMA_CONCEPT",
+          "lesson": "Advanced Trade Structures",
+          "timestamp": "00:00:24.640–00:00:38.559",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Hedge Wall",
+      "term_class": "SPOTGAMMA_PROPRIETARY_TERM",
+      "term_class_basis": "SpotGamma-named level; requires course evidence naming it as a SpotGamma level (e.g. 'unique levels like the Call Wall, Put Wall, and Volatility Trigger', 'SpotGamma-specific levels') — recorded per term in concepts/term-classes.json",
+      "items": 4,
+      "quarantined": 0,
+      "lessons": [
+        "18688",
+        "18692",
+        "18693",
+        "19474"
+      ],
+      "modules": [
+        "Equity Hub"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_API_CONFIRMED": 4
+      },
+      "claim_types": {
+        "INDICATOR": 1,
+        "LEVEL_INTERPRETATION": 1,
+        "API_FIELD": 1,
+        "EXAMPLE": 1
+      },
+      "api_field": "/levels/:sym futureLevels.max_g_strike (label 'Hedge Wall')",
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_ae4c8023fc778a21",
+          "statement": "In this scenario, we look for names which are (a) above it’s Hedge Wall (b) Within 2pct of the Absolute Gamma level, and (c) Between the Call Wall and Put Wall.",
+          "claim_type": "LEVEL_INTERPRETATION",
+          "lesson": "Advanced Trade Structures",
+          "timestamp": "00:00:24.640–00:00:38.559",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_76f1c438817296dd",
+          "statement": "key gamma strike is the strike with largest total gamma position. The hedge wall is the level where the largest change in gamma is detected. It is considered a major support or resistance",
+          "claim_type": "API_FIELD",
+          "lesson": "Coinbase (COIN) Case Study & Trade Analysis",
+          "timestamp": "00:04:47.919–00:05:02.479",
+          "confidence": 0.6
+        },
+        {
+          "knowledge_id": "sgk_36a297db4a3f0f7b",
+          "statement": "Movement upward in the Call Wall, Put Wall, Hedge Wall or key other strikes can project bullishness while downward movement in these levels may reflect bearishness.",
+          "claim_type": "INDICATOR",
+          "lesson": "Sample Workflow - Spot Trade Setups in 4 Steps",
+          "timestamp": "00:01:00.960–00:01:15.360",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_API_CONFIRMED"
+    },
+    {
+      "concept": "Combo Strike",
+      "term_class": "SPOTGAMMA_PROPRIETARY_TERM",
+      "term_class_basis": "SpotGamma-named level; requires course evidence naming it as a SpotGamma level (e.g. 'unique levels like the Call Wall, Put Wall, and Volatility Trigger', 'SpotGamma-specific levels') — recorded per term in concepts/term-classes.json",
+      "items": 2,
+      "quarantined": 0,
+      "lessons": [
+        "18103",
+        "19013"
+      ],
+      "modules": [
+        "Market Overview",
+        "Founder's Note"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_API_CONFIRMED": 2
+      },
+      "claim_types": {
+        "WORKFLOW": 1,
+        "EXAMPLE": 1
+      },
+      "api_field": "/levels/:sym futureLevels.C1..C4 (labels 'Combo 1..4')",
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_2b7b33f5437c59d6",
+          "statement": "The second is that you can toggle between three additional views: the Gamma Model, Combo Strikes and Absolute Gamma charts, all which feature an “i” box that contains a short training video.",
+          "claim_type": "WORKFLOW",
+          "lesson": "Data Into Direction",
+          "timestamp": "00:00:38.559–00:00:51.680",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_14aa8c1badfc6abd",
+          "statement": "Trader Tip:  Consider the secondary combo strikes to see where support or resistance lie in between call or put walls.",
+          "claim_type": "EXAMPLE",
+          "lesson": "The Founder's Note Tables",
+          "timestamp": null,
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_API_CONFIRMED"
+    },
+    {
+      "concept": "Vega",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 2,
+      "quarantined": 0,
+      "lessons": [
+        "19038",
+        "19225"
+      ],
+      "modules": [
+        "Founder's Note",
+        "Tape"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 2
+      },
+      "claim_types": {
+        "EXAMPLE": 1,
+        "VOLATILITY_CONCEPT": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_d5fc9dc0e30025c2",
+          "statement": "The first shows the total number of options contracts traded across all names included, the second shows the total options premiums, and the last three break out the summary by segmenting Delta, Gamma, and Vega across all options traded in ",
+          "claim_type": "VOLATILITY_CONCEPT",
+          "lesson": "Gauge Market Posture",
+          "timestamp": "00:00:18.880–00:00:35.760",
+          "confidence": 0.55
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Theta",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 2,
+      "quarantined": 0,
+      "lessons": [
+        "18879",
+        "18893"
+      ],
+      "modules": [
+        "Options Calculator",
+        "Volatility Dashboard"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 1,
+        "SPOTGAMMA_CONCEPTUAL": 1
+      },
+      "claim_types": {
+        "TRADING_INTERPRETATION": 1,
+        "HEURISTIC": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_ce90b3a0fb5faa4b",
+          "statement": "This adjustment shows where implied volatility should be based on time decay, historical statistics, upcoming economic events, and SpotGamma’s proprietary IV calculations.",
+          "claim_type": "HEURISTIC",
+          "lesson": "Read Volatility Across Time Horizons",
+          "timestamp": "00:01:01.520–00:01:15.520",
+          "confidence": 0.65
+        },
+        {
+          "knowledge_id": "sgk_607256572cf91c3c",
+          "statement": "How sensitive is the trade to volatility or time decay?",
+          "claim_type": "TRADING_INTERPRETATION",
+          "lesson": "Mission: Model a Trade Before Execution",
+          "timestamp": null,
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Vanna",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 1,
+      "quarantined": 0,
+      "lessons": [
+        "17918"
+      ],
+      "modules": [
+        "Indices"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 1
+      },
+      "claim_types": {
+        "EXAMPLE": 1
+      },
+      "api_field": null,
+      "api_absent_note": "capture API note: VANNA does not exist in SpotGamma data (only GexBot)",
+      "top_definitions": [],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "Tail Risk",
+      "term_class": "GENERAL_OPTIONS_CONCEPT",
+      "term_class_basis": "standard options/dealer concept; not attributed to SpotGamma as an invention",
+      "items": 1,
+      "quarantined": 0,
+      "lessons": [
+        "18896"
+      ],
+      "modules": [
+        "Volatility Dashboard"
+      ],
+      "api_attribution": {
+        "GENERAL_MARKET_KNOWLEDGE": 1
+      },
+      "claim_types": {
+        "DEFINITION": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_cc3ba728d140716c",
+          "statement": "See Where Tail Risk is Priced",
+          "claim_type": "DEFINITION",
+          "lesson": "See Where Tail Risk is Priced",
+          "timestamp": null,
+          "confidence": 0.75
+        }
+      ],
+      "dominant_api_attribution": "GENERAL_MARKET_KNOWLEDGE"
+    },
+    {
+      "concept": "GEX Lens",
+      "term_class": "SPOTGAMMA_PRODUCT_TERM",
+      "term_class_basis": "SpotGamma product/tool name (course module or lesson title)",
+      "items": 1,
+      "quarantined": 0,
+      "lessons": [
+        "18698"
+      ],
+      "modules": [
+        "TRACE"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_PLATFORM_ONLY": 1
+      },
+      "claim_types": {
+        "PLATFORM_FEATURE": 1
+      },
+      "api_field": null,
+      "api_absent_note": null,
+      "top_definitions": [
+        {
+          "knowledge_id": "sgk_ae7d93c88170b1f9",
+          "statement": "When the bar chart is toggled to apply the GEX lens, it unveils gamma by strike for each reference price.",
+          "claim_type": "PLATFORM_FEATURE",
+          "lesson": "GEX Lens",
+          "timestamp": "00:00:31.440–00:00:40.120",
+          "confidence": 0.65
+        }
+      ],
+      "dominant_api_attribution": "SPOTGAMMA_PLATFORM_ONLY"
+    },
+    {
+      "concept": "Large Gamma",
+      "term_class": "SPOTGAMMA_PROPRIETARY_TERM",
+      "term_class_basis": "SpotGamma-named level; requires course evidence naming it as a SpotGamma level (e.g. 'unique levels like the Call Wall, Put Wall, and Volatility Trigger', 'SpotGamma-specific levels') — recorded per term in concepts/term-classes.json",
+      "items": 1,
+      "quarantined": 0,
+      "lessons": [
+        "18698"
+      ],
+      "modules": [
+        "TRACE"
+      ],
+      "api_attribution": {
+        "SPOTGAMMA_API_CONFIRMED": 1
+      },
+      "claim_types": {
+        "EXAMPLE": 1
+      },
+      "api_field": "/levels/:sym futureLevels.L1..L4 (labels 'Large Gamma 1..4')",
+      "api_absent_note": null,
+      "top_definitions": [],
+      "dominant_api_attribution": "SPOTGAMMA_API_CONFIRMED"
+    }
+  ],
+  "glossary_concepts_not_found_in_course": [
+    "Zero Gamma",
+    "Gamma Flip",
+    "Put/Call Ratio",
+    "Liquidity"
+  ]
+}
