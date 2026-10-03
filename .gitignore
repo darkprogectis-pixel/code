@@ -47,3 +47,9 @@ knowledge/video/segments/
 knowledge/video/sources/
 knowledge/video/evidence/rejected.jsonl
 knowledge/video/evidence/jev-decisions.jsonl
+# SpotGamma course corpus: page text, captions, transcripts, segments, frames and OCR stay local (JEV req_01a103d036a5770f986230e2e6ead2ff)
+knowledge/video-spotgamma/sources/
+knowledge/video-spotgamma/transcripts/
+knowledge/video-spotgamma/segments/
+knowledge/video-spotgamma/frames/
+knowledge/video-spotgamma/evidence/rejected.json

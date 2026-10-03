@@ -45,6 +45,9 @@
     "alpha-video-ingest": "node tools/alpha-video/ingest.mjs",
     "alpha-video-ask": "node tools/alpha-video/ask.mjs",
     "alpha-video-stats": "node tools/alpha-video/stats.mjs",
+    "sg-course-capture": "node tools/alpha-video/spotgamma/capture.mjs",
+    "sg-course-build": "node tools/alpha-video/spotgamma/build.mjs",
+    "sg-course-ask": "node tools/alpha-video/spotgamma/ask.mjs",
     "test:alpha-video": "node --test \"test/alpha-video/*.test.mjs\""
   },
   "dependencies": {
