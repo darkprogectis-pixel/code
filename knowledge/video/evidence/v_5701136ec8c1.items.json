@@ -1,0 +1,2539 @@
+{
+  "video_id": "v_5701136ec8c1",
+  "schema": "video-knowledge/v1",
+  "items": [
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a75008dd15f16a45",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 9382,
+      "end_ms": 13516,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Term Structure",
+      "surface": "term structure",
+      "statement": "In this lesson, we will talk about the term structure.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this lesson, we will talk about the term structure.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0002@11879ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 9382,
+            "end_ms": 13516,
+            "start": "00:00:09.382",
+            "end": "00:00:13.516"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "term_structure",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_cc9a28c3bba8d02e",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 14022,
+      "end_ms": 20172,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "The volatility term structure is a graph that represents the relationship between an option expiration and its implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The volatility term structure is a graph that represents the relationship between an option expiration and its implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 14022,
+            "end_ms": 20172,
+            "start": "00:00:14.022",
+            "end": "00:00:20.172"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0a8b9f0d90d5b358",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 14022,
+      "end_ms": 20172,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Term Structure",
+      "surface": "term structure",
+      "statement": "The volatility term structure is a graph that represents the relationship between an option expiration and its implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The volatility term structure is a graph that represents the relationship between an option expiration and its implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 14022,
+            "end_ms": 20172,
+            "start": "00:00:14.022",
+            "end": "00:00:20.172"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "term_structure",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a7ec6633dcda41ad",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 14022,
+      "end_ms": 20172,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "OPEX",
+      "surface": "option expiration",
+      "statement": "The volatility term structure is a graph that represents the relationship between an option expiration and its implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The volatility term structure is a graph that represents the relationship between an option expiration and its implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 14022,
+            "end_ms": 20172,
+            "start": "00:00:14.022",
+            "end": "00:00:20.172"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "opex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_aece27ee9491f15e",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 20678,
+      "end_ms": 40732,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "In other words, it shows how the expected volatility of a stock or index varies at different time horizons.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In other words, it shows how the expected volatility of a stock or index varies at different time horizons.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 20678,
+            "end_ms": 40732,
+            "start": "00:00:20.678",
+            "end": "00:00:40.732"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_791de7595591565a",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 20678,
+      "end_ms": 40732,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "This relationship is important because it helps us understand how expected volatility changes over time and how it affects the prices of options.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This relationship is important because it helps us understand how expected volatility changes over time and how it affects the prices of options.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 20678,
+            "end_ms": 40732,
+            "start": "00:00:20.678",
+            "end": "00:00:40.732"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_51d9fb96fe5947f6",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 20678,
+      "end_ms": 40732,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Term Structure",
+      "surface": "term structure",
+      "statement": "The term structure represents the volatility of an option, more specifically where looking at options that have the same strike price but different expiration.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The term structure represents the volatility of an option, more specifically where looking at options that have the same strike price but different expiration.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 20678,
+            "end_ms": 40732,
+            "start": "00:00:20.678",
+            "end": "00:00:40.732"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "term_structure",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ab7c5fb16226f434",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 20678,
+      "end_ms": 40732,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "The term structure represents the volatility of an option, more specifically where looking at options that have the same strike price but different expiration.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The term structure represents the volatility of an option, more specifically where looking at options that have the same strike price but different expiration.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 20678,
+            "end_ms": 40732,
+            "start": "00:00:20.678",
+            "end": "00:00:40.732"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3e818962e54ad907",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 41062,
+      "end_ms": 54412,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Term Structure",
+      "surface": "term structure",
+      "statement": "This is the classic chart of the term structure.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is the classic chart of the term structure.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 41062,
+            "end_ms": 54412,
+            "start": "00:00:41.062",
+            "end": "00:00:54.412"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "term_structure",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_090bef5291f0f88d",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 41062,
+      "end_ms": 54412,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "On the left you have the volatility and on the right you have the expirations.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "On the left you have the volatility and on the right you have the expirations.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 41062,
+            "end_ms": 54412,
+            "start": "00:00:41.062",
+            "end": "00:00:54.412"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b99ea082ffdc61a7",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 41062,
+      "end_ms": 54412,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Term Structure",
+      "surface": "term structure",
+      "statement": "Usually when we look at term structure we look at the at the money term structure.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Usually when we look at term structure we look at the at the money term structure.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 41062,
+            "end_ms": 54412,
+            "start": "00:00:41.062",
+            "end": "00:00:54.412"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "term_structure",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1a955859e68ba991",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 41062,
+      "end_ms": 54412,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "at the money",
+      "statement": "Usually when we look at term structure we look at the at the money term structure.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Usually when we look at term structure we look at the at the money term structure.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 41062,
+            "end_ms": 54412,
+            "start": "00:00:41.062",
+            "end": "00:00:54.412"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_66fbb239c69b248e",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 54918,
+      "end_ms": 62220,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Term Structure",
+      "surface": "term structure",
+      "statement": "So we are looking at the adamant strikes for different expires across the term structure.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "So we are looking at the adamant strikes for different expires across the term structure.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 54918,
+            "end_ms": 62220,
+            "start": "00:00:54.918",
+            "end": "00:01:02.220"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "term_structure",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_67904d609f00cc7b",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 54918,
+      "end_ms": 62220,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Term Structure",
+      "surface": "term structure",
+      "statement": "You can find the term structure in our daily report as well.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "You can find the term structure in our daily report as well.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 54918,
+            "end_ms": 62220,
+            "start": "00:00:54.918",
+            "end": "00:01:02.220"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "term_structure",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2ab77774fcd71a54",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 62790,
+      "end_ms": 83292,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "This is important because often when investors talk about volatility, they are talking about the volatility in different parts of the curve.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is important because often when investors talk about volatility, they are talking about the volatility in different parts of the curve.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 62790,
+            "end_ms": 83292,
+            "start": "00:01:02.790",
+            "end": "00:01:23.292"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_18feca105f0139c2",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 11879,
+      "end_ms": 11879,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Term Structure",
+      "surface": "TERM STRUCTURE",
+      "statement": "TERM STRUCTURE: DEFINITION \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "TERM STRUCTURE: DEFINITION \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0002@11879ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 11879,
+            "end_ms": 11879,
+            "start": "00:00:11.879",
+            "end": "00:00:11.879"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "term_structure",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0e16216fdef7d89b",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 11879,
+      "end_ms": 11879,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "© The volatility Term Structure is a graph that represents the relationship",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© The volatility Term Structure is a graph that represents the relationship",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0002@11879ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 11879,
+            "end_ms": 11879,
+            "start": "00:00:11.879",
+            "end": "00:00:11.879"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_afb0932a75d1e165",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 11879,
+      "end_ms": 11879,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Term Structure",
+      "surface": "Term Structure",
+      "statement": "© The volatility Term Structure is a graph that represents the relationship",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© The volatility Term Structure is a graph that represents the relationship",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0002@11879ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 11879,
+            "end_ms": 11879,
+            "start": "00:00:11.879",
+            "end": "00:00:11.879"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "term_structure",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e61a79428431efa0",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 11879,
+      "end_ms": 11879,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "between an option’s expiration and its implied volatility",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "between an option’s expiration and its implied volatility",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0002@11879ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 11879,
+            "end_ms": 11879,
+            "start": "00:00:11.879",
+            "end": "00:00:11.879"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d1e9d3291dbffd8c",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 11879,
+      "end_ms": 11879,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "© It shows how the expected volatility of a stock or index varies at different",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© It shows how the expected volatility of a stock or index varies at different",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0002@11879ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 11879,
+            "end_ms": 11879,
+            "start": "00:00:11.879",
+            "end": "00:00:11.879"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1e6b38db04542da9",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 11879,
+      "end_ms": 11879,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "expected volatility changes over time and how it affects the price of",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "expected volatility changes over time and how it affects the price of",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0002@11879ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 11879,
+            "end_ms": 11879,
+            "start": "00:00:11.879",
+            "end": "00:00:11.879"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5b8f98213c8bac0b",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0002",
+      "start_ms": 91174,
+      "end_ms": 112892,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "Because there are enough short sellers in the market that gain by selling volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Because there are enough short sellers in the market that gain by selling volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 91174,
+            "end_ms": 112892,
+            "start": "00:01:31.174",
+            "end": "00:01:52.892"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2333f21c10af46ae",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0002",
+      "start_ms": 91174,
+      "end_ms": 112892,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Because there are enough short sellers in the market that gain by selling volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Because there are enough short sellers in the market that gain by selling volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 91174,
+            "end_ms": 112892,
+            "start": "00:01:31.174",
+            "end": "00:01:52.892"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_44f5a8ee115ab214",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0002",
+      "start_ms": 113094,
+      "end_ms": 133500,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "This brings down the volatility in the short end of the curve.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This brings down the volatility in the short end of the curve.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 113094,
+            "end_ms": 133500,
+            "start": "00:01:53.094",
+            "end": "00:02:13.500"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ba857ef258a45155",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0002",
+      "start_ms": 113094,
+      "end_ms": 133500,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "In a nutshell, in this type of structure the market, which is not currently under stress, foresees possible volatility in the future.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In a nutshell, in this type of structure the market, which is not currently under stress, foresees possible volatility in the future.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 113094,
+            "end_ms": 133500,
+            "start": "00:01:53.094",
+            "end": "00:02:13.500"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f63e7cbf3843d079",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0002",
+      "start_ms": 133958,
+      "end_ms": 154524,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Also in this case, the term premium, or volatility premium, is due to the fact that in the future there are more uncertainties with respect to events that could lead to an increase in volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Also in this case, the term premium, or volatility premium, is due to the fact that in the future there are more uncertainties with respect to events that could lead to an increase in volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 133958,
+            "end_ms": 154524,
+            "start": "00:02:13.958",
+            "end": "00:02:34.524"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_329e00c3898d52b2",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0002",
+      "start_ms": 161926,
+      "end_ms": 170252,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Because when the rich strats and volatility invests a look for protection.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Because when the rich strats and volatility invests a look for protection.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 161926,
+            "end_ms": 170252,
+            "start": "00:02:41.926",
+            "end": "00:02:50.252"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a26883596e474833",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0002",
+      "start_ms": 161926,
+      "end_ms": 170252,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "They chase the gamma by going long option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "They chase the gamma by going long option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 161926,
+            "end_ms": 170252,
+            "start": "00:02:41.926",
+            "end": "00:02:50.252"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_82d881926fc9f7a5",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0002",
+      "start_ms": 170790,
+      "end_ms": 172940,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "and they pay the premium that brings up the volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "and they pay the premium that brings up the volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 170790,
+            "end_ms": 172940,
+            "start": "00:02:50.790",
+            "end": "00:02:52.940"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_af31b1a25fdfd5d2",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0003",
+      "start_ms": 173446,
+      "end_ms": 199900,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "Furthermore, investor tends to buy short-term option in these events, which is why the curve takes its shape.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Furthermore, investor tends to buy short-term option in these events, which is why the curve takes its shape.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 173446,
+            "end_ms": 199900,
+            "start": "00:02:53.446",
+            "end": "00:03:19.900"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_08be7abb07005909",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0003",
+      "start_ms": 173446,
+      "end_ms": 199900,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "It is for this reason that it is very important to understand the volatility regime of your asset if you sell options, because this type of increase in the curve can burn your entire capital in a very short amount of time.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It is for this reason that it is very important to understand the volatility regime of your asset if you sell options, because this type of increase in the curve can burn your entire capital in a very short amount of time.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 173446,
+            "end_ms": 199900,
+            "start": "00:02:53.446",
+            "end": "00:03:19.900"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_98cf02ab4799e058",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0003",
+      "start_ms": 173446,
+      "end_ms": 199900,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "It is for this reason that it is very important to understand the volatility regime of your asset if you sell options, because this type of increase in the curve can burn your entire capital in a very short amount of time.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It is for this reason that it is very important to understand the volatility regime of your asset if you sell options, because this type of increase in the curve can burn your entire capital in a very short amount of time.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 173446,
+            "end_ms": 199900,
+            "start": "00:02:53.446",
+            "end": "00:03:19.900"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_27ffd656b20d9ab3",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0003",
+      "start_ms": 200070,
+      "end_ms": 210188,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "In this case, the stock market goes down, while the volatility turns structure versus and goes into backwardation.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this case, the stock market goes down, while the volatility turns structure versus and goes into backwardation.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 200070,
+            "end_ms": 210188,
+            "start": "00:03:20.070",
+            "end": "00:03:30.188"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_df52ca3f7092dbd5",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0003",
+      "start_ms": 200070,
+      "end_ms": 210188,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "The volatility of the expirations in the short-term rises faster than the ones in the long-term.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The volatility of the expirations in the short-term rises faster than the ones in the long-term.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 200070,
+            "end_ms": 210188,
+            "start": "00:03:20.070",
+            "end": "00:03:30.188"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_aeabad9b4cab49d9",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0003",
+      "start_ms": 210694,
+      "end_ms": 227916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "In this case the stock market goes up while the volatility structure goes back to contango.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this case the stock market goes up while the volatility structure goes back to contango.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 210694,
+            "end_ms": 227916,
+            "start": "00:03:30.694",
+            "end": "00:03:47.916"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9fbf721aae81f9f8",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0003",
+      "start_ms": 210694,
+      "end_ms": 227916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "Volatility",
+      "statement": "Volatility on the short end falls faster than the one on the long end of the curve.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Volatility on the short end falls faster than the one on the long end of the curve.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 210694,
+            "end_ms": 227916,
+            "start": "00:03:30.694",
+            "end": "00:03:47.916"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2588ec16b3853929",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0004",
+      "start_ms": 228486,
+      "end_ms": 234124,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Term Structure",
+      "surface": "term structure",
+      "statement": "Understanding the term structure also helps us understand why this type of product cannot be used for long-term investments.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Understanding the term structure also helps us understand why this type of product cannot be used for long-term investments.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 228486,
+            "end_ms": 234124,
+            "start": "00:03:48.486",
+            "end": "00:03:54.124"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "term_structure",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_bf68d1ed0c346f0e",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0004",
+      "start_ms": 234758,
+      "end_ms": 255484,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "But they do this by buying and selling futures.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "But they do this by buying and selling futures.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 234758,
+            "end_ms": 255484,
+            "start": "00:03:54.758",
+            "end": "00:04:15.484"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_77da43e7a9989dc9",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0004",
+      "start_ms": 234758,
+      "end_ms": 255484,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "But they do this by buying and selling futures.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "But they do this by buying and selling futures.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 234758,
+            "end_ms": 255484,
+            "start": "00:03:54.758",
+            "end": "00:04:15.484"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_50a5e29820614074",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0004",
+      "start_ms": 255782,
+      "end_ms": 276092,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Term Structure",
+      "surface": "term structure",
+      "statement": "Therefore, the ETN is subject to the explosion to the curve or term structure.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Therefore, the ETN is subject to the explosion to the curve or term structure.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 255782,
+            "end_ms": 276092,
+            "start": "00:04:15.782",
+            "end": "00:04:36.092"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "term_structure",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_333190c06107b727",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0004",
+      "start_ms": 255782,
+      "end_ms": 276092,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "Futures as options have an expiration and to remain in the position the fund manager of the ETN must be selling expiring contracts and buying new ones.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Futures as options have an expiration and to remain in the position the fund manager of the ETN must be selling expiring contracts and buying new ones.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 255782,
+            "end_ms": 276092,
+            "start": "00:04:15.782",
+            "end": "00:04:36.092"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_fc327a97be97c231",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0004",
+      "start_ms": 255782,
+      "end_ms": 276092,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "Futures as options have an expiration and to remain in the position the fund manager of the ETN must be selling expiring contracts and buying new ones.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Futures as options have an expiration and to remain in the position the fund manager of the ETN must be selling expiring contracts and buying new ones.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 255782,
+            "end_ms": 276092,
+            "start": "00:04:15.782",
+            "end": "00:04:36.092"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b9aa12b6d08d4eda",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0004",
+      "start_ms": 276678,
+      "end_ms": 297116,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Term Structure",
+      "surface": "term structure",
+      "statement": "The price at which the manager rolls the position depends on the term structure.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The price at which the manager rolls the position depends on the term structure.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 276678,
+            "end_ms": 297116,
+            "start": "00:04:36.678",
+            "end": "00:04:57.116"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "term_structure",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1f99f8fdc2932922",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0004",
+      "start_ms": 276678,
+      "end_ms": 297116,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Term Structure",
+      "surface": "term structure",
+      "statement": "In this case, a product that prices according to this term structure suffers from what is called negative roll.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this case, a product that prices according to this term structure suffers from what is called negative roll.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 276678,
+            "end_ms": 297116,
+            "start": "00:04:36.678",
+            "end": "00:04:57.116"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "term_structure",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_25dc802495885663",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0004",
+      "start_ms": 299366,
+      "end_ms": 303628,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "Rolling means selling the expiring contract and buying a new one with a further expiration.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Rolling means selling the expiring contract and buying a new one with a further expiration.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 299366,
+            "end_ms": 303628,
+            "start": "00:04:59.366",
+            "end": "00:05:03.628"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_97135af6601156f6",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0004",
+      "start_ms": 299366,
+      "end_ms": 303628,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "Rolling means selling the expiring contract and buying a new one with a further expiration.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Rolling means selling the expiring contract and buying a new one with a further expiration.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 299366,
+            "end_ms": 303628,
+            "start": "00:04:59.366",
+            "end": "00:05:03.628"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_508203b41d9a002e",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0004",
+      "start_ms": 304134,
+      "end_ms": 308140,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "The sold contract has a lower value than the contract we buy to stay in the position.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The sold contract has a lower value than the contract we buy to stay in the position.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 304134,
+            "end_ms": 308140,
+            "start": "00:05:04.134",
+            "end": "00:05:08.140"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f8288b28822edf3b",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0005",
+      "start_ms": 325030,
+      "end_ms": 334700,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "Volatility",
+      "statement": "Volatility is highest at the front of the curve.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Volatility is highest at the front of the curve.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0004@327794ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 325030,
+            "end_ms": 334700,
+            "start": "00:05:25.030",
+            "end": "00:05:34.700"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a467f29383444310",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0005",
+      "start_ms": 315148,
+      "end_ms": 315148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Term Structure",
+      "surface": "TERM STRUCTURE",
+      "statement": "TERM STRUCTURE: VIX \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "TERM STRUCTURE: VIX \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0003@315148ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 315148,
+            "end_ms": 315148,
+            "start": "00:05:15.148",
+            "end": "00:05:15.148"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "term_structure",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ac51a65b21add210",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0005",
+      "start_ms": 327794,
+      "end_ms": 327794,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Term Structure",
+      "surface": "TERM STRUCTURE",
+      "statement": "CHANGE IN TERM STRUCTURE A",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "CHANGE IN TERM STRUCTURE A",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0004@327794ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 327794,
+            "end_ms": 327794,
+            "start": "00:05:27.794",
+            "end": "00:05:27.794"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "term_structure",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_aa37ce33c96b7824",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0006",
+      "start_ms": 335174,
+      "end_ms": 357596,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "For this reason, the contract we sell has a higher value than the one we buy to stay in the position.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For this reason, the contract we sell has a higher value than the one we buy to stay in the position.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0005@342108ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 335174,
+            "end_ms": 357596,
+            "start": "00:05:35.174",
+            "end": "00:05:57.596"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ff6835bfc79eb4fe",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0006",
+      "start_ms": 335174,
+      "end_ms": 357596,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "For this reason, the contract we sell has a higher value than the one we buy to stay in the position.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For this reason, the contract we sell has a higher value than the one we buy to stay in the position.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0005@342108ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 335174,
+            "end_ms": 357596,
+            "start": "00:05:35.174",
+            "end": "00:05:57.596"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5e1d0957e1525923",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0006",
+      "start_ms": 342108,
+      "end_ms": 342108,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Term Structure",
+      "surface": "TERM STRUCTURE",
+      "statement": "TERM STRUCTURE: OIL \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "TERM STRUCTURE: OIL \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0005@342108ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 342108,
+            "end_ms": 342108,
+            "start": "00:05:42.108",
+            "end": "00:05:42.108"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "term_structure",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_be41b74a67b8a815",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0007",
+      "start_ms": 358214,
+      "end_ms": 362796,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Term Structure",
+      "surface": "term structure",
+      "statement": "We are coming to an end to the lesson about term structure.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We are coming to an end to the lesson about term structure.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0006@363129ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 358214,
+            "end_ms": 362796,
+            "start": "00:05:58.214",
+            "end": "00:06:02.796"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "term_structure",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_50e5a2b38dc41c3b",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0007",
+      "start_ms": 358214,
+      "end_ms": 362796,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Skew",
+      "surface": "skew",
+      "statement": "In the next section we will look at the skew.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In the next section we will look at the skew.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5701136ec8c1/f_0006@363129ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 358214,
+            "end_ms": 362796,
+            "start": "00:05:58.214",
+            "end": "00:06:02.796"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "skew",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    }
+  ]
+}

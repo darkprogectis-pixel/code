@@ -39,3 +39,11 @@ nt8/check/**/obj/
 
 # Alpha / JARVIS runtime state (derived)
 var/
+
+# alpha video corpus: derived raw material of third-party paid course videos stays local (JEV req_01a1023188427f78a14ad54cc629e601)
+knowledge/video/frames/
+knowledge/video/transcripts/
+knowledge/video/segments/
+knowledge/video/sources/
+knowledge/video/evidence/rejected.jsonl
+knowledge/video/evidence/jev-decisions.jsonl

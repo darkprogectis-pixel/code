@@ -1,0 +1,4420 @@
+{
+  "video_id": "v_b157768cc60a",
+  "schema": "video-knowledge/v1",
+  "items": [
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_222099ac25d5a5db",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0001",
+      "start_ms": 13318,
+      "end_ms": 25356,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "We can invest by looking at the direction of the price, in other cases we may be interested in time or volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We can invest by looking at the direction of the price, in other cases we may be interested in time or volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0002@25759ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 13318,
+            "end_ms": 25356,
+            "start": "00:00:13.318",
+            "end": "00:00:25.356"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_77046f80b1a51770",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta Hedging",
+      "surface": "DELTA HEDGING",
+      "statement": "DELTA HEDGING =",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "DELTA HEDGING =",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 0,
+            "end_ms": 0,
+            "start": "00:00:00.000",
+            "end": "00:00:00.000"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "FORMULA",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta_hedging",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ab67c26344a3dd7c",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0001",
+      "start_ms": 25759,
+      "end_ms": 25759,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta Hedging",
+      "surface": "DELTA HEDGING",
+      "statement": "DELTA HEDGING: HEDGE RATIO \\w",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "DELTA HEDGING: HEDGE RATIO \\w",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0002@25759ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 25759,
+            "end_ms": 25759,
+            "start": "00:00:25.759",
+            "end": "00:00:25.759"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta_hedging",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6f92c0017bcaec12",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0001",
+      "start_ms": 25759,
+      "end_ms": 25759,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "Delta",
+      "statement": "© Delta helps to calculate the Hedge Ratio",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Delta helps to calculate the Hedge Ratio",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0002@25759ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 25759,
+            "end_ms": 25759,
+            "start": "00:00:25.759",
+            "end": "00:00:25.759"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b4a103042087bdfa",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0002",
+      "start_ms": 30118,
+      "end_ms": 34284,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "The delta becomes fundamental because it can help us create what we know as the HG ratio.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The delta becomes fundamental because it can help us create what we know as the HG ratio.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 30118,
+            "end_ms": 34284,
+            "start": "00:00:30.118",
+            "end": "00:00:34.284"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9441f619de87f7a6",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0003",
+      "start_ms": 51974,
+      "end_ms": 57868,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "In our case we try to hedge the exposure of our option with another option or by buying or selling the underlying asset.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In our case we try to hedge the exposure of our option with another option or by buying or selling the underlying asset.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 51974,
+            "end_ms": 57868,
+            "start": "00:00:51.974",
+            "end": "00:00:57.868"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_43e8073d7cc203af",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0003",
+      "start_ms": 51974,
+      "end_ms": 57868,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "In our case we try to hedge the exposure of our option with another option or by buying or selling the underlying asset.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In our case we try to hedge the exposure of our option with another option or by buying or selling the underlying asset.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 51974,
+            "end_ms": 57868,
+            "start": "00:00:51.974",
+            "end": "00:00:57.868"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ae6cb6768b421e04",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 67142,
+      "end_ms": 72492,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "We know that an in-the-money option has a delta of 100 and moves as if we were long the underlying.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We know that an in-the-money option has a delta of 100 and moves as if we were long the underlying.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 67142,
+            "end_ms": 72492,
+            "start": "00:01:07.142",
+            "end": "00:01:12.492"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_bdfac9225cb54b51",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 73030,
+      "end_ms": 77004,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "So if we were long in underlying acid, that is like being long 100 delta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "So if we were long in underlying acid, that is like being long 100 delta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 73030,
+            "end_ms": 77004,
+            "start": "00:01:13.030",
+            "end": "00:01:17.004"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_61396889c749458f",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 77542,
+      "end_ms": 86124,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "For this reason, the first thing we want to do to calculate our age ratio is to divide 100, which represents our exposure to the underlying, by the delta value of our option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For this reason, the first thing we want to do to calculate our age ratio is to divide 100, which represents our exposure to the underlying, by the delta value of our option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 77542,
+            "end_ms": 86124,
+            "start": "00:01:17.542",
+            "end": "00:01:26.124"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7c6609e2d5041642",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 86694,
+      "end_ms": 92364,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "We know that the add the money call as a delta of 50.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We know that the add the money call as a delta of 50.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 86694,
+            "end_ms": 92364,
+            "start": "00:01:26.694",
+            "end": "00:01:32.364"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4f7ad7a88946b091",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 99846,
+      "end_ms": 110220,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "This means that if we want to hedge based on the hedge ratio for every two options we buy we have to sell one unit of underlying or 100 shares.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This means that if we want to hedge based on the hedge ratio for every two options we buy we have to sell one unit of underlying or 100 shares.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 99846,
+            "end_ms": 110220,
+            "start": "00:01:39.846",
+            "end": "00:01:50.220"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_24b682abcdf0e551",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 99846,
+      "end_ms": 110220,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "This means that if we want to hedge based on the hedge ratio for every two options we buy we have to sell one unit of underlying or 100 shares.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This means that if we want to hedge based on the hedge ratio for every two options we buy we have to sell one unit of underlying or 100 shares.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 99846,
+            "end_ms": 110220,
+            "start": "00:01:39.846",
+            "end": "00:01:50.220"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e832388a19a74e99",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 99846,
+      "end_ms": 110220,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "If we do this our position becomes delta neutral.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If we do this our position becomes delta neutral.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 99846,
+            "end_ms": 110220,
+            "start": "00:01:39.846",
+            "end": "00:01:50.220"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c9c0713e69be2433",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 99846,
+      "end_ms": 110220,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "NEUTRAL",
+      "surface": "neutral",
+      "statement": "If we do this our position becomes delta neutral.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If we do this our position becomes delta neutral.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 99846,
+            "end_ms": 110220,
+            "start": "00:01:39.846",
+            "end": "00:01:50.220"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "neutral",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e0b948aae57da75a",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 111046,
+      "end_ms": 115180,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "Also remember that call option always have positive delta from 0 to +100.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Also remember that call option always have positive delta from 0 to +100.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 111046,
+            "end_ms": 115180,
+            "start": "00:01:51.046",
+            "end": "00:01:55.180"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_46910463df3747fb",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 115846,
+      "end_ms": 132012,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "at the money",
+      "statement": "To find the hedge ratio of an at the money put, we divide 100 by 50, which always gives the same hedge ratio of 2 to 1.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "To find the hedge ratio of an at the money put, we divide 100 by 50, which always gives the same hedge ratio of 2 to 1.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 115846,
+            "end_ms": 132012,
+            "start": "00:01:55.846",
+            "end": "00:02:12.012"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d3d748116176c21e",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 115846,
+      "end_ms": 132012,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "Now, unlike a call option though, if we buy a put, we are long put.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Now, unlike a call option though, if we buy a put, we are long put.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 115846,
+            "end_ms": 132012,
+            "start": "00:01:55.846",
+            "end": "00:02:12.012"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0ff9069571866bc6",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 115846,
+      "end_ms": 132012,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "To hedge, we need to buy the underlying and not sell.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "To hedge, we need to buy the underlying and not sell.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 115846,
+            "end_ms": 132012,
+            "start": "00:01:55.846",
+            "end": "00:02:12.012"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f83a363d04425fe3",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 115846,
+      "end_ms": 132012,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "To hedge, we need to buy the underlying and not sell.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "To hedge, we need to buy the underlying and not sell.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 115846,
+            "end_ms": 132012,
+            "start": "00:01:55.846",
+            "end": "00:02:12.012"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d261f5ae438cf939",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 132550,
+      "end_ms": 141644,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "In this case for every two put options we buy we have to buy one unit of underlying or 100 shares.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this case for every two put options we buy we have to buy one unit of underlying or 100 shares.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 132550,
+            "end_ms": 141644,
+            "start": "00:02:12.550",
+            "end": "00:02:21.644"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_88a1fddb731b51b3",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 132550,
+      "end_ms": 141644,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "This happens because unlike calls puts a negative delta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This happens because unlike calls puts a negative delta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 132550,
+            "end_ms": 141644,
+            "start": "00:02:12.550",
+            "end": "00:02:21.644"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0d419ce8ee613d59",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 142278,
+      "end_ms": 148684,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "In this slide we present the delta of a call and now it moves based on the price of the underlying.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this slide we present the delta of a call and now it moves based on the price of the underlying.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 142278,
+            "end_ms": 148684,
+            "start": "00:02:22.278",
+            "end": "00:02:28.684"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_16335d90138818c4",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 142278,
+      "end_ms": 148684,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "As you can see the delta is positive.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "As you can see the delta is positive.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 142278,
+            "end_ms": 148684,
+            "start": "00:02:22.278",
+            "end": "00:02:28.684"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d64ad5e79f3f1574",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 149286,
+      "end_ms": 152652,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "Finally, the delta movement of a put when the price of the underlying changes.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Finally, the delta movement of a put when the price of the underlying changes.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0004@152953ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 149286,
+            "end_ms": 152652,
+            "start": "00:02:29.286",
+            "end": "00:02:32.652"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e45465c65d760d26",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 142009,
+      "end_ms": 142009,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "DELTA",
+      "statement": "DELTA: CALL vs PUT &",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "DELTA: CALL vs PUT &",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0003@142009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 142009,
+            "end_ms": 142009,
+            "start": "00:02:22.009",
+            "end": "00:02:22.009"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a9298129eac5fc61",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 152953,
+      "end_ms": 152953,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "DELTA",
+      "statement": "HEDGE DELTA WITH OPTIONS \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "HEDGE DELTA WITH OPTIONS \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0004@152953ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 152953,
+            "end_ms": 152953,
+            "start": "00:02:32.953",
+            "end": "00:02:32.953"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b9c67aa11ecb066f",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 152953,
+      "end_ms": 152953,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "Delta",
+      "statement": "© For a perfect Hedge, the Net Delta value",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© For a perfect Hedge, the Net Delta value",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0004@152953ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 152953,
+            "end_ms": 152953,
+            "start": "00:02:32.953",
+            "end": "00:02:32.953"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b4fd25baf8f07161",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0005",
+      "start_ms": 153830,
+      "end_ms": 161740,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "Until now when we introduced the concept of FETCHER ratios, we have talked about hedging with options or being long or short underlying in order to be delta neutral.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Until now when we introduced the concept of FETCHER ratios, we have talked about hedging with options or being long or short underlying in order to be delta neutral.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0005@174975ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 153830,
+            "end_ms": 161740,
+            "start": "00:02:33.830",
+            "end": "00:02:41.740"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_515617715b1afbcb",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0005",
+      "start_ms": 153830,
+      "end_ms": 161740,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "NEUTRAL",
+      "surface": "neutral",
+      "statement": "Until now when we introduced the concept of FETCHER ratios, we have talked about hedging with options or being long or short underlying in order to be delta neutral.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Until now when we introduced the concept of FETCHER ratios, we have talked about hedging with options or being long or short underlying in order to be delta neutral.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0005@174975ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 153830,
+            "end_ms": 161740,
+            "start": "00:02:33.830",
+            "end": "00:02:41.740"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "neutral",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d4bf234099bdbc69",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0005",
+      "start_ms": 162246,
+      "end_ms": 167308,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "Traders can hedge by using options, buying or selling underlying or a combination of the two.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Traders can hedge by using options, buying or selling underlying or a combination of the two.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0005@174975ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 162246,
+            "end_ms": 167308,
+            "start": "00:02:42.246",
+            "end": "00:02:47.308"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8a1f191ef9d66c61",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0005",
+      "start_ms": 162246,
+      "end_ms": 167308,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "Traders can hedge by using options, buying or selling underlying or a combination of the two.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Traders can hedge by using options, buying or selling underlying or a combination of the two.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0005@174975ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 162246,
+            "end_ms": 167308,
+            "start": "00:02:42.246",
+            "end": "00:02:47.308"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1f8624453a3c27cc",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0005",
+      "start_ms": 172038,
+      "end_ms": 180652,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "We have two positions, two long calls with the delta of 50 and five long calls with the delta of -20.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We have two positions, two long calls with the delta of 50 and five long calls with the delta of -20.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0005@174975ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 172038,
+            "end_ms": 180652,
+            "start": "00:02:52.038",
+            "end": "00:03:00.652"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d632150dbacd0cce",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0005",
+      "start_ms": 186630,
+      "end_ms": 197260,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "First we take the two cores and multiply them by the delta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "First we take the two cores and multiply them by the delta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0005@174975ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 186630,
+            "end_ms": 197260,
+            "start": "00:03:06.630",
+            "end": "00:03:17.260"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_63318cb3eb98a825",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0005",
+      "start_ms": 197862,
+      "end_ms": 203820,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "This means that our position is effectively delta-neutral because the difference in exposure of both positions equals to zero.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This means that our position is effectively delta-neutral because the difference in exposure of both positions equals to zero.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0005@174975ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 197862,
+            "end_ms": 203820,
+            "start": "00:03:17.862",
+            "end": "00:03:23.820"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "FORMULA",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c9b8679368608f33",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0005",
+      "start_ms": 197862,
+      "end_ms": 203820,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "NEUTRAL",
+      "surface": "neutral",
+      "statement": "This means that our position is effectively delta-neutral because the difference in exposure of both positions equals to zero.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This means that our position is effectively delta-neutral because the difference in exposure of both positions equals to zero.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0005@174975ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 197862,
+            "end_ms": 203820,
+            "start": "00:03:17.862",
+            "end": "00:03:23.820"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "FORMULA",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "neutral",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_29586783cd29b75b",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0005",
+      "start_ms": 204550,
+      "end_ms": 225980,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "NEUTRAL",
+      "surface": "neutral",
+      "statement": "In that case, we will be debt to neutral.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In that case, we will be debt to neutral.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0006@226460ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 204550,
+            "end_ms": 225980,
+            "start": "00:03:24.550",
+            "end": "00:03:45.980"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "neutral",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_91ad16f7e6631451",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0005",
+      "start_ms": 226630,
+      "end_ms": 234956,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "To recap, the underlying asset always has a delta of 100.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "To recap, the underlying asset always has a delta of 100.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0006@226460ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 226630,
+            "end_ms": 234956,
+            "start": "00:03:46.630",
+            "end": "00:03:54.956"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3b6abfdb3d4f7ff2",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0005",
+      "start_ms": 226630,
+      "end_ms": 234956,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "An option with a delta of 100 is equivalent of having a long or short position in the underlying asset.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "An option with a delta of 100 is equivalent of having a long or short position in the underlying asset.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0006@226460ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 226630,
+            "end_ms": 234956,
+            "start": "00:03:46.630",
+            "end": "00:03:54.956"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6ee4360b9f8cce89",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0005",
+      "start_ms": 235494,
+      "end_ms": 239340,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "an investor who is long enough to money call as a delta of 50.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "an investor who is long enough to money call as a delta of 50.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0005@174975ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 235494,
+            "end_ms": 239340,
+            "start": "00:03:55.494",
+            "end": "00:03:59.340"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f5ce429bd78e5cee",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0005",
+      "start_ms": 174975,
+      "end_ms": 174975,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta Hedging",
+      "surface": "DELTA HEDGING",
+      "statement": "DELTA HEDGING: EXAMPLE \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "DELTA HEDGING: EXAMPLE \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0005@174975ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 174975,
+            "end_ms": 174975,
+            "start": "00:02:54.975",
+            "end": "00:02:54.975"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta_hedging",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4eda4f8d4fd99df6",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0005",
+      "start_ms": 226460,
+      "end_ms": 226460,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "DELTA",
+      "statement": "DELTA vs UNDERLYING \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "DELTA vs UNDERLYING \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0006@226460ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 226460,
+            "end_ms": 226460,
+            "start": "00:03:46.460",
+            "end": "00:03:46.460"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3393f98b4a15c96d",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0005",
+      "start_ms": 226460,
+      "end_ms": 226460,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "ATM",
+      "statement": "ng Stock J Long ATM 200 D",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "ng Stock J Long ATM 200 D",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0006@226460ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 226460,
+            "end_ms": 226460,
+            "start": "00:03:46.460",
+            "end": "00:03:46.460"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ba44a6f3ee33dd66",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0006",
+      "start_ms": 239814,
+      "end_ms": 249452,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "And finally, a position of 200 delta is equal to being long two units of underlying.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "And finally, a position of 200 delta is equal to being long two units of underlying.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0007@257090ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 239814,
+            "end_ms": 249452,
+            "start": "00:03:59.814",
+            "end": "00:04:09.452"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ca4f39e652c0ca8e",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0006",
+      "start_ms": 249990,
+      "end_ms": 256684,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "These are important points to remember, especially if you manage your portfolio actively or work at the desk where you are constantly delta-haging through the day.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "These are important points to remember, especially if you manage your portfolio actively or work at the desk where you are constantly delta-haging through the day.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0007@257090ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 249990,
+            "end_ms": 256684,
+            "start": "00:04:09.990",
+            "end": "00:04:16.684"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_95815086786b92d0",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0006",
+      "start_ms": 260102,
+      "end_ms": 268908,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "The delta of a call option ranges from 0 to 100.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The delta of a call option ranges from 0 to 100.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0007@257090ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 260102,
+            "end_ms": 268908,
+            "start": "00:04:20.102",
+            "end": "00:04:28.908"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e823e466b09f695c",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0006",
+      "start_ms": 260102,
+      "end_ms": 268908,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "A delta of 0 is out of the money, a delta of 50 is at the money, and a delta of 100 is in the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "A delta of 0 is out of the money, a delta of 50 is at the money, and a delta of 100 is in the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0007@257090ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 260102,
+            "end_ms": 268908,
+            "start": "00:04:20.102",
+            "end": "00:04:28.908"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_bac51350705d38a3",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0006",
+      "start_ms": 260102,
+      "end_ms": 268908,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "A delta of 0 is out of the money, a delta of 50 is at the money, and a delta of 100 is in the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "A delta of 0 is out of the money, a delta of 50 is at the money, and a delta of 100 is in the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0007@257090ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 260102,
+            "end_ms": 268908,
+            "start": "00:04:20.102",
+            "end": "00:04:28.908"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2258fc2757f38033",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0006",
+      "start_ms": 269382,
+      "end_ms": 272844,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "Coll options have positive delta and put options have negative delta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Coll options have positive delta and put options have negative delta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0007@257090ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 269382,
+            "end_ms": 272844,
+            "start": "00:04:29.382",
+            "end": "00:04:32.844"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_cb3be73022012dab",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0006",
+      "start_ms": 273382,
+      "end_ms": 277516,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "Delta",
+      "statement": "To be Delta H we need to understand how to create the edge ratio of our position.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "To be Delta H we need to understand how to create the edge ratio of our position.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0007@257090ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 273382,
+            "end_ms": 277516,
+            "start": "00:04:33.382",
+            "end": "00:04:37.516"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_18bad19f19326316",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0006",
+      "start_ms": 278054,
+      "end_ms": 280716,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "We are delta H when our net delta is 0.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We are delta H when our net delta is 0.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0007@257090ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 278054,
+            "end_ms": 280716,
+            "start": "00:04:38.054",
+            "end": "00:04:40.716"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4ea8e3501079f578",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0006",
+      "start_ms": 257090,
+      "end_ms": 257090,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta Hedging",
+      "surface": "DELTA HEDGING",
+      "statement": "DELTA HEDGING: RECAP \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "DELTA HEDGING: RECAP \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0007@257090ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 257090,
+            "end_ms": 257090,
+            "start": "00:04:17.090",
+            "end": "00:04:17.090"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta_hedging",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d806408f1092f860",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0006",
+      "start_ms": 257090,
+      "end_ms": 257090,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "Delta",
+      "statement": "© Delta ranges from 0 to 100",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Delta ranges from 0 to 100",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0007@257090ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 257090,
+            "end_ms": 257090,
+            "start": "00:04:17.090",
+            "end": "00:04:17.090"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a95c62bb097312df",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0006",
+      "start_ms": 257090,
+      "end_ms": 257090,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "Delta",
+      "statement": "(© Hedge Ratio to be Delta Hedged",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(© Hedge Ratio to be Delta Hedged",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0007@257090ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 257090,
+            "end_ms": 257090,
+            "start": "00:04:17.090",
+            "end": "00:04:17.090"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_fe856b11a1c74e40",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0006",
+      "start_ms": 257090,
+      "end_ms": 257090,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "Volatility",
+      "statement": "© Time & Volatility",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Time & Volatility",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0007@257090ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 257090,
+            "end_ms": 257090,
+            "start": "00:04:17.090",
+            "end": "00:04:17.090"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c1a465281589c096",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0007",
+      "start_ms": 281446,
+      "end_ms": 285420,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Finally, the more time passes, the more our expectations on volatility decrease.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Finally, the more time passes, the more our expectations on volatility decrease.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0008@295262ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 281446,
+            "end_ms": 285420,
+            "start": "00:04:41.446",
+            "end": "00:04:45.420"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0a2dea9386fdef14",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0007",
+      "start_ms": 285894,
+      "end_ms": 291724,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "This means that the delta of our cause moves away from 50, while the delta of our puts moves away from minus 50.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This means that the delta of our cause moves away from 50, while the delta of our puts moves away from minus 50.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0008@295262ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 285894,
+            "end_ms": 291724,
+            "start": "00:04:45.894",
+            "end": "00:04:51.724"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_87917935aacadcf2",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0007",
+      "start_ms": 292230,
+      "end_ms": 295084,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "The reverse happens if the volatility expectation rises.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The reverse happens if the volatility expectation rises.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0008@295262ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 292230,
+            "end_ms": 295084,
+            "start": "00:04:52.230",
+            "end": "00:04:55.084"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2eeb95ed1d0369b5",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0007",
+      "start_ms": 295262,
+      "end_ms": 295262,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta Hedging",
+      "surface": "DELTA HEDGING",
+      "statement": "DELTA HEDGING",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "DELTA HEDGING",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0008@295262ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 295262,
+            "end_ms": 295262,
+            "start": "00:04:55.262",
+            "end": "00:04:55.262"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta_hedging",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_45ce39122f097b04",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 295750,
+      "end_ms": 300460,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta Hedging",
+      "surface": "delta hedging",
+      "statement": "Let's look at the delta hedging of a long chord position.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Let's look at the delta hedging of a long chord position.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0009@300801ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 295750,
+            "end_ms": 300460,
+            "start": "00:04:55.750",
+            "end": "00:05:00.460"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta_hedging",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9bf9afb6674e8ef3",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 300998,
+      "end_ms": 308556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "In this example, the price of the SPX index is 3800 and our call has a delta of 50.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this example, the price of the SPX index is 3800 and our call has a delta of 50.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0009@300801ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 300998,
+            "end_ms": 308556,
+            "start": "00:05:00.998",
+            "end": "00:05:08.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7469ec83bf6c27b2",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 300998,
+      "end_ms": 308556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "at the money",
+      "statement": "This means that our call is at the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This means that our call is at the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0009@300801ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 300998,
+            "end_ms": 308556,
+            "start": "00:05:00.998",
+            "end": "00:05:08.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ba5795b65b5a7700",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 314086,
+      "end_ms": 319628,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "When we looked at the edge ratio we know that the delta of being long one unit of underline always equals to 100.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When we looked at the edge ratio we know that the delta of being long one unit of underline always equals to 100.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0009@300801ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 314086,
+            "end_ms": 319628,
+            "start": "00:05:14.086",
+            "end": "00:05:19.628"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "FORMULA",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_399d4e16a6fb61b8",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 320102,
+      "end_ms": 325196,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "So if the delta of our option is 50, we know that we will need 50 shares of underlying to be delta neutral.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "So if the delta of our option is 50, we know that we will need 50 shares of underlying to be delta neutral.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0009@300801ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 320102,
+            "end_ms": 325196,
+            "start": "00:05:20.102",
+            "end": "00:05:25.196"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_db285515a8e95b2d",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 320102,
+      "end_ms": 325196,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "NEUTRAL",
+      "surface": "neutral",
+      "statement": "So if the delta of our option is 50, we know that we will need 50 shares of underlying to be delta neutral.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "So if the delta of our option is 50, we know that we will need 50 shares of underlying to be delta neutral.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0009@300801ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 320102,
+            "end_ms": 325196,
+            "start": "00:05:20.102",
+            "end": "00:05:25.196"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "neutral",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5dc25dd8b0bb0fae",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 325734,
+      "end_ms": 335372,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "What you can see is that we are in effect subtracting the underlying from the delta value.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "What you can see is that we are in effect subtracting the underlying from the delta value.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0009@300801ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 325734,
+            "end_ms": 335372,
+            "start": "00:05:25.734",
+            "end": "00:05:35.372"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d4b30b2464b2f5a8",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 335878,
+      "end_ms": 345260,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "Our position is executed and we are delta neutral.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Our position is executed and we are delta neutral.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0010@345612ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 335878,
+            "end_ms": 345260,
+            "start": "00:05:35.878",
+            "end": "00:05:45.260"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e462361ada810f60",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 335878,
+      "end_ms": 345260,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "NEUTRAL",
+      "surface": "neutral",
+      "statement": "Our position is executed and we are delta neutral.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Our position is executed and we are delta neutral.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0010@345612ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 335878,
+            "end_ms": 345260,
+            "start": "00:05:35.878",
+            "end": "00:05:45.260"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "neutral",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4dbdfe572462f5c5",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 351878,
+      "end_ms": 355308,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "In this case the delta of our call is no longer 50, but 70.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this case the delta of our call is no longer 50, but 70.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0009@300801ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 351878,
+            "end_ms": 355308,
+            "start": "00:05:51.878",
+            "end": "00:05:55.308"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d4ca120be9f7444d",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 356166,
+      "end_ms": 358796,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "This means that the position is no longer delta-neutral.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This means that the position is no longer delta-neutral.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0009@300801ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 356166,
+            "end_ms": 358796,
+            "start": "00:05:56.166",
+            "end": "00:05:58.796"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3d8b395a08390612",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 356166,
+      "end_ms": 358796,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "NEUTRAL",
+      "surface": "neutral",
+      "statement": "This means that the position is no longer delta-neutral.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This means that the position is no longer delta-neutral.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0009@300801ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 356166,
+            "end_ms": 358796,
+            "start": "00:05:56.166",
+            "end": "00:05:58.796"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "neutral",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1b43a4e9e156461f",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 359430,
+      "end_ms": 369036,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "With the increase in the spot price, our net delta has become 20, which is nothing more than the 70 delta of our new position minus the 50 delta of our hedge.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "With the increase in the spot price, our net delta has become 20, which is nothing more than the 70 delta of our new position minus the 50 delta of our hedge.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0009@300801ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 359430,
+            "end_ms": 369036,
+            "start": "00:05:59.430",
+            "end": "00:06:09.036"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2b99c02f539a689c",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 369574,
+      "end_ms": 374956,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "We would then need to add an additional -20 short to the initial -50 to be delta-neutral.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We would then need to add an additional -20 short to the initial -50 to be delta-neutral.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0009@300801ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 369574,
+            "end_ms": 374956,
+            "start": "00:06:09.574",
+            "end": "00:06:14.956"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5930ceb9b962e341",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 369574,
+      "end_ms": 374956,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "NEUTRAL",
+      "surface": "neutral",
+      "statement": "We would then need to add an additional -20 short to the initial -50 to be delta-neutral.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We would then need to add an additional -20 short to the initial -50 to be delta-neutral.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0009@300801ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 369574,
+            "end_ms": 374956,
+            "start": "00:06:09.574",
+            "end": "00:06:14.956"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "neutral",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9e297a411f1ca014",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 300801,
+      "end_ms": 300801,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta Hedging",
+      "surface": "DELTA HEDGING",
+      "statement": "DELTA HEDGING: EXAMPLE \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "DELTA HEDGING: EXAMPLE \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0009@300801ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 300801,
+            "end_ms": 300801,
+            "start": "00:05:00.801",
+            "end": "00:05:00.801"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta_hedging",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_fd8b76da2e096566",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 345612,
+      "end_ms": 345612,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta Hedging",
+      "surface": "DELTA HEDGING",
+      "statement": "DELTA HEDGING: EXAMPLE \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "DELTA HEDGING: EXAMPLE \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0010@345612ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 345612,
+            "end_ms": 345612,
+            "start": "00:05:45.612",
+            "end": "00:05:45.612"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta_hedging",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3e75e298d29463b7",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0009",
+      "start_ms": 375590,
+      "end_ms": 378124,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "The trade to rebalance is then to sell 20 shares.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The trade to rebalance is then to sell 20 shares.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 375590,
+            "end_ms": 378124,
+            "start": "00:06:15.590",
+            "end": "00:06:18.124"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0b678b3c94c1e046",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0009",
+      "start_ms": 378854,
+      "end_ms": 384044,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "So the net delta column helps us understand whether to be delta H we have to buy or sell the underlying.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "So the net delta column helps us understand whether to be delta H we have to buy or sell the underlying.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 378854,
+            "end_ms": 384044,
+            "start": "00:06:18.854",
+            "end": "00:06:24.044"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5d34f6285df09663",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0009",
+      "start_ms": 378854,
+      "end_ms": 384044,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "So the net delta column helps us understand whether to be delta H we have to buy or sell the underlying.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "So the net delta column helps us understand whether to be delta H we have to buy or sell the underlying.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 378854,
+            "end_ms": 384044,
+            "start": "00:06:18.854",
+            "end": "00:06:24.044"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b8f77904bc147473",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0009",
+      "start_ms": 378854,
+      "end_ms": 384044,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "So the net delta column helps us understand whether to be delta H we have to buy or sell the underlying.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "So the net delta column helps us understand whether to be delta H we have to buy or sell the underlying.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 378854,
+            "end_ms": 384044,
+            "start": "00:06:18.854",
+            "end": "00:06:24.044"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_35ba42f870a066cc",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0009",
+      "start_ms": 384646,
+      "end_ms": 390348,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "It all depends on the sign when the net delta is negative we buy, when it's positive we sell to remain delta neutral.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It all depends on the sign when the net delta is negative we buy, when it's positive we sell to remain delta neutral.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 384646,
+            "end_ms": 390348,
+            "start": "00:06:24.646",
+            "end": "00:06:30.348"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_cec1c93645e247e1",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0009",
+      "start_ms": 384646,
+      "end_ms": 390348,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "It all depends on the sign when the net delta is negative we buy, when it's positive we sell to remain delta neutral.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It all depends on the sign when the net delta is negative we buy, when it's positive we sell to remain delta neutral.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 384646,
+            "end_ms": 390348,
+            "start": "00:06:24.646",
+            "end": "00:06:30.348"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_105c5db71978b5b1",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0009",
+      "start_ms": 384646,
+      "end_ms": 390348,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "It all depends on the sign when the net delta is negative we buy, when it's positive we sell to remain delta neutral.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It all depends on the sign when the net delta is negative we buy, when it's positive we sell to remain delta neutral.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 384646,
+            "end_ms": 390348,
+            "start": "00:06:24.646",
+            "end": "00:06:30.348"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e6b89429be1d1198",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0009",
+      "start_ms": 384646,
+      "end_ms": 390348,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "NEUTRAL",
+      "surface": "neutral",
+      "statement": "It all depends on the sign when the net delta is negative we buy, when it's positive we sell to remain delta neutral.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It all depends on the sign when the net delta is negative we buy, when it's positive we sell to remain delta neutral.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 384646,
+            "end_ms": 390348,
+            "start": "00:06:24.646",
+            "end": "00:06:30.348"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "neutral",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_951f2582a7eb4e4c",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0009",
+      "start_ms": 390982,
+      "end_ms": 400108,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "In the last few lessons we talked about delta and about delta hedging.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In the last few lessons we talked about delta and about delta hedging.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 390982,
+            "end_ms": 400108,
+            "start": "00:06:30.982",
+            "end": "00:06:40.108"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9e54fe5a28cc5dbf",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0009",
+      "start_ms": 390982,
+      "end_ms": 400108,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta Hedging",
+      "surface": "delta hedging",
+      "statement": "In the last few lessons we talked about delta and about delta hedging.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In the last few lessons we talked about delta and about delta hedging.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 390982,
+            "end_ms": 400108,
+            "start": "00:06:30.982",
+            "end": "00:06:40.108"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta_hedging",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1a71a311ecc3e260",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0009",
+      "start_ms": 390982,
+      "end_ms": 400108,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta Hedging",
+      "surface": "delta hedging",
+      "statement": "The concept of delta hedging will be a recurring concept throughout the course.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The concept of delta hedging will be a recurring concept throughout the course.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 390982,
+            "end_ms": 400108,
+            "start": "00:06:30.982",
+            "end": "00:06:40.108"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta_hedging",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_647c9407c264fcaf",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0009",
+      "start_ms": 400582,
+      "end_ms": 425020,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "Our goal is to identify the reason why the market maker is forced to hedge during the day, because as we explained in the previous section, this activity affects liquidity and price movements.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Our goal is to identify the reason why the market maker is forced to hedge during the day, because as we explained in the previous section, this activity affects liquidity and price movements.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 400582,
+            "end_ms": 425020,
+            "start": "00:06:40.582",
+            "end": "00:07:05.020"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7d1157c6661f75aa",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0009",
+      "start_ms": 400582,
+      "end_ms": 425020,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "Our goal is to identify the reason why the market maker is forced to hedge during the day, because as we explained in the previous section, this activity affects liquidity and price movements.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Our goal is to identify the reason why the market maker is forced to hedge during the day, because as we explained in the previous section, this activity affects liquidity and price movements.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 400582,
+            "end_ms": 425020,
+            "start": "00:06:40.582",
+            "end": "00:07:05.020"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9c1a2d0c402fba2c",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0009",
+      "start_ms": 400582,
+      "end_ms": 425020,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "The delta is conditioned not only by the spot price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The delta is conditioned not only by the spot price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 400582,
+            "end_ms": 425020,
+            "start": "00:06:40.582",
+            "end": "00:07:05.020"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_534962437a78b7df",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0009",
+      "start_ms": 400582,
+      "end_ms": 425020,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "It is important to remember that the Greeks are not linear, but in addition to the spot, they follow speed, volatility, the passage of time, and interest rates.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It is important to remember that the Greeks are not linear, but in addition to the spot, they follow speed, volatility, the passage of time, and interest rates.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 400582,
+            "end_ms": 425020,
+            "start": "00:06:40.582",
+            "end": "00:07:05.020"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6977726d6baf99ab",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0010",
+      "start_ms": 431622,
+      "end_ms": 434124,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "In the next lesson, we will talk about the Greek gamma.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In the next lesson, we will talk about the Greek gamma.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0011@441007ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 431622,
+            "end_ms": 434124,
+            "start": "00:07:11.622",
+            "end": "00:07:14.124"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7a648e4ac3093d45",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0010",
+      "start_ms": 434758,
+      "end_ms": 440524,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Market Maker",
+      "surface": "market makers",
+      "statement": "We will try to understand how it interacts with other Greeks and how it affects market makers' delta hedging activities.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We will try to understand how it interacts with other Greeks and how it affects market makers' delta hedging activities.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "We will try to understand how it interacts with other Greeks and how it affects market makers' data hedging activities.",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0011@441007ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 434758,
+            "end_ms": 440524,
+            "start": "00:07:14.758",
+            "end": "00:07:20.524"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8a42e9a8bd1466a8",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0010",
+      "start_ms": 434758,
+      "end_ms": 440524,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Delta Hedging",
+      "surface": "delta hedging",
+      "statement": "We will try to understand how it interacts with other Greeks and how it affects market makers' delta hedging activities.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We will try to understand how it interacts with other Greeks and how it affects market makers' delta hedging activities.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "We will try to understand how it interacts with other Greeks and how it affects market makers' data hedging activities.",
+        "frame_refs": [
+          "frames/v_b157768cc60a/f_0011@441007ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 434758,
+            "end_ms": 440524,
+            "start": "00:07:14.758",
+            "end": "00:07:20.524"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta_hedging",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    }
+  ]
+}

@@ -1,0 +1,1419 @@
+{
+  "schema": "alpha-video-concepts/v1",
+  "concepts": [
+    {
+      "concept": "Gamma",
+      "surfaces": [
+        "gamma",
+        "Gamma",
+        "GAMMA"
+      ],
+      "items": 169,
+      "apis": {
+        "unknown:API_UNKNOWN": 166,
+        "q:API_PROBABLE": 3
+      },
+      "evidence_types": {
+        "DEFINITION": 39,
+        "VISUAL_DEMONSTRATION": 46,
+        "EXPLICIT_STATEMENT": 75,
+        "EXAMPLE": 4,
+        "PROCEDURE": 5
+      },
+      "first": [
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0001",
+          "start_ms": 486,
+          "item_id": "vk_15b5b5755de3e67b"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0001",
+          "start_ms": 4358,
+          "item_id": "vk_196b39d5520e0cf0"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0001",
+          "start_ms": 4358,
+          "item_id": "vk_7683c554d914b324"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0001",
+          "start_ms": 4358,
+          "item_id": "vk_ea225e268eea676a"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0001",
+          "start_ms": 4358,
+          "item_id": "vk_5389f1bedac9f635"
+        }
+      ]
+    },
+    {
+      "concept": "Delta",
+      "surfaces": [
+        "delta",
+        "DELTA",
+        "Delta",
+        "Dex",
+        "DEX",
+        "dex"
+      ],
+      "items": 223,
+      "apis": {
+        "unknown:API_UNKNOWN": 208,
+        "q:API_PROBABLE": 15
+      },
+      "evidence_types": {
+        "EXPLICIT_STATEMENT": 139,
+        "VISUAL_DEMONSTRATION": 33,
+        "EXAMPLE": 7,
+        "DEFINITION": 36,
+        "PROCEDURE": 8
+      },
+      "first": [
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0001",
+          "start_ms": 4358,
+          "item_id": "vk_c50999235aa9bd1a"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0001",
+          "start_ms": 4358,
+          "item_id": "vk_6f9119c93a1da7b9"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0001",
+          "start_ms": 4358,
+          "item_id": "vk_ae588364976ff814"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0001",
+          "start_ms": 4358,
+          "item_id": "vk_fa9c394b3aca421d"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0001",
+          "start_ms": 4037,
+          "item_id": "vk_32d7fee022324534"
+        }
+      ]
+    },
+    {
+      "concept": "Market Maker",
+      "surfaces": [
+        "market maker",
+        "market makers",
+        "Market Makers",
+        "Market Maker",
+        "Market makers",
+        "MARKET MAKER",
+        "MARKET MAKERS"
+      ],
+      "items": 124,
+      "apis": {
+        "unknown:API_UNKNOWN": 98,
+        "q:API_PROBABLE": 25,
+        "q:API_CONFIRMED": 1
+      },
+      "evidence_types": {
+        "DEFINITION": 27,
+        "EXPLICIT_STATEMENT": 81,
+        "VISUAL_DEMONSTRATION": 11,
+        "PROCEDURE": 3,
+        "EXAMPLE": 2
+      },
+      "first": [
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0001",
+          "start_ms": 4358,
+          "item_id": "vk_f62dd044ca4f68f5"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0003",
+          "start_ms": 151846,
+          "item_id": "vk_766bb24246a7584f"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0003",
+          "start_ms": 187622,
+          "item_id": "vk_8fcf1d0fc65e1803"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0004",
+          "start_ms": 214406,
+          "item_id": "vk_bd0e888e99cae3da"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0004",
+          "start_ms": 214406,
+          "item_id": "vk_a56b7c425b207f9d"
+        }
+      ]
+    },
+    {
+      "concept": "Q-Models",
+      "surfaces": [
+        "Q-MODELS",
+        "Q-Models",
+        "Q-models",
+        "Q-MODELs"
+      ],
+      "items": 80,
+      "apis": {
+        "unknown:API_UNKNOWN": 72,
+        "q:API_CONFIRMED": 2,
+        "q:API_PROBABLE": 6
+      },
+      "evidence_types": {
+        "VISUAL_DEMONSTRATION": 49,
+        "EXPLICIT_STATEMENT": 26,
+        "PROCEDURE": 3,
+        "DEFINITION": 2
+      },
+      "first": [
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0001",
+          "start_ms": 29029,
+          "item_id": "vk_2452dd94039e31be"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0002",
+          "start_ms": 29222,
+          "item_id": "vk_b50b880ea074bf7d"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0002",
+          "start_ms": 37990,
+          "item_id": "vk_005a022b20829b90"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0003",
+          "start_ms": 109734,
+          "item_id": "vk_92510b4ac0e52b18"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0003",
+          "start_ms": 140518,
+          "item_id": "vk_0125f307e6dfe49e"
+        }
+      ]
+    },
+    {
+      "concept": "GEX",
+      "surfaces": [
+        "GEX"
+      ],
+      "items": 99,
+      "apis": {
+        "unknown:API_UNKNOWN": 99
+      },
+      "evidence_types": {
+        "DEFINITION": 14,
+        "EXPLICIT_STATEMENT": 42,
+        "VISUAL_DEMONSTRATION": 38,
+        "PROCEDURE": 3,
+        "EXAMPLE": 2
+      },
+      "first": [
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0002",
+          "start_ms": 29222,
+          "item_id": "vk_66f4e34e85c6c202"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0002",
+          "start_ms": 37990,
+          "item_id": "vk_7746595d3ec07df4"
+        },
+        {
+          "video_id": "v_57da17993b19",
+          "segment_id": "v_57da17993b19_s0009",
+          "start_ms": 399398,
+          "item_id": "vk_18b804daf89be253"
+        },
+        {
+          "video_id": "v_57da17993b19",
+          "segment_id": "v_57da17993b19_s0009",
+          "start_ms": 454246,
+          "item_id": "vk_e68f26d12666df09"
+        },
+        {
+          "video_id": "v_871fd4f53294",
+          "segment_id": "v_871fd4f53294_s0008",
+          "start_ms": 388710,
+          "item_id": "vk_ddc3674635b78314"
+        }
+      ]
+    },
+    {
+      "concept": "Gamma Exposure",
+      "surfaces": [
+        "gamma exposure"
+      ],
+      "items": 4,
+      "apis": {
+        "unknown:API_UNKNOWN": 4
+      },
+      "evidence_types": {
+        "EXPLICIT_STATEMENT": 4
+      },
+      "first": [
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0002",
+          "start_ms": 29222,
+          "item_id": "vk_95f8c72e3c6b5555"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0005",
+          "start_ms": 322054,
+          "item_id": "vk_3cd784a642e5ee73"
+        },
+        {
+          "video_id": "v_8039ae6630f0",
+          "segment_id": "v_8039ae6630f0_s0004",
+          "start_ms": 254918,
+          "item_id": "vk_331bd87a35b58409"
+        },
+        {
+          "video_id": "v_871fd4f53294",
+          "segment_id": "v_871fd4f53294_s0013",
+          "start_ms": 641254,
+          "item_id": "vk_18e404b13047b133"
+        }
+      ]
+    },
+    {
+      "concept": "Volatility",
+      "surfaces": [
+        "volatility",
+        "Volatility",
+        "implied volatility",
+        "VOLATILITY",
+        "Implied volatility",
+        "IMPLIED VOLATILITY",
+        "Implied Volatility"
+      ],
+      "items": 372,
+      "apis": {
+        "unknown:API_UNKNOWN": 371,
+        "q:API_PROBABLE": 1
+      },
+      "evidence_types": {
+        "EXPLICIT_STATEMENT": 222,
+        "EXAMPLE": 12,
+        "VISUAL_DEMONSTRATION": 58,
+        "PROCEDURE": 18,
+        "DEFINITION": 62
+      },
+      "first": [
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0002",
+          "start_ms": 43878,
+          "item_id": "vk_656e3bf3035b6304"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0002",
+          "start_ms": 50886,
+          "item_id": "vk_1963c663baa53db4"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0002",
+          "start_ms": 82758,
+          "item_id": "vk_ed4fe22fba54fc5c"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0004",
+          "start_ms": 214406,
+          "item_id": "vk_7796ee0669806126"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0004",
+          "start_ms": 214406,
+          "item_id": "vk_ad7ca0cf167c6529"
+        }
+      ]
+    },
+    {
+      "concept": "Delta Hedging",
+      "surfaces": [
+        "delta hedging",
+        "DELTA HEDGING",
+        "Delta Hedging",
+        "Delta hedging"
+      ],
+      "items": 38,
+      "apis": {
+        "unknown:API_UNKNOWN": 27,
+        "q:API_PROBABLE": 10,
+        "q:API_CONFIRMED": 1
+      },
+      "evidence_types": {
+        "DEFINITION": 2,
+        "EXPLICIT_STATEMENT": 18,
+        "VISUAL_DEMONSTRATION": 18
+      },
+      "first": [
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0002",
+          "start_ms": 43878,
+          "item_id": "vk_5f3549cebaeb769e"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0003",
+          "start_ms": 151846,
+          "item_id": "vk_bd1dd564bf7f86b4"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0003",
+          "start_ms": 151652,
+          "item_id": "vk_9a11c0f6114d9760"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0003",
+          "start_ms": 198598,
+          "item_id": "vk_7fc933493f95f780"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0004",
+          "start_ms": 198886,
+          "item_id": "vk_52cbd453469f23e3"
+        }
+      ]
+    },
+    {
+      "concept": "BUY",
+      "surfaces": [
+        "buying",
+        "buy",
+        "Buying",
+        "BUY",
+        "Buy"
+      ],
+      "items": 164,
+      "apis": {
+        "unknown:API_UNKNOWN": 154,
+        "q:API_PROBABLE": 10
+      },
+      "evidence_types": {
+        "EXAMPLE": 10,
+        "EXPLICIT_STATEMENT": 124,
+        "PROCEDURE": 7,
+        "DEFINITION": 11,
+        "VISUAL_DEMONSTRATION": 12
+      },
+      "first": [
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0003",
+          "start_ms": 145862,
+          "item_id": "vk_44c5c06d4616e20f"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0004",
+          "start_ms": 202982,
+          "item_id": "vk_c745c0ed0b3c1bea"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0005",
+          "start_ms": 322054,
+          "item_id": "vk_1fcf69c16acc0844"
+        },
+        {
+          "video_id": "v_5103d69108dc",
+          "segment_id": "v_5103d69108dc_s0004",
+          "start_ms": 143686,
+          "item_id": "vk_db01b224c2ed52b7"
+        },
+        {
+          "video_id": "v_5103d69108dc",
+          "segment_id": "v_5103d69108dc_s0005",
+          "start_ms": 255366,
+          "item_id": "vk_225a50be2a9978cf"
+        }
+      ]
+    },
+    {
+      "concept": "NEUTRAL",
+      "surfaces": [
+        "neutral",
+        "Neutral",
+        "NEUTRAL"
+      ],
+      "items": 39,
+      "apis": {
+        "unknown:API_UNKNOWN": 33,
+        "q:API_PROBABLE": 6
+      },
+      "evidence_types": {
+        "EXPLICIT_STATEMENT": 27,
+        "DEFINITION": 3,
+        "PROCEDURE": 6,
+        "EXAMPLE": 1,
+        "VISUAL_DEMONSTRATION": 2
+      },
+      "first": [
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0003",
+          "start_ms": 151846,
+          "item_id": "vk_e2281b931a92c90a"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0003",
+          "start_ms": 187622,
+          "item_id": "vk_02a2335de990daa5"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0004",
+          "start_ms": 202982,
+          "item_id": "vk_1fbf1cd63332e0e9"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0004",
+          "start_ms": 242342,
+          "item_id": "vk_f7a227096166b50e"
+        },
+        {
+          "video_id": "v_61f3b59bfb8e",
+          "segment_id": "v_61f3b59bfb8e_s0010",
+          "start_ms": 519686,
+          "item_id": "vk_e3e07bc0706deae1"
+        }
+      ]
+    },
+    {
+      "concept": "SELL",
+      "surfaces": [
+        "sell",
+        "selling",
+        "SELL",
+        "Selling",
+        "Sell"
+      ],
+      "items": 158,
+      "apis": {
+        "unknown:API_UNKNOWN": 148,
+        "q:API_PROBABLE": 10
+      },
+      "evidence_types": {
+        "EXPLICIT_STATEMENT": 126,
+        "PROCEDURE": 7,
+        "DEFINITION": 8,
+        "EXAMPLE": 7,
+        "VISUAL_DEMONSTRATION": 10
+      },
+      "first": [
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0004",
+          "start_ms": 202982,
+          "item_id": "vk_8c2b8e0296c547f9"
+        },
+        {
+          "video_id": "v_5103d69108dc",
+          "segment_id": "v_5103d69108dc_s0004",
+          "start_ms": 143686,
+          "item_id": "vk_70ef6bb4f9f8f6ac"
+        },
+        {
+          "video_id": "v_5103d69108dc",
+          "segment_id": "v_5103d69108dc_s0005",
+          "start_ms": 255366,
+          "item_id": "vk_75788c4efd864b1e"
+        },
+        {
+          "video_id": "v_61f3b59bfb8e",
+          "segment_id": "v_61f3b59bfb8e_s0011",
+          "start_ms": 576838,
+          "item_id": "vk_516be8c0870667d5"
+        },
+        {
+          "video_id": "v_61f3b59bfb8e",
+          "segment_id": "v_61f3b59bfb8e_s0011",
+          "start_ms": 576838,
+          "item_id": "vk_66f217e8fd6d050c"
+        }
+      ]
+    },
+    {
+      "concept": "Moneyness",
+      "surfaces": [
+        "out of the money",
+        "in the money",
+        "at the money",
+        "At the money",
+        "ATM",
+        "ITM",
+        "MONEYNESS",
+        "moneyness",
+        "Moneyness",
+        "OTM",
+        "Out of the Money",
+        "In the money",
+        "Out of the money"
+      ],
+      "items": 206,
+      "apis": {
+        "unknown:API_UNKNOWN": 204,
+        "q:API_PROBABLE": 2
+      },
+      "evidence_types": {
+        "EXPLICIT_STATEMENT": 114,
+        "VISUAL_DEMONSTRATION": 62,
+        "PROCEDURE": 3,
+        "DEFINITION": 23,
+        "EXAMPLE": 4
+      },
+      "first": [
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0004",
+          "start_ms": 267270,
+          "item_id": "vk_f751f3791ddab576"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0005",
+          "start_ms": 283718,
+          "item_id": "vk_ec7014f5d09181a0"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0005",
+          "start_ms": 291462,
+          "item_id": "vk_4f10e5290516286f"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0005",
+          "start_ms": 306566,
+          "item_id": "vk_9df4d23263b422c5"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0005",
+          "start_ms": 306566,
+          "item_id": "vk_cff6a38116f0c960"
+        }
+      ]
+    },
+    {
+      "concept": "OPEX",
+      "surfaces": [
+        "OPEX",
+        "option expiration",
+        "OPTION EXPIRATION",
+        "Option Expiration",
+        "Opex"
+      ],
+      "items": 17,
+      "apis": {
+        "unknown:API_UNKNOWN": 17
+      },
+      "evidence_types": {
+        "DEFINITION": 3,
+        "EXPLICIT_STATEMENT": 11,
+        "VISUAL_DEMONSTRATION": 3
+      },
+      "first": [
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0005",
+          "start_ms": 306566,
+          "item_id": "vk_18827779971985ad"
+        },
+        {
+          "video_id": "v_fadab9cd3435",
+          "segment_id": "v_fadab9cd3435_s0001",
+          "start_ms": 166,
+          "item_id": "vk_f9c06a11f6883219"
+        },
+        {
+          "video_id": "v_fadab9cd3435",
+          "segment_id": "v_fadab9cd3435_s0001",
+          "start_ms": 37638,
+          "item_id": "vk_88c613e0c82c57ed"
+        },
+        {
+          "video_id": "v_fadab9cd3435",
+          "segment_id": "v_fadab9cd3435_s0003",
+          "start_ms": 80966,
+          "item_id": "vk_e4d6d9c80dc490f5"
+        },
+        {
+          "video_id": "v_fadab9cd3435",
+          "segment_id": "v_fadab9cd3435_s0003",
+          "start_ms": 80966,
+          "item_id": "vk_dc4418c7f004cd09"
+        }
+      ]
+    },
+    {
+      "concept": "Theta",
+      "surfaces": [
+        "theta",
+        "time decay",
+        "THETA",
+        "Theta",
+        "Time decay"
+      ],
+      "items": 99,
+      "apis": {
+        "unknown:API_UNKNOWN": 99
+      },
+      "evidence_types": {
+        "DEFINITION": 20,
+        "EXPLICIT_STATEMENT": 35,
+        "PROCEDURE": 8,
+        "VISUAL_DEMONSTRATION": 36
+      },
+      "first": [
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0005",
+          "start_ms": 318982,
+          "item_id": "vk_b6956e8c9453ed8e"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0005",
+          "start_ms": 347590,
+          "item_id": "vk_f2185b03a4fce505"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0005",
+          "start_ms": 347590,
+          "item_id": "vk_e3082e78dde52228"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0005",
+          "start_ms": 364550,
+          "item_id": "vk_866bb93af1e9c5bc"
+        },
+        {
+          "video_id": "v_d32c161a3231",
+          "segment_id": "v_d32c161a3231_s0005",
+          "start_ms": 364364,
+          "item_id": "vk_d52ca93dac1f2e95"
+        }
+      ]
+    },
+    {
+      "concept": "Liquidity",
+      "surfaces": [
+        "liquidity",
+        "Liquidity",
+        "LIQUIDITY"
+      ],
+      "items": 88,
+      "apis": {
+        "unknown:API_UNKNOWN": 73,
+        "q:API_PROBABLE": 14,
+        "q:API_CONFIRMED": 1
+      },
+      "evidence_types": {
+        "EXPLICIT_STATEMENT": 53,
+        "PROCEDURE": 5,
+        "VISUAL_DEMONSTRATION": 16,
+        "DEFINITION": 13,
+        "EXAMPLE": 1
+      },
+      "first": [
+        {
+          "video_id": "v_5103d69108dc",
+          "segment_id": "v_5103d69108dc_s0001",
+          "start_ms": 838,
+          "item_id": "vk_81214707967ed68d"
+        },
+        {
+          "video_id": "v_5103d69108dc",
+          "segment_id": "v_5103d69108dc_s0003",
+          "start_ms": 115558,
+          "item_id": "vk_44be226197796675"
+        },
+        {
+          "video_id": "v_5103d69108dc",
+          "segment_id": "v_5103d69108dc_s0006",
+          "start_ms": 278854,
+          "item_id": "vk_97e4a1e3c273a1c2"
+        },
+        {
+          "video_id": "v_61f3b59bfb8e",
+          "segment_id": "v_61f3b59bfb8e_s0003",
+          "start_ms": 65606,
+          "item_id": "vk_1d28d541a27c6cd5"
+        },
+        {
+          "video_id": "v_61f3b59bfb8e",
+          "segment_id": "v_61f3b59bfb8e_s0003",
+          "start_ms": 88678,
+          "item_id": "vk_9a13781e11eec50b"
+        }
+      ]
+    },
+    {
+      "concept": "Support",
+      "surfaces": [
+        "support"
+      ],
+      "items": 8,
+      "apis": {
+        "unknown:API_UNKNOWN": 7,
+        "q:API_PROBABLE": 1
+      },
+      "evidence_types": {
+        "EXPLICIT_STATEMENT": 7,
+        "EXAMPLE": 1
+      },
+      "first": [
+        {
+          "video_id": "v_61f3b59bfb8e",
+          "segment_id": "v_61f3b59bfb8e_s0002",
+          "start_ms": 56646,
+          "item_id": "vk_fd2b49c9a962de6b"
+        },
+        {
+          "video_id": "v_61f3b59bfb8e",
+          "segment_id": "v_61f3b59bfb8e_s0004",
+          "start_ms": 109798,
+          "item_id": "vk_40f5374896a03b75"
+        },
+        {
+          "video_id": "v_413cb1d688d0",
+          "segment_id": "v_413cb1d688d0_s0001",
+          "start_ms": 21190,
+          "item_id": "vk_c1b41a8c9ac2f7bb"
+        },
+        {
+          "video_id": "v_871fd4f53294",
+          "segment_id": "v_871fd4f53294_s0001",
+          "start_ms": 294,
+          "item_id": "vk_6331a8e7645073b9"
+        },
+        {
+          "video_id": "v_871fd4f53294",
+          "segment_id": "v_871fd4f53294_s0008",
+          "start_ms": 388710,
+          "item_id": "vk_53d88408ef0a0867"
+        }
+      ]
+    },
+    {
+      "concept": "Pressure",
+      "surfaces": [
+        "pressure"
+      ],
+      "items": 4,
+      "apis": {
+        "unknown:API_UNKNOWN": 4
+      },
+      "evidence_types": {
+        "EXPLICIT_STATEMENT": 4
+      },
+      "first": [
+        {
+          "video_id": "v_61f3b59bfb8e",
+          "segment_id": "v_61f3b59bfb8e_s0014",
+          "start_ms": 763654,
+          "item_id": "vk_f6f8edbfc466e11d"
+        },
+        {
+          "video_id": "v_61f3b59bfb8e",
+          "segment_id": "v_61f3b59bfb8e_s0014",
+          "start_ms": 783814,
+          "item_id": "vk_bd0b336a8836f25d"
+        },
+        {
+          "video_id": "v_61f3b59bfb8e",
+          "segment_id": "v_61f3b59bfb8e_s0014",
+          "start_ms": 783814,
+          "item_id": "vk_8963767f21a42b18"
+        },
+        {
+          "video_id": "v_61f3b59bfb8e",
+          "segment_id": "v_61f3b59bfb8e_s0016",
+          "start_ms": 920742,
+          "item_id": "vk_ff93f253e7055335"
+        }
+      ]
+    },
+    {
+      "concept": "Open Interest",
+      "surfaces": [
+        "OPEN INTEREST",
+        "open interest",
+        "Open interest"
+      ],
+      "items": 17,
+      "apis": {
+        "unknown:API_UNKNOWN": 9,
+        "q:API_PROBABLE": 8
+      },
+      "evidence_types": {
+        "VISUAL_DEMONSTRATION": 1,
+        "EXPLICIT_STATEMENT": 10,
+        "DEFINITION": 5,
+        "EXAMPLE": 1
+      },
+      "first": [
+        {
+          "video_id": "v_61f3b59bfb8e",
+          "segment_id": "v_61f3b59bfb8e_s0016",
+          "start_ms": 939172,
+          "item_id": "vk_6d580ef85dedf08a"
+        },
+        {
+          "video_id": "v_61f3b59bfb8e",
+          "segment_id": "v_61f3b59bfb8e_s0017",
+          "start_ms": 945286,
+          "item_id": "vk_6e4a7c761e20dfb7"
+        },
+        {
+          "video_id": "v_61f3b59bfb8e",
+          "segment_id": "v_61f3b59bfb8e_s0017",
+          "start_ms": 945286,
+          "item_id": "vk_f87846cf7b88e267"
+        },
+        {
+          "video_id": "v_61f3b59bfb8e",
+          "segment_id": "v_61f3b59bfb8e_s0017",
+          "start_ms": 965734,
+          "item_id": "vk_a55223589896f3bf"
+        },
+        {
+          "video_id": "v_61f3b59bfb8e",
+          "segment_id": "v_61f3b59bfb8e_s0017",
+          "start_ms": 965734,
+          "item_id": "vk_4ae97ed8f21a49e8"
+        }
+      ]
+    },
+    {
+      "concept": "Vega",
+      "surfaces": [
+        "Vega",
+        "vega",
+        "VEGA"
+      ],
+      "items": 52,
+      "apis": {
+        "unknown:API_UNKNOWN": 52
+      },
+      "evidence_types": {
+        "EXPLICIT_STATEMENT": 22,
+        "VISUAL_DEMONSTRATION": 20,
+        "EXAMPLE": 1,
+        "DEFINITION": 7,
+        "PROCEDURE": 2
+      },
+      "first": [
+        {
+          "video_id": "v_61f3b59bfb8e",
+          "segment_id": "v_61f3b59bfb8e_s0018",
+          "start_ms": 1032134,
+          "item_id": "vk_9fc7318e4e0fc71b"
+        },
+        {
+          "video_id": "v_a98afb1700f1",
+          "segment_id": "v_a98afb1700f1_s0001",
+          "start_ms": 52986,
+          "item_id": "vk_053dbac1da688014"
+        },
+        {
+          "video_id": "v_a98afb1700f1",
+          "segment_id": "v_a98afb1700f1_s0003",
+          "start_ms": 153158,
+          "item_id": "vk_f225f93036d4d4d1"
+        },
+        {
+          "video_id": "v_a98afb1700f1",
+          "segment_id": "v_a98afb1700f1_s0003",
+          "start_ms": 153158,
+          "item_id": "vk_c2af7b07dd79bbe3"
+        },
+        {
+          "video_id": "v_a98afb1700f1",
+          "segment_id": "v_a98afb1700f1_s0003",
+          "start_ms": 173222,
+          "item_id": "vk_583645a4c8070247"
+        }
+      ]
+    },
+    {
+      "concept": "Rho",
+      "surfaces": [
+        "Rho",
+        "RHO"
+      ],
+      "items": 3,
+      "apis": {
+        "unknown:API_UNKNOWN": 3
+      },
+      "evidence_types": {
+        "VISUAL_DEMONSTRATION": 3
+      },
+      "first": [
+        {
+          "video_id": "v_a98afb1700f1",
+          "segment_id": "v_a98afb1700f1_s0001",
+          "start_ms": 52986,
+          "item_id": "vk_5a2ebb34c88c8d29"
+        },
+        {
+          "video_id": "v_a98afb1700f1",
+          "segment_id": "v_a98afb1700f1_s0003",
+          "start_ms": 202335,
+          "item_id": "vk_25e226a05df4bc33"
+        },
+        {
+          "video_id": "v_a98afb1700f1",
+          "segment_id": "v_a98afb1700f1_s0003",
+          "start_ms": 202335,
+          "item_id": "vk_2b6c7c09e197d7e8"
+        }
+      ]
+    },
+    {
+      "concept": "Term Structure",
+      "surfaces": [
+        "term structure",
+        "TERM STRUCTURE",
+        "Term Structure"
+      ],
+      "items": 34,
+      "apis": {
+        "unknown:API_UNKNOWN": 34
+      },
+      "evidence_types": {
+        "EXPLICIT_STATEMENT": 21,
+        "DEFINITION": 3,
+        "VISUAL_DEMONSTRATION": 10
+      },
+      "first": [
+        {
+          "video_id": "v_5701136ec8c1",
+          "segment_id": "v_5701136ec8c1_s0001",
+          "start_ms": 9382,
+          "item_id": "vk_a75008dd15f16a45"
+        },
+        {
+          "video_id": "v_5701136ec8c1",
+          "segment_id": "v_5701136ec8c1_s0001",
+          "start_ms": 14022,
+          "item_id": "vk_0a8b9f0d90d5b358"
+        },
+        {
+          "video_id": "v_5701136ec8c1",
+          "segment_id": "v_5701136ec8c1_s0001",
+          "start_ms": 20678,
+          "item_id": "vk_51d9fb96fe5947f6"
+        },
+        {
+          "video_id": "v_5701136ec8c1",
+          "segment_id": "v_5701136ec8c1_s0001",
+          "start_ms": 41062,
+          "item_id": "vk_3e818962e54ad907"
+        },
+        {
+          "video_id": "v_5701136ec8c1",
+          "segment_id": "v_5701136ec8c1_s0001",
+          "start_ms": 41062,
+          "item_id": "vk_b99ea082ffdc61a7"
+        }
+      ]
+    },
+    {
+      "concept": "Skew",
+      "surfaces": [
+        "skew",
+        "Skew",
+        "SKEW"
+      ],
+      "items": 95,
+      "apis": {
+        "unknown:API_UNKNOWN": 95
+      },
+      "evidence_types": {
+        "PROCEDURE": 1,
+        "EXPLICIT_STATEMENT": 36,
+        "DEFINITION": 15,
+        "VISUAL_DEMONSTRATION": 38,
+        "EXAMPLE": 5
+      },
+      "first": [
+        {
+          "video_id": "v_5701136ec8c1",
+          "segment_id": "v_5701136ec8c1_s0007",
+          "start_ms": 358214,
+          "item_id": "vk_50e5a2b38dc41c3b"
+        },
+        {
+          "video_id": "v_e347914ada0b",
+          "segment_id": "v_e347914ada0b_s0001",
+          "start_ms": 8422,
+          "item_id": "vk_7bb725a15ccda473"
+        },
+        {
+          "video_id": "v_e347914ada0b",
+          "segment_id": "v_e347914ada0b_s0001",
+          "start_ms": 40038,
+          "item_id": "vk_33bce30c323e588a"
+        },
+        {
+          "video_id": "v_e347914ada0b",
+          "segment_id": "v_e347914ada0b_s0001",
+          "start_ms": 40038,
+          "item_id": "vk_6f944d5e646b6d98"
+        },
+        {
+          "video_id": "v_e347914ada0b",
+          "segment_id": "v_e347914ada0b_s0001",
+          "start_ms": 49318,
+          "item_id": "vk_3507cf8af1e9c603"
+        }
+      ]
+    },
+    {
+      "concept": "Tail Risk",
+      "surfaces": [
+        "tail risk",
+        "TAIL RISK"
+      ],
+      "items": 5,
+      "apis": {
+        "unknown:API_UNKNOWN": 5
+      },
+      "evidence_types": {
+        "EXPLICIT_STATEMENT": 2,
+        "VISUAL_DEMONSTRATION": 2,
+        "PROCEDURE": 1
+      },
+      "first": [
+        {
+          "video_id": "v_88095231ec06",
+          "segment_id": "v_88095231ec06_s0001",
+          "start_ms": 294,
+          "item_id": "vk_6298882113e0b979"
+        },
+        {
+          "video_id": "v_88095231ec06",
+          "segment_id": "v_88095231ec06_s0001",
+          "start_ms": 0,
+          "item_id": "vk_7a545b2b16fb94fb"
+        },
+        {
+          "video_id": "v_88095231ec06",
+          "segment_id": "v_88095231ec06_s0005",
+          "start_ms": 189286,
+          "item_id": "vk_db18d5efbd43edf3"
+        },
+        {
+          "video_id": "v_88095231ec06",
+          "segment_id": "v_88095231ec06_s0005",
+          "start_ms": 189022,
+          "item_id": "vk_e186e3808e89fd0b"
+        },
+        {
+          "video_id": "v_88095231ec06",
+          "segment_id": "v_88095231ec06_s0006",
+          "start_ms": 273030,
+          "item_id": "vk_0707b9edc0891036"
+        }
+      ]
+    },
+    {
+      "concept": "Vanna",
+      "surfaces": [
+        "Vanna"
+      ],
+      "items": 3,
+      "apis": {
+        "unknown:API_UNKNOWN": 3
+      },
+      "evidence_types": {
+        "EXPLICIT_STATEMENT": 2,
+        "VISUAL_DEMONSTRATION": 1
+      },
+      "first": [
+        {
+          "video_id": "v_57da17993b19",
+          "segment_id": "v_57da17993b19_s0006",
+          "start_ms": 274790,
+          "item_id": "vk_d3f72853af14e7e5"
+        },
+        {
+          "video_id": "v_871fd4f53294",
+          "segment_id": "v_871fd4f53294_s0013",
+          "start_ms": 662022,
+          "item_id": "vk_774f9a1d679fa4b2"
+        },
+        {
+          "video_id": "v_871fd4f53294",
+          "segment_id": "v_871fd4f53294_s0013",
+          "start_ms": 669302,
+          "item_id": "vk_8ad703e14c740239"
+        }
+      ]
+    },
+    {
+      "concept": "Call Resistance",
+      "surfaces": [
+        "CALL RESISTANCE",
+        "Call Resistance",
+        "call resistance"
+      ],
+      "items": 6,
+      "apis": {
+        "unknown:API_UNKNOWN": 6
+      },
+      "evidence_types": {
+        "VISUAL_DEMONSTRATION": 5,
+        "PROCEDURE": 1
+      },
+      "first": [
+        {
+          "video_id": "v_57da17993b19",
+          "segment_id": "v_57da17993b19_s0010",
+          "start_ms": 500433,
+          "item_id": "vk_975b64d958b8c1d3"
+        },
+        {
+          "video_id": "v_3a163039d4ea",
+          "segment_id": "v_3a163039d4ea_s0006",
+          "start_ms": 234084,
+          "item_id": "vk_02b5d555bbf86afb"
+        },
+        {
+          "video_id": "v_3a163039d4ea",
+          "segment_id": "v_3a163039d4ea_s0006",
+          "start_ms": 234084,
+          "item_id": "vk_354dc8ed979603ee"
+        },
+        {
+          "video_id": "v_3a163039d4ea",
+          "segment_id": "v_3a163039d4ea_s0017",
+          "start_ms": 609109,
+          "item_id": "vk_095e40ea6140ab26"
+        },
+        {
+          "video_id": "v_3a163039d4ea",
+          "segment_id": "v_3a163039d4ea_s0017",
+          "start_ms": 609109,
+          "item_id": "vk_865104d39d21ff6e"
+        }
+      ]
+    },
+    {
+      "concept": "Resistance",
+      "surfaces": [
+        "resistance",
+        "Resistance"
+      ],
+      "items": 18,
+      "apis": {
+        "unknown:API_UNKNOWN": 18
+      },
+      "evidence_types": {
+        "EXPLICIT_STATEMENT": 13,
+        "PROCEDURE": 2,
+        "EXAMPLE": 3
+      },
+      "first": [
+        {
+          "video_id": "v_57da17993b19",
+          "segment_id": "v_57da17993b19_s0011",
+          "start_ms": 500806,
+          "item_id": "vk_aca027fd4e87cfd8"
+        },
+        {
+          "video_id": "v_871fd4f53294",
+          "segment_id": "v_871fd4f53294_s0008",
+          "start_ms": 388710,
+          "item_id": "vk_523cf125d9d33afb"
+        },
+        {
+          "video_id": "v_871fd4f53294",
+          "segment_id": "v_871fd4f53294_s0008",
+          "start_ms": 410502,
+          "item_id": "vk_fca99e61698ef0ef"
+        },
+        {
+          "video_id": "v_871fd4f53294",
+          "segment_id": "v_871fd4f53294_s0008",
+          "start_ms": 410502,
+          "item_id": "vk_b5c3cad699d054f0"
+        },
+        {
+          "video_id": "v_871fd4f53294",
+          "segment_id": "v_871fd4f53294_s0008",
+          "start_ms": 410502,
+          "item_id": "vk_4128196eda0e04c1"
+        }
+      ]
+    },
+    {
+      "concept": "Put Support",
+      "surfaces": [
+        "put support",
+        "Put Support"
+      ],
+      "items": 19,
+      "apis": {
+        "unknown:API_UNKNOWN": 19
+      },
+      "evidence_types": {
+        "EXPLICIT_STATEMENT": 12,
+        "DEFINITION": 2,
+        "EXAMPLE": 1,
+        "VISUAL_DEMONSTRATION": 3,
+        "PROCEDURE": 1
+      },
+      "first": [
+        {
+          "video_id": "v_57da17993b19",
+          "segment_id": "v_57da17993b19_s0011",
+          "start_ms": 500806,
+          "item_id": "vk_4f515608b5df1dc0"
+        },
+        {
+          "video_id": "v_57da17993b19",
+          "segment_id": "v_57da17993b19_s0011",
+          "start_ms": 513830,
+          "item_id": "vk_0193480847ca6a1e"
+        },
+        {
+          "video_id": "v_57da17993b19",
+          "segment_id": "v_57da17993b19_s0011",
+          "start_ms": 513830,
+          "item_id": "vk_b0069a4c2b7a56e8"
+        },
+        {
+          "video_id": "v_871fd4f53294",
+          "segment_id": "v_871fd4f53294_s0007",
+          "start_ms": 367302,
+          "item_id": "vk_11de6883c99fba32"
+        },
+        {
+          "video_id": "v_871fd4f53294",
+          "segment_id": "v_871fd4f53294_s0008",
+          "start_ms": 410502,
+          "item_id": "vk_59153ac632ae9392"
+        }
+      ]
+    },
+    {
+      "concept": "0DTE",
+      "surfaces": [
+        "Zero DTE",
+        "zero DTE"
+      ],
+      "items": 2,
+      "apis": {
+        "unknown:API_UNKNOWN": 2
+      },
+      "evidence_types": {
+        "EXPLICIT_STATEMENT": 2
+      },
+      "first": [
+        {
+          "video_id": "v_871fd4f53294",
+          "segment_id": "v_871fd4f53294_s0010",
+          "start_ms": 528390,
+          "item_id": "vk_80c58a857c137caa"
+        },
+        {
+          "video_id": "v_8e893a0e7325",
+          "segment_id": "v_8e893a0e7325_s0011",
+          "start_ms": 462598,
+          "item_id": "vk_292f64ad31d127cf"
+        }
+      ]
+    },
+    {
+      "concept": "HVL",
+      "surfaces": [
+        "High Vol Level"
+      ],
+      "items": 12,
+      "apis": {
+        "unknown:API_UNKNOWN": 12
+      },
+      "evidence_types": {
+        "VISUAL_DEMONSTRATION": 12
+      },
+      "first": [
+        {
+          "video_id": "v_3a163039d4ea",
+          "segment_id": "v_3a163039d4ea_s0006",
+          "start_ms": 234084,
+          "item_id": "vk_b193491d006cc538"
+        },
+        {
+          "video_id": "v_3a163039d4ea",
+          "segment_id": "v_3a163039d4ea_s0011",
+          "start_ms": 423073,
+          "item_id": "vk_c94379c63abe72ce"
+        },
+        {
+          "video_id": "v_3a163039d4ea",
+          "segment_id": "v_3a163039d4ea_s0016",
+          "start_ms": 592325,
+          "item_id": "vk_af907c1314b1ec29"
+        },
+        {
+          "video_id": "v_3a163039d4ea",
+          "segment_id": "v_3a163039d4ea_s0021",
+          "start_ms": 720169,
+          "item_id": "vk_3c98929febaaced1"
+        },
+        {
+          "video_id": "v_86fd353be172",
+          "segment_id": "v_86fd353be172_s0005",
+          "start_ms": 176727,
+          "item_id": "vk_a25454780e7fa6b3"
+        }
+      ]
+    }
+  ]
+}

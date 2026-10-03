@@ -1,0 +1,302 @@
+{
+  "video_id": "v_70b8a82bee5a",
+  "terms": [
+    {
+      "term": "KNOW",
+      "context": "KNOW YOUR VOLATILITY &",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0001",
+      "start_ms": 13797,
+      "end_ms": 13797,
+      "source": "ocr"
+    },
+    {
+      "term": "IRE",
+      "context": "Tee IRE BUY",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "source": "ocr"
+    },
+    {
+      "term": "SHOULO",
+      "context": "SHOULO BE OPTION SELLERS:",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "SHOULO BE OPTION SELLERS:",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "source": "ocr"
+    },
+    {
+      "term": "IF",
+      "context": "SELL IF VOLATILITY 1S LOW WE CAN.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "source": "ocr"
+    },
+    {
+      "term": "WE",
+      "context": "SELL IF VOLATILITY 1S LOW WE CAN.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "Be OPTION BUYERS",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "source": "ocr"
+    },
+    {
+      "term": "BUYERS",
+      "context": "Be OPTION BUYERS",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "source": "ocr"
+    },
+    {
+      "term": "IV",
+      "context": "Here we have a screener done on these two values, IV rank and IV percentage.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 169190,
+      "end_ms": 191324,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "The first one is IV-RANK.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 191622,
+      "end_ms": 205964,
+      "source": "stt"
+    },
+    {
+      "term": "RANK",
+      "context": "The first one is IV-RANK.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 191622,
+      "end_ms": 205964,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "IV-RANK represents the average at-demand employability of the last year in relation to the high and low of the period.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 191622,
+      "end_ms": 205964,
+      "source": "stt"
+    },
+    {
+      "term": "RANK",
+      "context": "IV-RANK represents the average at-demand employability of the last year in relation to the high and low of the period.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 191622,
+      "end_ms": 205964,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "An IV rank of 100% means that the current implied volatility is at its highest level in the last year.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 206502,
+      "end_ms": 219052,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "An IV rank close to zero represents an implied volatility that is close to the low of the last year.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 206502,
+      "end_ms": 219052,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "Then we have IV percentile.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 206502,
+      "end_ms": 219052,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "IV percentile calculates the percentage of days in the last year in which the implied volatility was less than the present value.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 219590,
+      "end_ms": 241116,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "For example, an IV percentile of 70% means that on 70% of the days in the last year we had lower implied volatility than today.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 219590,
+      "end_ms": 241116,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "IV Ranger 4 allows us to make a comparison between different stocks and ETFs to understand which ones can be the best for buying or selling options.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 219590,
+      "end_ms": 241116,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "Now, let's try to understand how to use the IV Ranked based on the levels.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 241574,
+      "end_ms": 257324,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "Let's start from underlines that are between 70 and 100 IV Ranked.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 241574,
+      "end_ms": 257324,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "We can then look at underlines that have an IV rank between 50 and 70.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 257862,
+      "end_ms": 278684,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "Finally, we can look at underlines that are below 50 IV ranks.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 279110,
+      "end_ms": 287308,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "IV rank and IV percentile in general can be used in conjunction with our Q-Modes.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 291750,
+      "end_ms": 311676,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "IV RANK & Q-MODELS X",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 296997,
+      "end_ms": 296997,
+      "source": "ocr"
+    },
+    {
+      "term": "RANK",
+      "context": "IV RANK & Q-MODELS X",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 296997,
+      "end_ms": 296997,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "IV RANK & Q-MODELS X",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 296997,
+      "end_ms": 296997,
+      "source": "ocr"
+    },
+    {
+      "term": "IV",
+      "context": "IV RANK & Q-MODELS \\S",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 314631,
+      "end_ms": 314631,
+      "source": "ocr"
+    },
+    {
+      "term": "RANK",
+      "context": "IV RANK & Q-MODELS \\S",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 314631,
+      "end_ms": 314631,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "IV RANK & Q-MODELS \\S",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 314631,
+      "end_ms": 314631,
+      "source": "ocr"
+    },
+    {
+      "term": "IV",
+      "context": "IV RANK & Q-MODELS SS",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 330213,
+      "end_ms": 330213,
+      "source": "ocr"
+    },
+    {
+      "term": "RANK",
+      "context": "IV RANK & Q-MODELS SS",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 330213,
+      "end_ms": 330213,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "IV RANK & Q-MODELS SS",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 330213,
+      "end_ms": 330213,
+      "source": "ocr"
+    }
+  ]
+}

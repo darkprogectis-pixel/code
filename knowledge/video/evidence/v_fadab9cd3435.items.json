@@ -1,0 +1,2190 @@
+{
+  "video_id": "v_fadab9cd3435",
+  "schema": "video-knowledge/v1",
+  "items": [
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f9c06a11f6883219",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0001",
+      "start_ms": 166,
+      "end_ms": 18924,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "OPEX",
+      "surface": "option expiration",
+      "statement": "In this lesson we talk about the option expiration, or OPEX, and its importance.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this lesson we talk about the option expiration, or OPEX, and its importance.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_fadab9cd3435/f_0001@0ms.jpg",
+          "frames/v_fadab9cd3435/f_0002@19019ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 166,
+            "end_ms": 18924,
+            "start": "00:00:00.166",
+            "end": "00:00:18.924"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "opex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_88c613e0c82c57ed",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0001",
+      "start_ms": 37638,
+      "end_ms": 37638,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "OPEX",
+      "surface": "OPTION EXPIRATION",
+      "statement": "OPTION EXPIRATION (OPEX) \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "OPTION EXPIRATION (OPEX) \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_fadab9cd3435/f_0003@37638ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 37638,
+            "end_ms": 37638,
+            "start": "00:00:37.638",
+            "end": "00:00:37.638"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "opex",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a44ceb15eb554153",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0002",
+      "start_ms": 63238,
+      "end_ms": 80012,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "time decay",
+      "statement": "Due to time decay, weekly options typically lose value very quickly if the underlying moves in the opposite direction.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Due to time decay, weekly options typically lose value very quickly if the underlying moves in the opposite direction.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 63238,
+            "end_ms": 80012,
+            "start": "00:01:03.238",
+            "end": "00:01:20.012"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_09e4a12072323ba7",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0002",
+      "start_ms": 63238,
+      "end_ms": 80012,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "Also, many weekly options have less liquidity and typically a wider bid has spread.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Also, many weekly options have less liquidity and typically a wider bid has spread.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 63238,
+            "end_ms": 80012,
+            "start": "00:01:03.238",
+            "end": "00:01:20.012"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e4d6d9c80dc490f5",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0003",
+      "start_ms": 80966,
+      "end_ms": 101436,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "OPEX",
+      "surface": "Option Expiration",
+      "statement": "This week is referred to as Option Expiration Week, or OPEX.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This week is referred to as Option Expiration Week, or OPEX.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 80966,
+            "end_ms": 101436,
+            "start": "00:01:20.966",
+            "end": "00:01:41.436"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "opex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_dc4418c7f004cd09",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0003",
+      "start_ms": 80966,
+      "end_ms": 101436,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "OPEX",
+      "surface": "OPEX",
+      "statement": "OPEX Week typically brings more volatility to the market.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "OPEX Week typically brings more volatility to the market.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 80966,
+            "end_ms": 101436,
+            "start": "00:01:20.966",
+            "end": "00:01:41.436"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "opex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0c7fe0d674c030d4",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0003",
+      "start_ms": 80966,
+      "end_ms": 101436,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "OPEX Week typically brings more volatility to the market.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "OPEX Week typically brings more volatility to the market.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 80966,
+            "end_ms": 101436,
+            "start": "00:01:20.966",
+            "end": "00:01:41.436"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c226f42ab6e254ec",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0004",
+      "start_ms": 101830,
+      "end_ms": 113292,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "After expiry, unassigned contracts or contracts that have not entered in the money expire worthless.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "After expiry, unassigned contracts or contracts that have not entered in the money expire worthless.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_fadab9cd3435/f_0004@119586ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 101830,
+            "end_ms": 113292,
+            "start": "00:01:41.830",
+            "end": "00:01:53.292"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_54b77cdd338c40ec",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0005",
+      "start_ms": 119782,
+      "end_ms": 128140,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "OPEX",
+      "surface": "option expiration",
+      "statement": "Here we can see the option expiration calendar that you can find on the CME website directly.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Here we can see the option expiration calendar that you can find on the CME website directly.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_fadab9cd3435/f_0005@124625ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 119782,
+            "end_ms": 128140,
+            "start": "00:01:59.782",
+            "end": "00:02:08.140"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "opex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_aefc79c3ad6b1cbd",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0006",
+      "start_ms": 188902,
+      "end_ms": 208076,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "The option holder receives a cash payment if the option is in the money at expiration, which is calculated as the difference between the underlying asset price and the strike price, multiplied by the quantity of shares for each option contract.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The option holder receives a cash payment if the option is in the money at expiration, which is calculated as the difference between the underlying asset price and the strike price, multiplied by the quantity of shares for each option contract.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_fadab9cd3435/f_0006@213280ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 188902,
+            "end_ms": 208076,
+            "start": "00:03:08.902",
+            "end": "00:03:28.076"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "FORMULA",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0e213af4f7146aff",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0006",
+      "start_ms": 208614,
+      "end_ms": 213068,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "If the option is out of the money, no cash payment is made and the option expires worthless.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If the option is out of the money, no cash payment is made and the option expires worthless.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_fadab9cd3435/f_0006@213280ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 208614,
+            "end_ms": 213068,
+            "start": "00:03:28.614",
+            "end": "00:03:33.068"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_383f22a544f7336d",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0006",
+      "start_ms": 233700,
+      "end_ms": 233700,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "OPEX",
+      "surface": "OPEX",
+      "statement": "OPEX EFFECT \\w",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "OPEX EFFECT \\w",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_fadab9cd3435/f_0007@233700ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 233700,
+            "end_ms": 233700,
+            "start": "00:03:53.700",
+            "end": "00:03:53.700"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "opex",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a403e4498b90d798",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0006",
+      "start_ms": 233700,
+      "end_ms": 233700,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "OPEX",
+      "surface": "Opex",
+      "statement": "Opex erfect",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Opex erfect",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_fadab9cd3435/f_0007@233700ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 233700,
+            "end_ms": 233700,
+            "start": "00:03:53.700",
+            "end": "00:03:53.700"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "opex",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_bab5c9cd57ee1346",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 234342,
+      "end_ms": 252268,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "OPEX",
+      "surface": "OPEX",
+      "statement": "But why is OPEX so important?",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "But why is OPEX so important?",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 234342,
+            "end_ms": 252268,
+            "start": "00:03:54.342",
+            "end": "00:04:12.268"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "opex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c9000fa00cce7b72",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 234342,
+      "end_ms": 252268,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "OPEX",
+      "surface": "OPEX",
+      "statement": "In our daily report, we often talk about OPEX and its effect on prices.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In our daily report, we often talk about OPEX and its effect on prices.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 234342,
+            "end_ms": 252268,
+            "start": "00:03:54.342",
+            "end": "00:04:12.268"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "opex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_059875f9e8abffb8",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 234342,
+      "end_ms": 252268,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "OPEX",
+      "surface": "OPEX",
+      "statement": "In this graph, we see the OPEX effect on the SPX index.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this graph, we see the OPEX effect on the SPX index.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 234342,
+            "end_ms": 252268,
+            "start": "00:03:54.342",
+            "end": "00:04:12.268"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "opex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2744d3a7bd9289e2",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 234342,
+      "end_ms": 252268,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "OPEX",
+      "surface": "option expiration",
+      "statement": "As we can see, after the option expiration, there is an increase in price movements and volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "As we can see, after the option expiration, there is an increase in price movements and volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 234342,
+            "end_ms": 252268,
+            "start": "00:03:54.342",
+            "end": "00:04:12.268"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "opex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_299b69bfb4e025d9",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 234342,
+      "end_ms": 252268,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "As we can see, after the option expiration, there is an increase in price movements and volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "As we can see, after the option expiration, there is an increase in price movements and volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 234342,
+            "end_ms": 252268,
+            "start": "00:03:54.342",
+            "end": "00:04:12.268"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0ff1e63df6120299",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 252774,
+      "end_ms": 258956,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "This is why it is so important to read the amount of gamma and delta that expires at the end of the OPEX week to position ourselves.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is why it is so important to read the amount of gamma and delta that expires at the end of the OPEX week to position ourselves.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 252774,
+            "end_ms": 258956,
+            "start": "00:04:12.774",
+            "end": "00:04:18.956"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_73ef8476b01eb686",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 252774,
+      "end_ms": 258956,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "This is why it is so important to read the amount of gamma and delta that expires at the end of the OPEX week to position ourselves.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is why it is so important to read the amount of gamma and delta that expires at the end of the OPEX week to position ourselves.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 252774,
+            "end_ms": 258956,
+            "start": "00:04:12.774",
+            "end": "00:04:18.956"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c219477f7185044d",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 252774,
+      "end_ms": 258956,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "OPEX",
+      "surface": "OPEX",
+      "statement": "This is why it is so important to read the amount of gamma and delta that expires at the end of the OPEX week to position ourselves.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is why it is so important to read the amount of gamma and delta that expires at the end of the OPEX week to position ourselves.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 252774,
+            "end_ms": 258956,
+            "start": "00:04:12.774",
+            "end": "00:04:18.956"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "opex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ac6176f47cff33fc",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 259750,
+      "end_ms": 263564,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "OPEX",
+      "surface": "option expiration",
+      "statement": "But let's try to dig a little deeper on the mechanics of the option expiration.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "But let's try to dig a little deeper on the mechanics of the option expiration.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 259750,
+            "end_ms": 263564,
+            "start": "00:04:19.750",
+            "end": "00:04:23.564"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "opex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2bf7edcbe5acf1fc",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 269158,
+      "end_ms": 275148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "Those moves can be referred as gamma moves.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Those moves can be referred as gamma moves.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 269158,
+            "end_ms": 275148,
+            "start": "00:04:29.158",
+            "end": "00:04:35.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_388d4ca07f157881",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 282918,
+      "end_ms": 284300,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "Specifically, for the delta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Specifically, for the delta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 282918,
+            "end_ms": 284300,
+            "start": "00:04:42.918",
+            "end": "00:04:44.300"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f5f07b3899db6788",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 284870,
+      "end_ms": 291884,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "If an option expires out of the money, there will be no directional move, as the delta will be zero.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If an option expires out of the money, there will be no directional move, as the delta will be zero.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 284870,
+            "end_ms": 291884,
+            "start": "00:04:44.870",
+            "end": "00:04:51.884"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9f5171bf62ff5227",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 284870,
+      "end_ms": 291884,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "If an option expires out of the money, there will be no directional move, as the delta will be zero.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If an option expires out of the money, there will be no directional move, as the delta will be zero.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 284870,
+            "end_ms": 291884,
+            "start": "00:04:44.870",
+            "end": "00:04:51.884"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8285db00f4d7e3ea",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 284870,
+      "end_ms": 291884,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "This is different for in the money options.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is different for in the money options.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 284870,
+            "end_ms": 291884,
+            "start": "00:04:44.870",
+            "end": "00:04:51.884"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_793b8f618bfbe070",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 292390,
+      "end_ms": 297900,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "They will behave as if you were along the underlying, meaning that the delta for the in-the-money position is 100.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "They will behave as if you were along the underlying, meaning that the delta for the in-the-money position is 100.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 292390,
+            "end_ms": 297900,
+            "start": "00:04:52.390",
+            "end": "00:04:57.900"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1f11a24324ad61b9",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 301766,
+      "end_ms": 306284,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "As we will see in the course, the gamma of an option is the change of the delta relative to its price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "As we will see in the course, the gamma of an option is the change of the delta relative to its price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 301766,
+            "end_ms": 306284,
+            "start": "00:05:01.766",
+            "end": "00:05:06.284"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_516e9c2187dcb2c5",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 301766,
+      "end_ms": 306284,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "As we will see in the course, the gamma of an option is the change of the delta relative to its price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "As we will see in the course, the gamma of an option is the change of the delta relative to its price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 301766,
+            "end_ms": 306284,
+            "start": "00:05:01.766",
+            "end": "00:05:06.284"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_cb7de90b224c9fcb",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 306950,
+      "end_ms": 310988,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "That means that if the money has changed then we can see a big market movement due to gamma.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "That means that if the money has changed then we can see a big market movement due to gamma.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 306950,
+            "end_ms": 310988,
+            "start": "00:05:06.950",
+            "end": "00:05:10.988"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "RULE",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8ac36ba119f64686",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 311910,
+      "end_ms": 318316,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "If an option goes from out of the money to in the money, all of a sudden there is going to be a spiking gamma that will drive a movement in delta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If an option goes from out of the money to in the money, all of a sudden there is going to be a spiking gamma that will drive a movement in delta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 311910,
+            "end_ms": 318316,
+            "start": "00:05:11.910",
+            "end": "00:05:18.316"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5d49c906e710fd13",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 311910,
+      "end_ms": 318316,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "If an option goes from out of the money to in the money, all of a sudden there is going to be a spiking gamma that will drive a movement in delta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If an option goes from out of the money to in the money, all of a sudden there is going to be a spiking gamma that will drive a movement in delta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 311910,
+            "end_ms": 318316,
+            "start": "00:05:11.910",
+            "end": "00:05:18.316"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0876ca5c78eb977f",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0007",
+      "start_ms": 311910,
+      "end_ms": 318316,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "If an option goes from out of the money to in the money, all of a sudden there is going to be a spiking gamma that will drive a movement in delta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If an option goes from out of the money to in the money, all of a sudden there is going to be a spiking gamma that will drive a movement in delta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 311910,
+            "end_ms": 318316,
+            "start": "00:05:11.910",
+            "end": "00:05:18.316"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_441ca22c2e15600a",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0008",
+      "start_ms": 318950,
+      "end_ms": 324300,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "To hedge that position, the market maker is going to have to enter the market and that drives liquidity and price action.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "To hedge that position, the market maker is going to have to enter the market and that drives liquidity and price action.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 318950,
+            "end_ms": 324300,
+            "start": "00:05:18.950",
+            "end": "00:05:24.300"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5caa481764a9047f",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0008",
+      "start_ms": 318950,
+      "end_ms": 324300,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "To hedge that position, the market maker is going to have to enter the market and that drives liquidity and price action.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "To hedge that position, the market maker is going to have to enter the market and that drives liquidity and price action.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 318950,
+            "end_ms": 324300,
+            "start": "00:05:18.950",
+            "end": "00:05:24.300"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a14a0f00eed0a869",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0008",
+      "start_ms": 325126,
+      "end_ms": 330316,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "Because of these gamma effects, the market can get pinned at specific strikes based on current positioning.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Because of these gamma effects, the market can get pinned at specific strikes based on current positioning.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 325126,
+            "end_ms": 330316,
+            "start": "00:05:25.126",
+            "end": "00:05:30.316"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9c9f37cd1b507402",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0009",
+      "start_ms": 330982,
+      "end_ms": 335436,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "As a trader you can take advantage of option expirations by either buying or selling options.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "As a trader you can take advantage of option expirations by either buying or selling options.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 330982,
+            "end_ms": 335436,
+            "start": "00:05:30.982",
+            "end": "00:05:35.436"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e7492f38d54b65c1",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0009",
+      "start_ms": 330982,
+      "end_ms": 335436,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "As a trader you can take advantage of option expirations by either buying or selling options.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "As a trader you can take advantage of option expirations by either buying or selling options.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 330982,
+            "end_ms": 335436,
+            "start": "00:05:30.982",
+            "end": "00:05:35.436"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_06f3278265ef6dd7",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0009",
+      "start_ms": 336134,
+      "end_ms": 344300,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "Option buying strategies make money if the underlying stock sees a faster movement than what the options are pricing in.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Option buying strategies make money if the underlying stock sees a faster movement than what the options are pricing in.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 336134,
+            "end_ms": 344300,
+            "start": "00:05:36.134",
+            "end": "00:05:44.300"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_00cc03d1d0e9bbb7",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0009",
+      "start_ms": 336134,
+      "end_ms": 344300,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "The profit comes from the delta and the direction of exposure.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The profit comes from the delta and the direction of exposure.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 336134,
+            "end_ms": 344300,
+            "start": "00:05:36.134",
+            "end": "00:05:44.300"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d35fa2eb17d14ead",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0010",
+      "start_ms": 344934,
+      "end_ms": 348812,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "In this case you are long gamma and that means that you can make money from directional moves.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this case you are long gamma and that means that you can make money from directional moves.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 344934,
+            "end_ms": 348812,
+            "start": "00:05:44.934",
+            "end": "00:05:48.812"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_11e80f2bdedd4bf6",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0011",
+      "start_ms": 357446,
+      "end_ms": 361900,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "Options selling strategies on the other hand attempt to make money if the stock doesn't move that much.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Options selling strategies on the other hand attempt to make money if the stock doesn't move that much.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 357446,
+            "end_ms": 361900,
+            "start": "00:05:57.446",
+            "end": "00:06:01.900"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_fc11f1a38dc775dc",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0011",
+      "start_ms": 362470,
+      "end_ms": 365676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "Since you are selling options, you want to buy them back at a lower price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Since you are selling options, you want to buy them back at a lower price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 362470,
+            "end_ms": 365676,
+            "start": "00:06:02.470",
+            "end": "00:06:05.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_499b51f2bf17075f",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0011",
+      "start_ms": 362470,
+      "end_ms": 365676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "Since you are selling options, you want to buy them back at a lower price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Since you are selling options, you want to buy them back at a lower price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 362470,
+            "end_ms": 365676,
+            "start": "00:06:02.470",
+            "end": "00:06:05.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3b15f9558f1318ab",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0012",
+      "start_ms": 366342,
+      "end_ms": 371596,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "OPEX",
+      "surface": "OPEX",
+      "statement": "And since option premium decays very fast into OPEX, the majority of your profits come from Theta Decay.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "And since option premium decays very fast into OPEX, the majority of your profits come from Theta Decay.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_fadab9cd3435/f_0008@382782ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 366342,
+            "end_ms": 371596,
+            "start": "00:06:06.342",
+            "end": "00:06:11.596"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "opex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6eed7b1a4c15c198",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0012",
+      "start_ms": 366342,
+      "end_ms": 371596,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "And since option premium decays very fast into OPEX, the majority of your profits come from Theta Decay.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "And since option premium decays very fast into OPEX, the majority of your profits come from Theta Decay.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_fadab9cd3435/f_0008@382782ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 366342,
+            "end_ms": 371596,
+            "start": "00:06:06.342",
+            "end": "00:06:11.596"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5211fdccce97c2ff",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0012",
+      "start_ms": 374534,
+      "end_ms": 379020,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Moneyness",
+      "surface": "moneyness",
+      "statement": "During the course we will go into further detail about moneyness and the different strategies with options.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "During the course we will go into further detail about moneyness and the different strategies with options.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_fadab9cd3435/f_0008@382782ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 374534,
+            "end_ms": 379020,
+            "start": "00:06:14.534",
+            "end": "00:06:19.020"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    }
+  ]
+}

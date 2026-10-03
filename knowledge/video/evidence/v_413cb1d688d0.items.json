@@ -1,0 +1,3571 @@
+{
+  "video_id": "v_413cb1d688d0",
+  "schema": "video-knowledge/v1",
+  "items": [
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1fd59e46c918a937",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 262,
+      "end_ms": 20828,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market makers",
+      "statement": "In this lesson we talk about the market makers and their activity which is fundamental for the transparency of regulated markets.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this lesson we talk about the market makers and their activity which is fundamental for the transparency of regulated markets.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0001@0ms.jpg",
+          "frames/v_413cb1d688d0/f_0002@9009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 262,
+            "end_ms": 20828,
+            "start": "00:00:00.262",
+            "end": "00:00:20.828"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a2822a403eb7bff5",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 262,
+      "end_ms": 20828,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "Market makers",
+      "statement": "Market makers are financial companies or individuals who provide liquidity to markets by buying and selling large quantities of securities.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Market makers are financial companies or individuals who provide liquidity to markets by buying and selling large quantities of securities.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0001@0ms.jpg",
+          "frames/v_413cb1d688d0/f_0002@9009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 262,
+            "end_ms": 20828,
+            "start": "00:00:00.262",
+            "end": "00:00:20.828"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5a50a9264c1963cd",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 262,
+      "end_ms": 20828,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "Market makers are financial companies or individuals who provide liquidity to markets by buying and selling large quantities of securities.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Market makers are financial companies or individuals who provide liquidity to markets by buying and selling large quantities of securities.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0001@0ms.jpg",
+          "frames/v_413cb1d688d0/f_0002@9009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 262,
+            "end_ms": 20828,
+            "start": "00:00:00.262",
+            "end": "00:00:20.828"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_be2a66393fe1e1c2",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 262,
+      "end_ms": 20828,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "Market makers are financial companies or individuals who provide liquidity to markets by buying and selling large quantities of securities.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Market makers are financial companies or individuals who provide liquidity to markets by buying and selling large quantities of securities.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0001@0ms.jpg",
+          "frames/v_413cb1d688d0/f_0002@9009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 262,
+            "end_ms": 20828,
+            "start": "00:00:00.262",
+            "end": "00:00:20.828"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_022663d2f63373a7",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 262,
+      "end_ms": 20828,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "Market makers are financial companies or individuals who provide liquidity to markets by buying and selling large quantities of securities.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Market makers are financial companies or individuals who provide liquidity to markets by buying and selling large quantities of securities.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0001@0ms.jpg",
+          "frames/v_413cb1d688d0/f_0002@9009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 262,
+            "end_ms": 20828,
+            "start": "00:00:00.262",
+            "end": "00:00:20.828"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a4c5e21f3779127e",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 21190,
+      "end_ms": 42076,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "Market makers",
+      "statement": "Market makers facilitate trading by providing liquidity to ensure that there is always a counterparty available for traders to execute their orders.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Market makers facilitate trading by providing liquidity to ensure that there is always a counterparty available for traders to execute their orders.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 21190,
+            "end_ms": 42076,
+            "start": "00:00:21.190",
+            "end": "00:00:42.076"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5cbaed0618b17c2c",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 21190,
+      "end_ms": 42076,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "Market makers facilitate trading by providing liquidity to ensure that there is always a counterparty available for traders to execute their orders.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Market makers facilitate trading by providing liquidity to ensure that there is always a counterparty available for traders to execute their orders.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 21190,
+            "end_ms": 42076,
+            "start": "00:00:21.190",
+            "end": "00:00:42.076"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_446c8d029e478003",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 21190,
+      "end_ms": 42076,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market makers",
+      "statement": "In the stock market, for example, market makers are responsible for providing quotes for stocks they are willing to buy and sell.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In the stock market, for example, market makers are responsible for providing quotes for stocks they are willing to buy and sell.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 21190,
+            "end_ms": 42076,
+            "start": "00:00:21.190",
+            "end": "00:00:42.076"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_79e9b9e7833a1e68",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 21190,
+      "end_ms": 42076,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "In the stock market, for example, market makers are responsible for providing quotes for stocks they are willing to buy and sell.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In the stock market, for example, market makers are responsible for providing quotes for stocks they are willing to buy and sell.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 21190,
+            "end_ms": 42076,
+            "start": "00:00:21.190",
+            "end": "00:00:42.076"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5a4c51ddd7f3b24f",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 21190,
+      "end_ms": 42076,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "In the stock market, for example, market makers are responsible for providing quotes for stocks they are willing to buy and sell.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In the stock market, for example, market makers are responsible for providing quotes for stocks they are willing to buy and sell.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 21190,
+            "end_ms": 42076,
+            "start": "00:00:21.190",
+            "end": "00:00:42.076"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c1b41a8c9ac2f7bb",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 21190,
+      "end_ms": 42076,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Support",
+      "surface": "support",
+      "statement": "They are required to maintain a certain level of cash and are often required to have a certain amount of capital to support their trades.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "They are required to maintain a certain level of cash and are often required to have a certain amount of capital to support their trades.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 21190,
+            "end_ms": 42076,
+            "start": "00:00:21.190",
+            "end": "00:00:42.076"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "support",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c81971b3a7fc01f2",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 42278,
+      "end_ms": 60332,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "Market makers",
+      "statement": "Market makers play a crucial role in the financial markets by providing liquidity and helping ensure there is always someone willing to buy or sell securities.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Market makers play a crucial role in the financial markets by providing liquidity and helping ensure there is always someone willing to buy or sell securities.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0003@57057ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 42278,
+            "end_ms": 60332,
+            "start": "00:00:42.278",
+            "end": "00:01:00.332"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d3b94e56727b0735",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 42278,
+      "end_ms": 60332,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "Market makers play a crucial role in the financial markets by providing liquidity and helping ensure there is always someone willing to buy or sell securities.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Market makers play a crucial role in the financial markets by providing liquidity and helping ensure there is always someone willing to buy or sell securities.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0003@57057ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 42278,
+            "end_ms": 60332,
+            "start": "00:00:42.278",
+            "end": "00:01:00.332"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_206d79f271b833d5",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 42278,
+      "end_ms": 60332,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "Market makers play a crucial role in the financial markets by providing liquidity and helping ensure there is always someone willing to buy or sell securities.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Market makers play a crucial role in the financial markets by providing liquidity and helping ensure there is always someone willing to buy or sell securities.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0003@57057ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 42278,
+            "end_ms": 60332,
+            "start": "00:00:42.278",
+            "end": "00:01:00.332"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5dc3150de1d4cae9",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 42278,
+      "end_ms": 60332,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "Market makers play a crucial role in the financial markets by providing liquidity and helping ensure there is always someone willing to buy or sell securities.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Market makers play a crucial role in the financial markets by providing liquidity and helping ensure there is always someone willing to buy or sell securities.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0003@57057ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 42278,
+            "end_ms": 60332,
+            "start": "00:00:42.278",
+            "end": "00:01:00.332"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d866e38247334c77",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 42278,
+      "end_ms": 60332,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "They help reduce price volatility by providing a source of supply or demand when there are imbalances in the market.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "They help reduce price volatility by providing a source of supply or demand when there are imbalances in the market.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0003@57057ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 42278,
+            "end_ms": 60332,
+            "start": "00:00:42.278",
+            "end": "00:01:00.332"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ba18642b8aded2f9",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 42278,
+      "end_ms": 60332,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market makers",
+      "statement": "It is very important to understand how the market makers make money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It is very important to understand how the market makers make money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0003@57057ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 42278,
+            "end_ms": 60332,
+            "start": "00:00:42.278",
+            "end": "00:01:00.332"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4856e5d4a083be82",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 60838,
+      "end_ms": 68876,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "Market makers",
+      "statement": "Market makers make money through the spread between the bid and the ask price of a stock.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Market makers make money through the spread between the bid and the ask price of a stock.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 60838,
+            "end_ms": 68876,
+            "start": "00:01:00.838",
+            "end": "00:01:08.876"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a004953d7c938721",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 69350,
+      "end_ms": 76876,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "When they buy a security, they do it at the purchase price, and when they sell it, they do it at the sell price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When they buy a security, they do it at the purchase price, and when they sell it, they do it at the sell price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 69350,
+            "end_ms": 76876,
+            "start": "00:01:09.350",
+            "end": "00:01:16.876"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d4e3fb0b18d4542c",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 69350,
+      "end_ms": 76876,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "When they buy a security, they do it at the purchase price, and when they sell it, they do it at the sell price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When they buy a security, they do it at the purchase price, and when they sell it, they do it at the sell price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 69350,
+            "end_ms": 76876,
+            "start": "00:01:09.350",
+            "end": "00:01:16.876"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d49b2f25cc6ac810",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 9009,
+      "end_ms": 9009,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "MARKET MAKER",
+      "statement": "WHO IS THE MARKET MAKER? \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "WHO IS THE MARKET MAKER? \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0002@9009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 9009,
+            "end_ms": 9009,
+            "start": "00:00:09.009",
+            "end": "00:00:09.009"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a5cb35342a7c943a",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 9009,
+      "end_ms": 9009,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "Market makers",
+      "statement": "(© Market makers are financial companies or",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(© Market makers are financial companies or",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0002@9009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 9009,
+            "end_ms": 9009,
+            "start": "00:00:09.009",
+            "end": "00:00:09.009"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a4cdd4f5629a896b",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 9009,
+      "end_ms": 9009,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "individuals who provide liquidity to markets by",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "individuals who provide liquidity to markets by",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0002@9009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 9009,
+            "end_ms": 9009,
+            "start": "00:00:09.009",
+            "end": "00:00:09.009"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e3a7cce40d7cb45a",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 9009,
+      "end_ms": 9009,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "buying and selling large quantities of securities",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "buying and selling large quantities of securities",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0002@9009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 9009,
+            "end_ms": 9009,
+            "start": "00:00:09.009",
+            "end": "00:00:09.009"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d0c2806273b060bc",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 9009,
+      "end_ms": 9009,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "buying and selling large quantities of securities",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "buying and selling large quantities of securities",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0002@9009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 9009,
+            "end_ms": 9009,
+            "start": "00:00:09.009",
+            "end": "00:00:09.009"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ea194bffa46810f2",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 9009,
+      "end_ms": 9009,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "providing liquidity",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "providing liquidity",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0002@9009ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 9009,
+            "end_ms": 9009,
+            "start": "00:00:09.009",
+            "end": "00:00:09.009"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c51c12eea039247e",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 57057,
+      "end_ms": 57057,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "MARKET MAKERS",
+      "statement": "HOW DO MARKET MAKERS \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "HOW DO MARKET MAKERS \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0003@57057ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 57057,
+            "end_ms": 57057,
+            "start": "00:00:57.057",
+            "end": "00:00:57.057"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7ca0986d7c5feefb",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 77414,
+      "end_ms": 97916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market makers",
+      "statement": "The difference between these two prices is known as the spread and represents the market makers profit.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The difference between these two prices is known as the spread and represents the market makers profit.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0004@110277ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 77414,
+            "end_ms": 97916,
+            "start": "00:01:17.414",
+            "end": "00:01:37.916"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_baf5f9d5e5e848f5",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 77414,
+      "end_ms": 97916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "Market makers",
+      "statement": "Market makers may execute offsetting trades in the underlying securities or derivatives to neutralize their exposure to price changes.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Market makers may execute offsetting trades in the underlying securities or derivatives to neutralize their exposure to price changes.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0004@110277ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 77414,
+            "end_ms": 97916,
+            "start": "00:01:17.414",
+            "end": "00:01:37.916"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0d0accb726105527",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 98374,
+      "end_ms": 109932,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market makers",
+      "statement": "By effectively managing their risk, market makers can minimize losses and enhance profitability.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "By effectively managing their risk, market makers can minimize losses and enhance profitability.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0004@110277ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 98374,
+            "end_ms": 109932,
+            "start": "00:01:38.374",
+            "end": "00:01:49.932"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_adb7d262e745db72",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 98374,
+      "end_ms": 109932,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta Hedging",
+      "surface": "delta hedging",
+      "statement": "During the course, we will discuss about the importance of delta hedging, and how we can use this data to make more profitable trades.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "During the course, we will discuss about the importance of delta hedging, and how we can use this data to make more profitable trades.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0004@110277ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 98374,
+            "end_ms": 109932,
+            "start": "00:01:38.374",
+            "end": "00:01:49.932"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta_hedging",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_40f74d8b931ab2b5",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 110534,
+      "end_ms": 130780,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "Market makers",
+      "statement": "Market makers are a key element of the financial markets and their importance is higher in the option market, where they play an important role in providing liquidity and helping ensure there is always a buyer and seller to every option contract.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Market makers are a key element of the financial markets and their importance is higher in the option market, where they play an important role in providing liquidity and helping ensure there is always a buyer and seller to every option contract.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0004@110277ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 110534,
+            "end_ms": 130780,
+            "start": "00:01:50.534",
+            "end": "00:02:10.780"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_69b8ed39170cf799",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 110534,
+      "end_ms": 130780,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "Market makers are a key element of the financial markets and their importance is higher in the option market, where they play an important role in providing liquidity and helping ensure there is always a buyer and seller to every option contract.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Market makers are a key element of the financial markets and their importance is higher in the option market, where they play an important role in providing liquidity and helping ensure there is always a buyer and seller to every option contract.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0004@110277ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 110534,
+            "end_ms": 130780,
+            "start": "00:01:50.534",
+            "end": "00:02:10.780"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_84baca2444af17c6",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 110534,
+      "end_ms": 130780,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market makers",
+      "statement": "In the US, the majority of option trade volumes are executed by market makers.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In the US, the majority of option trade volumes are executed by market makers.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0004@110277ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 110534,
+            "end_ms": 130780,
+            "start": "00:01:50.534",
+            "end": "00:02:10.780"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_95da383a35b14729",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 110534,
+      "end_ms": 130780,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market makers",
+      "statement": "There is a reason why market makers in the option market are especially important.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "There is a reason why market makers in the option market are especially important.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0004@110277ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 110534,
+            "end_ms": 130780,
+            "start": "00:01:50.534",
+            "end": "00:02:10.780"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1ff357fb2b6b3b3c",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 145734,
+      "end_ms": 159980,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "Without a market maker it would be impossible for a buyer or seller to execute their orders.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Without a market maker it would be impossible for a buyer or seller to execute their orders.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0005@153086ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 145734,
+            "end_ms": 159980,
+            "start": "00:02:25.734",
+            "end": "00:02:39.980"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_cfe58d2142464d11",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 145734,
+      "end_ms": 159980,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market makers",
+      "statement": "In this slide we can see the largest market makers.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this slide we can see the largest market makers.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0005@153086ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 145734,
+            "end_ms": 159980,
+            "start": "00:02:25.734",
+            "end": "00:02:39.980"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_46b2879f4230a849",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 153086,
+      "end_ms": 153086,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "MARKET MAKERS",
+      "statement": "LARGEST MARKET MAKERS \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "LARGEST MARKET MAKERS \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0005@153086ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 153086,
+            "end_ms": 153086,
+            "start": "00:02:33.086",
+            "end": "00:02:33.086"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7e4b8eb953ff3114",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0003",
+      "start_ms": 160582,
+      "end_ms": 176268,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "This result made them the most profitable hedge fund or market maker in the world.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This result made them the most profitable hedge fund or market maker in the world.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0006@216116ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 160582,
+            "end_ms": 176268,
+            "start": "00:02:40.582",
+            "end": "00:02:56.268"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9083dfa1eb6abf4e",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0003",
+      "start_ms": 181638,
+      "end_ms": 203804,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "Its market maker does market making for approximately 300 million shares per day in the US market.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Its market maker does market making for approximately 300 million shares per day in the US market.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0006@216116ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 181638,
+            "end_ms": 203804,
+            "start": "00:03:01.638",
+            "end": "00:03:23.804"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0217537658cce1d4",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0003",
+      "start_ms": 181638,
+      "end_ms": 203804,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "All of these funds guarantee daily liquidity to the market.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "All of these funds guarantee daily liquidity to the market.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0006@216116ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 181638,
+            "end_ms": 203804,
+            "start": "00:03:01.638",
+            "end": "00:03:23.804"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_007e7536c4512eeb",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0004",
+      "start_ms": 277062,
+      "end_ms": 297468,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "We can move to efficiency, and here is where we start talking about the market maker.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We can move to efficiency, and here is where we start talking about the market maker.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 277062,
+            "end_ms": 297468,
+            "start": "00:04:37.062",
+            "end": "00:04:57.468"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9568bbfeab9e9800",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0004",
+      "start_ms": 304998,
+      "end_ms": 316108,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "This brings us to the liquidity quadrant.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This brings us to the liquidity quadrant.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 304998,
+            "end_ms": 316108,
+            "start": "00:05:04.998",
+            "end": "00:05:16.108"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_03dd6c3aafef5b4c",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0004",
+      "start_ms": 304998,
+      "end_ms": 316108,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "Whenever we invest, execution needs liquidity.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Whenever we invest, execution needs liquidity.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 304998,
+            "end_ms": 316108,
+            "start": "00:05:04.998",
+            "end": "00:05:16.108"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_12dc3362b6e178cc",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0004",
+      "start_ms": 304998,
+      "end_ms": 316108,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "When there is liquidity, it means that there are many buyers and sellers in the market.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When there is liquidity, it means that there are many buyers and sellers in the market.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 304998,
+            "end_ms": 316108,
+            "start": "00:05:04.998",
+            "end": "00:05:16.108"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_545fc70a3f8eda32",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0004",
+      "start_ms": 304998,
+      "end_ms": 316108,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "The market maker guarantees liquidity.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The market maker guarantees liquidity.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 304998,
+            "end_ms": 316108,
+            "start": "00:05:04.998",
+            "end": "00:05:16.108"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_bf90793e48a53b01",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0004",
+      "start_ms": 304998,
+      "end_ms": 316108,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "The market maker guarantees liquidity.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The market maker guarantees liquidity.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 304998,
+            "end_ms": 316108,
+            "start": "00:05:04.998",
+            "end": "00:05:16.108"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_dc25687e8bebb14b",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 316614,
+      "end_ms": 339708,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "And for this reason, the market maker must step up and offer a market to whoever is selling to ensure the stability and efficiency of the market.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "And for this reason, the market maker must step up and offer a market to whoever is selling to ensure the stability and efficiency of the market.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0007@360160ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 316614,
+            "end_ms": 339708,
+            "start": "00:05:16.614",
+            "end": "00:05:39.708"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7651980989f50336",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 316614,
+      "end_ms": 339708,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "And for this reason, the market maker must step up and offer a market to whoever is selling to ensure the stability and efficiency of the market.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "And for this reason, the market maker must step up and offer a market to whoever is selling to ensure the stability and efficiency of the market.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0007@360160ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 316614,
+            "end_ms": 339708,
+            "start": "00:05:16.614",
+            "end": "00:05:39.708"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a0d962afa6b9084d",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 340230,
+      "end_ms": 350700,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "It is obvious that in highly illiquid times the market maker asks for higher spread for their execution, but it is also important to understand that in these cases the market maker is also taking a higher risk.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It is obvious that in highly illiquid times the market maker asks for higher spread for their execution, but it is also important to understand that in these cases the market maker is also taking a higher risk.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0007@360160ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 340230,
+            "end_ms": 350700,
+            "start": "00:05:40.230",
+            "end": "00:05:50.700"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "FORMULA",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_75badb267dbb8af5",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 358278,
+      "end_ms": 378556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "Now that we understand who the market maker is and the market ecosystem, we can follow an order from when we hit the buy button through the execution and final settlement.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Now that we understand who the market maker is and the market ecosystem, we can follow an order from when we hit the buy button through the execution and final settlement.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0007@360160ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 358278,
+            "end_ms": 378556,
+            "start": "00:05:58.278",
+            "end": "00:06:18.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0cbd3426338e5cfb",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 358278,
+      "end_ms": 378556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "Now that we understand who the market maker is and the market ecosystem, we can follow an order from when we hit the buy button through the execution and final settlement.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Now that we understand who the market maker is and the market ecosystem, we can follow an order from when we hit the buy button through the execution and final settlement.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0007@360160ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 358278,
+            "end_ms": 378556,
+            "start": "00:05:58.278",
+            "end": "00:06:18.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a25bae8f846ac1ca",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 358278,
+      "end_ms": 378556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "For example, if we want to invest in Apple shares, once we have done our research and the number of shares we want to buy or sell, we can click on the buy or sell buttons directly from our broker.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For example, if we want to invest in Apple shares, once we have done our research and the number of shares we want to buy or sell, we can click on the buy or sell buttons directly from our broker.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0007@360160ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 358278,
+            "end_ms": 378556,
+            "start": "00:05:58.278",
+            "end": "00:06:18.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_28c0e460c5183b67",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 358278,
+      "end_ms": 378556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "For example, if we want to invest in Apple shares, once we have done our research and the number of shares we want to buy or sell, we can click on the buy or sell buttons directly from our broker.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For example, if we want to invest in Apple shares, once we have done our research and the number of shares we want to buy or sell, we can click on the buy or sell buttons directly from our broker.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0007@360160ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 358278,
+            "end_ms": 378556,
+            "start": "00:05:58.278",
+            "end": "00:06:18.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_44f5c61ef1b30739",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 378758,
+      "end_ms": 399548,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "The broker sends the order immediately to a liquidity provider, an exchange, a market maker, or an ATS.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The broker sends the order immediately to a liquidity provider, an exchange, a market maker, or an ATS.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0008@384184ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 378758,
+            "end_ms": 399548,
+            "start": "00:06:18.758",
+            "end": "00:06:39.548"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9dd806a28a8949c8",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 378758,
+      "end_ms": 399548,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "The broker sends the order immediately to a liquidity provider, an exchange, a market maker, or an ATS.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The broker sends the order immediately to a liquidity provider, an exchange, a market maker, or an ATS.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0008@384184ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 378758,
+            "end_ms": 399548,
+            "start": "00:06:18.758",
+            "end": "00:06:39.548"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_27efd567df11c033",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 378758,
+      "end_ms": 399548,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "We have already talked about the exchange and the market maker.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We have already talked about the exchange and the market maker.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0008@384184ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 378758,
+            "end_ms": 399548,
+            "start": "00:06:18.758",
+            "end": "00:06:39.548"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d3a721883672267a",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 418886,
+      "end_ms": 429900,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "However, ATS also have risks such as lower liquidity and higher exposure to counterparty risk.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "However, ATS also have risks such as lower liquidity and higher exposure to counterparty risk.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0009@432198ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 418886,
+            "end_ms": 429900,
+            "start": "00:06:58.886",
+            "end": "00:07:09.900"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_92251883dfcc4365",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0007",
+      "start_ms": 446406,
+      "end_ms": 451532,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "Market order is a type of order where traders can place buy or sell orders at the market price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Market order is a type of order where traders can place buy or sell orders at the market price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0011@474240ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 446406,
+            "end_ms": 451532,
+            "start": "00:07:26.406",
+            "end": "00:07:31.532"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0746bed5dc120f0a",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0007",
+      "start_ms": 446406,
+      "end_ms": 451532,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "Market order is a type of order where traders can place buy or sell orders at the market price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Market order is a type of order where traders can place buy or sell orders at the market price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0011@474240ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 446406,
+            "end_ms": 451532,
+            "start": "00:07:26.406",
+            "end": "00:07:31.532"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_fce6b5d4ebf6c109",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0007",
+      "start_ms": 471110,
+      "end_ms": 483692,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "A limit order is a type of trading in which a trader can place a buy or sell orders at a set price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "A limit order is a type of trading in which a trader can place a buy or sell orders at a set price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0011@474240ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 471110,
+            "end_ms": 483692,
+            "start": "00:07:51.110",
+            "end": "00:08:03.692"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_aa8e894e70da4082",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0007",
+      "start_ms": 471110,
+      "end_ms": 483692,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "A limit order is a type of trading in which a trader can place a buy or sell orders at a set price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "A limit order is a type of trading in which a trader can place a buy or sell orders at a set price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0011@474240ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 471110,
+            "end_ms": 483692,
+            "start": "00:07:51.110",
+            "end": "00:08:03.692"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2ad153b995a78fae",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0007",
+      "start_ms": 513734,
+      "end_ms": 519340,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "The order book is a record of all orders of buy and sell of a given asset such as a stock or an option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The order book is a record of all orders of buy and sell of a given asset such as a stock or an option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0011@474240ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 513734,
+            "end_ms": 519340,
+            "start": "00:08:33.734",
+            "end": "00:08:39.340"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_753761f7e7dfd429",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0007",
+      "start_ms": 513734,
+      "end_ms": 519340,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "The order book is a record of all orders of buy and sell of a given asset such as a stock or an option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The order book is a record of all orders of buy and sell of a given asset such as a stock or an option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0011@474240ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 513734,
+            "end_ms": 519340,
+            "start": "00:08:33.734",
+            "end": "00:08:39.340"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_007e9ddc8fc119f7",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 519878,
+      "end_ms": 541756,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "The order book is used to show real-time supply and demand for an asset, as well as to buy and sell prices currently available on the trading platform.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The order book is used to show real-time supply and demand for an asset, as well as to buy and sell prices currently available on the trading platform.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0013@556256ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 519878,
+            "end_ms": 541756,
+            "start": "00:08:39.878",
+            "end": "00:09:01.756"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_65e8651510e3b72a",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 519878,
+      "end_ms": 541756,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "The order book is used to show real-time supply and demand for an asset, as well as to buy and sell prices currently available on the trading platform.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The order book is used to show real-time supply and demand for an asset, as well as to buy and sell prices currently available on the trading platform.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0013@556256ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 519878,
+            "end_ms": 541756,
+            "start": "00:08:39.878",
+            "end": "00:09:01.756"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_81a763a3f15eda4b",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 547334,
+      "end_ms": 572444,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market makers",
+      "statement": "Now we end this session by looking at the general positioning of market makers.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Now we end this session by looking at the general positioning of market makers.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0013@556256ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 547334,
+            "end_ms": 572444,
+            "start": "00:09:07.334",
+            "end": "00:09:32.444"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_04c355ba64f7fed1",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 547334,
+      "end_ms": 572444,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "Based on where we buy, the strike price, the time to expiry, and moneyness, we can define a payoff or risk return of the option strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Based on where we buy, the strike price, the time to expiry, and moneyness, we can define a payoff or risk return of the option strategy.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0013@556256ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 547334,
+            "end_ms": 572444,
+            "start": "00:09:07.334",
+            "end": "00:09:32.444"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ed53355b2fe117f1",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 547334,
+      "end_ms": 572444,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "moneyness",
+      "statement": "Based on where we buy, the strike price, the time to expiry, and moneyness, we can define a payoff or risk return of the option strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Based on where we buy, the strike price, the time to expiry, and moneyness, we can define a payoff or risk return of the option strategy.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0013@556256ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 547334,
+            "end_ms": 572444,
+            "start": "00:09:07.334",
+            "end": "00:09:32.444"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1dbe505ccd4bd772",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 572902,
+      "end_ms": 596988,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "If the market maker gives you a price, he has the opposite payoff to yours.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If the market maker gives you a price, he has the opposite payoff to yours.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0013@556256ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 572902,
+            "end_ms": 596988,
+            "start": "00:09:32.902",
+            "end": "00:09:56.988"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b53ab92b0169089f",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 572902,
+      "end_ms": 596988,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "In some cases, to finance these puts, funds tend to sell options and go short calls in order to collect premium that reduces the cost of their hedge.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In some cases, to finance these puts, funds tend to sell options and go short calls in order to collect premium that reduces the cost of their hedge.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0013@556256ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 572902,
+            "end_ms": 596988,
+            "start": "00:09:32.902",
+            "end": "00:09:56.988"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6354b7e11a904e58",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 597222,
+      "end_ms": 599968,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "The market maker is therefore short put and long haul.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The market maker is therefore short put and long haul.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0013@556256ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 597222,
+            "end_ms": 599968,
+            "start": "00:09:57.222",
+            "end": "00:09:59.968"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ee82071aec01680d",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 556256,
+      "end_ms": 556256,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "MARKET MAKER",
+      "statement": "MARKET MAKER POSITIONING \\w",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "MARKET MAKER POSITIONING \\w",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0013@556256ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 556256,
+            "end_ms": 556256,
+            "start": "00:09:16.256",
+            "end": "00:09:16.256"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5534360854ccea94",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 556256,
+      "end_ms": 556256,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "MARKET MAKERS",
+      "statement": "(© MARKET MAKERS: cat",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(© MARKET MAKERS: cat",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0013@556256ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 556256,
+            "end_ms": 556256,
+            "start": "00:09:16.256",
+            "end": "00:09:16.256"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_02f2508ae05b2432",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0009",
+      "start_ms": 600486,
+      "end_ms": 612076,
+      "api": "q",
+      "attribution": "API_CONFIRMED",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the same sentence",
+      "concept": "Delta Hedging",
+      "surface": "delta hedging",
+      "statement": "We will talk about this in details, but when we talk about MenthorQ-Models, we will see how this positioning and the delta hedging activity of the market makers can help us better understand the market trend in the short term.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We will talk about this in details, but when we talk about MenthorQ-Models, we will see how this positioning and the delta hedging activity of the market makers can help us better understand the market trend in the short term.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "We will talk about this in details, but when we talk about mentor Q-Models, we will see how this positioning and the data hedging activity of the market makers can help us better understand the market trend in the short term.",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0014@615315ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 600486,
+            "end_ms": 612076,
+            "start": "00:10:00.486",
+            "end": "00:10:12.076"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta_hedging",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_986662c81d42f30a",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0009",
+      "start_ms": 600486,
+      "end_ms": 612076,
+      "api": "q",
+      "attribution": "API_CONFIRMED",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the same sentence",
+      "concept": "Market Maker",
+      "surface": "market makers",
+      "statement": "We will talk about this in details, but when we talk about MenthorQ-Models, we will see how this positioning and the delta hedging activity of the market makers can help us better understand the market trend in the short term.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We will talk about this in details, but when we talk about MenthorQ-Models, we will see how this positioning and the delta hedging activity of the market makers can help us better understand the market trend in the short term.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "We will talk about this in details, but when we talk about mentor Q-Models, we will see how this positioning and the data hedging activity of the market makers can help us better understand the market trend in the short term.",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0014@615315ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 600486,
+            "end_ms": 612076,
+            "start": "00:10:00.486",
+            "end": "00:10:12.076"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    }
+  ]
+}

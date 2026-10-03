@@ -1,0 +1,149 @@
+{
+  "video_id": "v_9eb61104eed0",
+  "terms": [
+    {
+      "term": "COLLAR",
+      "context": "COLLAR: SET UP SS",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0001",
+      "start_ms": 48315,
+      "end_ms": 48315,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "COLLAR: SET UP SS",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0001",
+      "start_ms": 48315,
+      "end_ms": 48315,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "COLLAR: SET UP SS",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0001",
+      "start_ms": 48315,
+      "end_ms": 48315,
+      "source": "ocr"
+    },
+    {
+      "term": "SHARES",
+      "context": "(© LONG UNDERLYING (100 SHARES)",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0001",
+      "start_ms": 48315,
+      "end_ms": 48315,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "©. LONG OTM PUT = a",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0001",
+      "start_ms": 48315,
+      "end_ms": 48315,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "© SHORT OTM CALL _",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0001",
+      "start_ms": 48315,
+      "end_ms": 48315,
+      "source": "ocr"
+    },
+    {
+      "term": "COLLAR",
+      "context": "CHECKLIST: COLLAR \\S",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0004",
+      "start_ms": 199599,
+      "end_ms": 199599,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "VEX table",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0004",
+      "start_ms": 199599,
+      "end_ms": 199599,
+      "source": "ocr"
+    },
+    {
+      "term": "RISK",
+      "context": "RISK REVERSAL ama",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0006",
+      "start_ms": 221588,
+      "end_ms": 221588,
+      "source": "ocr"
+    },
+    {
+      "term": "RISK",
+      "context": "RISK REVERSAL: SET UP \\S",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0006",
+      "start_ms": 227210,
+      "end_ms": 227210,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "RISK REVERSAL: SET UP \\S",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0006",
+      "start_ms": 227210,
+      "end_ms": 227210,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "RISK REVERSAL: SET UP \\S",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0006",
+      "start_ms": 227210,
+      "end_ms": 227210,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "© SHORT OTM PUT a= Qa",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0006",
+      "start_ms": 227210,
+      "end_ms": 227210,
+      "source": "ocr"
+    },
+    {
+      "term": "RISK",
+      "context": "CHECKLIST: RISK REVERSAL \\S",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0009",
+      "start_ms": 362529,
+      "end_ms": 362529,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "3.VEX stable",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0009",
+      "start_ms": 362529,
+      "end_ms": 362529,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "We want a stable or bullish GEX, a bullish cumulative GEX and a stable VEX.",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0010",
+      "start_ms": 362790,
+      "end_ms": 379660,
+      "source": "stt"
+    }
+  ]
+}

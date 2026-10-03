@@ -1,0 +1,3736 @@
+{
+  "video_id": "v_94f0f6cb9691",
+  "schema": "video-knowledge/v1",
+  "items": [
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6a0cacf3022e1fea",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 358,
+      "end_ms": 9228,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "We introduced the concept of theta in the previous section.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We introduced the concept of theta in the previous section.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 358,
+            "end_ms": 9228,
+            "start": "00:00:00.358",
+            "end": "00:00:09.228"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7f1ed92b6c46c735",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 358,
+      "end_ms": 9228,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "In this section we will go into a little more detail before we move on the next very important lesson about volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this section we will go into a little more detail before we move on the next very important lesson about volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 358,
+            "end_ms": 9228,
+            "start": "00:00:00.358",
+            "end": "00:00:09.228"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7056303a777ebb16",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 9702,
+      "end_ms": 24684,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "But for now let's focus on theta and the importance of time in evaluating an option and interacting with other Greeks.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "But for now let's focus on theta and the importance of time in evaluating an option and interacting with other Greeks.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0002@17150ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 9702,
+            "end_ms": 24684,
+            "start": "00:00:09.702",
+            "end": "00:00:24.684"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c0fed58e54d7e643",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 9702,
+      "end_ms": 24684,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "Theta specifically measured the rate at which the value of an option decreases over time as it approaches the expiration date.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Theta specifically measured the rate at which the value of an option decreases over time as it approaches the expiration date.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0002@17150ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 9702,
+            "end_ms": 24684,
+            "start": "00:00:09.702",
+            "end": "00:00:24.684"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_135d2093ec4088d4",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 9702,
+      "end_ms": 24684,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "time decay",
+      "statement": "It represents the time decay of an option's premium.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It represents the time decay of an option's premium.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0002@17150ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 9702,
+            "end_ms": 24684,
+            "start": "00:00:09.702",
+            "end": "00:00:24.684"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2b55a3f4825376d8",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 25254,
+      "end_ms": 37100,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "Theta is a negative value for most options because as time passes, the likelihood of the option expiring in the money decreases.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Theta is a negative value for most options because as time passes, the likelihood of the option expiring in the money decreases.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 25254,
+            "end_ms": 37100,
+            "start": "00:00:25.254",
+            "end": "00:00:37.100"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f54c372a2f088af4",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 25254,
+      "end_ms": 37100,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "Theta is a negative value for most options because as time passes, the likelihood of the option expiring in the money decreases.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Theta is a negative value for most options because as time passes, the likelihood of the option expiring in the money decreases.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 25254,
+            "end_ms": 37100,
+            "start": "00:00:25.254",
+            "end": "00:00:37.100"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_437129b0e1c518da",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 25254,
+      "end_ms": 37100,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "time decay",
+      "statement": "The option loses value with the passage of time, and the rate of this time decay is quantified by theta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The option loses value with the passage of time, and the rate of this time decay is quantified by theta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 25254,
+            "end_ms": 37100,
+            "start": "00:00:25.254",
+            "end": "00:00:37.100"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f72713c23a66f7e9",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 37606,
+      "end_ms": 51916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "time decay",
+      "statement": "A higher data value indicates that the options value will decline more rapidly as it approaches expirations, while lower data values indicate a slower time decay.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "A higher data value indicates that the options value will decline more rapidly as it approaches expirations, while lower data values indicate a slower time decay.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 37606,
+            "end_ms": 51916,
+            "start": "00:00:37.606",
+            "end": "00:00:51.916"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4727c279ef3bd0bf",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 52390,
+      "end_ms": 74908,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "Traders who buy options needs to be mindful of time decay as it can erode the value of their positions if the underlying asset doesn't move in their favor.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Traders who buy options needs to be mindful of time decay as it can erode the value of their positions if the underlying asset doesn't move in their favor.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0003@71405ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 52390,
+            "end_ms": 74908,
+            "start": "00:00:52.390",
+            "end": "00:01:14.908"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d66c14c26a1fdddf",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 52390,
+      "end_ms": 74908,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "time decay",
+      "statement": "Traders who buy options needs to be mindful of time decay as it can erode the value of their positions if the underlying asset doesn't move in their favor.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Traders who buy options needs to be mindful of time decay as it can erode the value of their positions if the underlying asset doesn't move in their favor.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0003@71405ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 52390,
+            "end_ms": 74908,
+            "start": "00:00:52.390",
+            "end": "00:01:14.908"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8f129147109711a8",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 52390,
+      "end_ms": 74908,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "time decay",
+      "statement": "On the other hand, options sellers can benefit from time decay as time works in their favor, leading to potential profit if the option they sold expires worthless.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "On the other hand, options sellers can benefit from time decay as time works in their favor, leading to potential profit if the option they sold expires worthless.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0003@71405ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 52390,
+            "end_ms": 74908,
+            "start": "00:00:52.390",
+            "end": "00:01:14.908"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_326372cf9d48f57b",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 52390,
+      "end_ms": 74908,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "Plotted on a graph, theta is represented like this.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Plotted on a graph, theta is represented like this.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0003@71405ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 52390,
+            "end_ms": 74908,
+            "start": "00:00:52.390",
+            "end": "00:01:14.908"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0f6c212dfd8d7a85",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 75334,
+      "end_ms": 82924,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "We can see that the closer we get to expiry, the more impact theta has on the value of our option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We can see that the closer we get to expiry, the more impact theta has on the value of our option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0004@82816ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 75334,
+            "end_ms": 82924,
+            "start": "00:01:15.334",
+            "end": "00:01:22.924"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_88903f26e14dd37e",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 75334,
+      "end_ms": 82924,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "There are three important points to consider when looking at theta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "There are three important points to consider when looking at theta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0004@82816ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 75334,
+            "end_ms": 82924,
+            "start": "00:01:15.334",
+            "end": "00:01:22.924"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_59429f1851984669",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "THETA",
+      "statement": "THETA ve 2. (ets We",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "THETA ve 2. (ets We",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 0,
+            "end_ms": 0,
+            "start": "00:00:00.000",
+            "end": "00:00:00.000"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1c40320f0cced578",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 17150,
+      "end_ms": 17150,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "THETA",
+      "statement": "THETA: DEFINITION \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "THETA: DEFINITION \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0002@17150ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 17150,
+            "end_ms": 17150,
+            "start": "00:00:17.150",
+            "end": "00:00:17.150"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9b5a101bbbfeba58",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 17150,
+      "end_ms": 17150,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "‘© Theta measures the rate at which the value of an",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "‘© Theta measures the rate at which the value of an",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0002@17150ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 17150,
+            "end_ms": 17150,
+            "start": "00:00:17.150",
+            "end": "00:00:17.150"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b703362ad09051b6",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 17150,
+      "end_ms": 17150,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "time decay",
+      "statement": "expiration date. It represents the time decay of",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "expiration date. It represents the time decay of",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0002@17150ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 17150,
+            "end_ms": 17150,
+            "start": "00:00:17.150",
+            "end": "00:00:17.150"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f72c61425a1cec2c",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 17150,
+      "end_ms": 17150,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "(© Theta is a negative value for most options",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(© Theta is a negative value for most options",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0002@17150ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 17150,
+            "end_ms": 17150,
+            "start": "00:00:17.150",
+            "end": "00:00:17.150"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7c36c8f4ab0d0c27",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 17150,
+      "end_ms": 17150,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "‘option expiring in the money (profitable)",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "‘option expiring in the money (profitable)",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0002@17150ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 17150,
+            "end_ms": 17150,
+            "start": "00:00:17.150",
+            "end": "00:00:17.150"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a3b79706827807dd",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 71405,
+      "end_ms": 71405,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "THETA",
+      "statement": "THETA SS",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "THETA SS",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0003@71405ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 71405,
+            "end_ms": 71405,
+            "start": "00:01:11.405",
+            "end": "00:01:11.405"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6b0d114241c31265",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 82816,
+      "end_ms": 82816,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "THETA",
+      "statement": "THETA: WHAT WE KNOW \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "THETA: WHAT WE KNOW \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0004@82816ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 82816,
+            "end_ms": 82816,
+            "start": "00:01:22.816",
+            "end": "00:01:22.816"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_71c15250f97986a8",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 82816,
+      "end_ms": 82816,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "© Theta loses value closer to expiration",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Theta loses value closer to expiration",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0004@82816ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 82816,
+            "end_ms": 82816,
+            "start": "00:01:22.816",
+            "end": "00:01:22.816"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_91c24da0eaa944b8",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 82816,
+      "end_ms": 82816,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "© Theta is dependent on Moneyness",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Theta is dependent on Moneyness",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0004@82816ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 82816,
+            "end_ms": 82816,
+            "start": "00:01:22.816",
+            "end": "00:01:22.816"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b0248be9c277abba",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 82816,
+      "end_ms": 82816,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Moneyness",
+      "surface": "Moneyness",
+      "statement": "© Theta is dependent on Moneyness",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Theta is dependent on Moneyness",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0004@82816ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 82816,
+            "end_ms": 82816,
+            "start": "00:01:22.816",
+            "end": "00:01:22.816"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_988361fa4c441938",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 82816,
+      "end_ms": 82816,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "Volatility",
+      "statement": "© Volatility is positive for Theta",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Volatility is positive for Theta",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0004@82816ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 82816,
+            "end_ms": 82816,
+            "start": "00:01:22.816",
+            "end": "00:01:22.816"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_538cc752af166f76",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 82816,
+      "end_ms": 82816,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "© Volatility is positive for Theta",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Volatility is positive for Theta",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0004@82816ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 82816,
+            "end_ms": 82816,
+            "start": "00:01:22.816",
+            "end": "00:01:22.816"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f34a68cf3f87658f",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 83526,
+      "end_ms": 91468,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "We just covered the first one, as we know that theta loses value faster as it approaches expiration.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We just covered the first one, as we know that theta loses value faster as it approaches expiration.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0005@99933ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 83526,
+            "end_ms": 91468,
+            "start": "00:01:23.526",
+            "end": "00:01:31.468"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_af3ca38234f87766",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 83526,
+      "end_ms": 91468,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "moneyness",
+      "statement": "The second point is the importance of moneyness to theta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The second point is the importance of moneyness to theta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0005@99933ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 83526,
+            "end_ms": 91468,
+            "start": "00:01:23.526",
+            "end": "00:01:31.468"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ca3599defaf92e69",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 83526,
+      "end_ms": 91468,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "The second point is the importance of moneyness to theta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The second point is the importance of moneyness to theta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0005@99933ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 83526,
+            "end_ms": 91468,
+            "start": "00:01:23.526",
+            "end": "00:01:31.468"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8637059fbc5b1e02",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 91974,
+      "end_ms": 95116,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "and then the relationship with volatility, which is positive for data.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "and then the relationship with volatility, which is positive for data.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0005@99933ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 91974,
+            "end_ms": 95116,
+            "start": "00:01:31.974",
+            "end": "00:01:35.116"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7b005a7a905231d0",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 95750,
+      "end_ms": 101932,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "This is the theta profile.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is the theta profile.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0005@99933ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 95750,
+            "end_ms": 101932,
+            "start": "00:01:35.750",
+            "end": "00:01:41.932"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_89a85c000b2b02af",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 102502,
+      "end_ms": 105996,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "Put some positive data when we are out of the money and in the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Put some positive data when we are out of the money and in the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0005@99933ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 102502,
+            "end_ms": 105996,
+            "start": "00:01:42.502",
+            "end": "00:01:45.996"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_49919e64fbcbda60",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 106502,
+      "end_ms": 112204,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "The closer we get to add the money, the more theta becomes negative.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The closer we get to add the money, the more theta becomes negative.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0005@99933ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 106502,
+            "end_ms": 112204,
+            "start": "00:01:46.502",
+            "end": "00:01:52.204"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9c9265ad57a42c3f",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 112678,
+      "end_ms": 119916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "In this slide we can see the relationship between data and volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this slide we can see the relationship between data and volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0006@117084ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 112678,
+            "end_ms": 119916,
+            "start": "00:01:52.678",
+            "end": "00:01:59.916"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_53b2228695c4ef81",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 120486,
+      "end_ms": 127148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "we can see the volatility effect at 10 and at 80, as you can see the curve changes sharply, but what does that mean?",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "we can see the volatility effect at 10 and at 80, as you can see the curve changes sharply, but what does that mean?",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0005@99933ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 120486,
+            "end_ms": 127148,
+            "start": "00:02:00.486",
+            "end": "00:02:07.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4a8c7021120e4fe1",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 127622,
+      "end_ms": 131020,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "The higher the volatility, the higher the option price and its time value.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The higher the volatility, the higher the option price and its time value.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0005@99933ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 127622,
+            "end_ms": 131020,
+            "start": "00:02:07.622",
+            "end": "00:02:11.020"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_80b55ec8bdfd5b53",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 131622,
+      "end_ms": 136940,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Again, volatility has the greatest effect when we get close to the strike, when we are close to the up-demand strike.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Again, volatility has the greatest effect when we get close to the strike, when we are close to the up-demand strike.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0005@99933ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 131622,
+            "end_ms": 136940,
+            "start": "00:02:11.622",
+            "end": "00:02:16.940"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f1be78ef7391edf8",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 142310,
+      "end_ms": 150316,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "If the theta is 0.05, we are losing 5 cents every day.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If the theta is 0.05, we are losing 5 cents every day.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0008@151351ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 142310,
+            "end_ms": 150316,
+            "start": "00:02:22.310",
+            "end": "00:02:30.316"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_16f77924608d8da7",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 142310,
+      "end_ms": 150316,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "This is true if other factors such as volatility and moneyness remain the same.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is true if other factors such as volatility and moneyness remain the same.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0008@151351ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 142310,
+            "end_ms": 150316,
+            "start": "00:02:22.310",
+            "end": "00:02:30.316"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d06c3ea7f6965784",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 142310,
+      "end_ms": 150316,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "moneyness",
+      "statement": "This is true if other factors such as volatility and moneyness remain the same.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is true if other factors such as volatility and moneyness remain the same.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0008@151351ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 142310,
+            "end_ms": 150316,
+            "start": "00:02:22.310",
+            "end": "00:02:30.316"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_45c8848d298da7ad",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 99933,
+      "end_ms": 99933,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "THETA",
+      "statement": "THETA VS MONEYNESS &",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "THETA VS MONEYNESS &",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0005@99933ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 99933,
+            "end_ms": 99933,
+            "start": "00:01:39.933",
+            "end": "00:01:39.933"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ed03821931cf682c",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 99933,
+      "end_ms": 99933,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "MONEYNESS",
+      "statement": "THETA VS MONEYNESS &",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "THETA VS MONEYNESS &",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0005@99933ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 99933,
+            "end_ms": 99933,
+            "start": "00:01:39.933",
+            "end": "00:01:39.933"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_865acbd7749c2e86",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 117084,
+      "end_ms": 117084,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "THETA",
+      "statement": "THETA VS VOLATILITY SS",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "THETA VS VOLATILITY SS",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0006@117084ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 117084,
+            "end_ms": 117084,
+            "start": "00:01:57.084",
+            "end": "00:01:57.084"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6b7fceb26ee37f04",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 117084,
+      "end_ms": 117084,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "VOLATILITY",
+      "statement": "THETA VS VOLATILITY SS",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "THETA VS VOLATILITY SS",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0006@117084ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 117084,
+            "end_ms": 117084,
+            "start": "00:01:57.084",
+            "end": "00:01:57.084"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4ccbc03ebbc8e62e",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 139906,
+      "end_ms": 139906,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "THETA",
+      "statement": "THETA: EXAMPLE SS",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "THETA: EXAMPLE SS",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0007@139906ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 139906,
+            "end_ms": 139906,
+            "start": "00:02:19.906",
+            "end": "00:02:19.906"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_caa39da40455ef92",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 151351,
+      "end_ms": 151351,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "THETA",
+      "statement": "THETA: EXAMPLE SS",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "THETA: EXAMPLE SS",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0008@151351ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 151351,
+            "end_ms": 151351,
+            "start": "00:02:31.351",
+            "end": "00:02:31.351"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_950c0ebb6b6d26ef",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 162662,
+      "end_ms": 183676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "Let's remember that if we are long gamma or rather long options, theta is negative for us.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Let's remember that if we are long gamma or rather long options, theta is negative for us.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0009@162763ms.jpg",
+          "frames/v_94f0f6cb9691/f_0010@171338ms.jpg",
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 162662,
+            "end_ms": 183676,
+            "start": "00:02:42.662",
+            "end": "00:03:03.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_09944e69a38ed21b",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 162662,
+      "end_ms": 183676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "Let's remember that if we are long gamma or rather long options, theta is negative for us.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Let's remember that if we are long gamma or rather long options, theta is negative for us.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0009@162763ms.jpg",
+          "frames/v_94f0f6cb9691/f_0010@171338ms.jpg",
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 162662,
+            "end_ms": 183676,
+            "start": "00:02:42.662",
+            "end": "00:03:03.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_77835378ea2e8dd4",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 162662,
+      "end_ms": 183676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "time decay",
+      "statement": "Our option loses value every day due to time decay.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Our option loses value every day due to time decay.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0009@162763ms.jpg",
+          "frames/v_94f0f6cb9691/f_0010@171338ms.jpg",
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 162662,
+            "end_ms": 183676,
+            "start": "00:02:42.662",
+            "end": "00:03:03.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8733b878c19cd478",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 162662,
+      "end_ms": 183676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "The opposite happens when we are short gamma or short options.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The opposite happens when we are short gamma or short options.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0009@162763ms.jpg",
+          "frames/v_94f0f6cb9691/f_0010@171338ms.jpg",
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 162662,
+            "end_ms": 183676,
+            "start": "00:02:42.662",
+            "end": "00:03:03.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_07a03f6a64a649b4",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 162662,
+      "end_ms": 183676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "Theta is in our favor because we are receiving the premium.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Theta is in our favor because we are receiving the premium.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0009@162763ms.jpg",
+          "frames/v_94f0f6cb9691/f_0010@171338ms.jpg",
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 162662,
+            "end_ms": 183676,
+            "start": "00:02:42.662",
+            "end": "00:03:03.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_681a13a52628a3c3",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 184070,
+      "end_ms": 203148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "What we know is that theta has a greater impact the closer we get to an option's expiration.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "What we know is that theta has a greater impact the closer we get to an option's expiration.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 184070,
+            "end_ms": 203148,
+            "start": "00:03:04.070",
+            "end": "00:03:23.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1a7486a673b5e2c6",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 184070,
+      "end_ms": 203148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "Theta depends on maniness.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Theta depends on maniness.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 184070,
+            "end_ms": 203148,
+            "start": "00:03:04.070",
+            "end": "00:03:23.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_bf3551a4f9360850",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 184070,
+      "end_ms": 203148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Moneyness",
+      "surface": "At the money",
+      "statement": "At the money options, at the highest theta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "At the money options, at the highest theta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 184070,
+            "end_ms": 203148,
+            "start": "00:03:04.070",
+            "end": "00:03:23.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9989b28c36c41408",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 184070,
+      "end_ms": 203148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "At the money options, at the highest theta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "At the money options, at the highest theta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 184070,
+            "end_ms": 203148,
+            "start": "00:03:04.070",
+            "end": "00:03:23.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f2220f40691ce519",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 184070,
+      "end_ms": 203148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "The theta of an at the money option increases the closer we get to the expiration.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The theta of an at the money option increases the closer we get to the expiration.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 184070,
+            "end_ms": 203148,
+            "start": "00:03:04.070",
+            "end": "00:03:23.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_94b012661650a3c4",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 184070,
+      "end_ms": 203148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Moneyness",
+      "surface": "at the money",
+      "statement": "The theta of an at the money option increases the closer we get to the expiration.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The theta of an at the money option increases the closer we get to the expiration.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 184070,
+            "end_ms": 203148,
+            "start": "00:03:04.070",
+            "end": "00:03:23.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_574fc593cf24531e",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 184070,
+      "end_ms": 203148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "A short-term option has a much higher theta than a long-term option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "A short-term option has a much higher theta than a long-term option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 184070,
+            "end_ms": 203148,
+            "start": "00:03:04.070",
+            "end": "00:03:23.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2792c1867fe7720f",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 203750,
+      "end_ms": 206348,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "We also know that theta is affected by volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We also know that theta is affected by volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0009@162763ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 203750,
+            "end_ms": 206348,
+            "start": "00:03:23.750",
+            "end": "00:03:26.348"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3f048b4714e69491",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 203750,
+      "end_ms": 206348,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "We also know that theta is affected by volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We also know that theta is affected by volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0009@162763ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 203750,
+            "end_ms": 206348,
+            "start": "00:03:23.750",
+            "end": "00:03:26.348"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6a0a433a9d323120",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 206822,
+      "end_ms": 209964,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "If we raise our volatility assumptions, theta increases.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If we raise our volatility assumptions, theta increases.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0009@162763ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 206822,
+            "end_ms": 209964,
+            "start": "00:03:26.822",
+            "end": "00:03:29.964"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5b71a9160a56f303",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 206822,
+      "end_ms": 209964,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "If we raise our volatility assumptions, theta increases.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If we raise our volatility assumptions, theta increases.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0009@162763ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 206822,
+            "end_ms": 209964,
+            "start": "00:03:26.822",
+            "end": "00:03:29.964"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3bbf3dda0674bcd7",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 210566,
+      "end_ms": 216172,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "Now that we have learned theta, we can move on to the next section.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Now that we have learned theta, we can move on to the next section.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0012@217017ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 210566,
+            "end_ms": 216172,
+            "start": "00:03:30.566",
+            "end": "00:03:36.172"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ab626268187b5112",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 210566,
+      "end_ms": 216172,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "We will analyze the concept of volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We will analyze the concept of volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0012@217017ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 210566,
+            "end_ms": 216172,
+            "start": "00:03:30.566",
+            "end": "00:03:36.172"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_02a3f30cdca7dccc",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 162763,
+      "end_ms": 162763,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "THETA",
+      "statement": "THETA: SHORT & LONG &",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "THETA: SHORT & LONG &",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0009@162763ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 162763,
+            "end_ms": 162763,
+            "start": "00:02:42.763",
+            "end": "00:02:42.763"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8ad2a91fb1f819c1",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 162763,
+      "end_ms": 162763,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Gamma",
+      "surface": "Gamma",
+      "statement": "5 Long Gamma = Negative Theta xf",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "5 Long Gamma = Negative Theta xf",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0009@162763ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 162763,
+            "end_ms": 162763,
+            "start": "00:02:42.763",
+            "end": "00:02:42.763"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "FORMULA",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_964cd52f29091139",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 162763,
+      "end_ms": 162763,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "5 Long Gamma = Negative Theta xf",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "5 Long Gamma = Negative Theta xf",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0009@162763ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 162763,
+            "end_ms": 162763,
+            "start": "00:02:42.763",
+            "end": "00:02:42.763"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "FORMULA",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_70153d818800bd91",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 171338,
+      "end_ms": 171338,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "THETA",
+      "statement": "THETA: SHORT & LONG \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "THETA: SHORT & LONG \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0010@171338ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 171338,
+            "end_ms": 171338,
+            "start": "00:02:51.338",
+            "end": "00:02:51.338"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8b4e8497e0ed7d45",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 171338,
+      "end_ms": 171338,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Gamma",
+      "surface": "Gamma",
+      "statement": "2 Long Gamma = Negative Theta aw",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "2 Long Gamma = Negative Theta aw",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0010@171338ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 171338,
+            "end_ms": 171338,
+            "start": "00:02:51.338",
+            "end": "00:02:51.338"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "FORMULA",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_784601bdf4172031",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 171338,
+      "end_ms": 171338,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "2 Long Gamma = Negative Theta aw",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "2 Long Gamma = Negative Theta aw",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0010@171338ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 171338,
+            "end_ms": 171338,
+            "start": "00:02:51.338",
+            "end": "00:02:51.338"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "FORMULA",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6eb37319ba0fd0ee",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 185619,
+      "end_ms": 185619,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "THETA",
+      "statement": "THETA: RECAP \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "THETA: RECAP \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 185619,
+            "end_ms": 185619,
+            "start": "00:03:05.619",
+            "end": "00:03:05.619"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_78fbe5d33b3ecbd5",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 185619,
+      "end_ms": 185619,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "(© Theta has a greater impact the closer we get to",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(© Theta has a greater impact the closer we get to",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 185619,
+            "end_ms": 185619,
+            "start": "00:03:05.619",
+            "end": "00:03:05.619"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_bd4de4115638c12f",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 185619,
+      "end_ms": 185619,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "(© Theta depends on Moneyness",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(© Theta depends on Moneyness",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 185619,
+            "end_ms": 185619,
+            "start": "00:03:05.619",
+            "end": "00:03:05.619"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_263061fe52717bca",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 185619,
+      "end_ms": 185619,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Moneyness",
+      "surface": "Moneyness",
+      "statement": "(© Theta depends on Moneyness",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(© Theta depends on Moneyness",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 185619,
+            "end_ms": 185619,
+            "start": "00:03:05.619",
+            "end": "00:03:05.619"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f64455e9317af177",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 185619,
+      "end_ms": 185619,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "(© A Short Term option has a much higher Theta y",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(© A Short Term option has a much higher Theta y",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 185619,
+            "end_ms": 185619,
+            "start": "00:03:05.619",
+            "end": "00:03:05.619"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ea9f908dbf70d14a",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 185619,
+      "end_ms": 185619,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "© Theta is affected by volatility he",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Theta is affected by volatility he",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 185619,
+            "end_ms": 185619,
+            "start": "00:03:05.619",
+            "end": "00:03:05.619"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4d07d542d90b0324",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 185619,
+      "end_ms": 185619,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "© Theta is affected by volatility he",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Theta is affected by volatility he",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_94f0f6cb9691/f_0011@185619ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 185619,
+            "end_ms": 185619,
+            "start": "00:03:05.619",
+            "end": "00:03:05.619"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    }
+  ]
+}

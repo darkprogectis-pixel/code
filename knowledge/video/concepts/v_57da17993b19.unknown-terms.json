@@ -1,0 +1,194 @@
+{
+  "video_id": "v_57da17993b19",
+  "terms": [
+    {
+      "term": "WE",
+      "context": "WHY WE LOOK AT LIQUIDITY? \\S",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0001",
+      "start_ms": 16917,
+      "end_ms": 16917,
+      "source": "ocr"
+    },
+    {
+      "term": "LOOK",
+      "context": "WHY WE LOOK AT LIQUIDITY? \\S",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0001",
+      "start_ms": 16917,
+      "end_ms": 16917,
+      "source": "ocr"
+    },
+    {
+      "term": "WE",
+      "context": "WHY WE LOOK AT LIQUIDITY? &",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0002",
+      "start_ms": 86253,
+      "end_ms": 86253,
+      "source": "ocr"
+    },
+    {
+      "term": "LOOK",
+      "context": "WHY WE LOOK AT LIQUIDITY? &",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0002",
+      "start_ms": 86253,
+      "end_ms": 86253,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "yy MARKET",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0002",
+      "start_ms": 140941,
+      "end_ms": 140941,
+      "source": "ocr"
+    },
+    {
+      "term": "HEDGE",
+      "context": "HEDGE RATIO: EXAMPLE CALL SS",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0004",
+      "start_ms": 166867,
+      "end_ms": 166867,
+      "source": "ocr"
+    },
+    {
+      "term": "RATIO",
+      "context": "HEDGE RATIO: EXAMPLE CALL SS",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0004",
+      "start_ms": 166867,
+      "end_ms": 166867,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "HEDGE RATIO: EXAMPLE CALL SS",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0004",
+      "start_ms": 166867,
+      "end_ms": 166867,
+      "source": "ocr"
+    },
+    {
+      "term": "GREEKS",
+      "context": "GREEKS IN ACTION",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0004",
+      "start_ms": 226460,
+      "end_ms": 226460,
+      "source": "ocr"
+    },
+    {
+      "term": "ACTION",
+      "context": "GREEKS IN ACTION",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0004",
+      "start_ms": 226460,
+      "end_ms": 226460,
+      "source": "ocr"
+    },
+    {
+      "term": "XK",
+      "context": "WHAT IMPACTS LIQUIDITY XK",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0004",
+      "start_ms": 245879,
+      "end_ms": 245879,
+      "source": "ocr"
+    },
+    {
+      "term": "POSIVE",
+      "context": "POSIVE & NEGATIVE LIQUIDITY &",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0007",
+      "start_ms": 300901,
+      "end_ms": 300901,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS: GAMMA \\",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0008",
+      "start_ms": 391391,
+      "end_ms": 391391,
+      "source": "ocr"
+    },
+    {
+      "term": "IV",
+      "context": "IV | Moneyness",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0009",
+      "start_ms": 414281,
+      "end_ms": 414281,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION VALUE &",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0009",
+      "start_ms": 428161,
+      "end_ms": 428161,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "OPTION VALUE &",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0009",
+      "start_ms": 428161,
+      "end_ms": 428161,
+      "source": "ocr"
+    },
+    {
+      "term": "BEX",
+      "context": "This is what in the Q-Models we call BEX.",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0010",
+      "start_ms": 475270,
+      "end_ms": 493068,
+      "source": "stt"
+    },
+    {
+      "term": "PUTS",
+      "context": "LIQUIDITY: SHORT OTM PUTS &",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0010",
+      "start_ms": 482215,
+      "end_ms": 482215,
+      "source": "ocr"
+    },
+    {
+      "term": "PUTS",
+      "context": "SHORT OTM PUTS",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0010",
+      "start_ms": 482215,
+      "end_ms": 482215,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS: CALL RESISTANCE X",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0010",
+      "start_ms": 500433,
+      "end_ms": 500433,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "Q-MODELS: CALL RESISTANCE X",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0010",
+      "start_ms": 500433,
+      "end_ms": 500433,
+      "source": "ocr"
+    }
+  ]
+}

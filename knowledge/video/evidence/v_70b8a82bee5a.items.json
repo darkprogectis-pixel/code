@@ -1,0 +1,2675 @@
+{
+  "video_id": "v_70b8a82bee5a",
+  "schema": "video-knowledge/v1",
+  "items": [
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6a5fe8ae0e88854c",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0001",
+      "start_ms": 518,
+      "end_ms": 13420,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Q-Models",
+      "surface": "Q-Models",
+      "statement": "We have the theoretical foundations and we know how to use the Q-Models.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We have the theoretical foundations and we know how to use the Q-Models.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0001@0ms.jpg",
+          "frames/v_70b8a82bee5a/f_0002@13797ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 518,
+            "end_ms": 13420,
+            "start": "00:00:00.518",
+            "end": "00:00:13.420"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_758d9cb99aa768fb",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "VOLATILITY",
+      "statement": "VOLATILITY",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "VOLATILITY",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 0,
+            "end_ms": 0,
+            "start": "00:00:00.000",
+            "end": "00:00:00.000"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_007d1d390317f2f3",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0001",
+      "start_ms": 13797,
+      "end_ms": 13797,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "VOLATILITY",
+      "statement": "KNOW YOUR VOLATILITY &",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "KNOW YOUR VOLATILITY &",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0002@13797ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 13797,
+            "end_ms": 13797,
+            "start": "00:00:13.797",
+            "end": "00:00:13.797"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_39b426a2bdd33163",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0002",
+      "start_ms": 19910,
+      "end_ms": 34604,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "You need to know how to read and use volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "You need to know how to read and use volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 19910,
+            "end_ms": 34604,
+            "start": "00:00:19.910",
+            "end": "00:00:34.604"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9f6c92843126250a",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0002",
+      "start_ms": 19910,
+      "end_ms": 34604,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "It is necessary to understand the volatility of the asset you trade.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It is necessary to understand the volatility of the asset you trade.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 19910,
+            "end_ms": 34604,
+            "start": "00:00:19.910",
+            "end": "00:00:34.604"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f36ab72bb020e0e2",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0002",
+      "start_ms": 35270,
+      "end_ms": 44556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Once we have identified the volatility of our asset, we need to understand what type of strategy we want to use.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Once we have identified the volatility of our asset, we need to understand what type of strategy we want to use.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 35270,
+            "end_ms": 44556,
+            "start": "00:00:35.270",
+            "end": "00:00:44.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c779205996306ea0",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0002",
+      "start_ms": 45158,
+      "end_ms": 59660,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Do we want to be buyers or sellers of volatility?",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Do we want to be buyers or sellers of volatility?",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 45158,
+            "end_ms": 59660,
+            "start": "00:00:45.158",
+            "end": "00:00:59.660"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7eb51f0d728335d9",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0002",
+      "start_ms": 45158,
+      "end_ms": 59660,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "And are we investing to benefit from the volatility or the direction of the underlying asset?",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "And are we investing to benefit from the volatility or the direction of the underlying asset?",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 45158,
+            "end_ms": 59660,
+            "start": "00:00:45.158",
+            "end": "00:00:59.660"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3512aa481b97db00",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0003",
+      "start_ms": 70246,
+      "end_ms": 91100,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "NEUTRAL",
+      "surface": "neutral",
+      "statement": "It is necessary to distinguish between directional strategies and market neutral strategies.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It is necessary to distinguish between directional strategies and market neutral strategies.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0003@73724ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 70246,
+            "end_ms": 91100,
+            "start": "00:01:10.246",
+            "end": "00:01:31.100"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "neutral",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_40264f2b5e658955",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0003",
+      "start_ms": 70246,
+      "end_ms": 91100,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "NEUTRAL",
+      "surface": "neutral",
+      "statement": "Then we have market neutral strategies.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Then we have market neutral strategies.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0003@73724ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 70246,
+            "end_ms": 91100,
+            "start": "00:01:10.246",
+            "end": "00:01:31.100"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "neutral",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1cea314e326987f3",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 91302,
+      "end_ms": 97580,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "What matters to us is the direction of volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "What matters to us is the direction of volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0004@114948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 91302,
+            "end_ms": 97580,
+            "start": "00:01:31.302",
+            "end": "00:01:37.580"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_89f182274468f0c0",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 98118,
+      "end_ms": 102348,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Q-Models",
+      "surface": "Q-Models",
+      "statement": "Our Q-Models are one of the best ways to understand how volatility moves in the short term.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Our Q-Models are one of the best ways to understand how volatility moves in the short term.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0004@114948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 98118,
+            "end_ms": 102348,
+            "start": "00:01:38.118",
+            "end": "00:01:42.348"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1470cd000a667d3a",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 98118,
+      "end_ms": 102348,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Our Q-Models are one of the best ways to understand how volatility moves in the short term.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Our Q-Models are one of the best ways to understand how volatility moves in the short term.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0004@114948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 98118,
+            "end_ms": 102348,
+            "start": "00:01:38.118",
+            "end": "00:01:42.348"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f256f4671674185e",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 102854,
+      "end_ms": 107756,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "As an option trader to be successful, you need to be in the right direction of volatility based on your strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "As an option trader to be successful, you need to be in the right direction of volatility based on your strategy.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0004@114948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 102854,
+            "end_ms": 107756,
+            "start": "00:01:42.854",
+            "end": "00:01:47.756"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_718141d3356735f5",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 112198,
+      "end_ms": 129452,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "We know that if implied volatility is high, it is better to be option sellers.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We know that if implied volatility is high, it is better to be option sellers.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0004@114948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 112198,
+            "end_ms": 129452,
+            "start": "00:01:52.198",
+            "end": "00:02:09.452"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e5a0d8b7d2588190",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 112198,
+      "end_ms": 129452,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "We benefit from the premium by being sellers and theta is on our side.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We benefit from the premium by being sellers and theta is on our side.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0004@114948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 112198,
+            "end_ms": 129452,
+            "start": "00:01:52.198",
+            "end": "00:02:09.452"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1e8b72182074ae2b",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 112198,
+      "end_ms": 129452,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "In this case, we are short gamma.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this case, we are short gamma.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0004@114948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 112198,
+            "end_ms": 129452,
+            "start": "00:01:52.198",
+            "end": "00:02:09.452"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_bbd505779ee21c75",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 129926,
+      "end_ms": 141036,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "On the other hand, if implied volatility is low, we can be option buyers.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "On the other hand, if implied volatility is low, we can be option buyers.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0004@114948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 129926,
+            "end_ms": 141036,
+            "start": "00:02:09.926",
+            "end": "00:02:21.036"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_17d003c92e02981f",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 129926,
+      "end_ms": 141036,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "We want an increase in volatility and theta is negative for us.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We want an increase in volatility and theta is negative for us.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0004@114948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 129926,
+            "end_ms": 141036,
+            "start": "00:02:09.926",
+            "end": "00:02:21.036"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_aecf53e004d04300",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 129926,
+      "end_ms": 141036,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "We want an increase in volatility and theta is negative for us.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We want an increase in volatility and theta is negative for us.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0004@114948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 129926,
+            "end_ms": 141036,
+            "start": "00:02:09.926",
+            "end": "00:02:21.036"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0f106bb8a3494d25",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 129926,
+      "end_ms": 141036,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "Here, we are long gamma.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Here, we are long gamma.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0004@114948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 129926,
+            "end_ms": 141036,
+            "start": "00:02:09.926",
+            "end": "00:02:21.036"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e39a9d57cd79e90d",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "BUY",
+      "statement": "WHEN TO BUY OR SELL OPTIONS? \\",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "WHEN TO BUY OR SELL OPTIONS? \\",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0004@114948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 114948,
+            "end_ms": 114948,
+            "start": "00:01:54.948",
+            "end": "00:01:54.948"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c645ab5a8dbfd5ec",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "SELL",
+      "statement": "WHEN TO BUY OR SELL OPTIONS? \\",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "WHEN TO BUY OR SELL OPTIONS? \\",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0004@114948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 114948,
+            "end_ms": 114948,
+            "start": "00:01:54.948",
+            "end": "00:01:54.948"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b433127478c08efc",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "BUY",
+      "statement": "Tee IRE BUY",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Tee IRE BUY",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0004@114948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 114948,
+            "end_ms": 114948,
+            "start": "00:01:54.948",
+            "end": "00:01:54.948"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_21ca3cb4d1678982",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "SELL",
+      "statement": "SELL IF VOLATILITY 1S LOW WE CAN.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "SELL IF VOLATILITY 1S LOW WE CAN.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0004@114948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 114948,
+            "end_ms": 114948,
+            "start": "00:01:54.948",
+            "end": "00:01:54.948"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b5b7496956fdc45c",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "VOLATILITY",
+      "statement": "SELL IF VOLATILITY 1S LOW WE CAN.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "SELL IF VOLATILITY 1S LOW WE CAN.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0004@114948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 114948,
+            "end_ms": 114948,
+            "start": "00:01:54.948",
+            "end": "00:01:54.948"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a78154b849fa7676",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 141606,
+      "end_ms": 145292,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "Selling",
+      "statement": "Selling options in many cases gives us a better chance of winning than buying options.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Selling options in many cases gives us a better chance of winning than buying options.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0005@156340ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 141606,
+            "end_ms": 145292,
+            "start": "00:02:21.606",
+            "end": "00:02:25.292"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_05f93fbd9406eaad",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 141606,
+      "end_ms": 145292,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "Selling options in many cases gives us a better chance of winning than buying options.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Selling options in many cases gives us a better chance of winning than buying options.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0005@156340ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 141606,
+            "end_ms": 145292,
+            "start": "00:02:21.606",
+            "end": "00:02:25.292"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1d9eae01f6576bf1",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 145798,
+      "end_ms": 150060,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "So when we look at underlings, how do we know if volatility is relatively high or low?",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "So when we look at underlings, how do we know if volatility is relatively high or low?",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0005@156340ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 145798,
+            "end_ms": 150060,
+            "start": "00:02:25.798",
+            "end": "00:02:30.060"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_97c219a404a2b651",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 150566,
+      "end_ms": 156076,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "It is not enough just to look at the data on implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It is not enough just to look at the data on implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0005@156340ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 150566,
+            "end_ms": 156076,
+            "start": "00:02:30.566",
+            "end": "00:02:36.076"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_809706b34b0f4ef5",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 169190,
+      "end_ms": 191324,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "Here we can rank for implied volatility and we can see that both Bank of America, Microsoft and Apple have similar implied volatility, around 35 or 36%.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Here we can rank for implied volatility and we can see that both Bank of America, Microsoft and Apple have similar implied volatility, around 35 or 36%.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0005@156340ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 169190,
+            "end_ms": 191324,
+            "start": "00:02:49.190",
+            "end": "00:03:11.324"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8040b16b36bfcc5d",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 169190,
+      "end_ms": 191324,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "So it might appear that these three stocks are on the same level of volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "So it might appear that these three stocks are on the same level of volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0005@156340ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 169190,
+            "end_ms": 191324,
+            "start": "00:02:49.190",
+            "end": "00:03:11.324"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_dc218af3ae7b96f8",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 169190,
+      "end_ms": 191324,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "We need to therefore analyze how implied volatility has moved historically.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We need to therefore analyze how implied volatility has moved historically.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0005@156340ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 169190,
+            "end_ms": 191324,
+            "start": "00:02:49.190",
+            "end": "00:03:11.324"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_27782d4b72251a75",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 206502,
+      "end_ms": 219052,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "An IV rank of 100% means that the current implied volatility is at its highest level in the last year.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "An IV rank of 100% means that the current implied volatility is at its highest level in the last year.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0005@156340ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 206502,
+            "end_ms": 219052,
+            "start": "00:03:26.502",
+            "end": "00:03:39.052"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_316c3ef4962fc0fd",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 206502,
+      "end_ms": 219052,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "An IV rank close to zero represents an implied volatility that is close to the low of the last year.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "An IV rank close to zero represents an implied volatility that is close to the low of the last year.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0005@156340ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 206502,
+            "end_ms": 219052,
+            "start": "00:03:26.502",
+            "end": "00:03:39.052"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a7c953a5fb46680f",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 219590,
+      "end_ms": 241116,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "IV percentile calculates the percentage of days in the last year in which the implied volatility was less than the present value.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "IV percentile calculates the percentage of days in the last year in which the implied volatility was less than the present value.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 219590,
+            "end_ms": 241116,
+            "start": "00:03:39.590",
+            "end": "00:04:01.116"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_32efa7455188b7ad",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 219590,
+      "end_ms": 241116,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "For example, an IV percentile of 70% means that on 70% of the days in the last year we had lower implied volatility than today.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For example, an IV percentile of 70% means that on 70% of the days in the last year we had lower implied volatility than today.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 219590,
+            "end_ms": 241116,
+            "start": "00:03:39.590",
+            "end": "00:04:01.116"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2997133704aab9a5",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 219590,
+      "end_ms": 241116,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "IV Ranger 4 allows us to make a comparison between different stocks and ETFs to understand which ones can be the best for buying or selling options.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "IV Ranger 4 allows us to make a comparison between different stocks and ETFs to understand which ones can be the best for buying or selling options.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 219590,
+            "end_ms": 241116,
+            "start": "00:03:39.590",
+            "end": "00:04:01.116"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ab446bf87f5cea43",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 219590,
+      "end_ms": 241116,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "IV Ranger 4 allows us to make a comparison between different stocks and ETFs to understand which ones can be the best for buying or selling options.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "IV Ranger 4 allows us to make a comparison between different stocks and ETFs to understand which ones can be the best for buying or selling options.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 219590,
+            "end_ms": 241116,
+            "start": "00:03:39.590",
+            "end": "00:04:01.116"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6af096f7f570b8fc",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 257862,
+      "end_ms": 278684,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "On these underlines we can use selling strategies with higher risk, for example Stratos/Strangos butterflies.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "On these underlines we can use selling strategies with higher risk, for example Stratos/Strangos butterflies.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 257862,
+            "end_ms": 278684,
+            "start": "00:04:17.862",
+            "end": "00:04:38.684"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f029168635fba9eb",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 257862,
+      "end_ms": 278684,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "Option selling strategies still gives us better odds of winning, but we must limit our risk.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Option selling strategies still gives us better odds of winning, but we must limit our risk.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 257862,
+            "end_ms": 278684,
+            "start": "00:04:17.862",
+            "end": "00:04:38.684"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4f65611e2b2b5638",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 287814,
+      "end_ms": 291180,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "With low implied volatility we should avoid or limit selling options.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "With low implied volatility we should avoid or limit selling options.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 287814,
+            "end_ms": 291180,
+            "start": "00:04:47.814",
+            "end": "00:04:51.180"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_860e4a51dff80882",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 287814,
+      "end_ms": 291180,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "With low implied volatility we should avoid or limit selling options.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "With low implied volatility we should avoid or limit selling options.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 287814,
+            "end_ms": 291180,
+            "start": "00:04:47.814",
+            "end": "00:04:51.180"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_539b6077b1bd86c0",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 291750,
+      "end_ms": 311676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "In these cases we can focus on buying options, perhaps limiting our risk through spreads.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In these cases we can focus on buying options, perhaps limiting our risk through spreads.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "In these cases we can focus on buying options, perhaps limiting our risk through spreads. IV rank and IV percentile in general can be used in conjunction with our Q-Modes. For example, we like to use Jacks to confirm the direction of volatility. If we sell options, we want volatility to start going down. Jacks going higher is good for our strategy.",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0006@296997ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 291750,
+            "end_ms": 311676,
+            "start": "00:04:51.750",
+            "end": "00:05:11.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_75061384908e0cb0",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 291750,
+      "end_ms": 311676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "GEX",
+      "surface": "GEX",
+      "statement": "For example, we like to use GEX to confirm the direction of volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For example, we like to use GEX to confirm the direction of volatility.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "In these cases we can focus on buying options, perhaps limiting our risk through spreads. IV rank and IV percentile in general can be used in conjunction with our Q-Modes. For example, we like to use Jacks to confirm the direction of volatility. If we sell options, we want volatility to start going down. Jacks going higher is good for our strategy.",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0006@296997ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 291750,
+            "end_ms": 311676,
+            "start": "00:04:51.750",
+            "end": "00:05:11.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_261cfb1c5d84084f",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 291750,
+      "end_ms": 311676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "For example, we like to use GEX to confirm the direction of volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For example, we like to use GEX to confirm the direction of volatility.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "In these cases we can focus on buying options, perhaps limiting our risk through spreads. IV rank and IV percentile in general can be used in conjunction with our Q-Modes. For example, we like to use Jacks to confirm the direction of volatility. If we sell options, we want volatility to start going down. Jacks going higher is good for our strategy.",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0006@296997ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 291750,
+            "end_ms": 311676,
+            "start": "00:04:51.750",
+            "end": "00:05:11.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_aa9c8d2424d503fc",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 291750,
+      "end_ms": 311676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "If we sell options, we want volatility to start going down.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If we sell options, we want volatility to start going down.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "In these cases we can focus on buying options, perhaps limiting our risk through spreads. IV rank and IV percentile in general can be used in conjunction with our Q-Modes. For example, we like to use Jacks to confirm the direction of volatility. If we sell options, we want volatility to start going down. Jacks going higher is good for our strategy.",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0006@296997ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 291750,
+            "end_ms": 311676,
+            "start": "00:04:51.750",
+            "end": "00:05:11.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7457134fe42e9b6b",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 291750,
+      "end_ms": 311676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "If we sell options, we want volatility to start going down.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If we sell options, we want volatility to start going down.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "In these cases we can focus on buying options, perhaps limiting our risk through spreads. IV rank and IV percentile in general can be used in conjunction with our Q-Modes. For example, we like to use Jacks to confirm the direction of volatility. If we sell options, we want volatility to start going down. Jacks going higher is good for our strategy.",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0006@296997ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 291750,
+            "end_ms": 311676,
+            "start": "00:04:51.750",
+            "end": "00:05:11.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_10680202f34b46c2",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 291750,
+      "end_ms": 311676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "GEX",
+      "surface": "GEX",
+      "statement": "GEX going higher is good for our strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "GEX going higher is good for our strategy.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "In these cases we can focus on buying options, perhaps limiting our risk through spreads. IV rank and IV percentile in general can be used in conjunction with our Q-Modes. For example, we like to use Jacks to confirm the direction of volatility. If we sell options, we want volatility to start going down. Jacks going higher is good for our strategy.",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0006@296997ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 291750,
+            "end_ms": 311676,
+            "start": "00:04:51.750",
+            "end": "00:05:11.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2d21854639202108",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 311814,
+      "end_ms": 314252,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "GEX",
+      "surface": "GEX",
+      "statement": "We want to see the GEX rising on the screen.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We want to see the GEX rising on the screen.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "We want to see the jacks rising on the screen.",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0007@314631ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 311814,
+            "end_ms": 314252,
+            "start": "00:05:11.814",
+            "end": "00:05:14.252"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ca6e8731c606a7f4",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 314822,
+      "end_ms": 329900,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "GEX",
+      "surface": "GEX",
+      "statement": "To confirm that the GEX is increasing we want to see an accumulation of GEX above the eyeball level.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "To confirm that the GEX is increasing we want to see an accumulation of GEX above the eyeball level.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "To confirm that the jacks is increasing we want to see an accumulation of jacks above the eyeball level. We want to see more sticky strikes from the top of the screen in the red box. This confirms that investors are starting to become more bullish on positioning and this brings volatility down.",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0007@314631ms.jpg",
+          "frames/v_70b8a82bee5a/f_0008@330213ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 314822,
+            "end_ms": 329900,
+            "start": "00:05:14.822",
+            "end": "00:05:29.900"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_146622ac8a33cd48",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 314822,
+      "end_ms": 329900,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "This confirms that investors are starting to become more bullish on positioning and this brings volatility down.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This confirms that investors are starting to become more bullish on positioning and this brings volatility down.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "To confirm that the jacks is increasing we want to see an accumulation of jacks above the eyeball level. We want to see more sticky strikes from the top of the screen in the red box. This confirms that investors are starting to become more bullish on positioning and this brings volatility down.",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0007@314631ms.jpg",
+          "frames/v_70b8a82bee5a/f_0008@330213ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 314822,
+            "end_ms": 329900,
+            "start": "00:05:14.822",
+            "end": "00:05:29.900"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f8e7244787ef7085",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 330470,
+      "end_ms": 350460,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "Again, going back to our example of selling options, we want to see how gamma is building up across the different expirations on the Option Matrix.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Again, going back to our example of selling options, we want to see how gamma is building up across the different expirations on the Option Matrix.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0008@330213ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 330470,
+            "end_ms": 350460,
+            "start": "00:05:30.470",
+            "end": "00:05:50.460"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a3678fe85a81f581",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 330470,
+      "end_ms": 350460,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "Again, going back to our example of selling options, we want to see how gamma is building up across the different expirations on the Option Matrix.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Again, going back to our example of selling options, we want to see how gamma is building up across the different expirations on the Option Matrix.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0008@330213ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 330470,
+            "end_ms": 350460,
+            "start": "00:05:30.470",
+            "end": "00:05:50.460"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_deb8f70695ed27a5",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 296997,
+      "end_ms": 296997,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Q-Models",
+      "surface": "Q-MODELS",
+      "statement": "IV RANK & Q-MODELS X",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "IV RANK & Q-MODELS X",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0006@296997ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 296997,
+            "end_ms": 296997,
+            "start": "00:04:56.997",
+            "end": "00:04:56.997"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_dd4d45ff67d93303",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 314631,
+      "end_ms": 314631,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Q-Models",
+      "surface": "Q-MODELS",
+      "statement": "IV RANK & Q-MODELS \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "IV RANK & Q-MODELS \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0007@314631ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 314631,
+            "end_ms": 314631,
+            "start": "00:05:14.631",
+            "end": "00:05:14.631"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e2cf659977d57c3e",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 330213,
+      "end_ms": 330213,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Q-Models",
+      "surface": "Q-MODELS",
+      "statement": "IV RANK & Q-MODELS SS",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "IV RANK & Q-MODELS SS",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_70b8a82bee5a/f_0008@330213ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 330213,
+            "end_ms": 330213,
+            "start": "00:05:30.213",
+            "end": "00:05:30.213"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    }
+  ]
+}

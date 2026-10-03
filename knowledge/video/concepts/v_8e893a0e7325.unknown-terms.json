@@ -1,0 +1,194 @@
+{
+  "video_id": "v_8e893a0e7325",
+  "terms": [
+    {
+      "term": "SET",
+      "context": "LONG STRANGLE: SET UP \\S",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0002",
+      "start_ms": 72673,
+      "end_ms": 72673,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "LONG STRANGLE: SET UP \\S",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0002",
+      "start_ms": 72673,
+      "end_ms": 72673,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "(© LONG OTM CALL a— a",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0002",
+      "start_ms": 72673,
+      "end_ms": 72673,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "(© LONG OTM PUT -",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0002",
+      "start_ms": 72673,
+      "end_ms": 72673,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "3, Bullish VEX",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0005",
+      "start_ms": 189723,
+      "end_ms": 189723,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "LONG STRADDLE: SET UP \\S",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0007",
+      "start_ms": 211061,
+      "end_ms": 211061,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "LONG STRADDLE: SET UP \\S",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0007",
+      "start_ms": 211061,
+      "end_ms": 211061,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "© LONG ATM PUT — = a",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0007",
+      "start_ms": 211061,
+      "end_ms": 211061,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "3, Bullish VEX",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0008",
+      "start_ms": 290674,
+      "end_ms": 290674,
+      "source": "ocr"
+    },
+    {
+      "term": "IRON",
+      "context": "IRON CONDOR t",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0009",
+      "start_ms": 307908,
+      "end_ms": 307908,
+      "source": "ocr"
+    },
+    {
+      "term": "CONDOR",
+      "context": "IRON CONDOR t",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0009",
+      "start_ms": 307908,
+      "end_ms": 307908,
+      "source": "ocr"
+    },
+    {
+      "term": "IRON",
+      "context": "IRON CONDOR: SET UP \\",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0009",
+      "start_ms": 315649,
+      "end_ms": 315649,
+      "source": "ocr"
+    },
+    {
+      "term": "CONDOR",
+      "context": "IRON CONDOR: SET UP \\",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0009",
+      "start_ms": 315649,
+      "end_ms": 315649,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "IRON CONDOR: SET UP \\",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0009",
+      "start_ms": 315649,
+      "end_ms": 315649,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "IRON CONDOR: SET UP \\",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0009",
+      "start_ms": 315649,
+      "end_ms": 315649,
+      "source": "ocr"
+    },
+    {
+      "term": "DTE",
+      "context": "If you are trading zero DTE options or daily iron condor, you can use the one day expected move.",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0011",
+      "start_ms": 462598,
+      "end_ms": 478956,
+      "source": "stt"
+    },
+    {
+      "term": "USE",
+      "context": "HOW TO USE THE Q-MODELS =",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0011",
+      "start_ms": 450734,
+      "end_ms": 450734,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "HOW TO USE THE Q-MODELS =",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0011",
+      "start_ms": 450734,
+      "end_ms": 450734,
+      "source": "ocr"
+    },
+    {
+      "term": "IRON",
+      "context": "CHECKLIST: IRON CONDOR \\S",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0012",
+      "start_ms": 497964,
+      "end_ms": 497964,
+      "source": "ocr"
+    },
+    {
+      "term": "CONDOR",
+      "context": "CHECKLIST: IRON CONDOR \\S",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0012",
+      "start_ms": 497964,
+      "end_ms": 497964,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "3, Bearish VEX",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0012",
+      "start_ms": 497964,
+      "end_ms": 497964,
+      "source": "ocr"
+    }
+  ]
+}

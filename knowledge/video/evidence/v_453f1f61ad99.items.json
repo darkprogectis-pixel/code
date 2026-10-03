@@ -1,0 +1,3548 @@
+{
+  "video_id": "v_453f1f61ad99",
+  "schema": "video-knowledge/v1",
+  "items": [
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_aa0418e277b5af86",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 5670,
+      "end_ms": 10828,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "Moneyness",
+      "statement": "Option Moneyness is the relationship between the current price of the underlying asset and the option strike price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Option Moneyness is the relationship between the current price of the underlying asset and the option strike price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0002@5372ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 5670,
+            "end_ms": 10828,
+            "start": "00:00:05.670",
+            "end": "00:00:10.828"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9b343edce1935ad8",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 18566,
+      "end_ms": 25260,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "Moneyness",
+      "statement": "Moneyness represents the intrinsic value of an option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Moneyness represents the intrinsic value of an option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 18566,
+            "end_ms": 25260,
+            "start": "00:00:18.566",
+            "end": "00:00:25.260"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_abfe03611e7dfe70",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 25766,
+      "end_ms": 34252,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "at the money",
+      "statement": "When we talk about options, we always talk about three terms, at the money or ATM, in the money or ATM, and out of the money or OTM.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When we talk about options, we always talk about three terms, at the money or ATM, in the money or ATM, and out of the money or OTM.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 25766,
+            "end_ms": 34252,
+            "start": "00:00:25.766",
+            "end": "00:00:34.252"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_111b1018708653ac",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 43942,
+      "end_ms": 57964,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "ATM",
+      "statement": "Let's start with ATM, as we already said, it stands for \"At the money\" and is used if the strike is equal to the spot price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Let's start with ATM, as we already said, it stands for \"At the money\" and is used if the strike is equal to the spot price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0003@43677ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 43942,
+            "end_ms": 57964,
+            "start": "00:00:43.942",
+            "end": "00:00:57.964"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5e6f8cdb66b6b0a3",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 43942,
+      "end_ms": 57964,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "For example, if a stock is currently quoted at $50 and we want to buy or sell an \"At the money\" option, it should have a strike of $50.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For example, if a stock is currently quoted at $50 and we want to buy or sell an \"At the money\" option, it should have a strike of $50.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0003@43677ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 43942,
+            "end_ms": 57964,
+            "start": "00:00:43.942",
+            "end": "00:00:57.964"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_eb601614a2ad143d",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 43942,
+      "end_ms": 57964,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "For example, if a stock is currently quoted at $50 and we want to buy or sell an \"At the money\" option, it should have a strike of $50.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For example, if a stock is currently quoted at $50 and we want to buy or sell an \"At the money\" option, it should have a strike of $50.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0003@43677ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 43942,
+            "end_ms": 57964,
+            "start": "00:00:43.942",
+            "end": "00:00:57.964"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e4c4157c9c29310c",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 43942,
+      "end_ms": 57964,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "At the money",
+      "statement": "For example, if a stock is currently quoted at $50 and we want to buy or sell an \"At the money\" option, it should have a strike of $50.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For example, if a stock is currently quoted at $50 and we want to buy or sell an \"At the money\" option, it should have a strike of $50.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0003@43677ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 43942,
+            "end_ms": 57964,
+            "start": "00:00:43.942",
+            "end": "00:00:57.964"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f6e3b5651e3f532b",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 62182,
+      "end_ms": 73772,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "at the money",
+      "statement": "When an option expires at the money, its assignment is not automatic but takes place only upon written request by the holder, according to the convenience.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When an option expires at the money, its assignment is not automatic but takes place only upon written request by the holder, according to the convenience.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 62182,
+            "end_ms": 73772,
+            "start": "00:01:02.182",
+            "end": "00:01:13.772"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d577c5f1f8a1f435",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 74630,
+      "end_ms": 76716,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "ITM",
+      "statement": "Let's look at ITM or in the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Let's look at ITM or in the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 74630,
+            "end_ms": 76716,
+            "start": "00:01:14.630",
+            "end": "00:01:16.716"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8be127757daba4bc",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "MONEYNESS",
+      "statement": "MONEYNESS",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "MONEYNESS",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 0,
+            "end_ms": 0,
+            "start": "00:00:00.000",
+            "end": "00:00:00.000"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a8ee46225958e9f3",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 5372,
+      "end_ms": 5372,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "MONEYNESS",
+      "statement": "OPTION MONEYNESS &",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "OPTION MONEYNESS &",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0002@5372ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 5372,
+            "end_ms": 5372,
+            "start": "00:00:05.372",
+            "end": "00:00:05.372"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ce577979bee856d1",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 5372,
+      "end_ms": 5372,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "Moneyness",
+      "statement": "© Option Moneyness is the relationship between",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Option Moneyness is the relationship between",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0002@5372ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 5372,
+            "end_ms": 5372,
+            "start": "00:00:05.372",
+            "end": "00:00:05.372"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e4b4f3441f0b1ff3",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 5372,
+      "end_ms": 5372,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "ATM",
+      "statement": "© Three terme A the Money (ATM nthe Money",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Three terme A the Money (ATM nthe Money",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0002@5372ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 5372,
+            "end_ms": 5372,
+            "start": "00:00:05.372",
+            "end": "00:00:05.372"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f6049831fb552e51",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 5372,
+      "end_ms": 5372,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "ITM",
+      "statement": "(ITM), Out of the Money (OTM)",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(ITM), Out of the Money (OTM)",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0002@5372ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 5372,
+            "end_ms": 5372,
+            "start": "00:00:05.372",
+            "end": "00:00:05.372"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_434dbc73e52b4eab",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 43677,
+      "end_ms": 43677,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "MONEYNESS",
+      "statement": "OPTION MONEYNESS &",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "OPTION MONEYNESS &",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0003@43677ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 43677,
+            "end_ms": 43677,
+            "start": "00:00:43.677",
+            "end": "00:00:43.677"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9b6dfc85d7c24403",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0002",
+      "start_ms": 85862,
+      "end_ms": 90540,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "For a call option, the strike is in the money if it is lower than the spot price of the underlying asset.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For a call option, the strike is in the money if it is lower than the spot price of the underlying asset.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 85862,
+            "end_ms": 90540,
+            "start": "00:01:25.862",
+            "end": "00:01:30.540"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ec91f78f0fe22161",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0002",
+      "start_ms": 91174,
+      "end_ms": 99212,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "For example, if a stock is currently traded at $50 and in the money call option would have a strike of say 49, 48, 47 or less.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For example, if a stock is currently traded at $50 and in the money call option would have a strike of say 49, 48, 47 or less.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 91174,
+            "end_ms": 99212,
+            "start": "00:01:31.174",
+            "end": "00:01:39.212"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_cdfcf6db7f71915f",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0002",
+      "start_ms": 99910,
+      "end_ms": 105164,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "For put options, the strike is in the money when it is higher than the current spot price of the underlying security.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For put options, the strike is in the money when it is higher than the current spot price of the underlying security.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 99910,
+            "end_ms": 105164,
+            "start": "00:01:39.910",
+            "end": "00:01:45.164"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6e7174fb24970656",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0003",
+      "start_ms": 105798,
+      "end_ms": 114028,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "So for example, if we wanted to buy an in-the-money put on a stock that costs $50, the strike should be $52, $53, $54 or more as an example.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "So for example, if we wanted to buy an in-the-money put on a stock that costs $50, the strike should be $52, $53, $54 or more as an example.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 105798,
+            "end_ms": 114028,
+            "start": "00:01:45.798",
+            "end": "00:01:54.028"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7077b6dec5e9b4c6",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 114502,
+      "end_ms": 117804,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "When an option expires in the money, its assignment is automatic.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When an option expires in the money, its assignment is automatic.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0004@181014ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 114502,
+            "end_ms": 117804,
+            "start": "00:01:54.502",
+            "end": "00:01:57.804"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_46902ae763d68374",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 125222,
+      "end_ms": 135436,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "OTM",
+      "statement": "A similar argument also applies to the term OTM, or out of the money, by the opposite sense.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "A similar argument also applies to the term OTM, or out of the money, by the opposite sense.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0004@181014ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 125222,
+            "end_ms": 135436,
+            "start": "00:02:05.222",
+            "end": "00:02:15.436"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_fd98a307b46fc126",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 136102,
+      "end_ms": 148588,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "For Colloption, the strike is out of the money if it is higher than the spot price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For Colloption, the strike is out of the money if it is higher than the spot price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0004@181014ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 136102,
+            "end_ms": 148588,
+            "start": "00:02:16.102",
+            "end": "00:02:28.588"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e598839482fa2f99",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 136102,
+      "end_ms": 148588,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "So if we wanted to buy an out-of-the-money Colloption on a stock that currently trades at $50, the option strike would need to be higher, such as $51, $54, or higher.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "So if we wanted to buy an out-of-the-money Colloption on a stock that currently trades at $50, the option strike would need to be higher, such as $51, $54, or higher.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0004@181014ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 136102,
+            "end_ms": 148588,
+            "start": "00:02:16.102",
+            "end": "00:02:28.588"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_cf4450273252fbbc",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 149254,
+      "end_ms": 162956,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "For put option, the strike is out of the money when it is lower than the spot price of the underlying security.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For put option, the strike is out of the money when it is lower than the spot price of the underlying security.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0004@181014ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 149254,
+            "end_ms": 162956,
+            "start": "00:02:29.254",
+            "end": "00:02:42.956"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0dffa4b02a4b2e33",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 149254,
+      "end_ms": 162956,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "So if we wanted to buy a put option with an out of the money strike on a security that costs $50, the strike should be lower, for example, $49, $44 or lower.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "So if we wanted to buy a put option with an out of the money strike on a security that costs $50, the strike should be lower, for example, $49, $44 or lower.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0004@181014ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 149254,
+            "end_ms": 162956,
+            "start": "00:02:29.254",
+            "end": "00:02:42.956"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d0b0a4b2fe68b620",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 149254,
+      "end_ms": 162956,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "So if we wanted to buy a put option with an out of the money strike on a security that costs $50, the strike should be lower, for example, $49, $44 or lower.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "So if we wanted to buy a put option with an out of the money strike on a security that costs $50, the strike should be lower, for example, $49, $44 or lower.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0004@181014ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 149254,
+            "end_ms": 162956,
+            "start": "00:02:29.254",
+            "end": "00:02:42.956"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b14cbfcde50a7388",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 163782,
+      "end_ms": 172556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "When an option expires out of the money, it is not exercise.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When an option expires out of the money, it is not exercise.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0004@181014ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 163782,
+            "end_ms": 172556,
+            "start": "00:02:43.782",
+            "end": "00:02:52.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5b7a7d6e4cce07e1",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 163782,
+      "end_ms": 172556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "Expired out of the money options are virtually worthless at expiration and their value goes to zero.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Expired out of the money options are virtually worthless at expiration and their value goes to zero.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0004@181014ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 163782,
+            "end_ms": 172556,
+            "start": "00:02:43.782",
+            "end": "00:02:52.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ed3811148388ed80",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 173094,
+      "end_ms": 180876,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "at the money",
+      "statement": "So briefly summarizing, while at the money have the same definition for both cause and puts, in the money and out of the money have opposite definitions.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "So briefly summarizing, while at the money have the same definition for both cause and puts, in the money and out of the money have opposite definitions.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0004@181014ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 173094,
+            "end_ms": 180876,
+            "start": "00:02:53.094",
+            "end": "00:03:00.876"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9ba0f6f6547a5a80",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 181830,
+      "end_ms": 188236,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "moneyness",
+      "statement": "Now that we have reviewed the topic of moneyness, we can go back to talking about the option value and the relationship of moneyness with the Greeks.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Now that we have reviewed the topic of moneyness, we can go back to talking about the option value and the relationship of moneyness with the Greeks.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0004@181014ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 181830,
+            "end_ms": 188236,
+            "start": "00:03:01.830",
+            "end": "00:03:08.236"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_cbfb08f5a38b7c57",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 189062,
+      "end_ms": 192364,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "moneyness",
+      "statement": "Let's look at the valuation of an option by looking at moneyness.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Let's look at the valuation of an option by looking at moneyness.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0005@192793ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 189062,
+            "end_ms": 192364,
+            "start": "00:03:09.062",
+            "end": "00:03:12.364"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3248b7e29d91aaaf",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 193094,
+      "end_ms": 199788,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "If we go back to the payoff of a call option, we can see how an out of the money option has little time value and little intrinsic value.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If we go back to the payoff of a call option, we can see how an out of the money option has little time value and little intrinsic value.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0005@192793ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 193094,
+            "end_ms": 199788,
+            "start": "00:03:13.094",
+            "end": "00:03:19.788"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f9bb1ee93603601e",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 181014,
+      "end_ms": 181014,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "MONEYNESS",
+      "statement": "MONEYNESS",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "MONEYNESS",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0004@181014ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 181014,
+            "end_ms": 181014,
+            "start": "00:03:01.014",
+            "end": "00:03:01.014"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_28bb88e3f03d66a1",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 192793,
+      "end_ms": 192793,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "DELTA",
+      "statement": "CALL DELTA: OTM SS",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "CALL DELTA: OTM SS",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0005@192793ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 192793,
+            "end_ms": 192793,
+            "start": "00:03:12.793",
+            "end": "00:03:12.793"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9b8ad9f8c5b1854c",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 192793,
+      "end_ms": 192793,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "OTM",
+      "statement": "CALL DELTA: OTM SS",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "CALL DELTA: OTM SS",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0005@192793ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 192793,
+            "end_ms": 192793,
+            "start": "00:03:12.793",
+            "end": "00:03:12.793"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_018cf7659726b99d",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0005",
+      "start_ms": 200486,
+      "end_ms": 205772,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "at the money",
+      "statement": "This happens because the option is very far from the at the money strike and the current spot price of the underlying.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This happens because the option is very far from the at the money strike and the current spot price of the underlying.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 200486,
+            "end_ms": 205772,
+            "start": "00:03:20.486",
+            "end": "00:03:25.772"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0dff99ef980290ea",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0005",
+      "start_ms": 206374,
+      "end_ms": 209324,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "Out of the Money",
+      "statement": "This type of option is also called \"Deep Out of the Money\".",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This type of option is also called \"Deep Out of the Money\".",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 206374,
+            "end_ms": 209324,
+            "start": "00:03:26.374",
+            "end": "00:03:29.324"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_89db876dfb401c4e",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0005",
+      "start_ms": 209830,
+      "end_ms": 212940,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "The chances of it ending up in the money are very remote.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The chances of it ending up in the money are very remote.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 209830,
+            "end_ms": 212940,
+            "start": "00:03:29.830",
+            "end": "00:03:32.940"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4b88be312e5dc362",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0005",
+      "start_ms": 213446,
+      "end_ms": 216652,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "We can see that out of the money calls, ever delta close to zero.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We can see that out of the money calls, ever delta close to zero.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 213446,
+            "end_ms": 216652,
+            "start": "00:03:33.446",
+            "end": "00:03:36.652"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_343a9194e10fd934",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0005",
+      "start_ms": 213446,
+      "end_ms": 216652,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "We can see that out of the money calls, ever delta close to zero.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We can see that out of the money calls, ever delta close to zero.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 213446,
+            "end_ms": 216652,
+            "start": "00:03:33.446",
+            "end": "00:03:36.652"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b72911e87dac1d6a",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0005",
+      "start_ms": 220742,
+      "end_ms": 233324,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "at the money",
+      "statement": "When the option is at the money the intrinsic value is still zero, but we are approaching a positive intrinsic value.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When the option is at the money the intrinsic value is still zero, but we are approaching a positive intrinsic value.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 220742,
+            "end_ms": 233324,
+            "start": "00:03:40.742",
+            "end": "00:03:53.324"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_bcc8336d7d99dc85",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0005",
+      "start_ms": 233798,
+      "end_ms": 239212,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "at the money",
+      "statement": "When an option is at the money, the uncertainty whether it ends up in the money or out of the money is higher.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When an option is at the money, the uncertainty whether it ends up in the money or out of the money is higher.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 233798,
+            "end_ms": 239212,
+            "start": "00:03:53.798",
+            "end": "00:03:59.212"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6afc7feec526d00b",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0005",
+      "start_ms": 242342,
+      "end_ms": 248972,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "Here we see what happens when the option is in the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Here we see what happens when the option is in the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 242342,
+            "end_ms": 248972,
+            "start": "00:04:02.342",
+            "end": "00:04:08.972"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_81b8fd5575efa59f",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0005",
+      "start_ms": 249510,
+      "end_ms": 258124,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "What is important to note, however, is that when we get deep in the money, the time value that was higher at the money decreases sharply.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "What is important to note, however, is that when we get deep in the money, the time value that was higher at the money decreases sharply.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 249510,
+            "end_ms": 258124,
+            "start": "00:04:09.510",
+            "end": "00:04:18.124"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2c5b9cfa7c6c29f1",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0005",
+      "start_ms": 263238,
+      "end_ms": 267756,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "When we are deep in the money, as in the case of this corruption, uncertainty ceases to exist.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When we are deep in the money, as in the case of this corruption, uncertainty ceases to exist.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 263238,
+            "end_ms": 267756,
+            "start": "00:04:23.238",
+            "end": "00:04:27.756"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_23acc39c2f0acbd0",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0006",
+      "start_ms": 268294,
+      "end_ms": 292668,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "We know that when the option is deep in the money, the holder will exercise the option at expiration.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We know that when the option is deep in the money, the holder will exercise the option at expiration.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0006@314948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 268294,
+            "end_ms": 292668,
+            "start": "00:04:28.294",
+            "end": "00:04:52.668"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_fa7abaec4d91e4be",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0006",
+      "start_ms": 268294,
+      "end_ms": 292668,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "From that moment, having an option in the money is equivalent of being long underlying.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "From that moment, having an option in the money is equivalent of being long underlying.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0006@314948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 268294,
+            "end_ms": 292668,
+            "start": "00:04:28.294",
+            "end": "00:04:52.668"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0d86b5974cd0dfc4",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0006",
+      "start_ms": 268294,
+      "end_ms": 292668,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "For this reason, both the deep out of the money and deep in the money options have such a lot of value as there is no uncertainty anymore.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For this reason, both the deep out of the money and deep in the money options have such a lot of value as there is no uncertainty anymore.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0006@314948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 268294,
+            "end_ms": 292668,
+            "start": "00:04:28.294",
+            "end": "00:04:52.668"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_94d7a3f7561689b0",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0006",
+      "start_ms": 268294,
+      "end_ms": 292668,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "Now, if we add the delta profile, we see that the delta has the largest variation when it comes to add the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Now, if we add the delta profile, we see that the delta has the largest variation when it comes to add the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0006@314948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 268294,
+            "end_ms": 292668,
+            "start": "00:04:28.294",
+            "end": "00:04:52.668"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_dd2a1a0e98af019b",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0006",
+      "start_ms": 296742,
+      "end_ms": 306444,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "The delta when we are deep out of the money is zero.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The delta when we are deep out of the money is zero.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0006@314948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 296742,
+            "end_ms": 306444,
+            "start": "00:04:56.742",
+            "end": "00:05:06.444"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c1e7e217f85d204a",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0006",
+      "start_ms": 296742,
+      "end_ms": 306444,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "The delta when we are deep out of the money is zero.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The delta when we are deep out of the money is zero.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0006@314948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 296742,
+            "end_ms": 306444,
+            "start": "00:04:56.742",
+            "end": "00:05:06.444"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_26fa6c53fc383e97",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0006",
+      "start_ms": 296742,
+      "end_ms": 306444,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "at the money",
+      "statement": "It increases exponentially as we approach at the money because at this point our odds of going in the money are higher and there is more uncertainty.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It increases exponentially as we approach at the money because at this point our odds of going in the money are higher and there is more uncertainty.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0006@314948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 296742,
+            "end_ms": 306444,
+            "start": "00:04:56.742",
+            "end": "00:05:06.444"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b21b756f245a01ad",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0006",
+      "start_ms": 307142,
+      "end_ms": 314604,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "It flattens out when we are deep in the money, because at that level an option with a delta of 100 moves as if we were long the underlying asset.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It flattens out when we are deep in the money, because at that level an option with a delta of 100 moves as if we were long the underlying asset.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0006@314948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 307142,
+            "end_ms": 314604,
+            "start": "00:05:07.142",
+            "end": "00:05:14.604"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_316aa5d1aa734be5",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0006",
+      "start_ms": 307142,
+      "end_ms": 314604,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "It flattens out when we are deep in the money, because at that level an option with a delta of 100 moves as if we were long the underlying asset.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It flattens out when we are deep in the money, because at that level an option with a delta of 100 moves as if we were long the underlying asset.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0006@314948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 307142,
+            "end_ms": 314604,
+            "start": "00:05:07.142",
+            "end": "00:05:14.604"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6922951788c0a1c3",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0006",
+      "start_ms": 315270,
+      "end_ms": 319052,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "At this point we can start talking about the concept of speed with regards to the delta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "At this point we can start talking about the concept of speed with regards to the delta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0006@314948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 315270,
+            "end_ms": 319052,
+            "start": "00:05:15.270",
+            "end": "00:05:19.052"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_172c8dcd541ad2a7",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0006",
+      "start_ms": 314948,
+      "end_ms": 314948,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "DELTA",
+      "statement": "DELTA SPEED \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "DELTA SPEED \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0006@314948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 314948,
+            "end_ms": 314948,
+            "start": "00:05:14.948",
+            "end": "00:05:14.948"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8ab21d36522e5d1e",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0006",
+      "start_ms": 314948,
+      "end_ms": 314948,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "Delta",
+      "statement": "Delta is Highest Delta speed",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Delta is Highest Delta speed",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0006@314948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 314948,
+            "end_ms": 314948,
+            "start": "00:05:14.948",
+            "end": "00:05:14.948"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c9885a75233440d5",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0006",
+      "start_ms": 314948,
+      "end_ms": 314948,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "Delta",
+      "statement": "faster closer Delta near [J decreases",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "faster closer Delta near [J decreases",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0006@314948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 314948,
+            "end_ms": 314948,
+            "start": "00:05:14.948",
+            "end": "00:05:14.948"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_646bd849e8529c7d",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0006",
+      "start_ms": 314948,
+      "end_ms": 314948,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "ATM",
+      "statement": "to ATM AT™ close to ITM",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "to ATM AT™ close to ITM",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0006@314948ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 314948,
+            "end_ms": 314948,
+            "start": "00:05:14.948",
+            "end": "00:05:14.948"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_821b6889aa5d201a",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0007",
+      "start_ms": 319686,
+      "end_ms": 323148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "We will talk about this in much more detail when we introduce the concept of gamma.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We will talk about this in much more detail when we introduce the concept of gamma.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 319686,
+            "end_ms": 323148,
+            "start": "00:05:19.686",
+            "end": "00:05:23.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_32490caa270a45f6",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0007",
+      "start_ms": 323686,
+      "end_ms": 327788,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "But for now, we know that out of the money and in the money options have low speed.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "But for now, we know that out of the money and in the money options have low speed.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 323686,
+            "end_ms": 327788,
+            "start": "00:05:23.686",
+            "end": "00:05:27.788"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_310e09b577f52134",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0008",
+      "start_ms": 332166,
+      "end_ms": 337356,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "The delta then increases as we get closer to add the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The delta then increases as we get closer to add the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0007@360594ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 332166,
+            "end_ms": 337356,
+            "start": "00:05:32.166",
+            "end": "00:05:37.356"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c5499fe2fd03a7b7",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0008",
+      "start_ms": 337958,
+      "end_ms": 360252,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "at the money",
+      "statement": "When we are at the money we are more uncertain whether our option will finish in the money or out of the money when it expires.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When we are at the money we are more uncertain whether our option will finish in the money or out of the money when it expires.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0007@360594ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 337958,
+            "end_ms": 360252,
+            "start": "00:05:37.958",
+            "end": "00:06:00.252"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5bf2c95d30d6a6c2",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0008",
+      "start_ms": 337958,
+      "end_ms": 360252,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "at the money",
+      "statement": "When we are at the money then the speed of delta has the highest value for two reasons.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When we are at the money then the speed of delta has the highest value for two reasons.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0007@360594ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 337958,
+            "end_ms": 360252,
+            "start": "00:05:37.958",
+            "end": "00:06:00.252"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "RULE",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_977d62aee4686034",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0008",
+      "start_ms": 337958,
+      "end_ms": 360252,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "When we are at the money then the speed of delta has the highest value for two reasons.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When we are at the money then the speed of delta has the highest value for two reasons.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0007@360594ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 337958,
+            "end_ms": 360252,
+            "start": "00:05:37.958",
+            "end": "00:06:00.252"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "RULE",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8d4ec6b650ad54ef",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0008",
+      "start_ms": 337958,
+      "end_ms": 360252,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "at the money",
+      "statement": "As we explained in the previous section, the highest time value is at the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "As we explained in the previous section, the highest time value is at the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0007@360594ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 337958,
+            "end_ms": 360252,
+            "start": "00:05:37.958",
+            "end": "00:06:00.252"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_448fb6256fe28c5d",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0008",
+      "start_ms": 337958,
+      "end_ms": 360252,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "And finally uncertainty decreases and so does time value once we are deep in the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "And finally uncertainty decreases and so does time value once we are deep in the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0007@360594ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 337958,
+            "end_ms": 360252,
+            "start": "00:05:37.958",
+            "end": "00:06:00.252"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_07f2444146f4b458",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0008",
+      "start_ms": 366374,
+      "end_ms": 379820,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "As we said earlier, most calls have a delta close to zero in the case of out-of-the-money options or close to 100 in the case of an in-the-money option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "As we said earlier, most calls have a delta close to zero in the case of out-of-the-money options or close to 100 in the case of an in-the-money option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0007@360594ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 366374,
+            "end_ms": 379820,
+            "start": "00:06:06.374",
+            "end": "00:06:19.820"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c363ec36bb885093",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0008",
+      "start_ms": 366374,
+      "end_ms": 379820,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "In our example, our call has an initial delta of 25.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In our example, our call has an initial delta of 25.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0007@360594ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 366374,
+            "end_ms": 379820,
+            "start": "00:06:06.374",
+            "end": "00:06:19.820"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_319407e2982522fb",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0008",
+      "start_ms": 380422,
+      "end_ms": 396396,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "If a call has a delta of 25, it is expected that the value of the option could change by 25% as the underlying changes.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If a call has a delta of 25, it is expected that the value of the option could change by 25% as the underlying changes.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0008@396696ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 380422,
+            "end_ms": 396396,
+            "start": "00:06:20.422",
+            "end": "00:06:36.396"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6b428921f6fc1803",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0008",
+      "start_ms": 396966,
+      "end_ms": 401740,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "At this point it is necessary to understand the further concept into the movement of delta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "At this point it is necessary to understand the further concept into the movement of delta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0008@396696ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 396966,
+            "end_ms": 401740,
+            "start": "00:06:36.966",
+            "end": "00:06:41.740"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_945d06eaaedbcaea",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0008",
+      "start_ms": 360594,
+      "end_ms": 360594,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "DELTA",
+      "statement": "DELTA: EXAMPLE &",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "DELTA: EXAMPLE &",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0007@360594ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 360594,
+            "end_ms": 360594,
+            "start": "00:06:00.594",
+            "end": "00:06:00.594"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_38872343b341399b",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0008",
+      "start_ms": 396696,
+      "end_ms": 396696,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "DELTA",
+      "statement": "DELTA & DIVIDENDS \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "DELTA & DIVIDENDS \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0008@396696ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 396696,
+            "end_ms": 396696,
+            "start": "00:06:36.696",
+            "end": "00:06:36.696"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9dad23529241ef29",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0009",
+      "start_ms": 439046,
+      "end_ms": 457068,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "Now, since we know that the change in the value of the option based on the underlying is given by the delta, it also means that the change in the dividends can be calculated with the delta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Now, since we know that the change in the value of the option based on the underlying is given by the delta, it also means that the change in the dividends can be calculated with the delta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 439046,
+            "end_ms": 457068,
+            "start": "00:07:19.046",
+            "end": "00:07:37.068"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3dd4fb3e54ccba40",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0009",
+      "start_ms": 457638,
+      "end_ms": 463820,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "For example, we know that if the dividend will be increased by 50 cents, the call with the delta of 70 will lose 35 cents.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For example, we know that if the dividend will be increased by 50 cents, the call with the delta of 70 will lose 35 cents.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 457638,
+            "end_ms": 463820,
+            "start": "00:07:37.638",
+            "end": "00:07:43.820"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_caae1001bac093d6",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0010",
+      "start_ms": 467270,
+      "end_ms": 473388,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Delta Hedging",
+      "surface": "delta hedging",
+      "statement": "We will talk about Greeks, delta hedging and strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We will talk about Greeks, delta hedging and strategy.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "We are now at the end of this lesson. The interesting part starts now. We will talk about Greeks, data hedging and strategy.",
+        "frame_refs": [
+          "frames/v_453f1f61ad99/f_0009@474174ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 467270,
+            "end_ms": 473388,
+            "start": "00:07:47.270",
+            "end": "00:07:53.388"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta_hedging",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    }
+  ]
+}

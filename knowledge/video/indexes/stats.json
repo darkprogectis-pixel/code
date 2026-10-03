@@ -1,0 +1,54 @@
+{
+  "schema": "alpha-video-stats/v1",
+  "at": "2026-10-03T17:23:08.119Z",
+  "videos": 23,
+  "versions_total": 23,
+  "hours_ingested": 3.35,
+  "segments": 246,
+  "transcripts": 23,
+  "frames": 434,
+  "concepts": 29,
+  "items": 2158,
+  "attribution": {
+    "API_CONFIRMED": 5,
+    "API_PROBABLE": 111,
+    "CROSS_API": 0,
+    "API_UNKNOWN": 2042
+  },
+  "unknown_terms": 629,
+  "contradictions": 248,
+  "quarantined": 1,
+  "processing_status": {
+    "INGESTED": 23
+  },
+  "per_api": {
+    "quant": {
+      "items": 0,
+      "factual": 0
+    },
+    "gamma": {
+      "items": 0,
+      "factual": 0
+    },
+    "bot": {
+      "items": 0,
+      "factual": 0
+    },
+    "q": {
+      "items": 116,
+      "factual": 5
+    },
+    "data": {
+      "items": 0,
+      "factual": 0
+    },
+    "cross_api": {
+      "items": 0,
+      "factual": 0
+    },
+    "unknown": {
+      "items": 2042,
+      "factual": 0
+    }
+  }
+}

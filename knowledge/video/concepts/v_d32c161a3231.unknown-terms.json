@@ -1,0 +1,50 @@
+{
+  "video_id": "v_d32c161a3231",
+  "terms": [
+    {
+      "term": "MODELS",
+      "context": "GAMMA: Q-MODELS \\ \\",
+      "video_id": "v_d32c161a3231",
+      "segment_id": "v_d32c161a3231_s0001",
+      "start_ms": 29029,
+      "end_ms": 29029,
+      "source": "ocr"
+    },
+    {
+      "term": "VOL",
+      "context": "GAMMA vs VOL",
+      "video_id": "v_d32c161a3231",
+      "segment_id": "v_d32c161a3231_s0002",
+      "start_ms": 41408,
+      "end_ms": 41408,
+      "source": "ocr"
+    },
+    {
+      "term": "SPOT",
+      "context": "SPOT sso $50 sot",
+      "video_id": "v_d32c161a3231",
+      "segment_id": "v_d32c161a3231_s0002",
+      "start_ms": 87254,
+      "end_ms": 87254,
+      "source": "ocr"
+    },
+    {
+      "term": "PNL",
+      "context": "In this case, a long gamma position pushes the delta to the right side and it is positive for the PNL.",
+      "video_id": "v_d32c161a3231",
+      "segment_id": "v_d32c161a3231_s0003",
+      "start_ms": 151846,
+      "end_ms": 171868,
+      "source": "stt"
+    },
+    {
+      "term": "OUTTA",
+      "context": "Mel OUTTA",
+      "video_id": "v_d32c161a3231",
+      "segment_id": "v_d32c161a3231_s0007",
+      "start_ms": 479546,
+      "end_ms": 479546,
+      "source": "ocr"
+    }
+  ]
+}

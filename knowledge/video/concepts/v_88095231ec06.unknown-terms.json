@@ -1,0 +1,140 @@
+{
+  "video_id": "v_88095231ec06",
+  "terms": [
+    {
+      "term": "TAIL",
+      "context": "TAIL RISK & NORMAL",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "RISK",
+      "context": "TAIL RISK & NORMAL",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "NORMAL",
+      "context": "TAIL RISK & NORMAL",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "NORMAL",
+      "context": "NORMAL DISTRIBUTION: THEORY \\S",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 12846,
+      "end_ms": 12846,
+      "source": "ocr"
+    },
+    {
+      "term": "THEORY",
+      "context": "NORMAL DISTRIBUTION: THEORY \\S",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 12846,
+      "end_ms": 12846,
+      "source": "ocr"
+    },
+    {
+      "term": "NORMAL",
+      "context": "NORMAL DISTRIBUTION: THEORY \\S",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 33133,
+      "end_ms": 33133,
+      "source": "ocr"
+    },
+    {
+      "term": "THEORY",
+      "context": "NORMAL DISTRIBUTION: THEORY \\S",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 33133,
+      "end_ms": 33133,
+      "source": "ocr"
+    },
+    {
+      "term": "NORMAL",
+      "context": "NORMAL DISTRIBUTION: THEORY \\S",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 42409,
+      "end_ms": 42409,
+      "source": "ocr"
+    },
+    {
+      "term": "THEORY",
+      "context": "NORMAL DISTRIBUTION: THEORY \\S",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 42409,
+      "end_ms": 42409,
+      "source": "ocr"
+    },
+    {
+      "term": "NORMAL",
+      "context": "NORMAL DISTRIBUTION: THEORY \\S",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0002",
+      "start_ms": 79279,
+      "end_ms": 79279,
+      "source": "ocr"
+    },
+    {
+      "term": "THEORY",
+      "context": "NORMAL DISTRIBUTION: THEORY \\S",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0002",
+      "start_ms": 79279,
+      "end_ms": 79279,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS EXAMPLE \\",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0004",
+      "start_ms": 170070,
+      "end_ms": 170070,
+      "source": "ocr"
+    },
+    {
+      "term": "COVID",
+      "context": "These are events like the financial crisis of 2008 and the COVID crisis.",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0005",
+      "start_ms": 200998,
+      "end_ms": 214060,
+      "source": "stt"
+    },
+    {
+      "term": "TAIL",
+      "context": "TAIL RISK hi ee. te",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0005",
+      "start_ms": 189022,
+      "end_ms": 189022,
+      "source": "ocr"
+    },
+    {
+      "term": "RISK",
+      "context": "TAIL RISK hi ee. te",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0005",
+      "start_ms": 189022,
+      "end_ms": 189022,
+      "source": "ocr"
+    }
+  ]
+}

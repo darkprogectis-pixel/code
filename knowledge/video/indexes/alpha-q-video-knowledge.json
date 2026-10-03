@@ -1,0 +1,4560 @@
+{
+  "schema": "alpha-video-knowledge/v1",
+  "name": "alpha-q-video-knowledge",
+  "api": "q",
+  "layer": "VIDEO_DERIVED_KNOWLEDGE",
+  "source_kind": "SOURCE_VIDEO",
+  "content_trust": "UNTRUSTED_EVIDENCE",
+  "policy": "factual = API_CONFIRMED and not quarantined; everything else needs review; video never overrides SOURCE_API_DOCS/SOURCE_CODE; contradictions stay UNRESOLVED",
+  "factual": [
+    {
+      "id": "vk_3773c59b8e282f14",
+      "concept": "Q-Models",
+      "statement": "For this reason, we have developed the Q-Models of MenthorQ.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_CONFIRMED",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the same sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0008",
+        "start_ms": 334758,
+        "end_ms": 352300,
+        "timestamp": "00:05:34.758–00:05:52.300",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0009@371438ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_02f2508ae05b2432",
+      "concept": "Delta Hedging",
+      "statement": "We will talk about this in details, but when we talk about MenthorQ-Models, we will see how this positioning and the delta hedging activity of the market makers can help us better understand the market trend in the short term.",
+      "knowledge_class": "RULE",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_CONFIRMED",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the same sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_413cb1d688d0",
+        "title": "3 - Market Makers.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\3 - Market Makers.mp4",
+        "segment_id": "v_413cb1d688d0_s0009",
+        "start_ms": 600486,
+        "end_ms": 612076,
+        "timestamp": "00:10:00.486–00:10:12.076",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0014@615315ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_986662c81d42f30a",
+      "concept": "Market Maker",
+      "statement": "We will talk about this in details, but when we talk about MenthorQ-Models, we will see how this positioning and the delta hedging activity of the market makers can help us better understand the market trend in the short term.",
+      "knowledge_class": "RULE",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_CONFIRMED",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the same sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_413cb1d688d0",
+        "title": "3 - Market Makers.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\3 - Market Makers.mp4",
+        "segment_id": "v_413cb1d688d0_s0009",
+        "start_ms": 600486,
+        "end_ms": 612076,
+        "timestamp": "00:10:00.486–00:10:12.076",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0014@615315ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_adac226c65dcbd36",
+      "concept": "Q-Models",
+      "statement": "This will help us follow our Q-Models but also the MenthorQ-Report when we talk about liquidity in the morning.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_CONFIRMED",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the same sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 295526,
+        "end_ms": 300556,
+        "timestamp": "00:04:55.526–00:05:00.556",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_05e99608cb4de461",
+      "concept": "Liquidity",
+      "statement": "This will help us follow our Q-Models but also the MenthorQ-Report when we talk about liquidity in the morning.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_CONFIRMED",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the same sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 295526,
+        "end_ms": 300556,
+        "timestamp": "00:04:55.526–00:05:00.556",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    }
+  ],
+  "needs_review": [
+    {
+      "id": "vk_21891f413a5dbd21",
+      "concept": "Market Maker",
+      "statement": "During the course we will talk in detail about market makers and their role in the financial system.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0008",
+        "start_ms": 305926,
+        "end_ms": 324428,
+        "timestamp": "00:05:05.926–00:05:24.428",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0009@371438ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_c739b38a32b38ee3",
+      "concept": "Market Maker",
+      "statement": "But generally speaking, when an investor enters the market, there must be a market maker on the other side who offers liquidity and stability.",
+      "knowledge_class": "RULE",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0008",
+        "start_ms": 305926,
+        "end_ms": 324428,
+        "timestamp": "00:05:05.926–00:05:24.428",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0009@371438ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_4e1fe89f2063111c",
+      "concept": "Liquidity",
+      "statement": "But generally speaking, when an investor enters the market, there must be a market maker on the other side who offers liquidity and stability.",
+      "knowledge_class": "RULE",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0008",
+        "start_ms": 305926,
+        "end_ms": 324428,
+        "timestamp": "00:05:05.926–00:05:24.428",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0009@371438ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_248a0614248b4ccc",
+      "concept": "Market Maker",
+      "statement": "However, the excessive increase in volumes and financial leverage also puts the market maker at risk.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0008",
+        "start_ms": 305926,
+        "end_ms": 324428,
+        "timestamp": "00:05:05.926–00:05:24.428",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0009@371438ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_353c3b7e424674de",
+      "concept": "Market Maker",
+      "statement": "To avoid this, the market maker must hedge using a strategy known as delta hedging.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0008",
+        "start_ms": 324966,
+        "end_ms": 334252,
+        "timestamp": "00:05:24.966–00:05:34.252",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0009@371438ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_0b8ba67a3d7a805a",
+      "concept": "Delta Hedging",
+      "statement": "To avoid this, the market maker must hedge using a strategy known as delta hedging.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0008",
+        "start_ms": 324966,
+        "end_ms": 334252,
+        "timestamp": "00:05:24.966–00:05:34.252",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0009@371438ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_208b8f279a6e4156",
+      "concept": "Market Maker",
+      "statement": "We will talk about this in more detail in the next lessons, but what you need to know for now is that the market maker activity tends to move market liquidity throughout the day.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "PROCEDURE",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0008",
+        "start_ms": 334758,
+        "end_ms": 352300,
+        "timestamp": "00:05:34.758–00:05:52.300",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0009@371438ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_5b0701dc27424dd5",
+      "concept": "Liquidity",
+      "statement": "We will talk about this in more detail in the next lessons, but what you need to know for now is that the market maker activity tends to move market liquidity throughout the day.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "PROCEDURE",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0008",
+        "start_ms": 334758,
+        "end_ms": 352300,
+        "timestamp": "00:05:34.758–00:05:52.300",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0009@371438ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_023fb29c9e61af19",
+      "concept": "Market Maker",
+      "statement": "Having a tool that helps us understand how market makers are positioning can be very helpful for investors.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0008",
+        "start_ms": 334758,
+        "end_ms": 352300,
+        "timestamp": "00:05:34.758–00:05:52.300",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0009@371438ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_c4565edacd0ed4d0",
+      "concept": "Market Maker",
+      "statement": "We are looking to follow the activity of market makers to allow us to predict possible upward and downward movements and identify price areas on which to build our strategy.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0008",
+        "start_ms": 352806,
+        "end_ms": 371148,
+        "timestamp": "00:05:52.806–00:06:11.148",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0009@371438ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_00db593eb052a492",
+      "concept": "Delta",
+      "statement": "Let's start with an introduction to Delta Haging.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0008",
+        "start_ms": 352806,
+        "end_ms": 371148,
+        "timestamp": "00:05:52.806–00:06:11.148",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0009@371438ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_3575e9b2d29104fb",
+      "concept": "Moneyness",
+      "statement": "OPTION MONEYNESS &",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0008",
+        "start_ms": 371438,
+        "end_ms": 371438,
+        "timestamp": "00:06:11.438–00:06:11.438",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0009@371438ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_3fb0128705f4aa61",
+      "concept": "Market Maker",
+      "statement": "The market maker does not want the directional movement to condition his book or risk.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 530470,
+        "end_ms": 553724,
+        "timestamp": "00:08:50.470–00:09:13.724",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0014@573273ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_5dbf96499ff42942",
+      "concept": "Delta",
+      "statement": "To manage the risk, he must manage the delta of his book, the delta that you saw in the previous slide.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 530470,
+        "end_ms": 553724,
+        "timestamp": "00:08:50.470–00:09:13.724",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0014@573273ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_7189da91810b8bb4",
+      "concept": "Moneyness",
+      "statement": "The more the moneyness of our option changes, the more the market maker has to manage the risk.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 530470,
+        "end_ms": 553724,
+        "timestamp": "00:08:50.470–00:09:13.724",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0014@573273ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_552a1001f3d2d5f4",
+      "concept": "Market Maker",
+      "statement": "The more the moneyness of our option changes, the more the market maker has to manage the risk.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 530470,
+        "end_ms": 553724,
+        "timestamp": "00:08:50.470–00:09:13.724",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0014@573273ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_01f771a3d9dd28a6",
+      "concept": "Delta Hedging",
+      "statement": "It basically does what we introduced earlier, delta hedging.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 530470,
+        "end_ms": 553724,
+        "timestamp": "00:08:50.470–00:09:13.724",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0014@573273ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_c2f4245393de5759",
+      "concept": "Delta Hedging",
+      "statement": "Delta hedging is a risk management technique used to manage options, positions.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 530470,
+        "end_ms": 553724,
+        "timestamp": "00:08:50.470–00:09:13.724",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0014@573273ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_ed70b3b32986c0c3",
+      "concept": "Delta",
+      "statement": "It involves adjusting the number of shares of the underlying assets, both or sold, in order to maintain a constant delta value for the option.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 554118,
+        "end_ms": 576668,
+        "timestamp": "00:09:14.118–00:09:36.668",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0014@573273ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_b10cb3a9b29b1e9e",
+      "concept": "Delta",
+      "statement": "By keeping the delta value constant, the sensitivity of the options priced to fluctuation of the underlying price is minimized, helping to manage risk.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 554118,
+        "end_ms": 576668,
+        "timestamp": "00:09:14.118–00:09:36.668",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0014@573273ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_f058e04d1fd70ca7",
+      "concept": "BUY",
+      "statement": "If we buy and add the money put, the market maker is short put.",
+      "knowledge_class": "RULE",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 554118,
+        "end_ms": 576668,
+        "timestamp": "00:09:14.118–00:09:36.668",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0014@573273ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_ffb8b1aa84948518",
+      "concept": "Market Maker",
+      "statement": "If we buy and add the money put, the market maker is short put.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [
+        "vc_b726c0fa19392359",
+        "vc_36bb382e45ce0524",
+        "vc_7c9bf5e93c72cfb7",
+        "vc_d9d7c6325e0417ad"
+      ],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 554118,
+        "end_ms": 576668,
+        "timestamp": "00:09:14.118–00:09:36.668",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0014@573273ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_516be8c0870667d5",
+      "concept": "SELL",
+      "statement": "and must sell the underlying.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 576838,
+        "end_ms": 598524,
+        "timestamp": "00:09:36.838–00:09:58.524",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0015@582282ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_0df87fae91a4071c",
+      "concept": "Delta",
+      "statement": "The \"add the money delta\" of an option is 50 delta.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 576838,
+        "end_ms": 598524,
+        "timestamp": "00:09:36.838–00:09:58.524",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0015@582282ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_7ab0b24dd20a68f3",
+      "concept": "Market Maker",
+      "statement": "For this reason, the market maker must short 50% of the value of the put to be delta hedged.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 576838,
+        "end_ms": 598524,
+        "timestamp": "00:09:36.838–00:09:58.524",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0015@582282ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_9d7cc4cff48c8604",
+      "concept": "Delta",
+      "statement": "For this reason, the market maker must short 50% of the value of the put to be delta hedged.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 576838,
+        "end_ms": 598524,
+        "timestamp": "00:09:36.838–00:09:58.524",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0015@582282ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_e9c3ecfaaee78273",
+      "concept": "Market Maker",
+      "statement": "The market maker continues to buy and sell the underlying based on the movement of the delta.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 576838,
+        "end_ms": 598524,
+        "timestamp": "00:09:36.838–00:09:58.524",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0015@582282ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_935209e7e553ad3f",
+      "concept": "BUY",
+      "statement": "The market maker continues to buy and sell the underlying based on the movement of the delta.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 576838,
+        "end_ms": 598524,
+        "timestamp": "00:09:36.838–00:09:58.524",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0015@582282ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_66f217e8fd6d050c",
+      "concept": "SELL",
+      "statement": "The market maker continues to buy and sell the underlying based on the movement of the delta.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 576838,
+        "end_ms": 598524,
+        "timestamp": "00:09:36.838–00:09:58.524",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0015@582282ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_86e40e85f24cee46",
+      "concept": "Delta",
+      "statement": "The market maker continues to buy and sell the underlying based on the movement of the delta.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 576838,
+        "end_ms": 598524,
+        "timestamp": "00:09:36.838–00:09:58.524",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0015@582282ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_e151bf835f502478",
+      "concept": "BUY",
+      "statement": "As we can see, by buying or selling shares, the market maker adds or removes liquidity.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 576838,
+        "end_ms": 598524,
+        "timestamp": "00:09:36.838–00:09:58.524",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0015@582282ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_8b92e565b3557d3b",
+      "concept": "SELL",
+      "statement": "As we can see, by buying or selling shares, the market maker adds or removes liquidity.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 576838,
+        "end_ms": 598524,
+        "timestamp": "00:09:36.838–00:09:58.524",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0015@582282ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_3bfa372ad836803e",
+      "concept": "Market Maker",
+      "statement": "As we can see, by buying or selling shares, the market maker adds or removes liquidity.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 576838,
+        "end_ms": 598524,
+        "timestamp": "00:09:36.838–00:09:58.524",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0015@582282ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_6360ba612a8b918a",
+      "concept": "Liquidity",
+      "statement": "As we can see, by buying or selling shares, the market maker adds or removes liquidity.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 576838,
+        "end_ms": 598524,
+        "timestamp": "00:09:36.838–00:09:58.524",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0015@582282ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_6b0c3591ca821c8b",
+      "concept": "Delta",
+      "statement": "The more the price of the underlying changes, the more the option delta changes.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 600102,
+        "end_ms": 608652,
+        "timestamp": "00:10:00.102–00:10:08.652",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0016@608908ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_f03b93049c57123b",
+      "concept": "Delta Hedging",
+      "statement": "DELTA HEDGING: LONG PUT &",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 573273,
+        "end_ms": 573273,
+        "timestamp": "00:09:33.273–00:09:33.273",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0014@573273ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_578458a85370b1cd",
+      "concept": "Market Maker",
+      "statement": "Investor Market Maker",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 573273,
+        "end_ms": 573273,
+        "timestamp": "00:09:33.273–00:09:33.273",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0014@573273ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_dd09c90a332f7495",
+      "concept": "Delta Hedging",
+      "statement": "DELTA HEDGING: LONG PUT &",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 582282,
+        "end_ms": 582282,
+        "timestamp": "00:09:42.282–00:09:42.282",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0015@582282ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_fd072ce34034272b",
+      "concept": "Market Maker",
+      "statement": "Investor Market Maker",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_61f3b59bfb8e",
+        "title": "2 -The Options Market.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 582282,
+        "end_ms": 582282,
+        "timestamp": "00:09:42.282–00:09:42.282",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0015@582282ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_85d9ee62519e0925",
+      "concept": "SELL",
+      "statement": "The first thing we know and that we touched on briefly earlier is that by selling an option we are creating liquidity in the market thanks to the market maker.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 301094,
+        "end_ms": 308108,
+        "timestamp": "00:05:01.094–00:05:08.108",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_f1a8554b26619ba6",
+      "concept": "Liquidity",
+      "statement": "The first thing we know and that we touched on briefly earlier is that by selling an option we are creating liquidity in the market thanks to the market maker.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "PROCEDURE",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 301094,
+        "end_ms": 308108,
+        "timestamp": "00:05:01.094–00:05:08.108",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_cb4a8db77a8272fb",
+      "concept": "Market Maker",
+      "statement": "The first thing we know and that we touched on briefly earlier is that by selling an option we are creating liquidity in the market thanks to the market maker.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "PROCEDURE",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 301094,
+        "end_ms": 308108,
+        "timestamp": "00:05:01.094–00:05:08.108",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_8bbe643bd5c04d17",
+      "concept": "BUY",
+      "statement": "The opposite happens when we buy where we are removing liquidity.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 308614,
+        "end_ms": 329308,
+        "timestamp": "00:05:08.614–00:05:29.308",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg",
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_13a57e9a819a453d",
+      "concept": "Liquidity",
+      "statement": "The opposite happens when we buy where we are removing liquidity.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 308614,
+        "end_ms": 329308,
+        "timestamp": "00:05:08.614–00:05:29.308",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg",
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_4cc111a05ddca216",
+      "concept": "Market Maker",
+      "statement": "Let's see why and let's look in detail how investor and market maker positioning changes liquidity.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 308614,
+        "end_ms": 329308,
+        "timestamp": "00:05:08.614–00:05:29.308",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg",
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_be26c5a4367a2fb2",
+      "concept": "Liquidity",
+      "statement": "Let's see why and let's look in detail how investor and market maker positioning changes liquidity.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 308614,
+        "end_ms": 329308,
+        "timestamp": "00:05:08.614–00:05:29.308",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg",
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_0615f42b77b6c85a",
+      "concept": "BUY",
+      "statement": "If as an investor we buy a call, we know that the market maker will short a call on the other end.",
+      "knowledge_class": "RULE",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 308614,
+        "end_ms": 329308,
+        "timestamp": "00:05:08.614–00:05:29.308",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg",
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_f846c6c4cbbcbd75",
+      "concept": "Market Maker",
+      "statement": "If as an investor we buy a call, we know that the market maker will short a call on the other end.",
+      "knowledge_class": "RULE",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 308614,
+        "end_ms": 329308,
+        "timestamp": "00:05:08.614–00:05:29.308",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg",
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_ac37192bf817105b",
+      "concept": "Delta",
+      "statement": "To be delta neutral, the market maker has to buy the underlying asset.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 308614,
+        "end_ms": 329308,
+        "timestamp": "00:05:08.614–00:05:29.308",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg",
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_ddd49ab15d8972b1",
+      "concept": "NEUTRAL",
+      "statement": "To be delta neutral, the market maker has to buy the underlying asset.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 308614,
+        "end_ms": 329308,
+        "timestamp": "00:05:08.614–00:05:29.308",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg",
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_f753ed1a1eeceee8",
+      "concept": "Market Maker",
+      "statement": "To be delta neutral, the market maker has to buy the underlying asset.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 308614,
+        "end_ms": 329308,
+        "timestamp": "00:05:08.614–00:05:29.308",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg",
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_070fd2ab8856b24b",
+      "concept": "BUY",
+      "statement": "To be delta neutral, the market maker has to buy the underlying asset.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 308614,
+        "end_ms": 329308,
+        "timestamp": "00:05:08.614–00:05:29.308",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg",
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_52d0a55fa3902fd4",
+      "concept": "SELL",
+      "statement": "If we sell a call to receive a premium, the market maker will be long a call.",
+      "knowledge_class": "RULE",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 308614,
+        "end_ms": 329308,
+        "timestamp": "00:05:08.614–00:05:29.308",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg",
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_4b48afa58aa85b74",
+      "concept": "Market Maker",
+      "statement": "If we sell a call to receive a premium, the market maker will be long a call.",
+      "knowledge_class": "RULE",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [
+        "vc_8cf384172103f7a4",
+        "vc_b726c0fa19392359",
+        "vc_0feff21415b23c07",
+        "vc_f70a6f9c7605470e",
+        "vc_a7d00921dc22c316"
+      ],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 308614,
+        "end_ms": 329308,
+        "timestamp": "00:05:08.614–00:05:29.308",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg",
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_6c3cc44c557e6a43",
+      "concept": "Delta",
+      "statement": "be delta-neutral the market maker has to sell the underlying.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [
+        "vc_225f2daa3a5e092c"
+      ],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "timestamp": "00:05:29.606–00:05:43.788",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_74394de90ce22717",
+      "concept": "NEUTRAL",
+      "statement": "be delta-neutral the market maker has to sell the underlying.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "timestamp": "00:05:29.606–00:05:43.788",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_d12e0732d55f13a8",
+      "concept": "Market Maker",
+      "statement": "be delta-neutral the market maker has to sell the underlying.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [
+        "vc_3fc10b090f339a97",
+        "vc_36bb382e45ce0524",
+        "vc_995aad7423051722",
+        "vc_5fc7f7b45c88808c",
+        "vc_044b92fce1b2a47d"
+      ],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "timestamp": "00:05:29.606–00:05:43.788",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_38c8fcd6610c240a",
+      "concept": "SELL",
+      "statement": "be delta-neutral the market maker has to sell the underlying.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "timestamp": "00:05:29.606–00:05:43.788",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_7a7cef9c35e1443b",
+      "concept": "BUY",
+      "statement": "When we buy a put, the market maker is short put and must sell the underlying to be delta-neutral.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "timestamp": "00:05:29.606–00:05:43.788",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_37f60e083bd86e60",
+      "concept": "Market Maker",
+      "statement": "When we buy a put, the market maker is short put and must sell the underlying to be delta-neutral.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "timestamp": "00:05:29.606–00:05:43.788",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_138c8c53ebfec99c",
+      "concept": "SELL",
+      "statement": "When we buy a put, the market maker is short put and must sell the underlying to be delta-neutral.",
+      "knowledge_class": "RULE",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "timestamp": "00:05:29.606–00:05:43.788",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_dc258125b5f1a817",
+      "concept": "Delta",
+      "statement": "When we buy a put, the market maker is short put and must sell the underlying to be delta-neutral.",
+      "knowledge_class": "RULE",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "timestamp": "00:05:29.606–00:05:43.788",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_ecbfd8ff44ad3d39",
+      "concept": "NEUTRAL",
+      "statement": "When we buy a put, the market maker is short put and must sell the underlying to be delta-neutral.",
+      "knowledge_class": "RULE",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "timestamp": "00:05:29.606–00:05:43.788",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_8147388d70eafdd4",
+      "concept": "SELL",
+      "statement": "Finally, by selling a put, the market maker is long put and this forces him to buy the underlying to be delta-neutral.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "timestamp": "00:05:29.606–00:05:43.788",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_b2f8ae324d3cbaaa",
+      "concept": "Market Maker",
+      "statement": "Finally, by selling a put, the market maker is long put and this forces him to buy the underlying to be delta-neutral.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "timestamp": "00:05:29.606–00:05:43.788",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_d9f5e55bd3fcfac8",
+      "concept": "BUY",
+      "statement": "Finally, by selling a put, the market maker is long put and this forces him to buy the underlying to be delta-neutral.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "timestamp": "00:05:29.606–00:05:43.788",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_7eef99247dd5ed05",
+      "concept": "Delta",
+      "statement": "Finally, by selling a put, the market maker is long put and this forces him to buy the underlying to be delta-neutral.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "timestamp": "00:05:29.606–00:05:43.788",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_0f317a02fc9baa68",
+      "concept": "NEUTRAL",
+      "statement": "Finally, by selling a put, the market maker is long put and this forces him to buy the underlying to be delta-neutral.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "timestamp": "00:05:29.606–00:05:43.788",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_062b00085492e55f",
+      "concept": "Market Maker",
+      "statement": "This means that the market makers positioning to remain Delta-neutral is good for the market.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "timestamp": "00:05:48.710–00:06:06.828",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_884a15de3be4ac77",
+      "concept": "Delta",
+      "statement": "This means that the market makers positioning to remain Delta-neutral is good for the market.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "timestamp": "00:05:48.710–00:06:06.828",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_9ccbf3a3f3c8523c",
+      "concept": "NEUTRAL",
+      "statement": "This means that the market makers positioning to remain Delta-neutral is good for the market.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "timestamp": "00:05:48.710–00:06:06.828",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_e1cf5dccd854e9d0",
+      "concept": "Gamma",
+      "statement": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "timestamp": "00:05:48.710–00:06:06.828",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_f2652156ccd8f4f5",
+      "concept": "Market Maker",
+      "statement": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [
+        "vc_8a5a8127d85f0d72",
+        "vc_d217af9d89f4e305",
+        "vc_c4406a1e4e5813d2",
+        "vc_7c9bf5e93c72cfb7",
+        "vc_e83b3a3b675880c1",
+        "vc_7ed29a23722be364",
+        "vc_e9a265ba6c459f3a"
+      ],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "timestamp": "00:05:48.710–00:06:06.828",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_f505dce249384f73",
+      "concept": "BUY",
+      "statement": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "timestamp": "00:05:48.710–00:06:06.828",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_c07b6b1a71c8f1fe",
+      "concept": "SELL",
+      "statement": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "timestamp": "00:05:48.710–00:06:06.828",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_5f46731fa902f0e8",
+      "concept": "Delta",
+      "statement": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [
+        "vc_a5bac6f3a6ece636",
+        "vc_214b8cfbb854e209",
+        "vc_5421d23ac95b34d0",
+        "vc_d6d970fae198f811",
+        "vc_f3b1a2e901fcddfb"
+      ],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "timestamp": "00:05:48.710–00:06:06.828",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_477f631fcb748748",
+      "concept": "NEUTRAL",
+      "statement": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "timestamp": "00:05:48.710–00:06:06.828",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_a7f5ad2e069fc27d",
+      "concept": "Delta",
+      "statement": "If this concept is not clear, we suggest you to go back to the section about Delta-haging and the practical examples.",
+      "knowledge_class": "RULE",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "timestamp": "00:05:48.710–00:06:06.828",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_5eff742b076c2553",
+      "concept": "Gamma",
+      "statement": "So we know the hedging based on gamma is a matter of market direction and the speed of that change.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 367302,
+        "end_ms": 371884,
+        "timestamp": "00:06:07.302–00:06:11.884",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_4c2966689e3d3de9",
+      "concept": "Liquidity",
+      "statement": "POSIVE & NEGATIVE LIQUIDITY &",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 300901,
+        "end_ms": 300901,
+        "timestamp": "00:05:00.901–00:05:00.901",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_0bec821f389cee9f",
+      "concept": "SELL",
+      "statement": "© SELL a Call or Put = Positive Liquidity",
+      "knowledge_class": "FORMULA",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 300901,
+        "end_ms": 300901,
+        "timestamp": "00:05:00.901–00:05:00.901",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_0ed86e5e766cf140",
+      "concept": "Liquidity",
+      "statement": "© SELL a Call or Put = Positive Liquidity",
+      "knowledge_class": "FORMULA",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 300901,
+        "end_ms": 300901,
+        "timestamp": "00:05:00.901–00:05:00.901",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_d7240e8493d011b8",
+      "concept": "BUY",
+      "statement": "© BUY a Call or Put = Negative Liquidity",
+      "knowledge_class": "FORMULA",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 300901,
+        "end_ms": 300901,
+        "timestamp": "00:05:00.901–00:05:00.901",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_4e832732e0b57471",
+      "concept": "Liquidity",
+      "statement": "© BUY a Call or Put = Negative Liquidity",
+      "knowledge_class": "FORMULA",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 300901,
+        "end_ms": 300901,
+        "timestamp": "00:05:00.901–00:05:00.901",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_81e1d03c1996bd06",
+      "concept": "Delta Hedging",
+      "statement": "DELTA HEDGING \\S",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 316950,
+        "end_ms": 316950,
+        "timestamp": "00:05:16.950–00:05:16.950",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_770728b490ef944d",
+      "concept": "Delta Hedging",
+      "statement": "DELTA HEDGING \\S",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 325592,
+        "end_ms": 325592,
+        "timestamp": "00:05:25.592–00:05:25.592",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_8b1e1461fd584a18",
+      "concept": "Delta Hedging",
+      "statement": "DELTA HEDGING \\S",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 332566,
+        "end_ms": 332566,
+        "timestamp": "00:05:32.566–00:05:32.566",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_938ec8f7cf88c368",
+      "concept": "Delta Hedging",
+      "statement": "DELTA HEDGING \\S",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 337838,
+        "end_ms": 337838,
+        "timestamp": "00:05:37.838–00:05:37.838",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0015@337838ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_6a1dd68ff8d3d3b9",
+      "concept": "Delta Hedging",
+      "statement": "DELTA HEDGING \\S",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 344077,
+        "end_ms": 344077,
+        "timestamp": "00:05:44.077–00:05:44.077",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_8ab4908e79dcfa93",
+      "concept": "Gamma",
+      "statement": "Gamma ad “)",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_57da17993b19",
+        "title": "Follow Liquidity.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 344077,
+        "end_ms": 344077,
+        "timestamp": "00:05:44.077–00:05:44.077",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_e2fe0f3bf7212608",
+      "concept": "Liquidity",
+      "statement": "Hi traders, we are going to speak about option trading and why we have developed a series of models to help investors understand liquidity and option Greeks.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0001",
+        "start_ms": 294,
+        "end_ms": 23068,
+        "timestamp": "00:00:00.294–00:00:23.068",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0001@0ms.jpg",
+          "frames/v_871fd4f53294/f_0002@23290ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_6331a8e7645073b9",
+      "concept": "Support",
+      "statement": "The goal of these models is to support your decision when placing directional trades or option trading strategies.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0001",
+        "start_ms": 294,
+        "end_ms": 23068,
+        "timestamp": "00:00:00.294–00:00:23.068",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0001@0ms.jpg",
+          "frames/v_871fd4f53294/f_0002@23290ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_d17cc5fdf29efe4f",
+      "concept": "Q-Models",
+      "statement": "We start by showing you how to read our Q-Models and how to use the data to choose the right strategy based on market positioning and volatility.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0001",
+        "start_ms": 294,
+        "end_ms": 23068,
+        "timestamp": "00:00:00.294–00:00:23.068",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0001@0ms.jpg",
+          "frames/v_871fd4f53294/f_0002@23290ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_091ced29414e6c6c",
+      "concept": "Volatility",
+      "statement": "We start by showing you how to read our Q-Models and how to use the data to choose the right strategy based on market positioning and volatility.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0001",
+        "start_ms": 294,
+        "end_ms": 23068,
+        "timestamp": "00:00:00.294–00:00:23.068",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0001@0ms.jpg",
+          "frames/v_871fd4f53294/f_0002@23290ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_59f03b770305e607",
+      "concept": "Liquidity",
+      "statement": "Then we will focus on the options liquidity model.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "PROCEDURE",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0001",
+        "start_ms": 23590,
+        "end_ms": 43804,
+        "timestamp": "00:00:23.590–00:00:43.804",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0002@23290ms.jpg",
+          "frames/v_871fd4f53294/f_0003@44878ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_9e8a27ebd682283e",
+      "concept": "Q-Models",
+      "statement": "Our Q-Models identify and visualize those factors for investors.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0001",
+        "start_ms": 44102,
+        "end_ms": 68796,
+        "timestamp": "00:00:44.102–00:01:08.796",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0003@44878ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_b7fc0f4de324850d",
+      "concept": "Q-Models",
+      "statement": "& Q-MODELS",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0001",
+        "start_ms": 0,
+        "end_ms": 0,
+        "timestamp": "00:00:00.000–00:00:00.000",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0001@0ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_d17df635fc620078",
+      "concept": "Liquidity",
+      "statement": "© Liquidity Mode!",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0001",
+        "start_ms": 23290,
+        "end_ms": 23290,
+        "timestamp": "00:00:23.290–00:00:23.290",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0002@23290ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_269e5b63673bfc31",
+      "concept": "Q-Models",
+      "statement": "(©. Trading using Q-Models",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0001",
+        "start_ms": 23290,
+        "end_ms": 23290,
+        "timestamp": "00:00:23.290–00:00:23.290",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0002@23290ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_0b410939eda51b95",
+      "concept": "Open Interest",
+      "statement": "The next thing we look is how open interest and volumes are for a specific underlying.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0015",
+        "start_ms": 750310,
+        "end_ms": 772348,
+        "timestamp": "00:12:30.310–00:12:52.348",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0028@750350ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_0c6f07ff4abc8e49",
+      "concept": "Open Interest",
+      "statement": "Open interest is a total number of options of contracts that are still open and not yet settled at the end of the trading day.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0015",
+        "start_ms": 750310,
+        "end_ms": 772348,
+        "timestamp": "00:12:30.310–00:12:52.348",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0028@750350ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_f0cf29503578b0df",
+      "concept": "Open Interest",
+      "statement": "Open interest can be used as an indicator of market interest in a particular underlying.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0015",
+        "start_ms": 750310,
+        "end_ms": 772348,
+        "timestamp": "00:12:30.310–00:12:52.348",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0028@750350ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_815128480189c124",
+      "concept": "Open Interest",
+      "statement": "A bear market would lead to an increase in open interest inputs.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0015",
+        "start_ms": 750310,
+        "end_ms": 772348,
+        "timestamp": "00:12:30.310–00:12:52.348",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0028@750350ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_41840a588b7d5aad",
+      "concept": "Open Interest",
+      "statement": "Then we have volumes that can help us understand how much of the open interest is being executed.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0015",
+        "start_ms": 772678,
+        "end_ms": 798652,
+        "timestamp": "00:12:52.678–00:13:18.652",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0028@750350ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_702de05ddc36b8b7",
+      "concept": "Open Interest",
+      "statement": "We divide open interest by cause and puts, cause in green and puts in red.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0015",
+        "start_ms": 772678,
+        "end_ms": 798652,
+        "timestamp": "00:12:52.678–00:13:18.652",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0028@750350ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_f96466bcc85fd306",
+      "concept": "Open Interest",
+      "statement": "When we start building our strategy, we want to see a growing open interest for the strikes we are interested in.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0015",
+        "start_ms": 772678,
+        "end_ms": 798652,
+        "timestamp": "00:12:52.678–00:13:18.652",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0028@750350ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_0b8471aa6d87d31e",
+      "concept": "Liquidity",
+      "statement": "Volumes are a key metric used to measure the level of activity and liquidity in the market.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0015",
+        "start_ms": 772678,
+        "end_ms": 798652,
+        "timestamp": "00:12:52.678–00:13:18.652",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0028@750350ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_32fb23b131f0c807",
+      "concept": "Liquidity",
+      "statement": "High-trading volumes are generally associated with high liquidity and indicate that there is a lot of interest and activity in a particular security or market.",
+      "knowledge_class": "DEFINITION",
+      "evidence_type": "DEFINITION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0015",
+        "start_ms": 772678,
+        "end_ms": 798652,
+        "timestamp": "00:12:52.678–00:13:18.652",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0028@750350ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_5ea8b0c5938dbba0",
+      "concept": "Open Interest",
+      "statement": "For each expiry, the tool provides Greek exposures, open interest and volumes.",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0015",
+        "start_ms": 799174,
+        "end_ms": 821500,
+        "timestamp": "00:13:19.174–00:13:41.500",
+        "text_source": "stt",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0029@804370ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_e71d5f835a183abf",
+      "concept": "Q-Models",
+      "statement": "Q-MODELS - O1 & VOLUMES iN",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0015",
+        "start_ms": 750350,
+        "end_ms": 750350,
+        "timestamp": "00:12:30.350–00:12:30.350",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0028@750350ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    },
+    {
+      "id": "vk_b0961fe3dfc84ed5",
+      "concept": "Q-Models",
+      "statement": "Q-MODELS - OPTION MATRIX \\S",
+      "knowledge_class": "HEURISTIC",
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "attribution": "API_PROBABLE",
+      "attribution_basis": "SOURCE_VIDEO: vendor named in the segment, not in the sentence",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "review_status": "PENDING_REVIEW",
+      "untrusted_flags": [],
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "provenance": {
+        "video_id": "v_871fd4f53294",
+        "title": "1 - How to use Q-Models.mp4",
+        "source": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course\\Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+        "segment_id": "v_871fd4f53294_s0015",
+        "start_ms": 804370,
+        "end_ms": 804370,
+        "timestamp": "00:13:24.370–00:13:24.370",
+        "text_source": "ocr",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0029@804370ms.jpg"
+        ]
+      },
+      "source_kind": "SOURCE_VIDEO"
+    }
+  ],
+  "quarantined": [],
+  "contradictions": [
+    {
+      "contradiction_id": "vc_a5bac6f3a6ece636",
+      "concept": "Delta",
+      "axis": "positive/negative",
+      "claim_a": "In negative gamma to be delta-neutral the market maker goes short when the market falls and goes long when it rises.",
+      "evidence_a": {
+        "item_id": "vk_7acc63c9a7c16eb9",
+        "video_id": "v_d32c161a3231",
+        "segment_id": "v_d32c161a3231_s0003",
+        "start_ms": 187622,
+        "end_ms": 193100,
+        "quote": "In negative gamma to be delta-neutral the market maker goes short when the market falls and goes long when it rises.",
+        "frame_refs": [
+          "frames/v_d32c161a3231/f_0008@145679ms.jpg"
+        ]
+      },
+      "claim_b": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "evidence_b": {
+        "item_id": "vk_5f46731fa902f0e8",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "quote": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_214b8cfbb854e209",
+      "concept": "Delta",
+      "axis": "positive/negative",
+      "claim_a": "For the delta, when the market rises, becomes negative.",
+      "evidence_a": {
+        "item_id": "vk_ae8afd16feaefdc1",
+        "video_id": "v_d32c161a3231",
+        "segment_id": "v_d32c161a3231_s0003",
+        "start_ms": 193702,
+        "end_ms": 198348,
+        "quote": "For the delta, when the market rises, becomes negative.",
+        "frame_refs": [
+          "frames/v_d32c161a3231/f_0011@198598ms.jpg"
+        ]
+      },
+      "claim_b": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "evidence_b": {
+        "item_id": "vk_5f46731fa902f0e8",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "quote": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_225f2daa3a5e092c",
+      "concept": "Delta",
+      "axis": "buy/sell",
+      "claim_a": "The GameStop case led retail and non-retail investors to excessive speculation throughout the purchase of large volumes of coal options, forcing the market maker to buy shares of the underlying stock to remain delta-hitched.",
+      "evidence_a": {
+        "item_id": "vk_a9e1b26171ec1641",
+        "video_id": "v_61f3b59bfb8e",
+        "segment_id": "v_61f3b59bfb8e_s0016",
+        "start_ms": 920742,
+        "end_ms": 945020,
+        "quote": "The GameStop case led retail and non-retail investors to excessive speculation throughout the purchase of large volumes of coal options, forcing the market maker to buy shares of the underlying stock to remain delta-hitched.",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0022@939172ms.jpg"
+        ]
+      },
+      "claim_b": "be delta-neutral the market maker has to sell the underlying.",
+      "evidence_b": {
+        "item_id": "vk_6c3cc44c557e6a43",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "quote": "be delta-neutral the market maker has to sell the underlying.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_5421d23ac95b34d0",
+      "concept": "Delta",
+      "axis": "positive/negative",
+      "claim_a": "When an option has a negative gamma, it means that an option delta will decrease as the underlying asset price moves in either direction.",
+      "evidence_a": {
+        "item_id": "vk_cef1cc3cb1bbba42",
+        "video_id": "v_a98afb1700f1",
+        "segment_id": "v_a98afb1700f1_s0002",
+        "start_ms": 140358,
+        "end_ms": 152556,
+        "quote": "When an option has a negative gamma, it means that an option delta will decrease as the underlying asset price moves in either direction.",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0003@81915ms.jpg"
+        ]
+      },
+      "claim_b": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "evidence_b": {
+        "item_id": "vk_5f46731fa902f0e8",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "quote": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_d6d970fae198f811",
+      "concept": "Delta",
+      "axis": "positive/negative",
+      "claim_a": "In the case of a boot options, the delta is negative, the more the price of the underlying increases.",
+      "evidence_a": {
+        "item_id": "vk_21e97b6ad6a8cc6f",
+        "video_id": "v_9a19dc5c2fed",
+        "segment_id": "v_9a19dc5c2fed_s0003",
+        "start_ms": 155462,
+        "end_ms": 176188,
+        "quote": "In the case of a boot options, the delta is negative, the more the price of the underlying increases.",
+        "frame_refs": []
+      },
+      "claim_b": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "evidence_b": {
+        "item_id": "vk_5f46731fa902f0e8",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "quote": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_f3b1a2e901fcddfb",
+      "concept": "Delta",
+      "axis": "positive/negative",
+      "claim_a": "If the 25 delta skew is negative, it means the put option with the delta of 25 are more expensive than the co-option with the same delta.",
+      "evidence_a": {
+        "item_id": "vk_4ee04faa6dd1facd",
+        "video_id": "v_e347914ada0b",
+        "segment_id": "v_e347914ada0b_s0009",
+        "start_ms": 379590,
+        "end_ms": 386540,
+        "quote": "If the 25 delta skew is negative, it means the put option with the delta of 25 are more expensive than the co-option with the same delta.",
+        "frame_refs": []
+      },
+      "claim_b": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "evidence_b": {
+        "item_id": "vk_5f46731fa902f0e8",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "quote": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_8a5a8127d85f0d72",
+      "concept": "Market Maker",
+      "axis": "positive/negative",
+      "claim_a": "In negative gamma to be delta-neutral the market maker goes short when the market falls and goes long when it rises.",
+      "evidence_a": {
+        "item_id": "vk_8fcf1d0fc65e1803",
+        "video_id": "v_d32c161a3231",
+        "segment_id": "v_d32c161a3231_s0003",
+        "start_ms": 187622,
+        "end_ms": 193100,
+        "quote": "In negative gamma to be delta-neutral the market maker goes short when the market falls and goes long when it rises.",
+        "frame_refs": [
+          "frames/v_d32c161a3231/f_0008@145679ms.jpg"
+        ]
+      },
+      "claim_b": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "evidence_b": {
+        "item_id": "vk_f2652156ccd8f4f5",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "quote": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_d217af9d89f4e305",
+      "concept": "Market Maker",
+      "axis": "positive/negative",
+      "claim_a": "Well instead we find ourselves in the red quadrant, it means that the market makers portfolio is in negative gamma.",
+      "evidence_a": {
+        "item_id": "vk_1d70c95e3d718955",
+        "video_id": "v_d32c161a3231",
+        "segment_id": "v_d32c161a3231_s0004",
+        "start_ms": 236038,
+        "end_ms": 241644,
+        "quote": "Well instead we find ourselves in the red quadrant, it means that the market makers portfolio is in negative gamma.",
+        "frame_refs": [
+          "frames/v_d32c161a3231/f_0012@210711ms.jpg"
+        ]
+      },
+      "claim_b": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "evidence_b": {
+        "item_id": "vk_f2652156ccd8f4f5",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "quote": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_8cf384172103f7a4",
+      "concept": "Market Maker",
+      "axis": "buy/sell",
+      "claim_a": "Every time we buy a call or put option, there is a market maker on the other side.",
+      "evidence_a": {
+        "item_id": "vk_964d196c8959cd6a",
+        "video_id": "v_61f3b59bfb8e",
+        "segment_id": "v_61f3b59bfb8e_s0010",
+        "start_ms": 497318,
+        "end_ms": 519388,
+        "quote": "Every time we buy a call or put option, there is a market maker on the other side.",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0013@512512ms.jpg"
+        ]
+      },
+      "claim_b": "If we sell a call to receive a premium, the market maker will be long a call.",
+      "evidence_b": {
+        "item_id": "vk_4b48afa58aa85b74",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 308614,
+        "end_ms": 329308,
+        "quote": "If we sell a call to receive a premium, the market maker will be long a call.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg",
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_3fc10b090f339a97",
+      "concept": "Market Maker",
+      "axis": "buy/sell",
+      "claim_a": "Every time we buy a call or put option, there is a market maker on the other side.",
+      "evidence_a": {
+        "item_id": "vk_964d196c8959cd6a",
+        "video_id": "v_61f3b59bfb8e",
+        "segment_id": "v_61f3b59bfb8e_s0010",
+        "start_ms": 497318,
+        "end_ms": 519388,
+        "quote": "Every time we buy a call or put option, there is a market maker on the other side.",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0013@512512ms.jpg"
+        ]
+      },
+      "claim_b": "be delta-neutral the market maker has to sell the underlying.",
+      "evidence_b": {
+        "item_id": "vk_d12e0732d55f13a8",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "quote": "be delta-neutral the market maker has to sell the underlying.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_c4406a1e4e5813d2",
+      "concept": "Market Maker",
+      "axis": "buy/sell",
+      "claim_a": "Every time we buy a call or put option, there is a market maker on the other side.",
+      "evidence_a": {
+        "item_id": "vk_964d196c8959cd6a",
+        "video_id": "v_61f3b59bfb8e",
+        "segment_id": "v_61f3b59bfb8e_s0010",
+        "start_ms": 497318,
+        "end_ms": 519388,
+        "quote": "Every time we buy a call or put option, there is a market maker on the other side.",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0013@512512ms.jpg"
+        ]
+      },
+      "claim_b": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "evidence_b": {
+        "item_id": "vk_f2652156ccd8f4f5",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "quote": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_b726c0fa19392359",
+      "concept": "Market Maker",
+      "axis": "buy/sell",
+      "claim_a": "If we buy and add the money put, the market maker is short put.",
+      "evidence_a": {
+        "item_id": "vk_ffb8b1aa84948518",
+        "video_id": "v_61f3b59bfb8e",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 554118,
+        "end_ms": 576668,
+        "quote": "If we buy and add the money put, the market maker is short put.",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0014@573273ms.jpg"
+        ]
+      },
+      "claim_b": "If we sell a call to receive a premium, the market maker will be long a call.",
+      "evidence_b": {
+        "item_id": "vk_4b48afa58aa85b74",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 308614,
+        "end_ms": 329308,
+        "quote": "If we sell a call to receive a premium, the market maker will be long a call.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg",
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_36bb382e45ce0524",
+      "concept": "Market Maker",
+      "axis": "buy/sell",
+      "claim_a": "If we buy and add the money put, the market maker is short put.",
+      "evidence_a": {
+        "item_id": "vk_ffb8b1aa84948518",
+        "video_id": "v_61f3b59bfb8e",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 554118,
+        "end_ms": 576668,
+        "quote": "If we buy and add the money put, the market maker is short put.",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0014@573273ms.jpg"
+        ]
+      },
+      "claim_b": "be delta-neutral the market maker has to sell the underlying.",
+      "evidence_b": {
+        "item_id": "vk_d12e0732d55f13a8",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "quote": "be delta-neutral the market maker has to sell the underlying.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_7c9bf5e93c72cfb7",
+      "concept": "Market Maker",
+      "axis": "buy/sell",
+      "claim_a": "If we buy and add the money put, the market maker is short put.",
+      "evidence_a": {
+        "item_id": "vk_ffb8b1aa84948518",
+        "video_id": "v_61f3b59bfb8e",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 554118,
+        "end_ms": 576668,
+        "quote": "If we buy and add the money put, the market maker is short put.",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0014@573273ms.jpg"
+        ]
+      },
+      "claim_b": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "evidence_b": {
+        "item_id": "vk_f2652156ccd8f4f5",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "quote": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_d9d7c6325e0417ad",
+      "concept": "Market Maker",
+      "axis": "buy/sell",
+      "claim_a": "If we buy and add the money put, the market maker is short put.",
+      "evidence_a": {
+        "item_id": "vk_ffb8b1aa84948518",
+        "video_id": "v_61f3b59bfb8e",
+        "segment_id": "v_61f3b59bfb8e_s0011",
+        "start_ms": 554118,
+        "end_ms": 576668,
+        "quote": "If we buy and add the money put, the market maker is short put.",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0014@573273ms.jpg"
+        ]
+      },
+      "claim_b": "In fact, the market maker is forced to sell when the volatility rises in order to remain delta-neutral.",
+      "evidence_b": {
+        "item_id": "vk_8c1346dedf5b78cb",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0010",
+        "start_ms": 475270,
+        "end_ms": 493068,
+        "quote": "In fact, the market maker is forced to sell when the volatility rises in order to remain delta-neutral.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0021@482215ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_0feff21415b23c07",
+      "concept": "Market Maker",
+      "axis": "buy/sell",
+      "claim_a": "The GameStop case led retail and non-retail investors to excessive speculation throughout the purchase of large volumes of coal options, forcing the market maker to buy shares of the underlying stock to remain delta-hitched.",
+      "evidence_a": {
+        "item_id": "vk_7f79e3f87f2dabd5",
+        "video_id": "v_61f3b59bfb8e",
+        "segment_id": "v_61f3b59bfb8e_s0016",
+        "start_ms": 920742,
+        "end_ms": 945020,
+        "quote": "The GameStop case led retail and non-retail investors to excessive speculation throughout the purchase of large volumes of coal options, forcing the market maker to buy shares of the underlying stock to remain delta-hitched.",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0022@939172ms.jpg"
+        ]
+      },
+      "claim_b": "If we sell a call to receive a premium, the market maker will be long a call.",
+      "evidence_b": {
+        "item_id": "vk_4b48afa58aa85b74",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 308614,
+        "end_ms": 329308,
+        "quote": "If we sell a call to receive a premium, the market maker will be long a call.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg",
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_995aad7423051722",
+      "concept": "Market Maker",
+      "axis": "buy/sell",
+      "claim_a": "The GameStop case led retail and non-retail investors to excessive speculation throughout the purchase of large volumes of coal options, forcing the market maker to buy shares of the underlying stock to remain delta-hitched.",
+      "evidence_a": {
+        "item_id": "vk_7f79e3f87f2dabd5",
+        "video_id": "v_61f3b59bfb8e",
+        "segment_id": "v_61f3b59bfb8e_s0016",
+        "start_ms": 920742,
+        "end_ms": 945020,
+        "quote": "The GameStop case led retail and non-retail investors to excessive speculation throughout the purchase of large volumes of coal options, forcing the market maker to buy shares of the underlying stock to remain delta-hitched.",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0022@939172ms.jpg"
+        ]
+      },
+      "claim_b": "be delta-neutral the market maker has to sell the underlying.",
+      "evidence_b": {
+        "item_id": "vk_d12e0732d55f13a8",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "quote": "be delta-neutral the market maker has to sell the underlying.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_e83b3a3b675880c1",
+      "concept": "Market Maker",
+      "axis": "buy/sell",
+      "claim_a": "The GameStop case led retail and non-retail investors to excessive speculation throughout the purchase of large volumes of coal options, forcing the market maker to buy shares of the underlying stock to remain delta-hitched.",
+      "evidence_a": {
+        "item_id": "vk_7f79e3f87f2dabd5",
+        "video_id": "v_61f3b59bfb8e",
+        "segment_id": "v_61f3b59bfb8e_s0016",
+        "start_ms": 920742,
+        "end_ms": 945020,
+        "quote": "The GameStop case led retail and non-retail investors to excessive speculation throughout the purchase of large volumes of coal options, forcing the market maker to buy shares of the underlying stock to remain delta-hitched.",
+        "frame_refs": [
+          "frames/v_61f3b59bfb8e/f_0022@939172ms.jpg"
+        ]
+      },
+      "claim_b": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "evidence_b": {
+        "item_id": "vk_f2652156ccd8f4f5",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "quote": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_f70a6f9c7605470e",
+      "concept": "Market Maker",
+      "axis": "buy/sell",
+      "claim_a": "Now that we understand who the market maker is and the market ecosystem, we can follow an order from when we hit the buy button through the execution and final settlement.",
+      "evidence_a": {
+        "item_id": "vk_75badb267dbb8af5",
+        "video_id": "v_413cb1d688d0",
+        "segment_id": "v_413cb1d688d0_s0005",
+        "start_ms": 358278,
+        "end_ms": 378556,
+        "quote": "Now that we understand who the market maker is and the market ecosystem, we can follow an order from when we hit the buy button through the execution and final settlement.",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0007@360160ms.jpg"
+        ]
+      },
+      "claim_b": "If we sell a call to receive a premium, the market maker will be long a call.",
+      "evidence_b": {
+        "item_id": "vk_4b48afa58aa85b74",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 308614,
+        "end_ms": 329308,
+        "quote": "If we sell a call to receive a premium, the market maker will be long a call.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg",
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_5fc7f7b45c88808c",
+      "concept": "Market Maker",
+      "axis": "buy/sell",
+      "claim_a": "Now that we understand who the market maker is and the market ecosystem, we can follow an order from when we hit the buy button through the execution and final settlement.",
+      "evidence_a": {
+        "item_id": "vk_75badb267dbb8af5",
+        "video_id": "v_413cb1d688d0",
+        "segment_id": "v_413cb1d688d0_s0005",
+        "start_ms": 358278,
+        "end_ms": 378556,
+        "quote": "Now that we understand who the market maker is and the market ecosystem, we can follow an order from when we hit the buy button through the execution and final settlement.",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0007@360160ms.jpg"
+        ]
+      },
+      "claim_b": "be delta-neutral the market maker has to sell the underlying.",
+      "evidence_b": {
+        "item_id": "vk_d12e0732d55f13a8",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "quote": "be delta-neutral the market maker has to sell the underlying.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_7ed29a23722be364",
+      "concept": "Market Maker",
+      "axis": "buy/sell",
+      "claim_a": "Now that we understand who the market maker is and the market ecosystem, we can follow an order from when we hit the buy button through the execution and final settlement.",
+      "evidence_a": {
+        "item_id": "vk_75badb267dbb8af5",
+        "video_id": "v_413cb1d688d0",
+        "segment_id": "v_413cb1d688d0_s0005",
+        "start_ms": 358278,
+        "end_ms": 378556,
+        "quote": "Now that we understand who the market maker is and the market ecosystem, we can follow an order from when we hit the buy button through the execution and final settlement.",
+        "frame_refs": [
+          "frames/v_413cb1d688d0/f_0007@360160ms.jpg"
+        ]
+      },
+      "claim_b": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "evidence_b": {
+        "item_id": "vk_f2652156ccd8f4f5",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "quote": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_a7d00921dc22c316",
+      "concept": "Market Maker",
+      "axis": "buy/sell",
+      "claim_a": "If we sell a call to receive a premium, the market maker will be long a call.",
+      "evidence_a": {
+        "item_id": "vk_4b48afa58aa85b74",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 308614,
+        "end_ms": 329308,
+        "quote": "If we sell a call to receive a premium, the market maker will be long a call.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0012@316950ms.jpg",
+          "frames/v_57da17993b19/f_0013@325592ms.jpg"
+        ]
+      },
+      "claim_b": "This is due to the fact that the market makers to stay covered short when the market goes down and buy when the market goes up.",
+      "evidence_b": {
+        "item_id": "vk_7f464283054dcd48",
+        "video_id": "v_871fd4f53294",
+        "segment_id": "v_871fd4f53294_s0008",
+        "start_ms": 455590,
+        "end_ms": 476892,
+        "quote": "This is due to the fact that the market makers to stay covered short when the market goes down and buy when the market goes up.",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0017@468234ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_044b92fce1b2a47d",
+      "concept": "Market Maker",
+      "axis": "buy/sell",
+      "claim_a": "be delta-neutral the market maker has to sell the underlying.",
+      "evidence_a": {
+        "item_id": "vk_d12e0732d55f13a8",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 329606,
+        "end_ms": 343788,
+        "quote": "be delta-neutral the market maker has to sell the underlying.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0014@332566ms.jpg",
+          "frames/v_57da17993b19/f_0015@337838ms.jpg",
+          "frames/v_57da17993b19/f_0016@344077ms.jpg"
+        ]
+      },
+      "claim_b": "This is due to the fact that the market makers to stay covered short when the market goes down and buy when the market goes up.",
+      "evidence_b": {
+        "item_id": "vk_7f464283054dcd48",
+        "video_id": "v_871fd4f53294",
+        "segment_id": "v_871fd4f53294_s0008",
+        "start_ms": 455590,
+        "end_ms": 476892,
+        "quote": "This is due to the fact that the market makers to stay covered short when the market goes down and buy when the market goes up.",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0017@468234ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    },
+    {
+      "contradiction_id": "vc_e9a265ba6c459f3a",
+      "concept": "Market Maker",
+      "axis": "buy/sell",
+      "claim_a": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+      "evidence_a": {
+        "item_id": "vk_f2652156ccd8f4f5",
+        "video_id": "v_57da17993b19",
+        "segment_id": "v_57da17993b19_s0007",
+        "start_ms": 348710,
+        "end_ms": 366828,
+        "quote": "Positive Gamma tends to be good for returns of investors because the market makers buy when the market goes down and sell when it goes up to stay Delta-neutral.",
+        "frame_refs": [
+          "frames/v_57da17993b19/f_0011@300901ms.jpg"
+        ]
+      },
+      "claim_b": "This is due to the fact that the market makers to stay covered short when the market goes down and buy when the market goes up.",
+      "evidence_b": {
+        "item_id": "vk_7f464283054dcd48",
+        "video_id": "v_871fd4f53294",
+        "segment_id": "v_871fd4f53294_s0008",
+        "start_ms": 455590,
+        "end_ms": 476892,
+        "quote": "This is due to the fact that the market makers to stay covered short when the market goes down and buy when the market goes up.",
+        "frame_refs": [
+          "frames/v_871fd4f53294/f_0017@468234ms.jpg"
+        ]
+      },
+      "status": "UNRESOLVED",
+      "resolution": null
+    }
+  ]
+}

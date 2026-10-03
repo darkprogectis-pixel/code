@@ -1,0 +1,526 @@
+{
+  "video_id": "v_5103d69108dc",
+  "schema": "video-knowledge/v1",
+  "items": [
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_81214707967ed68d",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0001",
+      "start_ms": 838,
+      "end_ms": 24284,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "The derivative market plays a crucial role in providing liquidity, price discovery, and risk management for market participants, such as investors,",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The derivative market plays a crucial role in providing liquidity, price discovery, and risk management for market participants, such as investors,",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5103d69108dc/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 838,
+            "end_ms": 24284,
+            "start": "00:00:00.838",
+            "end": "00:00:24.284"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0eb9f5f376f553f4",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0002",
+      "start_ms": 58054,
+      "end_ms": 72204,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Investors can also use derivatives to speculate on the price movement of the underlying products seeking to profit from volatility in their favor.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Investors can also use derivatives to speculate on the price movement of the underlying products seeking to profit from volatility in their favor.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5103d69108dc/f_0003@93694ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 58054,
+            "end_ms": 72204,
+            "start": "00:00:58.054",
+            "end": "00:01:12.204"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_44be226197796675",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0003",
+      "start_ms": 115558,
+      "end_ms": 143324,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "By utilizing leverage, investors can gain exposure to a larger underlying amount with less liquidity, leading to higher profits but also increasing the risk of greater losses.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "By utilizing leverage, investors can gain exposure to a larger underlying amount with less liquidity, leading to higher profits but also increasing the risk of greater losses.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5103d69108dc/f_0004@131999ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 115558,
+            "end_ms": 143324,
+            "start": "00:01:55.558",
+            "end": "00:02:23.324"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_db01b224c2ed52b7",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0004",
+      "start_ms": 143686,
+      "end_ms": 166556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "Then we have options which are contractual agreements that provide the buyer with the right but not the obligation to buy, in the case of a coal option, or sell, in the case of a put option, the underlying asset at a specified price within a specific period.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Then we have options which are contractual agreements that provide the buyer with the right but not the obligation to buy, in the case of a coal option, or sell, in the case of a put option, the underlying asset at a specified price within a specific period.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5103d69108dc/f_0005@153286ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 143686,
+            "end_ms": 166556,
+            "start": "00:02:23.686",
+            "end": "00:02:46.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_70ef6bb4f9f8f6ac",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0004",
+      "start_ms": 143686,
+      "end_ms": 166556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "Then we have options which are contractual agreements that provide the buyer with the right but not the obligation to buy, in the case of a coal option, or sell, in the case of a put option, the underlying asset at a specified price within a specific period.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Then we have options which are contractual agreements that provide the buyer with the right but not the obligation to buy, in the case of a coal option, or sell, in the case of a put option, the underlying asset at a specified price within a specific period.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5103d69108dc/f_0005@153286ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 143686,
+            "end_ms": 166556,
+            "start": "00:02:23.686",
+            "end": "00:02:46.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_225a50be2a9978cf",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0005",
+      "start_ms": 255366,
+      "end_ms": 278332,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "An exchange is a platform where investors and traders can buy and sell financial assets, such as stocks, bonds, currencies, and derivatives.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "An exchange is a platform where investors and traders can buy and sell financial assets, such as stocks, bonds, currencies, and derivatives.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5103d69108dc/f_0009@259760ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 255366,
+            "end_ms": 278332,
+            "start": "00:04:15.366",
+            "end": "00:04:38.332"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_75788c4efd864b1e",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0005",
+      "start_ms": 255366,
+      "end_ms": 278332,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "An exchange is a platform where investors and traders can buy and sell financial assets, such as stocks, bonds, currencies, and derivatives.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "An exchange is a platform where investors and traders can buy and sell financial assets, such as stocks, bonds, currencies, and derivatives.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5103d69108dc/f_0009@259760ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 255366,
+            "end_ms": 278332,
+            "start": "00:04:15.366",
+            "end": "00:04:38.332"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_97e4a1e3c273a1c2",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0006",
+      "start_ms": 278854,
+      "end_ms": 302908,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "The advantage of exchange is its liquidity, security and transparency.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The advantage of exchange is its liquidity, security and transparency.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5103d69108dc/f_0010@285285ms.jpg",
+          "frames/v_5103d69108dc/f_0011@298064ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 278854,
+            "end_ms": 302908,
+            "start": "00:04:38.854",
+            "end": "00:05:02.908"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8d43acd1a658a7b9",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0007",
+      "start_ms": 315558,
+      "end_ms": 325708,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market makers",
+      "statement": "Later in the course, we will talk about market makers, their importance, how they participate in the market, and how they relate to investors.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Later in the course, we will talk about market makers, their importance, how they participate in the market, and how they relate to investors.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_5103d69108dc/f_0012@336403ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 315558,
+            "end_ms": 325708,
+            "start": "00:05:15.558",
+            "end": "00:05:25.708"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8c10be3ae401bb0a",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0007",
+      "start_ms": 326214,
+      "end_ms": 332364,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market makers",
+      "statement": "Throughout this course, we will also look at why it's so important for an investor to understand how market makers' delta hedging works.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Throughout this course, we will also look at why it's so important for an investor to understand how market makers' delta hedging works.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "Throughout this course, we will also look at why it's so important for an investor to understand how market makers' data hedging works.",
+        "frame_refs": [
+          "frames/v_5103d69108dc/f_0012@336403ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 326214,
+            "end_ms": 332364,
+            "start": "00:05:26.214",
+            "end": "00:05:32.364"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ca474564f375154f",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0007",
+      "start_ms": 326214,
+      "end_ms": 332364,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta Hedging",
+      "surface": "delta hedging",
+      "statement": "Throughout this course, we will also look at why it's so important for an investor to understand how market makers' delta hedging works.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Throughout this course, we will also look at why it's so important for an investor to understand how market makers' delta hedging works.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "Throughout this course, we will also look at why it's so important for an investor to understand how market makers' data hedging works.",
+        "frame_refs": [
+          "frames/v_5103d69108dc/f_0012@336403ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 326214,
+            "end_ms": 332364,
+            "start": "00:05:26.214",
+            "end": "00:05:32.364"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta_hedging",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    }
+  ]
+}

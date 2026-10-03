@@ -1,0 +1,2017 @@
+{
+  "video_id": "v_54555df70b54",
+  "schema": "video-knowledge/v1",
+  "items": [
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e30aaf39c8030550",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0001",
+      "start_ms": 12870,
+      "end_ms": 32076,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "The Black Scores model is a mathematical model that takes into account many variables such as the current price of the underlying asset, the volatility, the risk-free interest rate and the time to expiration.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The Black Scores model is a mathematical model that takes into account many variables such as the current price of the underlying asset, the volatility, the risk-free interest rate and the time to expiration.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0002@12746ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 12870,
+            "end_ms": 32076,
+            "start": "00:00:12.870",
+            "end": "00:00:32.076"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_721888a08d2c9ba1",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0001",
+      "start_ms": 12746,
+      "end_ms": 12746,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "price of the underlying stock, volatility, the",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "price of the underlying stock, volatility, the",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0002@12746ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 12746,
+            "end_ms": 12746,
+            "start": "00:00:12.746",
+            "end": "00:00:12.746"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_28ac88b3d2726997",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0001",
+      "start_ms": 45312,
+      "end_ms": 45312,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "© There are no transaction costs or restrictions on short selling",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© There are no transaction costs or restrictions on short selling",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0003@45312ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 45312,
+            "end_ms": 45312,
+            "start": "00:00:45.312",
+            "end": "00:00:45.312"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4a69d4a0da28808e",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0002",
+      "start_ms": 45446,
+      "end_ms": 63340,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "There are no transaction costs or restrictions on short-selling.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "There are no transaction costs or restrictions on short-selling.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0004@71071ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 45446,
+            "end_ms": 63340,
+            "start": "00:00:45.446",
+            "end": "00:01:03.340"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_67f62a970bf9d4e7",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0003",
+      "start_ms": 127814,
+      "end_ms": 149916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "Time decay",
+      "statement": "Time decay, as we know, tends to be higher for long-term options.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Time decay, as we know, tends to be higher for long-term options.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 127814,
+            "end_ms": 149916,
+            "start": "00:02:07.814",
+            "end": "00:02:29.916"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_769d235a980d63e7",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0004",
+      "start_ms": 150278,
+      "end_ms": 173564,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "The volatility implied by the black scores model is an estimate of the level of uncertainty about the future price of the underlying stock.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The volatility implied by the black scores model is an estimate of the level of uncertainty about the future price of the underlying stock.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0006@195095ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 150278,
+            "end_ms": 173564,
+            "start": "00:02:30.278",
+            "end": "00:02:53.564"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3f42bed6bc9a299d",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0004",
+      "start_ms": 150278,
+      "end_ms": 173564,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "Implied volatility",
+      "statement": "Implied volatility is usually calculated using the current market price of an option and the black scores formula.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Implied volatility is usually calculated using the current market price of an option and the black scores formula.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0006@195095ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 150278,
+            "end_ms": 173564,
+            "start": "00:02:30.278",
+            "end": "00:02:53.564"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6666f0d575c403a5",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0004",
+      "start_ms": 173926,
+      "end_ms": 194716,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Employee volatility is used by traders to evaluate the success of option-based strategies.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Employee volatility is used by traders to evaluate the success of option-based strategies.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0006@195095ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 173926,
+            "end_ms": 194716,
+            "start": "00:02:53.926",
+            "end": "00:03:14.716"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9a5a9210bab181df",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0004",
+      "start_ms": 173926,
+      "end_ms": 194716,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "In addition, employee volatility can be used as an indicator of market expectation of the future direction of the underlying stock price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In addition, employee volatility can be used as an indicator of market expectation of the future direction of the underlying stock price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0006@195095ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 173926,
+            "end_ms": 194716,
+            "start": "00:02:53.926",
+            "end": "00:03:14.716"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_bb85fd4348a7a73b",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0004",
+      "start_ms": 204671,
+      "end_ms": 204671,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "ITM",
+      "statement": "* Only in-the-money ITM options",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "* Only in-the-money ITM options",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0007@204671ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 204671,
+            "end_ms": 204671,
+            "start": "00:03:24.671",
+            "end": "00:03:24.671"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5aa095a268426832",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0005",
+      "start_ms": 204902,
+      "end_ms": 220172,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "If an option is out of the money, the intrinsic value is zero.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If an option is out of the money, the intrinsic value is zero.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 204902,
+            "end_ms": 220172,
+            "start": "00:03:24.902",
+            "end": "00:03:40.172"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0504800ab5c704cf",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0005",
+      "start_ms": 227174,
+      "end_ms": 234636,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "Also for boot option, out of the money option we have zero intrinsic value.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Also for boot option, out of the money option we have zero intrinsic value.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 227174,
+            "end_ms": 234636,
+            "start": "00:03:47.174",
+            "end": "00:03:54.636"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0a9e04ca2fd0eebf",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0006",
+      "start_ms": 235206,
+      "end_ms": 249708,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "This is the additional value of an option beyond its intrinsic value and reflect factors such as time to expiration, implied volatility, and the potential for the underlying asset price to change.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is the additional value of an option beyond its intrinsic value and reflect factors such as time to expiration, implied volatility, and the potential for the underlying asset price to change.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 235206,
+            "end_ms": 249708,
+            "start": "00:03:55.206",
+            "end": "00:04:09.708"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e78d5a2a7b06930b",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0007",
+      "start_ms": 250182,
+      "end_ms": 270492,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "Only in the money option have intrinsic value.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Only in the money option have intrinsic value.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0008@255889ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 250182,
+            "end_ms": 270492,
+            "start": "00:04:10.182",
+            "end": "00:04:30.492"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b589a5734f0cf679",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0007",
+      "start_ms": 250182,
+      "end_ms": 270492,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "In fact, until we reach the in the money strike, there is no intrinsic value.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In fact, until we reach the in the money strike, there is no intrinsic value.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0008@255889ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 250182,
+            "end_ms": 270492,
+            "start": "00:04:10.182",
+            "end": "00:04:30.492"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a58c9fa5d43019ba",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0007",
+      "start_ms": 270726,
+      "end_ms": 291292,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "The option is clearly in the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The option is clearly in the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0008@255889ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 270726,
+            "end_ms": 291292,
+            "start": "00:04:30.726",
+            "end": "00:04:51.292"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0009bd9211fb2033",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0008",
+      "start_ms": 291430,
+      "end_ms": 310860,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "we sell the stock in the market.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "we sell the stock in the market.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 291430,
+            "end_ms": 310860,
+            "start": "00:04:51.430",
+            "end": "00:05:10.860"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_424db3b73e9ba53d",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0009",
+      "start_ms": 311462,
+      "end_ms": 332700,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "At the money",
+      "statement": "At the money and out of the money option have no intrinsic value, and finally the intrinsic value can never be negative.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "At the money and out of the money option have no intrinsic value, and finally the intrinsic value can never be negative.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0009@338972ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 311462,
+            "end_ms": 332700,
+            "start": "00:05:11.462",
+            "end": "00:05:32.700"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_22a0c70d9b23e328",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0009",
+      "start_ms": 311462,
+      "end_ms": 332700,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Time value is composed of volatility multiplied by time.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Time value is composed of volatility multiplied by time.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0009@338972ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 311462,
+            "end_ms": 332700,
+            "start": "00:05:11.462",
+            "end": "00:05:32.700"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "FORMULA",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_71ed28ccfe1067d9",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0009",
+      "start_ms": 333094,
+      "end_ms": 353084,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "OPEX",
+      "surface": "option expiration",
+      "statement": "And this is why the further the option expiration is, the more the premium and the time value increases.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "And this is why the further the option expiration is, the more the premium and the time value increases.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0009@338972ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 333094,
+            "end_ms": 353084,
+            "start": "00:05:33.094",
+            "end": "00:05:53.084"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "opex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4bc49e41928690dd",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0009",
+      "start_ms": 333094,
+      "end_ms": 353084,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "In the money",
+      "statement": "In the money options, I have premiums that are made up both by intrinsic and time value.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In the money options, I have premiums that are made up both by intrinsic and time value.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0009@338972ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 333094,
+            "end_ms": 353084,
+            "start": "00:05:33.094",
+            "end": "00:05:53.084"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_869e63391a99cfff",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0009",
+      "start_ms": 353478,
+      "end_ms": 371532,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "The amount of time value will depend on the time remaining until expiration and the implied volatility of the option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The amount of time value will depend on the time remaining until expiration and the implied volatility of the option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0009@338972ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 353478,
+            "end_ms": 371532,
+            "start": "00:05:53.478",
+            "end": "00:06:11.532"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d0fbb375c2d9a392",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0009",
+      "start_ms": 353478,
+      "end_ms": 371532,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "Out of the money",
+      "statement": "Out of the money options, I have an intrinsic value of zero and a time value of 100% of the premium.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Out of the money options, I have an intrinsic value of zero and a time value of 100% of the premium.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0009@338972ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 353478,
+            "end_ms": 371532,
+            "start": "00:05:53.478",
+            "end": "00:06:11.532"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8494259b2ebe18c5",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0009",
+      "start_ms": 353478,
+      "end_ms": 371532,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "The option is clearly out of the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The option is clearly out of the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0009@338972ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 353478,
+            "end_ms": 371532,
+            "start": "00:05:53.478",
+            "end": "00:06:11.532"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_259b117b1f030bb2",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0009",
+      "start_ms": 338972,
+      "end_ms": 338972,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "ITM",
+      "statement": "© Inthe-money ITM options have premiums made up of both intrinsic and.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Inthe-money ITM options have premiums made up of both intrinsic and.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0009@338972ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 338972,
+            "end_ms": 338972,
+            "start": "00:05:38.972",
+            "end": "00:05:38.972"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_35416ee3b12914b7",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0009",
+      "start_ms": 338972,
+      "end_ms": 338972,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "remaining until expiration and the implied volatility of the option",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "remaining until expiration and the implied volatility of the option",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0009@338972ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 338972,
+            "end_ms": 338972,
+            "start": "00:05:38.972",
+            "end": "00:05:38.972"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_54ac0bc69843e10a",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0009",
+      "start_ms": 338972,
+      "end_ms": 338972,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "OTM",
+      "statement": "© Out the Money OTM options have no intrinsic value",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Out the Money OTM options have no intrinsic value",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0009@338972ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 338972,
+            "end_ms": 338972,
+            "start": "00:05:38.972",
+            "end": "00:05:38.972"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3ccb024e3dfb2e90",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0009",
+      "start_ms": 386720,
+      "end_ms": 386720,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "Implied volatility",
+      "statement": "© Implied volatility increases time value",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Implied volatility increases time value",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0011@386720ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 386720,
+            "end_ms": 386720,
+            "start": "00:06:26.720",
+            "end": "00:06:26.720"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7b7ce07e1b484c3b",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0009",
+      "start_ms": 386720,
+      "end_ms": 386720,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "ATM",
+      "statement": "© Uncertainty, the closer we get to ATM, the more uncertainty increases",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Uncertainty, the closer we get to ATM, the more uncertainty increases",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0011@386720ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 386720,
+            "end_ms": 386720,
+            "start": "00:06:26.720",
+            "end": "00:06:26.720"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_35d7ac97bef071a1",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0009",
+      "start_ms": 386720,
+      "end_ms": 386720,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "ITM",
+      "statement": "whether the option goes ITM or OTM, This increases the time value",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "whether the option goes ITM or OTM, This increases the time value",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0011@386720ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 386720,
+            "end_ms": 386720,
+            "start": "00:06:26.720",
+            "end": "00:06:26.720"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_88b6253422d4ed55",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0010",
+      "start_ms": 386886,
+      "end_ms": 406972,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "We know also that the implied volatility increased time value.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We know also that the implied volatility increased time value.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0012@415916ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 386886,
+            "end_ms": 406972,
+            "start": "00:06:26.886",
+            "end": "00:06:46.972"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9982942f2ff3a0ab",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0010",
+      "start_ms": 386886,
+      "end_ms": 406972,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "If you remember from the previous lesson, we compared the volatility of Procter and Gamble and Tesla.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If you remember from the previous lesson, we compared the volatility of Procter and Gamble and Tesla.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0012@415916ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 386886,
+            "end_ms": 406972,
+            "start": "00:06:26.886",
+            "end": "00:06:46.972"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e898cc3dd00d093a",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0010",
+      "start_ms": 386886,
+      "end_ms": 406972,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "We saw that Tesla had higher implied volatility and more time value.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We saw that Tesla had higher implied volatility and more time value.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0012@415916ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 386886,
+            "end_ms": 406972,
+            "start": "00:06:26.886",
+            "end": "00:06:46.972"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3b559b8cab6b9198",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0010",
+      "start_ms": 407078,
+      "end_ms": 427260,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "the closer we get to add the money, the more uncertainty increases whether the option goes in the money or out of the money before expiration.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "the closer we get to add the money, the more uncertainty increases whether the option goes in the money or out of the money before expiration.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0012@415916ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 407078,
+            "end_ms": 427260,
+            "start": "00:06:47.078",
+            "end": "00:07:07.260"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c6c7f7b7feb8bdf0",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0010",
+      "start_ms": 407078,
+      "end_ms": 427260,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Finally, let's look at volatility once again.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Finally, let's look at volatility once again.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0012@415916ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 407078,
+            "end_ms": 427260,
+            "start": "00:06:47.078",
+            "end": "00:07:07.260"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b32c8cd8000208b6",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0010",
+      "start_ms": 407078,
+      "end_ms": 427260,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "Volatility",
+      "statement": "Volatility and the premium you pay or receive are correlated.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Volatility and the premium you pay or receive are correlated.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0012@415916ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 407078,
+            "end_ms": 427260,
+            "start": "00:06:47.078",
+            "end": "00:07:07.260"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_025190515c0e5483",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0010",
+      "start_ms": 407078,
+      "end_ms": 427260,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Market participants spend most of their time trying to understand the level of volatility of the asset they trade.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Market participants spend most of their time trying to understand the level of volatility of the asset they trade.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0012@415916ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 407078,
+            "end_ms": 427260,
+            "start": "00:06:47.078",
+            "end": "00:07:07.260"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9c87e6a142d8c05e",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0010",
+      "start_ms": 432230,
+      "end_ms": 438860,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "Volatility",
+      "statement": "Volatility is, as we told you before, uncertain in first of all.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Volatility is, as we told you before, uncertain in first of all.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0012@415916ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 432230,
+            "end_ms": 438860,
+            "start": "00:07:12.230",
+            "end": "00:07:18.860"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8bd38d2bd2a5b9af",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0010",
+      "start_ms": 432230,
+      "end_ms": 438860,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "So when there is volatility, the market moves on the back of that uncertainty.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "So when there is volatility, the market moves on the back of that uncertainty.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0012@415916ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 432230,
+            "end_ms": 438860,
+            "start": "00:07:12.230",
+            "end": "00:07:18.860"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ad92e44f583683c1",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0010",
+      "start_ms": 415916,
+      "end_ms": 415916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "VOLATILITY",
+      "statement": "OPTION VALUATION: VOLATILITY \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "OPTION VALUATION: VOLATILITY \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0012@415916ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 415916,
+            "end_ms": 415916,
+            "start": "00:06:55.916",
+            "end": "00:06:55.916"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ed95326bdd1e0e5f",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0010",
+      "start_ms": 415916,
+      "end_ms": 415916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "Volatility",
+      "statement": "© Volatility and the premium are interrelated",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Volatility and the premium are interrelated",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0012@415916ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 415916,
+            "end_ms": 415916,
+            "start": "00:06:55.916",
+            "end": "00:06:55.916"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_237f1d2fa7b13beb",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0010",
+      "start_ms": 415916,
+      "end_ms": 415916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "Volatility",
+      "statement": "© Volatility is one of the most important factors",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Volatility is one of the most important factors",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0012@415916ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 415916,
+            "end_ms": 415916,
+            "start": "00:06:55.916",
+            "end": "00:06:55.916"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0212e47f0dd57a40",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0010",
+      "start_ms": 415916,
+      "end_ms": 415916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "Volatility",
+      "statement": "© Volatility = Uncertainty",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Volatility = Uncertainty",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_54555df70b54/f_0012@415916ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 415916,
+            "end_ms": 415916,
+            "start": "00:06:55.916",
+            "end": "00:06:55.916"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "FORMULA",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    }
+  ]
+}

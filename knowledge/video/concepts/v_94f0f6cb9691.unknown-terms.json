@@ -1,0 +1,41 @@
+{
+  "video_id": "v_94f0f6cb9691",
+  "terms": [
+    {
+      "term": "WE",
+      "context": "THETA: WHAT WE KNOW \\S",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 82816,
+      "end_ms": 82816,
+      "source": "ocr"
+    },
+    {
+      "term": "KNOW",
+      "context": "THETA: WHAT WE KNOW \\S",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 82816,
+      "end_ms": 82816,
+      "source": "ocr"
+    },
+    {
+      "term": "EE",
+      "context": "Option Value Today = $2.75 EE Option Value",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 151351,
+      "end_ms": 151351,
+      "source": "ocr"
+    },
+    {
+      "term": "CO",
+      "context": "MENTHORQ.CO",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 225592,
+      "end_ms": 225592,
+      "source": "ocr"
+    }
+  ]
+}

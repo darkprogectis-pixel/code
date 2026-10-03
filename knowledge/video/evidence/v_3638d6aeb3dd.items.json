@@ -1,0 +1,806 @@
+{
+  "video_id": "v_3638d6aeb3dd",
+  "schema": "video-knowledge/v1",
+  "items": [
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c32068307cc52c21",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0001",
+      "start_ms": 454,
+      "end_ms": 15276,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Q-Models",
+      "surface": "Q-Models",
+      "statement": "And then we will show you how to implement these strategies using the Q-Models.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "And then we will show you how to implement these strategies using the Q-Models.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_3638d6aeb3dd/f_0001@0ms.jpg",
+          "frames/v_3638d6aeb3dd/f_0002@15582ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 454,
+            "end_ms": 15276,
+            "start": "00:00:00.454",
+            "end": "00:00:15.276"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_843ee043b1a3fd08",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0002",
+      "start_ms": 23302,
+      "end_ms": 34572,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "Single-leg strategies are those that involve buying or selling a single option contract, such as buying or selling a call option or buying or selling a put option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Single-leg strategies are those that involve buying or selling a single option contract, such as buying or selling a call option or buying or selling a put option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_3638d6aeb3dd/f_0003@64665ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 23302,
+            "end_ms": 34572,
+            "start": "00:00:23.302",
+            "end": "00:00:34.572"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_60dd702e45b63ee0",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0002",
+      "start_ms": 23302,
+      "end_ms": 34572,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "Single-leg strategies are those that involve buying or selling a single option contract, such as buying or selling a call option or buying or selling a put option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Single-leg strategies are those that involve buying or selling a single option contract, such as buying or selling a call option or buying or selling a put option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_3638d6aeb3dd/f_0003@64665ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 23302,
+            "end_ms": 34572,
+            "start": "00:00:23.302",
+            "end": "00:00:34.572"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7eebdee453ed2fbb",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0002",
+      "start_ms": 35206,
+      "end_ms": 55900,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "Multi-leg strategies, on the other hand, involve buying or selling multiple options with the goal of creating a position that has a specific risk-a-world profile.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Multi-leg strategies, on the other hand, involve buying or selling multiple options with the goal of creating a position that has a specific risk-a-world profile.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_3638d6aeb3dd/f_0003@64665ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 35206,
+            "end_ms": 55900,
+            "start": "00:00:35.206",
+            "end": "00:00:55.900"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_af083c21329e2b42",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0002",
+      "start_ms": 35206,
+      "end_ms": 55900,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "Multi-leg strategies, on the other hand, involve buying or selling multiple options with the goal of creating a position that has a specific risk-a-world profile.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Multi-leg strategies, on the other hand, involve buying or selling multiple options with the goal of creating a position that has a specific risk-a-world profile.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_3638d6aeb3dd/f_0003@64665ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 35206,
+            "end_ms": 55900,
+            "start": "00:00:35.206",
+            "end": "00:00:55.900"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_049daa08cc05eef2",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0002",
+      "start_ms": 35206,
+      "end_ms": 55900,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "For example, a strategy might involve buying a corruption and selling a corruption with a different strike and the same expiration, and creating a bull-call-spread strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For example, a strategy might involve buying a corruption and selling a corruption with a different strike and the same expiration, and creating a bull-call-spread strategy.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_3638d6aeb3dd/f_0003@64665ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 35206,
+            "end_ms": 55900,
+            "start": "00:00:35.206",
+            "end": "00:00:55.900"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7c6ac5bba944153a",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0002",
+      "start_ms": 35206,
+      "end_ms": 55900,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "For example, a strategy might involve buying a corruption and selling a corruption with a different strike and the same expiration, and creating a bull-call-spread strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For example, a strategy might involve buying a corruption and selling a corruption with a different strike and the same expiration, and creating a bull-call-spread strategy.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_3638d6aeb3dd/f_0003@64665ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 35206,
+            "end_ms": 55900,
+            "start": "00:00:35.206",
+            "end": "00:00:55.900"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_84df011186683755",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0003",
+      "start_ms": 68678,
+      "end_ms": 88796,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "NEUTRAL",
+      "surface": "neutral",
+      "statement": "Then we have neutral strategies.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Then we have neutral strategies.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_3638d6aeb3dd/f_0004@94411ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 68678,
+            "end_ms": 88796,
+            "start": "00:01:08.678",
+            "end": "00:01:28.796"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "neutral",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3b7f683551d6ca1c",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0003",
+      "start_ms": 68678,
+      "end_ms": 88796,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "In this case, we are trading volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this case, we are trading volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_3638d6aeb3dd/f_0004@94411ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 68678,
+            "end_ms": 88796,
+            "start": "00:01:08.678",
+            "end": "00:01:28.796"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_27d0143da2767c6e",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 94598,
+      "end_ms": 114716,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "By buying and selling options, it is in fact possible to build a payoff that presents a maximum risk defined at the time of execution.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "By buying and selling options, it is in fact possible to build a payoff that presents a maximum risk defined at the time of execution.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_3638d6aeb3dd/f_0005@125292ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 94598,
+            "end_ms": 114716,
+            "start": "00:01:34.598",
+            "end": "00:01:54.716"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_73c7d7bcd897df46",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 94598,
+      "end_ms": 114716,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "By buying and selling options, it is in fact possible to build a payoff that presents a maximum risk defined at the time of execution.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "By buying and selling options, it is in fact possible to build a payoff that presents a maximum risk defined at the time of execution.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_3638d6aeb3dd/f_0005@125292ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 94598,
+            "end_ms": 114716,
+            "start": "00:01:34.598",
+            "end": "00:01:54.716"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8ce2289d886a5744",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 125542,
+      "end_ms": 136972,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "When we talk about complex strategies involving buying and selling options, we need to understand the difference between credit and debit strategies.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When we talk about complex strategies involving buying and selling options, we need to understand the difference between credit and debit strategies.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_3638d6aeb3dd/f_0005@125292ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 125542,
+            "end_ms": 136972,
+            "start": "00:02:05.542",
+            "end": "00:02:16.972"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_969fbda89e30eb35",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 125542,
+      "end_ms": 136972,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "When we talk about complex strategies involving buying and selling options, we need to understand the difference between credit and debit strategies.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When we talk about complex strategies involving buying and selling options, we need to understand the difference between credit and debit strategies.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_3638d6aeb3dd/f_0005@125292ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 125542,
+            "end_ms": 136972,
+            "start": "00:02:05.542",
+            "end": "00:02:16.972"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5cc7436e0f48a4d2",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 125542,
+      "end_ms": 136972,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "Credit strategies are option selling strategies with the goal of collecting a premium.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Credit strategies are option selling strategies with the goal of collecting a premium.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_3638d6aeb3dd/f_0005@125292ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 125542,
+            "end_ms": 136972,
+            "start": "00:02:05.542",
+            "end": "00:02:16.972"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_53a8c243d1a3fd93",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 137574,
+      "end_ms": 142892,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "On the other hand, debit strategies are option buying strategies where we have to pay the cost of the premium.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "On the other hand, debit strategies are option buying strategies where we have to pay the cost of the premium.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_3638d6aeb3dd/f_0005@125292ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 137574,
+            "end_ms": 142892,
+            "start": "00:02:17.574",
+            "end": "00:02:22.892"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9d428900379e1a90",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0005",
+      "start_ms": 163686,
+      "end_ms": 186108,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "In general, debit spreads are long premium positions that benefit from environments of rising implied volatility, while credit spreads are short premium positions that benefit from",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In general, debit spreads are long premium positions that benefit from environments of rising implied volatility, while credit spreads are short premium positions that benefit from",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_3638d6aeb3dd/f_0008@191842ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 163686,
+            "end_ms": 186108,
+            "start": "00:02:43.686",
+            "end": "00:03:06.108"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_fa19ac9769e29429",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0005",
+      "start_ms": 186214,
+      "end_ms": 191564,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "lower implied volatility environments.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "lower implied volatility environments.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_3638d6aeb3dd/f_0008@191842ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 186214,
+            "end_ms": 191564,
+            "start": "00:03:06.214",
+            "end": "00:03:11.564"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    }
+  ]
+}

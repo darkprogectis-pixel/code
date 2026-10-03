@@ -1,0 +1,68 @@
+{
+  "video_id": "v_fadab9cd3435",
+  "terms": [
+    {
+      "term": "OPTION",
+      "context": "OPTION ‘=",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "TYPES",
+      "context": "TYPES OF OPTIONS \\S",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0001",
+      "start_ms": 19019,
+      "end_ms": 19019,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION EXPIRATION (OPEX) \\S",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0001",
+      "start_ms": 37638,
+      "end_ms": 37638,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION CALENDAR \\S",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0004",
+      "start_ms": 119586,
+      "end_ms": 119586,
+      "source": "ocr"
+    },
+    {
+      "term": "CME",
+      "context": "Here we can see the option expiration calendar that you can find on the CME website directly.",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0005",
+      "start_ms": 119782,
+      "end_ms": 128140,
+      "source": "stt"
+    },
+    {
+      "term": "CASH",
+      "context": "CASH SETTLEMENT EXAMPLE: \\S",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0006",
+      "start_ms": 213280,
+      "end_ms": 213280,
+      "source": "ocr"
+    },
+    {
+      "term": "EFFECT",
+      "context": "OPEX EFFECT \\w",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0006",
+      "start_ms": 233700,
+      "end_ms": 233700,
+      "source": "ocr"
+    }
+  ]
+}

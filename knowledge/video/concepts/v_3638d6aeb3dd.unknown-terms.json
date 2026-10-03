@@ -1,0 +1,122 @@
+{
+  "video_id": "v_3638d6aeb3dd",
+  "terms": [
+    {
+      "term": "SINGLE",
+      "context": "STRATEGIES: SINGLE LEG &",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0001",
+      "start_ms": 15582,
+      "end_ms": 15582,
+      "source": "ocr"
+    },
+    {
+      "term": "LEG",
+      "context": "STRATEGIES: SINGLE LEG &",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0001",
+      "start_ms": 15582,
+      "end_ms": 15582,
+      "source": "ocr"
+    },
+    {
+      "term": "TYPES",
+      "context": "TYPES OF STRATEGIES X",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0002",
+      "start_ms": 64665,
+      "end_ms": 64665,
+      "source": "ocr"
+    },
+    {
+      "term": "RISK",
+      "context": "STRATEGIES: DEFINED RISK \\S",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0003",
+      "start_ms": 94411,
+      "end_ms": 94411,
+      "source": "ocr"
+    },
+    {
+      "term": "IVA",
+      "context": "If we look back at the IVA rank, we can see how we need to think about credit and debit strategies based on these levels.",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 143526,
+      "end_ms": 163484,
+      "source": "stt"
+    },
+    {
+      "term": "IVA",
+      "context": "As you can see from the left, we have the IVA rank levels and from the top we have divided by bullish or bearish strategies.",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 143526,
+      "end_ms": 163484,
+      "source": "stt"
+    },
+    {
+      "term": "CREDIT",
+      "context": "CREDIT vs DEBIT STRATEGIES \\S",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 151551,
+      "end_ms": 151551,
+      "source": "ocr"
+    },
+    {
+      "term": "DEBIT",
+      "context": "CREDIT vs DEBIT STRATEGIES \\S",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 151551,
+      "end_ms": 151551,
+      "source": "ocr"
+    },
+    {
+      "term": "CREDIT",
+      "context": "CREDIT vs DEBIT STRATEGIES \\S",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 163580,
+      "end_ms": 163580,
+      "source": "ocr"
+    },
+    {
+      "term": "DEBIT",
+      "context": "CREDIT vs DEBIT STRATEGIES \\S",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 163580,
+      "end_ms": 163580,
+      "source": "ocr"
+    },
+    {
+      "term": "RM",
+      "context": "RM GO",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0005",
+      "start_ms": 191842,
+      "end_ms": 191842,
+      "source": "ocr"
+    },
+    {
+      "term": "GO",
+      "context": "RM GO",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0005",
+      "start_ms": 191842,
+      "end_ms": 191842,
+      "source": "ocr"
+    },
+    {
+      "term": "FP",
+      "context": "- “FP",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0005",
+      "start_ms": 193944,
+      "end_ms": 193944,
+      "source": "ocr"
+    }
+  ]
+}

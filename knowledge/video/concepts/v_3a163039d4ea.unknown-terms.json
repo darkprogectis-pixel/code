@@ -1,0 +1,770 @@
+{
+  "video_id": "v_3a163039d4ea",
+  "terms": [
+    {
+      "term": "CALL",
+      "context": "LONG CALL ne a * art",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0001",
+      "start_ms": 42042,
+      "end_ms": 42042,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "LONG CALL: SET UP \\w",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0001",
+      "start_ms": 43961,
+      "end_ms": 43961,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "LONG CALL: SET UP \\w",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0001",
+      "start_ms": 43961,
+      "end_ms": 43961,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "LONG CALL: SET UP \\w",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0001",
+      "start_ms": 43961,
+      "end_ms": 43961,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "LONG CALL: SET UP Nw",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0002",
+      "start_ms": 93043,
+      "end_ms": 93043,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "LONG CALL: SET UP Nw",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0002",
+      "start_ms": 93043,
+      "end_ms": 93043,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "LONG CALL: SET UP Nw",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0002",
+      "start_ms": 93043,
+      "end_ms": 93043,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "LONG CALL: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0002",
+      "start_ms": 132032,
+      "end_ms": 132032,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "LONG CALL: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0002",
+      "start_ms": 132032,
+      "end_ms": 132032,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "LONG CALL: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0002",
+      "start_ms": 132032,
+      "end_ms": 132032,
+      "source": "ocr"
+    },
+    {
+      "term": "USE",
+      "context": "HOW TO USE THE Q-MODELS \\",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0002",
+      "start_ms": 163880,
+      "end_ms": 163880,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "HOW TO USE THE Q-MODELS \\",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0002",
+      "start_ms": 163880,
+      "end_ms": 163880,
+      "source": "ocr"
+    },
+    {
+      "term": "USE",
+      "context": "HOW TO USE THE Q-MODELS \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0005",
+      "start_ms": 195045,
+      "end_ms": 195045,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "HOW TO USE THE Q-MODELS \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0005",
+      "start_ms": 195045,
+      "end_ms": 195045,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "CHECKLIST: LONG CALL \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0005",
+      "start_ms": 222072,
+      "end_ms": 222072,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "3, Bullish VEX",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0005",
+      "start_ms": 222072,
+      "end_ms": 222072,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "CHECKLIST: LONG CALL \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0006",
+      "start_ms": 234084,
+      "end_ms": 234084,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "SHORT PUT: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0007",
+      "start_ms": 257641,
+      "end_ms": 257641,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "SHORT PUT: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0007",
+      "start_ms": 257641,
+      "end_ms": 257641,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "SHORT PUT: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0007",
+      "start_ms": 257641,
+      "end_ms": 257641,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "SHORT PUT: SET UP \\w",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0007",
+      "start_ms": 318068,
+      "end_ms": 318068,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "SHORT PUT: SET UP \\w",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0007",
+      "start_ms": 318068,
+      "end_ms": 318068,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "SHORT PUT: SET UP \\w",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0007",
+      "start_ms": 318068,
+      "end_ms": 318068,
+      "source": "ocr"
+    },
+    {
+      "term": "ZL",
+      "context": "Breakeven Price: $45. L Ly ZL",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0007",
+      "start_ms": 318068,
+      "end_ms": 318068,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "SHORT PUT: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0008",
+      "start_ms": 366066,
+      "end_ms": 366066,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "SHORT PUT: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0008",
+      "start_ms": 366066,
+      "end_ms": 366066,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "SHORT PUT: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0008",
+      "start_ms": 366066,
+      "end_ms": 366066,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "CHECKLIST: SHORT PUT \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0011",
+      "start_ms": 423073,
+      "end_ms": 423073,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "3, Bearish VEX",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0011",
+      "start_ms": 423073,
+      "end_ms": 423073,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "CHECKLIST: SHORT PUT \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0012",
+      "start_ms": 435085,
+      "end_ms": 435085,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "BULL CALL",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0012",
+      "start_ms": 445729,
+      "end_ms": 445729,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "BULL CALL",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0012",
+      "start_ms": 445729,
+      "end_ms": 445729,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "SPREAD",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0012",
+      "start_ms": 445729,
+      "end_ms": 445729,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "BULL CALL SPREAD: SET UP A",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 471121,
+      "end_ms": 471121,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "BULL CALL SPREAD: SET UP A",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 471121,
+      "end_ms": 471121,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "BULL CALL SPREAD: SET UP A",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 471121,
+      "end_ms": 471121,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "BULL CALL SPREAD: SET UP A",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 471121,
+      "end_ms": 471121,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "BULL CALL SPREAD: SET UP A",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 471121,
+      "end_ms": 471121,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 519119,
+      "end_ms": 519119,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 519119,
+      "end_ms": 519119,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 519119,
+      "end_ms": 519119,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 519119,
+      "end_ms": 519119,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 519119,
+      "end_ms": 519119,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0014",
+      "start_ms": 567117,
+      "end_ms": 567117,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0014",
+      "start_ms": 567117,
+      "end_ms": 567117,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0014",
+      "start_ms": 567117,
+      "end_ms": 567117,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0014",
+      "start_ms": 567117,
+      "end_ms": 567117,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0014",
+      "start_ms": 567117,
+      "end_ms": 567117,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "CHECKLIST: BULL CALL SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0016",
+      "start_ms": 592325,
+      "end_ms": 592325,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "CHECKLIST: BULL CALL SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0016",
+      "start_ms": 592325,
+      "end_ms": 592325,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "CHECKLIST: BULL CALL SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0016",
+      "start_ms": 592325,
+      "end_ms": 592325,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "3, Bullish VEX",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0016",
+      "start_ms": 592325,
+      "end_ms": 592325,
+      "source": "ocr"
+    },
+    {
+      "term": "OSP",
+      "context": "Now let's look at how to use the Q-Modest to implement the Bulk OSP",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0017",
+      "start_ms": 606406,
+      "end_ms": 609932,
+      "source": "stt"
+    },
+    {
+      "term": "BULL",
+      "context": "CHECKLIST: BULL CALL SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0017",
+      "start_ms": 609109,
+      "end_ms": 609109,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "CHECKLIST: BULL CALL SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0017",
+      "start_ms": 609109,
+      "end_ms": 609109,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "CHECKLIST: BULL CALL SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0017",
+      "start_ms": 609109,
+      "end_ms": 609109,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "BULL PUT",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0018",
+      "start_ms": 619452,
+      "end_ms": 619452,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "BULL PUT",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0018",
+      "start_ms": 619452,
+      "end_ms": 619452,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "SPREAD",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0018",
+      "start_ms": 619452,
+      "end_ms": 619452,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0018",
+      "start_ms": 627127,
+      "end_ms": 627127,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0018",
+      "start_ms": 627127,
+      "end_ms": 627127,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0018",
+      "start_ms": 627127,
+      "end_ms": 627127,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0018",
+      "start_ms": 627127,
+      "end_ms": 627127,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0018",
+      "start_ms": 627127,
+      "end_ms": 627127,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 660109,
+      "end_ms": 660109,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 660109,
+      "end_ms": 660109,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 660109,
+      "end_ms": 660109,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 660109,
+      "end_ms": 660109,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 660109,
+      "end_ms": 660109,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 699148,
+      "end_ms": 699148,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 699148,
+      "end_ms": 699148,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 699148,
+      "end_ms": 699148,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 699148,
+      "end_ms": 699148,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 699148,
+      "end_ms": 699148,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "CHECKLIST: BULL PUT SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0021",
+      "start_ms": 720169,
+      "end_ms": 720169,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "CHECKLIST: BULL PUT SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0021",
+      "start_ms": 720169,
+      "end_ms": 720169,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "CHECKLIST: BULL PUT SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0021",
+      "start_ms": 720169,
+      "end_ms": 720169,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "3, Bearish VEX",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0021",
+      "start_ms": 720169,
+      "end_ms": 720169,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "CHECKLIST: BULL PUT SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0022",
+      "start_ms": 732181,
+      "end_ms": 732181,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "CHECKLIST: BULL PUT SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0022",
+      "start_ms": 732181,
+      "end_ms": 732181,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "CHECKLIST: BULL PUT SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0022",
+      "start_ms": 732181,
+      "end_ms": 732181,
+      "source": "ocr"
+    },
+    {
+      "term": "AMET",
+      "context": "AMET eo MALOU = =",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0022",
+      "start_ms": 740823,
+      "end_ms": 740823,
+      "source": "ocr"
+    },
+    {
+      "term": "MALOU",
+      "context": "AMET eo MALOU = =",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0022",
+      "start_ms": 740823,
+      "end_ms": 740823,
+      "source": "ocr"
+    },
+    {
+      "term": "AIO",
+      "context": "Set =. AIO. saa",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0022",
+      "start_ms": 741190,
+      "end_ms": 741190,
+      "source": "ocr"
+    },
+    {
+      "term": "CO",
+      "context": "MENTHORQ.CO",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0022",
+      "start_ms": 750199,
+      "end_ms": 750199,
+      "source": "ocr"
+    }
+  ]
+}

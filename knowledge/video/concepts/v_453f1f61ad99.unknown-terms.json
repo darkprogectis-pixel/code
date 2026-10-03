@@ -1,0 +1,86 @@
+{
+  "video_id": "v_453f1f61ad99",
+  "terms": [
+    {
+      "term": "OPTION",
+      "context": "OPTION E|",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION MONEYNESS &",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 5372,
+      "end_ms": 5372,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION MONEYNESS &",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 43677,
+      "end_ms": 43677,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION VALUE &",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 181014,
+      "end_ms": 181014,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "OPTION VALUE &",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 181014,
+      "end_ms": 181014,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "CALL DELTA: OTM SS",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 192793,
+      "end_ms": 192793,
+      "source": "ocr"
+    },
+    {
+      "term": "SPEED",
+      "context": "DELTA SPEED \\S",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0006",
+      "start_ms": 314948,
+      "end_ms": 314948,
+      "source": "ocr"
+    },
+    {
+      "term": "DEND",
+      "context": "Dividends DEND",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0008",
+      "start_ms": 396696,
+      "end_ms": 396696,
+      "source": "ocr"
+    },
+    {
+      "term": "TF",
+      "context": "TF,",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0008",
+      "start_ms": 396696,
+      "end_ms": 396696,
+      "source": "ocr"
+    }
+  ]
+}

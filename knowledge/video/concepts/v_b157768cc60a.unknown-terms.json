@@ -1,0 +1,113 @@
+{
+  "video_id": "v_b157768cc60a",
+  "terms": [
+    {
+      "term": "HEDGE",
+      "context": "DELTA HEDGING: HEDGE RATIO \\w",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0001",
+      "start_ms": 25759,
+      "end_ms": 25759,
+      "source": "ocr"
+    },
+    {
+      "term": "RATIO",
+      "context": "DELTA HEDGING: HEDGE RATIO \\w",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0001",
+      "start_ms": 25759,
+      "end_ms": 25759,
+      "source": "ocr"
+    },
+    {
+      "term": "HG",
+      "context": "The delta becomes fundamental because it can help us create what we know as the HG ratio.",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0002",
+      "start_ms": 30118,
+      "end_ms": 34284,
+      "source": "stt"
+    },
+    {
+      "term": "CALL",
+      "context": "DELTA: CALL vs PUT &",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 142009,
+      "end_ms": 142009,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "DELTA: CALL vs PUT &",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 142009,
+      "end_ms": 142009,
+      "source": "ocr"
+    },
+    {
+      "term": "HEDGE",
+      "context": "HEDGE DELTA WITH OPTIONS \\S",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 152953,
+      "end_ms": 152953,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "LONG CALL",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 300801,
+      "end_ms": 300801,
+      "source": "ocr"
+    },
+    {
+      "term": "ME",
+      "context": "[errs nnn ME] oe [bone]",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 300801,
+      "end_ms": 300801,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "LONG CALL",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 345612,
+      "end_ms": 345612,
+      "source": "ocr"
+    },
+    {
+      "term": "MR",
+      "context": "ene fone MR] ss [anne",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 345612,
+      "end_ms": 345612,
+      "source": "ocr"
+    },
+    {
+      "term": "TAO",
+      "context": "\"TAO eC ot AUD ‘=",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0010",
+      "start_ms": 441007,
+      "end_ms": 441007,
+      "source": "ocr"
+    },
+    {
+      "term": "AUD",
+      "context": "\"TAO eC ot AUD ‘=",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0010",
+      "start_ms": 441007,
+      "end_ms": 441007,
+      "source": "ocr"
+    }
+  ]
+}

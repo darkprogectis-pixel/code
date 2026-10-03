@@ -1,0 +1,990 @@
+{
+  "video_id": "v_88095231ec06",
+  "schema": "video-knowledge/v1",
+  "items": [
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6298882113e0b979",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 294,
+      "end_ms": 8396,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Tail Risk",
+      "surface": "tail risk",
+      "statement": "In this lesson we will cover the concept of tail risk.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this lesson we will cover the concept of tail risk.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 294,
+            "end_ms": 8396,
+            "start": "00:00:00.294",
+            "end": "00:00:08.396"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "tail_risk",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7a545b2b16fb94fb",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Tail Risk",
+      "surface": "TAIL RISK",
+      "statement": "TAIL RISK & NORMAL",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "TAIL RISK & NORMAL",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 0,
+            "end_ms": 0,
+            "start": "00:00:00.000",
+            "end": "00:00:00.000"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "tail_risk",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1c8339e6dcfcc010",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0002",
+      "start_ms": 56934,
+      "end_ms": 66220,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "This idea goes hand by hand with implied volatility on the stock market.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This idea goes hand by hand with implied volatility on the stock market.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0005@79279ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 56934,
+            "end_ms": 66220,
+            "start": "00:00:56.934",
+            "end": "00:01:06.220"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c60e2f724e6e1566",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0002",
+      "start_ms": 66854,
+      "end_ms": 87100,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "In fact, a low implied volatility environment tells us that the market does not expect the stock price to deviate much from the current stock price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In fact, a low implied volatility environment tells us that the market does not expect the stock price to deviate much from the current stock price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0005@79279ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 66854,
+            "end_ms": 87100,
+            "start": "00:01:06.854",
+            "end": "00:01:27.100"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_aa5b7d22f57ec469",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0002",
+      "start_ms": 66854,
+      "end_ms": 87100,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "This lack of implied volatility shows us how prices tend to stay within one standard deviation from the mean.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This lack of implied volatility shows us how prices tend to stay within one standard deviation from the mean.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0005@79279ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 66854,
+            "end_ms": 87100,
+            "start": "00:01:06.854",
+            "end": "00:01:27.100"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2ba7874f13ce66a4",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0002",
+      "start_ms": 87846,
+      "end_ms": 98988,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "A high implied volatility environment tells us that the market expects the stock price to move away from the current price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "A high implied volatility environment tells us that the market expects the stock price to move away from the current price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0005@79279ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 87846,
+            "end_ms": 98988,
+            "start": "00:01:27.846",
+            "end": "00:01:38.988"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b5fc09ab87f69e6e",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0002",
+      "start_ms": 87846,
+      "end_ms": 98988,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "This high implied volatility results in a range of outcomes with a large standard deviation away from the stock price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This high implied volatility results in a range of outcomes with a large standard deviation away from the stock price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0005@79279ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 87846,
+            "end_ms": 98988,
+            "start": "00:01:27.846",
+            "end": "00:01:38.988"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_88709ecc759c9f0f",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0002",
+      "start_ms": 104966,
+      "end_ms": 120460,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "One standard deviation represents approximately 68.2% of the results in a distribution of occurrences based on the current implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "One standard deviation represents approximately 68.2% of the results in a distribution of occurrences based on the current implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0005@79279ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 104966,
+            "end_ms": 120460,
+            "start": "00:01:44.966",
+            "end": "00:02:00.460"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6d01c17812d8d555",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0002",
+      "start_ms": 104966,
+      "end_ms": 120460,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "Two standard deviations comprise approximately 95.4% of the results in a price distribution based on current implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Two standard deviations comprise approximately 95.4% of the results in a price distribution based on current implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0005@79279ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 104966,
+            "end_ms": 120460,
+            "start": "00:01:44.966",
+            "end": "00:02:00.460"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1eafdf6a3417356a",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0002",
+      "start_ms": 121126,
+      "end_ms": 128140,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "3 standard deviation comprises approximately 99.7% of the outcomes in a price distribution based on current implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "3 standard deviation comprises approximately 99.7% of the outcomes in a price distribution based on current implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0005@79279ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 121126,
+            "end_ms": 128140,
+            "start": "00:02:01.126",
+            "end": "00:02:08.140"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c17c9a1d385e251e",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0002",
+      "start_ms": 130598,
+      "end_ms": 134060,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "In this example, the implied volatility of our position is 20%.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this example, the implied volatility of our position is 20%.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0005@79279ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 130598,
+            "end_ms": 134060,
+            "start": "00:02:10.598",
+            "end": "00:02:14.060"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6d0d1aefddbce362",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0003",
+      "start_ms": 134566,
+      "end_ms": 148460,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Based on volatility using the concept of normal distribution and standard deviation, we can try to predict the potential movement of the price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Based on volatility using the concept of normal distribution and standard deviation, we can try to predict the potential movement of the price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 134566,
+            "end_ms": 148460,
+            "start": "00:02:14.566",
+            "end": "00:02:28.460"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_45cbbb599ac5a39a",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0003",
+      "start_ms": 134566,
+      "end_ms": 148460,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "20% of implied volatility expects an implied movement of one standard deviation.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "20% of implied volatility expects an implied movement of one standard deviation.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 134566,
+            "end_ms": 148460,
+            "start": "00:02:14.566",
+            "end": "00:02:28.460"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_80ceaaac890c0672",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0004",
+      "start_ms": 163750,
+      "end_ms": 169644,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Q-Models",
+      "surface": "Q-Models",
+      "statement": "What we are trying to do is to improve our positioning using data and statistics, which is what we do every morning with our Q-Models.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "What we are trying to do is to improve our positioning using data and statistics, which is what we do every morning with our Q-Models.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "What we are trying to do is to improve our positioning using data and statistics, which is what we do every morning with our Q-Moders.",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0006@170070ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 163750,
+            "end_ms": 169644,
+            "start": "00:02:43.750",
+            "end": "00:02:49.644"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5404abba2f520e34",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0004",
+      "start_ms": 177766,
+      "end_ms": 182508,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Q-Models",
+      "surface": "Q-Models",
+      "statement": "In the case of Q-Models we can therefore use the furthest wall to place our strikes in our option strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In the case of Q-Models we can therefore use the furthest wall to place our strikes in our option strategy.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0006@170070ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 177766,
+            "end_ms": 182508,
+            "start": "00:02:57.766",
+            "end": "00:03:02.508"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0bb42d31032eb26b",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0004",
+      "start_ms": 170070,
+      "end_ms": 170070,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Q-Models",
+      "surface": "Q-MODELS",
+      "statement": "Q-MODELS EXAMPLE \\",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Q-MODELS EXAMPLE \\",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0006@170070ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 170070,
+            "end_ms": 170070,
+            "start": "00:02:50.070",
+            "end": "00:02:50.070"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d0082478d0e87c48",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0005",
+      "start_ms": 183174,
+      "end_ms": 188684,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "When the implied volatility is high, it means that there is a greater chance of the stock moving up and down between the wider walls.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When the implied volatility is high, it means that there is a greater chance of the stock moving up and down between the wider walls.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0007@189022ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 183174,
+            "end_ms": 188684,
+            "start": "00:03:03.174",
+            "end": "00:03:08.684"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_db18d5efbd43edf3",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0005",
+      "start_ms": 189286,
+      "end_ms": 191916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Tail Risk",
+      "surface": "tail risk",
+      "statement": "This brings us to the next concept, tail risk.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This brings us to the next concept, tail risk.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0007@189022ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 189286,
+            "end_ms": 191916,
+            "start": "00:03:09.286",
+            "end": "00:03:11.916"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "tail_risk",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7c78aa6bacc8e59c",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0005",
+      "start_ms": 240006,
+      "end_ms": 256076,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "So, assets with this distribution tends to have very high volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "So, assets with this distribution tends to have very high volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0007@189022ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 240006,
+            "end_ms": 256076,
+            "start": "00:04:00.006",
+            "end": "00:04:16.076"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e186e3808e89fd0b",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0005",
+      "start_ms": 189022,
+      "end_ms": 189022,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Tail Risk",
+      "surface": "TAIL RISK",
+      "statement": "TAIL RISK hi ee. te",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "TAIL RISK hi ee. te",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0007@189022ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 189022,
+            "end_ms": 189022,
+            "start": "00:03:09.022",
+            "end": "00:03:09.022"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "tail_risk",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0707b9edc0891036",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0006",
+      "start_ms": 273030,
+      "end_ms": 279148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Tail Risk",
+      "surface": "tail risk",
+      "statement": "We come to the end of the lesson on tail risk.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We come to the end of the lesson on tail risk.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_88095231ec06/f_0009@279746ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 273030,
+            "end_ms": 279148,
+            "start": "00:04:33.030",
+            "end": "00:04:39.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "tail_risk",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "alpha-video-knowledge/v1",
+  "name": "alpha-cross-api-video-knowledge",
+  "api": "cross_api",
+  "layer": "VIDEO_DERIVED_KNOWLEDGE",
+  "source_kind": "SOURCE_VIDEO",
+  "content_trust": "UNTRUSTED_EVIDENCE",
+  "policy": "factual = API_CONFIRMED and not quarantined; everything else needs review; video never overrides SOURCE_API_DOCS/SOURCE_CODE; contradictions stay UNRESOLVED",
+  "factual": [],
+  "needs_review": [],
+  "quarantined": [],
+  "contradictions": []
+}

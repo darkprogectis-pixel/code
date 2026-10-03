@@ -1,0 +1,4287 @@
+{
+  "video_id": "v_86fd353be172",
+  "schema": "video-knowledge/v1",
+  "items": [
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0f48b18638402553",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 8134,
+      "end_ms": 31676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "The main ones are the long put or buying a put option, the short call or selling a call option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The main ones are the long put or buying a put option, the short call or selling a call option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0002@7858ms.jpg",
+          "frames/v_86fd353be172/f_0003@31932ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 8134,
+            "end_ms": 31676,
+            "start": "00:00:08.134",
+            "end": "00:00:31.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_63ad78938f330c05",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 8134,
+      "end_ms": 31676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "The main ones are the long put or buying a put option, the short call or selling a call option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The main ones are the long put or buying a put option, the short call or selling a call option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0002@7858ms.jpg",
+          "frames/v_86fd353be172/f_0003@31932ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 8134,
+            "end_ms": 31676,
+            "start": "00:00:08.134",
+            "end": "00:00:31.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a4cc8cd74ff99e3c",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 8134,
+      "end_ms": 31676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "This is a multi-leg strategy that consists on selling a call and buying a call at a higher strike.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is a multi-leg strategy that consists on selling a call and buying a call at a higher strike.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0002@7858ms.jpg",
+          "frames/v_86fd353be172/f_0003@31932ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 8134,
+            "end_ms": 31676,
+            "start": "00:00:08.134",
+            "end": "00:00:31.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f33b8d52f6a1443c",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 8134,
+      "end_ms": 31676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "This is a multi-leg strategy that consists on selling a call and buying a call at a higher strike.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is a multi-leg strategy that consists on selling a call and buying a call at a higher strike.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0002@7858ms.jpg",
+          "frames/v_86fd353be172/f_0003@31932ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 8134,
+            "end_ms": 31676,
+            "start": "00:00:08.134",
+            "end": "00:00:31.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_40dab03512aada75",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 8134,
+      "end_ms": 31676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "And finally, the bear put spread, which is a multi-leg strategy that consists of buying a put and selling a put at a lower strike.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "And finally, the bear put spread, which is a multi-leg strategy that consists of buying a put and selling a put at a lower strike.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0002@7858ms.jpg",
+          "frames/v_86fd353be172/f_0003@31932ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 8134,
+            "end_ms": 31676,
+            "start": "00:00:08.134",
+            "end": "00:00:31.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7ebac913ce930456",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 8134,
+      "end_ms": 31676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "And finally, the bear put spread, which is a multi-leg strategy that consists of buying a put and selling a put at a lower strike.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "And finally, the bear put spread, which is a multi-leg strategy that consists of buying a put and selling a put at a lower strike.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0002@7858ms.jpg",
+          "frames/v_86fd353be172/f_0003@31932ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 8134,
+            "end_ms": 31676,
+            "start": "00:00:08.134",
+            "end": "00:00:31.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_96f930aaee0f5d9d",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 34534,
+      "end_ms": 59324,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "Another one of the simplest option strategies is buying a put or long put.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Another one of the simplest option strategies is buying a put or long put.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0004@34101ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 34534,
+            "end_ms": 59324,
+            "start": "00:00:34.534",
+            "end": "00:00:59.324"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_628e269a08e25f79",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 34534,
+      "end_ms": 59324,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "Buying",
+      "statement": "Buying a put option grants the buyer the right but not the obligation to sell a security called the underlying at the expiration or before expiration at a given price, also called the strike price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Buying a put option grants the buyer the right but not the obligation to sell a security called the underlying at the expiration or before expiration at a given price, also called the strike price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0004@34101ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 34534,
+            "end_ms": 59324,
+            "start": "00:00:34.534",
+            "end": "00:00:59.324"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_77aa4c6542fcde05",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 34534,
+      "end_ms": 59324,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "Buying a put option grants the buyer the right but not the obligation to sell a security called the underlying at the expiration or before expiration at a given price, also called the strike price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Buying a put option grants the buyer the right but not the obligation to sell a security called the underlying at the expiration or before expiration at a given price, also called the strike price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0004@34101ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 34534,
+            "end_ms": 59324,
+            "start": "00:00:34.534",
+            "end": "00:00:59.324"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d87bd20d11faa4aa",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 59814,
+      "end_ms": 82172,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "We buy a put option if we have a bearish view on the underlying.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We buy a put option if we have a bearish view on the underlying.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 59814,
+            "end_ms": 82172,
+            "start": "00:00:59.814",
+            "end": "00:01:22.172"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_22fdad91331279ce",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 59814,
+      "end_ms": 82172,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "To go short a stock, it is possible to short sell, but depending on the broker and the market, in some cases there will be limitations.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "To go short a stock, it is possible to short sell, but depending on the broker and the market, in some cases there will be limitations.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 59814,
+            "end_ms": 82172,
+            "start": "00:00:59.814",
+            "end": "00:01:22.172"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_862055879e9f3978",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 59814,
+      "end_ms": 82172,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "Going short on a stock has potentially unlimited risk, while buying a put has a defined risk profile.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Going short on a stock has potentially unlimited risk, while buying a put has a defined risk profile.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 59814,
+            "end_ms": 82172,
+            "start": "00:00:59.814",
+            "end": "00:01:22.172"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_61daa57e45fb7533",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 59814,
+      "end_ms": 82172,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "On or before expiration, we can exercise the contract and sell 100 shares of the underlying at a price above the market",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "On or before expiration, we can exercise the contract and sell 100 shares of the underlying at a price above the market",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 59814,
+            "end_ms": 82172,
+            "start": "00:00:59.814",
+            "end": "00:01:22.172"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6133aa6ffcaf7f00",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0002",
+      "start_ms": 82374,
+      "end_ms": 102428,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "if the price has fallen or if you sell the option contract at any time.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "if the price has fallen or if you sell the option contract at any time.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 82374,
+            "end_ms": 102428,
+            "start": "00:01:22.374",
+            "end": "00:01:42.428"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_fb343a2ee9239716",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0003",
+      "start_ms": 125382,
+      "end_ms": 145372,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "If we decide to buy a put option, we must take into account some very important variables.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If we decide to buy a put option, we must take into account some very important variables.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 125382,
+            "end_ms": 145372,
+            "start": "00:02:05.382",
+            "end": "00:02:25.372"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4c3315d461b6aaaa",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0004",
+      "start_ms": 145734,
+      "end_ms": 155756,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "First, implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "First, implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 145734,
+            "end_ms": 155756,
+            "start": "00:02:25.734",
+            "end": "00:02:35.756"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f57f72ac1c635b55",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0004",
+      "start_ms": 145734,
+      "end_ms": 155756,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "If the implied volatility rises, this will have a positive impact on the strategy as the premium will tend to rise.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If the implied volatility rises, this will have a positive impact on the strategy as the premium will tend to rise.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 145734,
+            "end_ms": 155756,
+            "start": "00:02:25.734",
+            "end": "00:02:35.756"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a5eec767bf54444c",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0004",
+      "start_ms": 156230,
+      "end_ms": 160396,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "Buy",
+      "statement": "Buy an option when implied volatility is low and sell options when implied volatility is high.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Buy an option when implied volatility is low and sell options when implied volatility is high.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 156230,
+            "end_ms": 160396,
+            "start": "00:02:36.230",
+            "end": "00:02:40.396"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_73e6984b25ba1a4f",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0004",
+      "start_ms": 156230,
+      "end_ms": 160396,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "Buy an option when implied volatility is low and sell options when implied volatility is high.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Buy an option when implied volatility is low and sell options when implied volatility is high.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 156230,
+            "end_ms": 160396,
+            "start": "00:02:36.230",
+            "end": "00:02:40.396"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_48f5d27a31b79007",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0004",
+      "start_ms": 156230,
+      "end_ms": 160396,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "Buy an option when implied volatility is low and sell options when implied volatility is high.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Buy an option when implied volatility is low and sell options when implied volatility is high.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 156230,
+            "end_ms": 160396,
+            "start": "00:02:36.230",
+            "end": "00:02:40.396"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a59242fc5eab57da",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0005",
+      "start_ms": 162950,
+      "end_ms": 168076,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "Add the money or out of the money put option move differently in relation to the increase in the price of the underlying.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Add the money or out of the money put option move differently in relation to the increase in the price of the underlying.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0005@176727ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 162950,
+            "end_ms": 168076,
+            "start": "00:02:42.950",
+            "end": "00:02:48.076"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_72cb57265ec98e51",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0005",
+      "start_ms": 168582,
+      "end_ms": 176492,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "time decay",
+      "statement": "And finally, time decay.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "And finally, time decay.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0005@176727ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 168582,
+            "end_ms": 176492,
+            "start": "00:02:48.582",
+            "end": "00:02:56.492"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7fb52e9f4b36f4b0",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0005",
+      "start_ms": 168582,
+      "end_ms": 176492,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "If we buy options, the theta effect is not in our favor.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If we buy options, the theta effect is not in our favor.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0005@176727ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 168582,
+            "end_ms": 176492,
+            "start": "00:02:48.582",
+            "end": "00:02:56.492"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_75e72117729eb5fd",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0005",
+      "start_ms": 168582,
+      "end_ms": 176492,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "If we buy options, the theta effect is not in our favor.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If we buy options, the theta effect is not in our favor.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0005@176727ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 168582,
+            "end_ms": 176492,
+            "start": "00:02:48.582",
+            "end": "00:02:56.492"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a3c2f69eed54d651",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0005",
+      "start_ms": 168582,
+      "end_ms": 176492,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "time decay",
+      "statement": "Every day, the option loses value due to the time decay.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Every day, the option loses value due to the time decay.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0005@176727ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 168582,
+            "end_ms": 176492,
+            "start": "00:02:48.582",
+            "end": "00:02:56.492"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c205f3e5450d66d3",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0005",
+      "start_ms": 176727,
+      "end_ms": 176727,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "GEX",
+      "surface": "GEX",
+      "statement": "1. Negative GEX",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "1. Negative GEX",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0005@176727ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 176727,
+            "end_ms": 176727,
+            "start": "00:02:56.727",
+            "end": "00:02:56.727"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gex",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6211823f2e69e4b9",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0005",
+      "start_ms": 176727,
+      "end_ms": 176727,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "GEX",
+      "surface": "GEX",
+      "statement": "2. Bearish Cumulative GEX",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "2. Bearish Cumulative GEX",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0005@176727ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 176727,
+            "end_ms": 176727,
+            "start": "00:02:56.727",
+            "end": "00:02:56.727"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gex",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a25454780e7fa6b3",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0005",
+      "start_ms": 176727,
+      "end_ms": 176727,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "HVL",
+      "surface": "High Vol Level",
+      "statement": "4, Price below High Vol Level",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "4, Price below High Vol Level",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0005@176727ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 176727,
+            "end_ms": 176727,
+            "start": "00:02:56.727",
+            "end": "00:02:56.727"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "hvl",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1e93a84d9ef98744",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0005",
+      "start_ms": 176727,
+      "end_ms": 176727,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "HVL",
+      "surface": "High Vol Level",
+      "statement": "5, Sticky Strikes below High Vol Level",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "5, Sticky Strikes below High Vol Level",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0005@176727ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 176727,
+            "end_ms": 176727,
+            "start": "00:02:56.727",
+            "end": "00:02:56.727"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "hvl",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c2aa85a433708308",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0005",
+      "start_ms": 176727,
+      "end_ms": 176727,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "Implied Volatility",
+      "statement": "6. Low Implied Volatility",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "6. Low Implied Volatility",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0005@176727ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 176727,
+            "end_ms": 176727,
+            "start": "00:02:56.727",
+            "end": "00:02:56.727"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b7bbe2da05571d70",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0006",
+      "start_ms": 178566,
+      "end_ms": 194956,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "GEX",
+      "surface": "GEX",
+      "statement": "We want to see a negative GEX, a bearish cumulative GEX, a bullish vex, price below the eyeball level, and sticky strikes below the eyeball level.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We want to see a negative GEX, a bearish cumulative GEX, a bullish vex, price below the eyeball level, and sticky strikes below the eyeball level.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "We want to see a negative jacks, a bearish cumulative jacks, a bullish vex, price below the eyeball level, and sticky strikes below the eyeball level. Finally, let's see how you can use the Q-Models to set up this strategy. We can use the eyeball level or put support level as our put strikes.",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0006@195095ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 178566,
+            "end_ms": 194956,
+            "start": "00:02:58.566",
+            "end": "00:03:14.956"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_bf45c7d05debee50",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0006",
+      "start_ms": 178566,
+      "end_ms": 194956,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Q-Models",
+      "surface": "Q-Models",
+      "statement": "Finally, let's see how you can use the Q-Models to set up this strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Finally, let's see how you can use the Q-Models to set up this strategy.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "We want to see a negative jacks, a bearish cumulative jacks, a bullish vex, price below the eyeball level, and sticky strikes below the eyeball level. Finally, let's see how you can use the Q-Models to set up this strategy. We can use the eyeball level or put support level as our put strikes.",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0006@195095ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 178566,
+            "end_ms": 194956,
+            "start": "00:02:58.566",
+            "end": "00:03:14.956"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_fb69402e232de05d",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0006",
+      "start_ms": 178566,
+      "end_ms": 194956,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Put Support",
+      "surface": "put support",
+      "statement": "We can use the eyeball level or put support level as our put strikes.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We can use the eyeball level or put support level as our put strikes.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "We want to see a negative jacks, a bearish cumulative jacks, a bullish vex, price below the eyeball level, and sticky strikes below the eyeball level. Finally, let's see how you can use the Q-Models to set up this strategy. We can use the eyeball level or put support level as our put strikes.",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0006@195095ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 178566,
+            "end_ms": 194956,
+            "start": "00:02:58.566",
+            "end": "00:03:14.956"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "put_support",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f5c8819ecbcae7c5",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0006",
+      "start_ms": 198315,
+      "end_ms": 198315,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "SELL",
+      "surface": "Sell",
+      "statement": "© We Sell a Call Option = 7",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© We Sell a Call Option = 7",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0007@198315ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 198315,
+            "end_ms": 198315,
+            "start": "00:03:18.315",
+            "end": "00:03:18.315"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "FORMULA",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6a724c8786bf81cb",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0007",
+      "start_ms": 198630,
+      "end_ms": 213004,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "Selling",
+      "statement": "Selling a call naked or without owning the underlying asset has the same exposure as going short a stock or short selling.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Selling a call naked or without owning the underlying asset has the same exposure as going short a stock or short selling.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 198630,
+            "end_ms": 213004,
+            "start": "00:03:18.630",
+            "end": "00:03:33.004"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_55cdf02e7158fc4f",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0007",
+      "start_ms": 198630,
+      "end_ms": 213004,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "Selling",
+      "statement": "Selling a call is equivalent to sell 100 shares of the underlying asset.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Selling a call is equivalent to sell 100 shares of the underlying asset.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 198630,
+            "end_ms": 213004,
+            "start": "00:03:18.630",
+            "end": "00:03:33.004"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_981917c804ac9a2b",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0007",
+      "start_ms": 198630,
+      "end_ms": 213004,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "As we said before, selling options has different advantages for the trader.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "As we said before, selling options has different advantages for the trader.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 198630,
+            "end_ms": 213004,
+            "start": "00:03:18.630",
+            "end": "00:03:33.004"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_254642327cca77d5",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0007",
+      "start_ms": 213574,
+      "end_ms": 218028,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "Selling",
+      "statement": "Selling options can generate additional income through premium paid by the buyer, who buys the option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Selling options can generate additional income through premium paid by the buyer, who buys the option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 213574,
+            "end_ms": 218028,
+            "start": "00:03:33.574",
+            "end": "00:03:38.028"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_505663b8b26fc0d3",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0007",
+      "start_ms": 220774,
+      "end_ms": 247164,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "Selling",
+      "statement": "Selling options can also be used to protect your portfolio from future losses.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Selling options can also be used to protect your portfolio from future losses.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 220774,
+            "end_ms": 247164,
+            "start": "00:03:40.774",
+            "end": "00:04:07.164"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5cef932e5dee6e69",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0007",
+      "start_ms": 220774,
+      "end_ms": 247164,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "For example, by selling coal options on a stock you own in your portfolio, a protection strategy is represented by the cover-call strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For example, by selling coal options on a stock you own in your portfolio, a protection strategy is represented by the cover-call strategy.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 220774,
+            "end_ms": 247164,
+            "start": "00:03:40.774",
+            "end": "00:04:07.164"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_086143dd52765ed1",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0007",
+      "start_ms": 220774,
+      "end_ms": 247164,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "In fact, selling options can help you generate profit if the price stays within a price range.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In fact, selling options can help you generate profit if the price stays within a price range.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 220774,
+            "end_ms": 247164,
+            "start": "00:03:40.774",
+            "end": "00:04:07.164"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_bab6b49bc9163ade",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0007",
+      "start_ms": 220774,
+      "end_ms": 247164,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "As a seller of a coal option, we have the obligation to sell a quantity of the underlying asset at the strike price to the buyer at expiration if exercised.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "As a seller of a coal option, we have the obligation to sell a quantity of the underlying asset at the strike price to the buyer at expiration if exercised.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 220774,
+            "end_ms": 247164,
+            "start": "00:03:40.774",
+            "end": "00:04:07.164"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2e20f787c846e56f",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0007",
+      "start_ms": 247494,
+      "end_ms": 257132,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "Selling",
+      "statement": "Selling options involves risk.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Selling options involves risk.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 247494,
+            "end_ms": 257132,
+            "start": "00:04:07.494",
+            "end": "00:04:17.132"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_916033df6c03b1d8",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0007",
+      "start_ms": 257606,
+      "end_ms": 278460,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "When we sell options, we have limited profit potentials which is represented by the premium that we receive.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When we sell options, we have limited profit potentials which is represented by the premium that we receive.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 257606,
+            "end_ms": 278460,
+            "start": "00:04:17.606",
+            "end": "00:04:38.460"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f4d6435b324581cf",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0008",
+      "start_ms": 278758,
+      "end_ms": 299996,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "If the price of the underlying at expiration will be lower than the strike price, the option is out of the money and has no value, so we collect the premium in full.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If the price of the underlying at expiration will be lower than the strike price, the option is out of the money and has no value, so we collect the premium in full.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 278758,
+            "end_ms": 299996,
+            "start": "00:04:38.758",
+            "end": "00:04:59.996"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_21fd60c84eecc2ec",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0009",
+      "start_ms": 300710,
+      "end_ms": 323452,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "If we don't own these shares in our portfolio, we need to buy them at the market at a higher price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If we don't own these shares in our portfolio, we need to buy them at the market at a higher price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 300710,
+            "end_ms": 323452,
+            "start": "00:05:00.710",
+            "end": "00:05:23.452"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b04fd63b1f1971bf",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0009",
+      "start_ms": 300710,
+      "end_ms": 323452,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "If we decide to sell a call, we need to take into account some very important variables.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If we decide to sell a call, we need to take into account some very important variables.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 300710,
+            "end_ms": 323452,
+            "start": "00:05:00.710",
+            "end": "00:05:23.452"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_359e1c3fb2f5fc76",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0009",
+      "start_ms": 300710,
+      "end_ms": 323452,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "If the implied volatility goes down, this is positive for our strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If the implied volatility goes down, this is positive for our strategy.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 300710,
+            "end_ms": 323452,
+            "start": "00:05:00.710",
+            "end": "00:05:23.452"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_fa65afd105137651",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0010",
+      "start_ms": 323590,
+      "end_ms": 327148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "Time decay",
+      "statement": "Time decay is positive for this strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Time decay is positive for this strategy.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 323590,
+            "end_ms": 327148,
+            "start": "00:05:23.590",
+            "end": "00:05:27.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4687043e50442006",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0010",
+      "start_ms": 327686,
+      "end_ms": 344588,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "When we sell options we have time or data in our site.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When we sell options we have time or data in our site.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 327686,
+            "end_ms": 344588,
+            "start": "00:05:27.686",
+            "end": "00:05:44.588"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_cdd82005d19728f1",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0010",
+      "start_ms": 327686,
+      "end_ms": 344588,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "When we sell options we need to keep in mind that there will be a margin required by the broker to keep the position active.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When we sell options we need to keep in mind that there will be a margin required by the broker to keep the position active.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 327686,
+            "end_ms": 344588,
+            "start": "00:05:27.686",
+            "end": "00:05:44.588"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_abca7519d58ce066",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 345094,
+      "end_ms": 368476,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "It can change according to volatility and the price of the underlying, and it's not a static value and can change over time.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It can change according to volatility and the price of the underlying, and it's not a static value and can change over time.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "It can change according to volatility and the price of the underlying, and it's not a static value and can change over time. Here we can see our checklist. We want to see a negative jacks, a bearish cumulative jacks, price below the high ball level, and sticky strikes below the high ball level. This is how we could use our Q-Models for this strategy. We can use the high ball level or first call re",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0008@351201ms.jpg",
+          "frames/v_86fd353be172/f_0009@368768ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 345094,
+            "end_ms": 368476,
+            "start": "00:05:45.094",
+            "end": "00:06:08.476"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_69553c1c9d4dca1d",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 345094,
+      "end_ms": 368476,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "GEX",
+      "surface": "GEX",
+      "statement": "We want to see a negative GEX, a bearish cumulative GEX, price below the high ball level, and sticky strikes below the high ball level.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We want to see a negative GEX, a bearish cumulative GEX, price below the high ball level, and sticky strikes below the high ball level.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "It can change according to volatility and the price of the underlying, and it's not a static value and can change over time. Here we can see our checklist. We want to see a negative jacks, a bearish cumulative jacks, price below the high ball level, and sticky strikes below the high ball level. This is how we could use our Q-Models for this strategy. We can use the high ball level or first call re",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0008@351201ms.jpg",
+          "frames/v_86fd353be172/f_0009@368768ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 345094,
+            "end_ms": 368476,
+            "start": "00:05:45.094",
+            "end": "00:06:08.476"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_70f7fa7cbea86f07",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 345094,
+      "end_ms": 368476,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Q-Models",
+      "surface": "Q-Models",
+      "statement": "This is how we could use our Q-Models for this strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is how we could use our Q-Models for this strategy.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "It can change according to volatility and the price of the underlying, and it's not a static value and can change over time. Here we can see our checklist. We want to see a negative jacks, a bearish cumulative jacks, price below the high ball level, and sticky strikes below the high ball level. This is how we could use our Q-Models for this strategy. We can use the high ball level or first call re",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0008@351201ms.jpg",
+          "frames/v_86fd353be172/f_0009@368768ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 345094,
+            "end_ms": 368476,
+            "start": "00:05:45.094",
+            "end": "00:06:08.476"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_608b6f2fbe848141",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 345094,
+      "end_ms": 368476,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Call Resistance",
+      "surface": "call resistance",
+      "statement": "We can use the high ball level or first call resistance as the strikes for our call.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We can use the high ball level or first call resistance as the strikes for our call.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "It can change according to volatility and the price of the underlying, and it's not a static value and can change over time. Here we can see our checklist. We want to see a negative jacks, a bearish cumulative jacks, price below the high ball level, and sticky strikes below the high ball level. This is how we could use our Q-Models for this strategy. We can use the high ball level or first call re",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0008@351201ms.jpg",
+          "frames/v_86fd353be172/f_0009@368768ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 345094,
+            "end_ms": 368476,
+            "start": "00:05:45.094",
+            "end": "00:06:08.476"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "call_resistance",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_374407c52ac0406a",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 351201,
+      "end_ms": 351201,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "GEX",
+      "surface": "GEX",
+      "statement": "1. Negative GEX",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "1. Negative GEX",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0008@351201ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 351201,
+            "end_ms": 351201,
+            "start": "00:05:51.201",
+            "end": "00:05:51.201"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gex",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_bb90b8b1ac17e004",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 351201,
+      "end_ms": 351201,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "GEX",
+      "surface": "GEX",
+      "statement": "2. Bearish Cumulative GEX",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "2. Bearish Cumulative GEX",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0008@351201ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 351201,
+            "end_ms": 351201,
+            "start": "00:05:51.201",
+            "end": "00:05:51.201"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gex",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3c8147343eb61155",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 351201,
+      "end_ms": 351201,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "HVL",
+      "surface": "High Vol Level",
+      "statement": "3, Price below High Vol Level",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "3, Price below High Vol Level",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0008@351201ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 351201,
+            "end_ms": 351201,
+            "start": "00:05:51.201",
+            "end": "00:05:51.201"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "hvl",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b2c1163fe52d2760",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 351201,
+      "end_ms": 351201,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "HVL",
+      "surface": "High Vol Level",
+      "statement": "4, Sticky Strikes below High Vol Level",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "4, Sticky Strikes below High Vol Level",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0008@351201ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 351201,
+            "end_ms": 351201,
+            "start": "00:05:51.201",
+            "end": "00:05:51.201"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "hvl",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c2d8215472f62fb6",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 351201,
+      "end_ms": 351201,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "Implied Volatility",
+      "statement": "5, Low Implied Volatility",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "5, Low Implied Volatility",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0008@351201ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 351201,
+            "end_ms": 351201,
+            "start": "00:05:51.201",
+            "end": "00:05:51.201"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5ad8509bd4e27538",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0012",
+      "start_ms": 376678,
+      "end_ms": 397436,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "It involves selling a collection and buying a collection with a higher strike than the sole call.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It involves selling a collection and buying a collection with a higher strike than the sole call.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 376678,
+            "end_ms": 397436,
+            "start": "00:06:16.678",
+            "end": "00:06:37.436"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e0dbe8441cd30f18",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0012",
+      "start_ms": 376678,
+      "end_ms": 397436,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "It involves selling a collection and buying a collection with a higher strike than the sole call.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It involves selling a collection and buying a collection with a higher strike than the sole call.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 376678,
+            "end_ms": 397436,
+            "start": "00:06:16.678",
+            "end": "00:06:37.436"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_915e22a81c458809",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0012",
+      "start_ms": 376678,
+      "end_ms": 397436,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "In this case, we sell a call and collect a premium and buy a call with a higher strike to limit the risk should the price of the underlying rise.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this case, we sell a call and collect a premium and buy a call with a higher strike to limit the risk should the price of the underlying rise.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 376678,
+            "end_ms": 397436,
+            "start": "00:06:16.678",
+            "end": "00:06:37.436"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8fafffb18f0e3318",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0012",
+      "start_ms": 376678,
+      "end_ms": 397436,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "In this case, we sell a call and collect a premium and buy a call with a higher strike to limit the risk should the price of the underlying rise.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this case, we sell a call and collect a premium and buy a call with a higher strike to limit the risk should the price of the underlying rise.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 376678,
+            "end_ms": 397436,
+            "start": "00:06:16.678",
+            "end": "00:06:37.436"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_cc791175d69ba43f",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0012",
+      "start_ms": 397862,
+      "end_ms": 418620,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "We sell a call option with a strike price of $60 and buy a call option with a strike price of $65 at the net credit of $1.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We sell a call option with a strike price of $60 and buy a call option with a strike price of $65 at the net credit of $1.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 397862,
+            "end_ms": 418620,
+            "start": "00:06:37.862",
+            "end": "00:06:58.620"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_88bbd52442e61594",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0012",
+      "start_ms": 397862,
+      "end_ms": 418620,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "We sell a call option with a strike price of $60 and buy a call option with a strike price of $65 at the net credit of $1.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We sell a call option with a strike price of $60 and buy a call option with a strike price of $65 at the net credit of $1.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 397862,
+            "end_ms": 418620,
+            "start": "00:06:37.862",
+            "end": "00:06:58.620"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_739629447445b6ff",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0012",
+      "start_ms": 397862,
+      "end_ms": 418620,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "We receive a credit for selling the call and pay a premium for buying the call with a higher strike.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We receive a credit for selling the call and pay a premium for buying the call with a higher strike.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 397862,
+            "end_ms": 418620,
+            "start": "00:06:37.862",
+            "end": "00:06:58.620"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4ae2a3f0611bb8e5",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0012",
+      "start_ms": 397862,
+      "end_ms": 418620,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "We receive a credit for selling the call and pay a premium for buying the call with a higher strike.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We receive a credit for selling the call and pay a premium for buying the call with a higher strike.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 397862,
+            "end_ms": 418620,
+            "start": "00:06:37.862",
+            "end": "00:06:58.620"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_bfb42ba83f57ae78",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0013",
+      "start_ms": 452006,
+      "end_ms": 459308,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "If the implied volatility goes down, this is positive for the strategy, as the premium tend to decrease.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If the implied volatility goes down, this is positive for the strategy, as the premium tend to decrease.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0011@459643ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 452006,
+            "end_ms": 459308,
+            "start": "00:07:32.006",
+            "end": "00:07:39.308"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_999155aa84533813",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0013",
+      "start_ms": 452006,
+      "end_ms": 459308,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "The theta factor is also positive for the strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The theta factor is also positive for the strategy.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0011@459643ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 452006,
+            "end_ms": 459308,
+            "start": "00:07:32.006",
+            "end": "00:07:39.308"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b63bfbce51bd3c0c",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0013",
+      "start_ms": 459643,
+      "end_ms": 459643,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "GEX",
+      "surface": "GEX",
+      "statement": "1. Negative GEX",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "1. Negative GEX",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0011@459643ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 459643,
+            "end_ms": 459643,
+            "start": "00:07:39.643",
+            "end": "00:07:39.643"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gex",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_911d4b568f47ca98",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0013",
+      "start_ms": 459643,
+      "end_ms": 459643,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "GEX",
+      "surface": "GEX",
+      "statement": "2. Bearish Cumulative GEX",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "2. Bearish Cumulative GEX",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0011@459643ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 459643,
+            "end_ms": 459643,
+            "start": "00:07:39.643",
+            "end": "00:07:39.643"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gex",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b6c03fd069fbd2c8",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0013",
+      "start_ms": 459643,
+      "end_ms": 459643,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "HVL",
+      "surface": "High Vol Level",
+      "statement": "2. Sticky Strikes below High Vol Level",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "2. Sticky Strikes below High Vol Level",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0011@459643ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 459643,
+            "end_ms": 459643,
+            "start": "00:07:39.643",
+            "end": "00:07:39.643"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "hvl",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9b10c85160bd229c",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0014",
+      "start_ms": 461542,
+      "end_ms": 475916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "GEX",
+      "surface": "GEX",
+      "statement": "We want a negative GEX, a bearish cumulative GEX and sticky strikes below the high ball level.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We want a negative GEX, a bearish cumulative GEX and sticky strikes below the high ball level.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "We want a negative jacks, a bearish cumulative jacks and sticky strikes below the high ball level. Now let's look at how to use the Q-Models to set up this strategy. We could use the put support levels as the short core strikes and the high ball level as the long core strikes.",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0012@476259ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 461542,
+            "end_ms": 475916,
+            "start": "00:07:41.542",
+            "end": "00:07:55.916"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_27b27526dccd4075",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0014",
+      "start_ms": 461542,
+      "end_ms": 475916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Q-Models",
+      "surface": "Q-Models",
+      "statement": "Now let's look at how to use the Q-Models to set up this strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Now let's look at how to use the Q-Models to set up this strategy.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "We want a negative jacks, a bearish cumulative jacks and sticky strikes below the high ball level. Now let's look at how to use the Q-Models to set up this strategy. We could use the put support levels as the short core strikes and the high ball level as the long core strikes.",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0012@476259ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 461542,
+            "end_ms": 475916,
+            "start": "00:07:41.542",
+            "end": "00:07:55.916"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_503a8949bd1cf948",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0014",
+      "start_ms": 461542,
+      "end_ms": 475916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Put Support",
+      "surface": "put support",
+      "statement": "We could use the put support levels as the short core strikes and the high ball level as the long core strikes.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We could use the put support levels as the short core strikes and the high ball level as the long core strikes.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "We want a negative jacks, a bearish cumulative jacks and sticky strikes below the high ball level. Now let's look at how to use the Q-Models to set up this strategy. We could use the put support levels as the short core strikes and the high ball level as the long core strikes.",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0012@476259ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 461542,
+            "end_ms": 475916,
+            "start": "00:07:41.542",
+            "end": "00:07:55.916"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "put_support",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_55ce6c0c6ef6f5dc",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0015",
+      "start_ms": 485670,
+      "end_ms": 506108,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "It is a strategy that involves buying a put and selling a put with a strike lower than the purchase put.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It is a strategy that involves buying a put and selling a put with a strike lower than the purchase put.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 485670,
+            "end_ms": 506108,
+            "start": "00:08:05.670",
+            "end": "00:08:26.108"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_81ab89d8011a9953",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0015",
+      "start_ms": 485670,
+      "end_ms": 506108,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "It is a strategy that involves buying a put and selling a put with a strike lower than the purchase put.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It is a strategy that involves buying a put and selling a put with a strike lower than the purchase put.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 485670,
+            "end_ms": 506108,
+            "start": "00:08:05.670",
+            "end": "00:08:26.108"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c9e30b2a1559ca15",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0015",
+      "start_ms": 485670,
+      "end_ms": 506108,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "In this case we buy a put by paying a premium and sell a lower strike put to reduce the premium cost of the purchase put.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this case we buy a put by paying a premium and sell a lower strike put to reduce the premium cost of the purchase put.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 485670,
+            "end_ms": 506108,
+            "start": "00:08:05.670",
+            "end": "00:08:26.108"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_dff602b15634c859",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0015",
+      "start_ms": 485670,
+      "end_ms": 506108,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "In this case we buy a put by paying a premium and sell a lower strike put to reduce the premium cost of the purchase put.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this case we buy a put by paying a premium and sell a lower strike put to reduce the premium cost of the purchase put.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 485670,
+            "end_ms": 506108,
+            "start": "00:08:05.670",
+            "end": "00:08:26.108"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ce9cb3b4d493b497",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0015",
+      "start_ms": 485670,
+      "end_ms": 506108,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "We buy a $60 strike",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We buy a $60 strike",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 485670,
+            "end_ms": 506108,
+            "start": "00:08:05.670",
+            "end": "00:08:26.108"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c01385a6b48ad6e2",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0015",
+      "start_ms": 510790,
+      "end_ms": 535612,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "selling",
+      "statement": "We receive a credit for selling the put and pay a premium for buying the put with a higher strike.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We receive a credit for selling the put and pay a premium for buying the put with a higher strike.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 510790,
+            "end_ms": 535612,
+            "start": "00:08:30.790",
+            "end": "00:08:55.612"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8dc9e9a53c45c115",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0015",
+      "start_ms": 510790,
+      "end_ms": 535612,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buying",
+      "statement": "We receive a credit for selling the put and pay a premium for buying the put with a higher strike.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We receive a credit for selling the put and pay a premium for buying the put with a higher strike.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 510790,
+            "end_ms": 535612,
+            "start": "00:08:30.790",
+            "end": "00:08:55.612"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a569d4ec3032ecca",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0016",
+      "start_ms": 536038,
+      "end_ms": 549580,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "If the implied volatility rises, this will have a positive impact for the strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If the implied volatility rises, this will have a positive impact for the strategy.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 536038,
+            "end_ms": 549580,
+            "start": "00:08:56.038",
+            "end": "00:09:09.580"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_fc318fb86eee99e4",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0017",
+      "start_ms": 550118,
+      "end_ms": 555628,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "The theta factor is negative for these strategies because it decreases the value of the option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The theta factor is negative for these strategies because it decreases the value of the option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0014@554354ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 550118,
+            "end_ms": 555628,
+            "start": "00:09:10.118",
+            "end": "00:09:15.628"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0d24366b65653245",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0017",
+      "start_ms": 556134,
+      "end_ms": 560620,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "GEX",
+      "surface": "GEX",
+      "statement": "Negative GEX, bearish cumulative GEX and sticky strikes below the hybal level.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Negative GEX, bearish cumulative GEX and sticky strikes below the hybal level.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "Negative jacks, bearish cumulative jacks and sticky strikes below the hybal level.",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0014@554354ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 556134,
+            "end_ms": 560620,
+            "start": "00:09:16.134",
+            "end": "00:09:20.620"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gex",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a98226e891e114bf",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0017",
+      "start_ms": 554354,
+      "end_ms": 554354,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "GEX",
+      "surface": "GEX",
+      "statement": "1. Negative GEX",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "1. Negative GEX",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0014@554354ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 554354,
+            "end_ms": 554354,
+            "start": "00:09:14.354",
+            "end": "00:09:14.354"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gex",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_be90e2eb43bc4f3c",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0017",
+      "start_ms": 554354,
+      "end_ms": 554354,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "GEX",
+      "surface": "GEX",
+      "statement": "2. Bearish Cumulative GEX",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "2. Bearish Cumulative GEX",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0014@554354ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 554354,
+            "end_ms": 554354,
+            "start": "00:09:14.354",
+            "end": "00:09:14.354"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gex",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_df9a3f32e70ae40b",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0017",
+      "start_ms": 554354,
+      "end_ms": 554354,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "HVL",
+      "surface": "High Vol Level",
+      "statement": "3. Sticky Strikes below High Vol Level",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "3. Sticky Strikes below High Vol Level",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0014@554354ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 554354,
+            "end_ms": 554354,
+            "start": "00:09:14.354",
+            "end": "00:09:14.354"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "hvl",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a84f78c1672ceb08",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0018",
+      "start_ms": 561254,
+      "end_ms": 567692,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Q-Models",
+      "surface": "Q-Models",
+      "statement": "Using Q-Models we could use the High Volt Level as the Long Put Strike and the Put Support Levels as the Short Put Strikes.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Using Q-Models we could use the High Volt Level as the Long Put Strike and the Put Support Levels as the Short Put Strikes.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "Using Q-Moders we could use the High Volt Level as the Long Put Strike and the Put Support Levels as the Short Put Strikes.",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0015@573273ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 561254,
+            "end_ms": 567692,
+            "start": "00:09:21.254",
+            "end": "00:09:27.692"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8ab671b04d5e457a",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0018",
+      "start_ms": 561254,
+      "end_ms": 567692,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Put Support",
+      "surface": "Put Support",
+      "statement": "Using Q-Models we could use the High Volt Level as the Long Put Strike and the Put Support Levels as the Short Put Strikes.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Using Q-Models we could use the High Volt Level as the Long Put Strike and the Put Support Levels as the Short Put Strikes.",
+        "quote_kind": "STT_NORMALIZED",
+        "raw_cue_text": "Using Q-Moders we could use the High Volt Level as the Long Put Strike and the Put Support Levels as the Short Put Strikes.",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0015@573273ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 561254,
+            "end_ms": 567692,
+            "start": "00:09:21.254",
+            "end": "00:09:27.692"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "put_support",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_633720209d7b09da",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0018",
+      "start_ms": 568166,
+      "end_ms": 572876,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "NEUTRAL",
+      "surface": "neutral",
+      "statement": "In the next one, we will look at the market neutral strategies.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In the next one, we will look at the market neutral strategies.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_86fd353be172/f_0015@573273ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 568166,
+            "end_ms": 572876,
+            "start": "00:09:28.166",
+            "end": "00:09:32.876"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "neutral",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    }
+  ]
+}

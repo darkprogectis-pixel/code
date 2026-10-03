@@ -1,0 +1,140 @@
+{
+  "video_id": "v_5701136ec8c1",
+  "terms": [
+    {
+      "term": "TERM",
+      "context": "TERM STRUCTURE: DEFINITION \\S",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 11879,
+      "end_ms": 11879,
+      "source": "ocr"
+    },
+    {
+      "term": "ETN",
+      "context": "Therefore, the ETN is subject to the explosion to the curve or term structure.",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0004",
+      "start_ms": 255782,
+      "end_ms": 276092,
+      "source": "stt"
+    },
+    {
+      "term": "ETN",
+      "context": "Futures as options have an expiration and to remain in the position the fund manager of the ETN must be selling expiring contracts and buying new ones.",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0004",
+      "start_ms": 255782,
+      "end_ms": 276092,
+      "source": "stt"
+    },
+    {
+      "term": "ETN",
+      "context": "Here we can see an example of the ETN on the VIX.",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0005",
+      "start_ms": 308614,
+      "end_ms": 324428,
+      "source": "stt"
+    },
+    {
+      "term": "EDM",
+      "context": "The cost of rolling affects the performance of the EDM.",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0005",
+      "start_ms": 325030,
+      "end_ms": 334700,
+      "source": "stt"
+    },
+    {
+      "term": "TERM",
+      "context": "TERM STRUCTURE: VIX \\S",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0005",
+      "start_ms": 315148,
+      "end_ms": 315148,
+      "source": "ocr"
+    },
+    {
+      "term": "CHANGE",
+      "context": "CHANGE IN TERM STRUCTURE A",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0005",
+      "start_ms": 327794,
+      "end_ms": 327794,
+      "source": "ocr"
+    },
+    {
+      "term": "TERM",
+      "context": "CHANGE IN TERM STRUCTURE A",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0005",
+      "start_ms": 327794,
+      "end_ms": 327794,
+      "source": "ocr"
+    },
+    {
+      "term": "USO",
+      "context": "Let's look at an example and use the USO ETN which follows the price of oil.",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0006",
+      "start_ms": 335174,
+      "end_ms": 357596,
+      "source": "stt"
+    },
+    {
+      "term": "ETN",
+      "context": "Let's look at an example and use the USO ETN which follows the price of oil.",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0006",
+      "start_ms": 335174,
+      "end_ms": 357596,
+      "source": "stt"
+    },
+    {
+      "term": "USO",
+      "context": "USO has suffered from negative rolls in the past as the price of oil was in contango.",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0006",
+      "start_ms": 335174,
+      "end_ms": 357596,
+      "source": "stt"
+    },
+    {
+      "term": "USO",
+      "context": "Recently the curve has reversed and USO has benefited from the positive roll and the structure of backwardation.",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0006",
+      "start_ms": 335174,
+      "end_ms": 357596,
+      "source": "stt"
+    },
+    {
+      "term": "TERM",
+      "context": "TERM STRUCTURE: OIL \\S",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0006",
+      "start_ms": 342108,
+      "end_ms": 342108,
+      "source": "ocr"
+    },
+    {
+      "term": "OIL",
+      "context": "TERM STRUCTURE: OIL \\S",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0006",
+      "start_ms": 342108,
+      "end_ms": 342108,
+      "source": "ocr"
+    },
+    {
+      "term": "YR",
+      "context": "4 0 aN YR",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0007",
+      "start_ms": 363129,
+      "end_ms": 363129,
+      "source": "ocr"
+    }
+  ]
+}

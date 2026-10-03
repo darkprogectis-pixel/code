@@ -1,0 +1,356 @@
+{
+  "video_id": "v_e347914ada0b",
+  "terms": [
+    {
+      "term": "SKU",
+      "context": "Let's see what it is because understanding the SKU will help us implement trading strategies with options.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0001",
+      "start_ms": 18214,
+      "end_ms": 23020,
+      "source": "stt"
+    },
+    {
+      "term": "SQ",
+      "context": "In options trading, SQ refers to the asymmetrical pattern of implied volatility across different strike prices of option contracts with the same expiration date.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0001",
+      "start_ms": 25350,
+      "end_ms": 39340,
+      "source": "stt"
+    },
+    {
+      "term": "SKU",
+      "context": "SKU is very important for option traders because it can affect the premium and the success of a trading strategy.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0002",
+      "start_ms": 87078,
+      "end_ms": 92140,
+      "source": "stt"
+    },
+    {
+      "term": "TWS",
+      "context": "It is possible to find the skill on different platforms or through your broker trading platform, for example, TWS from Interactive Brokers.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0002",
+      "start_ms": 118182,
+      "end_ms": 124876,
+      "source": "stt"
+    },
+    {
+      "term": "TERM",
+      "context": "SKEW vs TERM STRUCTURE \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0002",
+      "start_ms": 102069,
+      "end_ms": 102069,
+      "source": "ocr"
+    },
+    {
+      "term": "HPX",
+      "context": "The skill of indices such as the HPX tends to be higher on the left hand side as the market is willing to pay more for out of the money puts to protect from a crash.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0003",
+      "start_ms": 181350,
+      "end_ms": 189004,
+      "source": "stt"
+    },
+    {
+      "term": "FOMC",
+      "context": "This is one of the reasons why when there is a major event like the FOMC meeting of the Federal Reserve or the release of a microdata like the CPI, you see the left side of the skew increasing.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0004",
+      "start_ms": 197478,
+      "end_ms": 207116,
+      "source": "stt"
+    },
+    {
+      "term": "CPI",
+      "context": "This is one of the reasons why when there is a major event like the FOMC meeting of the Federal Reserve or the release of a microdata like the CPI, you see the left side of the skew increasing.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0004",
+      "start_ms": 197478,
+      "end_ms": 207116,
+      "source": "stt"
+    },
+    {
+      "term": "SKU",
+      "context": "Looking at the SKU also helps us understand how it can increase the premium cost of our options.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0006",
+      "start_ms": 235174,
+      "end_ms": 239980,
+      "source": "stt"
+    },
+    {
+      "term": "SKU",
+      "context": "So the three points that help us understand SKU are bulletility, risk and leverage.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0006",
+      "start_ms": 245926,
+      "end_ms": 250284,
+      "source": "stt"
+    },
+    {
+      "term": "DURING",
+      "context": "SKEW DURING MARKET CRASH &",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0006",
+      "start_ms": 222122,
+      "end_ms": 222122,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "SKEW DURING MARKET CRASH &",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0006",
+      "start_ms": 222122,
+      "end_ms": 222122,
+      "source": "ocr"
+    },
+    {
+      "term": "CRASH",
+      "context": "SKEW DURING MARKET CRASH &",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0006",
+      "start_ms": 222122,
+      "end_ms": 222122,
+      "source": "ocr"
+    },
+    {
+      "term": "DURING",
+      "context": "SKEW DURING MARKET CRASH \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0006",
+      "start_ms": 243110,
+      "end_ms": 243110,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "SKEW DURING MARKET CRASH \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0006",
+      "start_ms": 243110,
+      "end_ms": 243110,
+      "source": "ocr"
+    },
+    {
+      "term": "CRASH",
+      "context": "SKEW DURING MARKET CRASH \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0006",
+      "start_ms": 243110,
+      "end_ms": 243110,
+      "source": "ocr"
+    },
+    {
+      "term": "TYPES",
+      "context": "TYPES OF :",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0008",
+      "start_ms": 350851,
+      "end_ms": 350851,
+      "source": "ocr"
+    },
+    {
+      "term": "RISK",
+      "context": "RISK REVERSAL: 25D SKEW \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0008",
+      "start_ms": 359993,
+      "end_ms": 359993,
+      "source": "ocr"
+    },
+    {
+      "term": "RR",
+      "context": "panies oncats © Positive RR = 25D Calls",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0008",
+      "start_ms": 359993,
+      "end_ms": 359993,
+      "source": "ocr"
+    },
+    {
+      "term": "RR",
+      "context": "© Negative RR = 25D Puts",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0008",
+      "start_ms": 359993,
+      "end_ms": 359993,
+      "source": "ocr"
+    },
+    {
+      "term": "SKU",
+      "context": "If the 25Data SKU is positive, a trader may prefer to buy put option rather than cause, with the same data to take advantage of lower price.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0010",
+      "start_ms": 387302,
+      "end_ms": 394732,
+      "source": "stt"
+    },
+    {
+      "term": "GameStop",
+      "context": "During the meme trend of 2020 we saw that the price of companies like GameStop skyrocketed driven by option volumes.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0010",
+      "start_ms": 466182,
+      "end_ms": 471916,
+      "source": "stt"
+    },
+    {
+      "term": "ASSET",
+      "context": "ASSET CLASS",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0010",
+      "start_ms": 458458,
+      "end_ms": 458458,
+      "source": "ocr"
+    },
+    {
+      "term": "CLASS",
+      "context": "ASSET CLASS",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0010",
+      "start_ms": 458458,
+      "end_ms": 458458,
+      "source": "ocr"
+    },
+    {
+      "term": "SINGLE",
+      "context": "SKEW: SINGLE STOCKS &",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0010",
+      "start_ms": 463263,
+      "end_ms": 463263,
+      "source": "ocr"
+    },
+    {
+      "term": "STOCKS",
+      "context": "SKEW: SINGLE STOCKS &",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0010",
+      "start_ms": 463263,
+      "end_ms": 463263,
+      "source": "ocr"
+    },
+    {
+      "term": "SKU",
+      "context": "As we see in this example, the SKU goes up when there is a period of stress in the market.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0011",
+      "start_ms": 536582,
+      "end_ms": 545580,
+      "source": "stt"
+    },
+    {
+      "term": "NS",
+      "context": "LONG SKEW NS",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0011",
+      "start_ms": 532499,
+      "end_ms": 532499,
+      "source": "ocr"
+    },
+    {
+      "term": "SKU",
+      "context": "If we invest using SKU, the strategy has vega exposure.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0012",
+      "start_ms": 576838,
+      "end_ms": 582060,
+      "source": "stt"
+    },
+    {
+      "term": "TRADE",
+      "context": "SKEW: VEGA TRADE SS",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0012",
+      "start_ms": 591291,
+      "end_ms": 591291,
+      "source": "ocr"
+    },
+    {
+      "term": "SQ",
+      "context": "We are coming to the end of the lesson on SQ, but there is still a little left.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0013",
+      "start_ms": 629990,
+      "end_ms": 633772,
+      "source": "stt"
+    },
+    {
+      "term": "TERM",
+      "context": "TERM STRUCTURE",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0013",
+      "start_ms": 629262,
+      "end_ms": 629262,
+      "source": "ocr"
+    },
+    {
+      "term": "WE",
+      "context": "SKEW: WHY WE USE IT \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0013",
+      "start_ms": 641474,
+      "end_ms": 641474,
+      "source": "ocr"
+    },
+    {
+      "term": "USE",
+      "context": "SKEW: WHY WE USE IT \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0013",
+      "start_ms": 641474,
+      "end_ms": 641474,
+      "source": "ocr"
+    },
+    {
+      "term": "TERM",
+      "context": "SKEW & TERM STRUCTURE \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0013",
+      "start_ms": 657323,
+      "end_ms": 657323,
+      "source": "ocr"
+    },
+    {
+      "term": "TERM",
+      "context": "SKEW & TERM STRUCTURE \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0013",
+      "start_ms": 672305,
+      "end_ms": 672305,
+      "source": "ocr"
+    },
+    {
+      "term": "TERM",
+      "context": "SKEW & TERM STRUCTURE \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0014",
+      "start_ms": 690323,
+      "end_ms": 690323,
+      "source": "ocr"
+    },
+    {
+      "term": "LN",
+      "context": "S; io teal > > x a . LN ot ~",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0016",
+      "start_ms": 811577,
+      "end_ms": 811577,
+      "source": "ocr"
+    },
+    {
+      "term": "CO",
+      "context": "MENTHORQ.CO",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0016",
+      "start_ms": 819419,
+      "end_ms": 819419,
+      "source": "ocr"
+    }
+  ]
+}

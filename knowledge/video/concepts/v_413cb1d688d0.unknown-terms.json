@@ -1,0 +1,446 @@
+{
+  "video_id": "v_413cb1d688d0",
+  "terms": [
+    {
+      "term": "BitAsk",
+      "context": "This is called BitAsk Spread.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 69350,
+      "end_ms": 76876,
+      "source": "stt"
+    },
+    {
+      "term": "MARKET",
+      "context": "THE MARKET ‘<",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "MAKER",
+      "context": "MAKER",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "WHO",
+      "context": "WHO IS THE MARKET MAKER? \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 9009,
+      "end_ms": 9009,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "WHO IS THE MARKET MAKER? \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 9009,
+      "end_ms": 9009,
+      "source": "ocr"
+    },
+    {
+      "term": "MAKER",
+      "context": "WHO IS THE MARKET MAKER? \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 9009,
+      "end_ms": 9009,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "HOW DO MARKET MAKERS \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 57057,
+      "end_ms": 57057,
+      "source": "ocr"
+    },
+    {
+      "term": "MAKERS",
+      "context": "HOW DO MARKET MAKERS \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 57057,
+      "end_ms": 57057,
+      "source": "ocr"
+    },
+    {
+      "term": "MAKE",
+      "context": "MAKE MONEY?",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 57057,
+      "end_ms": 57057,
+      "source": "ocr"
+    },
+    {
+      "term": "MONEY",
+      "context": "MAKE MONEY?",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 57057,
+      "end_ms": 57057,
+      "source": "ocr"
+    },
+    {
+      "term": "MM",
+      "context": "MM IN THE OPTION MARKET \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 110277,
+      "end_ms": 110277,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "MM IN THE OPTION MARKET \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 110277,
+      "end_ms": 110277,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "MM IN THE OPTION MARKET \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 110277,
+      "end_ms": 110277,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "LARGEST MARKET MAKERS \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 153086,
+      "end_ms": 153086,
+      "source": "ocr"
+    },
+    {
+      "term": "MAKERS",
+      "context": "LARGEST MARKET MAKERS \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 153086,
+      "end_ms": 153086,
+      "source": "ocr"
+    },
+    {
+      "term": "COVID",
+      "context": "Citadel became known to the retail world during and after COVID for the Robinhood saga and for several short squeezes from AMC to GameStop.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0003",
+      "start_ms": 160582,
+      "end_ms": 176268,
+      "source": "stt"
+    },
+    {
+      "term": "AMC",
+      "context": "Citadel became known to the retail world during and after COVID for the Robinhood saga and for several short squeezes from AMC to GameStop.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0003",
+      "start_ms": 160582,
+      "end_ms": 176268,
+      "source": "stt"
+    },
+    {
+      "term": "GameStop",
+      "context": "Citadel became known to the retail world during and after COVID for the Robinhood saga and for several short squeezes from AMC to GameStop.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0003",
+      "start_ms": 160582,
+      "end_ms": 176268,
+      "source": "stt"
+    },
+    {
+      "term": "MARKET",
+      "context": "MARKET ECOSYSTEM X",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0003",
+      "start_ms": 216116,
+      "end_ms": 216116,
+      "source": "ocr"
+    },
+    {
+      "term": "COVID",
+      "context": "For example, in March 2020, during the COVID crisis, we saw one of the worst crashes in history where participants sold assets to generate cash.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 316614,
+      "end_ms": 339708,
+      "source": "stt"
+    },
+    {
+      "term": "ATS",
+      "context": "The broker sends the order immediately to a liquidity provider, an exchange, a market maker, or an ATS.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 378758,
+      "end_ms": 399548,
+      "source": "stt"
+    },
+    {
+      "term": "ATS",
+      "context": "The third one is the ATS, but what is an ATS?",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 378758,
+      "end_ms": 399548,
+      "source": "stt"
+    },
+    {
+      "term": "ATS",
+      "context": "ATS is the acronym for Alternative Trading System.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 378758,
+      "end_ms": 399548,
+      "source": "stt"
+    },
+    {
+      "term": "ORDER",
+      "context": "ORDER ROUTING \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 360160,
+      "end_ms": 360160,
+      "source": "ocr"
+    },
+    {
+      "term": "ORDER",
+      "context": "ORDER ROUTING \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 384184,
+      "end_ms": 384184,
+      "source": "ocr"
+    },
+    {
+      "term": "ATS",
+      "context": "An ATS is an electronic trading platform that is used to trade financial instruments outside regulated markets.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 399782,
+      "end_ms": 418348,
+      "source": "stt"
+    },
+    {
+      "term": "ATS",
+      "context": "ATS can be used to trade a variety of financial instruments such as stocks, bonds and derivatives and other products.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 399782,
+      "end_ms": 418348,
+      "source": "stt"
+    },
+    {
+      "term": "ATS",
+      "context": "ATS can be used by both large institutions and private investors and can offer greater flexibility and transparency than OTC markets.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 399782,
+      "end_ms": 418348,
+      "source": "stt"
+    },
+    {
+      "term": "OTC",
+      "context": "ATS can be used by both large institutions and private investors and can offer greater flexibility and transparency than OTC markets.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 399782,
+      "end_ms": 418348,
+      "source": "stt"
+    },
+    {
+      "term": "ATS",
+      "context": "However, ATS also have risks such as lower liquidity and higher exposure to counterparty risk.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 418886,
+      "end_ms": 429900,
+      "source": "stt"
+    },
+    {
+      "term": "ATS",
+      "context": "In the last decade, ATS have become increasingly important and this has made the markets run faster and faster.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 418886,
+      "end_ms": 429900,
+      "source": "stt"
+    },
+    {
+      "term": "ORDERS",
+      "context": "if y EXECUTION ORDERS",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 438204,
+      "end_ms": 438204,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "< Yy MARKET LIMIT",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 438204,
+      "end_ms": 438204,
+      "source": "ocr"
+    },
+    {
+      "term": "LIMIT",
+      "context": "< Yy MARKET LIMIT",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 438204,
+      "end_ms": 438204,
+      "source": "ocr"
+    },
+    {
+      "term": "ORDER",
+      "context": "Uj ORDER ORDER",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 438204,
+      "end_ms": 438204,
+      "source": "ocr"
+    },
+    {
+      "term": "ORDERS",
+      "context": "it y EXECUTION ORDERS",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0007",
+      "start_ms": 474240,
+      "end_ms": 474240,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "Vy MARKET uMIT",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0007",
+      "start_ms": 474240,
+      "end_ms": 474240,
+      "source": "ocr"
+    },
+    {
+      "term": "ORDER",
+      "context": "“ // ORDER ORDER",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0007",
+      "start_ms": 474240,
+      "end_ms": 474240,
+      "source": "ocr"
+    },
+    {
+      "term": "ORDER",
+      "context": "THE ORDER BOOK ®",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0007",
+      "start_ms": 495228,
+      "end_ms": 495228,
+      "source": "ocr"
+    },
+    {
+      "term": "BOOK",
+      "context": "THE ORDER BOOK ®",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0007",
+      "start_ms": 495228,
+      "end_ms": 495228,
+      "source": "ocr"
+    },
+    {
+      "term": "TWS",
+      "context": "Here we see an example from Interactive Brokers TWS platform on Tesla stock.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 547334,
+      "end_ms": 572444,
+      "source": "stt"
+    },
+    {
+      "term": "MARKET",
+      "context": "MARKET MAKER POSITIONING \\w",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 556256,
+      "end_ms": 556256,
+      "source": "ocr"
+    },
+    {
+      "term": "MAKER",
+      "context": "MARKET MAKER POSITIONING \\w",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 556256,
+      "end_ms": 556256,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "(© MARKET MAKERS: cat",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 556256,
+      "end_ms": 556256,
+      "source": "ocr"
+    },
+    {
+      "term": "MAKERS",
+      "context": "(© MARKET MAKERS: cat",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 556256,
+      "end_ms": 556256,
+      "source": "ocr"
+    },
+    {
+      "term": "CME",
+      "context": "CME; Education Market by Order",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0009",
+      "start_ms": 615315,
+      "end_ms": 615315,
+      "source": "ocr"
+    },
+    {
+      "term": "BIS",
+      "context": "BIS: Committee on the Global Financial System",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0009",
+      "start_ms": 615315,
+      "end_ms": 615315,
+      "source": "ocr"
+    },
+    {
+      "term": "NASDAQ",
+      "context": "NASDAQ: Guide to Market Structure",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0009",
+      "start_ms": 615315,
+      "end_ms": 615315,
+      "source": "ocr"
+    },
+    {
+      "term": "NYSE",
+      "context": "NYSE: Paper on Market Making",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0009",
+      "start_ms": 615315,
+      "end_ms": 615315,
+      "source": "ocr"
+    }
+  ]
+}

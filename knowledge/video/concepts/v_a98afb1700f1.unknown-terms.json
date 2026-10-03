@@ -1,0 +1,113 @@
+{
+  "video_id": "v_a98afb1700f1",
+  "terms": [
+    {
+      "term": "CREAKS",
+      "context": "In this next section we will introduce you to the concept of CREAKS and what are the most important ones and their correlation.",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 102,
+      "end_ms": 24604,
+      "source": "stt"
+    },
+    {
+      "term": "CREAK",
+      "context": "We will show you the importance of understanding each CREAK to the evaluation of our options position.",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 102,
+      "end_ms": 24604,
+      "source": "stt"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION *",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "GREEKS",
+      "context": "GREEKS",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "WHAT ARE OPTION GREEKS? \\S",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 52986,
+      "end_ms": 52986,
+      "source": "ocr"
+    },
+    {
+      "term": "GREEKS",
+      "context": "WHAT ARE OPTION GREEKS? \\S",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 52986,
+      "end_ms": 52986,
+      "source": "ocr"
+    },
+    {
+      "term": "GREEKS",
+      "context": "WHY ARE GREEKS \\S",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 207140,
+      "end_ms": 207140,
+      "source": "ocr"
+    },
+    {
+      "term": "GREEKS",
+      "context": "WHY ARE GREEKS SS",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0004",
+      "start_ms": 216783,
+      "end_ms": 216783,
+      "source": "ocr"
+    },
+    {
+      "term": "GameStop",
+      "context": "We can go back to the example of GameStop to help us understand our core option even when the price goes up can be a totally wrong investment.",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 289190,
+      "end_ms": 311196,
+      "source": "stt"
+    },
+    {
+      "term": "GameStop",
+      "context": "In the case of GameStop, many of the investors were retailed, many had bought options with a very high volatility.",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 311398,
+      "end_ms": 334044,
+      "source": "stt"
+    },
+    {
+      "term": "GREEKS",
+      "context": "WHY ARE GREEKS \\S",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 279379,
+      "end_ms": 279379,
+      "source": "ocr"
+    },
+    {
+      "term": "GREEKS",
+      "context": "WHY ARE GREEKS SS",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0007",
+      "start_ms": 351651,
+      "end_ms": 351651,
+      "source": "ocr"
+    }
+  ]
+}

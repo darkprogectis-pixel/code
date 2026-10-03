@@ -1,0 +1,3682 @@
+{
+  "video_id": "v_a98afb1700f1",
+  "schema": "video-knowledge/v1",
+  "items": [
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8a4fbce899f12905",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 102,
+      "end_ms": 24604,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "We have introduced it to one of the most important participants, the market maker.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We have introduced it to one of the most important participants, the market maker.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 102,
+            "end_ms": 24604,
+            "start": "00:00:00.102",
+            "end": "00:00:24.604"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a7b37263e233b021",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 102,
+      "end_ms": 24604,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market makers",
+      "statement": "We now understand its role, who are the most important market makers and how based on their positioning they can influence market liquidity.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We now understand its role, who are the most important market makers and how based on their positioning they can influence market liquidity.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 102,
+            "end_ms": 24604,
+            "start": "00:00:00.102",
+            "end": "00:00:24.604"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7526509e52cccaf2",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 102,
+      "end_ms": 24604,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "We now understand its role, who are the most important market makers and how based on their positioning they can influence market liquidity.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We now understand its role, who are the most important market makers and how based on their positioning they can influence market liquidity.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 102,
+            "end_ms": 24604,
+            "start": "00:00:00.102",
+            "end": "00:00:24.604"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2377a8c50c1c6676",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 24934,
+      "end_ms": 46140,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Liquidity",
+      "surface": "liquidity",
+      "statement": "Looking at Greeks is also an important way to follow market liquidity and better leverage our Q-Modest.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Looking at Greeks is also an important way to follow market liquidity and better leverage our Q-Modest.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 24934,
+            "end_ms": 46140,
+            "start": "00:00:24.934",
+            "end": "00:00:46.140"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "liquidity",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_88b85fdd0784d05d",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 24934,
+      "end_ms": 46140,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "Delta",
+      "statement": "We will show you the importance of Delta and Gamma for the market maker, how other Greeks move the Delta, and how the market maker creates interday movements in the market through Delta-haging.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We will show you the importance of Delta and Gamma for the market maker, how other Greeks move the Delta, and how the market maker creates interday movements in the market through Delta-haging.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 24934,
+            "end_ms": 46140,
+            "start": "00:00:24.934",
+            "end": "00:00:46.140"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_391a3f04921fd989",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 24934,
+      "end_ms": 46140,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "Gamma",
+      "statement": "We will show you the importance of Delta and Gamma for the market maker, how other Greeks move the Delta, and how the market maker creates interday movements in the market through Delta-haging.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We will show you the importance of Delta and Gamma for the market maker, how other Greeks move the Delta, and how the market maker creates interday movements in the market through Delta-haging.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 24934,
+            "end_ms": 46140,
+            "start": "00:00:24.934",
+            "end": "00:00:46.140"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_241b4302a73840de",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 24934,
+      "end_ms": 46140,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "We will show you the importance of Delta and Gamma for the market maker, how other Greeks move the Delta, and how the market maker creates interday movements in the market through Delta-haging.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We will show you the importance of Delta and Gamma for the market maker, how other Greeks move the Delta, and how the market maker creates interday movements in the market through Delta-haging.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 24934,
+            "end_ms": 46140,
+            "start": "00:00:24.934",
+            "end": "00:00:46.140"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_fb330b94fc5f21e6",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 52986,
+      "end_ms": 52986,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "Delta",
+      "statement": "(© The Greeks are 5: Delta, Gamma, Theta, Vega, Rho",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(© The Greeks are 5: Delta, Gamma, Theta, Vega, Rho",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0002@52986ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 52986,
+            "end_ms": 52986,
+            "start": "00:00:52.986",
+            "end": "00:00:52.986"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_54002a8f45b196d7",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 52986,
+      "end_ms": 52986,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "Gamma",
+      "statement": "(© The Greeks are 5: Delta, Gamma, Theta, Vega, Rho",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(© The Greeks are 5: Delta, Gamma, Theta, Vega, Rho",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0002@52986ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 52986,
+            "end_ms": 52986,
+            "start": "00:00:52.986",
+            "end": "00:00:52.986"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9f5f028b8fd6bfc1",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 52986,
+      "end_ms": 52986,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "(© The Greeks are 5: Delta, Gamma, Theta, Vega, Rho",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(© The Greeks are 5: Delta, Gamma, Theta, Vega, Rho",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0002@52986ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 52986,
+            "end_ms": 52986,
+            "start": "00:00:52.986",
+            "end": "00:00:52.986"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_053dbac1da688014",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 52986,
+      "end_ms": 52986,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "(© The Greeks are 5: Delta, Gamma, Theta, Vega, Rho",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(© The Greeks are 5: Delta, Gamma, Theta, Vega, Rho",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0002@52986ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 52986,
+            "end_ms": 52986,
+            "start": "00:00:52.986",
+            "end": "00:00:52.986"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5a2ebb34c88c8d29",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 52986,
+      "end_ms": 52986,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Rho",
+      "surface": "Rho",
+      "statement": "(© The Greeks are 5: Delta, Gamma, Theta, Vega, Rho",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(© The Greeks are 5: Delta, Gamma, Theta, Vega, Rho",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0002@52986ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 52986,
+            "end_ms": 52986,
+            "start": "00:00:52.986",
+            "end": "00:00:52.986"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "rho",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f678e2c5ee3f1d25",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 71718,
+      "end_ms": 94428,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "Let's start from the delta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Let's start from the delta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0003@81915ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 71718,
+            "end_ms": 94428,
+            "start": "00:01:11.718",
+            "end": "00:01:34.428"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_03d4f832631c22be",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 71718,
+      "end_ms": 94428,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "The delta indicator reflects the sensitivity of an option premium to the changes in the price of the underlying.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The delta indicator reflects the sensitivity of an option premium to the changes in the price of the underlying.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0003@81915ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 71718,
+            "end_ms": 94428,
+            "start": "00:01:11.718",
+            "end": "00:01:34.428"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_eff4e142845fcce7",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 71718,
+      "end_ms": 94428,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "The delta is calculated as the change in the price of the option as the price of the underlying changes by one percentage point.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The delta is calculated as the change in the price of the option as the price of the underlying changes by one percentage point.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0003@81915ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 71718,
+            "end_ms": 94428,
+            "start": "00:01:11.718",
+            "end": "00:01:34.428"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ebc3b253741762ea",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 94598,
+      "end_ms": 114556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "Then we have gamma.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Then we have gamma.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0004@101168ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 94598,
+            "end_ms": 114556,
+            "start": "00:01:34.598",
+            "end": "00:01:54.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9ac8e28085258002",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 94598,
+      "end_ms": 114556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "The gamma indicator can be defined as the change in the delta of an option for a unit change in the price of the underlying, assuming constant other factors.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The gamma indicator can be defined as the change in the delta of an option for a unit change in the price of the underlying, assuming constant other factors.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0004@101168ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 94598,
+            "end_ms": 114556,
+            "start": "00:01:34.598",
+            "end": "00:01:54.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_080f7dd9611c5e5c",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 94598,
+      "end_ms": 114556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "The gamma indicator can be defined as the change in the delta of an option for a unit change in the price of the underlying, assuming constant other factors.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The gamma indicator can be defined as the change in the delta of an option for a unit change in the price of the underlying, assuming constant other factors.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0004@101168ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 94598,
+            "end_ms": 114556,
+            "start": "00:01:34.598",
+            "end": "00:01:54.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c028b195a5650cea",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 94598,
+      "end_ms": 114556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "Gamma",
+      "statement": "Gamma is not defined according to the type of option traded, for example, call or put, but rather according to the position taken on the option, long or short.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Gamma is not defined according to the type of option traded, for example, call or put, but rather according to the position taken on the option, long or short.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0004@101168ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 94598,
+            "end_ms": 114556,
+            "start": "00:01:34.598",
+            "end": "00:01:54.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_aa4bd6a5a06f7679",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 114758,
+      "end_ms": 140252,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "More specifically, the gamma of a long position is always positive and assumes the same value for cores and puts under the same condition.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "More specifically, the gamma of a long position is always positive and assumes the same value for cores and puts under the same condition.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0003@81915ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 114758,
+            "end_ms": 140252,
+            "start": "00:01:54.758",
+            "end": "00:02:20.252"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7e3ced2fdcce9767",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 114758,
+      "end_ms": 140252,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "When an option has a positive gamma, it means that the options data will increase as the underlying asset price move in either direction.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When an option has a positive gamma, it means that the options data will increase as the underlying asset price move in either direction.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0003@81915ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 114758,
+            "end_ms": 140252,
+            "start": "00:01:54.758",
+            "end": "00:02:20.252"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e38dc288ee5cf379",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 114758,
+      "end_ms": 140252,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "The gamma of a short position is always negative and assumes the same values for cores and puts under the same conditions.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The gamma of a short position is always negative and assumes the same values for cores and puts under the same conditions.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0003@81915ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 114758,
+            "end_ms": 140252,
+            "start": "00:01:54.758",
+            "end": "00:02:20.252"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7932a8f623ce94dc",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 140358,
+      "end_ms": 152556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "When an option has a negative gamma, it means that an option delta will decrease as the underlying asset price moves in either direction.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When an option has a negative gamma, it means that an option delta will decrease as the underlying asset price moves in either direction.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0003@81915ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 140358,
+            "end_ms": 152556,
+            "start": "00:02:20.358",
+            "end": "00:02:32.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_cef1cc3cb1bbba42",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 140358,
+      "end_ms": 152556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "When an option has a negative gamma, it means that an option delta will decrease as the underlying asset price moves in either direction.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When an option has a negative gamma, it means that an option delta will decrease as the underlying asset price moves in either direction.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0003@81915ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 140358,
+            "end_ms": 152556,
+            "start": "00:02:20.358",
+            "end": "00:02:32.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_eb578753d84d5a78",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 140358,
+      "end_ms": 152556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "This results in the options delta becoming less positive for an upward move and more negative for a downward move.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This results in the options delta becoming less positive for an upward move and more negative for a downward move.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0003@81915ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 140358,
+            "end_ms": 152556,
+            "start": "00:02:20.358",
+            "end": "00:02:32.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_aa4dbaeb2af589e8",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 81915,
+      "end_ms": 81915,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "DELTA",
+      "statement": "DELTA \\w",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "DELTA \\w",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0003@81915ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 81915,
+            "end_ms": 81915,
+            "start": "00:01:21.915",
+            "end": "00:01:21.915"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e3022f169baa3c16",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 81915,
+      "end_ms": 81915,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "Delta",
+      "statement": "© Delta is the change in the price of the",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Delta is the change in the price of the",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0003@81915ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 81915,
+            "end_ms": 81915,
+            "start": "00:01:21.915",
+            "end": "00:01:21.915"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2f6cb2fa64830344",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 101168,
+      "end_ms": 101168,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "GAMMA",
+      "statement": "GAMMA \\w",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "GAMMA \\w",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0004@101168ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 101168,
+            "end_ms": 101168,
+            "start": "00:01:41.168",
+            "end": "00:01:41.168"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a31884ed65bbadc8",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 101168,
+      "end_ms": 101168,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "Gamma",
+      "statement": "(© Gamma is the change in the Delta of an option,",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(© Gamma is the change in the Delta of an option,",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0004@101168ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 101168,
+            "end_ms": 101168,
+            "start": "00:01:41.168",
+            "end": "00:01:41.168"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_39384cb1d77f4239",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 101168,
+      "end_ms": 101168,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "Delta",
+      "statement": "(© Gamma is the change in the Delta of an option,",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(© Gamma is the change in the Delta of an option,",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0004@101168ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 101168,
+            "end_ms": 101168,
+            "start": "00:01:41.168",
+            "end": "00:01:41.168"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_39affce2bc1f5226",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 101168,
+      "end_ms": 101168,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "Gamma",
+      "statement": "‘9 Gamma of a Long position is always positive",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "‘9 Gamma of a Long position is always positive",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0004@101168ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 101168,
+            "end_ms": 101168,
+            "start": "00:01:41.168",
+            "end": "00:01:41.168"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3ca3829ed63b26ee",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0002",
+      "start_ms": 101168,
+      "end_ms": 101168,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "Gamma",
+      "statement": "© Gamma of a Short position is always negative",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Gamma of a Short position is always negative",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0004@101168ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 101168,
+            "end_ms": 101168,
+            "start": "00:01:41.168",
+            "end": "00:01:41.168"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_11226983de682cdc",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 153158,
+      "end_ms": 173084,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "We then have theta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We then have theta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0005@154154ms.jpg",
+          "frames/v_a98afb1700f1/f_0006@168602ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 153158,
+            "end_ms": 173084,
+            "start": "00:02:33.158",
+            "end": "00:02:53.084"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0014338c8b784252",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 153158,
+      "end_ms": 173084,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "The theta of an option expresses the impact of the passage of time on the value of an option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The theta of an option expresses the impact of the passage of time on the value of an option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0005@154154ms.jpg",
+          "frames/v_a98afb1700f1/f_0006@168602ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 153158,
+            "end_ms": 173084,
+            "start": "00:02:33.158",
+            "end": "00:02:53.084"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2bddca83e339cc12",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 153158,
+      "end_ms": 173084,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "Theta is expressed in numerical terms, which indicate how much value the option loses every day it approaches expiration.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Theta is expressed in numerical terms, which indicate how much value the option loses every day it approaches expiration.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0005@154154ms.jpg",
+          "frames/v_a98afb1700f1/f_0006@168602ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 153158,
+            "end_ms": 173084,
+            "start": "00:02:33.158",
+            "end": "00:02:53.084"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f225f93036d4d4d1",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 153158,
+      "end_ms": 173084,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "vega",
+      "statement": "The fourth Greek is vega.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The fourth Greek is vega.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0005@154154ms.jpg",
+          "frames/v_a98afb1700f1/f_0006@168602ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 153158,
+            "end_ms": 173084,
+            "start": "00:02:33.158",
+            "end": "00:02:53.084"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c2af7b07dd79bbe3",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 153158,
+      "end_ms": 173084,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "vega",
+      "statement": "The vega indicator expresses the sensitivity of an option to changes in the volatility of the underlying asset.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The vega indicator expresses the sensitivity of an option to changes in the volatility of the underlying asset.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0005@154154ms.jpg",
+          "frames/v_a98afb1700f1/f_0006@168602ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 153158,
+            "end_ms": 173084,
+            "start": "00:02:33.158",
+            "end": "00:02:53.084"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c6c70d0e6c50dc13",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 153158,
+      "end_ms": 173084,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "The vega indicator expresses the sensitivity of an option to changes in the volatility of the underlying asset.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The vega indicator expresses the sensitivity of an option to changes in the volatility of the underlying asset.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0005@154154ms.jpg",
+          "frames/v_a98afb1700f1/f_0006@168602ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 153158,
+            "end_ms": 173084,
+            "start": "00:02:33.158",
+            "end": "00:02:53.084"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_583645a4c8070247",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 173222,
+      "end_ms": 193948,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "For example, if an option has a Vega of 0.5, it means that the option premium will increase or decrease by 50 cents following a 1% increase or decrease in the volatility of the underlying, if other factors remain the same.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For example, if an option has a Vega of 0.5, it means that the option premium will increase or decrease by 50 cents following a 1% increase or decrease in the volatility of the underlying, if other factors remain the same.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0005@154154ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 173222,
+            "end_ms": 193948,
+            "start": "00:02:53.222",
+            "end": "00:03:13.948"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_15582581a248b258",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 173222,
+      "end_ms": 193948,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "For example, if an option has a Vega of 0.5, it means that the option premium will increase or decrease by 50 cents following a 1% increase or decrease in the volatility of the underlying, if other factors remain the same.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For example, if an option has a Vega of 0.5, it means that the option premium will increase or decrease by 50 cents following a 1% increase or decrease in the volatility of the underlying, if other factors remain the same.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0005@154154ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 173222,
+            "end_ms": 193948,
+            "start": "00:02:53.222",
+            "end": "00:03:13.948"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3ffc188f500ab25e",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 173222,
+      "end_ms": 193948,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "We should highlight that Vega affects only the time value of an option premium.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We should highlight that Vega affects only the time value of an option premium.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0005@154154ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 173222,
+            "end_ms": 193948,
+            "start": "00:02:53.222",
+            "end": "00:03:13.948"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_48a1143c696b82de",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 173222,
+      "end_ms": 193948,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "Vega is not a constant factor, but varies as the option contract expires.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Vega is not a constant factor, but varies as the option contract expires.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0005@154154ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 173222,
+            "end_ms": 193948,
+            "start": "00:02:53.222",
+            "end": "00:03:13.948"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d46577382d634d6b",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 194086,
+      "end_ms": 204556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "out of the money",
+      "statement": "For \"add the money and out of the money options\", Vega has a greater relevance.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For \"add the money and out of the money options\", Vega has a greater relevance.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0007@202335ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 194086,
+            "end_ms": 204556,
+            "start": "00:03:14.086",
+            "end": "00:03:24.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1c278183caf0f0a3",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 194086,
+      "end_ms": 204556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "For \"add the money and out of the money options\", Vega has a greater relevance.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For \"add the money and out of the money options\", Vega has a greater relevance.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0007@202335ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 194086,
+            "end_ms": 204556,
+            "start": "00:03:14.086",
+            "end": "00:03:24.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3e859f181fdf7227",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 154154,
+      "end_ms": 154154,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "THETA",
+      "statement": "THETA \\w",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "THETA \\w",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0005@154154ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 154154,
+            "end_ms": 154154,
+            "start": "00:02:34.154",
+            "end": "00:02:34.154"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_37d93950e5ef3201",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 154154,
+      "end_ms": 154154,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "© Theta expresses the impact of the",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Theta expresses the impact of the",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0005@154154ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 154154,
+            "end_ms": 154154,
+            "start": "00:02:34.154",
+            "end": "00:02:34.154"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_30d84cf16f266bae",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 154154,
+      "end_ms": 154154,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "‘© An option’s Theta is usually expressed in",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "‘© An option’s Theta is usually expressed in",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0005@154154ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 154154,
+            "end_ms": 154154,
+            "start": "00:02:34.154",
+            "end": "00:02:34.154"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b24a74974ec9c604",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 168602,
+      "end_ms": 168602,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "VEGA",
+      "statement": "VEGA \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "VEGA \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0006@168602ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 168602,
+            "end_ms": 168602,
+            "start": "00:02:48.602",
+            "end": "00:02:48.602"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a65ef2c6439ef382",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 168602,
+      "end_ms": 168602,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "© Vega expresses the sensitivity of an",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Vega expresses the sensitivity of an",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0006@168602ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 168602,
+            "end_ms": 168602,
+            "start": "00:02:48.602",
+            "end": "00:02:48.602"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_23375b9d0b0d3718",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 168602,
+      "end_ms": 168602,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "option to changes in the volatility of the",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "option to changes in the volatility of the",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0006@168602ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 168602,
+            "end_ms": 168602,
+            "start": "00:02:48.602",
+            "end": "00:02:48.602"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8e09be86f246e626",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 168602,
+      "end_ms": 168602,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "© Vega affects only Time Value of option",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Vega affects only Time Value of option",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0006@168602ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 168602,
+            "end_ms": 168602,
+            "start": "00:02:48.602",
+            "end": "00:02:48.602"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9eba30659dd7cc83",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 168602,
+      "end_ms": 168602,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "© Vega is not constant",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Vega is not constant",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0006@168602ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 168602,
+            "end_ms": 168602,
+            "start": "00:02:48.602",
+            "end": "00:02:48.602"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_96fdabd45dbca879",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 168602,
+      "end_ms": 168602,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "(© Vega is more relevant for ATM and OTM",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(© Vega is more relevant for ATM and OTM",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0006@168602ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 168602,
+            "end_ms": 168602,
+            "start": "00:02:48.602",
+            "end": "00:02:48.602"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_50b52ba2983edc93",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 168602,
+      "end_ms": 168602,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "ATM",
+      "statement": "(© Vega is more relevant for ATM and OTM",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "(© Vega is more relevant for ATM and OTM",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0006@168602ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 168602,
+            "end_ms": 168602,
+            "start": "00:02:48.602",
+            "end": "00:02:48.602"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_25e226a05df4bc33",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 202335,
+      "end_ms": 202335,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Rho",
+      "surface": "RHO",
+      "statement": "RHO \\w",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "RHO \\w",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0007@202335ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 202335,
+            "end_ms": 202335,
+            "start": "00:03:22.335",
+            "end": "00:03:22.335"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "rho",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2b6c7c09e197d7e8",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 202335,
+      "end_ms": 202335,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Rho",
+      "surface": "Rho",
+      "statement": "© The Rho indicator expresses the",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© The Rho indicator expresses the",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0007@202335ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 202335,
+            "end_ms": 202335,
+            "start": "00:03:22.335",
+            "end": "00:03:22.335"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "rho",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_455fa1bd636ab415",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 207140,
+      "end_ms": 207140,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "Making to buy to buy",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Making to buy to buy",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0008@207140ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 207140,
+            "end_ms": 207140,
+            "start": "00:03:27.140",
+            "end": "00:03:27.140"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b6f99de6c48f9e7c",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0004",
+      "start_ms": 208422,
+      "end_ms": 230972,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "They also help us understand what kind of strategy we want to use, whether we want to buy an option or sell an option, or if we want to create a more complex structure by using a mix of options.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "They also help us understand what kind of strategy we want to use, whether we want to buy an option or sell an option, or if we want to create a more complex structure by using a mix of options.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0009@216783ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 208422,
+            "end_ms": 230972,
+            "start": "00:03:28.422",
+            "end": "00:03:50.972"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ae36b3121fd4ed26",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0004",
+      "start_ms": 208422,
+      "end_ms": 230972,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "They also help us understand what kind of strategy we want to use, whether we want to buy an option or sell an option, or if we want to create a more complex structure by using a mix of options.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "They also help us understand what kind of strategy we want to use, whether we want to buy an option or sell an option, or if we want to create a more complex structure by using a mix of options.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0009@216783ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 208422,
+            "end_ms": 230972,
+            "start": "00:03:28.422",
+            "end": "00:03:50.972"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f4d98c6fffc8a893",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0004",
+      "start_ms": 216783,
+      "end_ms": 216783,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "Making to buy to buy",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Making to buy to buy",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0009@216783ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 216783,
+            "end_ms": 216783,
+            "start": "00:03:36.783",
+            "end": "00:03:36.783"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_accf3a1a40b34ca4",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0005",
+      "start_ms": 244518,
+      "end_ms": 266428,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "For example, the volatility of the underlying asset, interest rate, and time are some of the factors that can play in or against our favor.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For example, the volatility of the underlying asset, interest rate, and time are some of the factors that can play in or against our favor.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [],
+        "timestamps": [
+          {
+            "start_ms": 244518,
+            "end_ms": 266428,
+            "start": "00:04:04.518",
+            "end": "00:04:26.428"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_18d3e4b500b857e9",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 266726,
+      "end_ms": 288924,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "Our decision to buy or sell an option depends on the probability of success of our strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Our decision to buy or sell an option depends on the probability of success of our strategy.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0010@279379ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 266726,
+            "end_ms": 288924,
+            "start": "00:04:26.726",
+            "end": "00:04:48.924"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ae3a4202bc55c437",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 266726,
+      "end_ms": 288924,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "SELL",
+      "surface": "sell",
+      "statement": "Our decision to buy or sell an option depends on the probability of success of our strategy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Our decision to buy or sell an option depends on the probability of success of our strategy.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0010@279379ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 266726,
+            "end_ms": 288924,
+            "start": "00:04:26.726",
+            "end": "00:04:48.924"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "sell",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_73a7db171bd63833",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 266726,
+      "end_ms": 288924,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "Buying",
+      "statement": "Buying an option is not necessarily the only way to benefit from an increase in the price of the index.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Buying an option is not necessarily the only way to benefit from an increase in the price of the index.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0010@279379ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 266726,
+            "end_ms": 288924,
+            "start": "00:04:26.726",
+            "end": "00:04:48.924"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_87091906add83237",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 289190,
+      "end_ms": 311196,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "In some cases, it may be the wrong strategy if we buy at the wrong price.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In some cases, it may be the wrong strategy if we buy at the wrong price.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0010@279379ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 289190,
+            "end_ms": 311196,
+            "start": "00:04:49.190",
+            "end": "00:05:11.196"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4bb0c90f466fa625",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 289190,
+      "end_ms": 311196,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "Knowing how to buy at the right price is the most important but also the most difficult skill.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Knowing how to buy at the right price is the most important but also the most difficult skill.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0010@279379ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 289190,
+            "end_ms": 311196,
+            "start": "00:04:49.190",
+            "end": "00:05:11.196"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2fa68945b2b9c875",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 311398,
+      "end_ms": 334044,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "As with fundamental analysis, you can buy a great company, but if you buy at the wrong price, above its intrinsic value, no matter how good the company is, you will lose money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "As with fundamental analysis, you can buy a great company, but if you buy at the wrong price, above its intrinsic value, no matter how good the company is, you will lose money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0010@279379ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 311398,
+            "end_ms": 334044,
+            "start": "00:05:11.398",
+            "end": "00:05:34.044"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_88ff2158b6ef8725",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 311398,
+      "end_ms": 334044,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "In the case of GameStop, many of the investors were retailed, many had bought options with a very high volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In the case of GameStop, many of the investors were retailed, many had bought options with a very high volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0010@279379ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 311398,
+            "end_ms": 334044,
+            "start": "00:05:11.398",
+            "end": "00:05:34.044"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9075de602beb3d9c",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 311398,
+      "end_ms": 334044,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "These investors mispriced the Vega of the option, and even as the price of the underlying rises, the volatility rolled back and caused a decrease in the value of the option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "These investors mispriced the Vega of the option, and even as the price of the underlying rises, the volatility rolled back and caused a decrease in the value of the option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0010@279379ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 311398,
+            "end_ms": 334044,
+            "start": "00:05:11.398",
+            "end": "00:05:34.044"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_620f78248152d9a3",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 311398,
+      "end_ms": 334044,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "These investors mispriced the Vega of the option, and even as the price of the underlying rises, the volatility rolled back and caused a decrease in the value of the option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "These investors mispriced the Vega of the option, and even as the price of the underlying rises, the volatility rolled back and caused a decrease in the value of the option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0010@279379ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 311398,
+            "end_ms": 334044,
+            "start": "00:05:11.398",
+            "end": "00:05:34.044"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2e86ed46e16bbc1b",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 334246,
+      "end_ms": 348044,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "Unfortunately, in that case, the effect of Vega on the valuation of the option proved to be more important than the movement of the price of the underlying.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Unfortunately, in that case, the effect of Vega on the valuation of the option proved to be more important than the movement of the price of the underlying.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0010@279379ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 334246,
+            "end_ms": 348044,
+            "start": "00:05:34.246",
+            "end": "00:05:48.044"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_cdc84d2593c8daa2",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 334246,
+      "end_ms": 348044,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "Therefore, being able to evaluate an option can help us not only to buy the right option for our view, but also to avoid the wrong investments.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Therefore, being able to evaluate an option can help us not only to buy the right option for our view, but also to avoid the wrong investments.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0010@279379ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 334246,
+            "end_ms": 348044,
+            "start": "00:05:34.246",
+            "end": "00:05:48.044"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ebd8f8190208d6a3",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 279379,
+      "end_ms": 279379,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "Making to buy",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Making to buy",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0010@279379ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 279379,
+            "end_ms": 279379,
+            "start": "00:04:39.379",
+            "end": "00:04:39.379"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_bb7580041339b858",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0007",
+      "start_ms": 348518,
+      "end_ms": 370556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "Finally, the Greeks help us to understand when to buy an option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Finally, the Greeks help us to understand when to buy an option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0011@351651ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 348518,
+            "end_ms": 370556,
+            "start": "00:05:48.518",
+            "end": "00:06:10.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7c020161ec509ff4",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0007",
+      "start_ms": 348518,
+      "end_ms": 370556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "In some cases, it is better not to buy at all or decide on a different investment.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In some cases, it is better not to buy at all or decide on a different investment.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0011@351651ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 348518,
+            "end_ms": 370556,
+            "start": "00:05:48.518",
+            "end": "00:06:10.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3633f65c72ac92b3",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0007",
+      "start_ms": 348518,
+      "end_ms": 370556,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Q-Models",
+      "surface": "Q-Models",
+      "statement": "With our Q-Models, we will then show you how evaluating the exposure of the Greeks can help us be more efficient in our positioning in the choice of strikes,",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "With our Q-Models, we will then show you how evaluating the exposure of the Greeks can help us be more efficient in our positioning in the choice of strikes,",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0011@351651ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 348518,
+            "end_ms": 370556,
+            "start": "00:05:48.518",
+            "end": "00:06:10.556"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_24db7e52d1327ff6",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0007",
+      "start_ms": 351651,
+      "end_ms": 351651,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "BUY",
+      "surface": "buy",
+      "statement": "Making to buy to buy",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Making to buy to buy",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0011@351651ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 351651,
+            "end_ms": 351651,
+            "start": "00:05:51.651",
+            "end": "00:05:51.651"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "buy",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6c2b9c2ee81296c7",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0008",
+      "start_ms": 370630,
+      "end_ms": 378380,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "Delta",
+      "statement": "Let's start with the Delta.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Let's start with the Delta.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_a98afb1700f1/f_0012@380547ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 370630,
+            "end_ms": 378380,
+            "start": "00:06:10.630",
+            "end": "00:06:18.380"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    }
+  ]
+}

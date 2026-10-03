@@ -1,0 +1,5667 @@
+{
+  "schema": "alpha-video-unknown-terms/v1",
+  "note": "original spelling preserved; not in glossary; needs review",
+  "terms": [
+    {
+      "term": "MODELS",
+      "context": "GAMMA: Q-MODELS \\ \\",
+      "video_id": "v_d32c161a3231",
+      "segment_id": "v_d32c161a3231_s0001",
+      "start_ms": 29029,
+      "end_ms": 29029,
+      "source": "ocr"
+    },
+    {
+      "term": "VOL",
+      "context": "GAMMA vs VOL",
+      "video_id": "v_d32c161a3231",
+      "segment_id": "v_d32c161a3231_s0002",
+      "start_ms": 41408,
+      "end_ms": 41408,
+      "source": "ocr"
+    },
+    {
+      "term": "SPOT",
+      "context": "SPOT sso $50 sot",
+      "video_id": "v_d32c161a3231",
+      "segment_id": "v_d32c161a3231_s0002",
+      "start_ms": 87254,
+      "end_ms": 87254,
+      "source": "ocr"
+    },
+    {
+      "term": "PNL",
+      "context": "In this case, a long gamma position pushes the delta to the right side and it is positive for the PNL.",
+      "video_id": "v_d32c161a3231",
+      "segment_id": "v_d32c161a3231_s0003",
+      "start_ms": 151846,
+      "end_ms": 171868,
+      "source": "stt"
+    },
+    {
+      "term": "OUTTA",
+      "context": "Mel OUTTA",
+      "video_id": "v_d32c161a3231",
+      "segment_id": "v_d32c161a3231_s0007",
+      "start_ms": 479546,
+      "end_ms": 479546,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "MARKET",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "USE",
+      "context": "USE DERIVATIVES?",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0001",
+      "start_ms": 29830,
+      "end_ms": 29830,
+      "source": "ocr"
+    },
+    {
+      "term": "RISK",
+      "context": "RISK OF DERIVATIVES \\S",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0002",
+      "start_ms": 93694,
+      "end_ms": 93694,
+      "source": "ocr"
+    },
+    {
+      "term": "NS",
+      "context": "Beg cies NS",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0004",
+      "start_ms": 170337,
+      "end_ms": 170337,
+      "source": "ocr"
+    },
+    {
+      "term": "CHANCE",
+      "context": "cee ay CHANCE =",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0004",
+      "start_ms": 208642,
+      "end_ms": 208642,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "ey. MARKET",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0005",
+      "start_ms": 259760,
+      "end_ms": 259760,
+      "source": "ocr"
+    },
+    {
+      "term": "OTC",
+      "context": "Then there is an OTC market or over-the-counter market.",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0006",
+      "start_ms": 278854,
+      "end_ms": 302908,
+      "source": "stt"
+    },
+    {
+      "term": "OTC",
+      "context": "The OTC market provides a greater flexibility than regulated markets, as trading can be customized according to the specific needs of the participants.",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0006",
+      "start_ms": 278854,
+      "end_ms": 302908,
+      "source": "stt"
+    },
+    {
+      "term": "OTC",
+      "context": "However, the OTC market also has some risks, such as lack of transparency in pricing and increased counterparty risk.",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0006",
+      "start_ms": 303174,
+      "end_ms": 314988,
+      "source": "stt"
+    },
+    {
+      "term": "OTC",
+      "context": "Derivatives are often traded OTC in case participant is looking for more flexibility.",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0006",
+      "start_ms": 303174,
+      "end_ms": 314988,
+      "source": "stt"
+    },
+    {
+      "term": "MARKET",
+      "context": "oh t _ MARKET",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0006",
+      "start_ms": 285285,
+      "end_ms": 285285,
+      "source": "ocr"
+    },
+    {
+      "term": "OTC",
+      "context": "ih Siigy OTC (OVER THE COUNTER)",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0006",
+      "start_ms": 298064,
+      "end_ms": 298064,
+      "source": "ocr"
+    },
+    {
+      "term": "OVER",
+      "context": "ih Siigy OTC (OVER THE COUNTER)",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0006",
+      "start_ms": 298064,
+      "end_ms": 298064,
+      "source": "ocr"
+    },
+    {
+      "term": "COVID",
+      "context": "But why have the volumes of this option increased so much in the last 10 years, and especially after COVID-19?",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0001",
+      "start_ms": 35750,
+      "end_ms": 56348,
+      "source": "stt"
+    },
+    {
+      "term": "OPTION",
+      "context": "THE OPTION",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "MARKET",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "COVID",
+      "context": "Ast) &> @ eg i, THE COVID EFFECT",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0001",
+      "start_ms": 12012,
+      "end_ms": 12012,
+      "source": "ocr"
+    },
+    {
+      "term": "EFFECT",
+      "context": "Ast) &> @ eg i, THE COVID EFFECT",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0001",
+      "start_ms": 12012,
+      "end_ms": 12012,
+      "source": "ocr"
+    },
+    {
+      "term": "AREER",
+      "context": "AREER EEE",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0001",
+      "start_ms": 12012,
+      "end_ms": 12012,
+      "source": "ocr"
+    },
+    {
+      "term": "EEE",
+      "context": "AREER EEE",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0001",
+      "start_ms": 12012,
+      "end_ms": 12012,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION MARKET FROM 2008 &",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0002",
+      "start_ms": 57057,
+      "end_ms": 57057,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "OPTION MARKET FROM 2008 &",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0002",
+      "start_ms": 57057,
+      "end_ms": 57057,
+      "source": "ocr"
+    },
+    {
+      "term": "FAT",
+      "context": "When the FAT fund rate is zero, corporate valuation can skyrocket.",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0003",
+      "start_ms": 81574,
+      "end_ms": 85164,
+      "source": "stt"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION MARKET FROM 2008 &",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0003",
+      "start_ms": 72039,
+      "end_ms": 72039,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "OPTION MARKET FROM 2008 &",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0003",
+      "start_ms": 72039,
+      "end_ms": 72039,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION MARKET FROM 2008 &",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0004",
+      "start_ms": 126059,
+      "end_ms": 126059,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "OPTION MARKET FROM 2008 &",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0004",
+      "start_ms": 126059,
+      "end_ms": 126059,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION MARKET FROM 2008 &",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0004",
+      "start_ms": 168101,
+      "end_ms": 168101,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "OPTION MARKET FROM 2008 &",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0004",
+      "start_ms": 168101,
+      "end_ms": 168101,
+      "source": "ocr"
+    },
+    {
+      "term": "COVID",
+      "context": "This situation got worse post-COVID-19 for the following reasons.",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0005",
+      "start_ms": 191846,
+      "end_ms": 213244,
+      "source": "stt"
+    },
+    {
+      "term": "COVID",
+      "context": "During COVID, the Federal Reserve has increased liquidity beyond expectations.",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0005",
+      "start_ms": 191846,
+      "end_ms": 213244,
+      "source": "stt"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION MARKET FROM 2008 &",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0005",
+      "start_ms": 192092,
+      "end_ms": 192092,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "OPTION MARKET FROM 2008 &",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0005",
+      "start_ms": 192092,
+      "end_ms": 192092,
+      "source": "ocr"
+    },
+    {
+      "term": "WHYARE",
+      "context": "WHYARE OPTIONS IMPORTANT? \\S",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0006",
+      "start_ms": 256656,
+      "end_ms": 256656,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION MONEYNESS &",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0008",
+      "start_ms": 371438,
+      "end_ms": 371438,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION MONEYNESS &",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0009",
+      "start_ms": 402202,
+      "end_ms": 402202,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION MONEYNESS &",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0009",
+      "start_ms": 435201,
+      "end_ms": 435201,
+      "source": "ocr"
+    },
+    {
+      "term": "INTRO",
+      "context": "INTRO TO DELTA HEDGING &",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0010",
+      "start_ms": 463697,
+      "end_ms": 463697,
+      "source": "ocr"
+    },
+    {
+      "term": "WE",
+      "context": "WHAT WE NEED TO KNOW \\S",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0010",
+      "start_ms": 512512,
+      "end_ms": 512512,
+      "source": "ocr"
+    },
+    {
+      "term": "NEED",
+      "context": "WHAT WE NEED TO KNOW \\S",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0010",
+      "start_ms": 512512,
+      "end_ms": 512512,
+      "source": "ocr"
+    },
+    {
+      "term": "KNOW",
+      "context": "WHAT WE NEED TO KNOW \\S",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0010",
+      "start_ms": 512512,
+      "end_ms": 512512,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "DELTA HEDGING: LONG PUT &",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0011",
+      "start_ms": 573273,
+      "end_ms": 573273,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "DELTA HEDGING: LONG PUT &",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0011",
+      "start_ms": 582282,
+      "end_ms": 582282,
+      "source": "ocr"
+    },
+    {
+      "term": "GROWTH",
+      "context": "GROWTH OF OPTIONS MARKET \\S",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0011",
+      "start_ms": 608908,
+      "end_ms": 608908,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "GROWTH OF OPTIONS MARKET \\S",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0011",
+      "start_ms": 608908,
+      "end_ms": 608908,
+      "source": "ocr"
+    },
+    {
+      "term": "COVID",
+      "context": "Here are some interesting stats from Goldman's research on option volumes during COVID.",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0012",
+      "start_ms": 614886,
+      "end_ms": 633228,
+      "source": "stt"
+    },
+    {
+      "term": "GameStop",
+      "context": "An example is the GameStop case which reached $347 with a growth of 1700% in just a few weeks.",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0014",
+      "start_ms": 742086,
+      "end_ms": 763420,
+      "source": "stt"
+    },
+    {
+      "term": "GameStop",
+      "context": "Now let's look at what happened with GameStop.",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0014",
+      "start_ms": 808198,
+      "end_ms": 830332,
+      "source": "stt"
+    },
+    {
+      "term": "GameStop",
+      "context": "GameStop sells video games primarily through its physical stores.",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0015",
+      "start_ms": 830694,
+      "end_ms": 850844,
+      "source": "stt"
+    },
+    {
+      "term": "CoalOption",
+      "context": "In June 2019, a Wall Street Beth user began buying CoalOption on game stocks, expiring in January 2021.",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0015",
+      "start_ms": 862118,
+      "end_ms": 873644,
+      "source": "stt"
+    },
+    {
+      "term": "GameStop",
+      "context": "Michael Burry, the famous investor in the movie The Big Short, also claimed to have acquired 3% of GameStop shares.",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0015",
+      "start_ms": 874150,
+      "end_ms": 899164,
+      "source": "stt"
+    },
+    {
+      "term": "GME",
+      "context": "First of all, Melvin Capital, which due to the GME case, received a bailout from Citadel and 0.72 for $3 billion.",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0016",
+      "start_ms": 899334,
+      "end_ms": 920060,
+      "source": "stt"
+    },
+    {
+      "term": "GameStop",
+      "context": "This is just the first in a list of funds that have suffered double-digit losses on GameStop.",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0016",
+      "start_ms": 899334,
+      "end_ms": 920060,
+      "source": "stt"
+    },
+    {
+      "term": "GameStop",
+      "context": "The GameStop case led retail and non-retail investors to excessive speculation throughout the purchase of large volumes of coal options, forcing the market maker to buy shares of the underlying stock ",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0016",
+      "start_ms": 920742,
+      "end_ms": 945020,
+      "source": "stt"
+    },
+    {
+      "term": "GameStop",
+      "context": "Looking at the previous slide, we see how the volume of coal options on GameStop was particularly high compared to the past.",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0016",
+      "start_ms": 920742,
+      "end_ms": 945020,
+      "source": "stt"
+    },
+    {
+      "term": "EFFECT",
+      "context": "GAMESTOP: OPTIONS EFFECT \\S",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0016",
+      "start_ms": 918418,
+      "end_ms": 918418,
+      "source": "ocr"
+    },
+    {
+      "term": "OPEN",
+      "context": "OPTIONS OPEN INTEREST SS",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0016",
+      "start_ms": 939172,
+      "end_ms": 939172,
+      "source": "ocr"
+    },
+    {
+      "term": "GameStop",
+      "context": "Here we can see an example of open interest in the GameStop share.",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0017",
+      "start_ms": 987174,
+      "end_ms": 1009084,
+      "source": "stt"
+    },
+    {
+      "term": "GameStop",
+      "context": "In the red square you can see how the price of GameStop has had an exponential rise compared to the historical average.",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0017",
+      "start_ms": 987174,
+      "end_ms": 1009084,
+      "source": "stt"
+    },
+    {
+      "term": "EFFECT",
+      "context": "GAMESTOP: PINNING EFFECT \\S",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0017",
+      "start_ms": 999465,
+      "end_ms": 999465,
+      "source": "ocr"
+    },
+    {
+      "term": "NN",
+      "context": "NN i",
+      "video_id": "v_61f3b59bfb8e",
+      "segment_id": "v_61f3b59bfb8e_s0017",
+      "start_ms": 999465,
+      "end_ms": 999465,
+      "source": "ocr"
+    },
+    {
+      "term": "BitAsk",
+      "context": "This is called BitAsk Spread.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 69350,
+      "end_ms": 76876,
+      "source": "stt"
+    },
+    {
+      "term": "MARKET",
+      "context": "THE MARKET ‘<",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "MAKER",
+      "context": "MAKER",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "WHO",
+      "context": "WHO IS THE MARKET MAKER? \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 9009,
+      "end_ms": 9009,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "WHO IS THE MARKET MAKER? \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 9009,
+      "end_ms": 9009,
+      "source": "ocr"
+    },
+    {
+      "term": "MAKER",
+      "context": "WHO IS THE MARKET MAKER? \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 9009,
+      "end_ms": 9009,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "HOW DO MARKET MAKERS \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 57057,
+      "end_ms": 57057,
+      "source": "ocr"
+    },
+    {
+      "term": "MAKERS",
+      "context": "HOW DO MARKET MAKERS \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 57057,
+      "end_ms": 57057,
+      "source": "ocr"
+    },
+    {
+      "term": "MAKE",
+      "context": "MAKE MONEY?",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 57057,
+      "end_ms": 57057,
+      "source": "ocr"
+    },
+    {
+      "term": "MONEY",
+      "context": "MAKE MONEY?",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0001",
+      "start_ms": 57057,
+      "end_ms": 57057,
+      "source": "ocr"
+    },
+    {
+      "term": "MM",
+      "context": "MM IN THE OPTION MARKET \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 110277,
+      "end_ms": 110277,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "MM IN THE OPTION MARKET \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 110277,
+      "end_ms": 110277,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "MM IN THE OPTION MARKET \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 110277,
+      "end_ms": 110277,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "LARGEST MARKET MAKERS \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 153086,
+      "end_ms": 153086,
+      "source": "ocr"
+    },
+    {
+      "term": "MAKERS",
+      "context": "LARGEST MARKET MAKERS \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0002",
+      "start_ms": 153086,
+      "end_ms": 153086,
+      "source": "ocr"
+    },
+    {
+      "term": "COVID",
+      "context": "Citadel became known to the retail world during and after COVID for the Robinhood saga and for several short squeezes from AMC to GameStop.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0003",
+      "start_ms": 160582,
+      "end_ms": 176268,
+      "source": "stt"
+    },
+    {
+      "term": "AMC",
+      "context": "Citadel became known to the retail world during and after COVID for the Robinhood saga and for several short squeezes from AMC to GameStop.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0003",
+      "start_ms": 160582,
+      "end_ms": 176268,
+      "source": "stt"
+    },
+    {
+      "term": "GameStop",
+      "context": "Citadel became known to the retail world during and after COVID for the Robinhood saga and for several short squeezes from AMC to GameStop.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0003",
+      "start_ms": 160582,
+      "end_ms": 176268,
+      "source": "stt"
+    },
+    {
+      "term": "MARKET",
+      "context": "MARKET ECOSYSTEM X",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0003",
+      "start_ms": 216116,
+      "end_ms": 216116,
+      "source": "ocr"
+    },
+    {
+      "term": "COVID",
+      "context": "For example, in March 2020, during the COVID crisis, we saw one of the worst crashes in history where participants sold assets to generate cash.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 316614,
+      "end_ms": 339708,
+      "source": "stt"
+    },
+    {
+      "term": "ATS",
+      "context": "The broker sends the order immediately to a liquidity provider, an exchange, a market maker, or an ATS.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 378758,
+      "end_ms": 399548,
+      "source": "stt"
+    },
+    {
+      "term": "ATS",
+      "context": "The third one is the ATS, but what is an ATS?",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 378758,
+      "end_ms": 399548,
+      "source": "stt"
+    },
+    {
+      "term": "ATS",
+      "context": "ATS is the acronym for Alternative Trading System.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 378758,
+      "end_ms": 399548,
+      "source": "stt"
+    },
+    {
+      "term": "ORDER",
+      "context": "ORDER ROUTING \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 360160,
+      "end_ms": 360160,
+      "source": "ocr"
+    },
+    {
+      "term": "ORDER",
+      "context": "ORDER ROUTING \\S",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0005",
+      "start_ms": 384184,
+      "end_ms": 384184,
+      "source": "ocr"
+    },
+    {
+      "term": "ATS",
+      "context": "An ATS is an electronic trading platform that is used to trade financial instruments outside regulated markets.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 399782,
+      "end_ms": 418348,
+      "source": "stt"
+    },
+    {
+      "term": "ATS",
+      "context": "ATS can be used to trade a variety of financial instruments such as stocks, bonds and derivatives and other products.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 399782,
+      "end_ms": 418348,
+      "source": "stt"
+    },
+    {
+      "term": "ATS",
+      "context": "ATS can be used by both large institutions and private investors and can offer greater flexibility and transparency than OTC markets.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 399782,
+      "end_ms": 418348,
+      "source": "stt"
+    },
+    {
+      "term": "OTC",
+      "context": "ATS can be used by both large institutions and private investors and can offer greater flexibility and transparency than OTC markets.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 399782,
+      "end_ms": 418348,
+      "source": "stt"
+    },
+    {
+      "term": "ATS",
+      "context": "However, ATS also have risks such as lower liquidity and higher exposure to counterparty risk.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 418886,
+      "end_ms": 429900,
+      "source": "stt"
+    },
+    {
+      "term": "ATS",
+      "context": "In the last decade, ATS have become increasingly important and this has made the markets run faster and faster.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 418886,
+      "end_ms": 429900,
+      "source": "stt"
+    },
+    {
+      "term": "ORDERS",
+      "context": "if y EXECUTION ORDERS",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 438204,
+      "end_ms": 438204,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "< Yy MARKET LIMIT",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 438204,
+      "end_ms": 438204,
+      "source": "ocr"
+    },
+    {
+      "term": "LIMIT",
+      "context": "< Yy MARKET LIMIT",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 438204,
+      "end_ms": 438204,
+      "source": "ocr"
+    },
+    {
+      "term": "ORDER",
+      "context": "Uj ORDER ORDER",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0006",
+      "start_ms": 438204,
+      "end_ms": 438204,
+      "source": "ocr"
+    },
+    {
+      "term": "ORDERS",
+      "context": "it y EXECUTION ORDERS",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0007",
+      "start_ms": 474240,
+      "end_ms": 474240,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "Vy MARKET uMIT",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0007",
+      "start_ms": 474240,
+      "end_ms": 474240,
+      "source": "ocr"
+    },
+    {
+      "term": "ORDER",
+      "context": "“ // ORDER ORDER",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0007",
+      "start_ms": 474240,
+      "end_ms": 474240,
+      "source": "ocr"
+    },
+    {
+      "term": "ORDER",
+      "context": "THE ORDER BOOK ®",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0007",
+      "start_ms": 495228,
+      "end_ms": 495228,
+      "source": "ocr"
+    },
+    {
+      "term": "BOOK",
+      "context": "THE ORDER BOOK ®",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0007",
+      "start_ms": 495228,
+      "end_ms": 495228,
+      "source": "ocr"
+    },
+    {
+      "term": "TWS",
+      "context": "Here we see an example from Interactive Brokers TWS platform on Tesla stock.",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 547334,
+      "end_ms": 572444,
+      "source": "stt"
+    },
+    {
+      "term": "MARKET",
+      "context": "MARKET MAKER POSITIONING \\w",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 556256,
+      "end_ms": 556256,
+      "source": "ocr"
+    },
+    {
+      "term": "MAKER",
+      "context": "MARKET MAKER POSITIONING \\w",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 556256,
+      "end_ms": 556256,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "(© MARKET MAKERS: cat",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 556256,
+      "end_ms": 556256,
+      "source": "ocr"
+    },
+    {
+      "term": "MAKERS",
+      "context": "(© MARKET MAKERS: cat",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0008",
+      "start_ms": 556256,
+      "end_ms": 556256,
+      "source": "ocr"
+    },
+    {
+      "term": "CME",
+      "context": "CME; Education Market by Order",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0009",
+      "start_ms": 615315,
+      "end_ms": 615315,
+      "source": "ocr"
+    },
+    {
+      "term": "BIS",
+      "context": "BIS: Committee on the Global Financial System",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0009",
+      "start_ms": 615315,
+      "end_ms": 615315,
+      "source": "ocr"
+    },
+    {
+      "term": "NASDAQ",
+      "context": "NASDAQ: Guide to Market Structure",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0009",
+      "start_ms": 615315,
+      "end_ms": 615315,
+      "source": "ocr"
+    },
+    {
+      "term": "NYSE",
+      "context": "NYSE: Paper on Market Making",
+      "video_id": "v_413cb1d688d0",
+      "segment_id": "v_413cb1d688d0_s0009",
+      "start_ms": 615315,
+      "end_ms": 615315,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION ‘=",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "TYPES",
+      "context": "TYPES OF OPTIONS \\S",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0001",
+      "start_ms": 19019,
+      "end_ms": 19019,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION EXPIRATION (OPEX) \\S",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0001",
+      "start_ms": 37638,
+      "end_ms": 37638,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION CALENDAR \\S",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0004",
+      "start_ms": 119586,
+      "end_ms": 119586,
+      "source": "ocr"
+    },
+    {
+      "term": "CME",
+      "context": "Here we can see the option expiration calendar that you can find on the CME website directly.",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0005",
+      "start_ms": 119782,
+      "end_ms": 128140,
+      "source": "stt"
+    },
+    {
+      "term": "CASH",
+      "context": "CASH SETTLEMENT EXAMPLE: \\S",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0006",
+      "start_ms": 213280,
+      "end_ms": 213280,
+      "source": "ocr"
+    },
+    {
+      "term": "EFFECT",
+      "context": "OPEX EFFECT \\w",
+      "video_id": "v_fadab9cd3435",
+      "segment_id": "v_fadab9cd3435_s0006",
+      "start_ms": 233700,
+      "end_ms": 233700,
+      "source": "ocr"
+    },
+    {
+      "term": "CREAKS",
+      "context": "In this next section we will introduce you to the concept of CREAKS and what are the most important ones and their correlation.",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 102,
+      "end_ms": 24604,
+      "source": "stt"
+    },
+    {
+      "term": "CREAK",
+      "context": "We will show you the importance of understanding each CREAK to the evaluation of our options position.",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 102,
+      "end_ms": 24604,
+      "source": "stt"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION *",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "GREEKS",
+      "context": "GREEKS",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "WHAT ARE OPTION GREEKS? \\S",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 52986,
+      "end_ms": 52986,
+      "source": "ocr"
+    },
+    {
+      "term": "GREEKS",
+      "context": "WHAT ARE OPTION GREEKS? \\S",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0001",
+      "start_ms": 52986,
+      "end_ms": 52986,
+      "source": "ocr"
+    },
+    {
+      "term": "GREEKS",
+      "context": "WHY ARE GREEKS \\S",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0003",
+      "start_ms": 207140,
+      "end_ms": 207140,
+      "source": "ocr"
+    },
+    {
+      "term": "GREEKS",
+      "context": "WHY ARE GREEKS SS",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0004",
+      "start_ms": 216783,
+      "end_ms": 216783,
+      "source": "ocr"
+    },
+    {
+      "term": "GameStop",
+      "context": "We can go back to the example of GameStop to help us understand our core option even when the price goes up can be a totally wrong investment.",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 289190,
+      "end_ms": 311196,
+      "source": "stt"
+    },
+    {
+      "term": "GameStop",
+      "context": "In the case of GameStop, many of the investors were retailed, many had bought options with a very high volatility.",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 311398,
+      "end_ms": 334044,
+      "source": "stt"
+    },
+    {
+      "term": "GREEKS",
+      "context": "WHY ARE GREEKS \\S",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0006",
+      "start_ms": 279379,
+      "end_ms": 279379,
+      "source": "ocr"
+    },
+    {
+      "term": "GREEKS",
+      "context": "WHY ARE GREEKS SS",
+      "video_id": "v_a98afb1700f1",
+      "segment_id": "v_a98afb1700f1_s0007",
+      "start_ms": 351651,
+      "end_ms": 351651,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION E|",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION MONEYNESS &",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 5372,
+      "end_ms": 5372,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION MONEYNESS &",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0001",
+      "start_ms": 43677,
+      "end_ms": 43677,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION VALUE &",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 181014,
+      "end_ms": 181014,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "OPTION VALUE &",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 181014,
+      "end_ms": 181014,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "CALL DELTA: OTM SS",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0004",
+      "start_ms": 192793,
+      "end_ms": 192793,
+      "source": "ocr"
+    },
+    {
+      "term": "SPEED",
+      "context": "DELTA SPEED \\S",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0006",
+      "start_ms": 314948,
+      "end_ms": 314948,
+      "source": "ocr"
+    },
+    {
+      "term": "DEND",
+      "context": "Dividends DEND",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0008",
+      "start_ms": 396696,
+      "end_ms": 396696,
+      "source": "ocr"
+    },
+    {
+      "term": "TF",
+      "context": "TF,",
+      "video_id": "v_453f1f61ad99",
+      "segment_id": "v_453f1f61ad99_s0008",
+      "start_ms": 396696,
+      "end_ms": 396696,
+      "source": "ocr"
+    },
+    {
+      "term": "PAYOFF",
+      "context": "DELTA: PAYOFF CALL \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0004",
+      "start_ms": 296997,
+      "end_ms": 296997,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "DELTA: PAYOFF CALL \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0004",
+      "start_ms": 296997,
+      "end_ms": 296997,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION VALUE",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0005",
+      "start_ms": 343310,
+      "end_ms": 343310,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "OPTION VALUE",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0005",
+      "start_ms": 343310,
+      "end_ms": 343310,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION VALUE: CALL \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0005",
+      "start_ms": 351518,
+      "end_ms": 351518,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "OPTION VALUE: CALL \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0005",
+      "start_ms": 351518,
+      "end_ms": 351518,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "OPTION VALUE: CALL \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0005",
+      "start_ms": 351518,
+      "end_ms": 351518,
+      "source": "ocr"
+    },
+    {
+      "term": "TIME",
+      "context": "TIME VALUE: P&G \\Q",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0006",
+      "start_ms": 419452,
+      "end_ms": 419452,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "TIME VALUE: P&G \\Q",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0006",
+      "start_ms": 419452,
+      "end_ms": 419452,
+      "source": "ocr"
+    },
+    {
+      "term": "FN",
+      "context": "M we FN fe",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0006",
+      "start_ms": 419452,
+      "end_ms": 419452,
+      "source": "ocr"
+    },
+    {
+      "term": "TIME",
+      "context": "TIME VALUE vs VOLATILITY \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0006",
+      "start_ms": 453887,
+      "end_ms": 453887,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "TIME VALUE vs VOLATILITY \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0006",
+      "start_ms": 453887,
+      "end_ms": 453887,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION VALUE: CALL \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0007",
+      "start_ms": 462862,
+      "end_ms": 462862,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "OPTION VALUE: CALL \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0007",
+      "start_ms": 462862,
+      "end_ms": 462862,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "OPTION VALUE: CALL \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0007",
+      "start_ms": 462862,
+      "end_ms": 462862,
+      "source": "ocr"
+    },
+    {
+      "term": "HEDGE",
+      "context": "DELTA HEDGING: HEDGE RATIO \\w",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0001",
+      "start_ms": 25759,
+      "end_ms": 25759,
+      "source": "ocr"
+    },
+    {
+      "term": "RATIO",
+      "context": "DELTA HEDGING: HEDGE RATIO \\w",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0001",
+      "start_ms": 25759,
+      "end_ms": 25759,
+      "source": "ocr"
+    },
+    {
+      "term": "HG",
+      "context": "The delta becomes fundamental because it can help us create what we know as the HG ratio.",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0002",
+      "start_ms": 30118,
+      "end_ms": 34284,
+      "source": "stt"
+    },
+    {
+      "term": "CALL",
+      "context": "DELTA: CALL vs PUT &",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 142009,
+      "end_ms": 142009,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "DELTA: CALL vs PUT &",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 142009,
+      "end_ms": 142009,
+      "source": "ocr"
+    },
+    {
+      "term": "HEDGE",
+      "context": "HEDGE DELTA WITH OPTIONS \\S",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0004",
+      "start_ms": 152953,
+      "end_ms": 152953,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "LONG CALL",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 300801,
+      "end_ms": 300801,
+      "source": "ocr"
+    },
+    {
+      "term": "ME",
+      "context": "[errs nnn ME] oe [bone]",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 300801,
+      "end_ms": 300801,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "LONG CALL",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 345612,
+      "end_ms": 345612,
+      "source": "ocr"
+    },
+    {
+      "term": "MR",
+      "context": "ene fone MR] ss [anne",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0008",
+      "start_ms": 345612,
+      "end_ms": 345612,
+      "source": "ocr"
+    },
+    {
+      "term": "TAO",
+      "context": "\"TAO eC ot AUD ‘=",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0010",
+      "start_ms": 441007,
+      "end_ms": 441007,
+      "source": "ocr"
+    },
+    {
+      "term": "AUD",
+      "context": "\"TAO eC ot AUD ‘=",
+      "video_id": "v_b157768cc60a",
+      "segment_id": "v_b157768cc60a_s0010",
+      "start_ms": 441007,
+      "end_ms": 441007,
+      "source": "ocr"
+    },
+    {
+      "term": "WE",
+      "context": "THETA: WHAT WE KNOW \\S",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 82816,
+      "end_ms": 82816,
+      "source": "ocr"
+    },
+    {
+      "term": "KNOW",
+      "context": "THETA: WHAT WE KNOW \\S",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0001",
+      "start_ms": 82816,
+      "end_ms": 82816,
+      "source": "ocr"
+    },
+    {
+      "term": "EE",
+      "context": "Option Value Today = $2.75 EE Option Value",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0002",
+      "start_ms": 151351,
+      "end_ms": 151351,
+      "source": "ocr"
+    },
+    {
+      "term": "CO",
+      "context": "MENTHORQ.CO",
+      "video_id": "v_94f0f6cb9691",
+      "segment_id": "v_94f0f6cb9691_s0003",
+      "start_ms": 225592,
+      "end_ms": 225592,
+      "source": "ocr"
+    },
+    {
+      "term": "HV",
+      "context": "Historical Volatility, or HV, also known as Statistical Volatility, is calculated based on the actual price movement of an asset over a specific time period.",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 81286,
+      "end_ms": 89676,
+      "source": "stt"
+    },
+    {
+      "term": "OY",
+      "context": "ets OY",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "NS",
+      "context": "VOLATILITY: DEFINITION NS",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 17684,
+      "end_ms": 17684,
+      "source": "ocr"
+    },
+    {
+      "term": "HV",
+      "context": "HISTORICAL VOLATILITY (HV) \\S",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 80981,
+      "end_ms": 80981,
+      "source": "ocr"
+    },
+    {
+      "term": "HV",
+      "context": "© HV provides a measure of the amount of",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 80981,
+      "end_ms": 80981,
+      "source": "ocr"
+    },
+    {
+      "term": "IV",
+      "context": "© IV can be seen as the future expectation of",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0003",
+      "start_ms": 232332,
+      "end_ms": 232332,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "IMPLIED VOLATILITY: Q-MODELS \\",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0003",
+      "start_ms": 254755,
+      "end_ms": 254755,
+      "source": "ocr"
+    },
+    {
+      "term": "PK",
+      "context": "stn PK",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 285519,
+      "end_ms": 285519,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "HISTORICAL vs IMPLIED: Q-MODELS .",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 322355,
+      "end_ms": 322355,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "HISTORICAL vs IMPLIED: Q-MODELS iS",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 333867,
+      "end_ms": 333867,
+      "source": "ocr"
+    },
+    {
+      "term": "IV",
+      "context": "IV: LONG OR SHORT GAMMA \\S",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 392359,
+      "end_ms": 392359,
+      "source": "ocr"
+    },
+    {
+      "term": "IV",
+      "context": "more than IV less than IV",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 392359,
+      "end_ms": 392359,
+      "source": "ocr"
+    },
+    {
+      "term": "WE",
+      "context": "VEGA: WHAT WE KNOW SS",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 444177,
+      "end_ms": 444177,
+      "source": "ocr"
+    },
+    {
+      "term": "KNOW",
+      "context": "VEGA: WHAT WE KNOW SS",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 444177,
+      "end_ms": 444177,
+      "source": "ocr"
+    },
+    {
+      "term": "GREEKS",
+      "context": "WHY ARE GREEKS IMPORTANT \\S",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 470003,
+      "end_ms": 470003,
+      "source": "ocr"
+    },
+    {
+      "term": "XN",
+      "context": "VEGA: LONG GAMMA XN",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 481448,
+      "end_ms": 481448,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION VALUE \\S",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 491558,
+      "end_ms": 491558,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "OPTION VALUE \\S",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 491558,
+      "end_ms": 491558,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION VALUE SS",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 520420,
+      "end_ms": 520420,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "OPTION VALUE SS",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 520420,
+      "end_ms": 520420,
+      "source": "ocr"
+    },
+    {
+      "term": "II",
+      "context": "pare! II) \\\\) 2 — e- he Saal ia LZ",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0008",
+      "start_ms": 584984,
+      "end_ms": 584984,
+      "source": "ocr"
+    },
+    {
+      "term": "LZ",
+      "context": "pare! II) \\\\) 2 — e- he Saal ia LZ",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0008",
+      "start_ms": 584984,
+      "end_ms": 584984,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "BLACK",
+      "context": "BLACK-SCHOLES MODEL \\S",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0001",
+      "start_ms": 12746,
+      "end_ms": 12746,
+      "source": "ocr"
+    },
+    {
+      "term": "MODEL",
+      "context": "BLACK-SCHOLES MODEL \\S",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0001",
+      "start_ms": 12746,
+      "end_ms": 12746,
+      "source": "ocr"
+    },
+    {
+      "term": "MODEL",
+      "context": "MODEL ASSUMPTIONS &",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0001",
+      "start_ms": 45312,
+      "end_ms": 45312,
+      "source": "ocr"
+    },
+    {
+      "term": "BLACK",
+      "context": "BLACK-SCHOLES: FORMULA \\S",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0002",
+      "start_ms": 71071,
+      "end_ms": 71071,
+      "source": "ocr"
+    },
+    {
+      "term": "VE",
+      "context": "dy =d,- VE",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0002",
+      "start_ms": 71071,
+      "end_ms": 71071,
+      "source": "ocr"
+    },
+    {
+      "term": "BLACK",
+      "context": "BLACK-SCHOLES: SIMPLIFIED \\S",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0002",
+      "start_ms": 84418,
+      "end_ms": 84418,
+      "source": "ocr"
+    },
+    {
+      "term": "OTION",
+      "context": "OTION VALUATION: FORMULA \\S",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0004",
+      "start_ms": 195095,
+      "end_ms": 195095,
+      "source": "ocr"
+    },
+    {
+      "term": "TIME",
+      "context": "INTRINSIC AND TIME VALUE \\S",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0004",
+      "start_ms": 204671,
+      "end_ms": 204671,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "INTRINSIC AND TIME VALUE \\S",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0004",
+      "start_ms": 204671,
+      "end_ms": 204671,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "INTRINSIC VALUE",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0004",
+      "start_ms": 204671,
+      "end_ms": 204671,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "INTRINSIC VALUE iN",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0007",
+      "start_ms": 255889,
+      "end_ms": 255889,
+      "source": "ocr"
+    },
+    {
+      "term": "TM",
+      "context": "© Only inthe-money TM options have",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0007",
+      "start_ms": 255889,
+      "end_ms": 255889,
+      "source": "ocr"
+    },
+    {
+      "term": "TIME",
+      "context": "TIME VALUE \\S",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0009",
+      "start_ms": 338972,
+      "end_ms": 338972,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "TIME VALUE \\S",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0009",
+      "start_ms": 338972,
+      "end_ms": 338972,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION VALUATION \\S",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0009",
+      "start_ms": 382148,
+      "end_ms": 382148,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION VALUATION: SUMMARY \\S",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0009",
+      "start_ms": 386720,
+      "end_ms": 386720,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION VALUATION: VOLATILITY \\S",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0010",
+      "start_ms": 415916,
+      "end_ms": 415916,
+      "source": "ocr"
+    },
+    {
+      "term": "SAA",
+      "context": "pee 11 \\\\ SAA",
+      "video_id": "v_54555df70b54",
+      "segment_id": "v_54555df70b54_s0010",
+      "start_ms": 444144,
+      "end_ms": 444144,
+      "source": "ocr"
+    },
+    {
+      "term": "TERM",
+      "context": "TERM STRUCTURE: DEFINITION \\S",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0001",
+      "start_ms": 11879,
+      "end_ms": 11879,
+      "source": "ocr"
+    },
+    {
+      "term": "ETN",
+      "context": "Therefore, the ETN is subject to the explosion to the curve or term structure.",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0004",
+      "start_ms": 255782,
+      "end_ms": 276092,
+      "source": "stt"
+    },
+    {
+      "term": "ETN",
+      "context": "Futures as options have an expiration and to remain in the position the fund manager of the ETN must be selling expiring contracts and buying new ones.",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0004",
+      "start_ms": 255782,
+      "end_ms": 276092,
+      "source": "stt"
+    },
+    {
+      "term": "ETN",
+      "context": "Here we can see an example of the ETN on the VIX.",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0005",
+      "start_ms": 308614,
+      "end_ms": 324428,
+      "source": "stt"
+    },
+    {
+      "term": "EDM",
+      "context": "The cost of rolling affects the performance of the EDM.",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0005",
+      "start_ms": 325030,
+      "end_ms": 334700,
+      "source": "stt"
+    },
+    {
+      "term": "TERM",
+      "context": "TERM STRUCTURE: VIX \\S",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0005",
+      "start_ms": 315148,
+      "end_ms": 315148,
+      "source": "ocr"
+    },
+    {
+      "term": "CHANGE",
+      "context": "CHANGE IN TERM STRUCTURE A",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0005",
+      "start_ms": 327794,
+      "end_ms": 327794,
+      "source": "ocr"
+    },
+    {
+      "term": "TERM",
+      "context": "CHANGE IN TERM STRUCTURE A",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0005",
+      "start_ms": 327794,
+      "end_ms": 327794,
+      "source": "ocr"
+    },
+    {
+      "term": "USO",
+      "context": "Let's look at an example and use the USO ETN which follows the price of oil.",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0006",
+      "start_ms": 335174,
+      "end_ms": 357596,
+      "source": "stt"
+    },
+    {
+      "term": "ETN",
+      "context": "Let's look at an example and use the USO ETN which follows the price of oil.",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0006",
+      "start_ms": 335174,
+      "end_ms": 357596,
+      "source": "stt"
+    },
+    {
+      "term": "USO",
+      "context": "USO has suffered from negative rolls in the past as the price of oil was in contango.",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0006",
+      "start_ms": 335174,
+      "end_ms": 357596,
+      "source": "stt"
+    },
+    {
+      "term": "USO",
+      "context": "Recently the curve has reversed and USO has benefited from the positive roll and the structure of backwardation.",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0006",
+      "start_ms": 335174,
+      "end_ms": 357596,
+      "source": "stt"
+    },
+    {
+      "term": "TERM",
+      "context": "TERM STRUCTURE: OIL \\S",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0006",
+      "start_ms": 342108,
+      "end_ms": 342108,
+      "source": "ocr"
+    },
+    {
+      "term": "OIL",
+      "context": "TERM STRUCTURE: OIL \\S",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0006",
+      "start_ms": 342108,
+      "end_ms": 342108,
+      "source": "ocr"
+    },
+    {
+      "term": "YR",
+      "context": "4 0 aN YR",
+      "video_id": "v_5701136ec8c1",
+      "segment_id": "v_5701136ec8c1_s0007",
+      "start_ms": 363129,
+      "end_ms": 363129,
+      "source": "ocr"
+    },
+    {
+      "term": "SKU",
+      "context": "Let's see what it is because understanding the SKU will help us implement trading strategies with options.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0001",
+      "start_ms": 18214,
+      "end_ms": 23020,
+      "source": "stt"
+    },
+    {
+      "term": "SQ",
+      "context": "In options trading, SQ refers to the asymmetrical pattern of implied volatility across different strike prices of option contracts with the same expiration date.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0001",
+      "start_ms": 25350,
+      "end_ms": 39340,
+      "source": "stt"
+    },
+    {
+      "term": "SKU",
+      "context": "SKU is very important for option traders because it can affect the premium and the success of a trading strategy.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0002",
+      "start_ms": 87078,
+      "end_ms": 92140,
+      "source": "stt"
+    },
+    {
+      "term": "TWS",
+      "context": "It is possible to find the skill on different platforms or through your broker trading platform, for example, TWS from Interactive Brokers.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0002",
+      "start_ms": 118182,
+      "end_ms": 124876,
+      "source": "stt"
+    },
+    {
+      "term": "TERM",
+      "context": "SKEW vs TERM STRUCTURE \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0002",
+      "start_ms": 102069,
+      "end_ms": 102069,
+      "source": "ocr"
+    },
+    {
+      "term": "HPX",
+      "context": "The skill of indices such as the HPX tends to be higher on the left hand side as the market is willing to pay more for out of the money puts to protect from a crash.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0003",
+      "start_ms": 181350,
+      "end_ms": 189004,
+      "source": "stt"
+    },
+    {
+      "term": "FOMC",
+      "context": "This is one of the reasons why when there is a major event like the FOMC meeting of the Federal Reserve or the release of a microdata like the CPI, you see the left side of the skew increasing.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0004",
+      "start_ms": 197478,
+      "end_ms": 207116,
+      "source": "stt"
+    },
+    {
+      "term": "CPI",
+      "context": "This is one of the reasons why when there is a major event like the FOMC meeting of the Federal Reserve or the release of a microdata like the CPI, you see the left side of the skew increasing.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0004",
+      "start_ms": 197478,
+      "end_ms": 207116,
+      "source": "stt"
+    },
+    {
+      "term": "SKU",
+      "context": "Looking at the SKU also helps us understand how it can increase the premium cost of our options.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0006",
+      "start_ms": 235174,
+      "end_ms": 239980,
+      "source": "stt"
+    },
+    {
+      "term": "SKU",
+      "context": "So the three points that help us understand SKU are bulletility, risk and leverage.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0006",
+      "start_ms": 245926,
+      "end_ms": 250284,
+      "source": "stt"
+    },
+    {
+      "term": "DURING",
+      "context": "SKEW DURING MARKET CRASH &",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0006",
+      "start_ms": 222122,
+      "end_ms": 222122,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "SKEW DURING MARKET CRASH &",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0006",
+      "start_ms": 222122,
+      "end_ms": 222122,
+      "source": "ocr"
+    },
+    {
+      "term": "CRASH",
+      "context": "SKEW DURING MARKET CRASH &",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0006",
+      "start_ms": 222122,
+      "end_ms": 222122,
+      "source": "ocr"
+    },
+    {
+      "term": "DURING",
+      "context": "SKEW DURING MARKET CRASH \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0006",
+      "start_ms": 243110,
+      "end_ms": 243110,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "SKEW DURING MARKET CRASH \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0006",
+      "start_ms": 243110,
+      "end_ms": 243110,
+      "source": "ocr"
+    },
+    {
+      "term": "CRASH",
+      "context": "SKEW DURING MARKET CRASH \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0006",
+      "start_ms": 243110,
+      "end_ms": 243110,
+      "source": "ocr"
+    },
+    {
+      "term": "TYPES",
+      "context": "TYPES OF :",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0008",
+      "start_ms": 350851,
+      "end_ms": 350851,
+      "source": "ocr"
+    },
+    {
+      "term": "RISK",
+      "context": "RISK REVERSAL: 25D SKEW \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0008",
+      "start_ms": 359993,
+      "end_ms": 359993,
+      "source": "ocr"
+    },
+    {
+      "term": "RR",
+      "context": "panies oncats © Positive RR = 25D Calls",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0008",
+      "start_ms": 359993,
+      "end_ms": 359993,
+      "source": "ocr"
+    },
+    {
+      "term": "RR",
+      "context": "© Negative RR = 25D Puts",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0008",
+      "start_ms": 359993,
+      "end_ms": 359993,
+      "source": "ocr"
+    },
+    {
+      "term": "SKU",
+      "context": "If the 25Data SKU is positive, a trader may prefer to buy put option rather than cause, with the same data to take advantage of lower price.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0010",
+      "start_ms": 387302,
+      "end_ms": 394732,
+      "source": "stt"
+    },
+    {
+      "term": "GameStop",
+      "context": "During the meme trend of 2020 we saw that the price of companies like GameStop skyrocketed driven by option volumes.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0010",
+      "start_ms": 466182,
+      "end_ms": 471916,
+      "source": "stt"
+    },
+    {
+      "term": "ASSET",
+      "context": "ASSET CLASS",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0010",
+      "start_ms": 458458,
+      "end_ms": 458458,
+      "source": "ocr"
+    },
+    {
+      "term": "CLASS",
+      "context": "ASSET CLASS",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0010",
+      "start_ms": 458458,
+      "end_ms": 458458,
+      "source": "ocr"
+    },
+    {
+      "term": "SINGLE",
+      "context": "SKEW: SINGLE STOCKS &",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0010",
+      "start_ms": 463263,
+      "end_ms": 463263,
+      "source": "ocr"
+    },
+    {
+      "term": "STOCKS",
+      "context": "SKEW: SINGLE STOCKS &",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0010",
+      "start_ms": 463263,
+      "end_ms": 463263,
+      "source": "ocr"
+    },
+    {
+      "term": "SKU",
+      "context": "As we see in this example, the SKU goes up when there is a period of stress in the market.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0011",
+      "start_ms": 536582,
+      "end_ms": 545580,
+      "source": "stt"
+    },
+    {
+      "term": "NS",
+      "context": "LONG SKEW NS",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0011",
+      "start_ms": 532499,
+      "end_ms": 532499,
+      "source": "ocr"
+    },
+    {
+      "term": "SKU",
+      "context": "If we invest using SKU, the strategy has vega exposure.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0012",
+      "start_ms": 576838,
+      "end_ms": 582060,
+      "source": "stt"
+    },
+    {
+      "term": "TRADE",
+      "context": "SKEW: VEGA TRADE SS",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0012",
+      "start_ms": 591291,
+      "end_ms": 591291,
+      "source": "ocr"
+    },
+    {
+      "term": "SQ",
+      "context": "We are coming to the end of the lesson on SQ, but there is still a little left.",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0013",
+      "start_ms": 629990,
+      "end_ms": 633772,
+      "source": "stt"
+    },
+    {
+      "term": "TERM",
+      "context": "TERM STRUCTURE",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0013",
+      "start_ms": 629262,
+      "end_ms": 629262,
+      "source": "ocr"
+    },
+    {
+      "term": "WE",
+      "context": "SKEW: WHY WE USE IT \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0013",
+      "start_ms": 641474,
+      "end_ms": 641474,
+      "source": "ocr"
+    },
+    {
+      "term": "USE",
+      "context": "SKEW: WHY WE USE IT \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0013",
+      "start_ms": 641474,
+      "end_ms": 641474,
+      "source": "ocr"
+    },
+    {
+      "term": "TERM",
+      "context": "SKEW & TERM STRUCTURE \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0013",
+      "start_ms": 657323,
+      "end_ms": 657323,
+      "source": "ocr"
+    },
+    {
+      "term": "TERM",
+      "context": "SKEW & TERM STRUCTURE \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0013",
+      "start_ms": 672305,
+      "end_ms": 672305,
+      "source": "ocr"
+    },
+    {
+      "term": "TERM",
+      "context": "SKEW & TERM STRUCTURE \\S",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0014",
+      "start_ms": 690323,
+      "end_ms": 690323,
+      "source": "ocr"
+    },
+    {
+      "term": "LN",
+      "context": "S; io teal > > x a . LN ot ~",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0016",
+      "start_ms": 811577,
+      "end_ms": 811577,
+      "source": "ocr"
+    },
+    {
+      "term": "CO",
+      "context": "MENTHORQ.CO",
+      "video_id": "v_e347914ada0b",
+      "segment_id": "v_e347914ada0b_s0016",
+      "start_ms": 819419,
+      "end_ms": 819419,
+      "source": "ocr"
+    },
+    {
+      "term": "TAIL",
+      "context": "TAIL RISK & NORMAL",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "RISK",
+      "context": "TAIL RISK & NORMAL",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "NORMAL",
+      "context": "TAIL RISK & NORMAL",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "NORMAL",
+      "context": "NORMAL DISTRIBUTION: THEORY \\S",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 12846,
+      "end_ms": 12846,
+      "source": "ocr"
+    },
+    {
+      "term": "THEORY",
+      "context": "NORMAL DISTRIBUTION: THEORY \\S",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 12846,
+      "end_ms": 12846,
+      "source": "ocr"
+    },
+    {
+      "term": "NORMAL",
+      "context": "NORMAL DISTRIBUTION: THEORY \\S",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 33133,
+      "end_ms": 33133,
+      "source": "ocr"
+    },
+    {
+      "term": "THEORY",
+      "context": "NORMAL DISTRIBUTION: THEORY \\S",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 33133,
+      "end_ms": 33133,
+      "source": "ocr"
+    },
+    {
+      "term": "NORMAL",
+      "context": "NORMAL DISTRIBUTION: THEORY \\S",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 42409,
+      "end_ms": 42409,
+      "source": "ocr"
+    },
+    {
+      "term": "THEORY",
+      "context": "NORMAL DISTRIBUTION: THEORY \\S",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0001",
+      "start_ms": 42409,
+      "end_ms": 42409,
+      "source": "ocr"
+    },
+    {
+      "term": "NORMAL",
+      "context": "NORMAL DISTRIBUTION: THEORY \\S",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0002",
+      "start_ms": 79279,
+      "end_ms": 79279,
+      "source": "ocr"
+    },
+    {
+      "term": "THEORY",
+      "context": "NORMAL DISTRIBUTION: THEORY \\S",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0002",
+      "start_ms": 79279,
+      "end_ms": 79279,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS EXAMPLE \\",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0004",
+      "start_ms": 170070,
+      "end_ms": 170070,
+      "source": "ocr"
+    },
+    {
+      "term": "COVID",
+      "context": "These are events like the financial crisis of 2008 and the COVID crisis.",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0005",
+      "start_ms": 200998,
+      "end_ms": 214060,
+      "source": "stt"
+    },
+    {
+      "term": "TAIL",
+      "context": "TAIL RISK hi ee. te",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0005",
+      "start_ms": 189022,
+      "end_ms": 189022,
+      "source": "ocr"
+    },
+    {
+      "term": "RISK",
+      "context": "TAIL RISK hi ee. te",
+      "video_id": "v_88095231ec06",
+      "segment_id": "v_88095231ec06_s0005",
+      "start_ms": 189022,
+      "end_ms": 189022,
+      "source": "ocr"
+    },
+    {
+      "term": "WE",
+      "context": "WHY WE LOOK AT LIQUIDITY? \\S",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0001",
+      "start_ms": 16917,
+      "end_ms": 16917,
+      "source": "ocr"
+    },
+    {
+      "term": "LOOK",
+      "context": "WHY WE LOOK AT LIQUIDITY? \\S",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0001",
+      "start_ms": 16917,
+      "end_ms": 16917,
+      "source": "ocr"
+    },
+    {
+      "term": "WE",
+      "context": "WHY WE LOOK AT LIQUIDITY? &",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0002",
+      "start_ms": 86253,
+      "end_ms": 86253,
+      "source": "ocr"
+    },
+    {
+      "term": "LOOK",
+      "context": "WHY WE LOOK AT LIQUIDITY? &",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0002",
+      "start_ms": 86253,
+      "end_ms": 86253,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "yy MARKET",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0002",
+      "start_ms": 140941,
+      "end_ms": 140941,
+      "source": "ocr"
+    },
+    {
+      "term": "HEDGE",
+      "context": "HEDGE RATIO: EXAMPLE CALL SS",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0004",
+      "start_ms": 166867,
+      "end_ms": 166867,
+      "source": "ocr"
+    },
+    {
+      "term": "RATIO",
+      "context": "HEDGE RATIO: EXAMPLE CALL SS",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0004",
+      "start_ms": 166867,
+      "end_ms": 166867,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "HEDGE RATIO: EXAMPLE CALL SS",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0004",
+      "start_ms": 166867,
+      "end_ms": 166867,
+      "source": "ocr"
+    },
+    {
+      "term": "GREEKS",
+      "context": "GREEKS IN ACTION",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0004",
+      "start_ms": 226460,
+      "end_ms": 226460,
+      "source": "ocr"
+    },
+    {
+      "term": "ACTION",
+      "context": "GREEKS IN ACTION",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0004",
+      "start_ms": 226460,
+      "end_ms": 226460,
+      "source": "ocr"
+    },
+    {
+      "term": "XK",
+      "context": "WHAT IMPACTS LIQUIDITY XK",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0004",
+      "start_ms": 245879,
+      "end_ms": 245879,
+      "source": "ocr"
+    },
+    {
+      "term": "POSIVE",
+      "context": "POSIVE & NEGATIVE LIQUIDITY &",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0007",
+      "start_ms": 300901,
+      "end_ms": 300901,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS: GAMMA \\",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0008",
+      "start_ms": 391391,
+      "end_ms": 391391,
+      "source": "ocr"
+    },
+    {
+      "term": "IV",
+      "context": "IV | Moneyness",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0009",
+      "start_ms": 414281,
+      "end_ms": 414281,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION VALUE &",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0009",
+      "start_ms": 428161,
+      "end_ms": 428161,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "OPTION VALUE &",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0009",
+      "start_ms": 428161,
+      "end_ms": 428161,
+      "source": "ocr"
+    },
+    {
+      "term": "BEX",
+      "context": "This is what in the Q-Models we call BEX.",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0010",
+      "start_ms": 475270,
+      "end_ms": 493068,
+      "source": "stt"
+    },
+    {
+      "term": "PUTS",
+      "context": "LIQUIDITY: SHORT OTM PUTS &",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0010",
+      "start_ms": 482215,
+      "end_ms": 482215,
+      "source": "ocr"
+    },
+    {
+      "term": "PUTS",
+      "context": "SHORT OTM PUTS",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0010",
+      "start_ms": 482215,
+      "end_ms": 482215,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS: CALL RESISTANCE X",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0010",
+      "start_ms": 500433,
+      "end_ms": 500433,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "Q-MODELS: CALL RESISTANCE X",
+      "video_id": "v_57da17993b19",
+      "segment_id": "v_57da17993b19_s0010",
+      "start_ms": 500433,
+      "end_ms": 500433,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION TRADING !",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "& Q-MODELS",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "AGENDA",
+      "context": "AGENDA \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0001",
+      "start_ms": 23290,
+      "end_ms": 23290,
+      "source": "ocr"
+    },
+    {
+      "term": "CTA",
+      "context": "Here you can find our CTA and trend following models to better track institutional liquidity based on these strategies.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0002",
+      "start_ms": 116518,
+      "end_ms": 138236,
+      "source": "stt"
+    },
+    {
+      "term": "QUANT",
+      "context": "QUANT MODELS & Al iN",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0002",
+      "start_ms": 74174,
+      "end_ms": 74174,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "QUANT MODELS & Al iN",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0002",
+      "start_ms": 74174,
+      "end_ms": 74174,
+      "source": "ocr"
+    },
+    {
+      "term": "QUANT",
+      "context": "QUANT MODELS & Al iN",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0002",
+      "start_ms": 114081,
+      "end_ms": 114081,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "QUANT MODELS & Al iN",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0002",
+      "start_ms": 114081,
+      "end_ms": 114081,
+      "source": "ocr"
+    },
+    {
+      "term": "QUANT",
+      "context": "QUANT MODELS & Al iN",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0002",
+      "start_ms": 126059,
+      "end_ms": 126059,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "QUANT MODELS & Al iN",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0002",
+      "start_ms": 126059,
+      "end_ms": 126059,
+      "source": "ocr"
+    },
+    {
+      "term": "QUANT",
+      "context": "QUANT MODELS & Al iN",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0002",
+      "start_ms": 135068,
+      "end_ms": 135068,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "QUANT MODELS & Al iN",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0002",
+      "start_ms": 135068,
+      "end_ms": 135068,
+      "source": "ocr"
+    },
+    {
+      "term": "NASDAQ",
+      "context": "We provide daily key levels on the SPX, NASDAQ and VIX to help you prepare for the trading day.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0003",
+      "start_ms": 164646,
+      "end_ms": 188220,
+      "source": "stt"
+    },
+    {
+      "term": "COVID",
+      "context": "The market since 2008 is very different and after COVID we have seen an increase in option volume.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0003",
+      "start_ms": 188486,
+      "end_ms": 210588,
+      "source": "stt"
+    },
+    {
+      "term": "QUANT",
+      "context": "QUANT MODELS & Al iN",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0003",
+      "start_ms": 150083,
+      "end_ms": 150083,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "QUANT MODELS & Al iN",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0003",
+      "start_ms": 150083,
+      "end_ms": 150083,
+      "source": "ocr"
+    },
+    {
+      "term": "MODEL",
+      "context": "LIQUIDITY MODEL",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0003",
+      "start_ms": 156089,
+      "end_ms": 156089,
+      "source": "ocr"
+    },
+    {
+      "term": "FOLLOW",
+      "context": "WHY FOLLOW OPTIONS? NS",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0003",
+      "start_ms": 186086,
+      "end_ms": 186086,
+      "source": "ocr"
+    },
+    {
+      "term": "NS",
+      "context": "WHY FOLLOW OPTIONS? NS",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0003",
+      "start_ms": 186086,
+      "end_ms": 186086,
+      "source": "ocr"
+    },
+    {
+      "term": "SERRE",
+      "context": "SERRE RRL REE EERE",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0003",
+      "start_ms": 186086,
+      "end_ms": 186086,
+      "source": "ocr"
+    },
+    {
+      "term": "RRL",
+      "context": "SERRE RRL REE EERE",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0003",
+      "start_ms": 186086,
+      "end_ms": 186086,
+      "source": "ocr"
+    },
+    {
+      "term": "REE",
+      "context": "SERRE RRL REE EERE",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0003",
+      "start_ms": 186086,
+      "end_ms": 186086,
+      "source": "ocr"
+    },
+    {
+      "term": "EERE",
+      "context": "SERRE RRL REE EERE",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0003",
+      "start_ms": 186086,
+      "end_ms": 186086,
+      "source": "ocr"
+    },
+    {
+      "term": "WHO",
+      "context": "WHO CAN USE Q-MODELS? &",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0004",
+      "start_ms": 257758,
+      "end_ms": 257758,
+      "source": "ocr"
+    },
+    {
+      "term": "USE",
+      "context": "WHO CAN USE Q-MODELS? &",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0004",
+      "start_ms": 257758,
+      "end_ms": 257758,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "WHO CAN USE Q-MODELS? &",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0004",
+      "start_ms": 257758,
+      "end_ms": 257758,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - MAIN CHART \\\\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0004",
+      "start_ms": 291158,
+      "end_ms": 291158,
+      "source": "ocr"
+    },
+    {
+      "term": "MAIN",
+      "context": "Q-MODELS - MAIN CHART \\\\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0004",
+      "start_ms": 291158,
+      "end_ms": 291158,
+      "source": "ocr"
+    },
+    {
+      "term": "CHART",
+      "context": "Q-MODELS - MAIN CHART \\\\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0004",
+      "start_ms": 291158,
+      "end_ms": 291158,
+      "source": "ocr"
+    },
+    {
+      "term": "NASDAQ",
+      "context": "When we talk about the market, we are looking at the S&P 500, which is the most liquid market, as well as the QQQ, the ETF that follows the NASDAQ and the Technology Sector, and the VIX.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0005",
+      "start_ms": 299078,
+      "end_ms": 319612,
+      "source": "stt"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - MAIN CHART \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0006",
+      "start_ms": 345178,
+      "end_ms": 345178,
+      "source": "ocr"
+    },
+    {
+      "term": "MAIN",
+      "context": "Q-MODELS - MAIN CHART \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0006",
+      "start_ms": 345178,
+      "end_ms": 345178,
+      "source": "ocr"
+    },
+    {
+      "term": "CHART",
+      "context": "Q-MODELS - MAIN CHART \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0006",
+      "start_ms": 345178,
+      "end_ms": 345178,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - MAIN CHART iN",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0008",
+      "start_ms": 408208,
+      "end_ms": 408208,
+      "source": "ocr"
+    },
+    {
+      "term": "MAIN",
+      "context": "Q-MODELS - MAIN CHART iN",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0008",
+      "start_ms": 408208,
+      "end_ms": 408208,
+      "source": "ocr"
+    },
+    {
+      "term": "CHART",
+      "context": "Q-MODELS - MAIN CHART iN",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0008",
+      "start_ms": 408208,
+      "end_ms": 408208,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - NEGATIVE GAMMA sN",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0008",
+      "start_ms": 468234,
+      "end_ms": 468234,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - MAIN CHART \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0009",
+      "start_ms": 504237,
+      "end_ms": 504237,
+      "source": "ocr"
+    },
+    {
+      "term": "MAIN",
+      "context": "Q-MODELS - MAIN CHART \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0009",
+      "start_ms": 504237,
+      "end_ms": 504237,
+      "source": "ocr"
+    },
+    {
+      "term": "CHART",
+      "context": "Q-MODELS - MAIN CHART \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0009",
+      "start_ms": 504237,
+      "end_ms": 504237,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - KEY LEVELS \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0009",
+      "start_ms": 528261,
+      "end_ms": 528261,
+      "source": "ocr"
+    },
+    {
+      "term": "KEY",
+      "context": "Q-MODELS - KEY LEVELS \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0009",
+      "start_ms": 528261,
+      "end_ms": 528261,
+      "source": "ocr"
+    },
+    {
+      "term": "LEVELS",
+      "context": "Q-MODELS - KEY LEVELS \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0009",
+      "start_ms": 528261,
+      "end_ms": 528261,
+      "source": "ocr"
+    },
+    {
+      "term": "DTE",
+      "context": "The Core Resistance, the Zero DTE Core Resistance, the Ival Level that puts support, and the Zero DTE puts support.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0010",
+      "start_ms": 528390,
+      "end_ms": 549564,
+      "source": "stt"
+    },
+    {
+      "term": "OpenInterest",
+      "context": "On the bottom part of the table you can access data on OpenInterest, DAX, and GEX.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0012",
+      "start_ms": 587366,
+      "end_ms": 599968,
+      "source": "stt"
+    },
+    {
+      "term": "DAX",
+      "context": "On the bottom part of the table you can access data on OpenInterest, DAX, and GEX.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0012",
+      "start_ms": 587366,
+      "end_ms": 599968,
+      "source": "stt"
+    },
+    {
+      "term": "OpenInterest",
+      "context": "We have the Total OpenInterest and the breakdown of cause and puts OpenInterest.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0012",
+      "start_ms": 587366,
+      "end_ms": 599968,
+      "source": "stt"
+    },
+    {
+      "term": "TotalJAX",
+      "context": "We then have TotalJAX, NetJAX, PutCallJAX, as well as TotalDAX, NetJax,",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0012",
+      "start_ms": 587366,
+      "end_ms": 599968,
+      "source": "stt"
+    },
+    {
+      "term": "NetJAX",
+      "context": "We then have TotalJAX, NetJAX, PutCallJAX, as well as TotalDAX, NetJax,",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0012",
+      "start_ms": 587366,
+      "end_ms": 599968,
+      "source": "stt"
+    },
+    {
+      "term": "PutCallJAX",
+      "context": "We then have TotalJAX, NetJAX, PutCallJAX, as well as TotalDAX, NetJax,",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0012",
+      "start_ms": 587366,
+      "end_ms": 599968,
+      "source": "stt"
+    },
+    {
+      "term": "TotalDAX",
+      "context": "We then have TotalJAX, NetJAX, PutCallJAX, as well as TotalDAX, NetJax,",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0012",
+      "start_ms": 587366,
+      "end_ms": 599968,
+      "source": "stt"
+    },
+    {
+      "term": "NetJax",
+      "context": "We then have TotalJAX, NetJAX, PutCallJAX, as well as TotalDAX, NetJax,",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0012",
+      "start_ms": 587366,
+      "end_ms": 599968,
+      "source": "stt"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - KEY LEVELS &",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0012",
+      "start_ms": 588288,
+      "end_ms": 588288,
+      "source": "ocr"
+    },
+    {
+      "term": "KEY",
+      "context": "Q-MODELS - KEY LEVELS &",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0012",
+      "start_ms": 588288,
+      "end_ms": 588288,
+      "source": "ocr"
+    },
+    {
+      "term": "LEVELS",
+      "context": "Q-MODELS - KEY LEVELS &",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0012",
+      "start_ms": 588288,
+      "end_ms": 588288,
+      "source": "ocr"
+    },
+    {
+      "term": "TrainingView",
+      "context": "This brings us to the next part, which is the integration with TrainingView.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 600070,
+      "end_ms": 620188,
+      "source": "stt"
+    },
+    {
+      "term": "TrainingView",
+      "context": "We have a resource section on our website that shows you how to add the Q Levels indicator to TrainingView.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 600070,
+      "end_ms": 620188,
+      "source": "stt"
+    },
+    {
+      "term": "TradingView",
+      "context": "We have created an indicator that you can download and set up on your TradingView account.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 620550,
+      "end_ms": 640796,
+      "source": "stt"
+    },
+    {
+      "term": "TradingView",
+      "context": "You can set up these levels on TradingView in less than 30 seconds and be ready for the market open.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 620550,
+      "end_ms": 640796,
+      "source": "stt"
+    },
+    {
+      "term": "TradingView",
+      "context": "This is how the chart looks like in TradingView.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 620550,
+      "end_ms": 640796,
+      "source": "stt"
+    },
+    {
+      "term": "NetJax",
+      "context": "We then look at the NetJax chart.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 620550,
+      "end_ms": 640796,
+      "source": "stt"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - TRADINGVIEW \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 612278,
+      "end_ms": 612278,
+      "source": "ocr"
+    },
+    {
+      "term": "TradingView",
+      "context": "‘TradingView Integration vee cm) wn | cam",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 612278,
+      "end_ms": 612278,
+      "source": "ocr"
+    },
+    {
+      "term": "TradingView",
+      "context": "Up on your TradingView account,",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 612278,
+      "end_ms": 612278,
+      "source": "ocr"
+    },
+    {
+      "term": "OTE",
+      "context": "ett: eset a Resp OTE 95 OE tn HA",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 612278,
+      "end_ms": 612278,
+      "source": "ocr"
+    },
+    {
+      "term": "OE",
+      "context": "ett: eset a Resp OTE 95 OE tn HA",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 612278,
+      "end_ms": 612278,
+      "source": "ocr"
+    },
+    {
+      "term": "HA",
+      "context": "ett: eset a Resp OTE 95 OE tn HA",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 612278,
+      "end_ms": 612278,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - TRADINGVIEW \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 636302,
+      "end_ms": 636302,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - NET GEX \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 639305,
+      "end_ms": 639305,
+      "source": "ocr"
+    },
+    {
+      "term": "NET",
+      "context": "Q-MODELS - NET GEX \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 639305,
+      "end_ms": 639305,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - NET GEX \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 669302,
+      "end_ms": 669302,
+      "source": "ocr"
+    },
+    {
+      "term": "NET",
+      "context": "Q-MODELS - NET GEX \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 669302,
+      "end_ms": 669302,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "We plot the GEX, DEX and VEX",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 669302,
+      "end_ms": 669302,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "+ VEX = Vanna",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0013",
+      "start_ms": 669302,
+      "end_ms": 669302,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - NET GEX X",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0014",
+      "start_ms": 684317,
+      "end_ms": 684317,
+      "source": "ocr"
+    },
+    {
+      "term": "NET",
+      "context": "Q-MODELS - NET GEX X",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0014",
+      "start_ms": 684317,
+      "end_ms": 684317,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - NET GEX \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0014",
+      "start_ms": 696329,
+      "end_ms": 696329,
+      "source": "ocr"
+    },
+    {
+      "term": "NET",
+      "context": "Q-MODELS - NET GEX \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0014",
+      "start_ms": 696329,
+      "end_ms": 696329,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - NET GEX \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0014",
+      "start_ms": 723323,
+      "end_ms": 723323,
+      "source": "ocr"
+    },
+    {
+      "term": "NET",
+      "context": "Q-MODELS - NET GEX \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0014",
+      "start_ms": 723323,
+      "end_ms": 723323,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - O1 & VOLUMES iN",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0015",
+      "start_ms": 750350,
+      "end_ms": 750350,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - OPTION MATRIX \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0015",
+      "start_ms": 804370,
+      "end_ms": 804370,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "Q-MODELS - OPTION MATRIX \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0015",
+      "start_ms": 804370,
+      "end_ms": 804370,
+      "source": "ocr"
+    },
+    {
+      "term": "MATRIX",
+      "context": "Q-MODELS - OPTION MATRIX \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0015",
+      "start_ms": 804370,
+      "end_ms": 804370,
+      "source": "ocr"
+    },
+    {
+      "term": "DTE",
+      "context": "We also look at the data on 0 DTE, or options expiring in less than 24 hours.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0016",
+      "start_ms": 821830,
+      "end_ms": 842652,
+      "source": "stt"
+    },
+    {
+      "term": "DTE",
+      "context": "On the left-hand side, you will find the expiration for demand, from 0 DTE, or expirations in less than 24 hours, to further ones in the month.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0016",
+      "start_ms": 842886,
+      "end_ms": 862812,
+      "source": "stt"
+    },
+    {
+      "term": "MODES",
+      "context": "We have so far shown you what the Q-MODES are and what each of the screen represents.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0016",
+      "start_ms": 888742,
+      "end_ms": 892780,
+      "source": "stt"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - OPTION MATRIX \\\\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0016",
+      "start_ms": 858391,
+      "end_ms": 858391,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "Q-MODELS - OPTION MATRIX \\\\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0016",
+      "start_ms": 858391,
+      "end_ms": 858391,
+      "source": "ocr"
+    },
+    {
+      "term": "MATRIX",
+      "context": "Q-MODELS - OPTION MATRIX \\\\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0016",
+      "start_ms": 858391,
+      "end_ms": 858391,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS - OPTION MATRIX \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0016",
+      "start_ms": 864397,
+      "end_ms": 864397,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "Q-MODELS - OPTION MATRIX \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0016",
+      "start_ms": 864397,
+      "end_ms": 864397,
+      "source": "ocr"
+    },
+    {
+      "term": "MATRIX",
+      "context": "Q-MODELS - OPTION MATRIX \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0016",
+      "start_ms": 864397,
+      "end_ms": 864397,
+      "source": "ocr"
+    },
+    {
+      "term": "USING",
+      "context": "TRADING USING '",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0016",
+      "start_ms": 888254,
+      "end_ms": 888254,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "Q-MODELS",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0016",
+      "start_ms": 888254,
+      "end_ms": 888254,
+      "source": "ocr"
+    },
+    {
+      "term": "USING",
+      "context": "TRADING USING Q-MODELS \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0016",
+      "start_ms": 895762,
+      "end_ms": 895762,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "TRADING USING Q-MODELS \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0016",
+      "start_ms": 895762,
+      "end_ms": 895762,
+      "source": "ocr"
+    },
+    {
+      "term": "USING",
+      "context": "TRADING USING Q-MODELS ~®",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0016",
+      "start_ms": 909409,
+      "end_ms": 909409,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "TRADING USING Q-MODELS ~®",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0016",
+      "start_ms": 909409,
+      "end_ms": 909409,
+      "source": "ocr"
+    },
+    {
+      "term": "USING",
+      "context": "TRADING USING Q-MODELS AS",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0017",
+      "start_ms": 912412,
+      "end_ms": 912412,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "TRADING USING Q-MODELS AS",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0017",
+      "start_ms": 912412,
+      "end_ms": 912412,
+      "source": "ocr"
+    },
+    {
+      "term": "TradingView",
+      "context": "TradingView to be prepared",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0017",
+      "start_ms": 912412,
+      "end_ms": 912412,
+      "source": "ocr"
+    },
+    {
+      "term": "USING",
+      "context": "TRADING USING Q-MODELS \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0017",
+      "start_ms": 918418,
+      "end_ms": 918418,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "TRADING USING Q-MODELS \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0017",
+      "start_ms": 918418,
+      "end_ms": 918418,
+      "source": "ocr"
+    },
+    {
+      "term": "ESS",
+      "context": "ESS",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0017",
+      "start_ms": 918418,
+      "end_ms": 918418,
+      "source": "ocr"
+    },
+    {
+      "term": "USING",
+      "context": "TRADING USING Q-MODELS X",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0017",
+      "start_ms": 954454,
+      "end_ms": 954454,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "TRADING USING Q-MODELS X",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0017",
+      "start_ms": 954454,
+      "end_ms": 954454,
+      "source": "ocr"
+    },
+    {
+      "term": "USING",
+      "context": "TRADING USING Q-MODELS \\\\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0017",
+      "start_ms": 969435,
+      "end_ms": 969435,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "TRADING USING Q-MODELS \\\\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0017",
+      "start_ms": 969435,
+      "end_ms": 969435,
+      "source": "ocr"
+    },
+    {
+      "term": "USING",
+      "context": "TRADING USING Q-MODELS \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0018",
+      "start_ms": 1008474,
+      "end_ms": 1008474,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "TRADING USING Q-MODELS \\",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0018",
+      "start_ms": 1008474,
+      "end_ms": 1008474,
+      "source": "ocr"
+    },
+    {
+      "term": "USING",
+      "context": "TRADING USING Q-MODELS \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0018",
+      "start_ms": 1035468,
+      "end_ms": 1035468,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "TRADING USING Q-MODELS \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0018",
+      "start_ms": 1035468,
+      "end_ms": 1035468,
+      "source": "ocr"
+    },
+    {
+      "term": "USING",
+      "context": "TRADING USING Q-MODELS \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0018",
+      "start_ms": 1047480,
+      "end_ms": 1047480,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "TRADING USING Q-MODELS \\S",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0018",
+      "start_ms": 1047480,
+      "end_ms": 1047480,
+      "source": "ocr"
+    },
+    {
+      "term": "IV",
+      "context": "We can then use IV rank and percentage.",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0019",
+      "start_ms": 1061158,
+      "end_ms": 1084284,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "© Current Volatility vs History: IV Rank and Percentile",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0019",
+      "start_ms": 1098531,
+      "end_ms": 1098531,
+      "source": "ocr"
+    },
+    {
+      "term": "CO",
+      "context": "MENTHORQ.CO",
+      "video_id": "v_871fd4f53294",
+      "segment_id": "v_871fd4f53294_s0019",
+      "start_ms": 1131564,
+      "end_ms": 1131564,
+      "source": "ocr"
+    },
+    {
+      "term": "KNOW",
+      "context": "KNOW YOUR VOLATILITY &",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0001",
+      "start_ms": 13797,
+      "end_ms": 13797,
+      "source": "ocr"
+    },
+    {
+      "term": "IRE",
+      "context": "Tee IRE BUY",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "source": "ocr"
+    },
+    {
+      "term": "SHOULO",
+      "context": "SHOULO BE OPTION SELLERS:",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "SHOULO BE OPTION SELLERS:",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "source": "ocr"
+    },
+    {
+      "term": "IF",
+      "context": "SELL IF VOLATILITY 1S LOW WE CAN.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "source": "ocr"
+    },
+    {
+      "term": "WE",
+      "context": "SELL IF VOLATILITY 1S LOW WE CAN.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "Be OPTION BUYERS",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "source": "ocr"
+    },
+    {
+      "term": "BUYERS",
+      "context": "Be OPTION BUYERS",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0004",
+      "start_ms": 114948,
+      "end_ms": 114948,
+      "source": "ocr"
+    },
+    {
+      "term": "IV",
+      "context": "Here we have a screener done on these two values, IV rank and IV percentage.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 169190,
+      "end_ms": 191324,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "The first one is IV-RANK.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 191622,
+      "end_ms": 205964,
+      "source": "stt"
+    },
+    {
+      "term": "RANK",
+      "context": "The first one is IV-RANK.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 191622,
+      "end_ms": 205964,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "IV-RANK represents the average at-demand employability of the last year in relation to the high and low of the period.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 191622,
+      "end_ms": 205964,
+      "source": "stt"
+    },
+    {
+      "term": "RANK",
+      "context": "IV-RANK represents the average at-demand employability of the last year in relation to the high and low of the period.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 191622,
+      "end_ms": 205964,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "An IV rank of 100% means that the current implied volatility is at its highest level in the last year.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 206502,
+      "end_ms": 219052,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "An IV rank close to zero represents an implied volatility that is close to the low of the last year.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 206502,
+      "end_ms": 219052,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "Then we have IV percentile.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0005",
+      "start_ms": 206502,
+      "end_ms": 219052,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "IV percentile calculates the percentage of days in the last year in which the implied volatility was less than the present value.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 219590,
+      "end_ms": 241116,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "For example, an IV percentile of 70% means that on 70% of the days in the last year we had lower implied volatility than today.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 219590,
+      "end_ms": 241116,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "IV Ranger 4 allows us to make a comparison between different stocks and ETFs to understand which ones can be the best for buying or selling options.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 219590,
+      "end_ms": 241116,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "Now, let's try to understand how to use the IV Ranked based on the levels.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 241574,
+      "end_ms": 257324,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "Let's start from underlines that are between 70 and 100 IV Ranked.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 241574,
+      "end_ms": 257324,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "We can then look at underlines that have an IV rank between 50 and 70.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 257862,
+      "end_ms": 278684,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "Finally, we can look at underlines that are below 50 IV ranks.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0006",
+      "start_ms": 279110,
+      "end_ms": 287308,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "IV rank and IV percentile in general can be used in conjunction with our Q-Modes.",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 291750,
+      "end_ms": 311676,
+      "source": "stt"
+    },
+    {
+      "term": "IV",
+      "context": "IV RANK & Q-MODELS X",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 296997,
+      "end_ms": 296997,
+      "source": "ocr"
+    },
+    {
+      "term": "RANK",
+      "context": "IV RANK & Q-MODELS X",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 296997,
+      "end_ms": 296997,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "IV RANK & Q-MODELS X",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 296997,
+      "end_ms": 296997,
+      "source": "ocr"
+    },
+    {
+      "term": "IV",
+      "context": "IV RANK & Q-MODELS \\S",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 314631,
+      "end_ms": 314631,
+      "source": "ocr"
+    },
+    {
+      "term": "RANK",
+      "context": "IV RANK & Q-MODELS \\S",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 314631,
+      "end_ms": 314631,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "IV RANK & Q-MODELS \\S",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 314631,
+      "end_ms": 314631,
+      "source": "ocr"
+    },
+    {
+      "term": "IV",
+      "context": "IV RANK & Q-MODELS SS",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 330213,
+      "end_ms": 330213,
+      "source": "ocr"
+    },
+    {
+      "term": "RANK",
+      "context": "IV RANK & Q-MODELS SS",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 330213,
+      "end_ms": 330213,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "IV RANK & Q-MODELS SS",
+      "video_id": "v_70b8a82bee5a",
+      "segment_id": "v_70b8a82bee5a_s0007",
+      "start_ms": 330213,
+      "end_ms": 330213,
+      "source": "ocr"
+    },
+    {
+      "term": "SINGLE",
+      "context": "STRATEGIES: SINGLE LEG &",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0001",
+      "start_ms": 15582,
+      "end_ms": 15582,
+      "source": "ocr"
+    },
+    {
+      "term": "LEG",
+      "context": "STRATEGIES: SINGLE LEG &",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0001",
+      "start_ms": 15582,
+      "end_ms": 15582,
+      "source": "ocr"
+    },
+    {
+      "term": "TYPES",
+      "context": "TYPES OF STRATEGIES X",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0002",
+      "start_ms": 64665,
+      "end_ms": 64665,
+      "source": "ocr"
+    },
+    {
+      "term": "RISK",
+      "context": "STRATEGIES: DEFINED RISK \\S",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0003",
+      "start_ms": 94411,
+      "end_ms": 94411,
+      "source": "ocr"
+    },
+    {
+      "term": "IVA",
+      "context": "If we look back at the IVA rank, we can see how we need to think about credit and debit strategies based on these levels.",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 143526,
+      "end_ms": 163484,
+      "source": "stt"
+    },
+    {
+      "term": "IVA",
+      "context": "As you can see from the left, we have the IVA rank levels and from the top we have divided by bullish or bearish strategies.",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 143526,
+      "end_ms": 163484,
+      "source": "stt"
+    },
+    {
+      "term": "CREDIT",
+      "context": "CREDIT vs DEBIT STRATEGIES \\S",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 151551,
+      "end_ms": 151551,
+      "source": "ocr"
+    },
+    {
+      "term": "DEBIT",
+      "context": "CREDIT vs DEBIT STRATEGIES \\S",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 151551,
+      "end_ms": 151551,
+      "source": "ocr"
+    },
+    {
+      "term": "CREDIT",
+      "context": "CREDIT vs DEBIT STRATEGIES \\S",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 163580,
+      "end_ms": 163580,
+      "source": "ocr"
+    },
+    {
+      "term": "DEBIT",
+      "context": "CREDIT vs DEBIT STRATEGIES \\S",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0004",
+      "start_ms": 163580,
+      "end_ms": 163580,
+      "source": "ocr"
+    },
+    {
+      "term": "RM",
+      "context": "RM GO",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0005",
+      "start_ms": 191842,
+      "end_ms": 191842,
+      "source": "ocr"
+    },
+    {
+      "term": "GO",
+      "context": "RM GO",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0005",
+      "start_ms": 191842,
+      "end_ms": 191842,
+      "source": "ocr"
+    },
+    {
+      "term": "FP",
+      "context": "- “FP",
+      "video_id": "v_3638d6aeb3dd",
+      "segment_id": "v_3638d6aeb3dd_s0005",
+      "start_ms": 193944,
+      "end_ms": 193944,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "LONG CALL ne a * art",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0001",
+      "start_ms": 42042,
+      "end_ms": 42042,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "LONG CALL: SET UP \\w",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0001",
+      "start_ms": 43961,
+      "end_ms": 43961,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "LONG CALL: SET UP \\w",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0001",
+      "start_ms": 43961,
+      "end_ms": 43961,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "LONG CALL: SET UP \\w",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0001",
+      "start_ms": 43961,
+      "end_ms": 43961,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "LONG CALL: SET UP Nw",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0002",
+      "start_ms": 93043,
+      "end_ms": 93043,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "LONG CALL: SET UP Nw",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0002",
+      "start_ms": 93043,
+      "end_ms": 93043,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "LONG CALL: SET UP Nw",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0002",
+      "start_ms": 93043,
+      "end_ms": 93043,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "LONG CALL: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0002",
+      "start_ms": 132032,
+      "end_ms": 132032,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "LONG CALL: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0002",
+      "start_ms": 132032,
+      "end_ms": 132032,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "LONG CALL: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0002",
+      "start_ms": 132032,
+      "end_ms": 132032,
+      "source": "ocr"
+    },
+    {
+      "term": "USE",
+      "context": "HOW TO USE THE Q-MODELS \\",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0002",
+      "start_ms": 163880,
+      "end_ms": 163880,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "HOW TO USE THE Q-MODELS \\",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0002",
+      "start_ms": 163880,
+      "end_ms": 163880,
+      "source": "ocr"
+    },
+    {
+      "term": "USE",
+      "context": "HOW TO USE THE Q-MODELS \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0005",
+      "start_ms": 195045,
+      "end_ms": 195045,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "HOW TO USE THE Q-MODELS \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0005",
+      "start_ms": 195045,
+      "end_ms": 195045,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "CHECKLIST: LONG CALL \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0005",
+      "start_ms": 222072,
+      "end_ms": 222072,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "3, Bullish VEX",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0005",
+      "start_ms": 222072,
+      "end_ms": 222072,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "CHECKLIST: LONG CALL \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0006",
+      "start_ms": 234084,
+      "end_ms": 234084,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "SHORT PUT: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0007",
+      "start_ms": 257641,
+      "end_ms": 257641,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "SHORT PUT: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0007",
+      "start_ms": 257641,
+      "end_ms": 257641,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "SHORT PUT: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0007",
+      "start_ms": 257641,
+      "end_ms": 257641,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "SHORT PUT: SET UP \\w",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0007",
+      "start_ms": 318068,
+      "end_ms": 318068,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "SHORT PUT: SET UP \\w",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0007",
+      "start_ms": 318068,
+      "end_ms": 318068,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "SHORT PUT: SET UP \\w",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0007",
+      "start_ms": 318068,
+      "end_ms": 318068,
+      "source": "ocr"
+    },
+    {
+      "term": "ZL",
+      "context": "Breakeven Price: $45. L Ly ZL",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0007",
+      "start_ms": 318068,
+      "end_ms": 318068,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "SHORT PUT: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0008",
+      "start_ms": 366066,
+      "end_ms": 366066,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "SHORT PUT: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0008",
+      "start_ms": 366066,
+      "end_ms": 366066,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "SHORT PUT: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0008",
+      "start_ms": 366066,
+      "end_ms": 366066,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "CHECKLIST: SHORT PUT \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0011",
+      "start_ms": 423073,
+      "end_ms": 423073,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "3, Bearish VEX",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0011",
+      "start_ms": 423073,
+      "end_ms": 423073,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "CHECKLIST: SHORT PUT \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0012",
+      "start_ms": 435085,
+      "end_ms": 435085,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "BULL CALL",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0012",
+      "start_ms": 445729,
+      "end_ms": 445729,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "BULL CALL",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0012",
+      "start_ms": 445729,
+      "end_ms": 445729,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "SPREAD",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0012",
+      "start_ms": 445729,
+      "end_ms": 445729,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "BULL CALL SPREAD: SET UP A",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 471121,
+      "end_ms": 471121,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "BULL CALL SPREAD: SET UP A",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 471121,
+      "end_ms": 471121,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "BULL CALL SPREAD: SET UP A",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 471121,
+      "end_ms": 471121,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "BULL CALL SPREAD: SET UP A",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 471121,
+      "end_ms": 471121,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "BULL CALL SPREAD: SET UP A",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 471121,
+      "end_ms": 471121,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 519119,
+      "end_ms": 519119,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 519119,
+      "end_ms": 519119,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 519119,
+      "end_ms": 519119,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 519119,
+      "end_ms": 519119,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0013",
+      "start_ms": 519119,
+      "end_ms": 519119,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0014",
+      "start_ms": 567117,
+      "end_ms": 567117,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0014",
+      "start_ms": 567117,
+      "end_ms": 567117,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0014",
+      "start_ms": 567117,
+      "end_ms": 567117,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0014",
+      "start_ms": 567117,
+      "end_ms": 567117,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "BULL CALL SPREAD: SET UP &",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0014",
+      "start_ms": 567117,
+      "end_ms": 567117,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "CHECKLIST: BULL CALL SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0016",
+      "start_ms": 592325,
+      "end_ms": 592325,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "CHECKLIST: BULL CALL SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0016",
+      "start_ms": 592325,
+      "end_ms": 592325,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "CHECKLIST: BULL CALL SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0016",
+      "start_ms": 592325,
+      "end_ms": 592325,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "3, Bullish VEX",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0016",
+      "start_ms": 592325,
+      "end_ms": 592325,
+      "source": "ocr"
+    },
+    {
+      "term": "OSP",
+      "context": "Now let's look at how to use the Q-Modest to implement the Bulk OSP",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0017",
+      "start_ms": 606406,
+      "end_ms": 609932,
+      "source": "stt"
+    },
+    {
+      "term": "BULL",
+      "context": "CHECKLIST: BULL CALL SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0017",
+      "start_ms": 609109,
+      "end_ms": 609109,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "CHECKLIST: BULL CALL SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0017",
+      "start_ms": 609109,
+      "end_ms": 609109,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "CHECKLIST: BULL CALL SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0017",
+      "start_ms": 609109,
+      "end_ms": 609109,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "BULL PUT",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0018",
+      "start_ms": 619452,
+      "end_ms": 619452,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "BULL PUT",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0018",
+      "start_ms": 619452,
+      "end_ms": 619452,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "SPREAD",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0018",
+      "start_ms": 619452,
+      "end_ms": 619452,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0018",
+      "start_ms": 627127,
+      "end_ms": 627127,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0018",
+      "start_ms": 627127,
+      "end_ms": 627127,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0018",
+      "start_ms": 627127,
+      "end_ms": 627127,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0018",
+      "start_ms": 627127,
+      "end_ms": 627127,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0018",
+      "start_ms": 627127,
+      "end_ms": 627127,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 660109,
+      "end_ms": 660109,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 660109,
+      "end_ms": 660109,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 660109,
+      "end_ms": 660109,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 660109,
+      "end_ms": 660109,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 660109,
+      "end_ms": 660109,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 699148,
+      "end_ms": 699148,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 699148,
+      "end_ms": 699148,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 699148,
+      "end_ms": 699148,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 699148,
+      "end_ms": 699148,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "BULL PUT SPREAD: SET UP \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0019",
+      "start_ms": 699148,
+      "end_ms": 699148,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "CHECKLIST: BULL PUT SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0021",
+      "start_ms": 720169,
+      "end_ms": 720169,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "CHECKLIST: BULL PUT SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0021",
+      "start_ms": 720169,
+      "end_ms": 720169,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "CHECKLIST: BULL PUT SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0021",
+      "start_ms": 720169,
+      "end_ms": 720169,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "3, Bearish VEX",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0021",
+      "start_ms": 720169,
+      "end_ms": 720169,
+      "source": "ocr"
+    },
+    {
+      "term": "BULL",
+      "context": "CHECKLIST: BULL PUT SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0022",
+      "start_ms": 732181,
+      "end_ms": 732181,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "CHECKLIST: BULL PUT SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0022",
+      "start_ms": 732181,
+      "end_ms": 732181,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "CHECKLIST: BULL PUT SPREAD \\S",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0022",
+      "start_ms": 732181,
+      "end_ms": 732181,
+      "source": "ocr"
+    },
+    {
+      "term": "AMET",
+      "context": "AMET eo MALOU = =",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0022",
+      "start_ms": 740823,
+      "end_ms": 740823,
+      "source": "ocr"
+    },
+    {
+      "term": "MALOU",
+      "context": "AMET eo MALOU = =",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0022",
+      "start_ms": 740823,
+      "end_ms": 740823,
+      "source": "ocr"
+    },
+    {
+      "term": "AIO",
+      "context": "Set =. AIO. saa",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0022",
+      "start_ms": 741190,
+      "end_ms": 741190,
+      "source": "ocr"
+    },
+    {
+      "term": "CO",
+      "context": "MENTHORQ.CO",
+      "video_id": "v_3a163039d4ea",
+      "segment_id": "v_3a163039d4ea_s0022",
+      "start_ms": 750199,
+      "end_ms": 750199,
+      "source": "ocr"
+    },
+    {
+      "term": "WwVEETEREA",
+      "context": "“WwVEETEREA PRO re be dal ee",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 31932,
+      "end_ms": 31932,
+      "source": "ocr"
+    },
+    {
+      "term": "PRO",
+      "context": "“WwVEETEREA PRO re be dal ee",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 31932,
+      "end_ms": 31932,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "LONG PUT: SET UP \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 34101,
+      "end_ms": 34101,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "LONG PUT: SET UP \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 34101,
+      "end_ms": 34101,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "LONG PUT: SET UP \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0001",
+      "start_ms": 34101,
+      "end_ms": 34101,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "CHECKLIST: LONG PUT \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0005",
+      "start_ms": 176727,
+      "end_ms": 176727,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "3, Bullish VEX",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0005",
+      "start_ms": 176727,
+      "end_ms": 176727,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "SHORT CALL t sagen ae a",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0006",
+      "start_ms": 195095,
+      "end_ms": 195095,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "SHORT CALL: SET UP \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0006",
+      "start_ms": 198315,
+      "end_ms": 198315,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "SHORT CALL: SET UP \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0006",
+      "start_ms": 198315,
+      "end_ms": 198315,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "SHORT CALL: SET UP \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0006",
+      "start_ms": 198315,
+      "end_ms": 198315,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "CHECKLIST: SHORT CALL \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 351201,
+      "end_ms": 351201,
+      "source": "ocr"
+    },
+    {
+      "term": "BEAR",
+      "context": "BEAR CALL ‘a",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 368768,
+      "end_ms": 368768,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "BEAR CALL ‘a",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 368768,
+      "end_ms": 368768,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "SPREAD",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 368768,
+      "end_ms": 368768,
+      "source": "ocr"
+    },
+    {
+      "term": "BEAR",
+      "context": "BEAR CALL SPREAD: SET UP \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 372305,
+      "end_ms": 372305,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "BEAR CALL SPREAD: SET UP \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 372305,
+      "end_ms": 372305,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "BEAR CALL SPREAD: SET UP \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 372305,
+      "end_ms": 372305,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "BEAR CALL SPREAD: SET UP \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 372305,
+      "end_ms": 372305,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "BEAR CALL SPREAD: SET UP \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 372305,
+      "end_ms": 372305,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "© LONG CALL with Higher Strike Price  nitieel a",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0011",
+      "start_ms": 372305,
+      "end_ms": 372305,
+      "source": "ocr"
+    },
+    {
+      "term": "BEAR",
+      "context": "CHECKLIST: BEAR CALL SPREAD \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0013",
+      "start_ms": 459643,
+      "end_ms": 459643,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "CHECKLIST: BEAR CALL SPREAD \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0013",
+      "start_ms": 459643,
+      "end_ms": 459643,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "CHECKLIST: BEAR CALL SPREAD \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0013",
+      "start_ms": 459643,
+      "end_ms": 459643,
+      "source": "ocr"
+    },
+    {
+      "term": "PA",
+      "context": "PA iy . .",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0014",
+      "start_ms": 476259,
+      "end_ms": 476259,
+      "source": "ocr"
+    },
+    {
+      "term": "BEAR",
+      "context": "BEAR PUT ‘a",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0014",
+      "start_ms": 476259,
+      "end_ms": 476259,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "BEAR PUT ‘a",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0014",
+      "start_ms": 476259,
+      "end_ms": 476259,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "SPREAD",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0014",
+      "start_ms": 476259,
+      "end_ms": 476259,
+      "source": "ocr"
+    },
+    {
+      "term": "BEAR",
+      "context": "BEAR PUT SPREAD: SET UP \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0014",
+      "start_ms": 480697,
+      "end_ms": 480697,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "BEAR PUT SPREAD: SET UP \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0014",
+      "start_ms": 480697,
+      "end_ms": 480697,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "BEAR PUT SPREAD: SET UP \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0014",
+      "start_ms": 480697,
+      "end_ms": 480697,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "BEAR PUT SPREAD: SET UP \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0014",
+      "start_ms": 480697,
+      "end_ms": 480697,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "BEAR PUT SPREAD: SET UP \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0014",
+      "start_ms": 480697,
+      "end_ms": 480697,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "© SHORT PUT with Lower Strike Price a tome a",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0014",
+      "start_ms": 480697,
+      "end_ms": 480697,
+      "source": "ocr"
+    },
+    {
+      "term": "SLE",
+      "context": "option, a SLE 55 strike put option at the $1 net debit.",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0015",
+      "start_ms": 506182,
+      "end_ms": 510284,
+      "source": "stt"
+    },
+    {
+      "term": "BEAR",
+      "context": "CHECKLIST: BEAR PUT SPREAD \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0017",
+      "start_ms": 554354,
+      "end_ms": 554354,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "CHECKLIST: BEAR PUT SPREAD \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0017",
+      "start_ms": 554354,
+      "end_ms": 554354,
+      "source": "ocr"
+    },
+    {
+      "term": "SPREAD",
+      "context": "CHECKLIST: BEAR PUT SPREAD \\S",
+      "video_id": "v_86fd353be172",
+      "segment_id": "v_86fd353be172_s0017",
+      "start_ms": 554354,
+      "end_ms": 554354,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "LONG STRANGLE: SET UP \\S",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0002",
+      "start_ms": 72673,
+      "end_ms": 72673,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "LONG STRANGLE: SET UP \\S",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0002",
+      "start_ms": 72673,
+      "end_ms": 72673,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "(© LONG OTM CALL a— a",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0002",
+      "start_ms": 72673,
+      "end_ms": 72673,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "(© LONG OTM PUT -",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0002",
+      "start_ms": 72673,
+      "end_ms": 72673,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "3, Bullish VEX",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0005",
+      "start_ms": 189723,
+      "end_ms": 189723,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "LONG STRADDLE: SET UP \\S",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0007",
+      "start_ms": 211061,
+      "end_ms": 211061,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "LONG STRADDLE: SET UP \\S",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0007",
+      "start_ms": 211061,
+      "end_ms": 211061,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "© LONG ATM PUT — = a",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0007",
+      "start_ms": 211061,
+      "end_ms": 211061,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "3, Bullish VEX",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0008",
+      "start_ms": 290674,
+      "end_ms": 290674,
+      "source": "ocr"
+    },
+    {
+      "term": "IRON",
+      "context": "IRON CONDOR t",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0009",
+      "start_ms": 307908,
+      "end_ms": 307908,
+      "source": "ocr"
+    },
+    {
+      "term": "CONDOR",
+      "context": "IRON CONDOR t",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0009",
+      "start_ms": 307908,
+      "end_ms": 307908,
+      "source": "ocr"
+    },
+    {
+      "term": "IRON",
+      "context": "IRON CONDOR: SET UP \\",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0009",
+      "start_ms": 315649,
+      "end_ms": 315649,
+      "source": "ocr"
+    },
+    {
+      "term": "CONDOR",
+      "context": "IRON CONDOR: SET UP \\",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0009",
+      "start_ms": 315649,
+      "end_ms": 315649,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "IRON CONDOR: SET UP \\",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0009",
+      "start_ms": 315649,
+      "end_ms": 315649,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "IRON CONDOR: SET UP \\",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0009",
+      "start_ms": 315649,
+      "end_ms": 315649,
+      "source": "ocr"
+    },
+    {
+      "term": "DTE",
+      "context": "If you are trading zero DTE options or daily iron condor, you can use the one day expected move.",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0011",
+      "start_ms": 462598,
+      "end_ms": 478956,
+      "source": "stt"
+    },
+    {
+      "term": "USE",
+      "context": "HOW TO USE THE Q-MODELS =",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0011",
+      "start_ms": 450734,
+      "end_ms": 450734,
+      "source": "ocr"
+    },
+    {
+      "term": "MODELS",
+      "context": "HOW TO USE THE Q-MODELS =",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0011",
+      "start_ms": 450734,
+      "end_ms": 450734,
+      "source": "ocr"
+    },
+    {
+      "term": "IRON",
+      "context": "CHECKLIST: IRON CONDOR \\S",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0012",
+      "start_ms": 497964,
+      "end_ms": 497964,
+      "source": "ocr"
+    },
+    {
+      "term": "CONDOR",
+      "context": "CHECKLIST: IRON CONDOR \\S",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0012",
+      "start_ms": 497964,
+      "end_ms": 497964,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "3, Bearish VEX",
+      "video_id": "v_8e893a0e7325",
+      "segment_id": "v_8e893a0e7325_s0012",
+      "start_ms": 497964,
+      "end_ms": 497964,
+      "source": "ocr"
+    },
+    {
+      "term": "COLLAR",
+      "context": "COLLAR: SET UP SS",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0001",
+      "start_ms": 48315,
+      "end_ms": 48315,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "COLLAR: SET UP SS",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0001",
+      "start_ms": 48315,
+      "end_ms": 48315,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "COLLAR: SET UP SS",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0001",
+      "start_ms": 48315,
+      "end_ms": 48315,
+      "source": "ocr"
+    },
+    {
+      "term": "SHARES",
+      "context": "(© LONG UNDERLYING (100 SHARES)",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0001",
+      "start_ms": 48315,
+      "end_ms": 48315,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "©. LONG OTM PUT = a",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0001",
+      "start_ms": 48315,
+      "end_ms": 48315,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "© SHORT OTM CALL _",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0001",
+      "start_ms": 48315,
+      "end_ms": 48315,
+      "source": "ocr"
+    },
+    {
+      "term": "COLLAR",
+      "context": "CHECKLIST: COLLAR \\S",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0004",
+      "start_ms": 199599,
+      "end_ms": 199599,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "VEX table",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0004",
+      "start_ms": 199599,
+      "end_ms": 199599,
+      "source": "ocr"
+    },
+    {
+      "term": "RISK",
+      "context": "RISK REVERSAL ama",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0006",
+      "start_ms": 221588,
+      "end_ms": 221588,
+      "source": "ocr"
+    },
+    {
+      "term": "RISK",
+      "context": "RISK REVERSAL: SET UP \\S",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0006",
+      "start_ms": 227210,
+      "end_ms": 227210,
+      "source": "ocr"
+    },
+    {
+      "term": "SET",
+      "context": "RISK REVERSAL: SET UP \\S",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0006",
+      "start_ms": 227210,
+      "end_ms": 227210,
+      "source": "ocr"
+    },
+    {
+      "term": "UP",
+      "context": "RISK REVERSAL: SET UP \\S",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0006",
+      "start_ms": 227210,
+      "end_ms": 227210,
+      "source": "ocr"
+    },
+    {
+      "term": "PUT",
+      "context": "© SHORT OTM PUT a= Qa",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0006",
+      "start_ms": 227210,
+      "end_ms": 227210,
+      "source": "ocr"
+    },
+    {
+      "term": "RISK",
+      "context": "CHECKLIST: RISK REVERSAL \\S",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0009",
+      "start_ms": 362529,
+      "end_ms": 362529,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "3.VEX stable",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0009",
+      "start_ms": 362529,
+      "end_ms": 362529,
+      "source": "ocr"
+    },
+    {
+      "term": "VEX",
+      "context": "We want a stable or bullish GEX, a bullish cumulative GEX and a stable VEX.",
+      "video_id": "v_9eb61104eed0",
+      "segment_id": "v_9eb61104eed0_s0010",
+      "start_ms": 362790,
+      "end_ms": 379660,
+      "source": "stt"
+    }
+  ]
+}

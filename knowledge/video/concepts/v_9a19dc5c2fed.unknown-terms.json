@@ -1,0 +1,140 @@
+{
+  "video_id": "v_9a19dc5c2fed",
+  "terms": [
+    {
+      "term": "PAYOFF",
+      "context": "DELTA: PAYOFF CALL \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0004",
+      "start_ms": 296997,
+      "end_ms": 296997,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "DELTA: PAYOFF CALL \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0004",
+      "start_ms": 296997,
+      "end_ms": 296997,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION VALUE",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0005",
+      "start_ms": 343310,
+      "end_ms": 343310,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "OPTION VALUE",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0005",
+      "start_ms": 343310,
+      "end_ms": 343310,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION VALUE: CALL \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0005",
+      "start_ms": 351518,
+      "end_ms": 351518,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "OPTION VALUE: CALL \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0005",
+      "start_ms": 351518,
+      "end_ms": 351518,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "OPTION VALUE: CALL \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0005",
+      "start_ms": 351518,
+      "end_ms": 351518,
+      "source": "ocr"
+    },
+    {
+      "term": "TIME",
+      "context": "TIME VALUE: P&G \\Q",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0006",
+      "start_ms": 419452,
+      "end_ms": 419452,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "TIME VALUE: P&G \\Q",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0006",
+      "start_ms": 419452,
+      "end_ms": 419452,
+      "source": "ocr"
+    },
+    {
+      "term": "FN",
+      "context": "M we FN fe",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0006",
+      "start_ms": 419452,
+      "end_ms": 419452,
+      "source": "ocr"
+    },
+    {
+      "term": "TIME",
+      "context": "TIME VALUE vs VOLATILITY \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0006",
+      "start_ms": 453887,
+      "end_ms": 453887,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "TIME VALUE vs VOLATILITY \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0006",
+      "start_ms": 453887,
+      "end_ms": 453887,
+      "source": "ocr"
+    },
+    {
+      "term": "OPTION",
+      "context": "OPTION VALUE: CALL \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0007",
+      "start_ms": 462862,
+      "end_ms": 462862,
+      "source": "ocr"
+    },
+    {
+      "term": "VALUE",
+      "context": "OPTION VALUE: CALL \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0007",
+      "start_ms": 462862,
+      "end_ms": 462862,
+      "source": "ocr"
+    },
+    {
+      "term": "CALL",
+      "context": "OPTION VALUE: CALL \\S",
+      "video_id": "v_9a19dc5c2fed",
+      "segment_id": "v_9a19dc5c2fed_s0007",
+      "start_ms": 462862,
+      "end_ms": 462862,
+      "source": "ocr"
+    }
+  ]
+}

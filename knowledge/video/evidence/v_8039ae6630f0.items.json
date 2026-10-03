@@ -1,0 +1,5994 @@
+{
+  "video_id": "v_8039ae6630f0",
+  "schema": "video-knowledge/v1",
+  "items": [
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_29efaadd75160a83",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 326,
+      "end_ms": 8716,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "We have spoken on several occasions during the course about the concept of volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We have spoken on several occasions during the course about the concept of volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 326,
+            "end_ms": 8716,
+            "start": "00:00:00.326",
+            "end": "00:00:08.716"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c5ebfe2594359f02",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 9222,
+      "end_ms": 17420,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "When we study volatility, it is first of all necessary to understand what we are measuring, the unit of measurement, and the time frame.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When we study volatility, it is first of all necessary to understand what we are measuring, the unit of measurement, and the time frame.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0002@17684ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 9222,
+            "end_ms": 17420,
+            "start": "00:00:09.222",
+            "end": "00:00:17.420"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0e9df914f94b6fdd",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 17894,
+      "end_ms": 37980,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "Volatility",
+      "statement": "Volatility is a measure of change in the price of an asset, such as stock or bond, over time.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Volatility is a measure of change in the price of an asset, such as stock or bond, over time.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0002@17684ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 17894,
+            "end_ms": 37980,
+            "start": "00:00:17.894",
+            "end": "00:00:37.980"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2d136bdeee56b03f",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 17894,
+      "end_ms": 37980,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "Volatility",
+      "statement": "Volatility indicates the amount of uncertainty or risk associated with investing in a particular asset.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Volatility indicates the amount of uncertainty or risk associated with investing in a particular asset.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0002@17684ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 17894,
+            "end_ms": 37980,
+            "start": "00:00:17.894",
+            "end": "00:00:37.980"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b93146a992174c22",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 17894,
+      "end_ms": 37980,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "The higher the volatility, the greater the price movement, and the greater the risk for investors.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The higher the volatility, the greater the price movement, and the greater the risk for investors.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0002@17684ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 17894,
+            "end_ms": 37980,
+            "start": "00:00:17.894",
+            "end": "00:00:37.980"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8984c314aaeed970",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 17894,
+      "end_ms": 37980,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "Volatility",
+      "statement": "Volatility can be measured in several ways, but the main one is a standard deviation of returns.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Volatility can be measured in several ways, but the main one is a standard deviation of returns.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0002@17684ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 17894,
+            "end_ms": 37980,
+            "start": "00:00:17.894",
+            "end": "00:00:37.980"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b9e2590ed8b1acdf",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 38310,
+      "end_ms": 63836,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "Other measures, such as beta and implied volatility, are also used in different contexts to assess volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Other measures, such as beta and implied volatility, are also used in different contexts to assess volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 38310,
+            "end_ms": 63836,
+            "start": "00:00:38.310",
+            "end": "00:01:03.836"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f71c464a37c4e4d8",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 38310,
+      "end_ms": 63836,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "Volatility",
+      "statement": "Volatility is an important factor to consider in managing investment risk and selecting an investment portfolio.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Volatility is an important factor to consider in managing investment risk and selecting an investment portfolio.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 38310,
+            "end_ms": 63836,
+            "start": "00:00:38.310",
+            "end": "00:01:03.836"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_cfe122773d18ec05",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 38310,
+      "end_ms": 63836,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "It is important to note that volatility can be influenced by various factors, including market sentiment, economic data, geopolitical events,",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It is important to note that volatility can be influenced by various factors, including market sentiment, economic data, geopolitical events,",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 38310,
+            "end_ms": 63836,
+            "start": "00:00:38.310",
+            "end": "00:01:03.836"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_a57131f97a9ff754",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 66086,
+      "end_ms": 71564,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "We are now going to look at different types of volatility first and then look at the Greek Vega.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We are now going to look at different types of volatility first and then look at the Greek Vega.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0003@72072ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 66086,
+            "end_ms": 71564,
+            "start": "00:01:06.086",
+            "end": "00:01:11.564"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6f2dba338a04cb00",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 66086,
+      "end_ms": 71564,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "We are now going to look at different types of volatility first and then look at the Greek Vega.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We are now going to look at different types of volatility first and then look at the Greek Vega.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0003@72072ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 66086,
+            "end_ms": 71564,
+            "start": "00:01:06.086",
+            "end": "00:01:11.564"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1517d222177e5fe4",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 72326,
+      "end_ms": 80684,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "First of all, it is important to distinguish between two types of volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "First of all, it is important to distinguish between two types of volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0003@72072ms.jpg",
+          "frames/v_8039ae6630f0/f_0004@80981ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 72326,
+            "end_ms": 80684,
+            "start": "00:01:12.326",
+            "end": "00:01:20.684"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e12f6680b9ad5b9d",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 72326,
+      "end_ms": 80684,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "We have historical volatility and implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We have historical volatility and implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0003@72072ms.jpg",
+          "frames/v_8039ae6630f0/f_0004@80981ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 72326,
+            "end_ms": 80684,
+            "start": "00:01:12.326",
+            "end": "00:01:20.684"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_67a953b0427c08a3",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 81286,
+      "end_ms": 89676,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "Volatility",
+      "statement": "Historical Volatility, or HV, also known as Statistical Volatility, is calculated based on the actual price movement of an asset over a specific time period.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Historical Volatility, or HV, also known as Statistical Volatility, is calculated based on the actual price movement of an asset over a specific time period.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0004@80981ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 81286,
+            "end_ms": 89676,
+            "start": "00:01:21.286",
+            "end": "00:01:29.676"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_aa86d97297759075",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "VOLATILITY",
+      "statement": "VOLATILITY ji 4 ae ae",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "VOLATILITY ji 4 ae ae",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0001@0ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 0,
+            "end_ms": 0,
+            "start": "00:00:00.000",
+            "end": "00:00:00.000"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "unit_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6a6281bd105cc45a",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 17684,
+      "end_ms": 17684,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "VOLATILITY",
+      "statement": "VOLATILITY: DEFINITION NS",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "VOLATILITY: DEFINITION NS",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0002@17684ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 17684,
+            "end_ms": 17684,
+            "start": "00:00:17.684",
+            "end": "00:00:17.684"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4d7aeac7896a8c6c",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 80981,
+      "end_ms": 80981,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "VOLATILITY",
+      "statement": "HISTORICAL VOLATILITY (HV) \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "HISTORICAL VOLATILITY (HV) \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0004@80981ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 80981,
+            "end_ms": 80981,
+            "start": "00:01:20.981",
+            "end": "00:01:20.981"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_06100abfe2c4aa87",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0001",
+      "start_ms": 80981,
+      "end_ms": 80981,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "© Historical volatility is calculated by using an",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "© Historical volatility is calculated by using an",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0004@80981ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 80981,
+            "end_ms": 80981,
+            "start": "00:01:20.981",
+            "end": "00:01:20.981"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_155a5d6dd0f4b34c",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0002",
+      "start_ms": 90150,
+      "end_ms": 110172,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Traders use historical volatility to assess the risk and potential return of an investment by stunning its price behavior over time.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Traders use historical volatility to assess the risk and potential return of an investment by stunning its price behavior over time.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0005@169403ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 90150,
+            "end_ms": 110172,
+            "start": "00:01:30.150",
+            "end": "00:01:50.172"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6426b337416e4c42",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0002",
+      "start_ms": 90150,
+      "end_ms": 110172,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Historical volatility is calculated by using an asset's past prices to determine a standard deviation of its returns.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Historical volatility is calculated by using an asset's past prices to determine a standard deviation of its returns.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0005@169403ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 90150,
+            "end_ms": 110172,
+            "start": "00:01:30.150",
+            "end": "00:01:50.172"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_555fc05d65781b4a",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0002",
+      "start_ms": 110726,
+      "end_ms": 130876,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Historical volatility can be used to determine the future volatility of an asset and to help investors make informed decisions about the risk and diversification of their portfolio.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Historical volatility can be used to determine the future volatility of an asset and to help investors make informed decisions about the risk and diversification of their portfolio.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0005@169403ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 110726,
+            "end_ms": 130876,
+            "start": "00:01:50.726",
+            "end": "00:02:10.876"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_085f886a66e82774",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0002",
+      "start_ms": 110726,
+      "end_ms": 130876,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "Implied volatility",
+      "statement": "Implied volatility, on the other hand, is a measure of the market's future expectation of volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Implied volatility, on the other hand, is a measure of the market's future expectation of volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0005@169403ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 110726,
+            "end_ms": 130876,
+            "start": "00:01:50.726",
+            "end": "00:02:10.876"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1951e8cc55cec27d",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0002",
+      "start_ms": 131238,
+      "end_ms": 147148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "Implied volatility",
+      "statement": "Implied volatility is not directly observable, but rather is extracted from the price of an option which discounts its effect.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Implied volatility is not directly observable, but rather is extracted from the price of an option which discounts its effect.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0005@169403ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 131238,
+            "end_ms": 147148,
+            "start": "00:02:11.238",
+            "end": "00:02:27.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7a07bbf770f8e32d",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0002",
+      "start_ms": 147654,
+      "end_ms": 159052,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "For example, the price of a collection depends on the implied volatility of the underlying.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For example, the price of a collection depends on the implied volatility of the underlying.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0005@169403ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 147654,
+            "end_ms": 159052,
+            "start": "00:02:27.654",
+            "end": "00:02:39.052"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d81617bd241062eb",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0002",
+      "start_ms": 147654,
+      "end_ms": 159052,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "The higher the volatility, the more likely it is that the price of the underlying will exceed the option strike at expiration, making it profitable.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The higher the volatility, the more likely it is that the price of the underlying will exceed the option strike at expiration, making it profitable.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0005@169403ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 147654,
+            "end_ms": 159052,
+            "start": "00:02:27.654",
+            "end": "00:02:39.052"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_bb8e26356f03b6c3",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0002",
+      "start_ms": 159558,
+      "end_ms": 179708,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "It is important to know that historical volatility is backward looking, while implied volatility is forward looking, as it takes into account market expectation about future volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It is important to know that historical volatility is backward looking, while implied volatility is forward looking, as it takes into account market expectation about future volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0005@169403ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 159558,
+            "end_ms": 179708,
+            "start": "00:02:39.558",
+            "end": "00:02:59.708"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d616344efb8a189d",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0002",
+      "start_ms": 159558,
+      "end_ms": 179708,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "Volatility",
+      "statement": "Volatility is measured as the standard deviation of the price changes of the underlying asset.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Volatility is measured as the standard deviation of the price changes of the underlying asset.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0005@169403ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 159558,
+            "end_ms": 179708,
+            "start": "00:02:39.558",
+            "end": "00:02:59.708"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7c441003b1d3d330",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0002",
+      "start_ms": 169403,
+      "end_ms": 169403,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "VOLATILITY",
+      "statement": "VOLATILITY: STANDARD DEVIATION \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "VOLATILITY: STANDARD DEVIATION \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0005@169403ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 169403,
+            "end_ms": 169403,
+            "start": "00:02:49.403",
+            "end": "00:02:49.403"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f2f4206697f28001",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0003",
+      "start_ms": 189062,
+      "end_ms": 192524,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "The standard deviation is high, so it is the volatility, and vice versa.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The standard deviation is high, so it is the volatility, and vice versa.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0006@232332ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 189062,
+            "end_ms": 192524,
+            "start": "00:03:09.062",
+            "end": "00:03:12.524"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2b5c12506a8db86a",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0003",
+      "start_ms": 193126,
+      "end_ms": 218044,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "When we look at volatility, it is necessary to be able to analyze it and to obtain the daily movement, also known as the daily return or daily move.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When we look at volatility, it is necessary to be able to analyze it and to obtain the daily movement, also known as the daily return or daily move.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0006@232332ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 193126,
+            "end_ms": 218044,
+            "start": "00:03:13.126",
+            "end": "00:03:38.044"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ae4e9e635e655d7f",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0003",
+      "start_ms": 218598,
+      "end_ms": 225164,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "If our volatility is 32%, we use 16 to arrive at the daily move and we will see that our daily move is 2%.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If our volatility is 32%, we use 16 to arrive at the daily move and we will see that our daily move is 2%.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0006@232332ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 218598,
+            "end_ms": 225164,
+            "start": "00:03:38.598",
+            "end": "00:03:45.164"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_43927529b0ee0363",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0003",
+      "start_ms": 232422,
+      "end_ms": 254332,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "What we can say at this point is that implied volatility can be seen as the future expectation of historical volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "What we can say at this point is that implied volatility can be seen as the future expectation of historical volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0006@232332ms.jpg",
+          "frames/v_8039ae6630f0/f_0007@254755ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 232422,
+            "end_ms": 254332,
+            "start": "00:03:52.422",
+            "end": "00:04:14.332"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3ef0106125186975",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0003",
+      "start_ms": 232422,
+      "end_ms": 254332,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "Historical and implied volatility do not always match.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Historical and implied volatility do not always match.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0006@232332ms.jpg",
+          "frames/v_8039ae6630f0/f_0007@254755ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 232422,
+            "end_ms": 254332,
+            "start": "00:03:52.422",
+            "end": "00:04:14.332"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e76e491d4aca7598",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0003",
+      "start_ms": 232332,
+      "end_ms": 232332,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "IMPLIED VOLATILITY",
+      "statement": "IMPLIED VOLATILITY \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "IMPLIED VOLATILITY \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0006@232332ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 232332,
+            "end_ms": 232332,
+            "start": "00:03:52.332",
+            "end": "00:03:52.332"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_359b0c2693a6fd29",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0003",
+      "start_ms": 232332,
+      "end_ms": 232332,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "the historical volatility,",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "the historical volatility,",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0006@232332ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 232332,
+            "end_ms": 232332,
+            "start": "00:03:52.332",
+            "end": "00:03:52.332"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6ed470273579a44d",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0003",
+      "start_ms": 254755,
+      "end_ms": 254755,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "IMPLIED VOLATILITY",
+      "statement": "IMPLIED VOLATILITY: Q-MODELS \\",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "IMPLIED VOLATILITY: Q-MODELS \\",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0007@254755ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 254755,
+            "end_ms": 254755,
+            "start": "00:04:14.755",
+            "end": "00:04:14.755"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5585efe757517a88",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0003",
+      "start_ms": 254755,
+      "end_ms": 254755,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Q-Models",
+      "surface": "Q-MODELS",
+      "statement": "IMPLIED VOLATILITY: Q-MODELS \\",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "IMPLIED VOLATILITY: Q-MODELS \\",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0007@254755ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 254755,
+            "end_ms": 254755,
+            "start": "00:04:14.755",
+            "end": "00:04:14.755"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_facb3f05d300e823",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 254918,
+      "end_ms": 278780,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Q-Models",
+      "surface": "Q-Models",
+      "statement": "This is a chart from our Q-Models.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is a chart from our Q-Models.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0008@285519ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 254918,
+            "end_ms": 278780,
+            "start": "00:04:14.918",
+            "end": "00:04:38.780"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4822122af16349a5",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 254918,
+      "end_ms": 278780,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "Impliable utility comes from the supply and demand in the option market and from the market positioning of long or short gamma, or going long or short options.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Impliable utility comes from the supply and demand in the option market and from the market positioning of long or short gamma, or going long or short options.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0008@285519ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 254918,
+            "end_ms": 278780,
+            "start": "00:04:14.918",
+            "end": "00:04:38.780"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_98bb8fe425a1ecaa",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 254918,
+      "end_ms": 278780,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Open Interest",
+      "surface": "open interest",
+      "statement": "This is one of the reasons why we use volumes and open interest in our Models to calculate the gamma exposure of an index or stock.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is one of the reasons why we use volumes and open interest in our Models to calculate the gamma exposure of an index or stock.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0008@285519ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 254918,
+            "end_ms": 278780,
+            "start": "00:04:14.918",
+            "end": "00:04:38.780"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "open_interest",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_331bd87a35b58409",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 254918,
+      "end_ms": 278780,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma Exposure",
+      "surface": "gamma exposure",
+      "statement": "This is one of the reasons why we use volumes and open interest in our Models to calculate the gamma exposure of an index or stock.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is one of the reasons why we use volumes and open interest in our Models to calculate the gamma exposure of an index or stock.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0008@285519ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 254918,
+            "end_ms": 278780,
+            "start": "00:04:14.918",
+            "end": "00:04:38.780"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma_exposure",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_72a52d48e44f5428",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 254918,
+      "end_ms": 278780,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "That exposure to gamma allows us to know if the market maker is a long option and therefore long gamma or vice versa.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "That exposure to gamma allows us to know if the market maker is a long option and therefore long gamma or vice versa.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0008@285519ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 254918,
+            "end_ms": 278780,
+            "start": "00:04:14.918",
+            "end": "00:04:38.780"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_69847993ec0d2ff4",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 254918,
+      "end_ms": 278780,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "That exposure to gamma allows us to know if the market maker is a long option and therefore long gamma or vice versa.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "That exposure to gamma allows us to know if the market maker is a long option and therefore long gamma or vice versa.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0008@285519ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 254918,
+            "end_ms": 278780,
+            "start": "00:04:14.918",
+            "end": "00:04:38.780"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_619d39973c779d95",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 279110,
+      "end_ms": 301148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Market Maker",
+      "surface": "market maker",
+      "statement": "When the market maker is long gamma, it means that they are short volatility, and this can help us use options more effectively.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When the market maker is long gamma, it means that they are short volatility, and this can help us use options more effectively.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0008@285519ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 279110,
+            "end_ms": 301148,
+            "start": "00:04:39.110",
+            "end": "00:05:01.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "market_maker",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f80add6101b78028",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 279110,
+      "end_ms": 301148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "When the market maker is long gamma, it means that they are short volatility, and this can help us use options more effectively.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When the market maker is long gamma, it means that they are short volatility, and this can help us use options more effectively.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0008@285519ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 279110,
+            "end_ms": 301148,
+            "start": "00:04:39.110",
+            "end": "00:05:01.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ac81a48b15a47556",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 279110,
+      "end_ms": 301148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "When the market maker is long gamma, it means that they are short volatility, and this can help us use options more effectively.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When the market maker is long gamma, it means that they are short volatility, and this can help us use options more effectively.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0008@285519ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 279110,
+            "end_ms": 301148,
+            "start": "00:04:39.110",
+            "end": "00:05:01.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_eed34505785dbfca",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 279110,
+      "end_ms": 301148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Implied and historical volatility are close but do not always coincide.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Implied and historical volatility are close but do not always coincide.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0008@285519ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 279110,
+            "end_ms": 301148,
+            "start": "00:04:39.110",
+            "end": "00:05:01.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0600b09c425e56ea",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 279110,
+      "end_ms": 301148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "Implied volatility",
+      "statement": "Implied volatility is typically used to price an instrument based on option volumes.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Implied volatility is typically used to price an instrument based on option volumes.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0008@285519ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 279110,
+            "end_ms": 301148,
+            "start": "00:04:39.110",
+            "end": "00:05:01.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ff72beb1d5061b6d",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 279110,
+      "end_ms": 301148,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "In some cases, when implied volatility cannot be calculated for a specific asset, an investor can use historical volatility as a proxy.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In some cases, when implied volatility cannot be calculated for a specific asset, an investor can use historical volatility as a proxy.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0008@285519ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 279110,
+            "end_ms": 301148,
+            "start": "00:04:39.110",
+            "end": "00:05:01.148"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4a27b992e8ee119a",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 301542,
+      "end_ms": 321916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "In this graph we have the historical one month volatility of the SPX and the VIX.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this graph we have the historical one month volatility of the SPX and the VIX.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0009@322355ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 301542,
+            "end_ms": 321916,
+            "start": "00:05:01.542",
+            "end": "00:05:21.916"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_43afb3cca23ea82a",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 301542,
+      "end_ms": 321916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "In this chart we use the VIX as the proxy for implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this chart we use the VIX as the proxy for implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0009@322355ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 301542,
+            "end_ms": 321916,
+            "start": "00:05:01.542",
+            "end": "00:05:21.916"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_aad5c014884c5d5f",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 301542,
+      "end_ms": 321916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "As we can see, the VIX tend to always trade at the premium to historical volatility, so we can use this spread as a checking tool for arbitrage opportunities.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "As we can see, the VIX tend to always trade at the premium to historical volatility, so we can use this spread as a checking tool for arbitrage opportunities.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0009@322355ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 301542,
+            "end_ms": 321916,
+            "start": "00:05:01.542",
+            "end": "00:05:21.916"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_19a2c8df51eaa863",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 301542,
+      "end_ms": 321916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "In fact, traders can trade the spread between historical and implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In fact, traders can trade the spread between historical and implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0009@322355ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 301542,
+            "end_ms": 321916,
+            "start": "00:05:01.542",
+            "end": "00:05:21.916"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2689986a5a4a8aa6",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 322438,
+      "end_ms": 326924,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "We have also added a chart of implied and historical volatility in Archimedes' main chart.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We have also added a chart of implied and historical volatility in Archimedes' main chart.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0009@322355ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 322438,
+            "end_ms": 326924,
+            "start": "00:05:22.438",
+            "end": "00:05:26.924"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0a84a86e5e1c4436",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0004",
+      "start_ms": 322355,
+      "end_ms": 322355,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Q-Models",
+      "surface": "Q-MODELS",
+      "statement": "HISTORICAL vs IMPLIED: Q-MODELS .",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "HISTORICAL vs IMPLIED: Q-MODELS .",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0009@322355ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 322355,
+            "end_ms": 322355,
+            "start": "00:05:22.355",
+            "end": "00:05:22.355"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3eb911b6ea32b544",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 327398,
+      "end_ms": 350012,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Here you can quickly understand, for example, if the price of the SPX is trading at a premium versus historical volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Here you can quickly understand, for example, if the price of the SPX is trading at a premium versus historical volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0010@333867ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 327398,
+            "end_ms": 350012,
+            "start": "00:05:27.398",
+            "end": "00:05:50.012"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXAMPLE",
+      "knowledge_class": "EXAMPLE",
+      "confidence": 0.47,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5b1fa179d7567c53",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 327398,
+      "end_ms": 350012,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "You can also use the main-level table to quickly understand the volatility regime.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "You can also use the main-level table to quickly understand the volatility regime.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0010@333867ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 327398,
+            "end_ms": 350012,
+            "start": "00:05:27.398",
+            "end": "00:05:50.012"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_041ac278fc43e1b7",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 327398,
+      "end_ms": 350012,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "We have positive, where in this scenario implied volatility is greater than historical volatility, and we have negative, where implied volatility is lower than historical volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We have positive, where in this scenario implied volatility is greater than historical volatility, and we have negative, where implied volatility is lower than historical volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0010@333867ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 327398,
+            "end_ms": 350012,
+            "start": "00:05:27.398",
+            "end": "00:05:50.012"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_57f7c5e2cb8abf54",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 350406,
+      "end_ms": 363852,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "Now let's look at another chart where we have the historical average of historical and implied volatility, and the typical minimum and max movement of historical and implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Now let's look at another chart where we have the historical average of historical and implied volatility, and the typical minimum and max movement of historical and implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0010@333867ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 350406,
+            "end_ms": 363852,
+            "start": "00:05:50.406",
+            "end": "00:06:03.852"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_bb33ce139e9529aa",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 350406,
+      "end_ms": 363852,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "In the first box we can see that on average the implied volatility is higher than the historical one.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In the first box we can see that on average the implied volatility is higher than the historical one.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0010@333867ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 350406,
+            "end_ms": 363852,
+            "start": "00:05:50.406",
+            "end": "00:06:03.852"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_19e519ca7ea9ce0c",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 364422,
+      "end_ms": 384476,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "This is due to what we said before, where implied volatility due to uncertainty tends to be priced at a premium compared to historical volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is due to what we said before, where implied volatility due to uncertainty tends to be priced at a premium compared to historical volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0010@333867ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 364422,
+            "end_ms": 384476,
+            "start": "00:06:04.422",
+            "end": "00:06:24.476"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_78aea1fce8c10dea",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 364422,
+      "end_ms": 384476,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "If we look at the next section, we see that implied volatility tends to be less volatile than the historical one, especially when we look at the historical volatility of near maturity option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If we look at the next section, we see that implied volatility tends to be less volatile than the historical one, especially when we look at the historical volatility of near maturity option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0010@333867ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 364422,
+            "end_ms": 384476,
+            "start": "00:06:04.422",
+            "end": "00:06:24.476"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "RULE",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2c782667bfed47ac",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 364422,
+      "end_ms": 384476,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "We saw when we studied gamma and delta that the closer you get to the expiration and",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We saw when we studied gamma and delta that the closer you get to the expiration and",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0010@333867ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 364422,
+            "end_ms": 384476,
+            "start": "00:06:04.422",
+            "end": "00:06:24.476"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e24ca348b19fade6",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 364422,
+      "end_ms": 384476,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Delta",
+      "surface": "delta",
+      "statement": "We saw when we studied gamma and delta that the closer you get to the expiration and",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We saw when we studied gamma and delta that the closer you get to the expiration and",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0010@333867ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 364422,
+            "end_ms": 384476,
+            "start": "00:06:04.422",
+            "end": "00:06:24.476"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "delta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_572309b124a060df",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 384550,
+      "end_ms": 392140,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "For this reason, the historical volatility of this option near expiration is very high.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For this reason, the historical volatility of this option near expiration is very high.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0011@392359ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 384550,
+            "end_ms": 392140,
+            "start": "00:06:24.550",
+            "end": "00:06:32.140"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3562840cc71bbd2c",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 392614,
+      "end_ms": 399788,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "At this point, let's reconnect the concept of gamma with implied volatility when comparing long options and short options, or long gamma and short gamma.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "At this point, let's reconnect the concept of gamma with implied volatility when comparing long options and short options, or long gamma and short gamma.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0011@392359ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 392614,
+            "end_ms": 399788,
+            "start": "00:06:32.614",
+            "end": "00:06:39.788"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_02db2f1094111669",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 392614,
+      "end_ms": 399788,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "At this point, let's reconnect the concept of gamma with implied volatility when comparing long options and short options, or long gamma and short gamma.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "At this point, let's reconnect the concept of gamma with implied volatility when comparing long options and short options, or long gamma and short gamma.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0011@392359ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 392614,
+            "end_ms": 399788,
+            "start": "00:06:32.614",
+            "end": "00:06:39.788"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8b516165053fbed7",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 333867,
+      "end_ms": 333867,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Q-Models",
+      "surface": "Q-MODELS",
+      "statement": "HISTORICAL vs IMPLIED: Q-MODELS iS",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "HISTORICAL vs IMPLIED: Q-MODELS iS",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0010@333867ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 333867,
+            "end_ms": 333867,
+            "start": "00:05:33.867",
+            "end": "00:05:33.867"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "q-models",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_50831763fd06e533",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 392359,
+      "end_ms": 392359,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "GAMMA",
+      "statement": "IV: LONG OR SHORT GAMMA \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "IV: LONG OR SHORT GAMMA \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0011@392359ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 392359,
+            "end_ms": 392359,
+            "start": "00:06:32.359",
+            "end": "00:06:32.359"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c8d636b887bdd547",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0005",
+      "start_ms": 392359,
+      "end_ms": 392359,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "Gamma",
+      "statement": "Gamma Gamma",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Gamma Gamma",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0011@392359ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 392359,
+            "end_ms": 392359,
+            "start": "00:06:32.359",
+            "end": "00:06:32.359"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8dcc7c70ea650e1c",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 400294,
+      "end_ms": 420476,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "When we are long option, we are long gamma.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "When we are long option, we are long gamma.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0012@420654ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 400294,
+            "end_ms": 420476,
+            "start": "00:06:40.294",
+            "end": "00:07:00.476"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_72011aab70bb4b52",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 400294,
+      "end_ms": 420476,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "In this case, we want the market movement to be higher than the implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this case, we want the market movement to be higher than the implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0012@420654ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 400294,
+            "end_ms": 420476,
+            "start": "00:06:40.294",
+            "end": "00:07:00.476"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1519d18c319d7eec",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 400294,
+      "end_ms": 420476,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "If we are long gamma, we pay a premium, and theta plays against us if the option does not enter in the money quickly.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If we are long gamma, we pay a premium, and theta plays against us if the option does not enter in the money quickly.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0012@420654ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 400294,
+            "end_ms": 420476,
+            "start": "00:06:40.294",
+            "end": "00:07:00.476"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_00726e81b90b409d",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 400294,
+      "end_ms": 420476,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "If we are long gamma, we pay a premium, and theta plays against us if the option does not enter in the money quickly.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If we are long gamma, we pay a premium, and theta plays against us if the option does not enter in the money quickly.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0012@420654ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 400294,
+            "end_ms": 420476,
+            "start": "00:06:40.294",
+            "end": "00:07:00.476"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d99ac1c2b653c881",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 400294,
+      "end_ms": 420476,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "If we are long gamma, we pay a premium, and theta plays against us if the option does not enter in the money quickly.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If we are long gamma, we pay a premium, and theta plays against us if the option does not enter in the money quickly.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0012@420654ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 400294,
+            "end_ms": 420476,
+            "start": "00:06:40.294",
+            "end": "00:07:00.476"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7886f864b6fd7f13",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 400294,
+      "end_ms": 420476,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "If instead we are short options, we are short gamma, receiving a premium.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If instead we are short options, we are short gamma, receiving a premium.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0012@420654ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 400294,
+            "end_ms": 420476,
+            "start": "00:06:40.294",
+            "end": "00:07:00.476"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ca33aa45f38c3682",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 400294,
+      "end_ms": 420476,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "We want the market to move less than the implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We want the market to move less than the implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0012@420654ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 400294,
+            "end_ms": 420476,
+            "start": "00:06:40.294",
+            "end": "00:07:00.476"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_58ab9ee95095380b",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 400294,
+      "end_ms": 420476,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "We want the theta to work for us.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We want the theta to work for us.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0012@420654ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 400294,
+            "end_ms": 420476,
+            "start": "00:06:40.294",
+            "end": "00:07:00.476"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9b03a3433ee37a6c",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 420934,
+      "end_ms": 427372,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Now that we talked about the two types of volatility, we can focus on the Greek that follows the volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Now that we talked about the two types of volatility, we can focus on the Greek that follows the volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0012@420654ms.jpg",
+          "frames/v_8039ae6630f0/f_0013@427694ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 420934,
+            "end_ms": 427372,
+            "start": "00:07:00.934",
+            "end": "00:07:07.372"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ff8207deb77b1d7b",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 420934,
+      "end_ms": 427372,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "In the next section, we will study Vega.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In the next section, we will study Vega.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0012@420654ms.jpg",
+          "frames/v_8039ae6630f0/f_0013@427694ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 420934,
+            "end_ms": 427372,
+            "start": "00:07:00.934",
+            "end": "00:07:07.372"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "PROCEDURE",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.43,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1952c380f08a3cfe",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 427910,
+      "end_ms": 448028,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "The Vega of an option is the measure of the sensitivity of options prices to changes in the underlying implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The Vega of an option is the measure of the sensitivity of options prices to changes in the underlying implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0013@427694ms.jpg",
+          "frames/v_8039ae6630f0/f_0014@444177ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 427910,
+            "end_ms": 448028,
+            "start": "00:07:07.910",
+            "end": "00:07:28.028"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8518897137d0d3b4",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 427910,
+      "end_ms": 448028,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "The Vega of an option is the measure of the sensitivity of options prices to changes in the underlying implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The Vega of an option is the measure of the sensitivity of options prices to changes in the underlying implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0013@427694ms.jpg",
+          "frames/v_8039ae6630f0/f_0014@444177ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 427910,
+            "end_ms": 448028,
+            "start": "00:07:07.910",
+            "end": "00:07:28.028"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_4e800805bec7dea2",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 427910,
+      "end_ms": 448028,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "It measures how much the price of an option is expected to change for a 1 percentage point change in implied volatility, if all other factors remain constant.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "It measures how much the price of an option is expected to change for a 1 percentage point change in implied volatility, if all other factors remain constant.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0013@427694ms.jpg",
+          "frames/v_8039ae6630f0/f_0014@444177ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 427910,
+            "end_ms": 448028,
+            "start": "00:07:07.910",
+            "end": "00:07:28.028"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8a473c1b478ecfa6",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 427910,
+      "end_ms": 448028,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "We know that the gamma and theta Greeks have exposure to historical volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We know that the gamma and theta Greeks have exposure to historical volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0013@427694ms.jpg",
+          "frames/v_8039ae6630f0/f_0014@444177ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 427910,
+            "end_ms": 448028,
+            "start": "00:07:07.910",
+            "end": "00:07:28.028"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_09617eaa1b1fcf69",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 427910,
+      "end_ms": 448028,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "We know that the gamma and theta Greeks have exposure to historical volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We know that the gamma and theta Greeks have exposure to historical volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0013@427694ms.jpg",
+          "frames/v_8039ae6630f0/f_0014@444177ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 427910,
+            "end_ms": 448028,
+            "start": "00:07:07.910",
+            "end": "00:07:28.028"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_5dbcddd5c50870a5",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 427910,
+      "end_ms": 448028,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "We know that the gamma and theta Greeks have exposure to historical volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "We know that the gamma and theta Greeks have exposure to historical volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0013@427694ms.jpg",
+          "frames/v_8039ae6630f0/f_0014@444177ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 427910,
+            "end_ms": 448028,
+            "start": "00:07:07.910",
+            "end": "00:07:28.028"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ceef732dcbafc25f",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 448390,
+      "end_ms": 454988,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Gamma",
+      "surface": "gamma",
+      "statement": "Or rather, we know that gamma and theta helps us understand whether we are gaining or losing based on the exposure we have to historical validity.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Or rather, we know that gamma and theta helps us understand whether we are gaining or losing based on the exposure we have to historical validity.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0012@420654ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 448390,
+            "end_ms": 454988,
+            "start": "00:07:28.390",
+            "end": "00:07:34.988"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_321890bb33078375",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 448390,
+      "end_ms": 454988,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "theta",
+      "statement": "Or rather, we know that gamma and theta helps us understand whether we are gaining or losing based on the exposure we have to historical validity.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Or rather, we know that gamma and theta helps us understand whether we are gaining or losing based on the exposure we have to historical validity.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0012@420654ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 448390,
+            "end_ms": 454988,
+            "start": "00:07:28.390",
+            "end": "00:07:34.988"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_d08cb79c0a67b980",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 455526,
+      "end_ms": 459916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "Vega, on the other hand, shows the exposure to future expectations through implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Vega, on the other hand, shows the exposure to future expectations through implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0012@420654ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 455526,
+            "end_ms": 459916,
+            "start": "00:07:35.526",
+            "end": "00:07:39.916"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_eed31ca46bdeeb7d",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 455526,
+      "end_ms": 459916,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "Vega, on the other hand, shows the exposure to future expectations through implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Vega, on the other hand, shows the exposure to future expectations through implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0012@420654ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 455526,
+            "end_ms": 459916,
+            "start": "00:07:35.526",
+            "end": "00:07:39.916"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9252fcd233240e78",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 460422,
+      "end_ms": 481276,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "This is an important point, because as we said in the previous section, historical and implied volatility do not always go in the same direction.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "This is an important point, because as we said in the previous section, historical and implied volatility do not always go in the same direction.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0015@470003ms.jpg",
+          "frames/v_8039ae6630f0/f_0016@481448ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 460422,
+            "end_ms": 481276,
+            "start": "00:07:40.422",
+            "end": "00:08:01.276"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b481f8550cd20ac6",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 460422,
+      "end_ms": 481276,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "For this reason, it is also very important to follow Vega.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "For this reason, it is also very important to follow Vega.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0015@470003ms.jpg",
+          "frames/v_8039ae6630f0/f_0016@481448ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 460422,
+            "end_ms": 481276,
+            "start": "00:07:40.422",
+            "end": "00:08:01.276"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_af66a46877997e75",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 481830,
+      "end_ms": 486220,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "At this point we know that if we are long option, our Vega is positive, but why?",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "At this point we know that if we are long option, our Vega is positive, but why?",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0016@481448ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 481830,
+            "end_ms": 486220,
+            "start": "00:08:01.830",
+            "end": "00:08:06.220"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_37dd5978d6bb410e",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 427694,
+      "end_ms": 427694,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Vega",
+      "surface": "VEGA",
+      "statement": "VEGA: DEFINITION \\S",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "VEGA: DEFINITION \\S",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0013@427694ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 427694,
+            "end_ms": 427694,
+            "start": "00:07:07.694",
+            "end": "00:07:07.694"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2daf21fe47d0b9b8",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 427694,
+      "end_ms": 427694,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "‘© Vega represent the sensitivity of an option’s",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "‘© Vega represent the sensitivity of an option’s",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0013@427694ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 427694,
+            "end_ms": 427694,
+            "start": "00:07:07.694",
+            "end": "00:07:07.694"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_e9c217aac98d43e3",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 427694,
+      "end_ms": 427694,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "price to changes in implied volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "price to changes in implied volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0013@427694ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 427694,
+            "end_ms": 427694,
+            "start": "00:07:07.694",
+            "end": "00:07:07.694"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3861713b1c3628b5",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 427694,
+      "end_ms": 427694,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "implied volatility",
+      "statement": "point change in implied volatility, all other",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "point change in implied volatility, all other",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0013@427694ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 427694,
+            "end_ms": 427694,
+            "start": "00:07:07.694",
+            "end": "00:07:07.694"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ef6e936799e90522",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 444177,
+      "end_ms": 444177,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Vega",
+      "surface": "VEGA",
+      "statement": "VEGA: WHAT WE KNOW SS",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "VEGA: WHAT WE KNOW SS",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0014@444177ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 444177,
+            "end_ms": 444177,
+            "start": "00:07:24.177",
+            "end": "00:07:24.177"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_2d28856ecec8ddfd",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 444177,
+      "end_ms": 444177,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Gamma",
+      "surface": "Gamma",
+      "statement": "Gamma + Theta",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Gamma + Theta",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0014@444177ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 444177,
+            "end_ms": 444177,
+            "start": "00:07:24.177",
+            "end": "00:07:24.177"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f941800484e90ad2",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 444177,
+      "end_ms": 444177,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Theta",
+      "surface": "Theta",
+      "statement": "Gamma + Theta",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Gamma + Theta",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0014@444177ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 444177,
+            "end_ms": 444177,
+            "start": "00:07:24.177",
+            "end": "00:07:24.177"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "theta",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_fbd699f4b6395c8a",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 444177,
+      "end_ms": 444177,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "Volatility",
+      "statement": "Volatility",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Volatility",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0014@444177ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 444177,
+            "end_ms": 444177,
+            "start": "00:07:24.177",
+            "end": "00:07:24.177"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_dd309a05a8fb6a4d",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 481448,
+      "end_ms": 481448,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Vega",
+      "surface": "VEGA",
+      "statement": "VEGA: LONG GAMMA XN",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "VEGA: LONG GAMMA XN",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0016@481448ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 481448,
+            "end_ms": 481448,
+            "start": "00:08:01.448",
+            "end": "00:08:01.448"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_116ecc0f2934478c",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0006",
+      "start_ms": 481448,
+      "end_ms": 481448,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Gamma",
+      "surface": "GAMMA",
+      "statement": "VEGA: LONG GAMMA XN",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "VEGA: LONG GAMMA XN",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0016@481448ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 481448,
+            "end_ms": 481448,
+            "start": "00:08:01.448",
+            "end": "00:08:01.448"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_1758d18e7f93f657",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 486758,
+      "end_ms": 507708,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "because when we are long options, implied upside volatility is good for our position.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "because when we are long options, implied upside volatility is good for our position.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0017@491558ms.jpg",
+          "frames/v_8039ae6630f0/f_0018@499399ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 486758,
+            "end_ms": 507708,
+            "start": "00:08:06.758",
+            "end": "00:08:27.708"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_589c8db9bddad851",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 486758,
+      "end_ms": 507708,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "If you recall from the previous section, as the volatility of an out-of-the-money option increases, its time value increases the closer the option gets to add the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If you recall from the previous section, as the volatility of an out-of-the-money option increases, its time value increases the closer the option gets to add the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0017@491558ms.jpg",
+          "frames/v_8039ae6630f0/f_0018@499399ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 486758,
+            "end_ms": 507708,
+            "start": "00:08:06.758",
+            "end": "00:08:27.708"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c2c8d09d9c4cd965",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 486758,
+      "end_ms": 507708,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "In this case, thanks to the increasing volatility, the value of our option also increases.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "In this case, thanks to the increasing volatility, the value of our option also increases.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0017@491558ms.jpg",
+          "frames/v_8039ae6630f0/f_0018@499399ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 486758,
+            "end_ms": 507708,
+            "start": "00:08:06.758",
+            "end": "00:08:27.708"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_ab66cb3043cbb86f",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 486758,
+      "end_ms": 507708,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "vega",
+      "statement": "And finally, options that have a long-term maturity have a positive vega.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "And finally, options that have a long-term maturity have a positive vega.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0017@491558ms.jpg",
+          "frames/v_8039ae6630f0/f_0018@499399ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 486758,
+            "end_ms": 507708,
+            "start": "00:08:06.758",
+            "end": "00:08:27.708"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_9c603a2b0c02b615",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 508198,
+      "end_ms": 510444,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Increase in volatility increases their value.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Increase in volatility increases their value.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0017@491558ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 508198,
+            "end_ms": 510444,
+            "start": "00:08:28.198",
+            "end": "00:08:30.444"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8fde69922fecd9ca",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 511014,
+      "end_ms": 520076,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "Volatility",
+      "statement": "Volatility increases the uncertainty that long-term option will enter in the money before expiration, an option that has no volatility has no movement, and therefore no value.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Volatility increases the uncertainty that long-term option will enter in the money before expiration, an option that has no volatility has no movement, and therefore no value.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0019@520420ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 511014,
+            "end_ms": 520076,
+            "start": "00:08:31.014",
+            "end": "00:08:40.076"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_027186192c5664d4",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 511014,
+      "end_ms": 520076,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "Volatility increases the uncertainty that long-term option will enter in the money before expiration, an option that has no volatility has no movement, and therefore no value.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Volatility increases the uncertainty that long-term option will enter in the money before expiration, an option that has no volatility has no movement, and therefore no value.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0019@520420ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 511014,
+            "end_ms": 520076,
+            "start": "00:08:31.014",
+            "end": "00:08:40.076"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0205f2f61b2a31fe",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 523750,
+      "end_ms": 537964,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "An option increases in value due to volatility because its time value increases.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "An option increases in value due to volatility because its time value increases.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0017@491558ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 523750,
+            "end_ms": 537964,
+            "start": "00:08:43.750",
+            "end": "00:08:57.964"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f7902e4716eaccb5",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 523750,
+      "end_ms": 537964,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "vega",
+      "statement": "If this is true, then the vega also is at the highest value close to add the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If this is true, then the vega also is at the highest value close to add the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0017@491558ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 523750,
+            "end_ms": 537964,
+            "start": "00:08:43.750",
+            "end": "00:08:57.964"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_0100f48f0869803c",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 538630,
+      "end_ms": 560188,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "because if Vega increases, it increases the time value, especially when we get close to add the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "because if Vega increases, it increases the time value, especially when we get close to add the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0017@491558ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 538630,
+            "end_ms": 560188,
+            "start": "00:08:58.630",
+            "end": "00:09:20.188"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "RULE",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_8976dd7be16ab654",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 538630,
+      "end_ms": 560188,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "The more time passes, the more the value of Vega decreases.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "The more time passes, the more the value of Vega decreases.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0017@491558ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 538630,
+            "end_ms": 560188,
+            "start": "00:08:58.630",
+            "end": "00:09:20.188"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_7a3f24d9b71448b0",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 538630,
+      "end_ms": 560188,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "Options with longer expiration have a higher Vega because they have more sensitivity to volatility, which increases the uncertainty that the option could end up in the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Options with longer expiration have a higher Vega because they have more sensitivity to volatility, which increases the uncertainty that the option could end up in the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0017@491558ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 538630,
+            "end_ms": 560188,
+            "start": "00:08:58.630",
+            "end": "00:09:20.188"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_6edb6176a600a6d8",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 538630,
+      "end_ms": 560188,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Options with longer expiration have a higher Vega because they have more sensitivity to volatility, which increases the uncertainty that the option could end up in the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Options with longer expiration have a higher Vega because they have more sensitivity to volatility, which increases the uncertainty that the option could end up in the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0017@491558ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 538630,
+            "end_ms": 560188,
+            "start": "00:08:58.630",
+            "end": "00:09:20.188"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_78dacfe2a033d057",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 538630,
+      "end_ms": 560188,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Moneyness",
+      "surface": "in the money",
+      "statement": "Options with longer expiration have a higher Vega because they have more sensitivity to volatility, which increases the uncertainty that the option could end up in the money.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Options with longer expiration have a higher Vega because they have more sensitivity to volatility, which increases the uncertainty that the option could end up in the money.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0017@491558ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 538630,
+            "end_ms": 560188,
+            "start": "00:08:58.630",
+            "end": "00:09:20.188"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "moneyness",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_380e25ea65a89f09",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 538630,
+      "end_ms": 560188,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "As you can see here, the profile becomes clearer as time passes, the more the Vega profile decreases.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "As you can see here, the profile becomes clearer as time passes, the more the Vega profile decreases.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0017@491558ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 538630,
+            "end_ms": 560188,
+            "start": "00:08:58.630",
+            "end": "00:09:20.188"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_b79a35b857b9e18c",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 560550,
+      "end_ms": 565548,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "Very close to expiration, the Vega has little effect on the value of the option.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Very close to expiration, the Vega has little effect on the value of the option.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0020@564297ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 560550,
+            "end_ms": 565548,
+            "start": "00:09:20.550",
+            "end": "00:09:25.548"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_3d28e350694209db",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 499399,
+      "end_ms": 499399,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "VEGA",
+      "statement": "VEGA: LONG GAMMA \\",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "VEGA: LONG GAMMA \\",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0018@499399ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 499399,
+            "end_ms": 499399,
+            "start": "00:08:19.399",
+            "end": "00:08:19.399"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_33a0d0f95038e01c",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 499399,
+      "end_ms": 499399,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Gamma",
+      "surface": "GAMMA",
+      "statement": "VEGA: LONG GAMMA \\",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "VEGA: LONG GAMMA \\",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0018@499399ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 499399,
+            "end_ms": 499399,
+            "start": "00:08:19.399",
+            "end": "00:08:19.399"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "TRADING_INTERPRETATION",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "gamma",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_30f60373c83c74a6",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 564297,
+      "end_ms": 564297,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "VEGA",
+      "statement": "VEGA: EXAMPLE &",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "VEGA: EXAMPLE &",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0020@564297ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 564297,
+            "end_ms": 564297,
+            "start": "00:09:24.297",
+            "end": "00:09:24.297"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_c136711079a9ec6f",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0007",
+      "start_ms": 564297,
+      "end_ms": 564297,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "no vendor/API named",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "Vega 0.15 = vol 1% t Option Value up t",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Vega 0.15 = vol 1% t Option Value up t",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0020@564297ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 564297,
+            "end_ms": 564297,
+            "start": "00:09:24.297",
+            "end": "00:09:24.297"
+          }
+        ],
+        "text_source": "ocr"
+      },
+      "evidence_type": "VISUAL_DEMONSTRATION",
+      "knowledge_class": "FORMULA",
+      "confidence": 0.5,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "ocr_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "ocr"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f267907a6e0046e1",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0008",
+      "start_ms": 566054,
+      "end_ms": 584684,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "Vega is expressed as a monetary quantity per unit of volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Vega is expressed as a monetary quantity per unit of volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0021@584984ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 566054,
+            "end_ms": 584684,
+            "start": "00:09:26.054",
+            "end": "00:09:44.684"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_f98ee592735904d3",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0008",
+      "start_ms": 566054,
+      "end_ms": 584684,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "Vega is expressed as a monetary quantity per unit of volatility.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "Vega is expressed as a monetary quantity per unit of volatility.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0021@584984ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 566054,
+            "end_ms": 584684,
+            "start": "00:09:26.054",
+            "end": "00:09:44.684"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "EXPLICIT_STATEMENT",
+      "knowledge_class": "HEURISTIC",
+      "confidence": 0.51,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_17a2c15df0491f0d",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0008",
+      "start_ms": 566054,
+      "end_ms": 584684,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Vega",
+      "surface": "Vega",
+      "statement": "If the Vega of our option is 0.15 and the volatility increases by 1%, this means that the value of our options increases by 15 cents.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If the Vega of our option is 0.15 and the volatility increases by 1%, this means that the value of our options increases by 15 cents.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0021@584984ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 566054,
+            "end_ms": 584684,
+            "start": "00:09:26.054",
+            "end": "00:09:44.684"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "vega",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    },
+    {
+      "schema": "video-knowledge/v1",
+      "id": "vk_67ea4e2509feba69",
+      "video_id": "v_8039ae6630f0",
+      "segment_id": "v_8039ae6630f0_s0008",
+      "start_ms": 566054,
+      "end_ms": 584684,
+      "api": "unknown",
+      "attribution": "API_UNKNOWN",
+      "attribution_basis": "SOURCE_VIDEO: vendor only visible on screen in the segment (branding), not stated",
+      "concept": "Volatility",
+      "surface": "volatility",
+      "statement": "If the Vega of our option is 0.15 and the volatility increases by 1%, this means that the value of our options increases by 15 cents.",
+      "evidence": {
+        "transcript_quote_or_paraphrase": "If the Vega of our option is 0.15 and the volatility increases by 1%, this means that the value of our options increases by 15 cents.",
+        "quote_kind": "VERBATIM",
+        "frame_refs": [
+          "frames/v_8039ae6630f0/f_0021@584984ms.jpg"
+        ],
+        "timestamps": [
+          {
+            "start_ms": 566054,
+            "end_ms": 584684,
+            "start": "00:09:26.054",
+            "end": "00:09:44.684"
+          }
+        ],
+        "text_source": "stt"
+      },
+      "evidence_type": "DEFINITION",
+      "knowledge_class": "DEFINITION",
+      "confidence": 0.6,
+      "uncalibrated": true,
+      "contradictions": [],
+      "unknowns": [
+        "api_not_stated",
+        "stt_text_unverified"
+      ],
+      "tags": [
+        "volatility",
+        "stt"
+      ],
+      "source_kind": "SOURCE_VIDEO",
+      "untrusted_flags": [],
+      "review_status": "PENDING_REVIEW",
+      "deterministic_rule": false
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "video_id": "v_5103d69108dc",
+  "terms": [
+    {
+      "term": "MARKET",
+      "context": "MARKET",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0001",
+      "start_ms": 0,
+      "end_ms": 0,
+      "source": "ocr"
+    },
+    {
+      "term": "USE",
+      "context": "USE DERIVATIVES?",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0001",
+      "start_ms": 29830,
+      "end_ms": 29830,
+      "source": "ocr"
+    },
+    {
+      "term": "RISK",
+      "context": "RISK OF DERIVATIVES \\S",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0002",
+      "start_ms": 93694,
+      "end_ms": 93694,
+      "source": "ocr"
+    },
+    {
+      "term": "NS",
+      "context": "Beg cies NS",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0004",
+      "start_ms": 170337,
+      "end_ms": 170337,
+      "source": "ocr"
+    },
+    {
+      "term": "CHANCE",
+      "context": "cee ay CHANCE =",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0004",
+      "start_ms": 208642,
+      "end_ms": 208642,
+      "source": "ocr"
+    },
+    {
+      "term": "MARKET",
+      "context": "ey. MARKET",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0005",
+      "start_ms": 259760,
+      "end_ms": 259760,
+      "source": "ocr"
+    },
+    {
+      "term": "OTC",
+      "context": "Then there is an OTC market or over-the-counter market.",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0006",
+      "start_ms": 278854,
+      "end_ms": 302908,
+      "source": "stt"
+    },
+    {
+      "term": "OTC",
+      "context": "The OTC market provides a greater flexibility than regulated markets, as trading can be customized according to the specific needs of the participants.",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0006",
+      "start_ms": 278854,
+      "end_ms": 302908,
+      "source": "stt"
+    },
+    {
+      "term": "OTC",
+      "context": "However, the OTC market also has some risks, such as lack of transparency in pricing and increased counterparty risk.",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0006",
+      "start_ms": 303174,
+      "end_ms": 314988,
+      "source": "stt"
+    },
+    {
+      "term": "OTC",
+      "context": "Derivatives are often traded OTC in case participant is looking for more flexibility.",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0006",
+      "start_ms": 303174,
+      "end_ms": 314988,
+      "source": "stt"
+    },
+    {
+      "term": "MARKET",
+      "context": "oh t _ MARKET",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0006",
+      "start_ms": 285285,
+      "end_ms": 285285,
+      "source": "ocr"
+    },
+    {
+      "term": "OTC",
+      "context": "ih Siigy OTC (OVER THE COUNTER)",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0006",
+      "start_ms": 298064,
+      "end_ms": 298064,
+      "source": "ocr"
+    },
+    {
+      "term": "OVER",
+      "context": "ih Siigy OTC (OVER THE COUNTER)",
+      "video_id": "v_5103d69108dc",
+      "segment_id": "v_5103d69108dc_s0006",
+      "start_ms": 298064,
+      "end_ms": 298064,
+      "source": "ocr"
+    }
+  ]
+}

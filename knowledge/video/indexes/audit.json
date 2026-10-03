@@ -1,0 +1,593 @@
+{
+  "schema": "alpha-video-audit/v1",
+  "at": "2026-10-03T17:23:14.831Z",
+  "source_folder": "C:\\Users\\ADM\\Downloads\\Telegram Desktop\\1q2we34rt5y\\MenthorQ course",
+  "corpus": "C:\\Users\\ADM\\Claude-JEV\\code\\knowledge\\video",
+  "VIDEOS_DISCOVERED": 23,
+  "VIDEOS_PROCESSED": 23,
+  "VIDEOS_SKIPPED": 0,
+  "TOTAL_HOURS": 3.35,
+  "SEGMENTS": 246,
+  "FRAMES": 434,
+  "KNOWLEDGE_ITEMS": 2158,
+  "CONCEPTS": 29,
+  "API_CONFIRMED": 5,
+  "API_PROBABLE": 111,
+  "CROSS_API": 0,
+  "API_UNKNOWN": 2042,
+  "CONTRADICTIONS": 248,
+  "QUARANTINED": 1,
+  "TRANSCRIPTION_FAILURES": 0,
+  "OCR_EMPTY_FRAMES": 46,
+  "OCR_FAILURES": 0,
+  "DUPLICATES": 0,
+  "UNSUPPORTED_FILES": [
+    {
+      "path": "Section 1 The Derivatives & Options Markets\\5 - Settlement of SPX options.pdf",
+      "kind": "document",
+      "reason": "not a video: outside the video pipeline (not processed)"
+    },
+    {
+      "path": "Section 2 How to use Option Greeks\\10 - Greels Cheatsheet.pdf",
+      "kind": "document",
+      "reason": "not a video: outside the video pipeline (not processed)"
+    },
+    {
+      "path": "Section 2 How to use Option Greeks\\9 - Greeks in action.pdf",
+      "kind": "document",
+      "reason": "not a video: outside the video pipeline (not processed)"
+    },
+    {
+      "path": "Section 4 Market Making & Liquidity\\nb.png",
+      "kind": "image",
+      "reason": "not a video: outside the video pipeline (not processed)"
+    },
+    {
+      "path": "Section 7 Resources\\1 - Platforms to Analyze Options.pdf",
+      "kind": "document",
+      "reason": "not a video: outside the video pipeline (not processed)"
+    },
+    {
+      "path": "Section 7 Resources\\2 - How to choose the Broker.pdf",
+      "kind": "document",
+      "reason": "not a video: outside the video pipeline (not processed)"
+    }
+  ],
+  "corpus_videos_not_in_folder": [],
+  "per_file": [
+    {
+      "path": "Section 1 The Derivatives & Options Markets\\1 - The Derivatives Market.mp4",
+      "sha256": "ae30ce5c839d0651d1e0d19c6b21c0dd1c821da6a313f6964e6a9a5b5a0b4d1e",
+      "duration_s": 340.629,
+      "status": "PROCESSED",
+      "video_id": "v_5103d69108dc",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 18,
+      "segments": 7,
+      "frames": 12,
+      "items": 11,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 1 The Derivatives & Options Markets\\2 -The Options Market.mp4",
+      "sha256": "41b00db5fe4b53c80329cee8fe7554c06a728a6ea9f9102b878be1cdbb6c897b",
+      "duration_s": 1046.229,
+      "status": "PROCESSED",
+      "video_id": "v_61f3b59bfb8e",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 61,
+      "segments": 18,
+      "frames": 26,
+      "items": 135,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 1 The Derivatives & Options Markets\\3 - Market Makers.mp4",
+      "sha256": "20c4b4d7fb01132ce4f35618939328f535fd2cc634d1342844ccb3bb6f74bb06",
+      "duration_s": 634.73,
+      "status": "PROCESSED",
+      "video_id": "v_413cb1d688d0",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 46,
+      "segments": 9,
+      "frames": 18,
+      "items": 76,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 1 The Derivatives & Options Markets\\4 - Option Expiration (OPEX).mp4",
+      "sha256": "e99e862c6e58582ac7c12d586fbd994bf7483db1f668a19afdf4e830cadf84ce",
+      "duration_s": 390.613,
+      "status": "PROCESSED",
+      "video_id": "v_fadab9cd3435",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 45,
+      "segments": 13,
+      "frames": 8,
+      "items": 48,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 2 How to use Option Greeks\\1 - Option Greeks.mp4",
+      "sha256": "82fa11bf2db7028890f62af6b1b4131b730cdc8a27eae555bfd9368454d4783f",
+      "duration_s": 385.344,
+      "status": "PROCESSED",
+      "video_id": "v_a98afb1700f1",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 21,
+      "segments": 8,
+      "frames": 12,
+      "items": 78,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 2 How to use Option Greeks\\2 - Option Moneyness.mp4",
+      "sha256": "a3fddd99847a5f3a41e6e3eed74128f642b423188ce13d6a479d1aba6ca0d12d",
+      "duration_s": 485.802,
+      "status": "PROCESSED",
+      "video_id": "v_453f1f61ad99",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 60,
+      "segments": 10,
+      "frames": 11,
+      "items": 76,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 2 How to use Option Greeks\\3 - Delta.mp4",
+      "sha256": "6e894a35b1148a101312dd3d6bea1a80cda9275e7463dd72314b50259e72b387",
+      "duration_s": 517.866,
+      "status": "PROCESSED",
+      "video_id": "v_9a19dc5c2fed",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 36,
+      "segments": 7,
+      "frames": 13,
+      "items": 85,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 2 How to use Option Greeks\\4 - Delta Hedging.mp4",
+      "sha256": "56be1022516a864fc97cd379730afe257d2242eb43840dd52e2bdb5c511bc16d",
+      "duration_s": 452.629,
+      "status": "PROCESSED",
+      "video_id": "v_b157768cc60a",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 4,
+          "pt": 1,
+          "it": 1
+        },
+        "forced": false
+      },
+      "cues": 62,
+      "segments": 10,
+      "frames": 13,
+      "items": 94,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 2 How to use Option Greeks\\5 - Gamma.mp4",
+      "sha256": "5bac15fb982ca20658b2aab20dbd6c0a3c0f3f3cfaa06a752871d4b0252bcbeb",
+      "duration_s": 491.178,
+      "status": "PROCESSED",
+      "video_id": "v_d32c161a3231",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 5,
+          "pt": 1
+        },
+        "forced": false
+      },
+      "cues": 56,
+      "segments": 7,
+      "frames": 18,
+      "items": 187,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 2 How to use Option Greeks\\6 - Theta.mp4",
+      "sha256": "68fd9742ec4af9ff29ccbb26412070a5e8867c9d28990a482bd38645bd9e08ed",
+      "duration_s": 228.416,
+      "status": "PROCESSED",
+      "video_id": "v_94f0f6cb9691",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 23,
+      "segments": 3,
+      "frames": 15,
+      "items": 79,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 2 How to use Option Greeks\\7 - Volatily.mp4",
+      "sha256": "787edb0c22770cc6a4f48cb41afaa75677c09885b0f3b72ce23b54dfaa633ad2",
+      "duration_s": 596.608,
+      "status": "PROCESSED",
+      "video_id": "v_8039ae6630f0",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 43,
+      "segments": 8,
+      "frames": 23,
+      "items": 127,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 2 How to use Option Greeks\\8 - Option Valuation.mp4",
+      "sha256": "05ede155a9c2d14b9b42b60dd12bf05b478c3b6a5adffe2250e540bb81203d58",
+      "duration_s": 455.765,
+      "status": "PROCESSED",
+      "video_id": "v_54555df70b54",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 31,
+      "segments": 10,
+      "frames": 15,
+      "items": 43,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 3 Term Structure, Skew & Tail Risk\\1 - Term Structure.mp4",
+      "sha256": "3d8c5d1a5d40fa81d53755cb987cfde923f346a9dca02511177acb147e4e4e37",
+      "duration_s": 374.762,
+      "status": "PROCESSED",
+      "video_id": "v_5701136ec8c1",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 29,
+      "segments": 7,
+      "frames": 8,
+      "items": 55,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 3 Term Structure, Skew & Tail Risk\\2 - Skew.mp4",
+      "sha256": "efe74f05d60f2c72edfb74cb8929b7339dc4e7c08322b9e9c4410dc9fa9bca19",
+      "duration_s": 823.21,
+      "status": "PROCESSED",
+      "video_id": "v_e347914ada0b",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 139,
+      "segments": 16,
+      "frames": 38,
+      "items": 212,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 3 Term Structure, Skew & Tail Risk\\3 - Tail Risk.mp4",
+      "sha256": "626be87f5b9ca202ac538c29fbc10c8b2fcb4673986f873860bebe1bef8687e7",
+      "duration_s": 291.37,
+      "status": "PROCESSED",
+      "video_id": "v_88095231ec06",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 34,
+      "segments": 6,
+      "frames": 11,
+      "items": 21,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 4 Market Making & Liquidity\\Follow Liquidity.mp4",
+      "sha256": "943b38805c5ba9abec085edd8fdab1be5f5d414e72935388bf4c00c326c9d3f3",
+      "duration_s": 558.784,
+      "status": "PROCESSED",
+      "video_id": "v_57da17993b19",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 47,
+      "segments": 12,
+      "frames": 25,
+      "items": 191,
+      "rejected": 0,
+      "quarantined": 1
+    },
+    {
+      "path": "Section 5 Options Trading\\1 - How to use Q-Models.mp4",
+      "sha256": "0bdf8f99a4ac60250f583cfc3f945bfc458a8b9cc294c5ec3fab6a0afa617601",
+      "duration_s": 1134.848,
+      "status": "PROCESSED",
+      "video_id": "v_871fd4f53294",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 65,
+      "segments": 19,
+      "frames": 46,
+      "items": 209,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 5 Options Trading\\2 - Checklist for Trading Options.mp4",
+      "sha256": "8f001aaf39f0a34bb66beb760c57de73593a30210aa3b8ccd42169fcf554382b",
+      "duration_s": 365.845,
+      "status": "PROCESSED",
+      "video_id": "v_70b8a82bee5a",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 32,
+      "segments": 8,
+      "frames": 16,
+      "items": 57,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 6 Options Strategies\\1 - Advanced Strategies with Options.mp4",
+      "sha256": "bf692cd0ef158405b0dc186b7e51e77bf6c3fa5754772b4031a9d7dfc1c2ea72",
+      "duration_s": 203.477,
+      "status": "PROCESSED",
+      "video_id": "v_3638d6aeb3dd",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 15,
+      "segments": 5,
+      "frames": 15,
+      "items": 17,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 6 Options Strategies\\2 - Bullish Strategies.mp4",
+      "sha256": "40eb77cfbf43e73e5bbd06ba54bcd6225ba553bc8e9ceb7a233d17301165733e",
+      "duration_s": 752.448,
+      "status": "PROCESSED",
+      "video_id": "v_3a163039d4ea",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 97,
+      "segments": 22,
+      "frames": 34,
+      "items": 150,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 6 Options Strategies\\3 - Bearish Strategies.mp4",
+      "sha256": "eb00328e1cfb130f2fabdeef7abe1d74f4be2b97c6c0789572fd30dba1b211fa",
+      "duration_s": 584.896,
+      "status": "PROCESSED",
+      "video_id": "v_86fd353be172",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 48,
+      "segments": 18,
+      "frames": 22,
+      "items": 92,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 6 Options Strategies\\4 - Market Neutral Strategies.mp4",
+      "sha256": "7d7febfb1d8bcfe60ac6b209c603a521790aea13776282bc4ea248fc0c4d82fa",
+      "duration_s": 536.362,
+      "status": "PROCESSED",
+      "video_id": "v_8e893a0e7325",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 6
+        },
+        "forced": false
+      },
+      "cues": 43,
+      "segments": 13,
+      "frames": 19,
+      "items": 74,
+      "rejected": 0,
+      "quarantined": 0
+    },
+    {
+      "path": "Section 6 Options Strategies\\5 - Hedging Strategies.mp4",
+      "sha256": "b4f156a435decd5ec982385372c997aace69b14a8d4d675ed0afca90773656d3",
+      "duration_s": 394.88,
+      "status": "PROCESSED",
+      "video_id": "v_9eb61104eed0",
+      "problems": [],
+      "method": "stt-local:whisper-small",
+      "language": "en",
+      "language_lock": {
+        "lang": "en",
+        "votes": {
+          "en": 5,
+          "ar": 1
+        },
+        "forced": false
+      },
+      "cues": 28,
+      "segments": 10,
+      "frames": 16,
+      "items": 41,
+      "rejected": 0,
+      "quarantined": 0
+    }
+  ],
+  "failures": []
+}
