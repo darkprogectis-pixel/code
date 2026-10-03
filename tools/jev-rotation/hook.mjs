@@ -60,7 +60,7 @@ export const readJson = (f) => { try { return JSON.parse(fs.readFileSync(f, 'utf
 export const lockFile = (sid) => path.join(rotDir, `${sid}.lock`);
 export const lineage = (rec) => fs.appendFileSync(lineageFile, JSON.stringify({ at: new Date().toISOString(), ...rec }) + '\n');
 
-function writeAutoSnapshot(sid, level, tokens, input, st) {
+export function writeAutoSnapshot(sid, level, tokens, input, st) {
   const dir = path.join(repoRoot, 'handoffs', 'rotation');
   fs.mkdirSync(dir, { recursive: true });
   const file = path.join(dir, `AUTO_ROTATION_${sid.slice(0, 8)}.md`);
@@ -221,7 +221,8 @@ export async function openWindow(launch, title) {
   return { ok: false, error: errors.join('; ') };
 }
 
-async function rotate(sid, st, input, event, level, tokens, projected, cfg) {
+// Also the entry point of force.mjs (manual immediate rotation): one rotation path only.
+export async function rotate(sid, st, input, event, level, tokens, projected, cfg) {
   fs.mkdirSync(rotDir, { recursive: true });
   let fd;
   try { fd = fs.openSync(lockFile(sid), 'wx'); } catch (e) {
