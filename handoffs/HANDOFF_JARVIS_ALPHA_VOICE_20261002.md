@@ -90,3 +90,11 @@ Proposta (em escrita): `handoffs/PROPOSAL_JARVIS_ALPHA_VOICE_20261002.md`.
 - BENCH COMPLETO `var/jarvis/bench-2026-10-02T23-51-46-829Z.json` (=bench-latest): TTS piper-faber TTFA p50 269/p95 741 ms RTF .075 (ACCEPTABLE); jeff 359/829; kokoro RTF 1,73 TOO_SLOW. STT base@2t p50 342 ms, intent bruto .40; small@2t p50 1313 ms, intent bruto .48 (TOO_SLOW por etapa). Classificação com small: route/answer/text→1º áudio/barge-in EXCELLENT, tts_first ACCEPTABLE, voz→1º áudio ACCEPTABLE, stt_final TOO_SLOW. DECISÃO: STT padrão whisper-small 2 threads (precisão; E2E ACCEPTABLE), fallback whisper-base; TTS piper-faber. Precisão de STT no jargão é limitação registrada (bench sintético pessimista; validação com mic real não bloqueante).
 - RECHECK_PASS (alpha, jarvis 16/16, jev-obs, jev-finish, rotation). JEV FINAL MISSÃO = **A** COMPLETE_AND_VERIFIED `req_01a0ff15790679648c971960055b011f` p .84, sobre `handoffs/RESULT_JARVIS_ALPHA_FINAL_20261002.md` (sha b03d2ec03fcd731a), 00:06:30Z.
 - PRÓXIMO: commits 1 (Alpha) e 2 (JARVIS) conforme plano acima (+ RESULT file no 2) → push → stack start/verify → recheck de novo (git delta) → handoff "RECHECK PASS — aguardando complete" → complete.
+- COMMITS: f250faf (Alpha), 539bef9 (JARVIS). PRÓXIMO: git push origin main → stack start/verify → recheck → handoff → complete.
+
+## RESULTADO VERIFICADO — loop jf-20261002230017-ced0d2 — RECHECK PASS — aguardando complete
+- `finish.mjs recheck` (após commits/push/stack) = RECHECK_PASS: alpha · jarvis 16/16 · jev-obs · jev-finish · rotation.
+- JEV FINAL = A `req_01a0ff15790679648c971960055b011f` (p .84). Commits f250faf (Alpha) + 539bef9 (JARVIS), push origin/main b87106d..539bef9.
+- Runtime local ATIVO (`node scripts/jev-stack.mjs status`): jev-obs 3593 (reiniciado: processo antigo pid 10612 sem rota JARVIS ⇒ substituído), Alpha service pid 12992, JARVIS 3594 VOICE_READY. Verificado: /api/ask OK, /api/jarvis/status alive, POST /api/order ⇒ 404.
+- Pendências não bloqueantes: validação com microfone real + notas subjetivas do operador; precisão STT do jargão (bench sintético intent bruto .48); hotkey global; wake word (licença).
+- **COMPLETE** aceito pelo CLI (loop jf-20261002230017-ced0d2, 2026-10-03T00:09:20Z).
