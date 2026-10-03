@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="jarvis-token" content="__JARVIS_TOKEN__">
+<title>JARVIS HUD</title>
+<style>
+  :root { --bg:#0d1117; --panel:#161b22; --line:#30363d; --fg:#e6edf3; --mut:#8b949e; --acc:#58a6ff; --ok:#3fb950; --warn:#d29922; --bad:#f85149; }
+  * { box-sizing:border-box } body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.45 system-ui,Segoe UI,sans-serif }
+  header { display:flex; gap:12px; align-items:center; padding:12px 16px; border-bottom:1px solid var(--line); flex-wrap:wrap }
+  header b { font-size:16px } .tag { font-size:12px; padding:2px 8px; border:1px solid var(--line); border-radius:99px; color:var(--mut) }
+  main { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:12px; padding:12px 16px } @media (max-width:800px){ main{grid-template-columns:1fr} }
+  section { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:12px } h2 { margin:0 0 8px; font-size:13px; color:var(--mut); text-transform:uppercase; letter-spacing:.04em }
+  #ptt { width:100%; padding:22px; font-size:18px; border-radius:8px; border:1px solid var(--line); background:#1f6feb22; color:var(--fg); cursor:pointer; user-select:none }
+  #ptt.on { background:var(--bad); } #state { font-size:22px; font-weight:600; margin:8px 0 } .mut { color:var(--mut) } .row { display:flex; gap:8px; margin-top:8px }
+  input[type=text] { flex:1; padding:8px; background:var(--bg); color:var(--fg); border:1px solid var(--line); border-radius:6px } button { padding:8px 12px; background:var(--bg); color:var(--fg); border:1px solid var(--line); border-radius:6px; cursor:pointer }
+  #meter { height:6px; background:var(--line); border-radius:3px; overflow:hidden; margin-top:8px } #meter i { display:block; height:100%; width:0; background:var(--ok) }
+  table { width:100%; border-collapse:collapse; font-size:12px } td,th { text-align:left; padding:3px 6px; border-bottom:1px solid var(--line); vertical-align:top } .ans { white-space:pre-wrap }
+</style>
+</head>
+<body>
+<header><b>JARVIS</b><span class="tag">SHADOW · READ-ONLY · zero ordens</span><span class="tag" id="voice">voz: …</span><span class="tag">PTT (segure o botão ou a barra de espaço) · wake word OFF</span></header>
+<main>
+  <section>
+    <h2>Falar</h2>
+    <button id="ptt">Segure para falar</button>
+    <div id="meter"><i></i></div>
+    <div id="state">pronto</div>
+    <label class="mut"><input type="checkbox" id="barge" checked> barge-in por voz (interrompe a fala ao detectar sua voz; use headset para evitar eco)</label>
+    <div class="row"><input type="text" id="txt" placeholder="ou digite: onde está a call wall?"><button id="send">Perguntar</button><button id="stop">Parar</button></div>
+  </section>
+  <section>
+    <h2>Última interação</h2>
+    <div class="mut">Pergunta</div><div id="q">—</div>
+    <div class="mut" style="margin-top:6px">Resposta</div><div id="a" class="ans">—</div>
+    <div class="mut" style="margin-top:6px" id="meta">—</div>
+  </section>
+  <section style="grid-column:1/-1">
+    <h2>Ciclos recentes</h2>
+    <table><thead><tr><th>hora</th><th>modo</th><th>intent</th><th>transcrição</th><th>STT</th><th>resposta</th><th>1º áudio</th><th>barge-in</th></tr></thead><tbody id="cy"></tbody></table>
+  </section>
+</main>
+<script>
+const TOKEN = document.querySelector('meta[name=jarvis-token]').content;
+const $ = (id) => document.getElementById(id), setState = (s) => { $('state').textContent = s; };
+let ctx, stream, node, rec = null, speaking = null, loud = 0;
+async function mic() {
+  if (stream) return;
+  stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true, channelCount: 1 } });
+  ctx = new AudioContext(); const src = ctx.createMediaStreamSource(stream);
+  node = ctx.createScriptProcessor(4096, 1, 1); src.connect(node); node.connect(ctx.destination);
+  node.onaudioprocess = (e) => {
+    const x = e.inputBuffer.getChannelData(0); let s = 0; for (let i = 0; i < x.length; i++) s += x[i] * x[i];
+    const rms = Math.sqrt(s / x.length); $('meter').firstChild.style.width = Math.min(100, rms * 400) + '%';
+    if (rec) rec.push(new Float32Array(x));
+    if (speaking && $('barge').checked && !rec) { loud = rms > 0.06 ? loud + 1 : 0; if (loud >= 2) { stopSpeech('barge-in'); loud = 0; } }
+  };
+}
+function to16k(chunks, sr) {
+  const n = chunks.reduce((a, c) => a + c.length, 0), x = new Float32Array(n); let o = 0; for (const c of chunks) { x.set(c, o); o += c.length; }
+  const m = Math.floor(n * 16000 / sr), y = new Float32Array(m), r = sr / 16000;
+  for (let i = 0; i < m; i++) { const p = i * r, k = Math.floor(p), f = p - k; y[i] = x[k] * (1 - f) + (x[k + 1] ?? x[k]) * f; }
+  return y;
+}
+async function post(url, body, type) { const r = await fetch(url, { method: 'POST', headers: { 'x-jarvis-token': TOKEN, 'content-type': type }, body }); return r.json(); }
+function stopSpeech(why) { if (!speaking) return; speaking.stop(); speaking = null; post('/api/cancel', '{}', 'application/json'); setState('interrompido (' + why + ')'); }
+async function play(a) {
+  if (!a.audio) return;
+  const me = { stopped: false, src: null, stop() { this.stopped = true; try { this.src && this.src.stop(); } catch {} } }; speaking = me; setState('falando');
+  for (let i = 0; !me.stopped; i++) {
+    const r = await fetch(a.audio.chunks_url + i); if (r.status !== 200 || me.stopped) break;
+    const buf = await ctx.decodeAudioData(await r.arrayBuffer()); if (me.stopped) break;
+    await new Promise((res) => { const s = ctx.createBufferSource(); s.buffer = buf; s.connect(ctx.destination); s.onended = res; me.src = s; s.start(); });
+  }
+  if (speaking === me) { speaking = null; setState('pronto'); }
+}
+function show(a, q) {
+  $('q').textContent = q; $('a').textContent = a.answer_text || a.error || '—';
+  $('meta').textContent = a.intent ? `${a.intent} · fontes ${a.sources.join(', ') || '—'} · confiança ${a.confidence} · ${a.fresh ? 'fresco' : 'NÃO fresco'}${a.warnings.length ? ' · ' + a.warnings.join('; ') : ''}${a.stt ? ` · STT ${a.stt.ms} ms (${a.stt.model})` : ''}` : '';
+}
+async function startPTT() { if (rec) return; await mic(); await ctx.resume(); if (speaking) stopSpeech('PTT'); rec = []; $('ptt').classList.add('on'); setState('ouvindo'); }
+async function endPTT() {
+  if (!rec) return; const chunks = rec; rec = null; $('ptt').classList.remove('on');
+  const x = to16k(chunks, ctx.sampleRate); if (x.length < 4000) return setState('muito curto');
+  setState('transcrevendo'); const a = await post('/api/ask-audio?speak=1', x.buffer, 'application/octet-stream');
+  show(a, a.stt ? a.stt.text : '(falha)'); if (a.cancel) return setState('pronto'); await play(a); refresh();
+}
+async function askText() {
+  const t = $('txt').value.trim(); if (!t) return; await mic().catch(() => {}); if (ctx) await ctx.resume();
+  if (speaking) stopSpeech('nova pergunta'); setState('pensando');
+  const a = await post('/api/ask?speak=' + (ctx ? 1 : 0), JSON.stringify({ text: t }), 'application/json'); show(a, t); if (ctx) await play(a); else setState('pronto'); refresh();
+}
+$('ptt').onmousedown = startPTT; $('ptt').onmouseup = endPTT; $('ptt').onmouseleave = endPTT;
+$('ptt').ontouchstart = (e) => { e.preventDefault(); startPTT(); }; $('ptt').ontouchend = endPTT;
+document.addEventListener('keydown', (e) => { if (e.code === 'Space' && e.target.tagName !== 'INPUT' && !e.repeat) { e.preventDefault(); startPTT(); } if (e.code === 'Escape') stopSpeech('Esc'); });
+document.addEventListener('keyup', (e) => { if (e.code === 'Space' && e.target.tagName !== 'INPUT') { e.preventDefault(); endPTT(); } });
+$('send').onclick = askText; $('txt').onkeydown = (e) => { if (e.key === 'Enter') askText(); }; $('stop').onclick = () => stopSpeech('botão');
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+async function refresh() {
+  const [st, cy] = await Promise.all([fetch('/api/status').then((r) => r.json()), fetch('/api/cycles?limit=15').then((r) => r.json())]);
+  $('voice').textContent = 'voz: ' + st.voice.status + (st.voice.stt ? ` · STT ${st.voice.stt} · TTS ${st.voice.tts}` : '');
+  $('cy').innerHTML = cy.rows.slice().reverse().map((r) => `<tr><td>${esc(r.at.slice(11, 19))}</td><td>${esc(r.mode)}</td><td>${esc(r.intent)}</td><td>${esc(r.transcript)}</td><td>${r.latency.stt_ms ?? '—'}</td><td>${esc((r.answer_text || '').slice(0, 120))}</td><td>${r.latency.first_audio_ms ?? '—'}</td><td>${r.barge_in ? 'sim' : ''}</td></tr>`).join('');
+}
+refresh(); setInterval(refresh, 10000);
+</script>
+</body>
+</html>

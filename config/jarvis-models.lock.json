@@ -1,0 +1,94 @@
+{
+  "schema": "jarvis-models-lock/v1",
+  "models_dir": "%LOCALAPPDATA%\\jev-jarvis\\models",
+  "runtime": "sherpa-onnx-node (Apache-2.0)",
+  "models": [
+    {
+      "id": "silero-vad",
+      "kind": "vad",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/silero_vad.onnx",
+      "path": "silero_vad.onnx",
+      "sha256": "9e2449e1087496d8d4caba907f23e0bd3f78d91fa552479bb9c23ac09cbb1fd6",
+      "sha256_source": "PUBLISHER_VERIFIED",
+      "license": "MIT (snakers4/silero-vad)",
+      "commercial": true,
+      "attribution": "Silero Team",
+      "model_card": null,
+      "installed": true
+    },
+    {
+      "id": "whisper-small",
+      "kind": "stt",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-whisper-small.tar.bz2",
+      "path": "sherpa-onnx-whisper-small",
+      "sha256": "486a46afbb7ba798507190ffe02fea2dd726049af212e774537efac6afb210a6",
+      "sha256_source": "TOFU_COMPUTED",
+      "license": "MIT (openai/whisper code and weights)",
+      "commercial": true,
+      "attribution": "OpenAI Whisper",
+      "model_card": null,
+      "installed": true
+    },
+    {
+      "id": "whisper-base",
+      "kind": "stt",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-whisper-base.tar.bz2",
+      "path": "sherpa-onnx-whisper-base",
+      "sha256": "911b2083efd7c0dca2ac3b358b75222660dc09fb716d64fbfc417ba6c99ff3de",
+      "sha256_source": "TOFU_COMPUTED",
+      "license": "MIT (openai/whisper code and weights)",
+      "commercial": true,
+      "attribution": "OpenAI Whisper",
+      "model_card": null,
+      "installed": true
+    },
+    {
+      "id": "piper-faber",
+      "kind": "tts",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-piper-pt_BR-faber-medium.tar.bz2",
+      "path": "vits-piper-pt_BR-faber-medium",
+      "sha256": "7add3f923ad6bc25ca8a192805fd1a64d1b3893e4611c4a9719545a825039a83",
+      "sha256_source": "PUBLISHER_VERIFIED",
+      "license": "see MODEL_CARD (piper voice); runtime sherpa-onnx Apache-2.0; espeak-ng-data GPL-3.0 (local use, not redistributed)",
+      "commercial": "PER_MODEL_CARD",
+      "attribution": "Piper voice pt_BR faber",
+      "model_card": {
+        "file": "MODEL_CARD",
+        "license_line": "License: CC0\n"
+      },
+      "installed": true
+    },
+    {
+      "id": "piper-jeff",
+      "kind": "tts",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-piper-pt_BR-jeff-medium.tar.bz2",
+      "path": "vits-piper-pt_BR-jeff-medium",
+      "sha256": "da4c870fc7b20600c74261b3e1dd1c816da2ce063e18c46e1f2cd86dea88f3f0",
+      "sha256_source": "PUBLISHER_VERIFIED",
+      "license": "see MODEL_CARD (piper voice); espeak-ng-data GPL-3.0 (local use)",
+      "commercial": "PER_MODEL_CARD",
+      "attribution": "Piper voice pt_BR jeff",
+      "model_card": {
+        "file": "MODEL_CARD",
+        "license_line": "License: CC0\n"
+      },
+      "installed": true
+    },
+    {
+      "id": "kokoro-int8",
+      "kind": "tts",
+      "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kokoro-int8-multi-lang-v1_0.tar.bz2",
+      "path": "kokoro-int8-multi-lang-v1_0",
+      "sha256": "4c3052abaa60943a341f193888cf6abd68787dae6ab8ae5c925a706caa247e4e",
+      "sha256_source": "PUBLISHER_VERIFIED",
+      "license": "Apache-2.0 (hexgrad/Kokoro-82M weights); espeak-ng-data GPL-3.0 (local use, not redistributed)",
+      "commercial": true,
+      "attribution": "hexgrad Kokoro-82M",
+      "model_card": {
+        "file": "README.md",
+        "license_line": null
+      },
+      "installed": true
+    }
+  ]
+}

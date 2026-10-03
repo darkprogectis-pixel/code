@@ -1,7 +1,7 @@
 // JEV Observability dashboard — vanilla JS + SVG, no CDN, read-only GET /api/summary.
 'use strict';
-const TABS = ['OVERVIEW', 'JEV', 'CLAUDE', 'CONTEXT', 'HOOKS', 'SESSIONS', 'DECISIONS', 'CALIBRATION', 'MODELS', 'AGENTS', 'WORKFLOWS', 'COST', 'ANOMALIES'];
-let S = null, tab = (location.hash || '#OVERVIEW').slice(1);
+const TABS = ['ALPHA', 'JARVIS', 'OVERVIEW', 'JEV', 'CLAUDE', 'CONTEXT', 'HOOKS', 'SESSIONS', 'DECISIONS', 'CALIBRATION', 'MODELS', 'AGENTS', 'WORKFLOWS', 'COST', 'ANOMALIES'];
+let S = null, A = null, J = null, tab = (location.hash || '#OVERVIEW').slice(1);
 const $ = (s) => document.querySelector(s);
 const esc = (v) => String(v ?? '—').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const n = (v, d = 0) => (v == null || Number.isNaN(v) ? '—' : Number(v).toLocaleString('pt-BR', { maximumFractionDigits: d }));
@@ -27,6 +27,46 @@ function line(points, color = 'var(--a)', fmt = M) {
   <text x="40" y="166">${esc(new Date(x0).toISOString().slice(5, 16))}</text><text x="300" y="166">${esc(new Date(x1).toISOString().slice(5, 16))}</text></svg>`;
 }
 const series = (obj) => Object.entries(obj || {}).map(([k, v]) => [Date.parse(k.length === 10 ? k + 'T00:00:00Z' : k), v]).filter((p) => p[0]).sort((a, b) => a[0] - b[0]);
+
+const DIRC = { BUY: 'var(--c)', SELL: 'var(--w)', NEUTRAL: 'var(--info)', UNKNOWN: 'var(--mut)', NO_SIGNAL: 'var(--mut)' };
+const dir = (d) => `<span class="lv" style="background:${DIRC[d] || 'var(--mut)'};color:#111">${esc(d)}</span>`;
+const ms = (v) => (v == null ? '—' : v >= 3600000 ? n(v / 3600000, 1) + ' h' : v >= 60000 ? n(v / 60000, 1) + ' min' : n(v / 1000, 1) + ' s');
+const ALPHA_V = () => {
+  const L = A.latest, H = A.history, Mx = A.metrics;
+  if (!L || L.status !== 'OK') return panel('ALPHA SIGNAL INTELLIGENCE', '<p class="zero">sem dados — inicie: node src/alpha/service.mjs (SHADOW / READ-ONLY)</p>');
+  const f = L.fusion, j = f.jev || {}, m = Mx.metrics || {};
+  const rows = L.envelopes.map((e) => ({ agent: e.agent, direction: e.direction, strength: e.strength, confidence: e.confidence, age: e.age_ms, health: e.health, role: e.role, used: f.sources[e.source]?.used ? 'sim' : (f.sources[e.source]?.reason || '—'), warn: e.warnings.slice(0, 2).join(' | ') }));
+  const qs = Object.entries(j.questions || {}).map(([k, q]) => ({ k, ...q }));
+  const ev = L.envelopes.flatMap((e) => e.evidence.slice(0, 6).map((x) => ({ src: e.source, ...x, value: typeof x.value === 'object' ? JSON.stringify(x.value) : x.value })));
+  const lv = L.envelopes.flatMap((e) => Object.entries(e.levels || {}).map(([k, v]) => ({ src: e.source, k, value: v.value, origin: v.origin })));
+  return `<div class="cards">${card('FUSION', dir(f.signal), 'SHADOW · UNCALIBRATED · zero ordens')}${card('confidence', n(f.confidence, 3))}${card('agreement', n(f.agreement, 3), `score ${n(f.score, 3)} · massa ${n(f.evidence_mass, 3)}`)}${card('fontes frescas', n(f.fresh_count) + '/5', f.freshness_ok ? 'freshness OK' : 'freshness insuficiente')}
+    ${card('JEV', esc(j.status), j.request_id ? esc(j.request_id.slice(0, 16)) : '')}${card('ciclo', esc(L.cycle_id), `há ${ms(L.age_ms)}`)}${card('latência ciclo', n(f.stages_ms?.total) + ' ms', `p95 ${n(m.cycle_p95)} ms`)}${card('ciclos', n(m.cycles), `flips ${n(m.fusion?.flips)}`)}${card('outcomes', n(Mx.outcomes?.LABELED), `pendentes ${n(Mx.outcomes?.LABEL_PENDING)}`)}</div>
+  <div class="grid">${panel('5 especialistas', table(rows, [['agent'], ['direction', 'direção', dir], ['strength', 'str', (v) => n(v, 3)], ['confidence', 'conf', (v) => n(v, 3)], ['age', 'idade', ms], ['health'], ['role'], ['used', 'usado no Fusion'], ['warn', 'avisos']]))}
+  ${panel('FUSION — raciocínio', `<p>${esc(f.reasoning_summary)}</p>` + table(f.groups, [['id', 'grupo'], ['representative', 'repr.'], ['direction', 'dir', dir], ['mass', 'massa', (v) => n(v, 4)]]) + table(f.ignored_sources, [['source', 'ignorada'], ['reason', 'motivo']]))}
+  ${panel('contradições', table(f.contradictions, [['kind'], ['detail'], ['material']]))}
+  ${panel('JEV Q1–Q12 (advisory, não altera o sinal)', table(qs, [['k', 'Q'], ['winner'], ['pmax', 'p1', (v) => n(v, 3)], ['top2'], ['margin', 'margem', (v) => n(v, 3)], ['ratio'], ['confidence', 'conf', (v) => n(v, 2)]]))}
+  ${panel('latência por estágio (ms)', bars(f.stages_ms || {}, 'var(--b)', n))}
+  ${panel('métricas por agente', table(Object.entries(m.agents || {}).map(([k, a]) => ({ k, ...a })), [['k', 'agente'], ['calls'], ['errors'], ['timeouts'], ['stale'], ['BUY'], ['SELL'], ['NEUTRAL'], ['UNKNOWN'], ['fetch_p50', 'fetch p50'], ['fetch_p95', 'p95'], ['eval_p95', 'eval p95'], ['tokens']]))}
+  ${panel('evidências', table(ev, [['src'], ['field'], ['value'], ['unit'], ['effect'], ['role'], ['validation']]))}
+  ${panel('níveis (origem declarada)', table(lv, [['src'], ['k', 'nível'], ['value'], ['origin']]))}
+  ${panel('timeline do sinal', line(H.rows.map((r) => [Date.parse(r.at), r.signal === 'BUY' ? 2 : r.signal === 'SELL' ? 0 : 1]), 'var(--a)', (v) => (v >= 2 ? 'BUY' : v <= 0 ? 'SELL' : 'NO_SIGNAL')))}
+  ${panel('flips', table(H.flips.slice(-30).reverse(), [['at'], ['from'], ['to']]))}
+  ${panel('histórico (últimos 60)', table(H.rows.slice(-60).reverse().map((r) => ({ ...r, js: r.jev?.status, oc: r.outcome?.label || '—' })), [['at'], ['signal', 'sinal', dir], ['confidence', 'conf', (v) => n(v, 3)], ['agreement', 'agr', (v) => n(v, 3)], ['js', 'JEV'], ['oc', 'outcome']]))}</div>`;
+};
+
+const JARVIS_V = () => {
+  const st = J.status, cy = J.cycles, b = J.bench, sel = b.selected || {}, cl = b.classification || {};
+  const stg = Object.entries(cy.stages || {}).map(([k, v]) => ({ k, ...v }));
+  const stt = Object.entries(b.stt || {}).map(([k, v]) => ({ k, ...v, p50: v.latency_ms?.p50, p95: v.latency_ms?.p95 }));
+  const tts = Object.entries(b.tts || {}).map(([k, v]) => ({ k, ...v, p50: v.ttfa_ms?.p50, p95: v.ttfa_ms?.p95, rtf50: v.rtf?.p50 }));
+  return `<div class="cards">${card('JARVIS', st.alive ? 'ONLINE' : 'OFFLINE', st.alive ? 'SHADOW · READ-ONLY · zero ordens' : 'inicie: node scripts/jev-stack.mjs start')}${card('voz', esc(st.voice || '—'), 'PTT · wake word OFF (licença)')}${card('falar', st.url ? `<a href="${esc(st.url)}" target="_blank">abrir HUD</a>` : '—', 'mic só na HUD 3594')}${card('ciclos', n(cy.rows?.length), `barge-ins ${n(cy.barge_ins)}`)}${card('sem evidência', cy.unsupported_rate == null ? '—' : n(cy.unsupported_rate * 100, 1) + '%')}${card('STT', esc(sel.stt ? sel.stt.model + '@' + sel.stt.threads + 't' : '—'), esc(cl.stt_final || ''))}${card('TTS', esc(sel.tts || '—'), esc(cl.tts_first || ''))}${card('voz→1º áudio p50', n(b.e2e?.speech_end_to_first_audio_ms?.p50) + ' ms', esc(cl.voice_first_audio || ''))}</div>
+  <div class="grid">${panel('latência por etapa (ciclos reais)', table(stg, [['k', 'etapa'], ['n'], ['p50'], ['p95'], ['p99']]))}
+  ${panel('intents', bars(cy.intents || {}, 'var(--b)', n))}
+  ${panel('bench STT (round-trip sintético TTS→STT)', table(stt, [['k', 'modelo'], ['p50', 'p50 ms'], ['p95', 'p95 ms'], ['wer_mean', 'WER'], ['glossary_hit_rate', 'glossário'], ['intent_preserved', 'intent'], ['intent_preserved_raw_no_normalizer', 'intent bruto'], ['rss_peak_mb', 'RSS MB'], ['class']]))}
+  ${panel('bench TTS', table(tts, [['k', 'voz'], ['p50', 'TTFA p50'], ['p95', 'TTFA p95'], ['rtf50', 'RTF'], ['rss_peak_mb', 'RSS MB'], ['class']]))}
+  ${panel('classificação §16', kv(cl, esc))}
+  ${panel('ciclos recentes', table((cy.rows || []).slice(-40).reverse().map((r) => ({ ...r, st: r.latency?.stt_ms, fa: r.latency?.first_audio_ms })), [['at'], ['mode'], ['intent'], ['transcript', 'transcrição'], ['st', 'STT ms'], ['fa', '1º áudio ms'], ['confidence', 'conf', (v) => n(v, 2)], ['fresh'], ['barge_in']]))}</div>`;
+};
 
 const V = {
   OVERVIEW() {
@@ -76,8 +116,20 @@ const V = {
   ANOMALIES() { return panel('análise determinística (nunca bloqueia)', table(S.anomalies, [['level', 'nível', (v) => `<span class="lv ${esc(v)}">${esc(v)}</span>`], ['code'], ['msg', 'detalhe'], ['value']])) + panel('fontes', table(Object.entries(S.sources).map(([k, v]) => ({ k, ...v })), [['k', 'fonte'], ['exists'], ['lines'], ['bad_lines'], ['bytes'], ['files'], ['sha12'], ['mtime']])); },
 };
 
+async function loadAlpha() {
+  try { const [latest, history, metrics] = await Promise.all(['latest', 'history?limit=300', 'metrics'].map((p) => fetch('/api/alpha/' + p).then((r) => r.json()))); A = { latest, history, metrics }; }
+  catch (e) { A = { latest: { status: 'ERROR' }, history: { rows: [], flips: [] }, metrics: {} }; }
+}
+async function loadJarvis() {
+  try { const [status, cycles, bench] = await Promise.all(['status', 'cycles?limit=300', 'bench'].map((p) => fetch('/api/jarvis/' + p).then((r) => r.json()))); J = { status, cycles, bench }; }
+  catch (e) { J = { status: { status: 'ERROR' }, cycles: { rows: [] }, bench: {} }; }
+}
+setInterval(async () => { if (tab === 'JARVIS') { await loadJarvis(); render(); } }, 10000);
+setInterval(async () => { if (tab === 'ALPHA') { await loadAlpha(); render(); } }, 10000);
 function render() {
   $('#tabs').innerHTML = TABS.map((t) => `<a href="#${t}" class="${t === tab ? 'on' : ''}">${t}</a>`).join('');
+  if (tab === 'ALPHA') { if (!A) { loadAlpha().then(render); return; } try { $('#view').innerHTML = ALPHA_V(); } catch (e) { $('#view').innerHTML = `<p class="zero">erro ALPHA: ${esc(e.message)}</p>`; } return; }
+  if (tab === 'JARVIS') { if (!J) { loadJarvis().then(render); return; } try { $('#view').innerHTML = JARVIS_V(); } catch (e) { $('#view').innerHTML = `<p class="zero">erro JARVIS: ${esc(e.message)}</p>`; } return; }
   if (!S) return;
   try { $('#view').innerHTML = (V[tab] || V.OVERVIEW)(); } catch (e) { $('#view').innerHTML = `<p class="zero">erro ao renderizar ${esc(tab)}: ${esc(e.message)}</p>`; }
 }

@@ -9,7 +9,7 @@
   "scripts": {
     "jev": "node src/jev/cli.mjs",
     "jev:example": "node src/jev/cli.mjs --input fixtures/jev/C_valid_multi_source.json --output-only",
-    "test": "node --test \"test/jev/*.test.mjs\" \"test/ijc/*.test.mjs\" \"test/rotation/*.test.mjs\" \"test/jev-finish/*.test.mjs\"",
+    "test": "node --test \"test/jev/*.test.mjs\" \"test/ijc/*.test.mjs\" \"test/rotation/*.test.mjs\" \"test/jev-finish/*.test.mjs\" \"test/alpha/*.test.mjs\" \"test/jarvis/*.test.mjs\" \"test/jev-obs/*.test.mjs\"",
     "smoke": "node test/jev/smoke.mjs",
     "build:prereg": "node context/jev-future/scripts/build-jev-preregistration-design-v1.js",
     "live": "node src/jev/cli.mjs --live",
@@ -26,9 +26,24 @@
     "nt8:shadow": "node nt8/install/shadow-compile.mjs",
     "test:rotation": "node --test \"test/rotation/*.test.mjs\"",
     "test:jev-finish": "node --test \"test/jev-finish/*.test.mjs\"",
+    "test:alpha": "node --test \"test/alpha/*.test.mjs\"",
+    "alpha": "node src/alpha/service.mjs",
+    "alpha:once": "node src/alpha/service.mjs --once --no-jev",
     "rotation:status": "node tools/jev-rotation/status.mjs",
+    "rotation:force": "node tools/jev-rotation/force.mjs",
     "test:rotation:live": "node test/rotation/live-spawn.mjs",
     "test:rotation:transcript": "node test/rotation/live-transcript.mjs",
-    "test:rotation:real": "node test/rotation/live-transcript.mjs --real-parent"
+    "test:rotation:real": "node test/rotation/live-transcript.mjs --real-parent",
+    "test:jarvis": "node --test \"test/jarvis/*.test.mjs\"",
+    "test:jev-obs": "node --test \"test/jev-obs/*.test.mjs\"",
+    "jarvis": "node tools/jarvis/server.mjs",
+    "jarvis:models": "node tools/jarvis/install-models.mjs",
+    "jarvis:bench": "node tools/jarvis/bench.mjs",
+    "stack:start": "node scripts/jev-stack.mjs start",
+    "stack:stop": "node scripts/jev-stack.mjs stop",
+    "stack:status": "node scripts/jev-stack.mjs status"
+  },
+  "dependencies": {
+    "sherpa-onnx-node": "1.13.8"
   }
 }

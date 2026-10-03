@@ -1,0 +1,19 @@
+{
+  "schema": "jarvis-config/v1",
+  "mode": "SHADOW_READ_ONLY",
+  "language": "pt-BR",
+  "server": { "host": "127.0.0.1", "port": 3594, "max_body_bytes": 2000000, "max_audio_seconds": 15 },
+  "alpha_dir": "var/alpha",
+  "jarvis_dir": "var/jarvis",
+  "memory": { "ephemeral_ttl_ms": 300000 },
+  "privacy": { "store_raw_audio": false, "store_transcript": true },
+  "input": { "mode": "PTT", "wake_word": { "enabled": false, "license_safe": "PENDING", "reason": "pretrained openWakeWord models are CC BY-NC-SA 4.0; Porcupine free tier ended 2026-06-30" } },
+  "voice": {
+    "enabled": true,
+    "num_threads": 2,
+    "unload_after_idle_ms": 600000,
+    "vad": { "model": "silero-vad", "threshold": 0.5, "min_silence_s": 0.4, "min_speech_s": 0.2 },
+    "stt": { "model": "whisper-small", "fallback": "whisper-base", "language": "pt" },
+    "tts": { "engine": "piper-faber", "alternatives": ["piper-jeff", "kokoro-int8"], "speed": 1.0, "kokoro_sid": 42 }
+  }
+}

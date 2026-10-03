@@ -9,6 +9,8 @@ import { fileURLToPath } from 'node:url';
 import { loadAll, summarize } from './aggregate.mjs';
 import { paths, statOf } from './sources.mjs';
 import { cachedParse, writeDerived, cacheStats } from './cache.mjs';
+import { alphaRoute } from './alpha.mjs';
+import { jarvisRoute } from './jarvis.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 export const HOST = '127.0.0.1';
@@ -18,13 +20,14 @@ const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; cha
 const SECRET_KEY = /(api[_-]?key|secret|password|authorization|bearer|credential|cookie|private[_-]?key)/i;
 const SECRET_VAL = /(sk-[A-Za-z0-9_-]{8,}|ts_[A-Za-z0-9]{16,}|Bearer\s+[A-Za-z0-9._-]{8,}|eyJ[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,})/g;
 const CONTENT_KEY = /^(state|questions|instructions|criteria|prompt|carried_prompt_text|stdin|content|text)$/i;
-export function redact(v, depth = 0) {
+// omitContent=false keeps analytical text (Alpha/JARVIS records hold no prompts) but still strips secrets.
+export function redact(v, depth = 0, omitContent = true) {
   if (depth > 12) return '[depth]';
   if (typeof v === 'string') return v.replace(SECRET_VAL, '[REDACTED]');
-  if (Array.isArray(v)) return v.map((x) => redact(x, depth + 1));
+  if (Array.isArray(v)) return v.map((x) => redact(x, depth + 1, omitContent));
   if (v && typeof v === 'object') {
     const o = {};
-    for (const [k, x] of Object.entries(v)) o[k] = SECRET_KEY.test(k) ? '[REDACTED]' : CONTENT_KEY.test(k) && typeof x !== 'number' ? '[OMITTED]' : redact(x, depth + 1);
+    for (const [k, x] of Object.entries(v)) o[k] = SECRET_KEY.test(k) ? '[REDACTED]' : omitContent && CONTENT_KEY.test(k) && typeof x !== 'number' ? '[OMITTED]' : redact(x, depth + 1, omitContent);
     return o;
   }
   return v;
@@ -53,6 +56,8 @@ export function createServer(P = paths()) {
       if (req.method !== 'GET') return send(405, JSON.stringify({ error: 'GET only' }));
       const u = new URL(req.url, `http://${HOST}`);
       if (u.pathname === '/api/health') return send(200, JSON.stringify({ ok: true, mode: 'OBSERVATIONAL_ONLY', bind: HOST, pid: process.pid, at: new Date().toISOString() }));
+      if (u.pathname.startsWith('/api/alpha/')) { const b = alphaRoute(u, P.alphaDir); return b ? send(200, JSON.stringify(redact(b, 0, false))) : send(404, JSON.stringify({ error: 'not found' })); }
+      if (u.pathname.startsWith('/api/jarvis/')) { const b = jarvisRoute(u, P.jarvisDir); return b ? send(200, JSON.stringify(redact(b, 0, false))) : send(404, JSON.stringify({ error: 'not found' })); }
       if (u.pathname === '/api/sources') return send(200, JSON.stringify(redact(loadAll(P).sources)));
       if (u.pathname === '/api/summary') {
         const f = {}; for (const k of ['range', 'session', 'purpose', 'model', 'type', 'until']) { const v = u.searchParams.get(k); if (v) f[k] = v.slice(0, 120); }
