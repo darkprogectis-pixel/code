@@ -1,0 +1,15 @@
+{
+ "sym": "ES1!",
+ "source": "prices",
+ "price": 7776.5,
+ "at": "2026-10-02T23:00:23.336Z",
+ "wsRaw": null,
+ "prices": {
+  "ticker": "ES1!",
+  "current": 7776.5,
+  "open": 7732.5,
+  "high": 7810,
+  "low": 7726.25,
+  "previous_close": 7733.25
+ }
+}

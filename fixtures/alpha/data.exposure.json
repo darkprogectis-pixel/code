@@ -1,0 +1,1506 @@
+{
+ "source": "exposure-strike",
+ "at": "2026-10-02T19:55:15.969Z",
+ "sym": "ES",
+ "spot": 7724.36,
+ "expiration": "2026-10-02",
+ "expirations": [
+  {
+   "date": "2026-10-02",
+   "dte": 0,
+   "net_total": 48174266171,
+   "n_strikes": 191
+  },
+  {
+   "date": "2026-10-05",
+   "dte": 3,
+   "net_total": 2346661421,
+   "n_strikes": 185
+  },
+  {
+   "date": "2026-10-06",
+   "dte": 4,
+   "net_total": 1407796393,
+   "n_strikes": 181
+  },
+  {
+   "date": "2026-10-07",
+   "dte": 5,
+   "net_total": 1953693053,
+   "n_strikes": 171
+  },
+  {
+   "date": "2026-10-08",
+   "dte": 6,
+   "net_total": 1115378862,
+   "n_strikes": 168
+  },
+  {
+   "date": "2026-10-09",
+   "dte": 7,
+   "net_total": 5064742914,
+   "n_strikes": 198
+  },
+  {
+   "date": "2026-10-12",
+   "dte": 10,
+   "net_total": 843209079,
+   "n_strikes": 146
+  },
+  {
+   "date": "2026-10-13",
+   "dte": 11,
+   "net_total": 548601773,
+   "n_strikes": 141
+  },
+  {
+   "date": "2026-10-14",
+   "dte": 12,
+   "net_total": 257019925,
+   "n_strikes": 140
+  },
+  {
+   "date": "2026-10-15",
+   "dte": 13,
+   "net_total": 172993757,
+   "n_strikes": 138
+  },
+  {
+   "date": "2026-10-16",
+   "dte": 14,
+   "net_total": 6959190172,
+   "n_strikes": 252
+  },
+  {
+   "date": "2026-10-19",
+   "dte": 17,
+   "net_total": 1666013,
+   "n_strikes": 119
+  },
+  {
+   "date": "2026-10-20",
+   "dte": 18,
+   "net_total": 64293451,
+   "n_strikes": 106
+  },
+  {
+   "date": "2026-10-21",
+   "dte": 19,
+   "net_total": 140347324,
+   "n_strikes": 110
+  },
+  {
+   "date": "2026-10-22",
+   "dte": 20,
+   "net_total": 208047393,
+   "n_strikes": 105
+  },
+  {
+   "date": "2026-10-23",
+   "dte": 21,
+   "net_total": 448332805,
+   "n_strikes": 153
+  },
+  {
+   "date": "2026-10-26",
+   "dte": 24,
+   "net_total": 107701015,
+   "n_strikes": 91
+  },
+  {
+   "date": "2026-10-27",
+   "dte": 25,
+   "net_total": 198311359,
+   "n_strikes": 83
+  },
+  {
+   "date": "2026-10-28",
+   "dte": 26,
+   "net_total": 98072100,
+   "n_strikes": 75
+  },
+  {
+   "date": "2026-10-29",
+   "dte": 27,
+   "net_total": -37387,
+   "n_strikes": 78
+  },
+  {
+   "date": "2026-10-30",
+   "dte": 28,
+   "net_total": 2635708230,
+   "n_strikes": 260
+  },
+  {
+   "date": "2026-11-02",
+   "dte": 31,
+   "net_total": 169172940,
+   "n_strikes": 69
+  },
+  {
+   "date": "2026-11-03",
+   "dte": 32,
+   "net_total": 53655146,
+   "n_strikes": 64
+  },
+  {
+   "date": "2026-11-04",
+   "dte": 33,
+   "net_total": 73582634,
+   "n_strikes": 59
+  },
+  {
+   "date": "2026-11-05",
+   "dte": 34,
+   "net_total": 38857585,
+   "n_strikes": 41
+  },
+  {
+   "date": "2026-11-06",
+   "dte": 35,
+   "net_total": 71341490,
+   "n_strikes": 115
+  },
+  {
+   "date": "2026-11-09",
+   "dte": 38,
+   "net_total": -742899,
+   "n_strikes": 38
+  },
+  {
+   "date": "2026-11-10",
+   "dte": 39,
+   "net_total": -844961,
+   "n_strikes": 30
+  },
+  {
+   "date": "2026-11-13",
+   "dte": 42,
+   "net_total": 167305,
+   "n_strikes": 77
+  },
+  {
+   "date": "2026-11-20",
+   "dte": 49,
+   "net_total": 2564948994,
+   "n_strikes": 252
+  },
+  {
+   "date": "2026-11-27",
+   "dte": 56,
+   "net_total": 116684564,
+   "n_strikes": 50
+  },
+  {
+   "date": "2026-11-30",
+   "dte": 59,
+   "net_total": 1927965540,
+   "n_strikes": 189
+  },
+  {
+   "date": "2026-12-18",
+   "dte": 77,
+   "net_total": 5949197973,
+   "n_strikes": 216
+  },
+  {
+   "date": "2026-12-31",
+   "dte": 90,
+   "net_total": 20773030153,
+   "n_strikes": 165
+  },
+  {
+   "date": "2027-01-15",
+   "dte": 105,
+   "net_total": 1082806996,
+   "n_strikes": 162
+  },
+  {
+   "date": "2027-01-29",
+   "dte": 119,
+   "net_total": -205764637,
+   "n_strikes": 66
+  },
+  {
+   "date": "2027-02-19",
+   "dte": 140,
+   "net_total": 607365458,
+   "n_strikes": 79
+  },
+  {
+   "date": "2027-02-26",
+   "dte": 147,
+   "net_total": -33936894,
+   "n_strikes": 37
+  },
+  {
+   "date": "2027-03-19",
+   "dte": 168,
+   "net_total": 1628355224,
+   "n_strikes": 60
+  },
+  {
+   "date": "2027-03-31",
+   "dte": 180,
+   "net_total": 1489696200,
+   "n_strikes": 81
+  },
+  {
+   "date": "2027-04-16",
+   "dte": 196,
+   "net_total": 37050361,
+   "n_strikes": 48
+  },
+  {
+   "date": "2027-05-21",
+   "dte": 231,
+   "net_total": 573935823,
+   "n_strikes": 34
+  },
+  {
+   "date": "2027-06-17",
+   "dte": 258,
+   "net_total": 953104092,
+   "n_strikes": 47
+  },
+  {
+   "date": "2027-06-30",
+   "dte": 271,
+   "net_total": 85629694,
+   "n_strikes": 49
+  },
+  {
+   "date": "2027-07-16",
+   "dte": 287,
+   "net_total": 236864325,
+   "n_strikes": 34
+  },
+  {
+   "date": "2027-08-20",
+   "dte": 322,
+   "net_total": -15098110,
+   "n_strikes": 31
+  },
+  {
+   "date": "2027-09-17",
+   "dte": 350,
+   "net_total": 353295166,
+   "n_strikes": 52
+  },
+  {
+   "date": "2027-09-30",
+   "dte": 363,
+   "net_total": 8825475,
+   "n_strikes": 48
+  },
+  {
+   "date": "2027-10-15",
+   "dte": 378,
+   "net_total": 2972365,
+   "n_strikes": 42
+  },
+  {
+   "date": "2027-12-17",
+   "dte": 441,
+   "net_total": 655388974,
+   "n_strikes": 22
+  },
+  {
+   "date": "2028-01-21",
+   "dte": 476,
+   "net_total": -3090867,
+   "n_strikes": 34
+  },
+  {
+   "date": "2028-06-16",
+   "dte": 623,
+   "net_total": 7364006,
+   "n_strikes": 10
+  },
+  {
+   "date": "2028-12-15",
+   "dte": 805,
+   "net_total": 63551386,
+   "n_strikes": 9
+  },
+  {
+   "date": "2029-12-21",
+   "dte": 1176,
+   "net_total": 41894319,
+   "n_strikes": 12
+  },
+  {
+   "date": "2030-12-20",
+   "dte": 1540,
+   "net_total": 14075137,
+   "n_strikes": 5
+  },
+  {
+   "date": "2031-12-19",
+   "dte": 1904,
+   "net_total": 5033907,
+   "n_strikes": 3
+  }
+ ],
+ "strikes": [
+  {
+   "price": 7000,
+   "net_gex": -8158757,
+   "call_gex": 143907,
+   "put_gex": -8302664
+  },
+  {
+   "price": 7010,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 7020,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 7040,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 7050,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 7075,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 7080,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 7100,
+   "net_gex": -935806,
+   "call_gex": 3366,
+   "put_gex": -939172
+  },
+  {
+   "price": 7110,
+   "net_gex": -869480,
+   "call_gex": 0,
+   "put_gex": -869480
+  },
+  {
+   "price": 7120,
+   "net_gex": -148528,
+   "call_gex": 0,
+   "put_gex": -148528
+  },
+  {
+   "price": 7130,
+   "net_gex": -244216,
+   "call_gex": 0,
+   "put_gex": -244216
+  },
+  {
+   "price": 7150,
+   "net_gex": -9662105,
+   "call_gex": 0,
+   "put_gex": -9662105
+  },
+  {
+   "price": 7160,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 7170,
+   "net_gex": -674506,
+   "call_gex": 0,
+   "put_gex": -674506
+  },
+  {
+   "price": 7190,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 7200,
+   "net_gex": -2450724,
+   "call_gex": 0,
+   "put_gex": -2450724
+  },
+  {
+   "price": 7210,
+   "net_gex": -617302,
+   "call_gex": 0,
+   "put_gex": -617302
+  },
+  {
+   "price": 7220,
+   "net_gex": -201307,
+   "call_gex": 0,
+   "put_gex": -201307
+  },
+  {
+   "price": 7225,
+   "net_gex": -2986233,
+   "call_gex": 0,
+   "put_gex": -2986233
+  },
+  {
+   "price": 7230,
+   "net_gex": -526990,
+   "call_gex": 0,
+   "put_gex": -526990
+  },
+  {
+   "price": 7235,
+   "net_gex": -51215,
+   "call_gex": 4972,
+   "put_gex": -56187
+  },
+  {
+   "price": 7240,
+   "net_gex": -2698219,
+   "call_gex": 0,
+   "put_gex": -2698219
+  },
+  {
+   "price": 7245,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 7250,
+   "net_gex": -10125229,
+   "call_gex": 0,
+   "put_gex": -10125229
+  },
+  {
+   "price": 7255,
+   "net_gex": -236790,
+   "call_gex": 0,
+   "put_gex": -236790
+  },
+  {
+   "price": 7270,
+   "net_gex": -537641,
+   "call_gex": 0,
+   "put_gex": -537641
+  },
+  {
+   "price": 7275,
+   "net_gex": -765456,
+   "call_gex": 0,
+   "put_gex": -765456
+  },
+  {
+   "price": 7280,
+   "net_gex": -45732,
+   "call_gex": 0,
+   "put_gex": -45732
+  },
+  {
+   "price": 7285,
+   "net_gex": -182188,
+   "call_gex": 0,
+   "put_gex": -182188
+  },
+  {
+   "price": 7290,
+   "net_gex": -1207374,
+   "call_gex": 0,
+   "put_gex": -1207374
+  },
+  {
+   "price": 7295,
+   "net_gex": -643998,
+   "call_gex": 0,
+   "put_gex": -643998
+  },
+  {
+   "price": 7300,
+   "net_gex": -3183350,
+   "call_gex": 0,
+   "put_gex": -3183350
+  },
+  {
+   "price": 7305,
+   "net_gex": -468875,
+   "call_gex": 0,
+   "put_gex": -468875
+  },
+  {
+   "price": 7310,
+   "net_gex": -1825644,
+   "call_gex": 0,
+   "put_gex": -1825644
+  },
+  {
+   "price": 7315,
+   "net_gex": -554161,
+   "call_gex": 0,
+   "put_gex": -554161
+  },
+  {
+   "price": 7320,
+   "net_gex": -1460767,
+   "call_gex": 0,
+   "put_gex": -1460767
+  },
+  {
+   "price": 7325,
+   "net_gex": -1574635,
+   "call_gex": 0,
+   "put_gex": -1574635
+  },
+  {
+   "price": 7330,
+   "net_gex": -2191985,
+   "call_gex": 0,
+   "put_gex": -2191985
+  },
+  {
+   "price": 7335,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 7340,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 7345,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 7350,
+   "net_gex": -3228146,
+   "call_gex": 0,
+   "put_gex": -3228146
+  },
+  {
+   "price": 7355,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 7360,
+   "net_gex": -559978,
+   "call_gex": 21799,
+   "put_gex": -581777
+  },
+  {
+   "price": 7365,
+   "net_gex": -10457912,
+   "call_gex": 31766,
+   "put_gex": -10489678
+  },
+  {
+   "price": 7370,
+   "net_gex": -2316419,
+   "call_gex": 0,
+   "put_gex": -2316419
+  },
+  {
+   "price": 7375,
+   "net_gex": -7090681,
+   "call_gex": 0,
+   "put_gex": -7090681
+  },
+  {
+   "price": 7380,
+   "net_gex": -29714239,
+   "call_gex": 0,
+   "put_gex": -29714239
+  },
+  {
+   "price": 7385,
+   "net_gex": -6744838,
+   "call_gex": 0,
+   "put_gex": -6744838
+  },
+  {
+   "price": 7390,
+   "net_gex": -2038652,
+   "call_gex": 0,
+   "put_gex": -2038652
+  },
+  {
+   "price": 7395,
+   "net_gex": -2620813,
+   "call_gex": 0,
+   "put_gex": -2620813
+  },
+  {
+   "price": 7400,
+   "net_gex": -16970109,
+   "call_gex": 0,
+   "put_gex": -16970109
+  },
+  {
+   "price": 7405,
+   "net_gex": -1304708,
+   "call_gex": 0,
+   "put_gex": -1304708
+  },
+  {
+   "price": 7410,
+   "net_gex": -2866811,
+   "call_gex": 0,
+   "put_gex": -2866811
+  },
+  {
+   "price": 7415,
+   "net_gex": -4157340,
+   "call_gex": 0,
+   "put_gex": -4157340
+  },
+  {
+   "price": 7420,
+   "net_gex": -3712546,
+   "call_gex": 44452,
+   "put_gex": -3756998
+  },
+  {
+   "price": 7425,
+   "net_gex": -3214939,
+   "call_gex": 0,
+   "put_gex": -3214939
+  },
+  {
+   "price": 7430,
+   "net_gex": -2283075,
+   "call_gex": 0,
+   "put_gex": -2283075
+  },
+  {
+   "price": 7435,
+   "net_gex": -764271,
+   "call_gex": 0,
+   "put_gex": -764271
+  },
+  {
+   "price": 7440,
+   "net_gex": -2636537,
+   "call_gex": 18130,
+   "put_gex": -2654667
+  },
+  {
+   "price": 7445,
+   "net_gex": -952546,
+   "call_gex": 0,
+   "put_gex": -952546
+  },
+  {
+   "price": 7450,
+   "net_gex": -15327699,
+   "call_gex": 0,
+   "put_gex": -15327699
+  },
+  {
+   "price": 7455,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 7460,
+   "net_gex": -6323501,
+   "call_gex": 0,
+   "put_gex": -6323501
+  },
+  {
+   "price": 7465,
+   "net_gex": -17253676,
+   "call_gex": 0,
+   "put_gex": -17253676
+  },
+  {
+   "price": 7470,
+   "net_gex": -4316170,
+   "call_gex": 0,
+   "put_gex": -4316170
+  },
+  {
+   "price": 7475,
+   "net_gex": -19816362,
+   "call_gex": 0,
+   "put_gex": -19816362
+  },
+  {
+   "price": 7480,
+   "net_gex": -55650564,
+   "call_gex": 0,
+   "put_gex": -55650564
+  },
+  {
+   "price": 7485,
+   "net_gex": -11629113,
+   "call_gex": 0,
+   "put_gex": -11629113
+  },
+  {
+   "price": 7490,
+   "net_gex": -16282776,
+   "call_gex": 0,
+   "put_gex": -16282776
+  },
+  {
+   "price": 7495,
+   "net_gex": -4947020,
+   "call_gex": 0,
+   "put_gex": -4947020
+  },
+  {
+   "price": 7500,
+   "net_gex": -40051646,
+   "call_gex": 1543953,
+   "put_gex": -41595599
+  },
+  {
+   "price": 7505,
+   "net_gex": -20377197,
+   "call_gex": 0,
+   "put_gex": -20377197
+  },
+  {
+   "price": 7510,
+   "net_gex": -10040937,
+   "call_gex": 578717,
+   "put_gex": -10619654
+  },
+  {
+   "price": 7515,
+   "net_gex": -32118231,
+   "call_gex": 707415,
+   "put_gex": -32825646
+  },
+  {
+   "price": 7520,
+   "net_gex": -22026028,
+   "call_gex": 0,
+   "put_gex": -22026028
+  },
+  {
+   "price": 7525,
+   "net_gex": -18075134,
+   "call_gex": 0,
+   "put_gex": -18075134
+  },
+  {
+   "price": 7530,
+   "net_gex": -21118410,
+   "call_gex": 0,
+   "put_gex": -21118410
+  },
+  {
+   "price": 7535,
+   "net_gex": -15934838,
+   "call_gex": 0,
+   "put_gex": -15934838
+  },
+  {
+   "price": 7540,
+   "net_gex": -19427342,
+   "call_gex": 0,
+   "put_gex": -19427342
+  },
+  {
+   "price": 7545,
+   "net_gex": -10608947,
+   "call_gex": 502028,
+   "put_gex": -11110975
+  },
+  {
+   "price": 7550,
+   "net_gex": -23854794,
+   "call_gex": 4672753,
+   "put_gex": -28527547
+  },
+  {
+   "price": 7555,
+   "net_gex": -17125692,
+   "call_gex": 0,
+   "put_gex": -17125692
+  },
+  {
+   "price": 7560,
+   "net_gex": -32487836,
+   "call_gex": 0,
+   "put_gex": -32487836
+  },
+  {
+   "price": 7565,
+   "net_gex": -18574913,
+   "call_gex": 0,
+   "put_gex": -18574913
+  },
+  {
+   "price": 7570,
+   "net_gex": -37312201,
+   "call_gex": 2318667,
+   "put_gex": -39630868
+  },
+  {
+   "price": 7575,
+   "net_gex": -42647107,
+   "call_gex": 6311372,
+   "put_gex": -48958479
+  },
+  {
+   "price": 7580,
+   "net_gex": 5369913,
+   "call_gex": 25070513,
+   "put_gex": -19700600
+  },
+  {
+   "price": 7585,
+   "net_gex": -16318209,
+   "call_gex": 12620434,
+   "put_gex": -28938643
+  },
+  {
+   "price": 7590,
+   "net_gex": -16915342,
+   "call_gex": 14831468,
+   "put_gex": -31746810
+  },
+  {
+   "price": 7595,
+   "net_gex": -33520583,
+   "call_gex": 0,
+   "put_gex": -33520583
+  },
+  {
+   "price": 7600,
+   "net_gex": -51997176,
+   "call_gex": 56301968,
+   "put_gex": -108299144
+  },
+  {
+   "price": 7605,
+   "net_gex": -24934934,
+   "call_gex": 7303624,
+   "put_gex": -32238558
+  },
+  {
+   "price": 7610,
+   "net_gex": -31094894,
+   "call_gex": 12565319,
+   "put_gex": -43660213
+  },
+  {
+   "price": 7615,
+   "net_gex": -49137736,
+   "call_gex": 12222579,
+   "put_gex": -61360315
+  },
+  {
+   "price": 7620,
+   "net_gex": -63676468,
+   "call_gex": 0,
+   "put_gex": -63676468
+  },
+  {
+   "price": 7625,
+   "net_gex": -148823208,
+   "call_gex": 0,
+   "put_gex": -148823208
+  },
+  {
+   "price": 7630,
+   "net_gex": -111255531,
+   "call_gex": 18429383,
+   "put_gex": -129684914
+  },
+  {
+   "price": 7635,
+   "net_gex": -61923563,
+   "call_gex": 45930429,
+   "put_gex": -107853992
+  },
+  {
+   "price": 7640,
+   "net_gex": -118513112,
+   "call_gex": 36697573,
+   "put_gex": -155210685
+  },
+  {
+   "price": 7645,
+   "net_gex": -64112058,
+   "call_gex": 104272275,
+   "put_gex": -168384333
+  },
+  {
+   "price": 7650,
+   "net_gex": 59979166,
+   "call_gex": 295507902,
+   "put_gex": -235528736
+  },
+  {
+   "price": 7655,
+   "net_gex": -280062730,
+   "call_gex": 0,
+   "put_gex": -280062730
+  },
+  {
+   "price": 7660,
+   "net_gex": -308708905,
+   "call_gex": 73116719,
+   "put_gex": -381825624
+  },
+  {
+   "price": 7665,
+   "net_gex": -132796259,
+   "call_gex": 180350579,
+   "put_gex": -313146838
+  },
+  {
+   "price": 7670,
+   "net_gex": -309912726,
+   "call_gex": 0,
+   "put_gex": -309912726
+  },
+  {
+   "price": 7675,
+   "net_gex": -921953367,
+   "call_gex": 0,
+   "put_gex": -921953367
+  },
+  {
+   "price": 7680,
+   "net_gex": 475296414,
+   "call_gex": 828516033,
+   "put_gex": -353219619
+  },
+  {
+   "price": 7685,
+   "net_gex": 207687139,
+   "call_gex": 666450519,
+   "put_gex": -458763380
+  },
+  {
+   "price": 7690,
+   "net_gex": -920952594,
+   "call_gex": 0,
+   "put_gex": -920952594
+  },
+  {
+   "price": 7695,
+   "net_gex": -2428254186,
+   "call_gex": 103246143,
+   "put_gex": -2531500329
+  },
+  {
+   "price": 7700,
+   "net_gex": 688825182,
+   "call_gex": 4251027389,
+   "put_gex": -3562202207
+  },
+  {
+   "price": 7705,
+   "net_gex": -1331356371,
+   "call_gex": 490380976,
+   "put_gex": -1821737347
+  },
+  {
+   "price": 7710,
+   "net_gex": -1000540607,
+   "call_gex": 2724016643,
+   "put_gex": -3724557250
+  },
+  {
+   "price": 7715,
+   "net_gex": -11298944277,
+   "call_gex": 0,
+   "put_gex": -11298944277
+  },
+  {
+   "price": 7720,
+   "net_gex": -2376986632,
+   "call_gex": 28104897678,
+   "put_gex": -30481884310
+  },
+  {
+   "price": 7725,
+   "net_gex": 14465911538,
+   "call_gex": 33106745025,
+   "put_gex": -18640833487
+  },
+  {
+   "price": 7730,
+   "net_gex": 30829152955,
+   "call_gex": 32909382479,
+   "put_gex": -2080229524
+  },
+  {
+   "price": 7735,
+   "net_gex": 7543840379,
+   "call_gex": 7757377386,
+   "put_gex": -213537007
+  },
+  {
+   "price": 7740,
+   "net_gex": 4128399176,
+   "call_gex": 4128399176,
+   "put_gex": 0
+  },
+  {
+   "price": 7745,
+   "net_gex": 2621601720,
+   "call_gex": 2621601720,
+   "put_gex": 0
+  },
+  {
+   "price": 7750,
+   "net_gex": 3706223911,
+   "call_gex": 3706223911,
+   "put_gex": 0
+  },
+  {
+   "price": 7755,
+   "net_gex": 7101329,
+   "call_gex": 7101329,
+   "put_gex": 0
+  },
+  {
+   "price": 7760,
+   "net_gex": 629994751,
+   "call_gex": 694983474,
+   "put_gex": -64988723
+  },
+  {
+   "price": 7765,
+   "net_gex": 463200599,
+   "call_gex": 463200599,
+   "put_gex": 0
+  },
+  {
+   "price": 7770,
+   "net_gex": 674800169,
+   "call_gex": 727416283,
+   "put_gex": -52616114
+  },
+  {
+   "price": 7775,
+   "net_gex": 563930751,
+   "call_gex": 563930751,
+   "put_gex": 0
+  },
+  {
+   "price": 7780,
+   "net_gex": 747854602,
+   "call_gex": 775995619,
+   "put_gex": -28141017
+  },
+  {
+   "price": 7785,
+   "net_gex": 203570463,
+   "call_gex": 206172915,
+   "put_gex": -2602452
+  },
+  {
+   "price": 7790,
+   "net_gex": 366300185,
+   "call_gex": 366300185,
+   "put_gex": 0
+  },
+  {
+   "price": 7795,
+   "net_gex": 212758053,
+   "call_gex": 217354002,
+   "put_gex": -4595949
+  },
+  {
+   "price": 7800,
+   "net_gex": 674860885,
+   "call_gex": 674860885,
+   "put_gex": 0
+  },
+  {
+   "price": 7805,
+   "net_gex": 125031005,
+   "call_gex": 130262124,
+   "put_gex": -5231119
+  },
+  {
+   "price": 7810,
+   "net_gex": 126767340,
+   "call_gex": 126767340,
+   "put_gex": 0
+  },
+  {
+   "price": 7815,
+   "net_gex": 64648149,
+   "call_gex": 64648149,
+   "put_gex": 0
+  },
+  {
+   "price": 7820,
+   "net_gex": 87226729,
+   "call_gex": 87226729,
+   "put_gex": 0
+  },
+  {
+   "price": 7825,
+   "net_gex": 148934251,
+   "call_gex": 154673485,
+   "put_gex": -5739234
+  },
+  {
+   "price": 7830,
+   "net_gex": 105744625,
+   "call_gex": 108876934,
+   "put_gex": -3132309
+  },
+  {
+   "price": 7835,
+   "net_gex": 249619224,
+   "call_gex": 249619224,
+   "put_gex": 0
+  },
+  {
+   "price": 7840,
+   "net_gex": 64111679,
+   "call_gex": 69893615,
+   "put_gex": -5781936
+  },
+  {
+   "price": 7845,
+   "net_gex": 49737327,
+   "call_gex": 49737327,
+   "put_gex": 0
+  },
+  {
+   "price": 7850,
+   "net_gex": 250886504,
+   "call_gex": 275224592,
+   "put_gex": -24338088
+  },
+  {
+   "price": 7855,
+   "net_gex": 6181747,
+   "call_gex": 9711604,
+   "put_gex": -3529857
+  },
+  {
+   "price": 7860,
+   "net_gex": 10425854,
+   "call_gex": 10425854,
+   "put_gex": 0
+  },
+  {
+   "price": 7865,
+   "net_gex": 14778342,
+   "call_gex": 14973306,
+   "put_gex": -194964
+  },
+  {
+   "price": 7870,
+   "net_gex": 3778857,
+   "call_gex": 3778857,
+   "put_gex": 0
+  },
+  {
+   "price": 7875,
+   "net_gex": 16742668,
+   "call_gex": 16742668,
+   "put_gex": 0
+  },
+  {
+   "price": 7880,
+   "net_gex": 24610154,
+   "call_gex": 24685056,
+   "put_gex": -74902
+  },
+  {
+   "price": 7885,
+   "net_gex": 17404811,
+   "call_gex": 17617843,
+   "put_gex": -213032
+  },
+  {
+   "price": 7890,
+   "net_gex": 18844578,
+   "call_gex": 18892842,
+   "put_gex": -48264
+  },
+  {
+   "price": 7895,
+   "net_gex": 8155795,
+   "call_gex": 8155795,
+   "put_gex": 0
+  },
+  {
+   "price": 7900,
+   "net_gex": 73032395,
+   "call_gex": 73032395,
+   "put_gex": 0
+  },
+  {
+   "price": 7905,
+   "net_gex": 17980130,
+   "call_gex": 17980130,
+   "put_gex": 0
+  },
+  {
+   "price": 7910,
+   "net_gex": 15486341,
+   "call_gex": 15486341,
+   "put_gex": 0
+  },
+  {
+   "price": 7915,
+   "net_gex": 13801025,
+   "call_gex": 13801025,
+   "put_gex": 0
+  },
+  {
+   "price": 7920,
+   "net_gex": 6539736,
+   "call_gex": 6539736,
+   "put_gex": 0
+  },
+  {
+   "price": 7925,
+   "net_gex": 21683910,
+   "call_gex": 21683910,
+   "put_gex": 0
+  },
+  {
+   "price": 7930,
+   "net_gex": 655907,
+   "call_gex": 773033,
+   "put_gex": -117126
+  },
+  {
+   "price": 7935,
+   "net_gex": 31158487,
+   "call_gex": 31158487,
+   "put_gex": 0
+  },
+  {
+   "price": 7940,
+   "net_gex": 11093842,
+   "call_gex": 11093842,
+   "put_gex": 0
+  },
+  {
+   "price": 7945,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 7950,
+   "net_gex": 27046120,
+   "call_gex": 27046120,
+   "put_gex": 0
+  },
+  {
+   "price": 7955,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 7960,
+   "net_gex": 2263579,
+   "call_gex": 2263579,
+   "put_gex": 0
+  },
+  {
+   "price": 7965,
+   "net_gex": 642355,
+   "call_gex": 642355,
+   "put_gex": 0
+  },
+  {
+   "price": 7970,
+   "net_gex": 5257418,
+   "call_gex": 5257418,
+   "put_gex": 0
+  },
+  {
+   "price": 7975,
+   "net_gex": 5300078,
+   "call_gex": 5300078,
+   "put_gex": 0
+  },
+  {
+   "price": 7980,
+   "net_gex": 13042313,
+   "call_gex": 13156569,
+   "put_gex": -114256
+  },
+  {
+   "price": 7990,
+   "net_gex": 6301416,
+   "call_gex": 6338008,
+   "put_gex": -36592
+  },
+  {
+   "price": 8000,
+   "net_gex": 24488225,
+   "call_gex": 26476829,
+   "put_gex": -1988604
+  },
+  {
+   "price": 8010,
+   "net_gex": 3258754,
+   "call_gex": 3258754,
+   "put_gex": 0
+  },
+  {
+   "price": 8020,
+   "net_gex": 1618353,
+   "call_gex": 1646910,
+   "put_gex": -28557
+  },
+  {
+   "price": 8025,
+   "net_gex": 2889106,
+   "call_gex": 2889106,
+   "put_gex": 0
+  },
+  {
+   "price": 8030,
+   "net_gex": 3173581,
+   "call_gex": 3173581,
+   "put_gex": 0
+  },
+  {
+   "price": 8040,
+   "net_gex": 2384942,
+   "call_gex": 3066060,
+   "put_gex": -681118
+  },
+  {
+   "price": 8050,
+   "net_gex": 3862862,
+   "call_gex": 3971383,
+   "put_gex": -108521
+  },
+  {
+   "price": 8060,
+   "net_gex": 555377,
+   "call_gex": 555377,
+   "put_gex": 0
+  },
+  {
+   "price": 8070,
+   "net_gex": 497231,
+   "call_gex": 497231,
+   "put_gex": 0
+  },
+  {
+   "price": 8075,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 8090,
+   "net_gex": -80102,
+   "call_gex": 0,
+   "put_gex": -80102
+  },
+  {
+   "price": 8100,
+   "net_gex": 2049131,
+   "call_gex": 2049131,
+   "put_gex": 0
+  },
+  {
+   "price": 8110,
+   "net_gex": -97373,
+   "call_gex": 0,
+   "put_gex": -97373
+  },
+  {
+   "price": 8120,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 8125,
+   "net_gex": -9831,
+   "call_gex": 0,
+   "put_gex": -9831
+  },
+  {
+   "price": 8140,
+   "net_gex": 0,
+   "call_gex": 0,
+   "put_gex": 0
+  },
+  {
+   "price": 8150,
+   "net_gex": 3090069,
+   "call_gex": 3090069,
+   "put_gex": 0
+  },
+  {
+   "price": 8175,
+   "net_gex": 11539,
+   "call_gex": 293278,
+   "put_gex": -281739
+  },
+  {
+   "price": 8250,
+   "net_gex": -51598,
+   "call_gex": 0,
+   "put_gex": -51598
+  },
+  {
+   "price": 8275,
+   "net_gex": -4635,
+   "call_gex": 0,
+   "put_gex": -4635
+  },
+  {
+   "price": 8300,
+   "net_gex": -9326,
+   "call_gex": 0,
+   "put_gex": -9326
+  },
+  {
+   "price": 8325,
+   "net_gex": -50730,
+   "call_gex": 0,
+   "put_gex": -50730
+  }
+ ],
+ "zero_gamma": 7720.71,
+ "call_wall": 7730,
+ "put_wall": 7715,
+ "net_gex_total": 48174266171,
+ "scale": {
+  "max_abs_gex": 30829152955
+ },
+ "n_strikes": 191,
+ "sign_note": "net_gex = CALL(+)+PUT(-) canonico; <spot negativo/suporte, >spot positivo/resistencia",
+ "beta": true,
+ "index_component": "SPX",
+ "beta_scale": 10.0369,
+ "note": "perfil do componente indice SPX em escala do futuro (~1:1); ETF ignorado no perfil (escala distinta)"
+}

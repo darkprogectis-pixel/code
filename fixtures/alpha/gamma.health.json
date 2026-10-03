@@ -1,0 +1,9 @@
+{
+ "ok": true,
+ "booting": false,
+ "stale": [],
+ "service": "sg-capture-api",
+ "port": 3500,
+ "rth": false,
+ "_fixture": "sanitized: token/meta removed"
+}

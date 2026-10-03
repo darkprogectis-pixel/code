@@ -1,0 +1,208 @@
+{
+ "sym": "ES1!",
+ "sourceFile": "levels-2026-10-02.ndjson",
+ "at": "2026-10-02T13:00:47.986Z",
+ "date": "2026-10-01",
+ "previous_eod_date": "2026-09-30",
+ "blindspots": [
+  {
+   "name": "BL 1",
+   "value": 7698.95,
+   "gex": null
+  },
+  {
+   "name": "BL 2",
+   "value": 7657.24,
+   "gex": null
+  },
+  {
+   "name": "BL 3",
+   "value": 7873.19,
+   "gex": null
+  },
+  {
+   "name": "BL 4",
+   "value": 7755.29,
+   "gex": null
+  },
+  {
+   "name": "BL 5",
+   "value": 7717.03,
+   "gex": null
+  },
+  {
+   "name": "BL 6",
+   "value": 7530.75,
+   "gex": null
+  },
+  {
+   "name": "BL 7",
+   "value": 7608.01,
+   "gex": null
+  },
+  {
+   "name": "BL 8",
+   "value": 7766.98,
+   "gex": null
+  },
+  {
+   "name": "BL 9",
+   "value": 7779.98,
+   "gex": null
+  },
+  {
+   "name": "BL 10",
+   "value": 7793.04,
+   "gex": null
+  }
+ ],
+ "gamma_levels": [
+  {
+   "name": "Call Resistance",
+   "value": 8000,
+   "gex": 9941984.593477055
+  },
+  {
+   "name": "Put Support",
+   "value": 7700,
+   "gex": -23942151.27735824
+  },
+  {
+   "name": "HVL",
+   "value": 7745,
+   "gex": -1589072.786067327
+  },
+  {
+   "name": "1D Min",
+   "value": 7657.91,
+   "gex": null
+  },
+  {
+   "name": "1D Max",
+   "value": 7792.09,
+   "gex": null
+  },
+  {
+   "name": "Call Resistance 0DTE",
+   "value": 7870,
+   "gex": 4438509.838456595
+  },
+  {
+   "name": "Put Support 0DTE",
+   "value": 7700,
+   "gex": -23942151.27735824
+  },
+  {
+   "name": "HVL 0DTE",
+   "value": 7745,
+   "gex": -1589072.786067327
+  },
+  {
+   "name": "Gamma Wall 0DTE",
+   "value": 7870,
+   "gex": 4438509.838456595
+  },
+  {
+   "name": "GEX 1",
+   "value": 7675,
+   "gex": -6518866.259006221
+  },
+  {
+   "name": "GEX 2",
+   "value": 7725,
+   "gex": -4912670.434584544
+  },
+  {
+   "name": "GEX 3",
+   "value": 7680,
+   "gex": -5380075.688376631
+  },
+  {
+   "name": "GEX 4",
+   "value": 7750,
+   "gex": 2978229.378428093
+  },
+  {
+   "name": "GEX 5",
+   "value": 7720,
+   "gex": -2722104.504931089
+  },
+  {
+   "name": "GEX 6",
+   "value": 7650,
+   "gex": -16922840.313088924
+  },
+  {
+   "name": "GEX 7",
+   "value": 7600,
+   "gex": -15168494.751859544
+  },
+  {
+   "name": "GEX 8",
+   "value": 7800,
+   "gex": 7082750.560214703
+  },
+  {
+   "name": "GEX 9",
+   "value": 7625,
+   "gex": -5441047.904200875
+  },
+  {
+   "name": "GEX 10",
+   "value": 7850,
+   "gex": 5761121.954016135
+  }
+ ],
+ "swing_levels": [
+  {
+   "name": "LB 09-25",
+   "value": 7665.53,
+   "gex": null
+  },
+  {
+   "name": "RT 09-25",
+   "value": 7945.97,
+   "gex": null
+  },
+  {
+   "name": "UB 09-28",
+   "value": 7891.95,
+   "gex": null
+  },
+  {
+   "name": "RT 09-28",
+   "value": 7600.55,
+   "gex": null
+  },
+  {
+   "name": "UB 09-29",
+   "value": 7884.14,
+   "gex": null
+  },
+  {
+   "name": "RT 09-29",
+   "value": 7592.36,
+   "gex": null
+  },
+  {
+   "name": "UB 09-30",
+   "value": 7868.71,
+   "gex": null
+  },
+  {
+   "name": "RT 09-30",
+   "value": 7574.29,
+   "gex": null
+  },
+  {
+   "name": "UB 10-01",
+   "value": 7873.3,
+   "gex": null
+  },
+  {
+   "name": "RT 10-01",
+   "value": 7576.7,
+   "gex": null
+  }
+ ]
+}

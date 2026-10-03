@@ -36,3 +36,6 @@ Thumbs.db
 # NT8 AddOn compile-check (fora do NT8)
 nt8/check/**/bin/
 nt8/check/**/obj/
+
+# Alpha / JARVIS runtime state (derived)
+var/

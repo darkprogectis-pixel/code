@@ -1,0 +1,26 @@
+{
+  "schema": "alpha-config/v1",
+  "rules_version": "alpha-rules/1",
+  "calibration": "UNCALIBRATED",
+  "_note": "All thresholds/caps below are PROVISIONAL / UNCALIBRATED (holdout directional_pass = 0/66). None is a validated signal parameter. See handoffs/PROPOSAL_ALPHA_AGENTS_20261002.md.",
+  "market": "ES",
+  "cycle_ms": 30000,
+  "specialist_timeout_ms": 4000,
+  "allow": { "host": "127.0.0.1", "ports": [3495, 3500, 3457, 3480, 3490, 5151], "method": "GET" },
+  "endpoints": {
+    "quant": { "consolidated": "http://127.0.0.1:3495/consolidated/ES", "signal": "http://127.0.0.1:3495/api/alfabot-signal" },
+    "gamma": { "hiro": "http://127.0.0.1:3500/hiro/SPX", "levels": "http://127.0.0.1:3500/levels/SPX", "health": "http://127.0.0.1:3500/health" },
+    "bot": { "orderflow": "http://127.0.0.1:3457/gexbot/orderflow/ES_SPX", "classic": "http://127.0.0.1:3457/gexbot/classic/SPX/zero" },
+    "q": { "exposure": "http://127.0.0.1:3480/exposure/ES", "levels": "http://127.0.0.1:3480/levels/ES", "spot": "http://127.0.0.1:3480/spot/ES" },
+    "data": { "signal": "http://127.0.0.1:3490/signal/ES", "exposure": "http://127.0.0.1:3490/exposure/ES" },
+    "price": { "bridge": "http://127.0.0.1:5151/state" }
+  },
+  "stale_ms": { "quant": 120000, "gamma_hiro": 60000, "bot": 180000, "q": 900000, "data": 600000 },
+  "validation_cap": { "SOURCE_CLASSIFICATION": 0.6, "DIRECTIONAL_PRESSURE": 0.3, "NON_DIRECTIONAL": 0 },
+  "gamma": { "slope_window_ms": 900000 },
+  "fusion": { "min_agreement": 0.6, "min_abs_score": 0.1, "score_full": 0.3, "contradiction_mass": 0.1, "single_group_factor": 0.6, "min_fresh_sources": 2,
+    "groups": { "G_QUANT_DATA": ["quant", "data"], "G_GAMMA": ["gamma"] } },
+  "jev": { "enabled": true, "min_interval_ms": 120000, "heartbeat_ms": 900000, "daily_cap": 300, "timeout_ms": 20000 },
+  "outcomes": { "horizons_min": [1, 5, 15, 30, 60], "price_max_age_ms": 10000, "capture_tolerance_ms": 30000 },
+  "snapshots": { "retention_days": 3 }
+}

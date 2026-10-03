@@ -1,0 +1,46 @@
+{
+ "sym": "ES",
+ "direction": "NEUTRO",
+ "score": 0.048,
+ "confidence": 6,
+ "asof": "2026-10-02T23:01:00.433Z",
+ "components": {
+  "primary": {
+   "score": 0.065,
+   "S1": -0.044,
+   "S2": null,
+   "S3": null,
+   "S4": 0.284
+  },
+  "mag7": {
+   "score": 0.007,
+   "weighted": true,
+   "per": {
+    "AAPL": -0.026,
+    "MSFT": -0.037,
+    "GOOGL": -0.012,
+    "AMZN": 0.067,
+    "NVDA": 0.006,
+    "META": 0.057,
+    "TSLA": 0.061
+   }
+  },
+  "rty": {
+   "score": -0.014,
+   "role": "confluencia_menor"
+  },
+  "menthorq": {
+   "dir": -1,
+   "cond": "NEGATIVE",
+   "sitOnHands": false
+  },
+  "gl": null,
+  "agreement": 0.667
+ },
+ "gamma": {
+  "spot": 7724.36,
+  "call_wall": 7730,
+  "put_wall": 7715
+ },
+ "beta_note": "ES = SPX+SPY (combinacao beta)"
+}

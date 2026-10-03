@@ -1,0 +1,22 @@
+{
+ "engine": "Alfa Omega Consolidator",
+ "sym": "ES",
+ "direction": "NEUTRO",
+ "state": "STAND_DOWN",
+ "tier": null,
+ "confidence": 0,
+ "gateDir": 0,
+ "asof": "2026-10-02T23:04:17.595Z",
+ "degraded": {
+  "ao": true
+ },
+ "inputs": {
+  "anchor": {
+   "dir": 0,
+   "strength": 0,
+   "why": "sem tape ES/NQ"
+  }
+ },
+ "replay": false,
+ "reason": "tape AO parado (fora de pregão / sem movimento) — esperando confirmação de fluxo agressor"
+}
