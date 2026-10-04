@@ -1,0 +1,1890 @@
+{
+ "days": 2,
+ "includeReplay": false,
+ "enabled": true,
+ "trades": [
+  {
+   "id": "2026-10-02T20:21:46.231Z-92747",
+   "schema": 1,
+   "openedAt": "2026-10-02T20:10:39.351Z",
+   "closedAt": "2026-10-02T20:22:36.509Z",
+   "durationSec": 717,
+   "side": "LONG",
+   "reason": "TEST_RT_VALIDATION_SIM101",
+   "es": {
+    "entry": 7783,
+    "exit": 7779,
+    "pnlUsd": -302.5,
+    "veiculo": "ES",
+    "fonte_preco": "fills_reais"
+   },
+   "nq": {
+    "entry": 31080,
+    "exit": 31069,
+    "pnlUsd": -336.4,
+    "veiculo": "NQ",
+    "fonte_preco": "fills_reais"
+   },
+   "totalUsd": -638.9,
+   "anchorAtEntry": {
+    "dir": "LONG",
+    "strength": 4
+   },
+   "anchorAtExit": {
+    "dir": "NEUTRO",
+    "strength": 0,
+    "why": "ES x NQ divergentes"
+   },
+   "priceSource": "aot_canonical_event",
+   "replay": false,
+   "sessionDate": "2026-10-02",
+   "params": {
+    "beAtProfitUsd": 500,
+    "stepProfitUsd": 250,
+    "stepStopUsd": 250,
+    "hardStopUsd": 1000
+   },
+   "simulated": false,
+   "engine": "invictus",
+   "trade_id": "TEST-RT-20261002-F",
+   "event_id_open": "TEST-RT-20261002-F",
+   "seq_open": 41,
+   "event_id_close": "TEST-RT-20261002-F-CLOSE",
+   "seq_close": 42,
+   "pnl_status": "ok",
+   "pnlStatus": "ok",
+   "pnl_valido": true,
+   "exit_decided_at": "2026-10-02T20:21:46.231Z",
+   "exit_first_fill_at": "2026-10-02T20:22:35.039Z",
+   "exit_last_fill_at": "2026-10-02T20:22:36.509Z",
+   "flat_confirmed_at": "2026-10-02T20:22:33.453Z",
+   "execucoes": [
+    {
+     "ativo": "ES",
+     "instrumento": "ES 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-ES-LONG-201039",
+     "qty": 1,
+     "turno": "OUTSIDE_RTH",
+     "entry": 7783,
+     "exit": 7779,
+     "multiplier": 50,
+     "pnlUsd": -200,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T20:22:35.039Z",
+     "exit_last_fill_at": "2026-10-02T20:22:35.039Z",
+     "flat_at": "2026-10-02T20:22:33.453Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "MES",
+     "instrumento": "MES 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-MES-LONG-201039",
+     "qty": 5,
+     "turno": "OUTSIDE_RTH",
+     "entry": 7783,
+     "exit": 7779,
+     "multiplier": 5,
+     "pnlUsd": -100,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 5,
+     "exit_first_fill_at": "2026-10-02T20:22:35.731Z",
+     "exit_last_fill_at": "2026-10-02T20:22:35.731Z",
+     "flat_at": "2026-10-02T20:22:33.453Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "NES",
+     "instrumento": "NES 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-NES-LONG-201039",
+     "qty": 1,
+     "turno": "OUTSIDE_RTH",
+     "entry": 7783.5,
+     "exit": 7778.5,
+     "multiplier": 0.5,
+     "pnlUsd": -2.5,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T20:22:35.621Z",
+     "exit_last_fill_at": "2026-10-02T20:22:35.621Z",
+     "flat_at": "2026-10-02T20:22:33.453Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "NQ",
+     "instrumento": "NQ 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-NQ-LONG-201039",
+     "qty": 1,
+     "turno": "OUTSIDE_RTH",
+     "entry": 31080,
+     "exit": 31069,
+     "multiplier": 20,
+     "pnlUsd": -220,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T20:22:35.964Z",
+     "exit_last_fill_at": "2026-10-02T20:22:35.964Z",
+     "flat_at": "2026-10-02T20:22:33.453Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "MNQ",
+     "instrumento": "MNQ 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-MNQ-LONG-201039",
+     "qty": 5,
+     "turno": "OUTSIDE_RTH",
+     "entry": 31080.65,
+     "exit": 31069.25,
+     "multiplier": 2,
+     "pnlUsd": -114,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 2,
+     "fills_saida": 1,
+     "qty_saida": 5,
+     "exit_first_fill_at": "2026-10-02T20:22:36.228Z",
+     "exit_last_fill_at": "2026-10-02T20:22:36.228Z",
+     "flat_at": "2026-10-02T20:22:33.453Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "NNQ",
+     "instrumento": "NNQ 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-NNQ-LONG-201039",
+     "qty": 1,
+     "turno": "OUTSIDE_RTH",
+     "entry": 31081.5,
+     "exit": 31069.5,
+     "multiplier": 0.2,
+     "pnlUsd": -2.4,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T20:22:36.509Z",
+     "exit_last_fill_at": "2026-10-02T20:22:36.509Z",
+     "flat_at": "2026-10-02T20:22:33.453Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    }
+   ],
+   "veiculos": [
+    "ES",
+    "MES",
+    "NES",
+    "NQ",
+    "MNQ",
+    "NNQ"
+   ],
+   "lifecycle": "CLOSED",
+   "lifecycle_eventos": [
+    {
+     "estado": "EXIT_DECIDED",
+     "at": "2026-10-02T20:21:46.231Z",
+     "detalhe": "motor: TEST_RT_VALIDATION_SIM101 · 6 perna(s) correlacionada(s)"
+    },
+    {
+     "estado": "CLOSED",
+     "at": "2026-10-02T20:22:40.731Z",
+     "detalhe": "todas as 6 pernas FLAT confirmadas + fills de saida cobrem os de entrada"
+    }
+   ],
+   "fonte_preco_saida": "fills_reais",
+   "canonico": {
+    "closedAt": "2026-10-02T20:21:46.231Z",
+    "durationSec": 667,
+    "es": {
+     "entry": 7782,
+     "exit": 7781.5,
+     "pnlUsd": -25
+    },
+    "nq": {
+     "entry": 31077,
+     "exit": 31080.25,
+     "pnlUsd": 65
+    },
+    "totalUsd": 40,
+    "_nota": "DECISAO do motor (LastPrice canonico, escala E-mini, sem qty) — NAO e resultado realizado"
+   },
+   "turno": "OUTSIDE_RTH",
+   "politica": "RTH_AND_OUTSIDE_RTH",
+   "pares": [
+    "ES_NQ",
+    "MES_MNQ",
+    "NES_NNQ"
+   ],
+   "pnlPorPar": {
+    "ES_NQ": -420,
+    "MES_MNQ": -214,
+    "NES_NNQ": -4.9
+   },
+   "executado": true,
+   "contado": true,
+   "fonte": "invictus",
+   "fonteRotulo": "INVICTUS"
+  },
+  {
+   "id": "2026-10-02T18:36:00.049Z-1ea9e",
+   "schema": 1,
+   "openedAt": "2026-10-02T18:25:13.167Z",
+   "closedAt": "2026-10-02T18:36:21.220Z",
+   "durationSec": 668,
+   "side": "LONG",
+   "reason": "TEST_RT_VALIDATION_SIM101",
+   "es": {
+    "entry": 7771,
+    "exit": 7772.75,
+    "pnlUsd": 137.75,
+    "veiculo": "ES",
+    "fonte_preco": "fills_reais"
+   },
+   "nq": {
+    "entry": 31031,
+    "exit": 31033.75,
+    "pnlUsd": 108.9,
+    "veiculo": "NQ",
+    "fonte_preco": "fills_reais"
+   },
+   "totalUsd": 246.65,
+   "anchorAtEntry": {
+    "dir": "LONG",
+    "strength": 4
+   },
+   "anchorAtExit": {
+    "dir": "NEUTRO",
+    "strength": 0,
+    "why": "ES x NQ divergentes"
+   },
+   "priceSource": "aot_canonical_event",
+   "replay": false,
+   "sessionDate": "2026-10-02",
+   "params": {
+    "beAtProfitUsd": 500,
+    "stepProfitUsd": 250,
+    "stepStopUsd": 250,
+    "hardStopUsd": 1000
+   },
+   "simulated": false,
+   "engine": "invictus",
+   "trade_id": "TEST-RT-20261002-E",
+   "event_id_open": "TEST-RT-20261002-E",
+   "seq_open": 39,
+   "event_id_close": "TEST-RT-20261002-E-CLOSE",
+   "seq_close": 40,
+   "pnl_status": "ok",
+   "pnlStatus": "ok",
+   "pnl_valido": true,
+   "exit_decided_at": "2026-10-02T18:36:00.049Z",
+   "exit_first_fill_at": "2026-10-02T18:36:19.763Z",
+   "exit_last_fill_at": "2026-10-02T18:36:21.220Z",
+   "flat_confirmed_at": "2026-10-02T18:36:19.283Z",
+   "execucoes": [
+    {
+     "ativo": "ES",
+     "instrumento": "ES 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-ES-LONG-182513",
+     "qty": 1,
+     "turno": "RTH",
+     "entry": 7771,
+     "exit": 7772.75,
+     "multiplier": 50,
+     "pnlUsd": 87.5,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T18:36:19.763Z",
+     "exit_last_fill_at": "2026-10-02T18:36:19.763Z",
+     "flat_at": "2026-10-02T18:36:19.283Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "MES",
+     "instrumento": "MES 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-MES-LONG-182513",
+     "qty": 5,
+     "turno": "RTH",
+     "entry": 7770.75,
+     "exit": 7772.75,
+     "multiplier": 5,
+     "pnlUsd": 50,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 5,
+     "exit_first_fill_at": "2026-10-02T18:36:20.073Z",
+     "exit_last_fill_at": "2026-10-02T18:36:20.073Z",
+     "flat_at": "2026-10-02T18:36:19.283Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "NES",
+     "instrumento": "NES 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-NES-LONG-182513",
+     "qty": 1,
+     "turno": "RTH",
+     "entry": 7771,
+     "exit": 7771.5,
+     "multiplier": 0.5,
+     "pnlUsd": 0.25,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T18:36:20.244Z",
+     "exit_last_fill_at": "2026-10-02T18:36:20.244Z",
+     "flat_at": "2026-10-02T18:36:19.283Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "NQ",
+     "instrumento": "NQ 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-NQ-LONG-182513",
+     "qty": 1,
+     "turno": "RTH",
+     "entry": 31031,
+     "exit": 31033.75,
+     "multiplier": 20,
+     "pnlUsd": 55,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T18:36:20.616Z",
+     "exit_last_fill_at": "2026-10-02T18:36:20.616Z",
+     "flat_at": "2026-10-02T18:36:19.283Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "MNQ",
+     "instrumento": "MNQ 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-MNQ-LONG-182513",
+     "qty": 5,
+     "turno": "RTH",
+     "entry": 31030.4,
+     "exit": 31035.75,
+     "multiplier": 2,
+     "pnlUsd": 53.5,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 2,
+     "fills_saida": 1,
+     "qty_saida": 5,
+     "exit_first_fill_at": "2026-10-02T18:36:20.927Z",
+     "exit_last_fill_at": "2026-10-02T18:36:20.927Z",
+     "flat_at": "2026-10-02T18:36:19.283Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "NNQ",
+     "instrumento": "NNQ 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-NNQ-LONG-182513",
+     "qty": 1,
+     "turno": "RTH",
+     "entry": 31031,
+     "exit": 31033,
+     "multiplier": 0.2,
+     "pnlUsd": 0.4,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T18:36:21.220Z",
+     "exit_last_fill_at": "2026-10-02T18:36:21.220Z",
+     "flat_at": "2026-10-02T18:36:19.283Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    }
+   ],
+   "veiculos": [
+    "ES",
+    "MES",
+    "NES",
+    "NQ",
+    "MNQ",
+    "NNQ"
+   ],
+   "lifecycle": "CLOSED",
+   "lifecycle_eventos": [
+    {
+     "estado": "EXIT_DECIDED",
+     "at": "2026-10-02T18:36:00.049Z",
+     "detalhe": "motor: TEST_RT_VALIDATION_SIM101 · 6 perna(s) correlacionada(s)"
+    },
+    {
+     "estado": "CLOSED",
+     "at": "2026-10-02T18:36:33.616Z",
+     "detalhe": "todas as 6 pernas FLAT confirmadas + fills de saida cobrem os de entrada"
+    }
+   ],
+   "fonte_preco_saida": "fills_reais",
+   "canonico": {
+    "closedAt": "2026-10-02T18:36:00.049Z",
+    "durationSec": 647,
+    "es": {
+     "entry": 7769.25,
+     "exit": 7772.75,
+     "pnlUsd": 175
+    },
+    "nq": {
+     "entry": 31025,
+     "exit": 31032.25,
+     "pnlUsd": 145
+    },
+    "totalUsd": 320,
+    "_nota": "DECISAO do motor (LastPrice canonico, escala E-mini, sem qty) — NAO e resultado realizado"
+   },
+   "turno": "RTH",
+   "politica": "RTH_AND_OUTSIDE_RTH",
+   "pares": [
+    "ES_NQ",
+    "MES_MNQ",
+    "NES_NNQ"
+   ],
+   "pnlPorPar": {
+    "ES_NQ": 142.5,
+    "MES_MNQ": 103.5,
+    "NES_NNQ": 0.65
+   },
+   "executado": true,
+   "contado": true,
+   "fonte": "invictus",
+   "fonteRotulo": "INVICTUS"
+  },
+  {
+   "id": "2026-10-02T18:20:38.687Z-2fb32",
+   "schema": 1,
+   "openedAt": "2026-10-02T18:10:19.992Z",
+   "closedAt": "2026-10-02T18:21:04.544Z",
+   "durationSec": 645,
+   "side": "LONG",
+   "reason": "TEST_RT_VALIDATION_SIM101",
+   "es": {
+    "entry": 7773.75,
+    "exit": 7770.25,
+    "pnlUsd": -270.75,
+    "veiculo": "ES",
+    "fonte_preco": "fills_reais"
+   },
+   "nq": {
+    "entry": 31042.25,
+    "exit": 31029,
+    "pnlUsd": -399.5,
+    "veiculo": "NQ",
+    "fonte_preco": "fills_reais"
+   },
+   "totalUsd": -670.25,
+   "anchorAtEntry": {
+    "dir": "LONG",
+    "strength": 4
+   },
+   "anchorAtExit": {
+    "dir": "NEUTRO",
+    "strength": 0,
+    "why": "ES x NQ divergentes"
+   },
+   "priceSource": "aot_canonical_event",
+   "replay": false,
+   "sessionDate": "2026-10-02",
+   "params": {
+    "beAtProfitUsd": 500,
+    "stepProfitUsd": 250,
+    "stepStopUsd": 250,
+    "hardStopUsd": 1000
+   },
+   "simulated": false,
+   "engine": "invictus",
+   "trade_id": "TEST-RT-20261002-D",
+   "event_id_open": "TEST-RT-20261002-D",
+   "seq_open": 37,
+   "event_id_close": "TEST-RT-20261002-D-CLOSE",
+   "seq_close": 38,
+   "pnl_status": "ok",
+   "pnlStatus": "ok",
+   "pnl_valido": true,
+   "exit_decided_at": "2026-10-02T18:20:38.687Z",
+   "exit_first_fill_at": "2026-10-02T18:17:53.693Z",
+   "exit_last_fill_at": "2026-10-02T18:19:15.110Z",
+   "flat_confirmed_at": "2026-10-02T18:21:04.544Z",
+   "execucoes": [
+    {
+     "ativo": "ES",
+     "instrumento": "ES 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-ES-LONG-181019",
+     "qty": 1,
+     "turno": "RTH",
+     "entry": 7773.75,
+     "exit": 7770.25,
+     "multiplier": 50,
+     "pnlUsd": -175,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T18:18:05.537Z",
+     "exit_last_fill_at": "2026-10-02T18:18:05.537Z",
+     "flat_at": "2026-10-02T18:21:04.544Z",
+     "flat_via": "FLAT_JA_FECHADA",
+     "correlacao": "trade_id",
+     "desvio": true
+    },
+    {
+     "ativo": "MES",
+     "instrumento": "MES 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-MES-LONG-181019",
+     "qty": 5,
+     "turno": "RTH",
+     "entry": 7774,
+     "exit": 7770.25,
+     "multiplier": 5,
+     "pnlUsd": -93.75,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 5,
+     "exit_first_fill_at": "2026-10-02T18:18:04.535Z",
+     "exit_last_fill_at": "2026-10-02T18:18:04.535Z",
+     "flat_at": "2026-10-02T18:21:04.544Z",
+     "flat_via": "FLAT_JA_FECHADA",
+     "correlacao": "trade_id",
+     "desvio": true
+    },
+    {
+     "ativo": "NES",
+     "instrumento": "NES 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-NES-LONG-181019",
+     "qty": 1,
+     "turno": "RTH",
+     "entry": 7774,
+     "exit": 7770,
+     "multiplier": 0.5,
+     "pnlUsd": -2,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T18:19:15.110Z",
+     "exit_last_fill_at": "2026-10-02T18:19:15.110Z",
+     "flat_at": "2026-10-02T18:21:04.544Z",
+     "flat_via": "FLAT_JA_FECHADA",
+     "correlacao": "trade_id",
+     "desvio": true
+    },
+    {
+     "ativo": "NQ",
+     "instrumento": "NQ 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-NQ-LONG-181019",
+     "qty": 1,
+     "turno": "RTH",
+     "entry": 31042.25,
+     "exit": 31029,
+     "multiplier": 20,
+     "pnlUsd": -265,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T18:17:53.788Z",
+     "exit_last_fill_at": "2026-10-02T18:17:53.788Z",
+     "flat_at": "2026-10-02T18:21:04.544Z",
+     "flat_via": "FLAT_JA_FECHADA",
+     "correlacao": "trade_id",
+     "desvio": true
+    },
+    {
+     "ativo": "MNQ",
+     "instrumento": "MNQ 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-MNQ-LONG-181019",
+     "qty": 5,
+     "turno": "RTH",
+     "entry": 31042.15,
+     "exit": 31029,
+     "multiplier": 2,
+     "pnlUsd": -131.5,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 2,
+     "fills_saida": 1,
+     "qty_saida": 5,
+     "exit_first_fill_at": "2026-10-02T18:17:53.693Z",
+     "exit_last_fill_at": "2026-10-02T18:17:53.693Z",
+     "flat_at": "2026-10-02T18:21:04.544Z",
+     "flat_via": "FLAT_JA_FECHADA",
+     "correlacao": "trade_id",
+     "desvio": true
+    },
+    {
+     "ativo": "NNQ",
+     "instrumento": "NNQ 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-NNQ-LONG-181019",
+     "qty": 1,
+     "turno": "RTH",
+     "entry": 31043,
+     "exit": 31028,
+     "multiplier": 0.2,
+     "pnlUsd": -3,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T18:18:00.477Z",
+     "exit_last_fill_at": "2026-10-02T18:18:00.477Z",
+     "flat_at": "2026-10-02T18:21:04.544Z",
+     "flat_via": "FLAT_JA_FECHADA",
+     "correlacao": "trade_id",
+     "desvio": true
+    }
+   ],
+   "veiculos": [
+    "ES",
+    "MES",
+    "NES",
+    "NQ",
+    "MNQ",
+    "NNQ"
+   ],
+   "lifecycle": "CLOSED",
+   "lifecycle_eventos": [
+    {
+     "estado": "EXIT_DECIDED",
+     "at": "2026-10-02T18:20:38.687Z",
+     "detalhe": "motor: TEST_RT_VALIDATION_SIM101 · 6 perna(s) correlacionada(s)"
+    },
+    {
+     "estado": "CLOSED",
+     "at": "2026-10-02T18:21:04.544Z",
+     "detalhe": "todas as 6 pernas FLAT confirmadas + fills de saida cobrem os de entrada"
+    }
+   ],
+   "fonte_preco_saida": "fills_reais",
+   "canonico": {
+    "closedAt": "2026-10-02T18:20:38.687Z",
+    "durationSec": 619,
+    "es": {
+     "entry": 7790.25,
+     "exit": 7771.25,
+     "pnlUsd": -950
+    },
+    "nq": {
+     "entry": 31079,
+     "exit": 31032.75,
+     "pnlUsd": -925
+    },
+    "totalUsd": -1875,
+    "_nota": "DECISAO do motor (LastPrice canonico, escala E-mini, sem qty) — NAO e resultado realizado"
+   },
+   "turno": "RTH",
+   "politica": "RTH_AND_OUTSIDE_RTH",
+   "pares": [
+    "ES_NQ",
+    "MES_MNQ",
+    "NES_NNQ"
+   ],
+   "pnlPorPar": {
+    "ES_NQ": -440,
+    "MES_MNQ": -225.25,
+    "NES_NNQ": -5
+   },
+   "executado": true,
+   "contado": true,
+   "fonte": "invictus",
+   "fonteRotulo": "INVICTUS"
+  },
+  {
+   "id": "2026-10-02T17:47:48.923Z-685ce",
+   "schema": 1,
+   "openedAt": "2026-10-02T17:43:49.119Z",
+   "closedAt": "2026-10-02T17:48:44.159Z",
+   "durationSec": 295,
+   "side": "LONG",
+   "reason": "TEST_RT_VALIDATION_SIM101",
+   "es": {
+    "entry": 7771,
+    "exit": 7772.5,
+    "pnlUsd": 125.75,
+    "veiculo": "ES",
+    "fonte_preco": "fills_reais"
+   },
+   "nq": {
+    "entry": 31026.5,
+    "exit": 31034.75,
+    "pnlUsd": 252.8,
+    "veiculo": "NQ",
+    "fonte_preco": "fills_reais"
+   },
+   "totalUsd": 378.55,
+   "anchorAtEntry": {
+    "dir": "LONG",
+    "strength": 4
+   },
+   "anchorAtExit": {
+    "dir": "NEUTRO",
+    "strength": 0,
+    "why": "ES x NQ divergentes"
+   },
+   "priceSource": "aot_canonical_event",
+   "replay": false,
+   "sessionDate": "2026-10-02",
+   "params": {
+    "beAtProfitUsd": 500,
+    "stepProfitUsd": 250,
+    "stepStopUsd": 250,
+    "hardStopUsd": 1000
+   },
+   "simulated": false,
+   "engine": "invictus",
+   "trade_id": "TEST-RT-20261002-B",
+   "event_id_open": "TEST-RT-20261002-B",
+   "seq_open": 33,
+   "event_id_close": "TEST-RT-20261002-B-CLOSE",
+   "seq_close": 34,
+   "pnl_status": "ok",
+   "pnlStatus": "ok",
+   "pnl_valido": true,
+   "exit_decided_at": "2026-10-02T17:47:48.923Z",
+   "exit_first_fill_at": "2026-10-02T17:48:42.367Z",
+   "exit_last_fill_at": "2026-10-02T17:48:44.159Z",
+   "flat_confirmed_at": "2026-10-02T17:48:41.223Z",
+   "execucoes": [
+    {
+     "ativo": "ES",
+     "instrumento": "ES 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-ES-LONG-174349",
+     "qty": 1,
+     "turno": "RTH",
+     "entry": 7771,
+     "exit": 7772.5,
+     "multiplier": 50,
+     "pnlUsd": 75,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T17:48:42.367Z",
+     "exit_last_fill_at": "2026-10-02T17:48:42.367Z",
+     "flat_at": "2026-10-02T17:48:41.223Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "MES",
+     "instrumento": "MES 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-MES-LONG-174349",
+     "qty": 5,
+     "turno": "RTH",
+     "entry": 7771,
+     "exit": 7773,
+     "multiplier": 5,
+     "pnlUsd": 50,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 5,
+     "exit_first_fill_at": "2026-10-02T17:48:43.192Z",
+     "exit_last_fill_at": "2026-10-02T17:48:43.192Z",
+     "flat_at": "2026-10-02T17:48:41.223Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "NES",
+     "instrumento": "NES 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-NES-LONG-174349",
+     "qty": 1,
+     "turno": "RTH",
+     "entry": 7770,
+     "exit": 7771.5,
+     "multiplier": 0.5,
+     "pnlUsd": 0.75,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T17:48:42.946Z",
+     "exit_last_fill_at": "2026-10-02T17:48:42.946Z",
+     "flat_at": "2026-10-02T17:48:41.223Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "NQ",
+     "instrumento": "NQ 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-NQ-LONG-174349",
+     "qty": 1,
+     "turno": "RTH",
+     "entry": 31026.5,
+     "exit": 31034.75,
+     "multiplier": 20,
+     "pnlUsd": 165,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T17:48:43.296Z",
+     "exit_last_fill_at": "2026-10-02T17:48:43.296Z",
+     "flat_at": "2026-10-02T17:48:41.223Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "MNQ",
+     "instrumento": "MNQ 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-MNQ-LONG-174349",
+     "qty": 5,
+     "turno": "RTH",
+     "entry": 31026.25,
+     "exit": 31034.95,
+     "multiplier": 2,
+     "pnlUsd": 87,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 2,
+     "qty_saida": 5,
+     "exit_first_fill_at": "2026-10-02T17:48:43.686Z",
+     "exit_last_fill_at": "2026-10-02T17:48:44.011Z",
+     "flat_at": "2026-10-02T17:48:41.223Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "NNQ",
+     "instrumento": "NNQ 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-NNQ-LONG-174349",
+     "qty": 1,
+     "turno": "RTH",
+     "entry": 31027.5,
+     "exit": 31031.5,
+     "multiplier": 0.2,
+     "pnlUsd": 0.8,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T17:48:44.159Z",
+     "exit_last_fill_at": "2026-10-02T17:48:44.159Z",
+     "flat_at": "2026-10-02T17:48:41.223Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    }
+   ],
+   "veiculos": [
+    "ES",
+    "MES",
+    "NES",
+    "NQ",
+    "MNQ",
+    "NNQ"
+   ],
+   "lifecycle": "CLOSED",
+   "lifecycle_eventos": [
+    {
+     "estado": "EXIT_DECIDED",
+     "at": "2026-10-02T17:47:48.923Z",
+     "detalhe": "motor: TEST_RT_VALIDATION_SIM101 · 6 perna(s) correlacionada(s)"
+    },
+    {
+     "estado": "CLOSED",
+     "at": "2026-10-02T17:48:54.567Z",
+     "detalhe": "todas as 6 pernas FLAT confirmadas + fills de saida cobrem os de entrada"
+    }
+   ],
+   "fonte_preco_saida": "fills_reais",
+   "canonico": {
+    "closedAt": "2026-10-02T17:47:48.923Z",
+    "durationSec": 240,
+    "es": {
+     "entry": 7769,
+     "exit": 7772.75,
+     "pnlUsd": 187.5
+    },
+    "nq": {
+     "entry": 31015.5,
+     "exit": 31032.5,
+     "pnlUsd": 340
+    },
+    "totalUsd": 527.5,
+    "_nota": "DECISAO do motor (LastPrice canonico, escala E-mini, sem qty) — NAO e resultado realizado"
+   },
+   "turno": "RTH",
+   "politica": "RTH_AND_OUTSIDE_RTH",
+   "pares": [
+    "ES_NQ",
+    "MES_MNQ",
+    "NES_NNQ"
+   ],
+   "pnlPorPar": {
+    "ES_NQ": 240,
+    "MES_MNQ": 137,
+    "NES_NNQ": 1.55
+   },
+   "executado": true,
+   "contado": true,
+   "fonte": "invictus",
+   "fonteRotulo": "INVICTUS"
+  },
+  {
+   "id": "2026-10-02T17:30:40.000Z-3d8ca",
+   "schema": 1,
+   "openedAt": "2026-10-02T17:27:30.000Z",
+   "closedAt": "2026-10-02T17:30:33.432Z",
+   "durationSec": 183,
+   "side": "LONG",
+   "reason": "TEST_RT_VALIDATION_SIM101",
+   "es": {
+    "entry": 7767.75,
+    "exit": 7769,
+    "pnlUsd": 106.25,
+    "veiculo": "ES",
+    "fonte_preco": "fills_reais"
+   },
+   "nq": {
+    "entry": 31009.5,
+    "exit": 31013,
+    "pnlUsd": 111.8,
+    "veiculo": "NQ",
+    "fonte_preco": "fills_reais"
+   },
+   "totalUsd": 218.05,
+   "anchorAtEntry": {
+    "dir": "LONG",
+    "strength": 4
+   },
+   "anchorAtExit": {
+    "dir": "NEUTRO",
+    "strength": 0,
+    "why": "ES x NQ divergentes"
+   },
+   "priceSource": "aot_canonical_event",
+   "replay": false,
+   "sessionDate": "2026-10-02",
+   "params": {
+    "beAtProfitUsd": 500,
+    "stepProfitUsd": 250,
+    "stepStopUsd": 250,
+    "hardStopUsd": 1000
+   },
+   "simulated": false,
+   "engine": "invictus",
+   "trade_id": "TEST-RT-20261002-A",
+   "event_id_open": "TEST-RT-20261002-A",
+   "seq_open": 31,
+   "event_id_close": "TEST-RT-20261002-A-CLOSE",
+   "seq_close": 32,
+   "pnl_status": "ok",
+   "pnlStatus": "ok",
+   "pnl_valido": true,
+   "exit_decided_at": "2026-10-02T17:30:40.000Z",
+   "exit_first_fill_at": "2026-10-02T17:30:31.729Z",
+   "exit_last_fill_at": "2026-10-02T17:30:33.432Z",
+   "flat_confirmed_at": "2026-10-02T17:30:31.344Z",
+   "execucoes": [
+    {
+     "ativo": "ES",
+     "instrumento": "ES 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-ES-LONG-172730",
+     "qty": 1,
+     "turno": "RTH",
+     "entry": 7767.75,
+     "exit": 7769,
+     "multiplier": 50,
+     "pnlUsd": 62.5,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T17:30:31.729Z",
+     "exit_last_fill_at": "2026-10-02T17:30:31.729Z",
+     "flat_at": "2026-10-02T17:30:31.344Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "MES",
+     "instrumento": "MES 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-MES-LONG-172730",
+     "qty": 5,
+     "turno": "RTH",
+     "entry": 7767.75,
+     "exit": 7769.5,
+     "multiplier": 5,
+     "pnlUsd": 43.75,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 5,
+     "exit_first_fill_at": "2026-10-02T17:30:32.128Z",
+     "exit_last_fill_at": "2026-10-02T17:30:32.128Z",
+     "flat_at": "2026-10-02T17:30:31.344Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "NES",
+     "instrumento": "NES 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-NES-LONG-172730",
+     "qty": 1,
+     "turno": "RTH",
+     "entry": 7768,
+     "exit": 7768,
+     "multiplier": 0.5,
+     "pnlUsd": 0,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T17:30:32.257Z",
+     "exit_last_fill_at": "2026-10-02T17:30:32.257Z",
+     "flat_at": "2026-10-02T17:30:31.344Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "NQ",
+     "instrumento": "NQ 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-NQ-LONG-172730",
+     "qty": 1,
+     "turno": "RTH",
+     "entry": 31009.5,
+     "exit": 31013,
+     "multiplier": 20,
+     "pnlUsd": 70,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T17:30:32.688Z",
+     "exit_last_fill_at": "2026-10-02T17:30:32.688Z",
+     "flat_at": "2026-10-02T17:30:31.344Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "MNQ",
+     "instrumento": "MNQ 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-MNQ-LONG-172730",
+     "qty": 5,
+     "turno": "RTH",
+     "entry": 31008.95,
+     "exit": 31013,
+     "multiplier": 2,
+     "pnlUsd": 40.5,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 2,
+     "fills_saida": 1,
+     "qty_saida": 5,
+     "exit_first_fill_at": "2026-10-02T17:30:33.352Z",
+     "exit_last_fill_at": "2026-10-02T17:30:33.352Z",
+     "flat_at": "2026-10-02T17:30:31.344Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    },
+    {
+     "ativo": "NNQ",
+     "instrumento": "NNQ 12-26",
+     "conta": "REDACTED",
+     "nt8_account": "REDACTED",
+     "intentId": "AO-20261002-REDACTED-NNQ-LONG-172730",
+     "qty": 1,
+     "turno": "RTH",
+     "entry": 31005.5,
+     "exit": 31012,
+     "multiplier": 0.2,
+     "pnlUsd": 1.3,
+     "status": "ok",
+     "fonte_preco": "fills_reais",
+     "fills_entrada": 1,
+     "fills_saida": 1,
+     "qty_saida": 1,
+     "exit_first_fill_at": "2026-10-02T17:30:33.432Z",
+     "exit_last_fill_at": "2026-10-02T17:30:33.432Z",
+     "flat_at": "2026-10-02T17:30:31.344Z",
+     "flat_via": "FLAT_VERIFICADO",
+     "correlacao": "trade_id",
+     "desvio": false
+    }
+   ],
+   "veiculos": [
+    "ES",
+    "MES",
+    "NES",
+    "NQ",
+    "MNQ",
+    "NNQ"
+   ],
+   "lifecycle": "CLOSED",
+   "lifecycle_eventos": [
+    {
+     "estado": "EXIT_DECIDED",
+     "at": "2026-10-02T17:30:40.000Z",
+     "detalhe": "motor: TEST_RT_VALIDATION_SIM101 · 6 perna(s) correlacionada(s)"
+    },
+    {
+     "estado": "CLOSED",
+     "at": "2026-10-02T17:30:35.678Z",
+     "detalhe": "todas as 6 pernas FLAT confirmadas + fills de saida cobrem os de entrada"
+    }
+   ],
+   "fonte_preco_saida": "fills_reais",
+   "canonico": {
+    "closedAt": "2026-10-02T17:30:40.000Z",
+    "durationSec": 190,
+    "es": {
+     "entry": 7770.25,
+     "exit": 7767.5,
+     "pnlUsd": -137.5
+    },
+    "nq": {
+     "entry": 31021.5,
+     "exit": 31013.5,
+     "pnlUsd": -160
+    },
+    "totalUsd": -297.5,
+    "_nota": "DECISAO do motor (LastPrice canonico, escala E-mini, sem qty) — NAO e resultado realizado"
+   },
+   "turno": "RTH",
+   "politica": "RTH_AND_OUTSIDE_RTH",
+   "pares": [
+    "ES_NQ",
+    "MES_MNQ",
+    "NES_NNQ"
+   ],
+   "pnlPorPar": {
+    "ES_NQ": 132.5,
+    "MES_MNQ": 84.25,
+    "NES_NNQ": 1.3
+   },
+   "executado": true,
+   "contado": true,
+   "fonte": "invictus",
+   "fonteRotulo": "INVICTUS"
+  }
+ ],
+ "kpis": {
+  "fonte": "aot",
+  "countedBasis": "somente real (replay:false) · AOT SIM",
+  "n": 0,
+  "wins": 0,
+  "losses": 0,
+  "winRate": 0,
+  "totalUsd": 0,
+  "avgUsd": 0,
+  "bestUsd": null,
+  "worstUsd": null,
+  "maxDrawdownUsd": 0,
+  "profitFactor": 0,
+  "byReason": {},
+  "equity": [],
+  "replayCount": 0,
+  "realCount": 0,
+  "aotCount": 0,
+  "invictusCount": 5
+ },
+ "porPar": {
+  "ES_NQ": {
+   "rotulo": "ES E NQ",
+   "ativos": [
+    "ES",
+    "NQ"
+   ],
+   "listados": 5,
+   "listadosAot": 0,
+   "listadosInvictus": 5,
+   "aot": {
+    "fonte": "aot",
+    "countedBasis": "somente real (replay:false) · AOT SIM",
+    "n": 0,
+    "wins": 0,
+    "losses": 0,
+    "winRate": 0,
+    "totalUsd": 0,
+    "avgUsd": 0,
+    "bestUsd": null,
+    "worstUsd": null,
+    "maxDrawdownUsd": 0,
+    "profitFactor": 0,
+    "byReason": {},
+    "equity": []
+   },
+   "invictus": {
+    "fonte": "invictus",
+    "countedBasis": "somente real (replay:false) · INVICTUS REAL",
+    "n": 5,
+    "wins": 3,
+    "losses": 2,
+    "winRate": 60,
+    "totalUsd": -345,
+    "avgUsd": -69,
+    "bestUsd": 240,
+    "worstUsd": -440,
+    "maxDrawdownUsd": 717.5,
+    "profitFactor": 0.6,
+    "byReason": {
+     "TEST_RT_VALIDATION_SIM101": {
+      "n": 5,
+      "pnl": -345
+     }
+    },
+    "equity": [
+     {
+      "at": "2026-10-02T17:30:33.432Z",
+      "cum": 132.5
+     },
+     {
+      "at": "2026-10-02T17:48:44.159Z",
+      "cum": 372.5
+     },
+     {
+      "at": "2026-10-02T18:21:04.544Z",
+      "cum": -67.5
+     },
+     {
+      "at": "2026-10-02T18:36:21.220Z",
+      "cum": 75
+     },
+     {
+      "at": "2026-10-02T20:22:36.509Z",
+      "cum": -345
+     }
+    ]
+   }
+  },
+  "MES_MNQ": {
+   "rotulo": "MNQ E MES",
+   "ativos": [
+    "MES",
+    "MNQ"
+   ],
+   "listados": 5,
+   "listadosAot": 0,
+   "listadosInvictus": 5,
+   "aot": {
+    "fonte": "aot",
+    "countedBasis": "somente real (replay:false) · AOT SIM",
+    "n": 0,
+    "wins": 0,
+    "losses": 0,
+    "winRate": 0,
+    "totalUsd": 0,
+    "avgUsd": 0,
+    "bestUsd": null,
+    "worstUsd": null,
+    "maxDrawdownUsd": 0,
+    "profitFactor": 0,
+    "byReason": {},
+    "equity": []
+   },
+   "invictus": {
+    "fonte": "invictus",
+    "countedBasis": "somente real (replay:false) · INVICTUS REAL",
+    "n": 5,
+    "wins": 3,
+    "losses": 2,
+    "winRate": 60,
+    "totalUsd": -114.5,
+    "avgUsd": -22.9,
+    "bestUsd": 137,
+    "worstUsd": -225.25,
+    "maxDrawdownUsd": 335.75,
+    "profitFactor": 0.74,
+    "byReason": {
+     "TEST_RT_VALIDATION_SIM101": {
+      "n": 5,
+      "pnl": -114.5
+     }
+    },
+    "equity": [
+     {
+      "at": "2026-10-02T17:30:33.432Z",
+      "cum": 84.25
+     },
+     {
+      "at": "2026-10-02T17:48:44.159Z",
+      "cum": 221.25
+     },
+     {
+      "at": "2026-10-02T18:21:04.544Z",
+      "cum": -4
+     },
+     {
+      "at": "2026-10-02T18:36:21.220Z",
+      "cum": 99.5
+     },
+     {
+      "at": "2026-10-02T20:22:36.509Z",
+      "cum": -114.5
+     }
+    ]
+   }
+  },
+  "NES_NNQ": {
+   "rotulo": "NES E NNQ",
+   "ativos": [
+    "NES",
+    "NNQ"
+   ],
+   "listados": 5,
+   "listadosAot": 0,
+   "listadosInvictus": 5,
+   "aot": {
+    "fonte": "aot",
+    "countedBasis": "somente real (replay:false) · AOT SIM",
+    "n": 0,
+    "wins": 0,
+    "losses": 0,
+    "winRate": 0,
+    "totalUsd": 0,
+    "avgUsd": 0,
+    "bestUsd": null,
+    "worstUsd": null,
+    "maxDrawdownUsd": 0,
+    "profitFactor": 0,
+    "byReason": {},
+    "equity": []
+   },
+   "invictus": {
+    "fonte": "invictus",
+    "countedBasis": "somente real (replay:false) · INVICTUS REAL",
+    "n": 5,
+    "wins": 3,
+    "losses": 2,
+    "winRate": 60,
+    "totalUsd": -6.4,
+    "avgUsd": -1.28,
+    "bestUsd": 1.55,
+    "worstUsd": -5,
+    "maxDrawdownUsd": 9.25,
+    "profitFactor": 0.35,
+    "byReason": {
+     "TEST_RT_VALIDATION_SIM101": {
+      "n": 5,
+      "pnl": -6.4
+     }
+    },
+    "equity": [
+     {
+      "at": "2026-10-02T17:30:33.432Z",
+      "cum": 1.3
+     },
+     {
+      "at": "2026-10-02T17:48:44.159Z",
+      "cum": 2.85
+     },
+     {
+      "at": "2026-10-02T18:21:04.544Z",
+      "cum": -2.15
+     },
+     {
+      "at": "2026-10-02T18:36:21.220Z",
+      "cum": -1.5
+     },
+     {
+      "at": "2026-10-02T20:22:36.509Z",
+      "cum": -6.4
+     }
+    ]
+   }
+  }
+ },
+ "pares": {
+  "ES_NQ": {
+   "rotulo": "ES E NQ",
+   "ativos": [
+    "ES",
+    "NQ"
+   ]
+  },
+  "MES_MNQ": {
+   "rotulo": "MNQ E MES",
+   "ativos": [
+    "MES",
+    "MNQ"
+   ]
+  },
+  "NES_NNQ": {
+   "rotulo": "NES E NNQ",
+   "ativos": [
+    "NES",
+    "NNQ"
+   ]
+  }
+ },
+ "integrity": {
+  "appendOnly": true,
+  "totalLines": 892,
+  "since": "2026-08-03T14:55:14.329Z",
+  "archivedMonths": 0,
+  "invictusLines": 297,
+  "invictusDesde": "2026-10-02T17:27:30.000Z",
+  "invictusDir": "C:\\Users\\ADM\\Documents\\NinjaTrader 8\\alfaomega-robo\\history",
+  "note": "append-only · nada removido (meses >180d são arquivados, não apagados) · 2 ledgers (AOT SIM = simulacao sem execucao, nao e espelho do executor + INVICTUS = executor real), 1 historico · 1 registro(s) com preco invalido fora do oficial (regra + manifesto); resultado nao calculado · 0 AOT retiradas do oficial por manifesto de IDs (mesma sessao 13→14/09) · 0 INVICTUS retiradas do oficial por manifesto de IDs (sessao overnight 13→14/09); ledger fisico intacto",
+  "invalidos": 1,
+  "aotLines": 595,
+  "aotRetiradas": 0,
+  "aotExibidas": 0,
+  "invictusLedgerDesde": "2026-09-13T22:00:18.691Z",
+  "invictusRetiradas": 0,
+  "invictusExibidas": 5
+ },
+ "retiradas": {
+  "rotulo": "INVICTUS · ultima sessao OVERNIGHT antes do RTH ONLY (13/09 18:00 ET → 14/09 09:30 ET) — fora dos KPIs e da listagem oficial; ledger intacto",
+  "manifestoOk": true,
+  "manifesto": "C:\\Users\\ADM\\.claude\\aot\\history-retiradas\\invictus-sessao-overnight-20260913.json",
+  "manifestoTotal": 31,
+  "noPeriodo": 0,
+  "trades": []
+ },
+ "retiradasAot": {
+  "rotulo": "AOT SIM · ultima sessao (13/09 18:00 ET → 14/09 09:30 ET) — fora dos KPIs e da listagem oficial; ledger intacto",
+  "manifestoOk": true,
+  "manifesto": "C:\\Users\\ADM\\.claude\\aot\\history-retiradas\\aot-sessao-overnight-20260913.json",
+  "manifestoTotal": 31,
+  "noPeriodo": 0,
+  "trades": []
+ },
+ "invalidos": {
+  "rotulo": "registros com preco de entrada/saida invalido (0/NaN/ausente) — fora dos KPIs e da listagem oficial; ledger intacto; resultado NAO calculado",
+  "manifestoOk": true,
+  "manifesto": "C:\\Users\\ADM\\.claude\\aot\\history-retiradas\\aot-registros-invalidos.json",
+  "manifestoTotal": 7,
+  "noPeriodo": 1,
+  "trades": [
+   {
+    "id": "2026-10-02T18:05:39.014Z-cd35a",
+    "schema": 1,
+    "openedAt": "2026-10-02T18:01:30.521Z",
+    "closedAt": "2026-10-02T18:05:57.030Z",
+    "durationSec": 267,
+    "side": "LONG",
+    "reason": "TEST_RT_VALIDATION_SIM101",
+    "es": {
+     "entry": 7775,
+     "exit": null,
+     "pnlUsd": null,
+     "veiculo": "ES",
+     "fonte_preco": "fills_reais"
+    },
+    "nq": {
+     "entry": 31041,
+     "exit": 31041.25,
+     "pnlUsd": null,
+     "veiculo": "NQ",
+     "fonte_preco": "fills_reais"
+    },
+    "totalUsd": null,
+    "anchorAtEntry": {
+     "dir": "LONG",
+     "strength": 4
+    },
+    "anchorAtExit": {
+     "dir": "NEUTRO",
+     "strength": 0,
+     "why": "ES x NQ divergentes"
+    },
+    "priceSource": "aot_canonical_event",
+    "replay": false,
+    "sessionDate": "2026-10-02",
+    "params": {
+     "beAtProfitUsd": 500,
+     "stepProfitUsd": 250,
+     "stepStopUsd": 250,
+     "hardStopUsd": 1000
+    },
+    "simulated": false,
+    "engine": "invictus",
+    "trade_id": "TEST-RT-20261002-C",
+    "event_id_open": "TEST-RT-20261002-C",
+    "seq_open": 35,
+    "event_id_close": "TEST-RT-20261002-C-CLOSE",
+    "seq_close": 36,
+    "pnl_status": "exit_fill_desconhecido",
+    "pnlStatus": "exit_fill_desconhecido",
+    "pnl_valido": false,
+    "pnl_motivo": "1 execucao(oes) FLAT sem fill de saida observado — resultado nao calculado (nunca preco do motor)",
+    "exit_decided_at": "2026-10-02T18:05:39.014Z",
+    "exit_first_fill_at": "2026-10-02T18:05:55.893Z",
+    "exit_last_fill_at": "2026-10-02T18:05:57.030Z",
+    "flat_confirmed_at": "2026-10-02T18:05:55.652Z",
+    "execucoes": [
+     {
+      "ativo": "ES",
+      "instrumento": "ES 12-26",
+      "conta": "REDACTED",
+      "nt8_account": "REDACTED",
+      "intentId": "AO-20261002-REDACTED-ES-LONG-180130",
+      "qty": 1,
+      "turno": "RTH",
+      "entry": 7775,
+      "exit": 7774,
+      "multiplier": 50,
+      "pnlUsd": -50,
+      "status": "ok",
+      "fonte_preco": "fills_reais",
+      "fills_entrada": 1,
+      "fills_saida": 1,
+      "qty_saida": 1,
+      "exit_first_fill_at": "2026-10-02T18:05:55.893Z",
+      "exit_last_fill_at": "2026-10-02T18:05:55.893Z",
+      "flat_at": "2026-10-02T18:05:55.652Z",
+      "flat_via": "FLAT_VERIFICADO",
+      "correlacao": "trade_id",
+      "desvio": false
+     },
+     {
+      "ativo": "MES",
+      "instrumento": "MES 12-26",
+      "conta": "REDACTED",
+      "nt8_account": "REDACTED",
+      "intentId": "AO-20261002-REDACTED-MES-LONG-180130",
+      "qty": 5,
+      "turno": "RTH",
+      "entry": 7775,
+      "exit": 7774.25,
+      "multiplier": 5,
+      "pnlUsd": -18.75,
+      "status": "ok",
+      "fonte_preco": "fills_reais",
+      "fills_entrada": 1,
+      "fills_saida": 1,
+      "qty_saida": 5,
+      "exit_first_fill_at": "2026-10-02T18:05:56.325Z",
+      "exit_last_fill_at": "2026-10-02T18:05:56.325Z",
+      "flat_at": "2026-10-02T18:05:55.652Z",
+      "flat_via": "FLAT_VERIFICADO",
+      "correlacao": "trade_id",
+      "desvio": false
+     },
+     {
+      "ativo": "NES",
+      "instrumento": "NES 12-26",
+      "conta": "REDACTED",
+      "nt8_account": "REDACTED",
+      "intentId": "AO-20261002-REDACTED-NES-LONG-180130",
+      "qty": 1,
+      "turno": "RTH",
+      "entry": 7775.5,
+      "exit": null,
+      "multiplier": 0.5,
+      "pnlUsd": null,
+      "status": "exit_fill_desconhecido",
+      "fonte_preco": "fills_reais",
+      "fills_entrada": 1,
+      "fills_saida": 0,
+      "qty_saida": 0,
+      "exit_first_fill_at": null,
+      "exit_last_fill_at": null,
+      "flat_at": "2026-10-02T18:05:55.652Z",
+      "flat_via": "FLAT_JA_FECHADA",
+      "correlacao": "trade_id",
+      "desvio": true
+     },
+     {
+      "ativo": "NQ",
+      "instrumento": "NQ 12-26",
+      "conta": "REDACTED",
+      "nt8_account": "REDACTED",
+      "intentId": "AO-20261002-REDACTED-NQ-LONG-180130",
+      "qty": 1,
+      "turno": "RTH",
+      "entry": 31041,
+      "exit": 31041.25,
+      "multiplier": 20,
+      "pnlUsd": 5,
+      "status": "ok",
+      "fonte_preco": "fills_reais",
+      "fills_entrada": 1,
+      "fills_saida": 1,
+      "qty_saida": 1,
+      "exit_first_fill_at": "2026-10-02T18:05:56.524Z",
+      "exit_last_fill_at": "2026-10-02T18:05:56.524Z",
+      "flat_at": "2026-10-02T18:05:55.652Z",
+      "flat_via": "FLAT_VERIFICADO",
+      "correlacao": "trade_id",
+      "desvio": false
+     },
+     {
+      "ativo": "MNQ",
+      "instrumento": "MNQ 12-26",
+      "conta": "REDACTED",
+      "nt8_account": "REDACTED",
+      "intentId": "AO-20261002-REDACTED-MNQ-LONG-180130",
+      "qty": 5,
+      "turno": "RTH",
+      "entry": 31040.75,
+      "exit": 31041,
+      "multiplier": 2,
+      "pnlUsd": 2.5,
+      "status": "ok",
+      "fonte_preco": "fills_reais",
+      "fills_entrada": 1,
+      "fills_saida": 1,
+      "qty_saida": 5,
+      "exit_first_fill_at": "2026-10-02T18:05:56.797Z",
+      "exit_last_fill_at": "2026-10-02T18:05:56.797Z",
+      "flat_at": "2026-10-02T18:05:55.652Z",
+      "flat_via": "FLAT_VERIFICADO",
+      "correlacao": "trade_id",
+      "desvio": false
+     },
+     {
+      "ativo": "NNQ",
+      "instrumento": "NNQ 12-26",
+      "conta": "REDACTED",
+      "nt8_account": "REDACTED",
+      "intentId": "AO-20261002-REDACTED-NNQ-LONG-180130",
+      "qty": 1,
+      "turno": "RTH",
+      "entry": 31042,
+      "exit": 31039.5,
+      "multiplier": 0.2,
+      "pnlUsd": -0.5,
+      "status": "ok",
+      "fonte_preco": "fills_reais",
+      "fills_entrada": 1,
+      "fills_saida": 1,
+      "qty_saida": 1,
+      "exit_first_fill_at": "2026-10-02T18:05:57.030Z",
+      "exit_last_fill_at": "2026-10-02T18:05:57.030Z",
+      "flat_at": "2026-10-02T18:05:55.652Z",
+      "flat_via": "FLAT_VERIFICADO",
+      "correlacao": "trade_id",
+      "desvio": false
+     }
+    ],
+    "veiculos": [
+     "ES",
+     "MES",
+     "NES",
+     "NQ",
+     "MNQ",
+     "NNQ"
+    ],
+    "lifecycle": "CLOSED",
+    "lifecycle_eventos": [
+     {
+      "estado": "EXIT_DECIDED",
+      "at": "2026-10-02T18:05:39.014Z",
+      "detalhe": "motor: TEST_RT_VALIDATION_SIM101 · 6 perna(s) correlacionada(s)"
+     },
+     {
+      "estado": "EXIT_PENDING",
+      "at": "2026-10-02T18:06:09.543Z",
+      "detalhe": "pernas FLAT; aguardando fill de saida de 1 perna(s)"
+     },
+     {
+      "estado": "CLOSED",
+      "at": "2026-10-02T18:06:30.042Z",
+      "detalhe": "todas as pernas FLAT confirmadas; fill de saida nao observado em AO-20261002-REDACTED-NES-LONG-180130 apos 15 s — exit desconhecido (sem preco inventado)"
+     }
+    ],
+    "fonte_preco_saida": "fills_reais",
+    "canonico": {
+     "closedAt": "2026-10-02T18:05:39.014Z",
+     "durationSec": 248,
+     "es": {
+      "entry": 7775.25,
+      "exit": 7774.5,
+      "pnlUsd": -37.5
+     },
+     "nq": {
+      "entry": 31041,
+      "exit": 31042.25,
+      "pnlUsd": 25
+     },
+     "totalUsd": -12.5,
+     "_nota": "DECISAO do motor (LastPrice canonico, escala E-mini, sem qty) — NAO e resultado realizado"
+    },
+    "turno": "RTH",
+    "politica": "RTH_AND_OUTSIDE_RTH",
+    "pares": [
+     "ES_NQ",
+     "MES_MNQ",
+     "NES_NNQ"
+    ],
+    "pnlPorPar": {
+     "ES_NQ": -45,
+     "MES_MNQ": -16.25,
+     "NES_NNQ": -0.5
+    },
+    "executado": true,
+    "contado": false,
+    "fonte": "invictus",
+    "fonteRotulo": "INVICTUS",
+    "invalido": true
+   }
+  ]
+ },
+ "kpisInvictus": {
+  "fonte": "invictus",
+  "countedBasis": "somente real (replay:false) · INVICTUS REAL",
+  "n": 5,
+  "wins": 3,
+  "losses": 2,
+  "winRate": 60,
+  "totalUsd": -465.9,
+  "avgUsd": -93.18,
+  "bestUsd": 378.55,
+  "worstUsd": -670.25,
+  "maxDrawdownUsd": 1062.5,
+  "profitFactor": 0.64,
+  "byReason": {
+   "TEST_RT_VALIDATION_SIM101": {
+    "n": 5,
+    "pnl": -465.9
+   }
+  },
+  "equity": [
+   {
+    "at": "2026-10-02T17:30:33.432Z",
+    "cum": 218.05
+   },
+   {
+    "at": "2026-10-02T17:48:44.159Z",
+    "cum": 596.6
+   },
+   {
+    "at": "2026-10-02T18:21:04.544Z",
+    "cum": -73.65
+   },
+   {
+    "at": "2026-10-02T18:36:21.220Z",
+    "cum": 173
+   },
+   {
+    "at": "2026-10-02T20:22:36.509Z",
+    "cum": -465.9
+   }
+  ],
+  "replayCount": 0,
+  "realCount": 5
+ },
+ "_fixture": {
+  "captured": "2026-10-04T12:0xZ market CLOSED",
+  "source": "AOT BFF 127.0.0.1:3600 GET history.json",
+  "sanitized": "account/operator ids redacted, arrays capped at 40"
+ }
+}

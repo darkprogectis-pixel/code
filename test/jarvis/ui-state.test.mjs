@@ -120,8 +120,11 @@ test('SEC2 route allowlist: no order/trade/exec/account routes; other methods 40
     }
     for (const m of ['PUT', 'DELETE', 'PATCH']) assert.equal((await b.req(m, '/api/ui-state', '{}')).status, 405, m);
     const src = fs.readFileSync(path.join(REPO, 'tools/jarvis/server.mjs'), 'utf8');
-    const posts = /\['\/api\/ask', '\/api\/ask-audio', '\/api\/cancel', '\/api\/ui-state'\]\.includes\(u\.pathname\)/.test(src);
-    assert.ok(posts, 'POST allowlist literal = ask, ask-audio, cancel, ui-state');
+    // R2 (JARVIS × AOT, JEV DIFF A): the POST allowlist adds exactly AOT_POSTS (/api/aot/ask, /api/aot/narrate), token-checked like the rest.
+    const posts = /\['\/api\/ask', '\/api\/ask-audio', '\/api\/cancel', '\/api\/ui-state', \.\.\.AOT_POSTS\]\.includes\(u\.pathname\)/.test(src);
+    assert.ok(posts, 'POST allowlist literal = ask, ask-audio, cancel, ui-state + AOT_POSTS');
+    const { AOT_POSTS } = await import('../../tools/jarvis/aot/routes.mjs');
+    assert.deepEqual(AOT_POSTS, ['/api/aot/ask', '/api/aot/narrate']);
     const gets = [...src.matchAll(/u\.pathname === '([^']+)'/g)].map((m) => m[1]).filter((p) => !['/api/ui-state', '/api/cancel', '/api/ask'].includes(p) || true);
     assert.deepEqual([...new Set(gets)].sort(), ['/', '/api/ask', '/api/cancel', '/api/cycles', '/api/events', '/api/health', '/api/status', '/api/ui-state'].sort());
   } finally { await b.close(); }
@@ -146,7 +149,9 @@ test('SEC1 structural scan: no trading/order/broker/NT8/AOT/INVICTUS reach, no s
   const forbidden = /\b(nt8|ninja\w*|ijc|invictus|aot|robo-trade|broker|placeOrder|sendOrder|submitOrder|account mutation)\b|require\(['"](https|net)['"]\)|from ['"]node:(https|net|dgram)['"]/i;
   for (const f of NEW_JS) {
     const src = fs.readFileSync(path.join(REPO, f), 'utf8').split('\n');
-    const hits = src.map((l, i) => [i + 1, l]).filter(([, l]) => forbidden.test(l) && !/^\s*\/\//.test(l) && !/neither changes market, trading, AOT, INVICTUS or NT8|nothing here sends orders|no order routes/.test(l));
+    // R2 exemption (server.mjs only): the additive read-only AOT hook lines that delegate to tools/jarvis/aot/routes.mjs (covered by test/jarvis/aot-safety.test.mjs).
+    const aotHook = f === 'tools/jarvis/server.mjs' ? /from '\.\/aot\/routes\.mjs'|createAotRoutes\(|isAotPath\(u\.pathname\)\) return aot\.handle\(|AOT_POSTS\.includes\(u\.pathname\)\) return aot\.handle\(|srv\.aot = aot;|mode: 'aot', transcript: null, intent, agent_sources: \['AOT'\]/ : null;
+    const hits = src.map((l, i) => [i + 1, l]).filter(([, l]) => forbidden.test(l) && !/^\s*\/\//.test(l) && !(aotHook && aotHook.test(l)) && !/neither changes market, trading, AOT, INVICTUS or NT8|nothing here sends orders|no order routes/.test(l));
     assert.deepEqual(hits, [], f);
     const urls = [...src.join('\n').matchAll(/https?:\/\/([a-z0-9.\-]+)/gi)].map((m) => m[1]).filter((h) => !['127.0.0.1', 'localhost'].includes(h) && !h.startsWith('${'));
     assert.deepEqual(urls, [], `${f} external hosts`);

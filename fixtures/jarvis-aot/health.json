@@ -1,0 +1,117 @@
+{
+ "ok": true,
+ "service": "aot-bff",
+ "port": 3600,
+ "bind": "0.0.0.0",
+ "origin": "local",
+ "stackMode": "both",
+ "replay": null,
+ "session": "CLOSED",
+ "asof": "2026-10-04T12:38:11.626Z",
+ "polls": 6941,
+ "sources_live": [
+  "spotgamma",
+  "gexbot",
+  "quantdata"
+ ],
+ "sources": {
+  "consolidator": {
+   "ok": true,
+   "status": "stale",
+   "age_s": 117531,
+   "stale_after_s": 900,
+   "connection_state": "CONNECTED",
+   "data_state": "NO_NEW_DATA_EXPECTED",
+   "updated_at": "2026-10-03T03:59:20.162Z",
+   "reason": "CME fechado/pausa — vendor sem entrega nova"
+  },
+  "spotgamma": {
+   "ok": true,
+   "status": "live",
+   "age_s": 0,
+   "stale_after_s": 900,
+   "connection_state": "CONNECTED",
+   "data_state": "FRESH",
+   "updated_at": "2026-10-04T12:38:11.608Z",
+   "reason": "dado dentro de 900s"
+  },
+  "gexbot": {
+   "ok": true,
+   "status": "live",
+   "age_s": 29,
+   "stale_after_s": 900,
+   "connection_state": "CONNECTED",
+   "data_state": "PARTIAL",
+   "updated_at": "2026-10-04T12:37:42.945Z",
+   "reason": "envelope vivo; preco ES/NQ parado ha 146295s (sessao de opcoes fechada)",
+   "price_age_s": 146295,
+   "price_age_es_s": 146295,
+   "price_age_nq_s": 146294,
+   "price_timestamp_es": "2026-10-02T19:59:57.000Z",
+   "price_timestamp_nq": "2026-10-02T19:59:58.000Z"
+  },
+  "menthorq": {
+   "ok": true,
+   "status": "stale",
+   "age_s": 142992,
+   "stale_after_s": 1800,
+   "connection_state": "CONNECTED",
+   "data_state": "NO_NEW_DATA_EXPECTED",
+   "updated_at": "2026-10-02T20:55:00.000Z",
+   "reason": "CME fechado/pausa — vendor sem entrega nova"
+  },
+  "alfaomega": {
+   "ok": false,
+   "status": "offline",
+   "detail": "fetch failed",
+   "connection_state": "DISCONNECTED",
+   "data_state": "STALE",
+   "updated_at": null,
+   "reason": "fetch failed"
+  },
+  "quantdata": {
+   "ok": true,
+   "status": "live",
+   "age_s": 222,
+   "stale_after_s": 900,
+   "connection_state": "CONNECTED",
+   "data_state": "FRESH",
+   "updated_at": "2026-10-04T12:34:29.906Z",
+   "reason": "dado dentro de 900s",
+   "rawDataAt": "2026-10-04T12:37:11.085Z",
+   "rawDataAgeS": 61,
+   "rawDataFresh": true
+  }
+ },
+ "wiring": {
+  "consolidator": {
+   "url": "http://localhost:3495",
+   "keyed": true
+  },
+  "spotgamma": {
+   "url": "http://localhost:3500",
+   "keyed": true
+  },
+  "gexbot": {
+   "url": "http://localhost:3457",
+   "keyed": false
+  },
+  "menthorq": {
+   "url": "http://localhost:3480",
+   "keyed": true
+  },
+  "quantdata": {
+   "url": "http://localhost:3490",
+   "keyed": true
+  },
+  "alfaomega": {
+   "url": "http://127.0.0.1:5151",
+   "keyed": false
+  }
+ },
+ "_fixture": {
+  "captured": "2026-10-04T12:0xZ market CLOSED",
+  "source": "AOT BFF 127.0.0.1:3600 GET health.json",
+  "sanitized": "account/operator ids redacted, arrays capped at 40"
+ }
+}

@@ -1,0 +1,1074 @@
+{
+ "schemaVersion": 1,
+ "source": "consolidator",
+ "ts": "2026-10-03T03:59:20.198Z",
+ "session": "OUTSIDE_RTH",
+ "freshness": "DATA PROBLEM",
+ "staleAfterMs": 120000,
+ "monitoringOnly": true,
+ "symbols": {
+  "ES": {
+   "uiState": "NEUTRAL",
+   "direction": "NEUTRO",
+   "tier": null,
+   "state": "STAND_DOWN",
+   "candidate": false,
+   "reactor_pct": 84,
+   "gate": "NOT_EVALUATED",
+   "blockReason": null,
+   "detail": "abaixo-limiar",
+   "prefilterReason": "abaixo-limiar",
+   "sessionMode": "OUTSIDE_RTH",
+   "gamma": {
+    "condition": "POSITIVE",
+    "classicCall": 7773.97,
+    "classicPut": 7798.97,
+    "dg0Call": null,
+    "dg0Put": null,
+    "pressure": -9.52,
+    "flow": 5361.61
+   },
+   "alfaOmegaState": {
+    "estado": "INDISPONÍVEL",
+    "contexto": "estado não publicado — sem interpretação."
+   },
+   "orderflow": {
+    "fluxo": "VENDEDOR ↓",
+    "impacto": "fluxo vendedor presente, sem confirmação direcional porque não há sinal ativo."
+   },
+   "tradePlan": null,
+   "structuralTradePlan": {
+    "present": true,
+    "schema": "alfabot.structural_trade_plan.v1",
+    "target": {
+     "status": "DATA_NOT_FRESH",
+     "targets": [
+      {
+       "order": 1,
+       "status": "UNDEFINED",
+       "price": null,
+       "level_ref": null
+      },
+      {
+       "order": 2,
+       "status": "UNDEFINED",
+       "price": null,
+       "level_ref": null
+      }
+     ],
+     "reasons": [
+      "STRUCTURE_STALE",
+      "DIRECTION_UNAVAILABLE",
+      "CANONICAL_TARGET_IS_BL_1_10_ALPHA_Q",
+      "NO_DOCUMENTED_EQUIVALENCE_WITH_CLASSIC_STRIKES",
+      "BL_SCORE_PARTIAL_D002_D027",
+      "D012_DENSE_GAP"
+     ],
+     "rule": "§31: T1 = 1º BL relevante · T2 = 2º BL (D012-ORD por distância; D012-REL BL_SCORE ≥ 60)"
+    },
+    "structure_status": "STALE",
+    "freshness_state": "STALE",
+    "freshness_reason": "OUTSIDE_RTH",
+    "vendor_ts": "2026-10-02T19:59:57.000Z",
+    "freshness_sec": 146258,
+    "refreshed_at": "2026-10-04T12:37:34.919Z",
+    "refresh_age_sec": 0,
+    "refresh_interval_sec": 60,
+    "entry": {
+     "price": null,
+     "source": "AO_BRIDGE_5151_LAST_PRICE"
+    },
+    "structure_spot": 7775.77,
+    "range": {
+     "low": 7508.97,
+     "high": 8043.97,
+     "spot_in_range": true,
+     "grid_rows": 107
+    },
+    "level_selection": "ORDER_BY_DISTANCE_ON_GRID (N1–N3 filter PENDENTE DE REGRA, SPEC §8.3)",
+    "above": [
+     {
+      "rank_side": 1,
+      "level_id": "ES|GAMMAGEX_CLASSIC_ZERO|STRIKE_ROW|7778.97|2026-10-02T19:59:57.000Z",
+      "price": 7778.97,
+      "distance_from_spot": 3.2,
+      "position": "ABOVE",
+      "gex_vol": 83274.45,
+      "gex_oi": 4678.43,
+      "coincident_fields": [
+       "MAJOR_POS_VOL"
+      ]
+     },
+     {
+      "rank_side": 2,
+      "level_id": "ES|GAMMAGEX_CLASSIC_ZERO|STRIKE_ROW|7783.97|2026-10-02T19:59:57.000Z",
+      "price": 7783.97,
+      "distance_from_spot": 8.2,
+      "position": "ABOVE",
+      "gex_vol": 4679.24,
+      "gex_oi": 860.42,
+      "coincident_fields": [
+       "ZERO_MPUT"
+      ]
+     },
+     {
+      "rank_side": 3,
+      "level_id": "ES|GAMMAGEX_CLASSIC_ZERO|STRIKE_ROW|7788.97|2026-10-02T19:59:57.000Z",
+      "price": 7788.97,
+      "distance_from_spot": 13.2,
+      "position": "ABOVE",
+      "gex_vol": -1581.47,
+      "gex_oi": 2.09,
+      "coincident_fields": []
+     }
+    ],
+    "below": [
+     {
+      "rank_side": 1,
+      "level_id": "ES|GAMMAGEX_CLASSIC_ZERO|STRIKE_ROW|7773.97|2026-10-02T19:59:57.000Z",
+      "price": 7773.97,
+      "distance_from_spot": -1.8,
+      "position": "BELOW",
+      "gex_vol": -271161.2,
+      "gex_oi": 13638.55,
+      "coincident_fields": [
+       "MAJOR_NEG_VOL",
+       "MAJOR_POS_OI",
+       "ZERO_MCALL"
+      ]
+     },
+     {
+      "rank_side": 2,
+      "level_id": "ES|GAMMAGEX_CLASSIC_ZERO|STRIKE_ROW|7768.97|2026-10-02T19:59:57.000Z",
+      "price": 7768.97,
+      "distance_from_spot": -6.8,
+      "position": "BELOW",
+      "gex_vol": -55880.97,
+      "gex_oi": 3253.45,
+      "coincident_fields": []
+     },
+     {
+      "rank_side": 3,
+      "level_id": "ES|GAMMAGEX_CLASSIC_ZERO|STRIKE_ROW|7763.97|2026-10-02T19:59:57.000Z",
+      "price": 7763.97,
+      "distance_from_spot": -11.8,
+      "position": "BELOW",
+      "gex_vol": -15090.48,
+      "gex_oi": 3097.79,
+      "coincident_fields": []
+     }
+    ],
+    "named_levels": [
+     {
+      "canonical_field": "ZERO_GAMMA",
+      "level_id": "ES|GAMMAGEX_CLASSIC_ZERO|ZERO_GAMMA|7777.77|2026-10-02T19:59:57.000Z",
+      "price": 7777.77,
+      "position": "ABOVE",
+      "distance_from_spot": 2,
+      "field_status": "PARTIAL",
+      "level_kind": "INTERPOLATED"
+     },
+     {
+      "canonical_field": "MAJOR_POS_VOL",
+      "level_id": "ES|GAMMAGEX_CLASSIC_ZERO|MAJOR_POS_VOL|7778.97|2026-10-02T19:59:57.000Z",
+      "price": 7778.97,
+      "position": "ABOVE",
+      "distance_from_spot": 3.2,
+      "field_status": "PROVEN",
+      "level_kind": "DERIVED_SCALAR"
+     },
+     {
+      "canonical_field": "ZERO_MPUT",
+      "level_id": "ES|GAMMAGEX_ORDERFLOW|ZERO_MPUT|7783.97|2026-10-02T19:59:57.000Z",
+      "price": 7783.97,
+      "position": "ABOVE",
+      "distance_from_spot": 8.2,
+      "field_status": "PROVEN",
+      "level_kind": "DERIVED_SCALAR"
+     },
+     {
+      "canonical_field": "Z_MLGAMMA",
+      "level_id": "ES|GAMMAGEX_ORDERFLOW|Z_MLGAMMA|7784.49|2026-10-02T19:59:57.000Z",
+      "price": 7784.49,
+      "position": "ABOVE",
+      "distance_from_spot": 8.72,
+      "field_status": "PARTIAL",
+      "level_kind": "INTERPOLATED"
+     },
+     {
+      "canonical_field": "MAJOR_NEG_OI",
+      "level_id": "ES|GAMMAGEX_CLASSIC_ZERO|MAJOR_NEG_OI|7798.97|2026-10-02T19:59:57.000Z",
+      "price": 7798.97,
+      "position": "ABOVE",
+      "distance_from_spot": 23.2,
+      "field_status": "PROVEN",
+      "level_kind": "DERIVED_SCALAR"
+     },
+     {
+      "canonical_field": "Z_MSGAMMA",
+      "level_id": "ES|GAMMAGEX_ORDERFLOW|Z_MSGAMMA|7774.33|2026-10-02T19:59:57.000Z",
+      "price": 7774.33,
+      "position": "BELOW",
+      "distance_from_spot": -1.44,
+      "field_status": "PROVEN",
+      "level_kind": "INTERPOLATED"
+     },
+     {
+      "canonical_field": "MAJOR_NEG_VOL",
+      "level_id": "ES|GAMMAGEX_CLASSIC_ZERO|MAJOR_NEG_VOL|7773.97|2026-10-02T19:59:57.000Z",
+      "price": 7773.97,
+      "position": "BELOW",
+      "distance_from_spot": -1.8,
+      "field_status": "PROVEN",
+      "level_kind": "DERIVED_SCALAR"
+     },
+     {
+      "canonical_field": "MAJOR_POS_OI",
+      "level_id": "ES|GAMMAGEX_CLASSIC_ZERO|MAJOR_POS_OI|7773.97|2026-10-02T19:59:57.000Z",
+      "price": 7773.97,
+      "position": "BELOW",
+      "distance_from_spot": -1.8,
+      "field_status": "PROVEN",
+      "level_kind": "DERIVED_SCALAR"
+     },
+     {
+      "canonical_field": "ZERO_MCALL",
+      "level_id": "ES|GAMMAGEX_ORDERFLOW|ZERO_MCALL|7773.97|2026-10-02T19:59:57.000Z",
+      "price": 7773.97,
+      "position": "BELOW",
+      "distance_from_spot": -1.8,
+      "field_status": "PROVEN",
+      "level_kind": "DERIVED_SCALAR"
+     }
+    ],
+    "zero_gamma": 7777.77,
+    "regime": {
+     "zero_gamma": 7777.77,
+     "spot_vs_zero_gamma": "BELOW",
+     "distance_to_zero_gamma": -2,
+     "net_gex_0dte": 8384.22,
+     "rule": "PENDENTE_DE_REGRA",
+     "rule_ref": "D002 GAP / U8 / GAP-C3"
+    },
+    "positioning": {
+     "gex_net_0dte": {
+      "value": 8384.22,
+      "unit": "$MM (doc)",
+      "status": "PARTIAL",
+      "source_field": "gex.net_0dte",
+      "vendor_ts": "2026-10-02T19:59:57.000Z",
+      "freshness_state": "STALE",
+      "direction": null,
+      "note": "imbalance call − put; não é razão"
+     },
+     "gex_net_next": {
+      "value": -345.14,
+      "unit": "$MM (doc)",
+      "status": "PARTIAL",
+      "source_field": "gex.net_next",
+      "vendor_ts": "2026-10-02T19:59:57.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     },
+     "dex_net_0dte": {
+      "value": -3766.39,
+      "unit": "UNKNOWN",
+      "status": "PARTIAL",
+      "source_field": "dex.net_0dte",
+      "vendor_ts": "2026-10-02T19:59:57.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     },
+     "dex_net_call_0dte": {
+      "value": 136.61,
+      "unit": "UNKNOWN",
+      "status": "PARTIAL",
+      "source_field": "dex.net_call_0dte",
+      "vendor_ts": "2026-10-02T19:59:57.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     },
+     "dex_net_put_0dte": {
+      "value": -3903,
+      "unit": "UNKNOWN",
+      "status": "PARTIAL",
+      "source_field": "dex.net_put_0dte",
+      "vendor_ts": "2026-10-02T19:59:57.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     },
+     "dex_agg_0dte": {
+      "value": -4608.17,
+      "unit": "UNKNOWN",
+      "status": "PARTIAL",
+      "source_field": "dex.agg_0dte",
+      "vendor_ts": "2026-10-02T19:59:57.000Z",
+      "freshness_state": "STALE",
+      "direction": null,
+      "identity": "dex.agg_0dte",
+      "layers": [
+       "POSITIONING",
+       "FLOW"
+      ]
+     },
+     "dex_agg_call_0dte": {
+      "value": -1131.98,
+      "unit": "UNKNOWN",
+      "status": "PARTIAL",
+      "source_field": "dex.agg_call_0dte",
+      "vendor_ts": "2026-10-02T19:59:57.000Z",
+      "freshness_state": "STALE",
+      "direction": null,
+      "identity": "dex.agg_call_0dte",
+      "layers": [
+       "POSITIONING",
+       "FLOW"
+      ]
+     },
+     "dex_agg_put_0dte": {
+      "value": -3476.2,
+      "unit": "UNKNOWN",
+      "status": "PARTIAL",
+      "source_field": "dex.agg_put_0dte",
+      "vendor_ts": "2026-10-02T19:59:57.000Z",
+      "freshness_state": "STALE",
+      "direction": null,
+      "identity": "dex.agg_put_0dte",
+      "layers": [
+       "POSITIONING",
+       "FLOW"
+      ]
+     },
+     "vanna_net_0dte": {
+      "value": -373.41,
+      "unit": "$MM até a expiração",
+      "status": "PARTIAL",
+      "source_field": "vanna.net_0dte",
+      "vendor_ts": "2026-10-02T19:59:57.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     },
+     "charm_net_0dte": {
+      "value": -260308.77,
+      "unit": "$MM/h",
+      "status": "PARTIAL",
+      "source_field": "charm.net_0dte",
+      "vendor_ts": "2026-10-02T19:59:57.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     },
+     "max_priors": [
+      {
+       "k": 1,
+       "horizon_min": 1,
+       "horizon_status": "PARTIAL",
+       "strike": 7783.97,
+       "delta_gex_vol": -213125.606,
+       "level_id": "ES|GAMMAGEX_CLASSIC_ZERO|MAX_PRIOR_1|7783.97|2026-10-02T19:59:57.000Z"
+      },
+      {
+       "k": 2,
+       "horizon_min": 5,
+       "horizon_status": "PARTIAL",
+       "strike": 7778.97,
+       "delta_gex_vol": -346369.321,
+       "level_id": "ES|GAMMAGEX_CLASSIC_ZERO|MAX_PRIOR_2|7778.97|2026-10-02T19:59:57.000Z"
+      },
+      {
+       "k": 3,
+       "horizon_min": 10,
+       "horizon_status": "PARTIAL",
+       "strike": 7783.97,
+       "delta_gex_vol": -184330.239,
+       "level_id": "ES|GAMMAGEX_CLASSIC_ZERO|MAX_PRIOR_3|7783.97|2026-10-02T19:59:57.000Z"
+      },
+      {
+       "k": 4,
+       "horizon_min": 15,
+       "horizon_status": "PARTIAL",
+       "strike": 7773.97,
+       "delta_gex_vol": -234486.43,
+       "level_id": "ES|GAMMAGEX_CLASSIC_ZERO|MAX_PRIOR_4|7773.97|2026-10-02T19:59:57.000Z"
+      },
+      {
+       "k": 5,
+       "horizon_min": 30,
+       "horizon_status": "PARTIAL",
+       "strike": 7773.97,
+       "delta_gex_vol": -256436.766,
+       "level_id": "ES|GAMMAGEX_CLASSIC_ZERO|MAX_PRIOR_5|7773.97|2026-10-02T19:59:57.000Z"
+      }
+     ],
+     "priors_note": "prior_values por nível da grade (p0..p4 = c1 anterior; horizonte PARTIAL)",
+     "gamma_condition": {
+      "value": "POSITIVE",
+      "status": "DERIVED_DUPLICATE",
+      "duplicate_of": "gex.net_0dte",
+      "independent_evidence": false,
+      "direction": null
+     }
+    },
+    "flow": {
+     "gex_oflow": {
+      "value": 5361.61,
+      "unit": "por segundo (doc); magnitude BLOQUEADA (H-001)",
+      "status": "PARTIAL",
+      "source_field": "gex.oflow",
+      "vendor_ts": "2026-10-02T19:59:57.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     },
+     "dex_oflow": {
+      "value": -9.52,
+      "unit": "por segundo (doc); magnitude BLOQUEADA (H-001)",
+      "status": "PARTIAL",
+      "source_field": "dex.oflow",
+      "vendor_ts": "2026-10-02T19:59:57.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     },
+     "dex_agg_ref": [
+      "dex.agg_0dte",
+      "dex.agg_call_0dte",
+      "dex.agg_put_0dte"
+     ],
+     "cvr_oflow": {
+      "value": -6716.27,
+      "unit": null,
+      "status": "UNKNOWN",
+      "source_field": "orderflow.cvr_oflow",
+      "vendor_ts": "2026-10-02T19:59:57.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     }
+    },
+    "stop": {
+     "status": "DATA_NOT_FRESH",
+     "price": null,
+     "level_ref": null,
+     "reasons": [
+      "STRUCTURE_STALE",
+      "DIRECTION_UNAVAILABLE",
+      "D011_STOP_SELECTION_UNDEFINED",
+      "U12",
+      "CR4_AOSTOPTAKECORE_NOT_ADOPTED",
+      "D023_DENSE_CLUSTER_UNDEFINED"
+     ],
+     "rule": "nível estrutural que invalida o movimento; nunca stop arbitrário (§30, qualitativa)"
+    },
+    "confirmation": "UNAVAILABLE",
+    "missing_fields": []
+   },
+   "freshness": "DATA PROBLEM",
+   "sourceStatus": {
+    "candidate": "LIVE",
+    "signals": "LIVE",
+    "price": "DATA PROBLEM",
+    "menthorq": "STALE"
+   },
+   "asof": "2026-10-03T03:59:20.162Z",
+   "signalsTs": 1790999952163,
+   "updatedAt": "2026-10-03T03:59:20.182Z",
+   "strategy_direction": "BEARISH",
+   "menthorq": {
+    "upper": 8000,
+    "lower": 7700,
+    "key": 7776.82,
+    "gammaCondition": "NEGATIVE",
+    "extra": [
+     8000,
+     7700,
+     7800,
+     7725,
+     7800,
+     7745,
+     7735,
+     7840.85,
+     7712.15,
+     7750,
+     7840,
+     7830,
+     7825,
+     7775,
+     7900,
+     7650,
+     7875,
+     7850,
+     7675
+    ]
+   },
+   "outsideRthPlan": {
+    "schema": "alfabot.outside_rth_plan_view.v1",
+    "present": true,
+    "mode": "DIRECTIONAL",
+    "direction": "BEARISH",
+    "structure_status": "STALE",
+    "freshness": "STALE",
+    "entry": null,
+    "target1": null,
+    "target2": null,
+    "stop": null,
+    "legs": {
+     "target1": {
+      "price": null,
+      "labels": [],
+      "origin": null,
+      "status": "UNDEFINED"
+     },
+     "target2": {
+      "price": null,
+      "labels": [],
+      "origin": null,
+      "status": "UNDEFINED"
+     },
+     "stop": {
+      "price": null,
+      "labels": [],
+      "origin": null,
+      "status": "UNDEFINED"
+     }
+    },
+    "nearestLevel": "EXCLUDED",
+    "complete": false,
+    "confirmation": "NOT_CONFIRMED",
+    "reason": "SIGNAL_BLOCKED_INVALID_TRADE_PLAN"
+   }
+  },
+  "NQ": {
+   "uiState": "NEUTRAL",
+   "direction": "NEUTRO",
+   "tier": null,
+   "state": "STAND_DOWN",
+   "candidate": false,
+   "reactor_pct": 53,
+   "gate": "NOT_EVALUATED",
+   "blockReason": null,
+   "detail": "abaixo-limiar",
+   "prefilterReason": "abaixo-limiar",
+   "sessionMode": "OUTSIDE_RTH",
+   "gamma": {
+    "condition": "POSITIVE",
+    "classicCall": 31044.4,
+    "classicPut": 30679.4,
+    "dg0Call": null,
+    "dg0Put": null,
+    "pressure": -0.44,
+    "flow": 555.85
+   },
+   "alfaOmegaState": {
+    "estado": "INDISPONÍVEL",
+    "contexto": "sem estado canônico para NQ (estrutura publicada só na escala SPX/ES)."
+   },
+   "orderflow": {
+    "fluxo": "COMPRADOR ↑",
+    "impacto": "fluxo comprador presente, sem confirmação direcional porque não há sinal ativo."
+   },
+   "tradePlan": null,
+   "structuralTradePlan": {
+    "present": true,
+    "schema": "alfabot.structural_trade_plan.v1",
+    "target": {
+     "status": "DATA_NOT_FRESH",
+     "targets": [
+      {
+       "order": 1,
+       "status": "UNDEFINED",
+       "price": null,
+       "level_ref": null
+      },
+      {
+       "order": 2,
+       "status": "UNDEFINED",
+       "price": null,
+       "level_ref": null
+      }
+     ],
+     "reasons": [
+      "STRUCTURE_STALE",
+      "DIRECTION_UNAVAILABLE",
+      "CANONICAL_TARGET_IS_BL_1_10_ALPHA_Q",
+      "NO_DOCUMENTED_EQUIVALENCE_WITH_CLASSIC_STRIKES",
+      "BL_SCORE_PARTIAL_D002_D027",
+      "D012_DENSE_GAP"
+     ],
+     "rule": "§31: T1 = 1º BL relevante · T2 = 2º BL (D012-ORD por distância; D012-REL BL_SCORE ≥ 60)"
+    },
+    "structure_status": "STALE",
+    "freshness_state": "STALE",
+    "freshness_reason": "OUTSIDE_RTH",
+    "vendor_ts": "2026-10-02T19:59:58.000Z",
+    "freshness_sec": 146257,
+    "refreshed_at": "2026-10-04T12:37:34.919Z",
+    "refresh_age_sec": 0,
+    "refresh_interval_sec": 60,
+    "entry": {
+     "price": null,
+     "source": "AO_BRIDGE_5151_LAST_PRICE"
+    },
+    "structure_spot": 31056.86,
+    "range": {
+     "low": 30444.4,
+     "high": 31664.4,
+     "spot_in_range": true,
+     "grid_rows": 147
+    },
+    "level_selection": "ORDER_BY_DISTANCE_ON_GRID (N1–N3 filter PENDENTE DE REGRA, SPEC §8.3)",
+    "above": [
+     {
+      "rank_side": 1,
+      "level_id": "NQ|GAMMAGEX_CLASSIC_ZERO|STRIKE_ROW|31064.4|2026-10-02T19:59:58.000Z",
+      "price": 31064.4,
+      "distance_from_spot": 7.54,
+      "position": "ABOVE",
+      "gex_vol": -4634.03,
+      "gex_oi": 517.94,
+      "coincident_fields": []
+     },
+     {
+      "rank_side": 2,
+      "level_id": "NQ|GAMMAGEX_CLASSIC_ZERO|STRIKE_ROW|31074.4|2026-10-02T19:59:58.000Z",
+      "price": 31074.4,
+      "distance_from_spot": 17.54,
+      "position": "ABOVE",
+      "gex_vol": 467.22,
+      "gex_oi": 135.56,
+      "coincident_fields": []
+     },
+     {
+      "rank_side": 3,
+      "level_id": "NQ|GAMMAGEX_CLASSIC_ZERO|STRIKE_ROW|31079.4|2026-10-02T19:59:58.000Z",
+      "price": 31079.4,
+      "distance_from_spot": 22.54,
+      "position": "ABOVE",
+      "gex_vol": 1309.12,
+      "gex_oi": 40.14,
+      "coincident_fields": [
+       "MAJOR_POS_VOL"
+      ]
+     }
+    ],
+    "below": [
+     {
+      "rank_side": 1,
+      "level_id": "NQ|GAMMAGEX_CLASSIC_ZERO|STRIKE_ROW|31054.4|2026-10-02T19:59:58.000Z",
+      "price": 31054.4,
+      "distance_from_spot": -2.46,
+      "position": "BELOW",
+      "gex_vol": -31752.11,
+      "gex_oi": 1641.79,
+      "coincident_fields": [
+       "ZERO_MCALL",
+       "Z_MSGAMMA"
+      ]
+     },
+     {
+      "rank_side": 2,
+      "level_id": "NQ|GAMMAGEX_CLASSIC_ZERO|STRIKE_ROW|31044.4|2026-10-02T19:59:58.000Z",
+      "price": 31044.4,
+      "distance_from_spot": -12.46,
+      "position": "BELOW",
+      "gex_vol": -34460.56,
+      "gex_oi": 2755.89,
+      "coincident_fields": [
+       "MAJOR_POS_OI",
+       "ZERO_MPUT"
+      ]
+     },
+     {
+      "rank_side": 3,
+      "level_id": "NQ|GAMMAGEX_CLASSIC_ZERO|STRIKE_ROW|31034.4|2026-10-02T19:59:58.000Z",
+      "price": 31034.4,
+      "distance_from_spot": -22.46,
+      "position": "BELOW",
+      "gex_vol": 222.27,
+      "gex_oi": 79.52,
+      "coincident_fields": []
+     }
+    ],
+    "named_levels": [
+     {
+      "canonical_field": "ZERO_GAMMA",
+      "level_id": "NQ|GAMMAGEX_CLASSIC_ZERO|ZERO_GAMMA|31073.42|2026-10-02T19:59:58.000Z",
+      "price": 31073.42,
+      "position": "ABOVE",
+      "distance_from_spot": 16.56,
+      "field_status": "PARTIAL",
+      "level_kind": "INTERPOLATED"
+     },
+     {
+      "canonical_field": "MAJOR_POS_VOL",
+      "level_id": "NQ|GAMMAGEX_CLASSIC_ZERO|MAJOR_POS_VOL|31079.4|2026-10-02T19:59:58.000Z",
+      "price": 31079.4,
+      "position": "ABOVE",
+      "distance_from_spot": 22.54,
+      "field_status": "PROVEN",
+      "level_kind": "DERIVED_SCALAR"
+     },
+     {
+      "canonical_field": "ZERO_MCALL",
+      "level_id": "NQ|GAMMAGEX_ORDERFLOW|ZERO_MCALL|31054.4|2026-10-02T19:59:58.000Z",
+      "price": 31054.4,
+      "position": "BELOW",
+      "distance_from_spot": -2.46,
+      "field_status": "PROVEN",
+      "level_kind": "DERIVED_SCALAR"
+     },
+     {
+      "canonical_field": "Z_MSGAMMA",
+      "level_id": "NQ|GAMMAGEX_ORDERFLOW|Z_MSGAMMA|31054.4|2026-10-02T19:59:58.000Z",
+      "price": 31054.4,
+      "position": "BELOW",
+      "distance_from_spot": -2.46,
+      "field_status": "PROVEN",
+      "level_kind": "DERIVED_SCALAR"
+     },
+     {
+      "canonical_field": "MAJOR_NEG_VOL",
+      "level_id": "NQ|GAMMAGEX_CLASSIC_ZERO|MAJOR_NEG_VOL|31044.57|2026-10-02T19:59:58.000Z",
+      "price": 31044.57,
+      "position": "BELOW",
+      "distance_from_spot": -12.29,
+      "field_status": "PROVEN",
+      "level_kind": "INTERPOLATED"
+     },
+     {
+      "canonical_field": "MAJOR_POS_OI",
+      "level_id": "NQ|GAMMAGEX_CLASSIC_ZERO|MAJOR_POS_OI|31044.4|2026-10-02T19:59:58.000Z",
+      "price": 31044.4,
+      "position": "BELOW",
+      "distance_from_spot": -12.46,
+      "field_status": "PROVEN",
+      "level_kind": "DERIVED_SCALAR"
+     },
+     {
+      "canonical_field": "ZERO_MPUT",
+      "level_id": "NQ|GAMMAGEX_ORDERFLOW|ZERO_MPUT|31044.4|2026-10-02T19:59:58.000Z",
+      "price": 31044.4,
+      "position": "BELOW",
+      "distance_from_spot": -12.46,
+      "field_status": "PROVEN",
+      "level_kind": "DERIVED_SCALAR"
+     },
+     {
+      "canonical_field": "Z_MLGAMMA",
+      "level_id": "NQ|GAMMAGEX_ORDERFLOW|Z_MLGAMMA|31023.9|2026-10-02T19:59:58.000Z",
+      "price": 31023.9,
+      "position": "BELOW",
+      "distance_from_spot": -32.96,
+      "field_status": "PARTIAL",
+      "level_kind": "INTERPOLATED"
+     },
+     {
+      "canonical_field": "MAJOR_NEG_OI",
+      "level_id": "NQ|GAMMAGEX_CLASSIC_ZERO|MAJOR_NEG_OI|30679.4|2026-10-02T19:59:58.000Z",
+      "price": 30679.4,
+      "position": "BELOW",
+      "distance_from_spot": -377.46,
+      "field_status": "PROVEN",
+      "level_kind": "DERIVED_SCALAR"
+     }
+    ],
+    "zero_gamma": 31073.42,
+    "regime": {
+     "zero_gamma": 31073.42,
+     "spot_vs_zero_gamma": "BELOW",
+     "distance_to_zero_gamma": -16.56,
+     "net_gex_0dte": 4095.1,
+     "rule": "PENDENTE_DE_REGRA",
+     "rule_ref": "D002 GAP / U8 / GAP-C3"
+    },
+    "positioning": {
+     "gex_net_0dte": {
+      "value": 4095.1,
+      "unit": "$MM (doc)",
+      "status": "PARTIAL",
+      "source_field": "gex.net_0dte",
+      "vendor_ts": "2026-10-02T19:59:58.000Z",
+      "freshness_state": "STALE",
+      "direction": null,
+      "note": "imbalance call − put; não é razão"
+     },
+     "gex_net_next": {
+      "value": 539.54,
+      "unit": "$MM (doc)",
+      "status": "PARTIAL",
+      "source_field": "gex.net_next",
+      "vendor_ts": "2026-10-02T19:59:58.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     },
+     "dex_net_0dte": {
+      "value": 163.86,
+      "unit": "UNKNOWN",
+      "status": "PARTIAL",
+      "source_field": "dex.net_0dte",
+      "vendor_ts": "2026-10-02T19:59:58.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     },
+     "dex_net_call_0dte": {
+      "value": -1301.28,
+      "unit": "UNKNOWN",
+      "status": "PARTIAL",
+      "source_field": "dex.net_call_0dte",
+      "vendor_ts": "2026-10-02T19:59:58.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     },
+     "dex_net_put_0dte": {
+      "value": 1465.14,
+      "unit": "UNKNOWN",
+      "status": "PARTIAL",
+      "source_field": "dex.net_put_0dte",
+      "vendor_ts": "2026-10-02T19:59:58.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     },
+     "dex_agg_0dte": {
+      "value": -740.9,
+      "unit": "UNKNOWN",
+      "status": "PARTIAL",
+      "source_field": "dex.agg_0dte",
+      "vendor_ts": "2026-10-02T19:59:58.000Z",
+      "freshness_state": "STALE",
+      "direction": null,
+      "identity": "dex.agg_0dte",
+      "layers": [
+       "POSITIONING",
+       "FLOW"
+      ]
+     },
+     "dex_agg_call_0dte": {
+      "value": -2835.06,
+      "unit": "UNKNOWN",
+      "status": "PARTIAL",
+      "source_field": "dex.agg_call_0dte",
+      "vendor_ts": "2026-10-02T19:59:58.000Z",
+      "freshness_state": "STALE",
+      "direction": null,
+      "identity": "dex.agg_call_0dte",
+      "layers": [
+       "POSITIONING",
+       "FLOW"
+      ]
+     },
+     "dex_agg_put_0dte": {
+      "value": 2094.17,
+      "unit": "UNKNOWN",
+      "status": "PARTIAL",
+      "source_field": "dex.agg_put_0dte",
+      "vendor_ts": "2026-10-02T19:59:58.000Z",
+      "freshness_state": "STALE",
+      "direction": null,
+      "identity": "dex.agg_put_0dte",
+      "layers": [
+       "POSITIONING",
+       "FLOW"
+      ]
+     },
+     "vanna_net_0dte": {
+      "value": 173.23,
+      "unit": "$MM até a expiração",
+      "status": "PARTIAL",
+      "source_field": "vanna.net_0dte",
+      "vendor_ts": "2026-10-02T19:59:58.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     },
+     "charm_net_0dte": {
+      "value": 250862.5,
+      "unit": "$MM/h",
+      "status": "PARTIAL",
+      "source_field": "charm.net_0dte",
+      "vendor_ts": "2026-10-02T19:59:58.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     },
+     "max_priors": [
+      {
+       "k": 1,
+       "horizon_min": 1,
+       "horizon_status": "PARTIAL",
+       "strike": 31044.4,
+       "delta_gex_vol": -30849.906,
+       "level_id": "NQ|GAMMAGEX_CLASSIC_ZERO|MAX_PRIOR_1|31044.4|2026-10-02T19:59:58.000Z"
+      },
+      {
+       "k": 2,
+       "horizon_min": 5,
+       "horizon_status": "PARTIAL",
+       "strike": 31044.4,
+       "delta_gex_vol": -30128.927,
+       "level_id": "NQ|GAMMAGEX_CLASSIC_ZERO|MAX_PRIOR_2|31044.4|2026-10-02T19:59:58.000Z"
+      },
+      {
+       "k": 3,
+       "horizon_min": 10,
+       "horizon_status": "PARTIAL",
+       "strike": 31044.4,
+       "delta_gex_vol": -31875.605,
+       "level_id": "NQ|GAMMAGEX_CLASSIC_ZERO|MAX_PRIOR_3|31044.4|2026-10-02T19:59:58.000Z"
+      },
+      {
+       "k": 4,
+       "horizon_min": 15,
+       "horizon_status": "PARTIAL",
+       "strike": 31054.4,
+       "delta_gex_vol": -32792.237,
+       "level_id": "NQ|GAMMAGEX_CLASSIC_ZERO|MAX_PRIOR_4|31054.4|2026-10-02T19:59:58.000Z"
+      },
+      {
+       "k": 5,
+       "horizon_min": 30,
+       "horizon_status": "PARTIAL",
+       "strike": 31054.4,
+       "delta_gex_vol": -31743.135,
+       "level_id": "NQ|GAMMAGEX_CLASSIC_ZERO|MAX_PRIOR_5|31054.4|2026-10-02T19:59:58.000Z"
+      }
+     ],
+     "priors_note": "prior_values por nível da grade (p0..p4 = c1 anterior; horizonte PARTIAL)",
+     "gamma_condition": {
+      "value": "POSITIVE",
+      "status": "DERIVED_DUPLICATE",
+      "duplicate_of": "gex.net_0dte",
+      "independent_evidence": false,
+      "direction": null
+     }
+    },
+    "flow": {
+     "gex_oflow": {
+      "value": 555.85,
+      "unit": "por segundo (doc); magnitude BLOQUEADA (H-001)",
+      "status": "PARTIAL",
+      "source_field": "gex.oflow",
+      "vendor_ts": "2026-10-02T19:59:58.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     },
+     "dex_oflow": {
+      "value": -0.44,
+      "unit": "por segundo (doc); magnitude BLOQUEADA (H-001)",
+      "status": "PARTIAL",
+      "source_field": "dex.oflow",
+      "vendor_ts": "2026-10-02T19:59:58.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     },
+     "dex_agg_ref": [
+      "dex.agg_0dte",
+      "dex.agg_call_0dte",
+      "dex.agg_put_0dte"
+     ],
+     "cvr_oflow": {
+      "value": 490.3,
+      "unit": null,
+      "status": "UNKNOWN",
+      "source_field": "orderflow.cvr_oflow",
+      "vendor_ts": "2026-10-02T19:59:58.000Z",
+      "freshness_state": "STALE",
+      "direction": null
+     }
+    },
+    "stop": {
+     "status": "DATA_NOT_FRESH",
+     "price": null,
+     "level_ref": null,
+     "reasons": [
+      "STRUCTURE_STALE",
+      "DIRECTION_UNAVAILABLE",
+      "D011_STOP_SELECTION_UNDEFINED",
+      "U12",
+      "CR4_AOSTOPTAKECORE_NOT_ADOPTED",
+      "D023_DENSE_CLUSTER_UNDEFINED"
+     ],
+     "rule": "nível estrutural que invalida o movimento; nunca stop arbitrário (§30, qualitativa)"
+    },
+    "confirmation": "UNAVAILABLE",
+    "missing_fields": []
+   },
+   "freshness": "DATA PROBLEM",
+   "sourceStatus": {
+    "candidate": "LIVE",
+    "signals": "LIVE",
+    "price": "DATA PROBLEM",
+    "menthorq": "STALE"
+   },
+   "asof": "2026-10-03T03:59:20.182Z",
+   "signalsTs": 1790999952163,
+   "updatedAt": "2026-10-03T03:59:20.198Z",
+   "strategy_direction": "BEARISH",
+   "menthorq": {
+    "upper": 31000,
+    "lower": 29000,
+    "key": 31060,
+    "gammaCondition": "NEGATIVE",
+    "extra": [
+     31000,
+     29000,
+     31000,
+     30300,
+     31000,
+     30690,
+     30780,
+     31435.3,
+     30662.7,
+     31250,
+     31300,
+     31100,
+     30800,
+     31400,
+     31500,
+     31750,
+     31600,
+     30600,
+     31800
+    ]
+   },
+   "outsideRthPlan": {
+    "schema": "alfabot.outside_rth_plan_view.v1",
+    "present": true,
+    "mode": "DIRECTIONAL",
+    "direction": "BEARISH",
+    "structure_status": "STALE",
+    "freshness": "STALE",
+    "entry": null,
+    "target1": null,
+    "target2": null,
+    "stop": null,
+    "legs": {
+     "target1": {
+      "price": null,
+      "labels": [],
+      "origin": null,
+      "status": "UNDEFINED"
+     },
+     "target2": {
+      "price": null,
+      "labels": [],
+      "origin": null,
+      "status": "UNDEFINED"
+     },
+     "stop": {
+      "price": null,
+      "labels": [],
+      "origin": null,
+      "status": "UNDEFINED"
+     }
+    },
+    "nearestLevel": "EXCLUDED",
+    "complete": false,
+    "confirmation": "NOT_CONFIRMED",
+    "reason": "SIGNAL_BLOCKED_INVALID_TRADE_PLAN"
+   }
+  }
+ },
+ "transport": {
+  "status": "STALE",
+  "receivedAt": "2026-10-04T12:38:14.711Z"
+ },
+ "_fixture": {
+  "captured": "2026-10-04T12:0xZ market CLOSED",
+  "source": "AOT BFF 127.0.0.1:3600 GET alfabot.json",
+  "sanitized": "account/operator ids redacted, arrays capped at 40"
+ }
+}

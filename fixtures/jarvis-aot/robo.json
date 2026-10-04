@@ -1,0 +1,407 @@
+{
+ "ok": true,
+ "ts": "2026-10-04T12:38:14.774Z",
+ "symbol": "ES",
+ "_fonte_reactor": "R2 — darkflow-web/signal-engine.js:502 (reactorProb 3 args), via oi-latest.json -> relay :3457. NAO e o Reactor do Telegram (R1, bot-sinal.js:87) nem o do painel DarkFlow (R1-linha, index.html:955). Ver HANDOFF §21/§23.",
+ "reactor": {
+  "fonte": "relay :3457 /v1/latest -> signals.ES",
+  "implementacao": "R2 (reactorProb 3 args) — darkflow-web/signal-engine.js:502",
+  "direcao": "BAIXA",
+  "percentual": 84,
+  "threshold": 65,
+  "timestamp": 1791117492552,
+  "timestamp_iso": "2026-10-04T12:38:12.552Z",
+  "idade_ms": 2222,
+  "idade_s": 2,
+  "fresh": true,
+  "stale": false,
+  "stale_limite_s": 90,
+  "cadencia": {
+   "producao_s": 30,
+   "poll_motor_s": 2,
+   "_nota": "o motor rele ~15x o MESMO numero entre atualizacoes; a idade real varia de 0 a 30 s"
+  },
+  "componentes": {
+   "dex": -1,
+   "cvr": -1,
+   "hiro": -1,
+   "hiro_stale": false,
+   "etf": null,
+   "regime": "POSITIVE",
+   "regime_mod": 0.85,
+   "vix_regime": "UNKNOWN",
+   "vix_mod": 1,
+   "s_dir": -1,
+   "s": -0.85
+  },
+  "avisos": [
+   "componente DEX no clamp — escala de normalizacao pequena demais (HANDOFF §23.5)",
+   "componente CVR no clamp — idem"
+  ]
+ },
+ "estrategia": {
+  "estrategias_ativas": [],
+  "estrategias_inativas": [
+   "LongGamRev (fora de sessão)",
+   "WallFade (longe das walls)",
+   "RegimeFlip (fora de sessão)",
+   "CharmPin (horário)",
+   "EODcont (horário)",
+   "VCrushFade (sem evento)"
+  ],
+  "menthorq": {
+   "gap": true,
+   "origem": "MenthorQ nao vem no relay :3457; fonte candidata = menthorq-api :3480 (AlfaOmegaRoboEntryMq.cs)"
+  },
+  "confluencias": {
+   "signal": "NEUTRO",
+   "score": 43,
+   "fontes_concordam": "0/3",
+   "detalhes": {
+    "dashboard": {
+     "reactor_pct": 84,
+     "reactor_dir": "BAIXA",
+     "estrategias_ativas": [],
+     "n_short": 1,
+     "n_long": 0
+    },
+    "mapa": {
+     "call_wall": 7561,
+     "put_wall": 7361,
+     "vol_trigger": 7471,
+     "zero_gamma": 7458
+    },
+    "gexbot": {
+     "hvl": null,
+     "major_call": 7778.97,
+     "major_put": 7773.97,
+     "zero_gamma": 7777.77
+    },
+    "etf_flow": {
+     "sym": "SPY",
+     "reactor_dir": null,
+     "reactor_pct": null,
+     "concordancia": false,
+     "peso": 0
+    },
+    "vix": {
+     "nivel": null,
+     "regime": "UNKNOWN",
+     "peso": 0,
+     "risk_extreme": false
+    }
+   },
+   "divergencia": null
+  },
+  "activegate": {
+   "ativo": true,
+   "motivo": "LGN em 7778.97 (1908.2× mediana)"
+  },
+  "gamma": {
+   "regime": "GAMMA_NEG",
+   "sinal": "POS",
+   "zero_gamma": 7777.77,
+   "conflito": true,
+   "condition": "POSITIVE"
+  },
+  "gates": {
+   "_nota": "os gates do AddOn C# nao sao publicados por endpoint; o ultimo veredito observavel esta em execucao.ultimo_evento (ledger). Os gates do robo-trade Node sao market_window -> stale -> news -> risk -> nt8_reachable -> propfirm -> position -> dedup."
+  },
+  "direcao_final": "SHORT",
+  "score": {
+   "confidence": 58,
+   "bull_pct": 26,
+   "bear_pct": 74,
+   "confluence_score": 43
+  },
+  "motivo_da_decisao": [
+   "Regime GAMMA_NEG (spot 7775.77 < flip 7777.77)",
+   "Fluxo DEX vendedor (dexoflow -9.52)",
+   "Convexidade -6716.27 → hedge DOWN",
+   "⚠ Regime AMBÍGUO: posição diz GAMMA_NEG mas Net GEX (8384.22) diz GAMMA_POS — confiança reduzida",
+   "VBPI 36/100 (barreira PUT, PRESSÃO PUT)",
+   "Resistência 7798.97 única [major_neg_oi]",
+   "Suporte 7775.64 CONFIRMADO [major_pos_oi,major_neg_vol,major_pos_vol]"
+  ],
+  "status": "OK",
+  "sessao": "PRE_MARKET",
+  "divergencia": null
+ },
+ "trade": {
+  "_semantica": "PROJECAO/PLANO. NAO existe stop transportado: Submit monta orderType:\"market\" fixo e nenhuma ordem de stop chega ao broker (HANDOFF §9). Rotulos: \"stop lim.\" / \"stop estrat.\" — NUNCA \"stop protegido\".",
+  "entrada": 7775.64,
+  "stop": 7790.01,
+  "alvo1": 7753.97,
+  "alvo2": 7730.64,
+  "alvo3": {
+   "gap": true,
+   "origem": "nao produzido pelo motor — signal-engine.js so gera target1/target2. Origem candidata: 3o nivel de vbpi_levels[] ou nova saida do motor"
+  },
+  "rr": 1.51,
+  "quantidade": 1,
+  "contratos": 1,
+  "multiplicador": 5,
+  "risco_usd": 71.85,
+  "lucro_presumido_usd": {
+   "alvo1": 108.35,
+   "alvo2": 225,
+   "alvo3": null
+  },
+  "prejuizo_presumido_usd": 71.85,
+  "max_risk_usd": {
+   "valor": 150,
+   "origem": "robo-trade/config/runtime.json"
+  },
+  "_calculo": "|preco - entrada| x multiplicador x contratos (MES $5/pt, MNQ $2/pt) — derivado nesta rota, nao vem pronto de nenhuma fonte",
+  "distancia_dos_niveis": [
+   {
+    "nome": "Short Gamma 0DTE",
+    "preco": 7774.33,
+    "tipo": "pivot",
+    "score": 65,
+    "dist_pt": -1.44
+   },
+   {
+    "nome": "Major Neg Vol (Short Γ)",
+    "preco": 7773.97,
+    "tipo": "suporte",
+    "score": 79,
+    "dist_pt": -1.8
+   },
+   {
+    "nome": "Major Pos OI",
+    "preco": 7773.97,
+    "tipo": "suporte",
+    "score": 89,
+    "dist_pt": -1.8
+   },
+   {
+    "nome": "Major Pos Vol (Long Γ)",
+    "preco": 7778.97,
+    "tipo": "resistencia",
+    "score": 79,
+    "dist_pt": 3.2
+   },
+   {
+    "nome": "Major Neg OI",
+    "preco": 7798.97,
+    "tipo": "resistencia",
+    "score": 80,
+    "dist_pt": 23.2
+   },
+   {
+    "nome": "Call Wall",
+    "preco": 7561,
+    "tipo": "suporte",
+    "score": 0,
+    "dist_pt": -214.77
+   },
+   {
+    "nome": "Vol Trigger",
+    "preco": 7471,
+    "tipo": "pivot",
+    "score": 0,
+    "dist_pt": -304.77
+   },
+   {
+    "nome": "Zero Gamma",
+    "preco": 7458,
+    "tipo": "pivot",
+    "score": 0,
+    "dist_pt": -317.77
+   },
+   {
+    "nome": "Put Wall",
+    "preco": 7361,
+    "tipo": "suporte",
+    "score": 0,
+    "dist_pt": -414.77
+   },
+   {
+    "nome": "Hedge Wall",
+    "preco": 29490,
+    "tipo": "pivot",
+    "score": 0,
+    "dist_pt": 21714.23
+   }
+  ],
+  "suporte": {
+   "price": 7775.64,
+   "metrics": [
+    "major_pos_oi",
+    "major_neg_vol",
+    "major_pos_vol"
+   ],
+   "confirmed": true
+  },
+  "resistencia": {
+   "price": 7798.97,
+   "metrics": [
+    "major_neg_oi"
+   ],
+   "confirmed": false
+  },
+  "stop_sanity": {
+   "inside": true,
+   "stopDistPt": 14.24,
+   "bandPt": 48.21,
+   "ratio": 0.3,
+   "sig": 0.0062,
+   "_note": "FLAG display-only (Bloco B). inside=true → stop dentro do movimento implícito de 1 dia. NÃO rejeita nem alarga; medição de frequência em curso."
+  },
+  "spot": 7775.77
+ },
+ "execucao": {
+  "posicao_atual": {
+   "unavailable": true,
+   "motivo": "leitura do :5152 nao autorizada (HANDOFF §12.7) — GET /positions"
+  },
+  "ordens_abertas": {
+   "unavailable": true,
+   "motivo": "leitura do :5152 nao autorizada (HANDOFF §12.7) — GET /orders"
+  },
+  "estado_da_ordem": {
+   "unavailable": true,
+   "motivo": "leitura do :5152 nao autorizada (HANDOFF §12.7) — GET /orders"
+  },
+  "guards": {
+   "_nota": "NAO ha endpoint que reporte os guards em vigor. A politica e declarada PELO CONSUMIDOR a cada POST (S1/E2, HANDOFF §9). Abaixo: politica declarada, nao estado lido do servidor.",
+   "politica_por_acao": {
+    "LONG · SHORT": {
+     "requireFlat": true,
+     "maxPositions": 1,
+     "rota": "/orders/place"
+    },
+    "ADD1-4 · PARCIAL1-3 · REVERTER": {
+     "requireFlat": false,
+     "maxPositions": 2,
+     "rota": "/orders/place"
+    },
+    "ZERAR": {
+     "requireFlat": null,
+     "maxPositions": null,
+     "rota": "/positions/flatten",
+     "obs": "nao le guards"
+    },
+    "AoControlCenter": {
+     "requireFlat": true,
+     "maxPositions": 1,
+     "obs": "passa 6 args -> defaults"
+    }
+   }
+  },
+  "kill_switch": {
+   "ativo": false,
+   "arquivo": "C:\\Users\\ADM\\Documents\\NinjaTrader 8\\alfaomega-robo\\config\\kill.flag",
+   "_nota": "kill.flag ausente — o AddOn NAO esta contido por este nivel"
+  },
+  "shadow": {
+   "valor": true,
+   "arquivo": "C:\\Users\\ADM\\Documents\\NinjaTrader 8\\alfaomega-robo\\config\\runtime.json",
+   "_nota": null
+  },
+  "conta": {
+   "valor": "REDACTED",
+   "origem": "robo-trade/config/runtime.json (config do motor Node)",
+   "_nota": "o AddOn C# recebe a conta no POST; nao publica a sua"
+  },
+  "instrumento": {
+   "valor": "MES 09-26",
+   "origem": "robo-trade/config/nt8.json",
+   "_nota": "atualizar no rollover 09-26 -> 12-26"
+  },
+  "ultimo_evento": {
+   "disponivel": true,
+   "arquivo": "C:\\Users\\ADM\\Documents\\NinjaTrader 8\\alfaomega-robo\\logs\\audit-2026-10.jsonl",
+   "bytes": 24374663,
+   "ts": "2026-10-03T14:13:44.428Z",
+   "evento": "engine_stop",
+   "symbol": null,
+   "resultado": "ok",
+   "motivo": null
+  },
+  "aodiag": {
+   "disponivel": true,
+   "arquivo": "C:\\Users\\ADM\\Documents\\NinjaTrader 8\\alfaomega_erros.log",
+   "bytes": 39937786,
+   "ultimo_marco": "2026-10-03 11:13:44  [marco] AoBasicEntryBoleta.OnStateChange: State=Terminated\r",
+   "ultima_recusa": null,
+   "recusas_no_tail": 0,
+   "_nota": "nenhuma RECUSA no tail — esperado: so a boleta grava (AoBasicEntryBoleta.cs:1647), exige clique do operador"
+  },
+  "segundo_motor": {
+   "disponivel": true,
+   "dry_run": true,
+   "base_url": "http://172.25.144.1:5152",
+   "arquivo": "\\\\wsl.localhost\\Ubuntu-24.04\\home\\magnumbrokeroficial\\darkflow-web\\robo-trade\\config\\nt8.json",
+   "_nota": "robo-trade (Node/WSL) le o MESMO relay e mira a MESMA conta. dry_run=true bloqueia PLACE/BRACKET antes do POST (nt8-client.js:229,278). Kill switch dele e OUTRO arquivo — o kill.flag do NT8 nao o contem."
+  },
+  "conexao_nt8": {
+   "disponivel": false,
+   "motivo": "nenhum log do NT8 para hoje em C:\\Users\\ADM\\Documents\\NinjaTrader 8\\log",
+   "dia": "20261004"
+  }
+ },
+ "decisao": {
+  "estado": "SHADOW",
+  "motivo": "runtime.json shadow=true — o AddOn nao envia ordem real",
+  "cadeia": [
+   {
+    "estado": "SHADOW",
+    "motivo": "runtime.json shadow=true — o AddOn nao envia ordem real"
+   }
+  ],
+  "_escopo": "Esta decisao reflete SOMENTE o que e observavel sem chamar o :5152. Os guards do servidor (requireFlat/maxPositions) e a posicao real NAO estao incluidos — logo \"ENTRADA AUTORIZADA\" aqui significa \"nada nesta camada bloqueia\", NAO \"a ordem passaria\"."
+ },
+ "mesa": {
+  "trading_enabled": true,
+  "motivo": "operacao normal"
+ },
+ "gaps": [
+  {
+   "id": "GAP-1",
+   "campo": "alvo 3",
+   "origem": "nao produzido pelo motor (signal-engine.js gera so target1/target2)"
+  },
+  {
+   "id": "GAP-2",
+   "campo": "quantidade/contratos do AddOn C#",
+   "origem": "so existe a config do motor Node; o AddOn recebe qty no POST"
+  },
+  {
+   "id": "GAP-3",
+   "campo": "guards em vigor",
+   "origem": "sem endpoint — politica declarada pelo consumidor (HANDOFF §9)"
+  },
+  {
+   "id": "GAP-4",
+   "campo": "RECUSA no AoDiag",
+   "origem": "AoBasicEntryBoleta.cs:1647 — exige NT8 aberto + boleta + 1 clique do operador"
+  },
+  {
+   "id": "GAP-5",
+   "campo": "ProbFinalES/NQ (NT8)",
+   "origem": "declarados e lidos mas NUNCA escritos => valem sempre 0. NAO usar como fonte (HANDOFF §21.6)"
+  },
+  {
+   "id": "GAP-6",
+   "campo": "risco/lucro em USD",
+   "origem": "derivado nesta rota a partir de entry/stop/target x multiplicador — nao vem pronto"
+  },
+  {
+   "id": "GAP-7",
+   "campo": "estrategias MenthorQ",
+   "origem": "nao vem no relay :3457; candidata = menthorq-api :3480"
+  },
+  {
+   "id": "GAP-8",
+   "campo": "posicao/ordens/estado da ordem",
+   "origem": ":5152 — leitura nao autorizada (HANDOFF §12.7)"
+  }
+ ],
+ "_fixture": {
+  "captured": "2026-10-04T12:0xZ market CLOSED",
+  "source": "AOT BFF 127.0.0.1:3600 GET robo.json",
+  "sanitized": "account/operator ids redacted, arrays capped at 40"
+ }
+}

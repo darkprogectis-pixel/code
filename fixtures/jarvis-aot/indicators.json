@@ -1,0 +1,1184 @@
+{
+ "sym": "ES",
+ "asof": "2026-10-04T12:38:11.662Z",
+ "gammaPressure": {
+  "ok": true,
+  "P": 0,
+  "regime": "POSITIVO",
+  "gamma": 5183379592.5,
+  "sigma": 190022587.02,
+  "prox": 0,
+  "closing": -7836576,
+  "zClosing": 0.1,
+  "n": 545,
+  "note": "Pressão de transição de regime (lift 6,91× sobre FLIPS no backtest). Detecção precoce, não previsão de horizonte."
+ },
+ "walls": {
+  "ok": true,
+  "callWall": 8154.8,
+  "putWall": 7554.8,
+  "zeroGamma": 7675.8,
+  "hedgeWall": 7734.8,
+  "keyGamma": 8054.8,
+  "largeGamma": [
+   8054.8,
+   7054.8,
+   7754.8,
+   7654.8
+  ],
+  "impliedHi": 7768.33,
+  "impliedLo": 7673.27,
+  "impliedBase": 7720.8,
+  "impliedSkewed": false,
+  "impliedHiSym": 7768.33,
+  "impliedLoSym": 7673.27,
+  "labels": {
+   "callwallstrike": "Call Wall",
+   "putwallstrike": "Put Wall",
+   "topabs_strike": "Key Gamma Strike",
+   "max_g_strike": "Hedge Wall",
+   "zero_g_strike": "Zero Gamma",
+   "L1": "Large Gamma 1",
+   "L2": "Large Gamma 2",
+   "L3": "Large Gamma 3",
+   "L4": "Large Gamma 4",
+   "C1": "Combo 1",
+   "C2": "Combo 2",
+   "C3": "Combo 3",
+   "C4": "Combo 4"
+  },
+  "tradeDate": "2026-10-01T00:00:00.000Z",
+  "note": "walls SpotGamma (recálculo BFF do /levels — mesma fonte do NT8)"
+ },
+ "hiroRegime": {
+  "ok": false,
+  "note": "HIRO offline"
+ },
+ "openFlow": {
+  "frame": "T1",
+  "direction": {
+   "dir": "NEUTRO",
+   "label": "T1 · SEM EDGE ISOLADO (285 sessões, 5 hipóteses mortas)",
+   "edge": false
+  },
+  "magnitude": {
+   "regime": "ABSORVE",
+   "expectedPts": 19.4,
+   "note": "Γ<0 → |29,9pts| · Γ>0 → |19,4pts| (Mann-Whitney p=0,0001). Prevê MAGNITUDE, não direção — serve p/ stop/size.",
+   "edge": true
+  }
+ },
+ "aotStructure": {
+  "ok": true,
+  "participantWalls": [
+   {
+    "p": "mm",
+    "label": "MM",
+    "agg": false,
+    "callWall": 7754.8,
+    "callGamma": 2575956480,
+    "putWall": 8104.8,
+    "putGamma": -2024162176
+   },
+   {
+    "p": "cust",
+    "label": "CUST",
+    "agg": false,
+    "callWall": 7904.8,
+    "callGamma": 1120978176,
+    "putWall": 7754.8,
+    "putGamma": -2198987008
+   },
+   {
+    "p": "procust",
+    "label": "PC",
+    "agg": false,
+    "callWall": 7554.8,
+    "callGamma": 1066936256,
+    "putWall": 7779.8,
+    "putGamma": -658799552
+   },
+   {
+    "p": "bd",
+    "label": "BD",
+    "agg": false,
+    "callWall": 7654.8,
+    "callGamma": 371108128,
+    "putWall": 7839.8,
+    "putGamma": -359052640
+   },
+   {
+    "p": "firm",
+    "label": "FIRM",
+    "agg": false,
+    "callWall": 8054.8,
+    "callGamma": 1570492544,
+    "putWall": 7754.8,
+    "putGamma": -978747456
+   },
+   {
+    "p": "dealer",
+    "label": "DEALER (MM+BD)",
+    "agg": true,
+    "callWall": 7754.8,
+    "callGamma": 2523914692,
+    "putWall": 8104.8,
+    "putGamma": -2025341241.1
+   },
+   {
+    "p": "client",
+    "label": "CLIENT (CUST+PC+FIRM)",
+    "agg": true,
+    "callWall": 8054.8,
+    "callGamma": 2063956944,
+    "putWall": 7754.8,
+    "putGamma": -2564207040
+   }
+  ],
+  "tension": [
+   {
+    "strike": 7864.8,
+    "mm": 549568192,
+    "cust": -680763840,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 7869.8,
+    "mm": -136686368,
+    "cust": 201431136,
+    "kind": "INVERSO"
+   },
+   {
+    "strike": 7874.8,
+    "mm": 154168864,
+    "cust": -188742496,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 7879.8,
+    "mm": 748783872,
+    "cust": -189625808,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 7884.8,
+    "mm": 1325937920,
+    "cust": -1187502848,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 7889.8,
+    "mm": 89552504,
+    "cust": -19020584,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 7894.8,
+    "mm": 229101776,
+    "cust": -109718064,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 7899.8,
+    "mm": 204910288,
+    "cust": -161654576,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 7904.8,
+    "mm": -1451183360,
+    "cust": 1120978176,
+    "kind": "INVERSO"
+   },
+   {
+    "strike": 7909.8,
+    "mm": 123687344,
+    "cust": -30214204,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 7914.8,
+    "mm": 563100608,
+    "cust": -125771704,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 7919.8,
+    "mm": 182213104,
+    "cust": -120619728,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 7924.8,
+    "mm": 249368624,
+    "cust": -145837536,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 7929.8,
+    "mm": -91224040,
+    "cust": 255468768,
+    "kind": "INVERSO"
+   },
+   {
+    "strike": 7939.8,
+    "mm": 197920336,
+    "cust": -134755248,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 7944.8,
+    "mm": 116889776,
+    "cust": -2893308.8,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 7959.8,
+    "mm": -33769588,
+    "cust": 27165372,
+    "kind": "INVERSO"
+   },
+   {
+    "strike": 7964.8,
+    "mm": -126983672,
+    "cust": 165678976,
+    "kind": "INVERSO"
+   },
+   {
+    "strike": 7969.8,
+    "mm": 292068832,
+    "cust": -294818432,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 7974.8,
+    "mm": -17961104,
+    "cust": 84691912,
+    "kind": "INVERSO"
+   },
+   {
+    "strike": 7979.8,
+    "mm": 454936768,
+    "cust": -331404064,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 7984.8,
+    "mm": 96501384,
+    "cust": -66608824,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 7989.8,
+    "mm": -218956080,
+    "cust": 241909904,
+    "kind": "INVERSO"
+   },
+   {
+    "strike": 7994.8,
+    "mm": 16817372,
+    "cust": -25351328,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 7999.8,
+    "mm": -4413304,
+    "cust": 13017935,
+    "kind": "INVERSO"
+   },
+   {
+    "strike": 8009.8,
+    "mm": 135698800,
+    "cust": -117700792,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 8014.8,
+    "mm": -48729880,
+    "cust": 108518424,
+    "kind": "INVERSO"
+   },
+   {
+    "strike": 8024.8,
+    "mm": -92048400,
+    "cust": 109598976,
+    "kind": "INVERSO"
+   },
+   {
+    "strike": 8029.8,
+    "mm": 79387048,
+    "cust": -34826860,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 8039.8,
+    "mm": -38652976,
+    "cust": 33400956,
+    "kind": "INVERSO"
+   },
+   {
+    "strike": 8044.8,
+    "mm": 325068192,
+    "cust": -33375608,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 8049.8,
+    "mm": 26643248,
+    "cust": -4070797,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 8059.8,
+    "mm": 38479560,
+    "cust": -32639178,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 8074.8,
+    "mm": -85714472,
+    "cust": 15957726,
+    "kind": "INVERSO"
+   },
+   {
+    "strike": 8079.8,
+    "mm": -35795992,
+    "cust": 7417821.5,
+    "kind": "INVERSO"
+   },
+   {
+    "strike": 8089.8,
+    "mm": 18603624,
+    "cust": -19747324,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 8094.8,
+    "mm": 587185472,
+    "cust": -22457474,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 8099.8,
+    "mm": 5433012,
+    "cust": -6205259,
+    "kind": "MM_ABSORVE_CUST_EMPURRA"
+   },
+   {
+    "strike": 8104.8,
+    "mm": -2024162176,
+    "cust": 782850688,
+    "kind": "INVERSO"
+   },
+   {
+    "strike": 8109.8,
+    "mm": -5500634.5,
+    "cust": 1821317.6,
+    "kind": "INVERSO"
+   }
+  ],
+  "attentionPoint": {
+   "strike": 7754.8,
+   "sumAbs": 6419260156
+  },
+  "tensionCount": 104,
+  "note": "ESTRUTURA OBSERVADA — SEM EDGE PREDITIVO COMPROVADO. Divergência MM×CUST reprovada no backtest (p=0,020). Não é sinal."
+ },
+ "dexGex": {
+  "ok": true,
+  "phase": "snapshot",
+  "maxAbs": null,
+  "strikes": 141,
+  "snapshot": [
+   {
+    "k": 7865,
+    "futK": 7919.8,
+    "gex": 184310396.5
+   },
+   {
+    "k": 7870,
+    "futK": 7924.8,
+    "gex": 241356231
+   },
+   {
+    "k": 7875,
+    "futK": 7929.8,
+    "gex": -145280280
+   },
+   {
+    "k": 7880,
+    "futK": 7934.8,
+    "gex": 58760430
+   },
+   {
+    "k": 7885,
+    "futK": 7939.8,
+    "gex": 200226441.2
+   },
+   {
+    "k": 7890,
+    "futK": 7944.8,
+    "gex": 135534130
+   },
+   {
+    "k": 7895,
+    "futK": 7949.8,
+    "gex": -262896749.4
+   },
+   {
+    "k": 7900,
+    "futK": 7954.8,
+    "gex": -701328280
+   },
+   {
+    "k": 7905,
+    "futK": 7959.8,
+    "gex": -31774714.1
+   },
+   {
+    "k": 7910,
+    "futK": 7964.8,
+    "gex": -112198146
+   },
+   {
+    "k": 7915,
+    "futK": 7969.8,
+    "gex": 294398481.5
+   },
+   {
+    "k": 7920,
+    "futK": 7974.8,
+    "gex": -31561439
+   },
+   {
+    "k": 7925,
+    "futK": 7979.8,
+    "gex": 445354421
+   },
+   {
+    "k": 7930,
+    "futK": 7984.8,
+    "gex": 100116215.5
+   },
+   {
+    "k": 7935,
+    "futK": 7989.8,
+    "gex": -219009243.3
+   },
+   {
+    "k": 7940,
+    "futK": 7994.8,
+    "gex": 17161836.6
+   },
+   {
+    "k": 7945,
+    "futK": 7999.8,
+    "gex": -724017
+   },
+   {
+    "k": 7950,
+    "futK": 8004.8,
+    "gex": -566702776
+   },
+   {
+    "k": 7955,
+    "futK": 8009.8,
+    "gex": 136531152.9
+   },
+   {
+    "k": 7960,
+    "futK": 8014.8,
+    "gex": -44197721
+   },
+   {
+    "k": 7965,
+    "futK": 8019.8,
+    "gex": 17672712.5
+   },
+   {
+    "k": 7970,
+    "futK": 8024.8,
+    "gex": -91131845.6
+   },
+   {
+    "k": 7975,
+    "futK": 8029.8,
+    "gex": 68151211
+   },
+   {
+    "k": 7980,
+    "futK": 8034.8,
+    "gex": 279516645.8
+   },
+   {
+    "k": 7985,
+    "futK": 8039.8,
+    "gex": -37059562.6
+   },
+   {
+    "k": 7990,
+    "futK": 8044.8,
+    "gex": 325442655.8
+   },
+   {
+    "k": 7995,
+    "futK": 8049.8,
+    "gex": 27172607.3
+   },
+   {
+    "k": 8000,
+    "futK": 8054.8,
+    "gex": -1783020448
+   },
+   {
+    "k": 8005,
+    "futK": 8059.8,
+    "gex": 38814013.3
+   },
+   {
+    "k": 8010,
+    "futK": 8064.8,
+    "gex": 48891234.1
+   },
+   {
+    "k": 8015,
+    "futK": 8069.8,
+    "gex": 7639646.7
+   },
+   {
+    "k": 8020,
+    "futK": 8074.8,
+    "gex": -87046322.8
+   },
+   {
+    "k": 8025,
+    "futK": 8079.8,
+    "gex": -26010053
+   },
+   {
+    "k": 8030,
+    "futK": 8084.8,
+    "gex": -168083259.7
+   },
+   {
+    "k": 8035,
+    "futK": 8089.8,
+    "gex": 18765325
+   },
+   {
+    "k": 8040,
+    "futK": 8094.8,
+    "gex": 589239974
+   },
+   {
+    "k": 8045,
+    "futK": 8099.8,
+    "gex": 5433012
+   },
+   {
+    "k": 8050,
+    "futK": 8104.8,
+    "gex": -2025341241.1
+   },
+   {
+    "k": 8055,
+    "futK": 8109.8,
+    "gex": -5440455.4
+   },
+   {
+    "k": 8060,
+    "futK": 8114.8,
+    "gex": -185036752.4
+   }
+  ],
+  "note": "Snapshot GEX-by-strike (fase 1). Rastro temporal completo = fase 2 (mais caro, mais fiel)."
+ },
+ "stopTake": {
+  "ok": true,
+  "base": 7720.8,
+  "up": 7768.33,
+  "down": 7673.27,
+  "upPt": 47.53,
+  "downPt": 47.53,
+  "skewRatio": 1,
+  "assimetrica": false,
+  "upSym": 7768.33,
+  "downSym": 7673.27,
+  "_note": "Banda implícita de 1 dia (STOP - TAKE). up/down são LADOS, não papéis: comprado o take é em cima, vendido é embaixo. skewRatio>1 = perna de baixo mais larga (put estruturalmente mais caro em índice). assimetrica=false → o :3500 não casou a linha de skew e caiu na banda simétrica."
+ },
+ "flowByStrike": {
+  "ok": true,
+  "strikes": 54,
+  "escala": "strike de ÍNDICE (k) + futuro (futK)",
+  "top": [
+   {
+    "k": 7725,
+    "futK": 7779.8,
+    "gexDealer": 1575574700,
+    "dist": 4.03,
+    "callCompr": {
+     "n": 7,
+     "ag": 68650.44,
+     "sg": 68650.44,
+     "pr": 20301
+    },
+    "callVend": {
+     "n": 1,
+     "ag": 6245.24,
+     "sg": -6245.24,
+     "pr": 1850
+    },
+    "putCompr": {
+     "n": 3,
+     "ag": 24980.95,
+     "sg": 24980.95,
+     "pr": 8424
+    },
+    "putVend": {
+     "n": 1,
+     "ag": 6245.24,
+     "sg": 6245.24,
+     "pr": 2100
+    },
+    "agTotal": 106121.87,
+    "sgTotal": 93631.39
+   },
+   {
+    "k": 7675,
+    "futK": 7729.8,
+    "gexDealer": 637284792,
+    "dist": -45.97,
+    "callCompr": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "callVend": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "putCompr": {
+     "n": 8,
+     "ag": 89267.48,
+     "sg": 81503.08,
+     "pr": 13771
+    },
+    "putVend": {
+     "n": 1,
+     "ag": 3354.79,
+     "sg": -3354.79,
+     "pr": 1167
+    },
+    "agTotal": 92622.27,
+    "sgTotal": 78148.29
+   },
+   {
+    "k": 7600,
+    "futK": 7654.8,
+    "gexDealer": 346800610,
+    "dist": -120.97,
+    "callCompr": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "callVend": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "putCompr": {
+     "n": 2,
+     "ag": 2240.85,
+     "sg": 2240.85,
+     "pr": 650
+    },
+    "putVend": {
+     "n": 4,
+     "ag": 80939.55,
+     "sg": -80939.55,
+     "pr": 7275
+    },
+    "agTotal": 83180.4,
+    "sgTotal": -78698.7
+   },
+   {
+    "k": 7720,
+    "futK": 7774.8,
+    "gexDealer": -727500905.2,
+    "dist": -0.97,
+    "callCompr": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "callVend": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "putCompr": {
+     "n": 2,
+     "ag": 14171.86,
+     "sg": 14171.86,
+     "pr": 9990
+    },
+    "putVend": {
+     "n": 3,
+     "ag": 68142.69,
+     "sg": -68142.69,
+     "pr": 20270
+    },
+    "agTotal": 82314.55,
+    "sgTotal": -53970.83
+   },
+   {
+    "k": 7700,
+    "futK": 7754.8,
+    "gexDealer": 2523914692,
+    "dist": -20.97,
+    "callCompr": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "callVend": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "putCompr": {
+     "n": 4,
+     "ag": 34608.94,
+     "sg": 26374,
+     "pr": 10020
+    },
+    "putVend": {
+     "n": 1,
+     "ag": 1719.44,
+     "sg": -1719.44,
+     "pr": 5510
+    },
+    "agTotal": 36328.38,
+    "sgTotal": 24654.56
+   },
+   {
+    "k": 7800,
+    "futK": 7854.8,
+    "gexDealer": -768773456,
+    "dist": 79.03,
+    "callCompr": {
+     "n": 4,
+     "ag": 17210.74,
+     "sg": 14134.53,
+     "pr": 11656
+    },
+    "callVend": {
+     "n": 5,
+     "ag": 19073.09,
+     "sg": -16014.41,
+     "pr": 11642
+    },
+    "putCompr": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "putVend": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "agTotal": 36283.83,
+    "sgTotal": -1879.88
+   },
+   {
+    "k": 7780,
+    "futK": 7834.8,
+    "gexDealer": 261061939.5,
+    "dist": 59.03,
+    "callCompr": {
+     "n": 2,
+     "ag": 5916.46,
+     "sg": 5916.46,
+     "pr": 420
+    },
+    "callVend": {
+     "n": 3,
+     "ag": 27699.44,
+     "sg": -1882.89,
+     "pr": 3445
+    },
+    "putCompr": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "putVend": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "agTotal": 33615.9,
+    "sgTotal": 4033.57
+   },
+   {
+    "k": 7550,
+    "futK": 7604.8,
+    "gexDealer": -432563268,
+    "dist": -170.97,
+    "callCompr": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "callVend": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "putCompr": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "putVend": {
+     "n": 3,
+     "ag": 31674.13,
+     "sg": -31674.13,
+     "pr": 3200
+    },
+    "agTotal": 31674.13,
+    "sgTotal": -31674.13
+   },
+   {
+    "k": 7685,
+    "futK": 7739.8,
+    "gexDealer": 82532591.7,
+    "dist": -35.97,
+    "callCompr": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "callVend": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "putCompr": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "putVend": {
+     "n": 3,
+     "ag": 31655.78,
+     "sg": -22603.86,
+     "pr": 5348
+    },
+    "agTotal": 31655.78,
+    "sgTotal": -22603.86
+   },
+   {
+    "k": 7655,
+    "futK": 7709.8,
+    "gexDealer": -206411769.8,
+    "dist": -65.97,
+    "callCompr": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "callVend": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "putCompr": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "putVend": {
+     "n": 8,
+     "ag": 29610.78,
+     "sg": -2679.02,
+     "pr": 3691
+    },
+    "agTotal": 29610.78,
+    "sgTotal": -2679.02
+   },
+   {
+    "k": 7710,
+    "futK": 7764.8,
+    "gexDealer": -50894384.9,
+    "dist": -10.97,
+    "callCompr": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "callVend": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "putCompr": {
+     "n": 1,
+     "ag": 5903.21,
+     "sg": -5903.21,
+     "pr": 1470
+    },
+    "putVend": {
+     "n": 4,
+     "ag": 22049.6,
+     "sg": -10243.18,
+     "pr": 6540
+    },
+    "agTotal": 27952.81,
+    "sgTotal": -16146.39
+   },
+   {
+    "k": 7805,
+    "futK": 7859.8,
+    "gexDealer": 89551716,
+    "dist": 84.03,
+    "callCompr": {
+     "n": 2,
+     "ag": 8143.83,
+     "sg": 8143.83,
+     "pr": 3238
+    },
+    "callVend": {
+     "n": 1,
+     "ag": 18984.44,
+     "sg": -18984.44,
+     "pr": 900
+    },
+    "putCompr": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "putVend": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "agTotal": 27128.27,
+    "sgTotal": -10840.61
+   },
+   {
+    "k": 7730,
+    "futK": 7784.8,
+    "gexDealer": -649023216,
+    "dist": 9.03,
+    "callCompr": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "callVend": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "putCompr": {
+     "n": 1,
+     "ag": 18745.65,
+     "sg": 18745.65,
+     "pr": 7050
+    },
+    "putVend": {
+     "n": 1,
+     "ag": 6248.55,
+     "sg": -6248.55,
+     "pr": 2320
+    },
+    "agTotal": 24994.2,
+    "sgTotal": 12497.1
+   },
+   {
+    "k": 7650,
+    "futK": 7704.8,
+    "gexDealer": -431363178,
+    "dist": -70.97,
+    "callCompr": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "callVend": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "putCompr": {
+     "n": 1,
+     "ag": 22991.16,
+     "sg": -22991.16,
+     "pr": 57675
+    },
+    "putVend": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "agTotal": 22991.16,
+    "sgTotal": -22991.16
+   },
+   {
+    "k": 7630,
+    "futK": 7684.8,
+    "gexDealer": 589775082,
+    "dist": -90.97,
+    "callCompr": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "callVend": {
+     "n": 0,
+     "ag": 0,
+     "sg": 0,
+     "pr": 0
+    },
+    "putCompr": {
+     "n": 2,
+     "ag": 10326.69,
+     "sg": 10326.69,
+     "pr": 11916
+    },
+    "putVend": {
+     "n": 3,
+     "ag": 12459.56,
+     "sg": -12459.56,
+     "pr": 9406
+    },
+    "agTotal": 22786.25,
+    "sgTotal": -2132.87
+   }
+  ],
+  "_note": "Fluxo TRANSACIONADO hoje por strike × (call/put × comprada/vendida). Ortogonal ao dexGex/gexByStrike, que medem POSIÇÃO. ag=|gamma| (imune à ambiguidade de sinal) · sg=assinado · pr=|prêmio| · n=nº de trades. Ordenado por |agTotal|. SPX/ES apenas."
+ },
+ "hedgeDirection": {
+  "ok": true,
+  "spot": 7775.77,
+  "fluxoCobertura": 0.38,
+  "melhorEntrada": {
+   "lado": "VENDA",
+   "nivel": 7754.8,
+   "strikeIdx": 7700,
+   "dist": -20.97,
+   "pressao": 100,
+   "regime": "SEGURA",
+   "leitura": "ímã — o nível é o alvo (o preço é atraído e pina ali)"
+  },
+  "top": [
+   {
+    "k": 7700,
+    "futK": 7754.8,
+    "gexDealer": 2523914692,
+    "regime": "SEGURA",
+    "pressao": 100,
+    "dist": -20.97
+   },
+   {
+    "k": 8050,
+    "futK": 8104.8,
+    "gexDealer": -2025341241.1,
+    "regime": "EMPURRA",
+    "pressao": 85,
+    "dist": 329.03
+   },
+   {
+    "k": 8000,
+    "futK": 8054.8,
+    "gexDealer": -1783020448,
+    "regime": "EMPURRA",
+    "pressao": 78,
+    "dist": 279.03
+   },
+   {
+    "k": 7850,
+    "futK": 7904.8,
+    "gexDealer": -1506717808,
+    "regime": "EMPURRA",
+    "pressao": 70,
+    "dist": 129.03
+   },
+   {
+    "k": 7735,
+    "futK": 7789.8,
+    "gexDealer": 1052232369.2,
+    "regime": "SEGURA",
+    "pressao": 56,
+    "dist": 14.03
+   },
+   {
+    "k": 7705,
+    "futK": 7759.8,
+    "gexDealer": 1859495597,
+    "regime": "SEGURA",
+    "pressao": 55,
+    "dist": -15.97
+   },
+   {
+    "k": 7800,
+    "futK": 7854.8,
+    "gexDealer": -768773456,
+    "regime": "EMPURRA",
+    "pressao": 48,
+    "dist": 79.03
+   },
+   {
+    "k": 7760,
+    "futK": 7814.8,
+    "gexDealer": -697557328,
+    "regime": "EMPURRA",
+    "pressao": 46,
+    "dist": 39.03
+   }
+  ],
+  "_note": "Pressão de hedge 0-100 por strike. DIREÇÃO 100% da posição do dealer (base canônica, skill §1); fluxo assinado entra com 25% só na intensidade e nunca inverte. Os dois regimes dão a MESMA direção — o que muda é o que acontece ao chegar (SEGURA=pina, EMPURRA=estende). ⚠️ Heurística ordenada, sem backtest — leitura, não gatilho."
+ },
+ "_esOnly": true,
+ "_fixture": {
+  "captured": "2026-10-04T12:0xZ market CLOSED",
+  "source": "AOT BFF 127.0.0.1:3600 GET indicators.json",
+  "sanitized": "account/operator ids redacted, arrays capped at 40"
+ }
+}
