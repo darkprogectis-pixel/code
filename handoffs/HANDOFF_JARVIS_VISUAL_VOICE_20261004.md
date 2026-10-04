@@ -63,6 +63,6 @@ NEXT EXACT:
 - **JEV FINAL = A COMPLETE_AND_VERIFIED** `req_01a10664e4ab7bf1b1d6a7079f2ab885` conf 0.17. Probabilities: A .27 / C .24 / F .20 / G .11 / H .09 / B .05 / D .03 / E .01 (narrow margin, recorded as is; single run).
 - Baseline worktree `base-ade771a` removed.
 - Commits: `55b5819` avatar · `8d6cb88` voice · `ec8aaa6` tests · docs commit. After the commits, AV22 PASS (alpha-video 56/56).
-- Push: PUSH_RESULT_PLACEHOLDER
+- Push: DONE, origin/main ade771a..bc253ba (REMOTE_HEAD bc253ba at push time; this handoff line is a follow-up commit).
 - Not done (operator order needed): restart of the running stack (jarvis pid 80376, old code) to measure live stack start and to give the live :3594 the state bus. Command: `npm run stack:stop && npm run jarvis:start`.
 - State: RECHECK PASS, waiting for `finish.mjs complete`.
