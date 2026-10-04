@@ -5,6 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 import { MODELS_DIR } from './install-models.mjs';
+import { resolveProfile, applyProfile, ttsSpeed, isIdentity } from './voice-profile.mjs';
 
 const require = createRequire(import.meta.url);
 let sherpa = null, loadErr = null;
@@ -80,8 +81,9 @@ const STT_FIX = [
 ];
 export const normalizeTranscript = (t) => STT_FIX.reduce((s, [re, r]) => s.replace(re, r), String(t || '')).replace(/\s+/g, ' ').trim();
 
-export function createVoice(cfg = {}, { dir = MODELS_DIR, now = () => Date.now() } = {}) {
+export function createVoice(cfg = {}, { dir = MODELS_DIR, now = () => Date.now(), env = process.env } = {}) {
   const V = cfg.voice || {}, threads = V.num_threads ?? 2, idle = V.unload_after_idle_ms ?? 600000;
+  const prof = resolveProfile(cfg, env); // single central voice profile (config voice.profile / JARVIS_VOICE_PROFILE)
   const cache = new Map(); // id ⇒ {obj, used}
   const gc = setInterval(() => { for (const [k, v] of cache) if (now() - v.used > idle) cache.delete(k); }, Math.min(idle, 60000)); gc.unref?.();
   const reason = () => (!sherpa ? `sherpa-onnx-node: ${loadErr}` : null);
@@ -97,7 +99,7 @@ export function createVoice(cfg = {}, { dir = MODELS_DIR, now = () => Date.now()
       const models = Object.fromEntries(ids.map((i) => [i, modelAvailable(i, dir)]));
       const stt = [V.stt?.model, V.stt?.fallback].find((i) => models[i]) || null, tts = [V.tts?.engine, ...(V.tts?.alternatives || [])].find((i) => models[i]) || null;
       const ok = !!sherpa && V.enabled !== false && !!stt && !!tts;
-      return { available: ok, status: ok ? 'VOICE_READY' : `VOICE_UNAVAILABLE(${reason() || (V.enabled === false ? 'disabled' : !stt ? 'no STT model' : 'no TTS model')})`, runtime: sherpa ? `sherpa-onnx ${sherpa.version}` : null, stt, tts, models, loaded: [...cache.keys()], models_dir: dir };
+      return { profile: prof.profile.name, profile_warnings: prof.warnings, available: ok, status: ok ? 'VOICE_READY' : `VOICE_UNAVAILABLE(${reason() || (V.enabled === false ? 'disabled' : !stt ? 'no STT model' : 'no TTS model')})`, runtime: sherpa ? `sherpa-onnx ${sherpa.version}` : null, stt, tts, models, loaded: [...cache.keys()], models_dir: dir };
     },
     // samples: Float32Array 16 kHz mono ⇒ {text, raw, ms, audio_s, rtf, model}
     async stt(samples, { model } = {}) {
@@ -119,17 +121,21 @@ export function createVoice(cfg = {}, { dir = MODELS_DIR, now = () => Date.now()
       return { samples: out, segments: segs.length };
     },
     // text ⇒ async iterator of per-sentence chunks {i, samples, sampleRate, ms}; cancel() aborts between/within sentences.
-    synth(text, { engine } = {}) {
-      const id = engine || self.status().tts; let cancelled = false;
+    // profile: ROBOTIC/NATURAL (voice-profile.mjs) applied per sentence; a DSP failure falls back to the raw TTS samples.
+    synth(text, { engine, profile } = {}) {
+      const p = profile || prof.profile;
+      const id = engine || (!isIdentity(p) && modelAvailable(p.voice, dir) ? p.voice : self.status().tts); let cancelled = false;
       const parts = sentences(text);
       async function* run() {
         if (!id) throw new Error('VOICE_UNAVAILABLE(no TTS model)');
         const tts = await get(id, () => sherpa.OfflineTts.createAsync(ttsConfig(id, threads, dir)));
         for (let i = 0; i < parts.length && !cancelled; i++) {
           const t0 = performance.now();
-          const a = await tts.generateAsync({ text: parts[i], sid: id === 'kokoro-int8' ? (V.tts?.kokoro_sid ?? 0) : 0, speed: V.tts?.speed ?? 1.0, onProgress: () => (cancelled ? 0 : 1) });
+          const a = await tts.generateAsync({ text: parts[i], sid: id === 'kokoro-int8' ? (V.tts?.kokoro_sid ?? 0) : 0, speed: ttsSpeed(p, V.tts?.speed ?? 1.0), onProgress: () => (cancelled ? 0 : 1) });
           if (cancelled) return;
-          yield { i, n: parts.length, samples: a.samples, sampleRate: a.sampleRate, ms: Math.round(performance.now() - t0), engine: id };
+          const ms = Math.round(performance.now() - t0), d0 = performance.now(); let samples = a.samples, profile_error = null;
+          try { samples = applyProfile(a.samples, a.sampleRate, p); } catch (e) { profile_error = String(e.message).slice(0, 120); }
+          yield { i, n: parts.length, samples, sampleRate: a.sampleRate, ms, engine: id, profile: p.name, dsp_ms: Math.round((performance.now() - d0) * 10) / 10, profile_error };
         }
       }
       return { engine: id, parts, cancel() { cancelled = true; }, get cancelled() { return cancelled; }, [Symbol.asyncIterator]: run };
