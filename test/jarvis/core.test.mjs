@@ -37,6 +37,8 @@ const CORPUS = {
   MARKET_SUMMARY: ['resumo do mercado', 'como está o mercado?', 'me dá um panorama', 'visão geral', 'como estamos'],
   CANCEL: ['pare', 'cancela', 'silêncio', 'para', 'chega'],
   UNKNOWN: ['bom dia jarvis', 'qual a capital da frança', 'conta uma piada'],
+  KNOWLEDGE_QUERY: ['O que é Call Wall?', 'Como SpotGamma interpreta Zero Gamma?', 'O que é Volatility Trigger?', 'Explique positive gamma.', 'O que o curso diz sobre ações individuais?', 'HIRO é usado para quê?'],
+  CROSS_SOURCE: ['Como SpotGamma e MenthorQ explicam positive gamma?', 'compare como os cursos explicam delta hedging'],
 };
 test('router corpus ≥ 60 phrases, every intent of the order covered, the 8 phrases of the order route correctly', () => {
   const all = Object.values(CORPUS).flat(); assert.ok(all.length >= 60, `${all.length}`);
