@@ -65,4 +65,5 @@ NEXT EXACT:
 - Commits: `55b5819` avatar · `8d6cb88` voice · `ec8aaa6` tests · docs commit. After the commits, AV22 PASS (alpha-video 56/56).
 - Push: DONE, origin/main ade771a..bc253ba (REMOTE_HEAD bc253ba at push time; this handoff line is a follow-up commit).
 - Not done (operator order needed): restart of the running stack (jarvis pid 80376, old code) to measure live stack start and to give the live :3594 the state bus. Command: `npm run stack:stop && npm run jarvis:start`.
-- State: RECHECK PASS, waiting for `finish.mjs complete`.
+- Recheck 2 after commits/push (loop jf-20261004021740-263ae5): PASS 8/8 (HEAD 3d76503).
+- State: RECHECK PASS, loop jf-20261004021740-263ae5 completed by `finish.mjs complete` (session d3960349).
