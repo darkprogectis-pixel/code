@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="jarvis-token" content="__JARVIS_TOKEN__"><title>INVICTUS AOT · ALFABOT explicado</title><style>
+  :root{--void:#0B0E11;--panel:#12171C;--inset:#1A2129;--line:#232C35;--ink:#E6EDF3;--ink-dim:#8A97A3;--ink-faint:#5A6672;
+    --long:#26A69A;--short:#EF5350;--warn:#FFB300;--steel:#5AB0C4;--mono:ui-monospace,"SF Mono","Cascadia Code",Consolas,monospace;
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--r:12px}
+  *{box-sizing:border-box} html,body{margin:0} body{background:var(--void);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.45}
+  .topbar{display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding:10px 16px;border-bottom:1px solid var(--line)}
+  .brand .mark{color:var(--steel);font-weight:700} .brand .sub{color:var(--ink-faint);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-left:8px}
+  .tab{padding:5px 12px;border-radius:7px;font-size:12px;font-weight:600;color:var(--ink-dim);text-decoration:none} .tab.active{background:var(--inset);color:var(--ink)}
+  main{padding:16px;max-width:1300px;margin:0 auto;display:grid;gap:14px} .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+  .eyebrow{font-size:10.5px;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-faint);margin:0 0 10px;font-weight:600}
+  .sig{font-size:22px;font-weight:800;font-family:var(--mono)} .BUY{color:var(--long)} .SELL{color:var(--short)} .WAIT,.NEUTRAL{color:var(--warn)} .INVALID_DATA{color:var(--short)}
+  .PASS{color:var(--long)} .FAIL{color:var(--short)} .UNKNOWN{color:var(--warn)} .NOT_EVALUATED,.NOT_APPLICABLE{color:var(--ink-faint)}
+  table{width:100%;border-collapse:collapse;font-size:12px} td,th{padding:5px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top} th{color:var(--ink-faint)}
+  .wrap{overflow-x:auto} .conf div{font-family:var(--mono);font-size:13px} .muted{color:var(--ink-dim)} .tag{font-size:10.5px;color:var(--steel);font-family:var(--mono)}
+  input,button{background:var(--inset);color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:6px 10px;font:inherit}
+</style></head><body data-page="alfabot">
+<header class="topbar"><div class="brand"><span class="mark">◆ INVICTUS&nbsp;不可征服者</span><span class="sub">AOT · ALFABOT SIGNAL · explicado</span></div>
+  <nav><a class="tab" href="/aot">JARVIS</a><a class="tab active" href="/aot/alfabot">ALFABOT SIGNAL</a><a class="tab" href="/aot/indicadores">INDICADORES</a><a class="tab" href="http://127.0.0.1:3600/alfabot-signal.html" target="_blank" rel="noopener">original no AOT ↗</a></nav></header>
+<main>
+  <p class="muted" style="margin:0">Motor de EXPLICAÇÃO: mostra por que o motor canônico publicou (ou não) BUY/SELL. Nunca cria direção. <span id="st"></span></p>
+  <div id="syms" style="display:grid;gap:14px"></div>
+  <section class="card"><p class="eyebrow">Pergunte ao JARVIS</p><form id="f" style="display:flex;gap:8px;flex-wrap:wrap"><input id="q" style="flex:1;min-width:200px" placeholder="Qual condição está faltando? · Qual seria a invalidação?"><button>Perguntar</button></form><p id="ans"></p></section>
+</main>
+<script src="/aot/aot-ui.js"></script>
+<script type="module">
+import { explain } from '/aot/alfabot-explain.mjs';
+const { tfetch, post, esc, play } = window.JarvisAot;
+const ICON = { PASS: '✓', FAIL: '✕', UNKNOWN: '?', NOT_EVALUATED: '·', NOT_APPLICABLE: '—' };
+function render(m, local) {
+  document.getElementById('st').textContent = `${local ? 'modo local (JARVIS sem matriz do servidor)' : 'via JARVIS'} · ${new Date(m.at).toLocaleTimeString()}`;
+  document.getElementById('syms').innerHTML = Object.values(m.symbols).map((s) => `<section class="card">
+    <p class="eyebrow">${s.symbol} · sessão ${esc(s.session)} · motor: ${esc(s.engine_ui_state)}${s.engine_block_reason ? ' · ' + esc(s.engine_block_reason) : ''}</p>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start">
+      <div><div class="sig ${s.signal}">${s.signal}</div><div class="muted">status ${esc(s.status)}${s.flags.length ? ' · ' + esc(s.flags.join(',')) : ''}</div>
+        <div class="num">${s.conditions_passed}/${s.conditions_total} passam · ${s.conditions_failed} falham · ${s.conditions_unknown} ? · ${s.conditions_not_evaluated} não avaliadas</div></div>
+      <div class="conf">${s.rows.map((r) => `<div class="${r.result}">${ICON[r.result]} ${esc(r.id)} ${esc(r.indicator)} <span class="muted">— ${esc(r.explanation)}</span></div>`).join('')}</div></div>
+    <p><b>${s.why_now ? 'Por que agora' : 'Por que não'}:</b> ${esc(s.why_now || s.why_not)} · <b>Invalidação:</b> ${esc(typeof s.invalidation === 'string' ? s.invalidation : s.invalidation.price)}</p>
+    <div class="wrap"><table><thead><tr>${s.columns.map((c) => `<th>${c}</th>`).join('')}</tr></thead><tbody>${s.rows.map((r) => `<tr><td>${esc(r.id)} ${esc(r.indicator)}</td><td>${esc(r.source)}</td><td class="num">${esc(r.value)}</td><td>${esc(r.state)}</td><td>${esc(r.condition)}</td><td>${esc(r.threshold)}</td><td class="${r.result}">${r.result}</td><td>${esc(r.freshness)}</td><td>${esc(r.contribution)}</td><td>${esc(r.explanation)}</td></tr>`).join('')}</tbody></table></div></section>`).join('');
+}
+async function load() {
+  try { const r = await tfetch('/api/aot/signal'); if (!r.ok) throw new Error(r.status); render(await r.json(), false); }
+  catch { // fallback: same pure engine in the browser over the AOT snapshot alone (C2/C3 become UNKNOWN)
+    try { const a = await tfetch('http://127.0.0.1:3600/api/alfabot-signal').then((x) => x.json()); render(explain({ alfabot: a, state: null, now: Date.now() }), true); }
+    catch { document.getElementById('st').textContent = 'JARVIS e AOT indisponíveis — nenhum sinal exibido'; }
+  }
+}
+document.getElementById('f').addEventListener('submit', async (e) => { e.preventDefault(); const text = document.getElementById('q').value.trim(); if (!text) return;
+  try { const a = await post('/api/aot/ask', { area: 'ALFABOT', text }); document.getElementById('ans').innerHTML = (a.sentences || []).map((s) => `${esc(s.text)} <span class="tag">${esc(s.provenance)}</span>`).join('<br>'); if (a.audio) play(a.audio); } catch { document.getElementById('ans').textContent = 'JARVIS indisponível'; } });
+load(); setInterval(load, 5000);
+</script>
+</body></html>
