@@ -1,0 +1,42 @@
+{
+  "schema": "jarvis-skills/v1",
+  "mode": "READ_ONLY_KNOWLEDGE",
+  "content_trust": "UNTRUSTED_EVIDENCE",
+  "jev_diff": "req_01a104487f037beb97209f8655dab39c",
+  "policy": "each skill stays canonical for its own domain; JARVIS only selects, queries and cites; sources are never merged silently; no evidence => INSUFFICIENT_EVIDENCE",
+  "skills": [
+    {
+      "skill_id": "skill-alpha-gamma", "name": "α Gamma (SpotGamma)", "domain": "SPOTGAMMA", "source": "SPOTGAMMA", "source_class": "FIRST_PARTY_COURSE",
+      "path": ".claude/skills/skill-alpha-gamma/SKILL.md", "corpus_path": "knowledge/video-spotgamma",
+      "retrieval_method": "spotgamma-course-ask", "api_filter": null, "live_state_source": "gamma",
+      "confidence_policy": "item confidence, UNCALIBRATED; concept-strict hits only", "enabled": true, "priority": 1, "default_knowledge": true
+    },
+    {
+      "skill_id": "skill-alpha-q", "name": "α Q (MenthorQ)", "domain": "MENTHORQ", "source": "MENTHORQ", "source_class": "COURSE_VIDEO",
+      "path": ".claude/skills/skill-alpha-q/SKILL.md", "corpus_path": "knowledge/video",
+      "retrieval_method": "alpha-video-ask", "api_filter": null, "live_state_source": "q",
+      "confidence_policy": "item confidence, UNCALIBRATED; concept-strict hits only", "enabled": true, "priority": 2, "default_knowledge": true
+    },
+    {
+      "skill_id": "skill-alpha-quant", "name": "α Quant (Consolidator)", "domain": "ALPHA_QUANT", "source": "MENTHORQ", "source_class": "COURSE_VIDEO",
+      "path": ".claude/skills/skill-alpha-quant/SKILL.md", "corpus_path": "knowledge/video",
+      "retrieval_method": "alpha-video-ask", "api_filter": "quant", "live_state_source": "quant",
+      "confidence_policy": "item confidence, UNCALIBRATED; concept-strict hits only", "enabled": true, "priority": 3, "default_knowledge": false
+    },
+    {
+      "skill_id": "skill-alpha-bot", "name": "α Bot (GexBot)", "domain": "ALPHA_BOT", "source": "MENTHORQ", "source_class": "COURSE_VIDEO",
+      "path": ".claude/skills/skill-alpha-bot/SKILL.md", "corpus_path": "knowledge/video",
+      "retrieval_method": "alpha-video-ask", "api_filter": "bot", "live_state_source": "bot",
+      "confidence_policy": "item confidence, UNCALIBRATED; concept-strict hits only", "enabled": true, "priority": 3, "default_knowledge": false
+    },
+    {
+      "skill_id": "skill-alpha-data", "name": "α Data (QuantData)", "domain": "ALPHA_DATA", "source": "MENTHORQ", "source_class": "COURSE_VIDEO",
+      "path": ".claude/skills/skill-alpha-data/SKILL.md", "corpus_path": "knowledge/video",
+      "retrieval_method": "alpha-video-ask", "api_filter": "data", "live_state_source": "data",
+      "confidence_policy": "item confidence, UNCALIBRATED; concept-strict hits only", "enabled": true, "priority": 3, "default_knowledge": false
+    }
+  ],
+  "not_for_jarvis": [
+    { "skill_id": "jev-finish", "path": ".claude/skills/jev-finish/SKILL.md", "reason": "workflow control skill, not domain knowledge" }
+  ]
+}

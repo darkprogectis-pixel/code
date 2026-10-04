@@ -1,5 +1,5 @@
 // JARVIS deterministic intent router (pt-BR) + glossary (term ⇒ source/field). No LLM. Pure.
-export const INTENTS = ['CANCEL', 'DIRECT_FIELD', 'LEVEL_QUERY', 'PRESSURE_QUERY', 'SOURCE_STATUS', 'COMPARISON', 'FUSION_EXPLANATION', 'CHANGE_QUERY', 'HISTORICAL_QUERY', 'MARKET_SUMMARY', 'FOLLOW_UP', 'UNKNOWN'];
+export const INTENTS = ['CANCEL', 'DIRECT_FIELD', 'LEVEL_QUERY', 'PRESSURE_QUERY', 'SOURCE_STATUS', 'COMPARISON', 'FUSION_EXPLANATION', 'CHANGE_QUERY', 'HISTORICAL_QUERY', 'MARKET_SUMMARY', 'FOLLOW_UP', 'KNOWLEDGE_QUERY', 'CROSS_SOURCE', 'UNKNOWN'];
 export const norm = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9α ]+/g, ' ').replace(/\s+/g, ' ').trim();
 
 // Source aliases (α names, vendor names, common STT spellings).
@@ -39,6 +39,12 @@ export const findLevel = (t) => Object.entries(LEVEL_ALIASES).find(([, al]) => a
 export const findField = (t) => FIELD_ALIASES.find((f) => f.re.test(t)) || null;
 export const findMarkets = (t) => [...new Set(t.split(' ').filter((w) => MARKETS[w]).map((w) => MARKETS[w]))];
 
+// Knowledge (course/skill) questions: definitional phrasing without live-value cues. Answered from the skill corpora, not the live state.
+export const KNOWLEDGE_RE = /(^| )(o que (e|sao|significa|quer dizer)|que e (o|a)|significa\w*|defin\w*|conceito\w*|expli\w*|interpreta\w*|para que serve|serve para|usad[oa]s? para|curso|aula|ensina\w*)( |$)/;
+export const LIVE_CUE_RE = /(^| )(onde|agora|atual|atualmente|valor|quanto|neste momento|hoje|nivel atual)( |$)/;
+export const CROSS_RE = /(compar|diferenca|diferem|ambas|ambos|as duas fontes|cada fonte)/;
+const KNOWLEDGE_VENDORS = [/(^| )(spot ?gamm?a|alfa gamm?a)( |$)/, /(^| )(menth?or ?q|mentor que|menthor|alfa q)( |$)/];
+
 export function route(text, mem = {}) {
   const t = norm(text);
   const slots = { sources: findSources(t), level: findLevel(t), field: findField(t), markets: findMarkets(t) };
@@ -46,6 +52,10 @@ export function route(text, mem = {}) {
   if (!t) return I('UNKNOWN', 0);
   if (/^(pare|para|parar|cancela|cancelar|silencio|chega|stop)\b/.test(t)) return I('CANCEL', 1);
   if (/(por que|porque|explica|explique|justifica|razao|motivo)/.test(t) && (slots.sources.includes('fusion') || /sinal/.test(t))) return I('FUSION_EXPLANATION', 0.9);
+  if (KNOWLEDGE_RE.test(t) && !LIVE_CUE_RE.test(t)) {
+    const both = KNOWLEDGE_VENDORS.every((re) => re.test(t));
+    return I(both || CROSS_RE.test(t) ? 'CROSS_SOURCE' : 'KNOWLEDGE_QUERY', 0.85);
+  }
   if (/(compar|mais forte|mais fraco|versus|\bvs\b|diferenca entre)/.test(t) || (slots.sources.filter((s) => s !== 'fusion').length >= 2 && /(e o|e a|ou)/.test(t)) || slots.markets.length >= 2) return I('COMPARISON', 0.85);
   if (/(virou|mudou|flip|inverteu|trocou|mudanca)/.test(t)) return I('CHANGE_QUERY', 0.85);
   if (/(historico|ultimos|ultimas|mais cedo|ao longo|hoje inteiro|quantas vezes)/.test(t)) return I('HISTORICAL_QUERY', 0.8);
