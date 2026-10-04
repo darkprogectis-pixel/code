@@ -67,3 +67,15 @@ NEXT EXACT:
 - Not done (operator order needed): restart of the running stack (jarvis pid 80376, old code) to measure live stack start and to give the live :3594 the state bus. Command: `npm run stack:stop && npm run jarvis:start`.
 - Recheck 2 after commits/push (loop jf-20261004021740-263ae5): PASS 8/8 (HEAD 3d76503).
 - State: RECHECK PASS, loop jf-20261004021740-263ae5 completed by `finish.mjs complete` (session d3960349).
+
+### 7. ACTIVATION (operator order 2026-10-04, session d3960349; no code change, no new JEV FINAL)
+- Before: jev-obs + alpha up, jarvis pid 80376 (old code, no /api/events), avatar DOWN, HEAD e23d9a9.
+- Step: `npm run stack:stop` → `npm run jarvis:start` → validate processes / avatar / pipeline (results below).
+- Result (2026-10-04 ~11:37Z): old stack stopped (jev-obs 51928, alpha 12992, jarvis 80376; avatar was not running). New stack: jev-obs 69356, alpha 57600, jarvis 18380 (HEAD e23d9a9, /api/ui-state live), avatar 87948 (READY 814 ms, asset OK). One instance each; JARVIS health OK ≈ 1.9 s after `jarvis:start`.
+- Live avatar window: visible, rect 3176,1128–3416,1368 (240 px @ 96 dpi), no caption/sysmenu/thickframe, exstyle TOPMOST|LAYERED|TOOLWINDOW, corner click passes through and centre hits the avatar; initial state IDLE.
+- Live pipeline (real exe in `--selftest --inject-audio` mode, separate var dir, against live :3594): SSE LISTENING(client) → THINKING(core) → SPEAKING(client) → IDLE(client), transcript "o que é o HIRO segundo a Spottigama.", SpotGamma ANSWERED with course/lesson/timestamp, cycle profile ROBOTIC. Barge-in run: SPEAKING → LISTENING (playback stopped; cycle log barge_in=false, i.e. the server had no synthesis left to cancel). Typed fallback MenthorQ: 200, ANSWERED. Voice VOICE_READY, profile ROBOTIC, wake_word.enabled=false. Final bus state IDLE.
+- Physical mic PTT click on the visible avatar was not performed by the agent (MANUAL_PHYSICAL). No code change, no commit, no JEV FINAL.
+- State at WARNING (222k, session d3960349): mission + activation DONE. HEAD = origin/main = e23d9a9. Loop jf-20261004021740-263ae5 COMPLETE. Live stack running (jev-obs 69356, alpha 57600, jarvis 18380, avatar 87948).
+- Uncommitted from this mission: only §7 of this handoff (not committed, per the activation order). Other untracked/modified files predate this mission and are unrelated (kimi-provider, rotation tests, START_JEV_CLAUDE.ps1, other handoffs) and preserved.
+- Tests run at activation: live E2E + barge-in via the avatar exe self-test against :3594, typed MenthorQ fallback (all OK). No unit suites re-run (no code change).
+- EXACT NEXT STEP: none pending. Optional, operator only: physical mic PTT click on the avatar and a 125/150 % DPI check (MANUAL_PHYSICAL); commit §7 of this handoff if the operator wants it versioned.
