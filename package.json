@@ -36,6 +36,8 @@
     "test:rotation:real": "node test/rotation/live-transcript.mjs --real-parent",
     "test:jarvis": "node --test \"test/jarvis/*.test.mjs\"",
     "test:jev-obs": "node --test \"test/jev-obs/*.test.mjs\"",
+    "test:jarvis-aot": "node --test \"test/jarvis/aot-*.test.mjs\"",
+    "jarvis:aot:catalog": "node tools/jarvis/aot/catalog-build.mjs",
     "jarvis": "node tools/jarvis/server.mjs",
     "jarvis:models": "node tools/jarvis/install-models.mjs",
     "jarvis:bench": "node tools/jarvis/bench.mjs",

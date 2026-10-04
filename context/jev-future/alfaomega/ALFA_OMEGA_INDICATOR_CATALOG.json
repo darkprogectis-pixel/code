@@ -1,0 +1,4788 @@
+{
+ "schema": "alfa-omega-indicator-catalog/v1",
+ "status": "BUILT",
+ "built_from": {
+  "nt8": [
+   "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects",
+   "home:Documents/NinjaTrader 8/bin/Custom/Indicators"
+  ],
+  "aot": "home:.claude/aot",
+  "api_samples": "repo:fixtures/jarvis-aot",
+  "curated": "repo:config/alfaomega-indicators.curated.json"
+ },
+ "rule": "semantic fields only from curated entries with resolvable evidence; otherwise UNKNOWN / NOT_VERIFIED. Knowledge sources are never DATA.",
+ "counts": {
+  "NT8_SUPPORT": 32,
+  "NT8_INDICATOR": 51,
+  "AOT_BLOCK": 41,
+  "KNOWLEDGE_SOURCE": 5
+ },
+ "verified": 18,
+ "wiring": [
+  {
+   "source": "consolidator",
+   "alias": "α Quant",
+   "url": "http://localhost:3495",
+   "keyed": true
+  },
+  {
+   "source": "spotgamma",
+   "alias": "α Gamma",
+   "url": "http://localhost:3500",
+   "keyed": true
+  },
+  {
+   "source": "gexbot",
+   "alias": "α Bot",
+   "url": "http://localhost:3457",
+   "keyed": false
+  },
+  {
+   "source": "menthorq",
+   "alias": "α Q",
+   "url": "http://localhost:3480",
+   "keyed": true
+  },
+  {
+   "source": "quantdata",
+   "alias": "α Data",
+   "url": "http://localhost:3490",
+   "keyed": true
+  },
+  {
+   "source": "alfaomega",
+   "alias": null,
+   "url": "http://127.0.0.1:5151",
+   "keyed": false
+  }
+ ],
+ "indicators": [
+  {
+   "id": "nt8:AlfaOmegaAlfaBotRelay",
+   "name": "AlfaOmegaAlfaBotRelay",
+   "class_name": "AoAlfaBot",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAlfaBotRelay.cs",
+   "owner_line": 41,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "GEXBOT+SPOTGAMMA",
+   "source_alias": [
+    "α Bot",
+    "α Gamma"
+   ],
+   "source_ports": [
+    {
+     "port": 3457,
+     "line": 6
+    },
+    {
+     "port": 3500,
+     "line": 102
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAlfaBotRelay.cs:41"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaAlfaConsolidatorRelay",
+   "name": "AlfaOmegaAlfaConsolidatorRelay",
+   "class_name": "AoAlfaConsolidator",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAlfaConsolidatorRelay.cs",
+   "owner_line": 23,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "CONSOLIDATOR+AO_BRIDGE+QUANTDATA+MENTHORQ",
+   "source_alias": [
+    "α Quant",
+    "α Data",
+    "α Q"
+   ],
+   "source_ports": [
+    {
+     "port": 3495,
+     "line": 2
+    },
+    {
+     "port": 5151,
+     "line": 15
+    },
+    {
+     "port": 3490,
+     "line": 15
+    },
+    {
+     "port": 3480,
+     "line": 15
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAlfaConsolidatorRelay.cs:23"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaAlfaDataRelay",
+   "name": "AlfaOmegaAlfaDataRelay",
+   "class_name": "AoAlfaData",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAlfaDataRelay.cs",
+   "owner_line": 26,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "QUANTDATA",
+   "source_alias": [
+    "α Data"
+   ],
+   "source_ports": [
+    {
+     "port": 3490,
+     "line": 2
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAlfaDataRelay.cs:26"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaAlfaGammaRelay",
+   "name": "AlfaOmegaAlfaGammaRelay",
+   "class_name": "AoAlfaGamma",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAlfaGammaRelay.cs",
+   "owner_line": 32,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "SPOTGAMMA",
+   "source_alias": [
+    "α Gamma"
+   ],
+   "source_ports": [
+    {
+     "port": 3500,
+     "line": 8
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAlfaGammaRelay.cs:32"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaAlfaQRelay",
+   "name": "AlfaOmegaAlfaQRelay",
+   "class_name": "AoAlfaQ",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAlfaQRelay.cs",
+   "owner_line": 25,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "MENTHORQ",
+   "source_alias": [
+    "α Q"
+   ],
+   "source_ports": [
+    {
+     "port": 3480,
+     "line": 2
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAlfaQRelay.cs:25"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaAuthV2",
+   "name": "AlfaOmegaAuthV2",
+   "class_name": "AoAuthV2Exception",
+   "classes": 4,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAuthV2.cs",
+   "owner_line": 37,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "INTERNAL",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAuthV2.cs:37"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaCallPutClassing",
+   "name": "AlfaOmegaCallPutClassing",
+   "class_name": "AlfaOmegaCallPutClassing",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCallPutClassing.cs",
+   "owner_line": 48,
+   "description": "Niveis de gamma por concentracao, com tipo (call/put) do QuantData e a posicao medida do dealer (long γ / short γ) do SpotGamma. STOP-TAKE compartilhado com o AlfaOmegaTrace.",
+   "description_line": 214,
+   "plots": [],
+   "source_class": "SPOTGAMMA+QUANTDATA",
+   "source_alias": [
+    "α Gamma",
+    "α Data"
+   ],
+   "source_ports": [
+    {
+     "port": 3500,
+     "line": 117
+    },
+    {
+     "port": 3490,
+     "line": 271
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCallPutClassing.cs:48"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaCallPutClassingB3",
+   "name": "AlfaOmegaCallPutClassingB3",
+   "class_name": "AlfaOmegaCallPutClassingB3",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCallPutClassingB3.cs",
+   "owner_line": 40,
+   "description": "Niveis de gamma classificados (B3): concentracao + tipo + exposicao coberta/descoberta/travada. A B3 nao publica participante, entao o 3o eixo e descoberto x coberto — nao o papel long/short gamma do ES.",
+   "description_line": 103,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCallPutClassingB3.cs:40"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaClassic",
+   "name": "AlfaOmegaClassic",
+   "class_name": "AlfaOmegaClassic",
+   "classes": 4,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaClassic.cs",
+   "owner_line": 141,
+   "description": "Painel classic do GexBot — gamma por strike sobre o preco do NT8.",
+   "description_line": 352,
+   "plots": [],
+   "source_class": "GEXBOT",
+   "source_alias": [
+    "α Bot"
+   ],
+   "source_ports": [
+    {
+     "port": 3457,
+     "line": 159
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "GAMMA_BY_STRIKE",
+   "signal_role": "JEV_FOUR_SOURCE_INPUT",
+   "unit": "UNKNOWN",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaClassic.cs:141",
+    "repo:CLAUDE.md:121",
+    "nt8:AlfaOmegaClassic.cs:352"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaCopilotAssetWindow",
+   "name": "AlfaOmegaCopilotAssetWindow",
+   "class_name": "AlfaOmegaCopilotAssetWindow",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCopilotAssetWindow.cs",
+   "owner_line": 16,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "INTERNAL",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCopilotAssetWindow.cs:16"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaCopilotES",
+   "name": "AlfaOmegaCopilotES",
+   "class_name": "AlfaOmegaCopilotES",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCopilotES.cs",
+   "owner_line": 28,
+   "description": "Alfa Omega Copilot ES — especializado em E-mini S&P 500 (ES): historico de sinais + consulta a IA (LLM) sob demanda.",
+   "description_line": 123,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCopilotES.cs:28"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaCopilotGC",
+   "name": "AlfaOmegaCopilotGC",
+   "class_name": "AlfaOmegaCopilotGC",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCopilotGC.cs",
+   "owner_line": 29,
+   "description": "Alfa Omega Copilot GC — copiloto dedicado ao Ouro (GC/Gold Futures): historico de sinais + consulta a IA (LLM) sob demanda.",
+   "description_line": 129,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCopilotGC.cs:29"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaCopilotIndicator",
+   "name": "AlfaOmegaCopilotIndicator",
+   "class_name": "AlfaOmegaCopilotIndicator",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCopilotIndicator.cs",
+   "owner_line": 29,
+   "description": "Alfa Omega Copilot — historico de sinais + consulta a IA (LLM) sob demanda.",
+   "description_line": 111,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCopilotIndicator.cs:29"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaCopilotNQ",
+   "name": "AlfaOmegaCopilotNQ",
+   "class_name": "AlfaOmegaCopilotNQ",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCopilotNQ.cs",
+   "owner_line": 29,
+   "description": "Alfa Omega Copilot NQ — especializado em E-mini Nasdaq 100 (NQ): historico de sinais + consulta a IA (LLM) sob demanda.",
+   "description_line": 129,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCopilotNQ.cs:29"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaDepth",
+   "name": "AlfaOmegaDepth",
+   "class_name": "AlfaOmegaDepth",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaDepth.cs",
+   "owner_line": 23,
+   "description": "Alfa Omega Depth (Alfa Omega Projects) — mudanca relativa/absoluta de liquidez.",
+   "description_line": 86,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaDepth.cs:23"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaDexGexFlow",
+   "name": "AlfaOmegaDexGexFlow",
+   "class_name": "AlfaOmegaDexGexFlow",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaDexGexFlow.cs",
+   "owner_line": 81,
+   "description": "Alfa Omega — DEX/GEX Flow: niveis 0DTE + rastro (heatmap de permanencia). Sucessor do DarkFlowZeroDTE.",
+   "description_line": 436,
+   "plots": [],
+   "source_class": "GEXBOT",
+   "source_alias": [
+    "α Bot"
+   ],
+   "source_ports": [
+    {
+     "port": 3457,
+     "line": 4
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "DEALER_FLOW_LEVELS",
+   "signal_role": "JEV_FOUR_SOURCE_INPUT",
+   "unit": "UNKNOWN",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaDexGexFlow.cs:81",
+    "repo:CLAUDE.md:120",
+    "nt8:AlfaOmegaDexGexFlow.cs:436"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaDivergenceESX",
+   "name": "AlfaOmegaDivergenceESX",
+   "class_name": "AlfaOmegaDivergenceESX",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaDivergenceESX.cs",
+   "owner_line": 56,
+   "description": "CONTEXTO (sem backtest), nunca sinal: renderiza o veredito de divergencia ES/SPX x VIX que o :3500 ja calcula. Nao vota no gate nem na HIBRIDA — o VIX mede demanda por protecao, nao direcao.",
+   "description_line": 159,
+   "plots": [],
+   "source_class": "SPOTGAMMA+AO_BRIDGE+AOT_BFF",
+   "source_alias": [
+    "α Gamma"
+   ],
+   "source_ports": [
+    {
+     "port": 3500,
+     "line": 7
+    },
+    {
+     "port": 5151,
+     "line": 434
+    },
+    {
+     "port": 3600,
+     "line": 434
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "ES_SPX_VIX_DIVERGENCE",
+   "signal_role": "CONTEXT_NOT_SIGNAL",
+   "unit": "UNKNOWN",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaDivergenceESX.cs:56",
+    "nt8:AlfaOmegaDivergenceESX.cs:159"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaFlowOne",
+   "name": "AlfaOmegaFlowOne",
+   "class_name": "AlfaOmegaFlowOne",
+   "classes": 2,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaFlowOne.cs",
+   "owner_line": 233,
+   "description": "Peça única de order flow Alfa Omega: footprint + tape/L2 + LLM + MVI/ICE/STOP.",
+   "description_line": 1018,
+   "plots": [],
+   "source_class": "SPOTGAMMA+AO_BRIDGE+CONSOLIDATOR",
+   "source_alias": [
+    "α Gamma",
+    "α Quant"
+   ],
+   "source_ports": [
+    {
+     "port": 3500,
+     "line": 621
+    },
+    {
+     "port": 5151,
+     "line": 4632
+    },
+    {
+     "port": 3495,
+     "line": 4632
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaFlowOne.cs:233"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaFlowOneHybrid",
+   "name": "AlfaOmegaFlowOneHybrid",
+   "class_name": "AlfaOmegaFlowOneHybrid",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaFlowOneHybrid.cs",
+   "owner_line": 57,
+   "description": "Variante Hybrid do FlowOne: camadas de opções/GEX num overlay só, com toggle por camada e um poller compartilhado.",
+   "description_line": 962,
+   "plots": [],
+   "source_class": "SPOTGAMMA",
+   "source_alias": [
+    "α Gamma"
+   ],
+   "source_ports": [
+    {
+     "port": 3500,
+     "line": 137
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaFlowOneHybrid.cs:57"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaFlowOnePersistence",
+   "name": "AlfaOmegaFlowOnePersistence",
+   "class_name": "FoSignalRecord",
+   "classes": 3,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaFlowOnePersistence.cs",
+   "owner_line": 31,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "INTERNAL",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaFlowOnePersistence.cs:31"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaFusion",
+   "name": "AlfaOmegaFusion",
+   "class_name": "AlfaOmegaFusion",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaFusion.cs",
+   "owner_line": 25,
+   "description": "Alfa Omega Fusion — alerta quando MarketExplorer e MarketVolumeImbalance concordam.",
+   "description_line": 67,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaFusion.cs:25"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaGammaEngineB3",
+   "name": "AlfaOmegaGammaEngineB3",
+   "class_name": "AlfaOmegaGammaEngineB3",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaGammaEngineB3.cs",
+   "owner_line": 42,
+   "description": "Motor de regime e niveis de gamma para B3 (gamma-methodology). Flip, walls, ActivGate e conflito de regime sobre a grade da Jumba. Sem blindspots/swing/hvl: sao modelos proprietarios do MenthorQ, nao dado de mercado.",
+   "description_line": 102,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaGammaEngineB3.cs:42"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaGammaPressure",
+   "name": "AlfaOmegaGammaPressure",
+   "class_name": "AlfaOmegaGammaPressure",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaGammaPressure.cs",
+   "owner_line": 79,
+   "description": "Alfa Omega — Pressao de Transicao do regime de gamma (formula B', backtestada). Sub-painel. Consome o :3500.",
+   "description_line": 210,
+   "plots": [],
+   "source_class": "SPOTGAMMA",
+   "source_alias": [
+    "α Gamma"
+   ],
+   "source_ports": [
+    {
+     "port": 3500,
+     "line": 33
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "GAMMA_REGIME",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaGammaPressure.cs:79",
+    "nt8:AlfaOmegaGammaPressure.cs:210"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaGexByStrike",
+   "name": "AlfaOmegaGexByStrike",
+   "class_name": "AlfaOmegaGexByStrike",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaGexByStrike.cs",
+   "owner_line": 80,
+   "description": "Alfa Omega — GEX by Strike (barras horizontais Gama AO) ancoradas no preco do ES. Consome o Processo B :3500.",
+   "description_line": 333,
+   "plots": [],
+   "source_class": "SPOTGAMMA",
+   "source_alias": [
+    "α Gamma"
+   ],
+   "source_ports": [
+    {
+     "port": 3500,
+     "line": 8
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaGexByStrike.cs:80"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaGexByStrikeB3",
+   "name": "AlfaOmegaGexByStrikeB3",
+   "class_name": "AlfaOmegaGexByStrikeB3",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaGexByStrikeB3.cs",
+   "owner_line": 67,
+   "description": "GEX por strike da B3 (WIN/IND ou WDO) — grade da Jumba via jumba-api :3520, ancorada no preco do futuro. Dado D-1 por natureza; a idade fica VISIVEL na tela.",
+   "description_line": 171,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaGexByStrikeB3.cs:67"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaGravity",
+   "name": "AlfaOmegaGravity",
+   "class_name": "AlfaOmegaGravity",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaGravity.cs",
+   "owner_line": 30,
+   "description": "Alfa Omega Gravity (Alfa Omega Projects) — liquidez outside BBO ponderada por distância do topo do book (peso 2^(-pos/HalfLife)).",
+   "description_line": 103,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaGravity.cs:30"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaHiro",
+   "name": "AlfaOmegaHiro",
+   "class_name": "AlfaOmegaHiro",
+   "classes": 8,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaHiro.cs",
+   "owner_line": 85,
+   "description": "Alfa Omega — linha HIRO (Gama AO) + walls ancorados no preco. Consome o Processo B :3500.",
+   "description_line": 599,
+   "plots": [],
+   "source_class": "SPOTGAMMA+GEXBOT+AO_BRIDGE+MENTHORQ+QUANTDATA+CONSOLIDATOR",
+   "source_alias": [
+    "α Gamma",
+    "α Bot",
+    "α Q",
+    "α Data",
+    "α Quant"
+   ],
+   "source_ports": [
+    {
+     "port": 3500,
+     "line": 5
+    },
+    {
+     "port": 3457,
+     "line": 122
+    },
+    {
+     "port": 5151,
+     "line": 1130
+    },
+    {
+     "port": 3480,
+     "line": 2353
+    },
+    {
+     "port": 3490,
+     "line": 2353
+    },
+    {
+     "port": 3495,
+     "line": 2353
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaHiro.cs:85"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaLogin",
+   "name": "AlfaOmegaLogin",
+   "class_name": "AlfaOmegaLogin",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaLogin.cs",
+   "owner_line": 41,
+   "description": "Alfa Omega — Login (usuario+senha). Bootstrap AUTH V2: device TPM/CNG, sem arquivo local. 2026-09-20.",
+   "description_line": 64,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaLogin.cs:41"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaMarker",
+   "name": "AlfaOmegaMarker",
+   "class_name": "AlfaOmegaMarker",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaMarker.cs",
+   "owner_line": 31,
+   "description": "Alfa Omega Marker (Alfa Omega Projects) — niveis de liquidez em repouso no DOM: top-N por lado em linhas horizontais ancoradas no preco, com deteccao de spike de liquidez.",
+   "description_line": 117,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaMarker.cs:31"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaNetDrift",
+   "name": "AlfaOmegaNetDrift",
+   "class_name": "AlfaOmegaNetDrift",
+   "classes": 5,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaNetDrift.cs",
+   "owner_line": 46,
+   "description": "Alfa Omega Net Drift standalone — 3 linhas (Calls/Puts/Subjacente) + volume em area + linha AO   (delta agregado, velocidade por espessura/opacidade). Fonte: quantdata-api :3490.",
+   "description_line": 196,
+   "plots": [],
+   "source_class": "QUANTDATA",
+   "source_alias": [
+    "α Data"
+   ],
+   "source_ports": [
+    {
+     "port": 3490,
+     "line": 3
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaNetDrift.cs:46"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaNetGex0DTE",
+   "name": "AlfaOmegaNetGex0DTE",
+   "class_name": "AlfaOmegaNetGex0DTE",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaNetGex0DTE.cs",
+   "owner_line": 62,
+   "description": "Alfa Omega — NetGEX 0DTE: histograma (acima de zero = compra, abaixo = venda). Fonte: relay gex.net_0dte. NAO e o GammaPressure (aquele mede flip).",
+   "description_line": 141,
+   "plots": [
+    {
+     "name": "NetGEX0DTE",
+     "line": 159
+    },
+    {
+     "name": "NetGEXNext",
+     "line": 160
+    }
+   ],
+   "source_class": "GEXBOT",
+   "source_alias": [
+    "α Bot"
+   ],
+   "source_ports": [
+    {
+     "port": 3457,
+     "line": 11
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "GAMMA_EXPOSURE",
+   "signal_role": "JEV_FOUR_SOURCE_INPUT",
+   "unit": "UNKNOWN",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaNetGex0DTE.cs:62",
+    "repo:CLAUDE.md:119",
+    "nt8:AlfaOmegaNetGex0DTE.cs:141"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaNexus",
+   "name": "AlfaOmegaNexus",
+   "class_name": "AlfaOmegaNexus",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaNexus.cs",
+   "owner_line": 40,
+   "description": "Alfa Omega Nexus (reconstrucao): MVI x3, Stop Volume, Stop Run, Sweep, Spike, Absorption.",
+   "description_line": 405,
+   "plots": [],
+   "source_class": "AO_BRIDGE",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 5151,
+     "line": 1109
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaNexus.cs:40"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaOpenFlow",
+   "name": "AlfaOmegaOpenFlow",
+   "class_name": "AlfaOmegaOpenFlow",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaOpenFlow.cs",
+   "owner_line": 84,
+   "description": "Alfa Omega — OpenFlow: fluxo de opcoes da abertura + regime de gamma. ⚠️ A DIRECAO NAO TEM EDGE COMPROVADO (285 sessoes, 3 pre-registros reprovados; rotulo interno 'T1 · SEM EDGE ISOLADO'). Contexto para confluencia manual, NUNCA sinal de entrada. O regime (magnitude) TEM respaldo: p=0,0001 — AMPLIFICA ~29,9 pts vs ABSORVE ~19,4 pts. TELA: Modo Compacto (default) = direcao + fluxo (Gamma dealer, $B) + pontos esperados numa linha. Modo Basico (Property 'Modo Basico') = + regime AMPLIFICA/ABSORVE + Gamma dealer + movimento esperado. Os avisos metodologicos (T1/SEM EDGE/p-valor/n sessoes) ficam SO aqui, nunca na tela.",
+   "description_line": 208,
+   "plots": [],
+   "source_class": "SPOTGAMMA",
+   "source_alias": [
+    "α Gamma"
+   ],
+   "source_ports": [
+    {
+     "port": 3500,
+     "line": 38
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "OPTIONS_FLOW_OPEN",
+   "signal_role": "CONTEXT_NOT_SIGNAL",
+   "unit": "UNKNOWN",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaOpenFlow.cs:84",
+    "nt8:AlfaOmegaOpenFlow.cs:208"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaOptionsFlowHiro",
+   "name": "AlfaOmegaOptionsFlowHiro",
+   "class_name": "AlfaOmegaOptionsFlowHiro",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaOptionsFlowHiro.cs",
+   "owner_line": 85,
+   "description": "Fluxo direcional de opções acumulado (HIRO) — CONTEXTO, não sinal. Fonte /tape/options :3500.",
+   "description_line": 233,
+   "plots": [],
+   "source_class": "SPOTGAMMA",
+   "source_alias": [
+    "α Gamma"
+   ],
+   "source_ports": [
+    {
+     "port": 3500,
+     "line": 14
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "OPTIONS_FLOW_HIRO",
+   "signal_role": "CONTEXT_NOT_SIGNAL",
+   "unit": "UNKNOWN",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaOptionsFlowHiro.cs:85",
+    "nt8:AlfaOmegaOptionsFlowHiro.cs:233"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaOrderflow",
+   "name": "AlfaOmegaOrderflow",
+   "class_name": "AlfaOmegaOrderflow",
+   "classes": 8,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaOrderflow.cs",
+   "owner_line": 235,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "GEXBOT",
+   "source_alias": [
+    "α Bot"
+   ],
+   "source_ports": [
+    {
+     "port": 3457,
+     "line": 13
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaOrderflow.cs:235"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaPhantom",
+   "name": "AlfaOmegaPhantom",
+   "class_name": "AlfaOmegaPhantom",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaPhantom.cs",
+   "owner_line": 33,
+   "description": "Detector sintetico de icebergs (Alfa Omega) com perfil historico e POC.",
+   "description_line": 221,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaPhantom.cs:33"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaPressure",
+   "name": "AlfaOmegaPressure",
+   "class_name": "AlfaOmegaPressure",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaPressure.cs",
+   "owner_line": 29,
+   "description": "Alfa Omega Pressure (Alfa Omega Projects) — 2 linhas de imbalance de DOM.",
+   "description_line": 98,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaPressure.cs:29"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaPulse",
+   "name": "AlfaOmegaPulse",
+   "class_name": "AlfaOmegaPulse",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaPulse.cs",
+   "owner_line": 39,
+   "description": "Alfa Omega Pulse — vDelta com half-life, histerese e tiers.",
+   "description_line": 221,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaPulse.cs:39"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaQuantEngineB3",
+   "name": "AlfaOmegaQuantEngineB3",
+   "class_name": "AlfaOmegaQuantEngineB3",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaQuantEngineB3.cs",
+   "owner_line": 36,
+   "description": "Quant Engine B3 — paineis Consolidado e Exposure sobre GEX+OI da Jumba. Max Pain derivado do OI por strike. Net Drift / Dark Pool / Signal nao existem no Brasil.",
+   "description_line": 102,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaQuantEngineB3.cs:36"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaRelayEndpoint",
+   "name": "AlfaOmegaRelayEndpoint",
+   "class_name": "AoRelayEndpoint",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaRelayEndpoint.cs",
+   "owner_line": 26,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "MENTHORQ+QUANTDATA+CONSOLIDATOR",
+   "source_alias": [
+    "α Q",
+    "α Data",
+    "α Quant"
+   ],
+   "source_ports": [
+    {
+     "port": 3480,
+     "line": 2
+    },
+    {
+     "port": 3490,
+     "line": 3
+    },
+    {
+     "port": 3495,
+     "line": 3
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaRelayEndpoint.cs:26"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaSMC",
+   "name": "AlfaOmegaSMC",
+   "class_name": "AlfaOmegaSMC",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaSMC.cs",
+   "owner_line": 68,
+   "description": "Smart Money Concepts (SMC/ICT) — reconstrucao publica",
+   "description_line": 997,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaSMC.cs:68"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaSharedState",
+   "name": "AlfaOmegaSharedState",
+   "class_name": "AlfaOmegaSharedState",
+   "classes": 3,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaSharedState.cs",
+   "owner_line": 12,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "SPOTGAMMA+AO_BRIDGE+CONSOLIDATOR+AOT_BFF",
+   "source_alias": [
+    "α Gamma",
+    "α Quant"
+   ],
+   "source_ports": [
+    {
+     "port": 3500,
+     "line": 235
+    },
+    {
+     "port": 5151,
+     "line": 549
+    },
+    {
+     "port": 3495,
+     "line": 652
+    },
+    {
+     "port": 3600,
+     "line": 652
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaSharedState.cs:12"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaState",
+   "name": "AlfaOmegaState",
+   "class_name": "AlfaOmegaState",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaState.cs",
+   "owner_line": 313,
+   "description": "Painel state do GexBot — perfil de GEX imbalance e de gregas por strike.",
+   "description_line": 511,
+   "plots": [],
+   "source_class": "GEXBOT",
+   "source_alias": [
+    "α Bot"
+   ],
+   "source_ports": [
+    {
+     "port": 3457,
+     "line": 441
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "GEX_IMBALANCE_GREEKS_PROFILE",
+   "signal_role": "JEV_FOUR_SOURCE_INPUT",
+   "unit": "UNKNOWN",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaState.cs:313",
+    "repo:CLAUDE.md:122",
+    "nt8:AlfaOmegaState.cs:511"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaStops",
+   "name": "AlfaOmegaStops",
+   "class_name": "AlfaOmegaStops",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaStops.cs",
+   "owner_line": 31,
+   "description": "Alfa Omega Stops (Alfa Omega Projects) — deteccao sintetica de Stops e Icebergs no grafico, com auto-threshold por desvio-padrao.",
+   "description_line": 127,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaStops.cs:31"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaStorm",
+   "name": "AlfaOmegaStorm",
+   "class_name": "AlfaOmegaStorm",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaStorm.cs",
+   "owner_line": 28,
+   "description": "Alfa Omega Storm (Alfa Omega Projects) — feed ao vivo de liquidações Binance Futures via WebSocket. Requer chart de cripto (ex: BTCUSDT).",
+   "description_line": 97,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 1,
+   "order_api_lines": [
+    130
+   ],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaStorm.cs:28"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaTapeStyle",
+   "name": "AlfaOmegaTapeStyle",
+   "class_name": "AoGlyph",
+   "classes": 3,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaTapeStyle.cs",
+   "owner_line": 35,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "INTERNAL",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaTapeStyle.cs:35"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaTrace",
+   "name": "AlfaOmegaTrace",
+   "class_name": "AlfaOmegaTrace",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaTrace.cs",
+   "owner_line": 111,
+   "description": "Alfa Omega — GEX-by-Strike (Gama AO) + walls. SO ES (a API nao tem grade de NQ). Consome o :3500.",
+   "description_line": 803,
+   "plots": [],
+   "source_class": "SPOTGAMMA",
+   "source_alias": [
+    "α Gamma"
+   ],
+   "source_ports": [
+    {
+     "port": 3500,
+     "line": 6
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaTrace.cs:111"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaTraceB3",
+   "name": "AlfaOmegaTraceB3",
+   "class_name": "AlfaOmegaTraceB3",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaTraceB3.cs",
+   "owner_line": 33,
+   "description": "TRACE B3 — grade GEX por strike + walls estruturais (flip/call/put) da Jumba, ancorados no preco do futuro. Sem camada HIRO: nao existe fluxo de opcoes no Brasil.",
+   "description_line": 101,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaTraceB3.cs:33"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaTraceCloud",
+   "name": "AlfaOmegaTraceCloud",
+   "class_name": "AlfaOmegaTraceCloud",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaTraceCloud.cs",
+   "owner_line": 87,
+   "description": "Heatmap de exposição (strike/spot × tempo) contido na área de uma nuvem. Fonte :3500 /cloud.",
+   "description_line": 266,
+   "plots": [],
+   "source_class": "SPOTGAMMA",
+   "source_alias": [
+    "α Gamma"
+   ],
+   "source_ports": [
+    {
+     "port": 3500,
+     "line": 46
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaTraceCloud.cs:87"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaTrackerPro",
+   "name": "AlfaOmegaTrackerPro",
+   "class_name": "AlfaOmegaTrackerPro",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaTrackerPro.cs",
+   "owner_line": 31,
+   "description": "Alfa Omega Tracker Pro (Alfa Omega Projects) — liquidez DOM bid/ask com 3 modos de soma (Unified/Weighted/Smooth) + CVD acumulado por sessao.",
+   "description_line": 99,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaTrackerPro.cs:31"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaVector",
+   "name": "AlfaOmegaVector",
+   "class_name": "AlfaOmegaVector",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVector.cs",
+   "owner_line": 31,
+   "description": "Alfa Omega Vector (reconstrucao): candle/trend/Multiplier/Trend Switch + sizing.",
+   "description_line": 97,
+   "plots": [
+    {
+     "name": "TrendLine",
+     "line": 113
+    }
+   ],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVector.cs:31"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaVectorPro",
+   "name": "AlfaOmegaVectorPro",
+   "class_name": "AlfaOmegaVectorPro",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVectorPro.cs",
+   "owner_line": 25,
+   "description": "Alfa Omega Vector Pro (reconstrucao): trend core + 2 sets de ATR + sinais.",
+   "description_line": 130,
+   "plots": [
+    {
+     "name": "TrendLine",
+     "line": 149
+    },
+    {
+     "name": "Atr1Line",
+     "line": 150
+    },
+    {
+     "name": "Atr2Line",
+     "line": 151
+    }
+   ],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVectorPro.cs:25"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaVelocity",
+   "name": "AlfaOmegaVelocity",
+   "class_name": "AlfaOmegaVelocity",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVelocity.cs",
+   "owner_line": 24,
+   "description": "Alfa Omega Velocity (Alfa Omega Projects) — Pace of Tape + Market Speed.",
+   "description_line": 85,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVelocity.cs:24"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaVision",
+   "name": "AlfaOmegaVision",
+   "class_name": "AlfaOmegaVision",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVision.cs",
+   "owner_line": 35,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVision.cs:35"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaVixLine",
+   "name": "AlfaOmegaVixLine",
+   "class_name": "AlfaOmegaVixLine",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVixLine.cs",
+   "owner_line": 39,
+   "description": "Alfa Omega — Linha do VIX (série acumulada do :3500). Banda auto-normalizada.",
+   "description_line": 147,
+   "plots": [],
+   "source_class": "SPOTGAMMA",
+   "source_alias": [
+    "α Gamma"
+   ],
+   "source_ports": [
+    {
+     "port": 3500,
+     "line": 7
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVixLine.cs:39"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaVolDashboard",
+   "name": "AlfaOmegaVolDashboard",
+   "class_name": "AlfaOmegaVolDashboard",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVolDashboard.cs",
+   "owner_line": 44,
+   "description": "Alfa Omega — Volatility Dashboard: Risk Reversal, Gamma Notional, Implied Move, walls e OI/Volume dos 6 índices (Gama AO), com histórico de 20 dias. Contexto, não é sinal.",
+   "description_line": 150,
+   "plots": [],
+   "source_class": "SPOTGAMMA",
+   "source_alias": [
+    "α Gamma"
+   ],
+   "source_ports": [
+    {
+     "port": 3500,
+     "line": 9
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVolDashboard.cs:44"
+   ]
+  },
+  {
+   "id": "nt8:AoAccountNames",
+   "name": "AoAccountNames",
+   "class_name": "AoAccountNames",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoAccountNames.cs",
+   "owner_line": 73,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AO_BRIDGE",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 5152,
+     "line": 184
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoAccountNames.cs:73"
+   ]
+  },
+  {
+   "id": "nt8:AoAccounts",
+   "name": "AoAccounts",
+   "class_name": "AoAccounts",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoAccounts.cs",
+   "owner_line": 65,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AO_BRIDGE",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 5152,
+     "line": 43
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoAccounts.cs:65"
+   ]
+  },
+  {
+   "id": "nt8:AoB3Core",
+   "name": "AoB3Core",
+   "class_name": "AoB3LinhaGex",
+   "classes": 6,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoB3Core.cs",
+   "owner_line": 50,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "INTERNAL",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoB3Core.cs:50"
+   ]
+  },
+  {
+   "id": "nt8:AoBoleta",
+   "name": "AoBoleta",
+   "class_name": "AoBoleta",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoBoleta.cs",
+   "owner_line": 41,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AO_BRIDGE",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 5152,
+     "line": 16
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoBoleta.cs:41"
+   ]
+  },
+  {
+   "id": "nt8:AoBrand",
+   "name": "AoBrand",
+   "class_name": "AoBrand",
+   "classes": 2,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoBrand.cs",
+   "owner_line": 67,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "INTERNAL",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoBrand.cs:67"
+   ]
+  },
+  {
+   "id": "nt8:AoControlCenter",
+   "name": "AoControlCenter",
+   "class_name": "AoControlCenter",
+   "classes": 2,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoControlCenter.cs",
+   "owner_line": 169,
+   "description": "Painel de status + boleta: PnL, posição, Copy Engine, execução, fluxo e envio de ordem via AlfaOmega Trader :5152.",
+   "description_line": 586,
+   "plots": [],
+   "source_class": "AO_BRIDGE+GEXBOT+SPOTGAMMA+AOT_BFF",
+   "source_alias": [
+    "α Bot",
+    "α Gamma"
+   ],
+   "source_ports": [
+    {
+     "port": 5152,
+     "line": 57
+    },
+    {
+     "port": 3457,
+     "line": 825
+    },
+    {
+     "port": 3500,
+     "line": 825
+    },
+    {
+     "port": 3600,
+     "line": 2336
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "ORDER_CAPABLE_UI",
+   "signal_role": "NONE",
+   "unit": "UNKNOWN",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 2,
+   "order_api_lines": [
+    1477,
+    2440
+   ],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoControlCenter.cs:169",
+    "nt8:AoControlCenter.cs:586"
+   ],
+   "note": "Order-capable NT8 panel (AlfaOmega Trader :5152). Catalogued only; JARVIS never calls it."
+  },
+  {
+   "id": "nt8:AoCopyStatus",
+   "name": "AoCopyStatus",
+   "class_name": "AoCopyStatus",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoCopyStatus.cs",
+   "owner_line": 29,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "INTERNAL",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoCopyStatus.cs:29"
+   ]
+  },
+  {
+   "id": "nt8:AoDiag",
+   "name": "AoDiag",
+   "class_name": "AoDiag",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoDiag.cs",
+   "owner_line": 44,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "INTERNAL",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoDiag.cs:44"
+   ]
+  },
+  {
+   "id": "nt8:AoExecClient",
+   "name": "AoExecClient",
+   "class_name": "AoExecClient",
+   "classes": 2,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoExecClient.cs",
+   "owner_line": 67,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AO_BRIDGE",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 5152,
+     "line": 2
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoExecClient.cs:67"
+   ]
+  },
+  {
+   "id": "nt8:AoHud",
+   "name": "AoHud",
+   "class_name": "AoHud",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoHud.cs",
+   "owner_line": 36,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "INTERNAL",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoHud.cs:36"
+   ]
+  },
+  {
+   "id": "nt8:AoInput",
+   "name": "AoInput",
+   "class_name": "AoInput",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoInput.cs",
+   "owner_line": 69,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AO_BRIDGE",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 5152,
+     "line": 39
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoInput.cs:69"
+   ]
+  },
+  {
+   "id": "nt8:AoInputProbe",
+   "name": "AoInputProbe",
+   "class_name": "AoInputProbe",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoInputProbe.cs",
+   "owner_line": 40,
+   "description": "Sonda de teste do AoInput (hover/pressionado/clique). Não envia ordem, não usa rede.",
+   "description_line": 74,
+   "plots": [],
+   "source_class": "AO_BRIDGE",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 5152,
+     "line": 9
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoInputProbe.cs:40"
+   ]
+  },
+  {
+   "id": "nt8:AoLicenca",
+   "name": "AoLicenca",
+   "class_name": "AoLicenca",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoLicenca.cs",
+   "owner_line": 29,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "INTERNAL",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoLicenca.cs:29"
+   ]
+  },
+  {
+   "id": "nt8:AoLicencaUi",
+   "name": "AoLicencaUi",
+   "class_name": "AoLicencaUi",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoLicencaUi.cs",
+   "owner_line": 20,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "INTERNAL",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoLicencaUi.cs:20"
+   ]
+  },
+  {
+   "id": "nt8:AoLogin",
+   "name": "AoLogin",
+   "class_name": "AoLogin",
+   "classes": 2,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoLogin.cs",
+   "owner_line": 45,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "INTERNAL",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoLogin.cs:45"
+   ]
+  },
+  {
+   "id": "nt8:AoMarcadores",
+   "name": "AoMarcadores",
+   "class_name": "AoMarcadores",
+   "classes": 2,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoMarcadores.cs",
+   "owner_line": 71,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": 11
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoMarcadores.cs:71"
+   ]
+  },
+  {
+   "id": "nt8:AoMarketDataPublisher",
+   "name": "AoMarketDataPublisher",
+   "class_name": "AoMarketDataPublisher",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoMarketDataPublisher.cs",
+   "owner_line": 36,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoMarketDataPublisher.cs:36"
+   ]
+  },
+  {
+   "id": "nt8:AoNiveis",
+   "name": "AoNiveis",
+   "class_name": "AoNiveis",
+   "classes": 3,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoNiveis.cs",
+   "owner_line": 118,
+   "description": "Linhas arrastáveis de entrada/stop/alvo e dimensionamento por risco. Não envia ordem.",
+   "description_line": 182,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoNiveis.cs:118"
+   ]
+  },
+  {
+   "id": "nt8:AoPressSessao",
+   "name": "AoPressSessao",
+   "class_name": "AoPressSessao",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoPressSessao.cs",
+   "owner_line": 24,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "INTERNAL",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoPressSessao.cs:24"
+   ]
+  },
+  {
+   "id": "nt8:AoProbeBidAsk",
+   "name": "AoProbeBidAsk",
+   "class_name": "AoProbeBidAsk",
+   "classes": 1,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoProbeBidAsk.cs",
+   "owner_line": 38,
+   "description": "PROBE descartavel: testa disponibilidade de tick historico de Bid/Ask. Nao desenha nada.",
+   "description_line": 47,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoProbeBidAsk.cs:38"
+   ]
+  },
+  {
+   "id": "nt8:AoSkin",
+   "name": "AoSkin",
+   "class_name": "AoSkin",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoSkin.cs",
+   "owner_line": 45,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "INTERNAL",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoSkin.cs:45"
+   ]
+  },
+  {
+   "id": "nt8:AoStopTakeCore",
+   "name": "AoStopTakeCore",
+   "class_name": "AoStopTakeCore",
+   "classes": 4,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoStopTakeCore.cs",
+   "owner_line": 60,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "INTERNAL",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoStopTakeCore.cs:60"
+   ]
+  },
+  {
+   "id": "nt8:AoTapeEngine",
+   "name": "AoTapeEngine",
+   "class_name": "AoTapeEngine",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoTapeEngine.cs",
+   "owner_line": 48,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "NT8_NATIVE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoTapeEngine.cs:48"
+   ]
+  },
+  {
+   "id": "nt8:AoTheme",
+   "name": "AoTheme",
+   "class_name": "AoTheme",
+   "classes": 1,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoTheme.cs",
+   "owner_line": 68,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AO_BRIDGE",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 5151,
+     "line": 335
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoTheme.cs:68"
+   ]
+  },
+  {
+   "id": "nt8:AO_DataLayer",
+   "name": "AO_DataLayer",
+   "class_name": "AoCampo",
+   "classes": 3,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/AO_DataLayer.cs",
+   "owner_line": 45,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "GEXBOT+AOT_BFF",
+   "source_alias": [
+    "α Bot"
+   ],
+   "source_ports": [
+    {
+     "port": 3457,
+     "line": 9
+    },
+    {
+     "port": 3600,
+     "line": 10
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/AO_DataLayer.cs:45"
+   ]
+  },
+  {
+   "id": "nt8:AO_DecisionLayer",
+   "name": "AO_DecisionLayer",
+   "class_name": "AoMirrorState",
+   "classes": 2,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/AO_DecisionLayer.cs",
+   "owner_line": 62,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "GEXBOT+AOT_BFF",
+   "source_alias": [
+    "α Bot"
+   ],
+   "source_ports": [
+    {
+     "port": 3457,
+     "line": 9
+    },
+    {
+     "port": 3600,
+     "line": 11
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/AO_DecisionLayer.cs:62"
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaCopilotUnificado",
+   "name": "AlfaOmegaCopilotUnificado",
+   "class_name": "AlfaOmegaCopilotUnificado",
+   "classes": 4,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/AlfaOmegaCopilotUnificado.cs",
+   "owner_line": 38,
+   "description": "Alfa Omega Copilot Unificado — veredito consolidado das 3 fontes (AO tape + Quant AO + Methor AO) via consolidator-engine :3495. ES+NQ juntos.",
+   "description_line": 186,
+   "plots": [],
+   "source_class": "CONSOLIDATOR+AO_BRIDGE+AOT_BFF",
+   "source_alias": [
+    "α Quant"
+   ],
+   "source_ports": [
+    {
+     "port": 3495,
+     "line": 2
+    },
+    {
+     "port": 5151,
+     "line": 72
+    },
+    {
+     "port": 3600,
+     "line": 77
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/AlfaOmegaCopilotUnificado.cs:38"
+   ]
+  },
+  {
+   "id": "aot:/state#gate",
+   "name": "gate",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": [
+    "ES",
+    "NQ"
+   ],
+   "category": "ES_NQ_ANCHOR_GATE",
+   "signal_role": "ALFABOT_GATE_INPUT",
+   "unit": "UNKNOWN",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [
+    "COMMAND",
+    "AUTOMATION",
+    "ALFABOT"
+   ],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160",
+    "aot:aot-bff.js:829",
+    "conso:consolidator-engine.js:137"
+   ],
+   "upstream": "AO bridge :5151 (NT8 AoGate.EsNq)",
+   "note": "ALFABOT C3 / robot entry share this producer; the Consolidator re-reads ao.anchor itself (same bridge)."
+  },
+  {
+   "id": "aot:/state#tapeFreshness",
+   "name": "tapeFreshness",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": [
+    "ES",
+    "NQ"
+   ],
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [
+    "COMMAND"
+   ],
+   "freshness_field": "tapeFreshness.asof",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#sources",
+   "name": "sources",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [
+    "COMMAND"
+   ],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#symbols",
+   "name": "symbols",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": [
+    "ES",
+    "NQ"
+   ],
+   "category": "CONSOLIDATED_PER_SYMBOL",
+   "signal_role": "ALFABOT_CONFIDENCE_INPUT",
+   "unit": "confidence 0–100",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [
+    "ALFABOT"
+   ],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160",
+    "repo:tools/jarvis/aot/alfabot-explain.mjs:50",
+    "conso:consolidator-engine.js:23"
+   ],
+   "note": "JARVIS matrix C5 reads symbols[sym].tier0.confidence; threshold TG_MIN_CONF in the Consolidator."
+  },
+  {
+   "id": "aot:/state#confluence",
+   "name": "confluence",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": [
+    "ES",
+    "NQ"
+   ],
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [
+    "COMMAND"
+   ],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#flowGc",
+   "name": "flowGc",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#flowRussell",
+   "name": "flowRussell",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": [
+    "RTY"
+   ],
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#traceCloud",
+   "name": "traceCloud",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [
+    "DEEP_DIVE"
+   ],
+   "freshness_field": "traceCloud.asof",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#wallAttention",
+   "name": "wallAttention",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#vixLine",
+   "name": "vixLine",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [
+    "DEEP_DIVE"
+   ],
+   "freshness_field": "vixLine.asof",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#gexByStrike",
+   "name": "gexByStrike",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "gexByStrike.asof",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#structure",
+   "name": "structure",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_OK",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#levelsMigration",
+   "name": "levelsMigration",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": [
+    "ES",
+    "NQ"
+   ],
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#callPutClassing",
+   "name": "callPutClassing",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#hedgeByStrike",
+   "name": "hedgeByStrike",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#stopTakeHedge",
+   "name": "stopTakeHedge",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#darkPoolLevels",
+   "name": "darkPoolLevels",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "darkPoolLevels.at",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#zeroGamma0dte",
+   "name": "zeroGamma0dte",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [
+    "DEEP_DIVE"
+   ],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#fallback1Dte",
+   "name": "fallback1Dte",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#menthorqStrategies",
+   "name": "menthorqStrategies",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": [
+    "ES",
+    "NQ"
+   ],
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [
+    "DEEP_DIVE"
+   ],
+   "freshness_field": "menthorqStrategies.asof",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#dexGexFlow",
+   "name": "dexGexFlow",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": [
+    "ES",
+    "NQ"
+   ],
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [
+    "DEEP_DIVE"
+   ],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#hiroOpra",
+   "name": "hiroOpra",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": [
+    "ES",
+    "NQ"
+   ],
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [
+    "DEEP_DIVE"
+   ],
+   "freshness_field": "hiroOpra.ts",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#ohlc",
+   "name": "ohlc",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "MISSING",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#indicators",
+   "name": "indicators",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "indicators.asof",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#marketContext",
+   "name": "marketContext",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": [
+    "ES",
+    "NQ",
+    "GC",
+    "RTY"
+   ],
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "marketContext.asof",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#analystNote",
+   "name": "analystNote",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#copilotBadge",
+   "name": "copilotBadge",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "MISSING",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#deep",
+   "name": "deep",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2160,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2160"
+   ]
+  },
+  {
+   "id": "aot:/state#v2",
+   "name": "v2",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2163,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": [
+    "ES",
+    "NQ"
+   ],
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [
+    "DEEP_DIVE"
+   ],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2163"
+   ]
+  },
+  {
+   "id": "aot:/state#confluenciaAdicional",
+   "name": "confluenciaAdicional",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2166,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": [
+    "ES",
+    "NQ"
+   ],
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "confluenciaAdicional.asof",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2166"
+   ]
+  },
+  {
+   "id": "aot:/state#sim",
+   "name": "sim",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2184,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [
+    "AUTOMATION"
+   ],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2184"
+   ]
+  },
+  {
+   "id": "aot:/state#health",
+   "name": "health",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-bff.js",
+   "owner_line": 2214,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/state"
+   ],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [
+    "COMMAND"
+   ],
+   "freshness_field": "health.at",
+   "sample_state": "NOT_OK",
+   "evidence": [
+    "home:.claude/aot/aot-bff.js:2214"
+   ]
+  },
+  {
+   "id": "aot:/api/indicators#gammaPressure",
+   "name": "gammaPressure",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-indicators.js",
+   "owner_line": 360,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/api/indicators"
+   ],
+   "instruments": [
+    "ES"
+   ],
+   "category": "GAMMA_REGIME",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [
+    "DEEP_DIVE"
+   ],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-indicators.js:360",
+    "aot:aot-indicators.js:360"
+   ]
+  },
+  {
+   "id": "aot:/api/indicators#walls",
+   "name": "walls",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-indicators.js",
+   "owner_line": 361,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/api/indicators"
+   ],
+   "instruments": [
+    "ES"
+   ],
+   "category": "GAMMA_LEVELS",
+   "signal_role": "UNKNOWN",
+   "unit": "pt ES",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [
+    "DEEP_DIVE"
+   ],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-indicators.js:361",
+    "aot:aot-indicators.js:361"
+   ]
+  },
+  {
+   "id": "aot:/api/indicators#hiroRegime",
+   "name": "hiroRegime",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-indicators.js",
+   "owner_line": 362,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/api/indicators"
+   ],
+   "instruments": [
+    "ES"
+   ],
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [
+    "DEEP_DIVE"
+   ],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_OK",
+   "evidence": [
+    "home:.claude/aot/aot-indicators.js:362"
+   ]
+  },
+  {
+   "id": "aot:/api/indicators#openFlow",
+   "name": "openFlow",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-indicators.js",
+   "owner_line": 363,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/api/indicators"
+   ],
+   "instruments": [
+    "ES"
+   ],
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-indicators.js:363"
+   ]
+  },
+  {
+   "id": "aot:/api/indicators#aotStructure",
+   "name": "aotStructure",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-indicators.js",
+   "owner_line": 364,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/api/indicators"
+   ],
+   "instruments": [
+    "ES"
+   ],
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-indicators.js:364"
+   ]
+  },
+  {
+   "id": "aot:/api/indicators#dexGex",
+   "name": "dexGex",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-indicators.js",
+   "owner_line": 365,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/api/indicators"
+   ],
+   "instruments": [
+    "ES"
+   ],
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-indicators.js:365"
+   ]
+  },
+  {
+   "id": "aot:/api/indicators#stopTake",
+   "name": "stopTake",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-indicators.js",
+   "owner_line": 367,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/api/indicators"
+   ],
+   "instruments": [
+    "ES"
+   ],
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-indicators.js:367"
+   ]
+  },
+  {
+   "id": "aot:/api/indicators#flowByStrike",
+   "name": "flowByStrike",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-indicators.js",
+   "owner_line": 368,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/api/indicators"
+   ],
+   "instruments": [
+    "ES"
+   ],
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-indicators.js:368"
+   ]
+  },
+  {
+   "id": "aot:/api/indicators#hedgeDirection",
+   "name": "hedgeDirection",
+   "kind": "AOT_BLOCK",
+   "module": "AOT_BFF",
+   "owner_file": "home:.claude/aot/aot-indicators.js",
+   "owner_line": 369,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "AOT_BFF",
+   "source_alias": [],
+   "source_ports": [
+    {
+     "port": 3600,
+     "line": null
+    }
+   ],
+   "apis": [
+    "/api/indicators"
+   ],
+   "instruments": [
+    "ES"
+   ],
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "PRESENT",
+   "evidence": [
+    "home:.claude/aot/aot-indicators.js:369"
+   ]
+  },
+  {
+   "id": "knowledge:skill-alpha-gamma",
+   "name": "α Gamma (SpotGamma)",
+   "kind": "KNOWLEDGE_SOURCE",
+   "module": "JARVIS_SKILLS",
+   "owner_file": "repo:.claude/skills/skill-alpha-gamma/SKILL.md",
+   "owner_line": 1,
+   "description": "SPOTGAMMA",
+   "description_line": null,
+   "plots": [],
+   "source_class": "KNOWLEDGE_SOURCE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "KNOWLEDGE",
+   "signal_role": "NONE",
+   "unit": "NOT_APPLICABLE",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "KNOWLEDGE",
+   "jarvis_areas": [],
+   "freshness_field": "NOT_APPLICABLE",
+   "sample_state": "NOT_SAMPLED",
+   "corpus": "knowledge/video-spotgamma",
+   "knowledge_origin": "SPOTGAMMA",
+   "evidence": [
+    "repo:.claude/skills/skill-alpha-gamma/SKILL.md:1",
+    "repo:config/jarvis-skills.json"
+   ]
+  },
+  {
+   "id": "knowledge:skill-alpha-q",
+   "name": "α Q (MenthorQ)",
+   "kind": "KNOWLEDGE_SOURCE",
+   "module": "JARVIS_SKILLS",
+   "owner_file": "repo:.claude/skills/skill-alpha-q/SKILL.md",
+   "owner_line": 1,
+   "description": "MENTHORQ",
+   "description_line": null,
+   "plots": [],
+   "source_class": "KNOWLEDGE_SOURCE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "KNOWLEDGE",
+   "signal_role": "NONE",
+   "unit": "NOT_APPLICABLE",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "KNOWLEDGE",
+   "jarvis_areas": [],
+   "freshness_field": "NOT_APPLICABLE",
+   "sample_state": "NOT_SAMPLED",
+   "corpus": "knowledge/video",
+   "knowledge_origin": "MENTHORQ",
+   "evidence": [
+    "repo:.claude/skills/skill-alpha-q/SKILL.md:1",
+    "repo:config/jarvis-skills.json"
+   ]
+  },
+  {
+   "id": "knowledge:skill-alpha-quant",
+   "name": "α Quant (Consolidator)",
+   "kind": "KNOWLEDGE_SOURCE",
+   "module": "JARVIS_SKILLS",
+   "owner_file": "repo:.claude/skills/skill-alpha-quant/SKILL.md",
+   "owner_line": 1,
+   "description": "ALPHA_QUANT",
+   "description_line": null,
+   "plots": [],
+   "source_class": "KNOWLEDGE_SOURCE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "KNOWLEDGE",
+   "signal_role": "NONE",
+   "unit": "NOT_APPLICABLE",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "KNOWLEDGE",
+   "jarvis_areas": [],
+   "freshness_field": "NOT_APPLICABLE",
+   "sample_state": "NOT_SAMPLED",
+   "corpus": "knowledge/video",
+   "knowledge_origin": "MENTHORQ",
+   "evidence": [
+    "repo:.claude/skills/skill-alpha-quant/SKILL.md:1",
+    "repo:config/jarvis-skills.json"
+   ]
+  },
+  {
+   "id": "knowledge:skill-alpha-bot",
+   "name": "α Bot (GexBot)",
+   "kind": "KNOWLEDGE_SOURCE",
+   "module": "JARVIS_SKILLS",
+   "owner_file": "repo:.claude/skills/skill-alpha-bot/SKILL.md",
+   "owner_line": 1,
+   "description": "ALPHA_BOT",
+   "description_line": null,
+   "plots": [],
+   "source_class": "KNOWLEDGE_SOURCE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "KNOWLEDGE",
+   "signal_role": "NONE",
+   "unit": "NOT_APPLICABLE",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "KNOWLEDGE",
+   "jarvis_areas": [],
+   "freshness_field": "NOT_APPLICABLE",
+   "sample_state": "NOT_SAMPLED",
+   "corpus": "knowledge/video",
+   "knowledge_origin": "MENTHORQ",
+   "evidence": [
+    "repo:.claude/skills/skill-alpha-bot/SKILL.md:1",
+    "repo:config/jarvis-skills.json"
+   ]
+  },
+  {
+   "id": "knowledge:skill-alpha-data",
+   "name": "α Data (QuantData)",
+   "kind": "KNOWLEDGE_SOURCE",
+   "module": "JARVIS_SKILLS",
+   "owner_file": "repo:.claude/skills/skill-alpha-data/SKILL.md",
+   "owner_line": 1,
+   "description": "ALPHA_DATA",
+   "description_line": null,
+   "plots": [],
+   "source_class": "KNOWLEDGE_SOURCE",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "KNOWLEDGE",
+   "signal_role": "NONE",
+   "unit": "NOT_APPLICABLE",
+   "semantic_status": "VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "KNOWLEDGE",
+   "jarvis_areas": [],
+   "freshness_field": "NOT_APPLICABLE",
+   "sample_state": "NOT_SAMPLED",
+   "corpus": "knowledge/video",
+   "knowledge_origin": "MENTHORQ",
+   "evidence": [
+    "repo:.claude/skills/skill-alpha-data/SKILL.md:1",
+    "repo:config/jarvis-skills.json"
+   ]
+  }
+ ]
+}
