@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="jarvis-token" content="__JARVIS_TOKEN__"><title>INVICTUS AOT · Indicadores</title><style>
+  :root{--void:#0B0E11;--panel:#12171C;--inset:#1A2129;--line:#232C35;--ink:#E6EDF3;--ink-dim:#8A97A3;--ink-faint:#5A6672;
+    --long:#26A69A;--short:#EF5350;--warn:#FFB300;--steel:#5AB0C4;--mono:ui-monospace,"SF Mono","Cascadia Code",Consolas,monospace;
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--r:12px}
+  *{box-sizing:border-box} html,body{margin:0} body{background:var(--void);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.45}
+  .topbar{display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding:10px 16px;border-bottom:1px solid var(--line)}
+  .brand .mark{color:var(--steel);font-weight:700} .brand .sub{color:var(--ink-faint);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-left:8px}
+  .tab{padding:5px 12px;border-radius:7px;font-size:12px;font-weight:600;color:var(--ink-dim);text-decoration:none} .tab.active{background:var(--inset);color:var(--ink)}
+  main{padding:16px;max-width:1400px;margin:0 auto;display:grid;gap:14px} .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+  .eyebrow{font-size:10.5px;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-faint);margin:0 0 10px;font-weight:600}
+  .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center} select,input{background:var(--inset);color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:6px 8px;font:inherit;font-size:12.5px;max-width:100%}
+  table{width:100%;border-collapse:collapse;font-size:12px} td,th{padding:5px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top} th{color:var(--ink-faint)}
+  tbody tr{cursor:pointer} tbody tr:hover{background:var(--inset)} .wrap{overflow-x:auto} .muted{color:var(--ink-dim)} .tag{font-size:10.5px;color:var(--steel);font-family:var(--mono)}
+  .VERIFIED{color:var(--long)} .NOT_VERIFIED,.UNKNOWN{color:var(--warn)} .warn{color:var(--short)} pre{white-space:pre-wrap;font-family:var(--mono);font-size:11.5px;margin:0}
+</style></head><body data-page="indicadores">
+<header class="topbar"><div class="brand"><span class="mark">◆ INVICTUS&nbsp;不可征服者</span><span class="sub">AOT · catálogo de indicadores Alfa Omega</span></div>
+  <nav><a class="tab" href="/aot">JARVIS</a><a class="tab" href="/aot/alfabot">ALFABOT SIGNAL</a><a class="tab active" href="/aot/indicadores">INDICADORES</a></nav></header>
+<main>
+  <section class="card"><p class="eyebrow">Filtros</p>
+    <div class="row" id="filters">
+      <input id="q" placeholder="buscar nome/descrição" style="min-width:180px">
+      <label>API <select data-f="api"></select></label>
+      <label>Módulo <select data-f="kind"></select></label>
+      <label>Instrumento <select data-f="instruments"></select></label>
+      <label>Categoria <select data-f="category"></select></label>
+      <label>Status <select data-f="semantic_status"></select></label>
+      <label>Sinal <select data-f="signal_role"></select></label>
+      <label>Freshness <select data-f="fresh"></select></label>
+    </div>
+    <p class="muted" id="summary" style="margin:10px 0 0">carregando…</p></section>
+  <section class="card"><p class="eyebrow">Indicadores · blocos AOT · fontes de conhecimento</p><div class="wrap"><table id="t"><thead><tr>
+    <th>Nome</th><th>Tipo</th><th>Fonte</th><th>API</th><th>Instr.</th><th>Categoria</th><th>Papel no sinal</th><th>Semântica</th><th>Freshness</th><th>Áreas JARVIS</th></tr></thead><tbody></tbody></table></div></section>
+  <section class="card"><p class="eyebrow">Detalhe (evidência: arquivo:linha)</p><div id="detail" class="muted">clique numa linha</div></section>
+</main>
+<script src="/aot/aot-ui.js"></script>
+<script>
+(() => {
+  const { tfetch, esc } = window.JarvisAot; const $ = (id) => document.getElementById(id);
+  let rows = [];
+  const val = (r, f) => f === 'api' ? (r.apis.length ? r.apis : ['—']) : f === 'fresh' ? [r.freshness_field === 'UNKNOWN' ? 'sem timestamp (UNKNOWN)' : r.freshness_field === 'NOT_APPLICABLE' ? 'não se aplica' : 'com timestamp'] : f === 'instruments' ? (Array.isArray(r.instruments) ? r.instruments : [r.instruments]) : [r[f]];
+  const sels = [...document.querySelectorAll('[data-f]')];
+  function fill() { for (const s of sels) { const f = s.dataset.f; const opts = [...new Set(rows.flatMap((r) => val(r, f)))].sort(); s.innerHTML = '<option value="">todos</option>' + opts.map((o) => `<option>${esc(o)}</option>`).join(''); } }
+  function render() {
+    const q = $('q').value.trim().toLowerCase();
+    const list = rows.filter((r) => sels.every((s) => !s.value || val(r, s.dataset.f).includes(s.value)) && (!q || `${r.name} ${r.description || ''} ${r.category}`.toLowerCase().includes(q)));
+    $('summary').textContent = `${list.length} de ${rows.length} · semântica VERIFIED só com evidência curada; o resto fica UNKNOWN / NOT_VERIFIED (nunca inventado). Conhecimento (cursos/skills) nunca é DADO.`;
+    $('t').tBodies[0].innerHTML = list.map((r, i) => `<tr data-i="${rows.indexOf(r)}"><td>${esc(r.name)}${r.order_api_refs ? ' <span class="warn" title="referências a API de ordem no código (somente catálogo)">⚠ ordem</span>' : ''}</td><td class="tag">${esc(r.kind)}</td><td>${esc(r.source_class)}${r.source_alias?.length ? `<br><span class="tag">${esc(r.source_alias.join(' · '))}</span>` : ''}</td><td class="tag">${esc(r.apis.join(' ') || '—')}</td><td>${esc(Array.isArray(r.instruments) ? r.instruments.join(' ') : r.instruments)}</td><td>${esc(r.category)}</td><td>${esc(r.signal_role)}</td><td class="${esc(r.semantic_status)}">${esc(r.semantic_status)}</td><td class="tag">${esc(r.freshness_field)}</td><td class="tag">${esc(r.jarvis_areas.join(' ') || '—')}</td></tr>`).join('');
+  }
+  $('t').addEventListener('click', (e) => { const tr = e.target.closest('tr[data-i]'); if (!tr) return; const r = rows[+tr.dataset.i];
+    $('detail').innerHTML = `<strong>${esc(r.name)}</strong> <span class="tag">${esc(r.id)}</span><p>${esc(r.description || 'sem descrição no código')}</p>${r.note ? `<p class="muted">${esc(r.note)}</p>` : ''}<pre>${esc(JSON.stringify({ owner: `${r.owner_file}:${r.owner_line}`, class_name: r.class_name, plots: r.plots?.map((p) => p.name), source_ports: r.source_ports?.map((p) => p.port), sample_state: r.sample_state, data_role: r.data_role, order_api_refs: r.order_api_refs, evidence: r.evidence }, null, 1))}</pre>`; });
+  $('filters').addEventListener('input', render);
+  tfetch('/api/aot/catalog').then((x) => x.json()).then((c) => {
+    if (c.status !== 'BUILT') { $('summary').textContent = 'catálogo não construído — rode npm run jarvis:aot:catalog'; return; }
+    rows = c.indicators; fill(); render();
+  }).catch(() => { $('summary').textContent = 'JARVIS indisponível'; });
+})();
+</script>
+</body></html>

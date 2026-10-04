@@ -24,5 +24,6 @@
                    "ring_hz": 60, "comb_ms": 6, "limiter_ceiling": 0.89 }
     }
   },
+  "aot": { "base": "http://127.0.0.1:3600", "narration_mode": "IMPORTANT", "access": "GET_ALLOWLIST_READ_ONLY" },
   "avatar": { "enabled": true, "size_dip": 240, "asset": "assets/jarvis/jarvis-avatar.png" }
 }

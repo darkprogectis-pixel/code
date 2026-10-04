@@ -6,6 +6,7 @@
 // Visual state bus (avatar/HUD): GET /api/ui-state, GET /api/events (SSE, one-way), POST /api/ui-state {state, cycle?} (token) —
 // the POST only sets the in-memory visual state (tools/jarvis/ui-state.mjs); nothing is forwarded or executed.
 // There are no order routes and no order tools. Raw audio is never stored.
+// AOT (R2): /aot pages + /api/aot/* (tools/jarvis/aot/routes.mjs) read the AOT BFF through a GET-only allowlist adapter; same origin, no CORS.
 import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -15,6 +16,8 @@ import { ask, createMemory } from './answer.mjs';
 import { createVoice, wav } from './voice.mjs';
 import { createVoiceLog, readCycles } from './voice-log.mjs';
 import { createUiState, parseUiPost } from './ui-state.mjs';
+import { createAotRoutes, isAotPath, AOT_POSTS } from './aot/routes.mjs';
+import { selectSkills, retrieve } from './skills.mjs';
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const REPO = path.resolve(HERE, '..', '..');
@@ -28,7 +31,10 @@ export function ensureToken(dir) {
   const t = crypto.randomBytes(24).toString('hex'); fs.writeFileSync(f, t, { mode: 0o600 }); return t;
 }
 
-export function createJarvisServer({ cfg = loadJarvisConfig(), alphaDir, jarvisDir, voice, port = cfg.server.port, ui, sseMax = 8, pingMs = 15000 } = {}) {
+// Course knowledge for AOT answers: quoted rows only (UNTRUSTED_EVIDENCE), never parsed as commands.
+export const aotKnowledge = (text) => selectSkills(text).flatMap((s) => retrieve(s, text).rows).map((r) => ({ source: r.source, statement: r.statement, lesson: r.lesson, timestamp: r.timestamp, concept: r.concept }));
+
+export function createJarvisServer({ cfg = loadJarvisConfig(), alphaDir, jarvisDir, voice, port = cfg.server.port, ui, sseMax = 8, pingMs = 15000, aotAdapter, aotKnowledgeFn = aotKnowledge } = {}) {
   alphaDir = alphaDir || abs(cfg.alpha_dir); jarvisDir = jarvisDir || abs(cfg.jarvis_dir);
   const token = ensureToken(jarvisDir);
   voice = voice || createVoice(cfg);
@@ -80,6 +86,17 @@ export function createJarvisServer({ cfg = loadJarvisConfig(), alphaDir, jarvisD
     return { ...a, stt, audio: canSpeak ? { chunks_url: `/api/audio/${a.voice_cycle_id}/`, parts: job.synth?.parts.length ?? 0, engine: job.synth?.engine ?? null } : null };
   }
 
+  // Speech for AOT narration/answers: same synth + audio-chunk path as cycle(), text supplied by the AOT routes.
+  function speakText(text, { intent }) {
+    if (!voice.status().available || !text) return null;
+    const id = 'jv-' + crypto.randomBytes(4).toString('hex');
+    const rec = { voice_cycle_id: id, mode: 'aot', transcript: null, intent, agent_sources: ['AOT'], confidence: null, fresh: null, unsupported_n: 0, no_evidence: false, answer_text: text, stt: null, latency: { stt_ms: null, answer_ms: 0 }, errors: [], knowledge: null };
+    const job = { chunks: [], done: false, waiters: [], served: [], rec, t0: performance.now(), at: Date.now(), wake() { for (const w of job.waiters.splice(0)) w(); } };
+    jobs.set(id, job); startSpeech(job, text);
+    return { voice_cycle_id: id, chunks_url: `/api/audio/${id}/`, parts: job.synth?.parts.length ?? 0, engine: job.synth?.engine ?? null };
+  }
+  const aot = createAotRoutes({ cfg, token, adapter: aotAdapter, speak: speakText, knowledge: aotKnowledgeFn });
+
   const srv = http.createServer(async (req, res) => {
     const send = (code, body, type = 'application/json; charset=utf-8') => { res.writeHead(code, { 'content-type': type, 'cache-control': 'no-store', 'x-content-type-options': 'nosniff' }); res.end(typeof body === 'string' || Buffer.isBuffer(body) ? body : JSON.stringify(body)); };
     try {
@@ -98,6 +115,7 @@ export function createJarvisServer({ cfg = loadJarvisConfig(), alphaDir, jarvisD
           res.write('retry: 2000\n\n'); sseWrite(res, 'state', ui.get()); sse.add(res);
           req.on('close', () => sse.delete(res)); return;
         }
+        if (isAotPath(u.pathname)) return aot.handle(req, u, send);
         if (u.pathname === '/api/cycles') return send(200, readCycles(jarvisDir, Math.max(1, Math.min(2000, Number(u.searchParams.get('limit')) || 100))));
         const m = u.pathname.match(/^\/api\/audio\/(jv-[a-f0-9]{8})\/(\d{1,3})$/);
         if (m) {
@@ -110,12 +128,13 @@ export function createJarvisServer({ cfg = loadJarvisConfig(), alphaDir, jarvisD
         return send(404, { error: 'not found' });
       }
       if (req.method !== 'POST') return send(405, { error: 'GET/POST only' });
-      if (!['/api/ask', '/api/ask-audio', '/api/cancel', '/api/ui-state'].includes(u.pathname)) return send(404, { error: 'not found' });
+      if (!['/api/ask', '/api/ask-audio', '/api/cancel', '/api/ui-state', ...AOT_POSTS].includes(u.pathname)) return send(404, { error: 'not found' });
       const tk = String(req.headers['x-jarvis-token'] || '');
       if (tk.length !== token.length || !crypto.timingSafeEqual(Buffer.from(tk), Buffer.from(token))) return send(401, { error: 'token required' });
-      const chunks = []; let size = 0; const limit = u.pathname === '/api/ui-state' ? 256 : maxBody;
+      const chunks = []; let size = 0; const limit = u.pathname === '/api/ui-state' ? 256 : AOT_POSTS.includes(u.pathname) ? 8192 : maxBody;
       for await (const c of req) { size += c.length; if (size > limit) return send(413, { error: 'body too large' }); chunks.push(c); }
       const body = Buffer.concat(chunks), t0 = performance.now(), speak = u.searchParams.get('speak') === '1';
+      if (AOT_POSTS.includes(u.pathname)) return aot.handle(req, u, send, body);
       if (u.pathname === '/api/ui-state') { // visual state only: validated enum + cycle id, nothing else is read or forwarded
         const p = parseUiPost(body.toString('utf8'));
         if (!p.ok) return send(p.code, { error: p.error });
@@ -141,7 +160,7 @@ export function createJarvisServer({ cfg = loadJarvisConfig(), alphaDir, jarvisD
       return send(200, cycle({ text: r.text, transcript: r.text, stt: { ...r, vad_segments: v.segments }, speak, mode: u.searchParams.get('mode') === 'wake' ? 'wake' : 'ptt', t0 }));
     } catch (e) { ui.set('ERROR'); return send(500, { error: 'internal', detail: String(e.message || e).slice(0, 200) }); }
   });
-  srv.token = token; srv.voice = voice; srv.jobs = jobs; srv.ui = ui; srv.sse = sse;
+  srv.token = token; srv.aot = aot; srv.voice = voice; srv.jobs = jobs; srv.ui = ui; srv.sse = sse;
   const close0 = srv.close.bind(srv);
   srv.close = (cb) => { clearInterval(ping); for (const r of sse) { try { r.end(); } catch { /* gone */ } } sse.clear(); return close0(cb); };
   srv.on('close', () => { voice.close?.(); ui.close?.(); });

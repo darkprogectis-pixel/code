@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="jarvis-token" content="__JARVIS_TOKEN__"><title>INVICTUS AOT · JARVIS</title><style>
+  :root{--void:#0B0E11;--panel:#12171C;--inset:#1A2129;--line:#232C35;--ink:#E6EDF3;--ink-dim:#8A97A3;--ink-faint:#5A6672;
+    --long:#26A69A;--short:#EF5350;--warn:#FFB300;--steel:#5AB0C4;--mono:ui-monospace,"SF Mono","Cascadia Code",Consolas,monospace;
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--r:12px}
+  *{box-sizing:border-box} html,body{margin:0}
+  body{background:var(--void);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.45;min-height:100vh}
+  .topbar{display:flex;flex-wrap:wrap;align-items:center;gap:16px;padding:10px 16px;border-bottom:1px solid var(--line)}
+  .brand .mark{color:var(--steel);font-weight:700} .brand .sub{color:var(--ink-faint);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;margin-left:8px}
+  .tabs{display:flex;flex-wrap:wrap;gap:2px} .tab{padding:5px 12px;border-radius:7px;font-size:12px;font-weight:600;color:var(--ink-dim);text-decoration:none;background:none;border:0;cursor:pointer;font-family:inherit}
+  .tab:hover{color:var(--ink)} .tab.active{background:var(--inset);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+  main{padding:16px;max-width:1200px;margin:0 auto;display:grid;gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+  .eyebrow{font-size:10.5px;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-faint);margin:0 0 10px;font-weight:600}
+  .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center} select,input,button.btn{background:var(--inset);color:var(--ink);border:1px solid var(--line);border-radius:7px;padding:6px 10px;font:inherit}
+  table{width:100%;border-collapse:collapse;font-size:12.5px} td,th{padding:5px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top} th{color:var(--ink-faint);font-weight:600}
+  .num{font-family:var(--mono)} .LIVE{color:var(--long)} .DELAYED,.UNKNOWN{color:var(--warn)} .STALE,.MISSING,.ERROR{color:var(--short)} .NOT_SUPPORTED{color:var(--ink-faint)}
+  .tag{font-size:10.5px;color:var(--steel);font-family:var(--mono)} #feed div{padding:6px 0;border-bottom:1px solid var(--line)} .muted{color:var(--ink-dim)}
+  .wrap{overflow-x:auto}
+</style></head><body data-page="areas">
+<header class="topbar">
+  <div class="brand"><span class="mark">◆ INVICTUS&nbsp;不可征服者</span><span class="sub">AOT · JARVIS</span></div>
+  <nav class="tabs" id="areaTabs" aria-label="Áreas observadas pelo JARVIS"></nav>
+  <nav class="tabs"><a class="tab" href="/aot/alfabot">ALFABOT SIGNAL</a><a class="tab" href="/aot/indicadores">INDICADORES</a></nav>
+</header>
+<main>
+  <section class="card"><p class="eyebrow">Área observada</p>
+    <div class="row"><strong id="areaLabel">—</strong><a id="aotLink" class="tab" target="_blank" rel="noopener">abrir no AOT ↗</a>
+      <label>Narração <select id="mode"><option>IMPORTANT</option><option>VERBOSE</option><option>OFF</option></select></label>
+      <label><input type="checkbox" id="voice"> voz</label><span id="status" class="muted">—</span></div></section>
+  <section class="card"><p class="eyebrow">Narração (somente leitura)</p><div id="feed" class="muted">selecione uma área</div></section>
+  <section class="card"><p class="eyebrow">Pergunte ao JARVIS sobre esta área</p>
+    <form id="askForm" class="row"><input id="q" style="flex:1;min-width:200px" placeholder="Por que não tem sinal? · Esse dado está atualizado? · Isso é dado ou interpretação?"><button class="btn">Perguntar</button></form>
+    <p id="ans" style="margin:10px 0 0"></p></section>
+  <section class="card"><p class="eyebrow">Contexto da área (observação compacta)</p><div class="wrap"><table id="items"><thead><tr><th>Item</th><th>Valor</th><th>Estado</th><th>Dado</th><th>Proveniência</th><th>Fonte</th><th>Idade</th></tr></thead><tbody></tbody></table></div></section>
+</main>
+<script src="/aot/aot-ui.js"></script>
+</body></html>
