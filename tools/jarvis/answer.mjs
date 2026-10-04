@@ -5,6 +5,7 @@ import crypto from 'node:crypto';
 import { route } from './router.mjs';
 import { TOOLS, NAME, SOURCES, loadState } from './tools.mjs';
 import { toSpeech, fmt } from './lexicon.mjs';
+import { selectSkills, retrieve, compareSources, loadRegistry, SOURCE_NAME, INSUFFICIENT } from './skills.mjs';
 
 export const SCHEMA = 'jarvis-answer/v1';
 export const NO_EVIDENCE = 'Não tenho evidência suficiente para responder.';
@@ -85,8 +86,38 @@ function claimsFor(r, S, warnings, unsupported) {
   return C;
 }
 
+// Knowledge questions (KNOWLEDGE_QUERY / CROSS_SOURCE): selected skills answer separately ("Segundo SpotGamma…", "Segundo MenthorQ…"),
+// each statement quoted from its corpus with lesson/video + timestamp + uncalibrated confidence. No evidence ⇒ INSUFFICIENT_EVIDENCE.
+const VERDICT_PT = { AGREEMENT: 'as fontes concordam neste eixo', DIFFERENCE: 'as fontes diferem', CONTEXT_DEPENDENT: 'depende do contexto/regime', [INSUFFICIENT]: 'evidência insuficiente para comparar' };
+export function knowledgeAnswer(r, { registry } = {}) {
+  const t0 = performance.now();
+  const reg = registry || loadRegistry();
+  let skills = selectSkills(r.text, reg);
+  if (r.intent === 'CROSS_SOURCE' && skills.length < 2) skills = reg.skills.filter((s) => s.enabled && s.default_knowledge);
+  const per = skills.map((s) => retrieve(s, r.text));
+  const comparison = r.intent === 'CROSS_SOURCE' ? compareSources(per) : null;
+  const parts = [], speech = [], facts = [];
+  for (const p of per) {
+    const who = SOURCE_NAME[p.source] || p.source, via = p.skill === 'skill-alpha-gamma' || p.skill === 'skill-alpha-q' ? '' : ` (via ${p.skill})`;
+    if (p.status !== 'ANSWERED') { parts.push(`${who}${via}: evidência insuficiente${p.concepts.length ? ` para ${p.concepts.join(', ')}` : ''}.`); continue; }
+    const [a, b] = p.rows;
+    const at = (x) => `${x.course}, ${x.lesson}${x.timestamp ? `, ${String(x.timestamp).split(/[–-]/)[0].replace(/\.\d+$/, '')}` : ''}`;
+    parts.push(`Segundo ${who}${via}, sobre ${[...new Set(p.rows.map((x) => x.concept))].join(', ')} (${at(a)}): "${a.statement}"${b ? ` Também: "${b.statement}"` : ''} Confiança ${fmt(p.confidence, 2)}, não calibrada.`);
+    speech.push(`Segundo ${who}: ${a.statement}`);
+    for (const x of p.rows) facts.push({ source: x.source, skill: x.skill, concept: x.concept, value: x.statement, unit: null, lesson: x.lesson, lesson_id: x.lesson_id, video_id: x.video_id,
+      timestamp: x.timestamp, timestamp_null_reason: x.timestamp_null_reason, text_source: x.text_source, api_attribution: x.api_attribution, confidence: x.confidence, fresh: true, raw_ref: x.knowledge_id, source_timestamp: null, age_ms: null });
+  }
+  if (comparison) parts.push(`Comparação: ${comparison.verdict} (${VERDICT_PT[comparison.verdict]}).`);
+  const hit = per.filter((p) => p.status === 'ANSWERED');
+  const unresolved = hit.reduce((n, p) => n + p.rows.filter((x) => x.contradictions > 0).length, 0);
+  const obs = { intent: r.intent, selected_skills: skills.map((s) => s.skill_id), sources: per.map((p) => p.source), hit: hit.length > 0, per_source: per.map((p) => ({ source: p.source, skill: p.skill, status: p.status, evidence_count: p.rows.length, ms: p.ms })),
+    evidence_count: facts.length, confidence: hit.length ? Math.min(r.confidence, ...hit.map((p) => p.confidence)) : 0, verdict: comparison?.verdict ?? null, retrieval_ms: Math.round((performance.now() - t0) * 10) / 10 };
+  return { status: hit.length ? 'ANSWERED' : INSUFFICIENT, text: hit.length ? parts.join(' ') : `${NO_EVIDENCE} ${parts.join(' ')}`, tts: hit.length ? speech.join(' ') + (comparison ? ` Comparação: ${VERDICT_PT[comparison.verdict]}.` : '') : null,
+    facts, per_source: per.map(({ all_rows, ...p }) => p), comparison, warnings: unresolved ? [`${unresolved} item(ns) com contradição registrada não resolvida no corpus`] : [], obs };
+}
+
 // ask(text, {state?, memory?, now?}) → jarvis-answer/v1. Never throws.
-export function ask(text, { state, memory, now = Date.now(), voice_cycle_id = null, dir } = {}) {
+export function ask(text, { state, memory, now = Date.now(), voice_cycle_id = null, dir, registry } = {}) {
   const t0 = performance.now();
   const id = voice_cycle_id || `jv-${crypto.randomBytes(4).toString('hex')}`;
   const warnings = [], unsupported = [];
@@ -102,6 +133,15 @@ export function ask(text, { state, memory, now = Date.now(), voice_cycle_id = nu
       fresh, warnings, unsupported_claims: unsupported, fixture: !!state?.fixture, mode: 'SHADOW_READ_ONLY', latency_ms: Math.round((performance.now() - t0) * 100) / 100, ...extra };
   };
   if (r.intent === 'CANCEL') return out('Ok, parei.', [], { cancel: true });
+  if (r.intent === 'KNOWLEDGE_QUERY' || r.intent === 'CROSS_SOURCE') {
+    let k;
+    try { k = knowledgeAnswer(r, { registry }); } catch (e) { warnings.push(`registro de skills ilegível: ${String(e.message).slice(0, 120)}`); return out(NO_EVIDENCE, [], { knowledge: { status: INSUFFICIENT } }); }
+    warnings.push(...k.warnings); memory?.set({ intent: r.intent, slots: r.slots }, now);
+    const res = out(k.text, [{ facts: k.facts }], { knowledge: { status: k.status, selected_skills: k.obs.selected_skills, per_source: k.per_source, comparison: k.comparison, obs: k.obs } });
+    if (k.tts) res.tts_text = toSpeech(k.tts);
+    res.evidence = k.facts.map(({ fresh, age_ms, source_timestamp, unit, ...x }) => x);
+    return res;
+  }
   let S;
   try { S = state || loadState({ dir }); } catch (e) { warnings.push(`estado Alpha ilegível: ${e.message}`); return out(NO_EVIDENCE); }
   if (!S.ok) { warnings.push('sem estado Alpha (serviço Alpha parado?)'); return out(NO_EVIDENCE); }

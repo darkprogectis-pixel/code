@@ -59,7 +59,8 @@ export function createJarvisServer({ cfg = loadJarvisConfig(), alphaDir, jarvisD
     const a = ask(text, { memory, dir: alphaDir });
     const rec = { voice_cycle_id: a.voice_cycle_id, mode, transcript: transcript ?? text, intent: a.intent, agent_sources: a.sources, confidence: a.confidence, fresh: a.fresh,
       unsupported_n: a.unsupported_claims.length, no_evidence: /^Não tenho evidência suficiente/.test(a.answer_text), answer_text: a.answer_text, stt,
-      latency: { stt_ms: stt?.ms ?? null, answer_ms: a.latency_ms }, errors: [] };
+      latency: { stt_ms: stt?.ms ?? null, answer_ms: a.latency_ms }, errors: [],
+      knowledge: a.knowledge?.obs ?? null }; // skill retrieval: intent, selected_skills, sources, hit, evidence_count, confidence, retrieval_ms (no corpus text)
     const job = { chunks: [], done: false, waiters: [], rec, t0, at: Date.now(), wake() { for (const w of job.waiters.splice(0)) w(); } };
     jobs.set(a.voice_cycle_id, job);
     for (const [k, j] of jobs) if (Date.now() - j.at > 120000) { j.synth?.cancel(); jobs.delete(k); }
