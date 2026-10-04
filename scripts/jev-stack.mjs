@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 // JEV local stack (SHADOW / READ-ONLY): JEV Observability dashboard :3593 + Alpha service (5 specialists + Fusion + JEV review)
-// + JARVIS :3594. Everything binds 127.0.0.1; nothing here sends orders or touches NT8/AOT/INVICTUS.
+// + JARVIS :3594 + JARVIS floating avatar (desktop window, visual/PTT client of :3594; disable: config avatar.enabled=false or JARVIS_AVATAR=0).
+// Everything binds 127.0.0.1; nothing here sends orders or touches NT8/AOT/INVICTUS.
 //   node scripts/jev-stack.mjs start|stop|status
 import fs from 'node:fs';
 import path from 'node:path';
@@ -14,7 +15,9 @@ export const SERVICES = [
   { name: 'jev-obs', args: ['tools/jev-obs/server.mjs'], health: 'http://127.0.0.1:3593/api/health' },
   { name: 'alpha', args: ['src/alpha/service.mjs'], health: null },
   { name: 'jarvis', args: ['tools/jarvis/server.mjs'], health: 'http://127.0.0.1:3594/api/health' },
+  { name: 'avatar', args: [], health: null, native: true }, // tools/jarvis/avatar/build.mjs ⇒ var/jarvis/avatar/JarvisAvatar.exe
 ];
+const avatarEnabled = () => { if (process.env.JARVIS_AVATAR === '0') return false; try { return JSON.parse(fs.readFileSync(path.join(REPO, 'config', 'jarvis.json'), 'utf8')).avatar?.enabled !== false; } catch { return false; } };
 const pidFile = (n) => path.join(DIR, `${n}.pid`);
 const alive = (pid) => { try { process.kill(pid, 0); return true; } catch { return false; } };
 const readPid = (n) => { try { return Number(fs.readFileSync(pidFile(n), 'utf8')); } catch { return null; } };
@@ -37,6 +40,15 @@ export async function start() {
     if (pid && alive(pid)) { console.log(`${s.name}: já rodando (pid ${pid})`); continue; }
     if (s.health && (await get(s.health))?.status === 200) { console.log(`${s.name}: porta já atendida por outro processo — não iniciado`); continue; }
     if (s.name === 'alpha') { try { const a = JSON.parse(fs.readFileSync(path.join(REPO, 'var', 'alpha', 'service.json'), 'utf8')); if (alive(a.pid) && Date.now() - Date.parse(a.heartbeat) < 120000) { fs.writeFileSync(pidFile(s.name), String(a.pid)); console.log(`alpha: já rodando fora do stack (pid ${a.pid}) — adotado`); continue; } } catch { /* none */ } }
+    if (s.native) { // avatar: failure here never stops the other services (fail-safe)
+      if (!avatarEnabled()) { console.log('avatar: desabilitado (config avatar.enabled=false ou JARVIS_AVATAR=0)'); continue; }
+      try {
+        const { build } = await import('../tools/jarvis/avatar/build.mjs'); const b = build();
+        const p = spawn(b.exe, [], { cwd: REPO, detached: true, stdio: 'ignore', windowsHide: false });
+        p.unref(); fs.writeFileSync(pidFile(s.name), String(p.pid)); console.log(`avatar: iniciado pid ${p.pid}${b.built ? ` (compilado em ${b.ms} ms)` : ''}`);
+      } catch (e) { console.log(`avatar: NÃO iniciado — ${e.message.split(/\r?\n/)[0]} (core segue normal)`); }
+      continue;
+    }
     const log = fs.openSync(path.join(DIR, `${s.name}.log`), 'a');
     const p = spawn(process.execPath, s.args, { cwd: REPO, detached: true, stdio: ['ignore', log, log], windowsHide: true });
     p.unref(); fs.writeFileSync(pidFile(s.name), String(p.pid)); console.log(`${s.name}: iniciado pid ${p.pid}`);
@@ -50,7 +62,8 @@ export async function stop() {
   for (const s of SERVICES) {
     const pid = readPid(s.name);
     if (pid && alive(pid)) {
-      try { if (process.platform === 'win32') execFileSync('taskkill', ['/PID', String(pid), '/T', '/F'], { stdio: 'ignore' }); else process.kill(pid, 'SIGTERM'); } catch { /* already gone */ }
+      if (s.native) { try { const { EXE } = await import('../tools/jarvis/avatar/build.mjs'); execFileSync(EXE, ['--close'], { stdio: 'ignore', timeout: 5000 }); } catch { /* fall back to taskkill */ } }
+      if (alive(pid)) try { if (process.platform === 'win32') execFileSync('taskkill', ['/PID', String(pid), '/T', '/F'], { stdio: 'ignore' }); else process.kill(pid, 'SIGTERM'); } catch { /* already gone */ }
       console.log(`${s.name}: parado (pid ${pid})`);
     } else console.log(`${s.name}: não estava rodando`);
     fs.rmSync(pidFile(s.name), { force: true });

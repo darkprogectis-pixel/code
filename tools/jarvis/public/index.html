@@ -62,26 +62,28 @@ function to16k(chunks, sr) {
   for (let i = 0; i < m; i++) { const p = i * r, k = Math.floor(p), f = p - k; y[i] = x[k] * (1 - f) + (x[k + 1] ?? x[k]) * f; }
   return y;
 }
+// visual state for the floating avatar (POST /api/ui-state: enum only, fire-and-forget, never blocks the HUD)
+function uiState(state, cycle) { try { fetch('/api/ui-state', { method: 'POST', headers: { 'x-jarvis-token': TOKEN, 'content-type': 'application/json' }, body: JSON.stringify(cycle ? { state, cycle } : { state }) }).catch(() => {}); } catch {} }
 async function post(url, body, type) { const r = await fetch(url, { method: 'POST', headers: { 'x-jarvis-token': TOKEN, 'content-type': type }, body }); return r.json(); }
-function stopSpeech(why) { if (!speaking) return; speaking.stop(); speaking = null; post('/api/cancel', '{}', 'application/json'); setState('interrompido (' + why + ')'); }
+function stopSpeech(why) { if (!speaking) return; speaking.stop(); speaking = null; post('/api/cancel', '{}', 'application/json'); uiState('IDLE'); setState('interrompido (' + why + ')'); }
 async function play(a) {
   if (!a.audio) return;
   const me = { stopped: false, src: null, stop() { this.stopped = true; try { this.src && this.src.stop(); } catch {} } }; speaking = me; setState('falando');
   for (let i = 0; !me.stopped; i++) {
     const r = await fetch(a.audio.chunks_url + i); if (r.status !== 200 || me.stopped) break;
     const buf = await ctx.decodeAudioData(await r.arrayBuffer()); if (me.stopped) break;
-    await new Promise((res) => { const s = ctx.createBufferSource(); s.buffer = buf; s.connect(ctx.destination); s.onended = res; me.src = s; s.start(); });
+    await new Promise((res) => { const s = ctx.createBufferSource(); s.buffer = buf; s.connect(ctx.destination); s.onended = res; me.src = s; s.start(); if (i === 0) uiState('SPEAKING', a.voice_cycle_id); });
   }
-  if (speaking === me) { speaking = null; setState('pronto'); }
+  if (speaking === me) { speaking = null; setState('pronto'); uiState('IDLE', a.voice_cycle_id); }
 }
 function show(a, q) {
   $('q').textContent = q; $('a').textContent = a.answer_text || a.error || '—';
   $('meta').textContent = a.intent ? `${a.intent} · fontes ${a.sources.join(', ') || '—'} · confiança ${a.confidence} · ${a.fresh ? 'fresco' : 'NÃO fresco'}${a.warnings.length ? ' · ' + a.warnings.join('; ') : ''}${a.stt ? ` · STT ${a.stt.ms} ms (${a.stt.model})` : ''}` : '';
 }
-async function startPTT() { if (rec) return; await mic(); await ctx.resume(); if (speaking) stopSpeech('PTT'); rec = []; $('ptt').classList.add('on'); setState('ouvindo'); }
+async function startPTT() { if (rec) return; await mic(); await ctx.resume(); if (speaking) stopSpeech('PTT'); rec = []; $('ptt').classList.add('on'); setState('ouvindo'); uiState('LISTENING'); }
 async function endPTT() {
   if (!rec) return; const chunks = rec; rec = null; $('ptt').classList.remove('on');
-  const x = to16k(chunks, ctx.sampleRate); if (x.length < 4000) return setState('muito curto');
+  const x = to16k(chunks, ctx.sampleRate); if (x.length < 4000) { uiState('IDLE'); return setState('muito curto'); }
   setState('transcrevendo'); const a = await post('/api/ask-audio?speak=1', x.buffer, 'application/octet-stream');
   show(a, a.stt ? a.stt.text : '(falha)'); if (a.cancel) return setState('pronto'); await play(a); refresh();
 }

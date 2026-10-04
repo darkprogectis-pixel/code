@@ -39,6 +39,8 @@
     "jarvis": "node tools/jarvis/server.mjs",
     "jarvis:models": "node tools/jarvis/install-models.mjs",
     "jarvis:bench": "node tools/jarvis/bench.mjs",
+    "jarvis:start": "node scripts/jev-stack.mjs start",
+    "jarvis:avatar": "node tools/jarvis/avatar/build.mjs --run",
     "stack:start": "node scripts/jev-stack.mjs start",
     "stack:stop": "node scripts/jev-stack.mjs stop",
     "stack:status": "node scripts/jev-stack.mjs status",

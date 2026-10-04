@@ -15,5 +15,6 @@
     "vad": { "model": "silero-vad", "threshold": 0.5, "min_silence_s": 0.4, "min_speech_s": 0.2 },
     "stt": { "model": "whisper-small", "fallback": "whisper-base", "language": "pt" },
     "tts": { "engine": "piper-faber", "alternatives": ["piper-jeff", "kokoro-int8"], "speed": 1.0, "kokoro_sid": 42 }
-  }
+  },
+  "avatar": { "enabled": true, "size_dip": 240, "asset": "assets/jarvis/jarvis-avatar.png" }
 }
