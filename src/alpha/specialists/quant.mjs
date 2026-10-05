@@ -17,7 +17,7 @@ export function evaluate({ payloads, refs, now, cycle_id, cfg, metrics }) {
   const age = sourceTs == null ? Infinity : now - sourceTs;
   const feedLive = sig ? sig.freshness === 'LIVE' : null;
   if (!sig) warnings.push('PARTIAL: /api/alfabot-signal unavailable; freshness from /consolidated asof only');
-  if (sig && !feedLive) warnings.push(`SOURCE_FRESHNESS=${sig.freshness} (Consolidator says inputs not live)`);
+  if (sig && !feedLive) warnings.push(`SOURCE_FRESHNESS=${sig.freshness} (α Quant source says inputs not live)`);
   const fresh = age <= cfg.stale_ms.quant && feedLive !== false;
   const direction = LABEL_DIR[c?.direction] || 'UNKNOWN';
   if (!LABEL_DIR[c?.direction]) warnings.push(`unknown direction label ${JSON.stringify(c?.direction)}`);
