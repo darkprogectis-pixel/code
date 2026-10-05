@@ -27,17 +27,17 @@ export function evaluate({ payloads, refs, now, cycle_id, cfg, metrics }) {
   const cap = cfg.validation_cap[role];
   const qd = c?.inputs?.quantdata;
   if (qd?.direction && LABEL_DIR[qd.direction] && LABEL_DIR[qd.direction] !== 'NEUTRAL' && direction !== 'NEUTRAL' && LABEL_DIR[qd.direction] !== direction)
-    contradictions.push({ kind: 'INTERNAL', detail: `Consolidator ${direction} vs its own quantdata input ${qd.direction}`, material: false });
+    contradictions.push({ kind: 'INTERNAL', detail: `α Quant ${direction} vs its own quantdata input ${qd.direction}`, material: false });
   const v = 'VENDOR_SEMANTICS';
   const evidence = [
-    ev('direction', c?.direction ?? null, { meaning: 'classificação publicada pelo Consolidator (gate1 radar AO + gate2 MenthorQ; QD/MQ refinam confiança)', effect: effectOf(direction), role, validation: v }),
+    ev('direction', c?.direction ?? null, { meaning: 'classificação publicada pelo α Quant (gate1 radar AO + gate2 MenthorQ; QD/MQ refinam confiança)', effect: effectOf(direction), role, validation: v }),
     ev('confidence', conf, { unit: '0-100', meaning: 'confiança publicada pela fonte', role, validation: v }),
-    ev('state', c?.state ?? null, { meaning: 'estado do Consolidator (ex.: STAND_DOWN)', role: 'DATA_QUALITY', validation: v }),
+    ev('state', c?.state ?? null, { meaning: 'estado do α Quant (ex.: STAND_DOWN)', role: 'DATA_QUALITY', validation: v }),
     ev('tier', c?.tier ?? null, { meaning: 'tier por confiança', role, validation: v }),
     ev('reason', c?.reason ?? null, { meaning: 'motivo textual da fonte', role: 'DATA_QUALITY', validation: v }),
   ];
-  if (sig) evidence.push(ev('freshness', sig.freshness, { meaning: 'LIVE/STALE/DATA PROBLEM do Consolidator', role: 'DATA_QUALITY', validation: v }));
-  if (s?.gamma?.condition) evidence.push(ev('gamma.condition', s.gamma.condition, { meaning: 'regime de gamma (origem α Bot; display no Consolidator)', role: 'REGIME', validation: 'VENDOR_SEMANTICS' }));
+  if (sig) evidence.push(ev('freshness', sig.freshness, { meaning: 'LIVE/STALE/DATA PROBLEM do α Quant', role: 'DATA_QUALITY', validation: v }));
+  if (s?.gamma?.condition) evidence.push(ev('gamma.condition', s.gamma.condition, { meaning: 'regime de gamma (origem α Bot; display no α Quant)', role: 'REGIME', validation: 'VENDOR_SEMANTICS' }));
   return makeEnvelope({
     source, cycle_id, now, source_ts: sourceTs, fresh, health: fresh ? (sig ? 'OK' : 'PARTIAL') : 'STALE', role,
     direction, strength: sourceConf, confidence: sourceConf * cov.coverage * cap,
