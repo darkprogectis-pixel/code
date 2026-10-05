@@ -1,0 +1,1652 @@
+{
+ "schema": "alfa-omega-lineage-curated/v1",
+ "status": "CURATED — promoted from handoffs/alfaomega-audit/LINEAGE_DRAFT_20261005.json (proposal ALFA_OMEGA_INDICATORS_AS_JARVIS_REALTIME_BASE §2.2, JEV DIFF A req_01a10d1a79b377a89322928e6201f604). Consumed by tools/jarvis/aot/catalog-build.mjs (fail-closed).",
+ "rule": "Every lineage_status is backed by {file: '<root>:<relpath>', match: '<literal>'} evidence that resolves; roots: nt8 (TTW_DarkProjects), nt8root (Indicators), hist (Desktop/Handof TTW), pkg (Downloads/AlfaOmega_pacote_20260825). Unresolvable evidence FAILS. mtime alone is never lifecycle evidence.",
+ "generations": {
+  "G1_ORDERFLOW_DOM": "2026-06-29..2026-07-07 (21 original files; SharedState bus; CONF = ME(Nexus) x MVI(Pulse))",
+  "G2_FLOWONE": "2026-07-22.. (FlowOne absorbs ME/CONF, tape detectors, Marker, DOM, Velocity)",
+  "G3_OPTIONS_GEX": "<=2026-07-13..2026-08 (11 options indicators on :3500/:3457 + FlowOne HYBRID)",
+  "G4_CONSOLIDATOR_ALFA": "2026-08..2026-09 (consolidator :3495, Copilot Unificado, alpha relays, Classic/State)",
+  "DIST_20260825": "26-name client distribution set = operator visible list (+Login, Boleta)"
+ },
+ "entries": [
+  {
+   "id": "nt8:AlfaOmegaNexus",
+   "kind": "COMPONENT",
+   "lifecycle_status": "MERGED_INTO_FLOWONE",
+   "lineage_detail": "MERGED_INTO_FLOWONE",
+   "generation": "G1_ORDERFLOW_DOM",
+   "successor": "nt8:AlfaOmegaFlowOne",
+   "capability": "ME + tape detectors Sweep/Absorption/Reversal/Exhaustion",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaFlowOne.cs",
+     "match": "port do AlfaOmegaNexus"
+    },
+    {
+     "file": "nt8:AlfaOmegaFlowOne.cs",
+     "match": "ME + CONF nativo (aposenta Nexus/Pulse/Fusion)"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaPulse",
+   "kind": "COMPONENT",
+   "lifecycle_status": "MERGED_INTO_FLOWONE",
+   "lineage_detail": "MERGED_INTO_FLOWONE",
+   "generation": "G1_ORDERFLOW_DOM",
+   "successor": "nt8:AlfaOmegaFlowOne",
+   "capability": "MVI",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaFlowOne.cs",
+     "match": "ME + CONF nativo (aposenta Nexus/Pulse/Fusion)"
+    },
+    {
+     "file": "nt8:AlfaOmegaFlowOne.cs",
+     "match": "(ex-Nexus/Pulse)"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaFusion",
+   "kind": "COMPONENT",
+   "lifecycle_status": "MERGED_INTO_FLOWONE",
+   "lineage_detail": "MERGED_INTO_FLOWONE",
+   "generation": "G1_ORDERFLOW_DOM",
+   "successor": "nt8:AlfaOmegaFlowOne",
+   "capability": "CONF ME x MVI",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaFlowOne.cs",
+     "match": "ME + CONF nativo (aposenta Nexus/Pulse/Fusion)"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaMarker",
+   "kind": "COMPONENT",
+   "lifecycle_status": "MERGED_INTO_FLOWONE",
+   "lineage_detail": "PORTED_INTO_FLOWONE",
+   "generation": "G1_ORDERFLOW_DOM",
+   "successor": "nt8:AlfaOmegaFlowOne",
+   "capability": "DOM top-N liquidity (BLOCO 3)",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaFlowOne.cs",
+     "match": "port do AlfaOmegaMarker"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaPressure",
+   "kind": "COMPONENT",
+   "lifecycle_status": "MERGED_INTO_FLOWONE",
+   "lineage_detail": "PORTED_INTO_FLOWONE",
+   "generation": "G1_ORDERFLOW_DOM",
+   "successor": "nt8:AlfaOmegaFlowOne",
+   "capability": "DOM imbalance (BLOCO 2); standalone still a Hub tape feeder",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaFlowOne.cs",
+     "match": "+ Pressure/Depth (DOM) + Velocity"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaDepth",
+   "kind": "COMPONENT",
+   "lifecycle_status": "MERGED_INTO_FLOWONE",
+   "lineage_detail": "PORTED_INTO_FLOWONE",
+   "generation": "G1_ORDERFLOW_DOM",
+   "successor": "nt8:AlfaOmegaFlowOne",
+   "capability": "DOM liquidity delta (BLOCO 2)",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaFlowOne.cs",
+     "match": "+ Pressure/Depth (DOM) + Velocity"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaVelocity",
+   "kind": "COMPONENT",
+   "lifecycle_status": "MERGED_INTO_FLOWONE",
+   "lineage_detail": "PORTED_INTO_FLOWONE",
+   "generation": "G1_ORDERFLOW_DOM",
+   "successor": "nt8:AlfaOmegaFlowOne",
+   "capability": "pace of tape + market speed (BLOCO 2)",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaFlowOne.cs",
+     "match": "+ Pressure/Depth (DOM) + Velocity"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaPhantom",
+   "kind": "COMPONENT",
+   "lifecycle_status": "UNKNOWN",
+   "lineage_detail": "FUNCTIONALLY_COVERED_STANDALONE_KEPT",
+   "generation": "G1_ORDERFLOW_DOM",
+   "successor": "nt8:AlfaOmegaFlowOne",
+   "capability": "iceberg (FlowOne ICE event); double-count risk if both publish to Hub",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaFlowOne.cs",
+     "match": "SEM precisar dos indicadores de tape avulsos (Phantom/Stops/Gravity/Pressure/Nexus/Pulse)"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaStops",
+   "kind": "COMPONENT",
+   "lifecycle_status": "UNKNOWN",
+   "lineage_detail": "FUNCTIONALLY_COVERED_STANDALONE_KEPT",
+   "generation": "G1_ORDERFLOW_DOM",
+   "successor": "nt8:AlfaOmegaFlowOne",
+   "capability": "stop-run (FlowOne STOP event)",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaFlowOne.cs",
+     "match": "SEM precisar dos indicadores de tape avulsos (Phantom/Stops/Gravity/Pressure/Nexus/Pulse)"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaGravity",
+   "kind": "COMPONENT",
+   "lifecycle_status": "UNKNOWN",
+   "lineage_detail": "STANDALONE_FROZEN",
+   "generation": "G1_ORDERFLOW_DOM",
+   "successor": null,
+   "capability": "outside liquidity; only named as Hub tape feeder, no FlowOne equivalent found",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaFlowOne.cs",
+     "match": "SEM precisar dos indicadores de tape avulsos (Phantom/Stops/Gravity/Pressure/Nexus/Pulse)"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaVision",
+   "kind": "COMPONENT",
+   "lifecycle_status": "UNKNOWN",
+   "lineage_detail": "STANDALONE_EXPLICITLY_EXCLUDED_FROM_FLOWONE",
+   "generation": "G1_ORDERFLOW_DOM",
+   "successor": null,
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaFlowOne.cs",
+     "match": "SEM Vision"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaCopilotUnificado",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_AGGREGATOR",
+   "lineage_detail": "ACTIVE_SEPARATE_LINEAGE",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "successor": null,
+   "capability": "consumer of consolidator :3495; NOT successor of gen-1 Copilots",
+   "evidence": [
+    {
+     "file": "nt8root:AlfaOmegaCopilotUnificado.cs",
+     "match": "consumidor do consolidator-engine :3495"
+    },
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| Alfa Omega Copilot Unificado | `Indicators/AlfaOmegaCopilotUnificado.cs`"
+    }
+   ],
+   "distributed_20260825": true
+  },
+  {
+   "id": "nt8:MenthorQGammaEngine",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "ACTIVE_RENAMED_DISPLAY",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "display_name": "Alfa Omega ULTIMATE",
+   "former_display": "Methor AO Engine (distribution set 2026-08-25)",
+   "evidence": [
+    {
+     "file": "nt8root:MenthorQGammaEngine.cs",
+     "match": "\"Alfa Omega ULTIMATE\""
+    },
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| Alfa Omega Methor AO Engine | `Indicators/MenthorQGammaEngine.cs`"
+    }
+   ],
+   "distributed_20260825": true
+  },
+  {
+   "id": "nt8:AlfaOmegaOrderflow",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "ACTIVE_INDEPENDENT_NAME_COLLISION",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "capability": "GexBot :3457 options-orderflow panel; NOT CME tape order flow",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaOrderflow.cs",
+     "match": "PROJETO NOVO E 100% INDEPENDENTE"
+    },
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| Alfa Omega Orderflow | `Indicators/AlfaOmegaOrderflow.cs`"
+    }
+   ],
+   "distributed_20260825": true
+  },
+  {
+   "id": "nt8:AO_DataLayer",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "LIVE_DEPENDENCY_OF_ULTIMATE_ShowAoMirror_default_false_HEADER_SAYS_STAGING_STALE",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "capability": "Robo mirror staging; inside bin\\Custom\\Indicators though header says outside; not in csproj",
+   "evidence": [
+    {
+     "file": "nt8root:AO_DataLayer.cs",
+     "match": "Fora de bin\\Custom de proposito"
+    },
+    {
+     "file": "nt8root:MenthorQGammaEngine.cs",
+     "match": "AoMirrorData.Assinar()"
+    }
+   ]
+  },
+  {
+   "id": "relay:GammaGexUpstream3530",
+   "kind": "SOURCE_TOPOLOGY",
+   "lifecycle_status": null,
+   "lineage_detail": "UPSTREAM_OF_3457",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaAlfaBotRelay.cs",
+     "match": "GammaGex (Windows :3530"
+    }
+   ]
+  },
+  {
+   "id": "hist:AlfaOmegaWallsNQ",
+   "kind": "PROPOSAL_NEVER_BUILT",
+   "lifecycle_status": null,
+   "lineage_detail": "NEVER_BUILT_DISCARDED",
+   "generation": "G3_OPTIONS_GEX",
+   "evidence": [
+    {
+     "file": "hist:HANDOFF_8_INDICADORES_NOVOS_20260728.md",
+     "match": "`AlfaOmegaWallsNQ` | `/levels/NQ` |"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaDivergenceESX",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "ACTIVE_APPROVED_20260728",
+   "generation": "G3_OPTIONS_GEX",
+   "evidence": [
+    {
+     "file": "hist:HANDOFF_8_INDICADORES_NOVOS_20260728.md",
+     "match": "`AlfaOmegaDivergenceESX` | `/divergence/es-spx-vix`"
+    },
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| AlfaOmega Divergence ESX | `Indicators/AlfaOmegaDivergenceESX.cs`"
+    }
+   ],
+   "distributed_20260825": true
+  },
+  {
+   "id": "layer:Hiro.GammaCurve",
+   "kind": "CAPABILITY_LAYER",
+   "lifecycle_status": null,
+   "lineage_detail": "LAYER_INSIDE_HIRO_NOT_STANDALONE",
+   "generation": "G3_OPTIONS_GEX",
+   "parent": "nt8:AlfaOmegaHiro",
+   "evidence": [
+    {
+     "file": "hist:HANDOFF_8_INDICADORES_NOVOS_20260728.md",
+     "match": "`ShowGammaCurve` **false**"
+    }
+   ]
+  },
+  {
+   "id": "group:OptionsFamily11",
+   "kind": "GROUP",
+   "lifecycle_status": null,
+   "lineage_detail": "ACTIVE_ALL_BACKEND_FED",
+   "generation": "G3_OPTIONS_GEX",
+   "members": [
+    "OptionsFlowHiro",
+    "DexGexFlow",
+    "GammaPressure",
+    "GexByStrike",
+    "Hiro",
+    "NetGex0DTE",
+    "OpenFlow",
+    "Trace",
+    "TraceCloud",
+    "VixLine",
+    "VolDashboard"
+   ],
+   "evidence": [
+    {
+     "file": "hist:LEVANTAMENTO_11_INDICADORES_OPCOES_AOT_20260722.md",
+     "match": "**Todos os 11 já leem de um backend HTTP de rede**"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaCallPutClassing",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "display_name": "AlfaOmega Call-Put Classing",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| AlfaOmega Call-Put Classing | `Indicators/AlfaOmegaCallPutClassing.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaFlowOneHybrid",
+   "kind": "COMPONENT",
+   "lifecycle_status": "FLOWONE_HYBRID",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G3_OPTIONS_GEX",
+   "display_name": "AlfaOmega FlowOne HYBRID",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| AlfaOmega FlowOne HYBRID | `Indicators/AlfaOmegaFlowOneHybrid.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaOptionsFlowHiro",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G3_OPTIONS_GEX",
+   "display_name": "AlfaOmega OptionsFlow HIRO",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| AlfaOmega OptionsFlow HIRO | `Indicators/AlfaOmegaOptionsFlowHiro.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaClassic",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "display_name": "AlfaOmegaClassic",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| AlfaOmegaClassic | `Indicators/AlfaOmegaClassic.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaDexGexFlow",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G3_OPTIONS_GEX",
+   "display_name": "AlfaOmegaDexGexFlow",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| AlfaOmegaDexGexFlow | `Indicators/AlfaOmegaDexGexFlow.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaGammaPressure",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G3_OPTIONS_GEX",
+   "display_name": "AlfaOmegaGammaPressure",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| AlfaOmegaGammaPressure | `Indicators/AlfaOmegaGammaPressure.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaGexByStrike",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G3_OPTIONS_GEX",
+   "display_name": "AlfaOmegaGexByStrike",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| AlfaOmegaGexByStrike | `Indicators/AlfaOmegaGexByStrike.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaHiro",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G3_OPTIONS_GEX",
+   "display_name": "AlfaOmegaHiro",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| AlfaOmegaHiro | `Indicators/AlfaOmegaHiro.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaLogin",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "display_name": "AlfaOmegaLogin",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| AlfaOmegaLogin | `Indicators/AlfaOmegaLogin.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaNetGex0DTE",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G3_OPTIONS_GEX",
+   "display_name": "AlfaOmegaNetGex0DTE",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| AlfaOmegaNetGex0DTE | `Indicators/AlfaOmegaNetGex0DTE.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaOpenFlow",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G3_OPTIONS_GEX",
+   "display_name": "AlfaOmegaOpenFlow",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| AlfaOmegaOpenFlow | `Indicators/AlfaOmegaOpenFlow.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaState",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "display_name": "AlfaOmegaState",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| AlfaOmegaState | `Indicators/AlfaOmegaState.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaTrace",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G3_OPTIONS_GEX",
+   "display_name": "AlfaOmegaTrace",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| AlfaOmegaTrace | `Indicators/AlfaOmegaTrace.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaTraceCloud",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G3_OPTIONS_GEX",
+   "display_name": "AlfaOmegaTraceCloud",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| AlfaOmegaTraceCloud | `Indicators/AlfaOmegaTraceCloud.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaVixLine",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G3_OPTIONS_GEX",
+   "display_name": "AlfaOmegaVixLine",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| AlfaOmegaVixLine | `Indicators/AlfaOmegaVixLine.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaVolDashboard",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G3_OPTIONS_GEX",
+   "display_name": "AlfaOmegaVolDashboard",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| AlfaOmegaVolDashboard | `Indicators/AlfaOmegaVolDashboard.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoBoleta",
+   "kind": "COMPONENT",
+   "lifecycle_status": "CONTROL_UI",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825_ORDER_CAPABLE_EXCLUDED_FROM_JARVIS",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "display_name": "Ao Boleta",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| Ao Boleta | `Indicators/AoBoleta.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoControlCenter",
+   "kind": "COMPONENT",
+   "lifecycle_status": "CONTROL_UI",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825_ORDER_CAPABLE_EXCLUDED_FROM_JARVIS",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "display_name": "Ao Control Center",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| Ao Control Center | `Indicators/AoControlCenter.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaFlowOne",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G2_FLOWONE",
+   "display_name": "Alfa Omega FlowOne",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| Alfa Omega FlowOne | `Indicators/AlfaOmegaFlowOne.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaNetDrift",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "display_name": "Alfa Omega Net Drift",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| Alfa Omega Net Drift | `Indicators/AlfaOmegaNetDrift.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:QuantDataEngine",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "display_name": "Alfa Omega Quant AO Engine",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| Alfa Omega Quant AO Engine | `Indicators/QuantDataEngine.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaVectorPro",
+   "kind": "COMPONENT",
+   "lifecycle_status": "ACTIVE_STANDALONE",
+   "lineage_detail": "IN_DISTRIBUTION_SET_20260825",
+   "generation": "G1_ORDERFLOW_DOM",
+   "display_name": "Alfa Omega Vector Pro",
+   "distributed_20260825": true,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| Alfa Omega Vector Pro | `Indicators/AlfaOmegaVectorPro.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaSharedState",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "MANIFEST_DEPENDENCY",
+   "generation": "G1_ORDERFLOW_DOM",
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| `Indicators/AlfaOmegaSharedState.cs` |"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaTapeStyle",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "MANIFEST_DEPENDENCY",
+   "generation": "G1_ORDERFLOW_DOM",
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| `Indicators/AlfaOmegaTapeStyle.cs` |"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaVector",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "DEPENDENCY_OF_VECTORPRO_ALSO_PUBLISHES_VectorDir",
+   "generation": "G1_ORDERFLOW_DOM",
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| `Indicators/AlfaOmegaVector.cs` |"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoAccountNames",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "MANIFEST_DEPENDENCY",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| `Indicators/AoAccountNames.cs` |"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoAccounts",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "MANIFEST_DEPENDENCY",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| `Indicators/AoAccounts.cs` |"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoBrand",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "MANIFEST_DEPENDENCY",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| `Indicators/AoBrand.cs` |"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoCopyStatus",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "MANIFEST_DEPENDENCY",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| `Indicators/AoCopyStatus.cs` |"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoDiag",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "MANIFEST_DEPENDENCY",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| `Indicators/AoDiag.cs` |"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoExecClient",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "EXECUTION_CLIENT_5152_EXCLUDED_FROM_JARVIS",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| `Indicators/AoExecClient.cs` |"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoHud",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "MANIFEST_DEPENDENCY",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| `Indicators/AoHud.cs` |"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoInput",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "MANIFEST_DEPENDENCY",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| `Indicators/AoInput.cs` |"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoNiveis",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "MANIFEST_DEPENDENCY",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| `Indicators/AoNiveis.cs` |"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoSkin",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "MANIFEST_DEPENDENCY",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| `Indicators/AoSkin.cs` |"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoStopTakeCore",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "MANIFEST_DEPENDENCY",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| `Indicators/AoStopTakeCore.cs` |"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoTheme",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "MANIFEST_DEPENDENCY",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| `Indicators/AoTheme.cs` |"
+    }
+   ]
+  },
+  {
+   "id": "addon:AoBasicEntryLink",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "ADDON_REQUIRED_BY_CONTROL_CENTER",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "| `AddOns/AoBasicEntryLink.cs` |"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaCopilotES",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPERSEDED",
+   "lineage_detail": "DECISION_REMOVE_20260724_FILE_STILL_PRESENT",
+   "generation": "G1_ORDERFLOW_DOM",
+   "replaced_by": "nt8:AlfaOmegaFlowOne (LastPrice_ES writer)",
+   "evidence": [
+    {
+     "file": "hist:PROPOSTA_HUB_MOBILIDADE_E_DECISOES_20260724.md",
+     "match": "**CopilotES → REMOVER agora**"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaCopilotNQ",
+   "kind": "COMPONENT",
+   "lifecycle_status": "UNKNOWN",
+   "lineage_detail": "KEEP_WHILE_NO_FLOWONE_ON_NQ_20260724",
+   "generation": "G1_ORDERFLOW_DOM",
+   "evidence": [
+    {
+     "file": "hist:PROPOSTA_HUB_MOBILIDADE_E_DECISOES_20260724.md",
+     "match": "**CopilotNQ → MANTER**"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaCallPutClassingB3",
+   "kind": "SEPARATE_PROJECT_B3",
+   "lifecycle_status": null,
+   "lineage_detail": "B3_SEPARATE_PROJECT_NOT_IN_SUITE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "projeto separado; nenhum dos 26 usa `AoB3Core`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaGammaEngineB3",
+   "kind": "SEPARATE_PROJECT_B3",
+   "lifecycle_status": null,
+   "lineage_detail": "B3_SEPARATE_PROJECT_NOT_IN_SUITE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "projeto separado; nenhum dos 26 usa `AoB3Core`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaGexByStrikeB3",
+   "kind": "SEPARATE_PROJECT_B3",
+   "lifecycle_status": null,
+   "lineage_detail": "B3_SEPARATE_PROJECT_NOT_IN_SUITE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "projeto separado; nenhum dos 26 usa `AoB3Core`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaQuantEngineB3",
+   "kind": "SEPARATE_PROJECT_B3",
+   "lifecycle_status": null,
+   "lineage_detail": "B3_SEPARATE_PROJECT_NOT_IN_SUITE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "projeto separado; nenhum dos 26 usa `AoB3Core`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaTraceB3",
+   "kind": "SEPARATE_PROJECT_B3",
+   "lifecycle_status": null,
+   "lineage_detail": "B3_SEPARATE_PROJECT_NOT_IN_SUITE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "projeto separado; nenhum dos 26 usa `AoB3Core`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoB3Core",
+   "kind": "SEPARATE_PROJECT_B3",
+   "lifecycle_status": null,
+   "lineage_detail": "B3_SEPARATE_PROJECT_NOT_IN_SUITE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "pkg:MANIFESTO.md",
+     "match": "projeto separado; nenhum dos 26 usa `AoB3Core`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaAlfaBotRelay",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "PRESENT_ON_DISK_LIFECYCLE_UNPROVEN",
+   "generation": "UNKNOWN",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaAlfaBotRelay.cs",
+     "match": "public static class AoAlfaBot"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaAlfaConsolidatorRelay",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "PRESENT_ON_DISK_LIFECYCLE_UNPROVEN",
+   "generation": "UNKNOWN",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaAlfaConsolidatorRelay.cs",
+     "match": "public static class AoAlfaConsolidator"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaAlfaDataRelay",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "PRESENT_ON_DISK_LIFECYCLE_UNPROVEN",
+   "generation": "UNKNOWN",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaAlfaDataRelay.cs",
+     "match": "public static class AoAlfaData"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaAlfaGammaRelay",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "PRESENT_ON_DISK_LIFECYCLE_UNPROVEN",
+   "generation": "UNKNOWN",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaAlfaGammaRelay.cs",
+     "match": "public static class AoAlfaGamma"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaAlfaQRelay",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "PRESENT_ON_DISK_LIFECYCLE_UNPROVEN",
+   "generation": "UNKNOWN",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaAlfaQRelay.cs",
+     "match": "public static class AoAlfaQ"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaAuthV2",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "PRESENT_ON_DISK_LIFECYCLE_UNPROVEN",
+   "generation": "UNKNOWN",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaAuthV2.cs",
+     "match": "public class AoAuthV2Exception"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaCopilotAssetWindow",
+   "kind": "COMPONENT",
+   "lifecycle_status": "UNKNOWN",
+   "lineage_detail": "GEN1_RUNBOOK_LISTED_NOT_DISTRIBUTED_20260825",
+   "generation": "G1_ORDERFLOW_DOM",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaCopilotAssetWindow.cs",
+     "match": "public class AlfaOmegaCopilotAssetWindow"
+    },
+    {
+     "file": "hist:HANDOFF_SUITE_ALFA_OMEGA_NT8.md",
+     "match": "**AlfaOmegaCopilotAssetWindow.cs**"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaCopilotGC",
+   "kind": "COMPONENT",
+   "lifecycle_status": "UNKNOWN",
+   "lineage_detail": "PRESENT_ON_DISK_LIFECYCLE_UNPROVEN",
+   "generation": "UNKNOWN",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaCopilotGC.cs",
+     "match": "public class AlfaOmegaCopilotGC"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaCopilotIndicator",
+   "kind": "COMPONENT",
+   "lifecycle_status": "UNKNOWN",
+   "lineage_detail": "GEN1_RUNBOOK_LISTED_NOT_DISTRIBUTED_20260825",
+   "generation": "G1_ORDERFLOW_DOM",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaCopilotIndicator.cs",
+     "match": "public class AlfaOmegaCopilotIndicator"
+    },
+    {
+     "file": "hist:HANDOFF_SUITE_ALFA_OMEGA_NT8.md",
+     "match": "**AlfaOmegaCopilotIndicator.cs**"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaFlowOnePersistence",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "PRESENT_ON_DISK_LIFECYCLE_UNPROVEN",
+   "generation": "UNKNOWN",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaFlowOnePersistence.cs",
+     "match": "public sealed class FoSignalRecord"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaRelayEndpoint",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "PRESENT_ON_DISK_LIFECYCLE_UNPROVEN",
+   "generation": "UNKNOWN",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaRelayEndpoint.cs",
+     "match": "public static class AoRelayEndpoint"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaSMC",
+   "kind": "COMPONENT",
+   "lifecycle_status": "UNKNOWN",
+   "lineage_detail": "PRESENT_ON_DISK_LIFECYCLE_UNPROVEN",
+   "generation": "UNKNOWN",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaSMC.cs",
+     "match": "public enum AlfaOmegaSMCBreakType"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaStorm",
+   "kind": "COMPONENT",
+   "lifecycle_status": "UNKNOWN",
+   "lineage_detail": "GEN1_RUNBOOK_LISTED_NOT_DISTRIBUTED_20260825",
+   "generation": "G1_ORDERFLOW_DOM",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaStorm.cs",
+     "match": "public class AlfaOmegaStorm"
+    },
+    {
+     "file": "hist:HANDOFF_SUITE_ALFA_OMEGA_NT8.md",
+     "match": "**AlfaOmegaStorm.cs**"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AlfaOmegaTrackerPro",
+   "kind": "COMPONENT",
+   "lifecycle_status": "UNKNOWN",
+   "lineage_detail": "GEN1_RUNBOOK_LISTED_NOT_DISTRIBUTED_20260825",
+   "generation": "G1_ORDERFLOW_DOM",
+   "evidence": [
+    {
+     "file": "nt8:AlfaOmegaTrackerPro.cs",
+     "match": "public enum LtSumMode"
+    },
+    {
+     "file": "hist:HANDOFF_SUITE_ALFA_OMEGA_NT8.md",
+     "match": "**AlfaOmegaTrackerPro.cs**"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoInputProbe",
+   "kind": "COMPONENT",
+   "lifecycle_status": "UNKNOWN",
+   "lineage_detail": "PRESENT_ON_DISK_LIFECYCLE_UNPROVEN",
+   "generation": "UNKNOWN",
+   "evidence": [
+    {
+     "file": "nt8:AoInputProbe.cs",
+     "match": "public class AoInputProbe"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoLicenca",
+   "kind": "COMPONENT",
+   "lifecycle_status": "UNKNOWN",
+   "lineage_detail": "PRESENT_ON_DISK_LIFECYCLE_UNPROVEN",
+   "generation": "UNKNOWN",
+   "evidence": [
+    {
+     "file": "nt8:AoLicenca.cs",
+     "match": "public static class AoLicenca"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoLicencaUi",
+   "kind": "COMPONENT",
+   "lifecycle_status": "UNKNOWN",
+   "lineage_detail": "PRESENT_ON_DISK_LIFECYCLE_UNPROVEN",
+   "generation": "UNKNOWN",
+   "evidence": [
+    {
+     "file": "nt8:AoLicencaUi.cs",
+     "match": "public static class AoLicencaUi"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoLogin",
+   "kind": "COMPONENT",
+   "lifecycle_status": "UNKNOWN",
+   "lineage_detail": "PRESENT_ON_DISK_LIFECYCLE_UNPROVEN",
+   "generation": "UNKNOWN",
+   "evidence": [
+    {
+     "file": "nt8:AoLogin.cs",
+     "match": "public sealed class AoLoginResult"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoMarcadores",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "ROBO_FILL_MARKER_REGISTRY_OBSERVATIONAL_ONLY_FOR_JARVIS",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "nt8:AoMarcadores.cs",
+     "match": "public enum AoMarcadorTipo"
+    },
+    {
+     "file": "nt8:AoMarcadores.cs",
+     "match": "REGISTRO DE MARCADORES DE OPERACAO"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoMarketDataPublisher",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "STANDALONE_PACKAGE_SHAREDSTATE_PUBLISHER_ES_NQ_(FlowOne_role_when_FlowOne_absent)",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "nt8:AoMarketDataPublisher.cs",
+     "match": "public static class AoMarketDataPublisher"
+    },
+    {
+     "file": "nt8:AoMarketDataPublisher.cs",
+     "match": "PUBLICADOR INTERNO ES/NQ do pacote standalone"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoPressSessao",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "PRESS_VALIDITY_POLICY_P1S_20261002",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "nt8:AoPressSessao.cs",
+     "match": "public class AoPressSessao"
+    },
+    {
+     "file": "nt8:AoPressSessao.cs",
+     "match": "POLITICA DE VALIDADE DO Press PUBLICADO"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoProbeBidAsk",
+   "kind": "COMPONENT",
+   "lifecycle_status": "UNKNOWN",
+   "lineage_detail": "PRESENT_ON_DISK_LIFECYCLE_UNPROVEN",
+   "generation": "UNKNOWN",
+   "evidence": [
+    {
+     "file": "nt8:AoProbeBidAsk.cs",
+     "match": "public class AoProbeBidAsk"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AoTapeEngine",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "FLOWONE_CORE_VERBATIM_PORT_FOR_STANDALONE_PACKAGE_DOUBLE_WRITE_RISK",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "nt8:AoTapeEngine.cs",
+     "match": "public enum AoTick"
+    },
+    {
+     "file": "nt8:AoTapeEngine.cs",
+     "match": "porte VERBATIM do miolo do `AlfaOmegaFlowOne.cs`"
+    }
+   ]
+  },
+  {
+   "id": "nt8:AO_DecisionLayer",
+   "kind": "COMPONENT",
+   "lifecycle_status": "SUPPORT_COMPONENT",
+   "lineage_detail": "LIVE_DEPENDENCY_OF_ULTIMATE_ShowAoMirror_default_false_HEADER_SAYS_STAGING_STALE",
+   "generation": "G4_CONSOLIDATOR_ALFA",
+   "evidence": [
+    {
+     "file": "nt8root:AO_DecisionLayer.cs",
+     "match": "public class AoMirrorState"
+    },
+    {
+     "file": "nt8root:MenthorQGammaEngine.cs",
+     "match": "AoMirrorDecision.Montar"
+    }
+   ]
+  },
+  {
+   "id": "nt8:BmAbsorptionSweeps",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:BmAbsorptionSweeps.cs",
+     "match": "public enum BmDetectionMode"
+    }
+   ]
+  },
+  {
+   "id": "nt8:BmBreakevenPoint",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:BmBreakevenPoint.cs",
+     "match": "public enum BmCommissionType"
+    }
+   ]
+  },
+  {
+   "id": "nt8:BmCorrelationTracker",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:BmCorrelationTracker.cs",
+     "match": "public enum BmAnchorMode"
+    }
+   ]
+  },
+  {
+   "id": "nt8:BmCrossBbo",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:BmCrossBbo.cs",
+     "match": "public enum BmBboSource"
+    }
+   ]
+  },
+  {
+   "id": "nt8:BmPriceInversion",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:BmPriceInversion.cs",
+     "match": "public class BmPriceInversion"
+    }
+   ]
+  },
+  {
+   "id": "nt8:FlowSubPanel",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:FlowSubPanel.cs",
+     "match": "public enum SubPanelMode"
+    }
+   ]
+  },
+  {
+   "id": "nt8:GammaChartOverlayEngine",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:GammaChartOverlayEngine.cs",
+     "match": "public class OverlayEvent"
+    }
+   ]
+  },
+  {
+   "id": "nt8:GammaClassificationTypes",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:GammaClassificationTypes.cs",
+     "match": "public enum GammaRegimeFlags"
+    }
+   ]
+  },
+  {
+   "id": "nt8:GammaDashboardAPI",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:GammaDashboardAPI.cs",
+     "match": "public enum GmaInstrument"
+    }
+   ]
+  },
+  {
+   "id": "nt8:GammaDataMiner",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:GammaDataMiner.cs",
+     "match": "public class GammaDataMiner"
+    }
+   ]
+  },
+  {
+   "id": "nt8:GammaEventEngine",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:GammaEventEngine.cs",
+     "match": "public enum GammaEventType_Engine"
+    }
+   ]
+  },
+  {
+   "id": "nt8:GammaExportServer",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:GammaExportServer.cs",
+     "match": "public class ExportQueue"
+    }
+   ]
+  },
+  {
+   "id": "nt8:GammaExportTypes",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:GammaExportTypes.cs",
+     "match": "public enum GammaEventType"
+    }
+   ]
+  },
+  {
+   "id": "nt8:GammaLiveInspector",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:GammaLiveInspector.cs",
+     "match": "public class GammaLiveInspector"
+    }
+   ]
+  },
+  {
+   "id": "nt8:GammaMarketClassifier",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:GammaMarketClassifier.cs",
+     "match": "public class GammaMarketClassifier"
+    }
+   ]
+  },
+  {
+   "id": "nt8:GammaRegimeDetector",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:GammaRegimeDetector.cs",
+     "match": "public enum GammaRegimeType"
+    }
+   ]
+  },
+  {
+   "id": "nt8:GammaRuntimeDumper",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:GammaRuntimeDumper.cs",
+     "match": "public class GammaRuntimeDumper"
+    }
+   ]
+  },
+  {
+   "id": "nt8:GammaSnapshotEngine",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:GammaSnapshotEngine.cs",
+     "match": "public class GammaSnapshot"
+    }
+   ]
+  },
+  {
+   "id": "nt8:GammaStressScore",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:GammaStressScore.cs",
+     "match": "public static class GammaStressScore"
+    }
+   ]
+  },
+  {
+   "id": "nt8:GexDexVision",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:GexDexVision.cs",
+     "match": "public enum GdvInstrument"
+    }
+   ]
+  },
+  {
+   "id": "nt8:MenthorQGammaEntryCore",
+   "kind": "COMPONENT",
+   "lifecycle_status": "UNKNOWN",
+   "lineage_detail": "PRESENT_ON_DISK_LIFECYCLE_UNPROVEN",
+   "generation": "UNKNOWN",
+   "evidence": [
+    {
+     "file": "nt8root:MenthorQGammaEntryCore.cs",
+     "match": "public enum MqGeEntryMode"
+    }
+   ]
+  },
+  {
+   "id": "nt8:ShadowWavesFlow",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:ShadowWavesFlow.cs",
+     "match": "public enum SwfInstrument"
+    }
+   ]
+  },
+  {
+   "id": "nt8:SpotGamma",
+   "kind": "OUT_OF_SUITE_PRE_HISTORY",
+   "lifecycle_status": null,
+   "lineage_detail": "ROOT_NON_AO_FILE",
+   "generation": null,
+   "evidence": [
+    {
+     "file": "nt8root:SpotGamma.cs",
+     "match": "public class SpotGamma"
+    }
+   ]
+  }
+ ],
+ "lifecycle_enum": [
+  "ACTIVE_STANDALONE",
+  "ACTIVE_AGGREGATOR",
+  "FLOWONE_INTERNAL",
+  "FLOWONE_HYBRID",
+  "MERGED_INTO_FLOWONE",
+  "MERGED_INTO_OTHER",
+  "SUPERSEDED",
+  "DEPRECATED",
+  "UNUSABLE_WITH_CURRENT_DATA",
+  "REMOVED",
+  "SUPPORT_COMPONENT",
+  "CONTROL_UI",
+  "UNKNOWN"
+ ]
+}

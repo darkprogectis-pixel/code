@@ -12,8 +12,8 @@
  },
  "rule": "semantic fields only from curated entries with resolvable evidence; otherwise UNKNOWN / NOT_VERIFIED. Knowledge sources are never DATA.",
  "counts": {
-  "NT8_SUPPORT": 32,
-  "NT8_INDICATOR": 51,
+  "NT8_SUPPORT": 33,
+  "NT8_INDICATOR": 53,
   "AOT_BLOCK": 41,
   "KNOWLEDGE_SOURCE": 5
  },
@@ -98,7 +98,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAlfaBotRelay.cs:41"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AlfaOmegaAlfaConsolidatorRelay",
@@ -150,7 +151,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAlfaConsolidatorRelay.cs:23"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AlfaOmegaAlfaDataRelay",
@@ -188,7 +190,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAlfaDataRelay.cs:26"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AlfaOmegaAlfaGammaRelay",
@@ -226,7 +229,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAlfaGammaRelay.cs:32"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AlfaOmegaAlfaQRelay",
@@ -264,7 +268,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAlfaQRelay.cs:25"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AlfaOmegaAuthV2",
@@ -295,7 +300,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaAuthV2.cs:37"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AlfaOmegaCallPutClassing",
@@ -338,7 +344,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCallPutClassing.cs:48"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaCallPutClassingB3",
@@ -369,7 +376,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCallPutClassingB3.cs:40"
-   ]
+   ],
+   "lineage_class": "OUT_OF_SCOPE_B3"
   },
   {
    "id": "nt8:AlfaOmegaClassic",
@@ -409,7 +417,8 @@
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaClassic.cs:141",
     "repo:CLAUDE.md:121",
     "nt8:AlfaOmegaClassic.cs:352"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaCopilotAssetWindow",
@@ -440,7 +449,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCopilotAssetWindow.cs:16"
-   ]
+   ],
+   "lineage_class": "UNKNOWN"
   },
   {
    "id": "nt8:AlfaOmegaCopilotES",
@@ -471,7 +481,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCopilotES.cs:28"
-   ]
+   ],
+   "lineage_class": "LEGACY_SUPERSEDED"
   },
   {
    "id": "nt8:AlfaOmegaCopilotGC",
@@ -502,7 +513,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCopilotGC.cs:29"
-   ]
+   ],
+   "lineage_class": "UNKNOWN"
   },
   {
    "id": "nt8:AlfaOmegaCopilotIndicator",
@@ -533,7 +545,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCopilotIndicator.cs:29"
-   ]
+   ],
+   "lineage_class": "UNKNOWN"
   },
   {
    "id": "nt8:AlfaOmegaCopilotNQ",
@@ -564,7 +577,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaCopilotNQ.cs:29"
-   ]
+   ],
+   "lineage_class": "UNKNOWN"
   },
   {
    "id": "nt8:AlfaOmegaDepth",
@@ -595,7 +609,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaDepth.cs:23"
-   ]
+   ],
+   "lineage_class": "LEGACY_MERGED_INTO_FLOWONE"
   },
   {
    "id": "nt8:AlfaOmegaDexGexFlow",
@@ -635,7 +650,8 @@
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaDexGexFlow.cs:81",
     "repo:CLAUDE.md:120",
     "nt8:AlfaOmegaDexGexFlow.cs:436"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaDivergenceESX",
@@ -682,7 +698,8 @@
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaDivergenceESX.cs:56",
     "nt8:AlfaOmegaDivergenceESX.cs:159"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaFlowOne",
@@ -729,7 +746,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaFlowOne.cs:233"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaFlowOneHybrid",
@@ -767,7 +785,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaFlowOneHybrid.cs:57"
-   ]
+   ],
+   "lineage_class": "HYBRID"
   },
   {
    "id": "nt8:AlfaOmegaFlowOnePersistence",
@@ -798,7 +817,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaFlowOnePersistence.cs:31"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AlfaOmegaFusion",
@@ -829,7 +849,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaFusion.cs:25"
-   ]
+   ],
+   "lineage_class": "LEGACY_MERGED_INTO_FLOWONE"
   },
   {
    "id": "nt8:AlfaOmegaGammaEngineB3",
@@ -860,7 +881,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaGammaEngineB3.cs:42"
-   ]
+   ],
+   "lineage_class": "OUT_OF_SCOPE_B3"
   },
   {
    "id": "nt8:AlfaOmegaGammaPressure",
@@ -899,7 +921,8 @@
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaGammaPressure.cs:79",
     "nt8:AlfaOmegaGammaPressure.cs:210"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaGexByStrike",
@@ -937,7 +960,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaGexByStrike.cs:80"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaGexByStrikeB3",
@@ -968,7 +992,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaGexByStrikeB3.cs:67"
-   ]
+   ],
+   "lineage_class": "OUT_OF_SCOPE_B3"
   },
   {
    "id": "nt8:AlfaOmegaGravity",
@@ -999,7 +1024,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaGravity.cs:30"
-   ]
+   ],
+   "lineage_class": "UNKNOWN"
   },
   {
    "id": "nt8:AlfaOmegaHiro",
@@ -1061,7 +1087,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaHiro.cs:85"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaLogin",
@@ -1092,7 +1119,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaLogin.cs:41"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AlfaOmegaMarker",
@@ -1123,7 +1151,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaMarker.cs:31"
-   ]
+   ],
+   "lineage_class": "LEGACY_MERGED_INTO_FLOWONE"
   },
   {
    "id": "nt8:AlfaOmegaNetDrift",
@@ -1161,7 +1190,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaNetDrift.cs:46"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaNetGex0DTE",
@@ -1210,7 +1240,8 @@
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaNetGex0DTE.cs:62",
     "repo:CLAUDE.md:119",
     "nt8:AlfaOmegaNetGex0DTE.cs:141"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaNexus",
@@ -1246,7 +1277,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaNexus.cs:40"
-   ]
+   ],
+   "lineage_class": "LEGACY_MERGED_INTO_FLOWONE"
   },
   {
    "id": "nt8:AlfaOmegaOpenFlow",
@@ -1285,7 +1317,8 @@
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaOpenFlow.cs:84",
     "nt8:AlfaOmegaOpenFlow.cs:208"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaOptionsFlowHiro",
@@ -1324,7 +1357,8 @@
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaOptionsFlowHiro.cs:85",
     "nt8:AlfaOmegaOptionsFlowHiro.cs:233"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaOrderflow",
@@ -1362,7 +1396,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaOrderflow.cs:235"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaPhantom",
@@ -1393,7 +1428,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaPhantom.cs:33"
-   ]
+   ],
+   "lineage_class": "UNKNOWN"
   },
   {
    "id": "nt8:AlfaOmegaPressure",
@@ -1424,7 +1460,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaPressure.cs:29"
-   ]
+   ],
+   "lineage_class": "LEGACY_MERGED_INTO_FLOWONE"
   },
   {
    "id": "nt8:AlfaOmegaPulse",
@@ -1455,7 +1492,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaPulse.cs:39"
-   ]
+   ],
+   "lineage_class": "LEGACY_MERGED_INTO_FLOWONE"
   },
   {
    "id": "nt8:AlfaOmegaQuantEngineB3",
@@ -1486,7 +1524,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaQuantEngineB3.cs:36"
-   ]
+   ],
+   "lineage_class": "OUT_OF_SCOPE_B3"
   },
   {
    "id": "nt8:AlfaOmegaRelayEndpoint",
@@ -1534,7 +1573,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaRelayEndpoint.cs:26"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AlfaOmegaSMC",
@@ -1565,7 +1605,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaSMC.cs:68"
-   ]
+   ],
+   "lineage_class": "UNKNOWN"
   },
   {
    "id": "nt8:AlfaOmegaSharedState",
@@ -1616,7 +1657,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaSharedState.cs:12"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AlfaOmegaState",
@@ -1656,7 +1698,8 @@
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaState.cs:313",
     "repo:CLAUDE.md:122",
     "nt8:AlfaOmegaState.cs:511"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaStops",
@@ -1687,7 +1730,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaStops.cs:31"
-   ]
+   ],
+   "lineage_class": "UNKNOWN"
   },
   {
    "id": "nt8:AlfaOmegaStorm",
@@ -1720,7 +1764,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaStorm.cs:28"
-   ]
+   ],
+   "lineage_class": "UNKNOWN"
   },
   {
    "id": "nt8:AlfaOmegaTapeStyle",
@@ -1751,7 +1796,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaTapeStyle.cs:35"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AlfaOmegaTrace",
@@ -1789,7 +1835,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaTrace.cs:111"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaTraceB3",
@@ -1820,7 +1867,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaTraceB3.cs:33"
-   ]
+   ],
+   "lineage_class": "OUT_OF_SCOPE_B3"
   },
   {
    "id": "nt8:AlfaOmegaTraceCloud",
@@ -1858,7 +1906,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaTraceCloud.cs:87"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaTrackerPro",
@@ -1889,7 +1938,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaTrackerPro.cs:31"
-   ]
+   ],
+   "lineage_class": "UNKNOWN"
   },
   {
    "id": "nt8:AlfaOmegaVector",
@@ -1925,7 +1975,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVector.cs:31"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AlfaOmegaVectorPro",
@@ -1969,7 +2020,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVectorPro.cs:25"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaVelocity",
@@ -2000,7 +2052,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVelocity.cs:24"
-   ]
+   ],
+   "lineage_class": "LEGACY_MERGED_INTO_FLOWONE"
   },
   {
    "id": "nt8:AlfaOmegaVision",
@@ -2031,7 +2084,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVision.cs:35"
-   ]
+   ],
+   "lineage_class": "UNKNOWN"
   },
   {
    "id": "nt8:AlfaOmegaVixLine",
@@ -2069,7 +2123,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVixLine.cs:39"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AlfaOmegaVolDashboard",
@@ -2107,7 +2162,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AlfaOmegaVolDashboard.cs:44"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AoAccountNames",
@@ -2143,7 +2199,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoAccountNames.cs:73"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AoAccounts",
@@ -2179,7 +2236,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoAccounts.cs:65"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AoB3Core",
@@ -2210,7 +2268,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoB3Core.cs:50"
-   ]
+   ],
+   "lineage_class": "OUT_OF_SCOPE_B3"
   },
   {
    "id": "nt8:AoBoleta",
@@ -2246,7 +2305,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoBoleta.cs:41"
-   ]
+   ],
+   "lineage_class": "CONTROL_UI"
   },
   {
    "id": "nt8:AoBrand",
@@ -2277,7 +2337,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoBrand.cs:67"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AoControlCenter",
@@ -2333,7 +2394,8 @@
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoControlCenter.cs:169",
     "nt8:AoControlCenter.cs:586"
    ],
-   "note": "Order-capable NT8 panel (AlfaOmega Trader :5152). Catalogued only; JARVIS never calls it."
+   "note": "Order-capable NT8 panel (AlfaOmega Trader :5152). Catalogued only; JARVIS never calls it.",
+   "lineage_class": "CONTROL_UI"
   },
   {
    "id": "nt8:AoCopyStatus",
@@ -2364,7 +2426,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoCopyStatus.cs:29"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AoDiag",
@@ -2395,7 +2458,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoDiag.cs:44"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AoExecClient",
@@ -2431,7 +2495,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoExecClient.cs:67"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AoHud",
@@ -2462,7 +2527,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoHud.cs:36"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AoInput",
@@ -2498,7 +2564,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoInput.cs:69"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AoInputProbe",
@@ -2534,7 +2601,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoInputProbe.cs:40"
-   ]
+   ],
+   "lineage_class": "UNKNOWN"
   },
   {
    "id": "nt8:AoLicenca",
@@ -2565,7 +2633,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoLicenca.cs:29"
-   ]
+   ],
+   "lineage_class": "UNKNOWN"
   },
   {
    "id": "nt8:AoLicencaUi",
@@ -2596,7 +2665,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoLicencaUi.cs:20"
-   ]
+   ],
+   "lineage_class": "UNKNOWN"
   },
   {
    "id": "nt8:AoLogin",
@@ -2627,7 +2697,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoLogin.cs:45"
-   ]
+   ],
+   "lineage_class": "UNKNOWN"
   },
   {
    "id": "nt8:AoMarcadores",
@@ -2663,7 +2734,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoMarcadores.cs:71"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AoMarketDataPublisher",
@@ -2694,7 +2766,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoMarketDataPublisher.cs:36"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AoNiveis",
@@ -2725,7 +2798,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoNiveis.cs:118"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AoPressSessao",
@@ -2756,7 +2830,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoPressSessao.cs:24"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AoProbeBidAsk",
@@ -2787,7 +2862,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoProbeBidAsk.cs:38"
-   ]
+   ],
+   "lineage_class": "UNKNOWN"
   },
   {
    "id": "nt8:AoSkin",
@@ -2818,7 +2894,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoSkin.cs:45"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AoStopTakeCore",
@@ -2849,7 +2926,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoStopTakeCore.cs:60"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AoTapeEngine",
@@ -2880,7 +2958,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoTapeEngine.cs:48"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AoTheme",
@@ -2916,7 +2995,47 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/AoTheme.cs:68"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
+  },
+  {
+   "id": "nt8:QuantDataEngine",
+   "name": "QuantDataEngine",
+   "class_name": "QuantDataEngine",
+   "classes": 7,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/QuantDataEngine.cs",
+   "owner_line": 40,
+   "description": "Alfa Omega Quant AO Engine — consumidor da API :3490. Net Drift, Exposure by Strike, Dark Pool e Motor Direcional ES/NQ.",
+   "description_line": 160,
+   "plots": [],
+   "source_class": "QUANTDATA",
+   "source_alias": [
+    "α Data"
+   ],
+   "source_ports": [
+    {
+     "port": 3490,
+     "line": 2
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/TTW_DarkProjects/QuantDataEngine.cs:40"
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
   },
   {
    "id": "nt8:AO_DataLayer",
@@ -2958,7 +3077,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/AO_DataLayer.cs:45"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AO_DecisionLayer",
@@ -3000,7 +3120,8 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/AO_DecisionLayer.cs:62"
-   ]
+   ],
+   "lineage_class": "NT8_SUPPORT"
   },
   {
    "id": "nt8:AlfaOmegaCopilotUnificado",
@@ -3046,7 +3167,84 @@
    "sample_state": "NOT_SAMPLED",
    "evidence": [
     "home:Documents/NinjaTrader 8/bin/Custom/Indicators/AlfaOmegaCopilotUnificado.cs:38"
-   ]
+   ],
+   "lineage_class": "NT8_INDICATOR_AGGREGATOR"
+  },
+  {
+   "id": "nt8:MenthorQGammaEngine",
+   "name": "MenthorQGammaEngine",
+   "class_name": "MenthorQGammaEngine",
+   "classes": 8,
+   "kind": "NT8_INDICATOR",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/MenthorQGammaEngine.cs",
+   "owner_line": 39,
+   "description": "Alfa Omega ULTIMATE — motor institucional de opcoes (ES/NQ/RTY/GC) via API :3480.",
+   "description_line": 335,
+   "plots": [],
+   "source_class": "MENTHORQ+GEXBOT",
+   "source_alias": [
+    "α Q",
+    "α Bot"
+   ],
+   "source_ports": [
+    {
+     "port": 3480,
+     "line": 3
+    },
+    {
+     "port": 3457,
+     "line": 172
+    }
+   ],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/MenthorQGammaEngine.cs:39"
+   ],
+   "lineage_class": "NT8_INDICATOR_ACTIVE"
+  },
+  {
+   "id": "nt8:MenthorQGammaEntryCore",
+   "name": "MenthorQGammaEntryCore",
+   "class_name": "MqGeLevel",
+   "classes": 5,
+   "kind": "NT8_SUPPORT",
+   "module": "NT8",
+   "owner_file": "home:Documents/NinjaTrader 8/bin/Custom/Indicators/MenthorQGammaEntryCore.cs",
+   "owner_line": 51,
+   "description": null,
+   "description_line": null,
+   "plots": [],
+   "source_class": "INTERNAL",
+   "source_alias": [],
+   "source_ports": [],
+   "apis": [],
+   "instruments": "UNKNOWN",
+   "category": "UNKNOWN",
+   "signal_role": "UNKNOWN",
+   "unit": "UNKNOWN",
+   "semantic_status": "NOT_VERIFIED",
+   "order_api_refs": 0,
+   "order_api_lines": [],
+   "data_role": "DATA",
+   "jarvis_areas": [],
+   "freshness_field": "UNKNOWN",
+   "sample_state": "NOT_SAMPLED",
+   "evidence": [
+    "home:Documents/NinjaTrader 8/bin/Custom/Indicators/MenthorQGammaEntryCore.cs:51"
+   ],
+   "lineage_class": "UNKNOWN"
   },
   {
    "id": "aot:/state#gate",
@@ -3093,7 +3291,8 @@
     "conso:consolidator-engine.js:137"
    ],
    "upstream": "AO bridge :5151 (NT8 AoGate.EsNq)",
-   "note": "ALFABOT C3 / robot entry share this producer; the Consolidator re-reads ao.anchor itself (same bridge)."
+   "note": "ALFABOT C3 / robot entry share this producer; the Consolidator re-reads ao.anchor itself (same bridge).",
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#tapeFreshness",
@@ -3134,7 +3333,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#sources",
@@ -3172,7 +3372,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#symbols",
@@ -3216,7 +3417,8 @@
     "repo:tools/jarvis/aot/alfabot-explain.mjs:50",
     "conso:consolidator-engine.js:23"
    ],
-   "note": "JARVIS matrix C5 reads symbols[sym].tier0.confidence; threshold TG_MIN_CONF in the Consolidator."
+   "note": "JARVIS matrix C5 reads symbols[sym].tier0.confidence; threshold TG_MIN_CONF in the Consolidator.",
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#confluence",
@@ -3257,7 +3459,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#flowGc",
@@ -3293,7 +3496,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#flowRussell",
@@ -3331,7 +3535,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#traceCloud",
@@ -3369,7 +3574,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#wallAttention",
@@ -3405,7 +3611,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#vixLine",
@@ -3443,7 +3650,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#gexByStrike",
@@ -3479,7 +3687,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#structure",
@@ -3515,7 +3724,8 @@
    "sample_state": "NOT_OK",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#levelsMigration",
@@ -3554,7 +3764,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#callPutClassing",
@@ -3590,7 +3801,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#hedgeByStrike",
@@ -3626,7 +3838,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#stopTakeHedge",
@@ -3662,7 +3875,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#darkPoolLevels",
@@ -3698,7 +3912,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#zeroGamma0dte",
@@ -3736,7 +3951,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#fallback1Dte",
@@ -3772,7 +3988,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#menthorqStrategies",
@@ -3813,7 +4030,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#dexGexFlow",
@@ -3854,7 +4072,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#hiroOpra",
@@ -3895,7 +4114,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#ohlc",
@@ -3931,7 +4151,8 @@
    "sample_state": "MISSING",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#indicators",
@@ -3967,7 +4188,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#marketContext",
@@ -4008,7 +4230,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#analystNote",
@@ -4044,7 +4267,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#copilotBadge",
@@ -4080,7 +4304,8 @@
    "sample_state": "MISSING",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#deep",
@@ -4116,7 +4341,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2160"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#v2",
@@ -4157,7 +4383,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2163"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#confluenciaAdicional",
@@ -4196,7 +4423,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2166"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#sim",
@@ -4234,7 +4462,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2184"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/state#health",
@@ -4272,7 +4501,8 @@
    "sample_state": "NOT_OK",
    "evidence": [
     "home:.claude/aot/aot-bff.js:2214"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/api/indicators#gammaPressure",
@@ -4313,7 +4543,8 @@
    "evidence": [
     "home:.claude/aot/aot-indicators.js:360",
     "aot:aot-indicators.js:360"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/api/indicators#walls",
@@ -4354,7 +4585,8 @@
    "evidence": [
     "home:.claude/aot/aot-indicators.js:361",
     "aot:aot-indicators.js:361"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/api/indicators#hiroRegime",
@@ -4394,7 +4626,8 @@
    "sample_state": "NOT_OK",
    "evidence": [
     "home:.claude/aot/aot-indicators.js:362"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/api/indicators#openFlow",
@@ -4432,7 +4665,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-indicators.js:363"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/api/indicators#aotStructure",
@@ -4470,7 +4704,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-indicators.js:364"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/api/indicators#dexGex",
@@ -4508,7 +4743,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-indicators.js:365"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/api/indicators#stopTake",
@@ -4546,7 +4782,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-indicators.js:367"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/api/indicators#flowByStrike",
@@ -4584,7 +4821,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-indicators.js:368"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "aot:/api/indicators#hedgeDirection",
@@ -4622,7 +4860,8 @@
    "sample_state": "PRESENT",
    "evidence": [
     "home:.claude/aot/aot-indicators.js:369"
-   ]
+   ],
+   "lineage_class": "AOT_CALCULATED"
   },
   {
    "id": "knowledge:skill-alpha-gamma",
@@ -4654,7 +4893,8 @@
    "evidence": [
     "repo:.claude/skills/skill-alpha-gamma/SKILL.md:1",
     "repo:config/jarvis-skills.json"
-   ]
+   ],
+   "lineage_class": "KNOWLEDGE_SOURCE"
   },
   {
    "id": "knowledge:skill-alpha-q",
@@ -4686,7 +4926,8 @@
    "evidence": [
     "repo:.claude/skills/skill-alpha-q/SKILL.md:1",
     "repo:config/jarvis-skills.json"
-   ]
+   ],
+   "lineage_class": "KNOWLEDGE_SOURCE"
   },
   {
    "id": "knowledge:skill-alpha-quant",
@@ -4718,7 +4959,8 @@
    "evidence": [
     "repo:.claude/skills/skill-alpha-quant/SKILL.md:1",
     "repo:config/jarvis-skills.json"
-   ]
+   ],
+   "lineage_class": "KNOWLEDGE_SOURCE"
   },
   {
    "id": "knowledge:skill-alpha-bot",
@@ -4750,7 +4992,8 @@
    "evidence": [
     "repo:.claude/skills/skill-alpha-bot/SKILL.md:1",
     "repo:config/jarvis-skills.json"
-   ]
+   ],
+   "lineage_class": "KNOWLEDGE_SOURCE"
   },
   {
    "id": "knowledge:skill-alpha-data",
@@ -4782,7 +5025,21 @@
    "evidence": [
     "repo:.claude/skills/skill-alpha-data/SKILL.md:1",
     "repo:config/jarvis-skills.json"
-   ]
+   ],
+   "lineage_class": "KNOWLEDGE_SOURCE"
   }
- ]
+ ],
+ "lineage_counts": {
+  "NT8_SUPPORT": 30,
+  "NT8_INDICATOR_ACTIVE": 21,
+  "OUT_OF_SCOPE_B3": 6,
+  "UNKNOWN": 17,
+  "LEGACY_SUPERSEDED": 1,
+  "LEGACY_MERGED_INTO_FLOWONE": 7,
+  "HYBRID": 1,
+  "CONTROL_UI": 2,
+  "NT8_INDICATOR_AGGREGATOR": 1,
+  "AOT_CALCULATED": 41,
+  "KNOWLEDGE_SOURCE": 5
+ }
 }

@@ -19,6 +19,9 @@ export const DEFAULTS = Object.freeze({
   consoDir: path.join(HOME, '.claude', 'consolidator-engine'),
   apiDir: path.join(REPO, 'fixtures', 'jarvis-aot'),
   curated: path.join(REPO, 'config', 'alfaomega-indicators.curated.json'),
+  lineage: path.join(REPO, 'config', 'alfaomega-lineage.curated.json'),
+  histDir: path.join(HOME, 'Desktop', 'Handof TTW'),
+  pkgDir: path.join(HOME, 'Downloads', 'AlfaOmega_pacote_20260825'),
   skills: path.join(REPO, 'config', 'jarvis-skills.json'),
   out: path.join(REPO, 'context', 'jev-future', 'alfaomega'),
 });
@@ -118,7 +121,9 @@ export function scanKnowledge(registryFile) {
   }));
 }
 
-const ROOTS = (o) => ({ repo: REPO, nt8: o.nt8Dirs[0], nt8root: o.nt8Dirs[1], aot: o.aotDir, conso: o.consoDir });
+// Suite files outside the AlfaOmega/Ao naming (lineage audit 2026-10-05): ULTIMATE, Quant AO Engine, ULTIMATE entry core.
+const NAMED_CS = ['MenthorQGammaEngine.cs', 'QuantDataEngine.cs', 'MenthorQGammaEntryCore.cs'];
+const ROOTS = (o) => ({ repo: REPO, nt8: o.nt8Dirs[0], nt8root: o.nt8Dirs[1], aot: o.aotDir, conso: o.consoDir, hist: o.histDir, pkg: o.pkgDir });
 // evidence {file:"<root>:<relpath>", match:"literal"} → "file:line" or throws.
 export function resolveEvidence(ev, roots) {
   const [root, ...rest] = String(ev.file).split(':'); const base = roots[root];
@@ -149,7 +154,7 @@ export function build(opts = {}) {
   const cs = [];
   for (const d of o.nt8Dirs) {
     if (!fs.existsSync(d)) continue;
-    for (const f of fs.readdirSync(d).filter((n) => /^(AlfaOmega|Ao|AO_)\w*\.cs$/.test(n)).sort()) cs.push(scanCs(path.join(d, f), fs.readFileSync(path.join(d, f), 'utf8')));
+    for (const f of fs.readdirSync(d).filter((n) => /^(AlfaOmega|Ao|AO_)\w*\.cs$/.test(n) || NAMED_CS.includes(n)).sort()) cs.push(scanCs(path.join(d, f), fs.readFileSync(path.join(d, f), 'utf8')));
   }
   const samples = { '/state': loadJson(path.join(o.apiDir, 'state.json')), '/api/indicators': loadJson(path.join(o.apiDir, 'indicators.json')) };
   const health = loadJson(path.join(o.apiDir, 'health.json'));
@@ -173,7 +178,7 @@ export function build(opts = {}) {
   };
 }
 
-const CSV_COLS = ['id', 'name', 'kind', 'module', 'source_class', 'apis', 'instruments', 'category', 'signal_role', 'unit', 'semantic_status', 'data_role', 'sample_state', 'freshness_field', 'jarvis_areas', 'order_api_refs', 'owner_file', 'owner_line', 'evidence'];
+const CSV_COLS = ['id', 'name', 'kind', 'lineage_class', 'module', 'source_class', 'apis', 'instruments', 'category', 'signal_role', 'unit', 'semantic_status', 'data_role', 'sample_state', 'freshness_field', 'jarvis_areas', 'order_api_refs', 'owner_file', 'owner_line', 'evidence'];
 const cell = (v) => { const s = Array.isArray(v) ? v.join('|') : v == null ? '' : String(v); return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s; };
 export const toCsv = (rows, cols) => [cols.join(','), ...rows.map((r) => cols.map((c) => cell(r[c])).join(','))].join('\n') + '\n';
 
@@ -193,9 +198,73 @@ export function write(result, out = DEFAULTS.out) {
   return dir;
 }
 
+// Lineage (proposal §2.2): curated lifecycle per component; every evidence resolved fail-closed by resolveEvidence.
+const LINEAGE_CLASS = { MERGED_INTO_FLOWONE: 'LEGACY_MERGED_INTO_FLOWONE', FLOWONE_HYBRID: 'HYBRID', SUPERSEDED: 'LEGACY_SUPERSEDED', ACTIVE_STANDALONE: 'NT8_INDICATOR_ACTIVE', ACTIVE_AGGREGATOR: 'NT8_INDICATOR_AGGREGATOR', CONTROL_UI: 'CONTROL_UI', SUPPORT_COMPONENT: 'NT8_SUPPORT', UNKNOWN: 'UNKNOWN' };
+export function buildLineage(opts = {}) {
+  const o = { ...DEFAULTS, ...opts }; const L = loadJson(o.lineage);
+  if (!L || !Array.isArray(L.entries) || !Array.isArray(L.lifecycle_enum)) throw new Error(`lineage file missing or invalid: ${o.lineage}`);
+  const roots = ROOTS(o); const ids = new Set(); const counts = {};
+  const entries = L.entries.map((e) => {
+    if (ids.has(e.id)) throw new Error(`duplicate lineage id ${e.id}`); ids.add(e.id);
+    if (e.lifecycle_status != null && !L.lifecycle_enum.includes(e.lifecycle_status)) throw new Error(`lineage status not in enum: ${e.lifecycle_status} (${e.id})`);
+    if (!Array.isArray(e.evidence) || !e.evidence.length) throw new Error(`lineage entry without evidence: ${e.id}`);
+    const key = e.lifecycle_status || e.kind; counts[key] = (counts[key] || 0) + 1;
+    return { ...e, evidence_resolved: e.evidence.map((x) => resolveEvidence(x, roots)) };
+  });
+  return { schema: 'alfa-omega-indicator-lineage/v1', status: 'BUILT', built_from: rel(o.lineage), rule: L.rule, generations: L.generations, lifecycle_enum: L.lifecycle_enum, counts,
+    evidence_resolved: entries.reduce((n, e) => n + e.evidence_resolved.length, 0), entries };
+}
+// Catalog reclassification column (order §22): AOT blocks / knowledge keep their class; NT8 rows take the lineage class.
+export function applyLineage(result, lineage) {
+  const byId = new Map(lineage.entries.map((e) => [e.id, e]));
+  for (const r of result.catalog.indicators) {
+    const e = byId.get(r.id);
+    r.lineage_class = r.kind === 'AOT_BLOCK' ? 'AOT_CALCULATED' : r.kind === 'KNOWLEDGE_SOURCE' ? 'KNOWLEDGE_SOURCE' : !e ? 'UNKNOWN'
+      : e.kind === 'SEPARATE_PROJECT_B3' ? 'OUT_OF_SCOPE_B3' : e.kind !== 'COMPONENT' ? e.kind : LINEAGE_CLASS[e.lifecycle_status] || 'UNKNOWN';
+  }
+  const c = {}; for (const r of result.catalog.indicators) c[r.lineage_class] = (c[r.lineage_class] || 0) + 1;
+  result.catalog.lineage_counts = c; return result;
+}
+function lineageMd(L) {
+  const gens = Object.entries(L.generations || {}).map(([k, v]) => `- **${k}**: ${v}`).join('\n');
+  const counts = Object.entries(L.counts).sort((a, b) => b[1] - a[1]).map(([k, v]) => `| ${k} | ${v} |`).join('\n');
+  const rows = L.entries.map((e) => `| \`${e.id}\` | ${e.kind} | ${e.lifecycle_status ?? ''} | ${e.generation ?? ''} | ${e.successor ?? ''} | ${e.evidence_resolved.join('<br>')} |`).join('\n');
+  return `# ALFA OMEGA — INDICATOR LINEAGE (generated)
+
+Built by \`tools/jarvis/aot/catalog-build.mjs\` from \`config/alfaomega-lineage.curated.json\`. Every lifecycle claim cites evidence resolved to file:line; unresolvable evidence fails the build. UNKNOWN is kept where unproven; nothing is declared DEPRECATED. Documentation only: no NT8 file is changed.
+
+Rule: ${L.rule}
+
+## Generations
+
+${gens}
+
+## Counts (lifecycle_status; kind for non-components)
+
+| status | entries |
+|---|---|
+${counts}
+| **total** | ${L.entries.length} (evidence resolved: ${L.evidence_resolved}) |
+
+## Entries
+
+| id | kind | lifecycle | generation | successor | evidence |
+|---|---|---|---|---|---|
+${rows}
+`;
+}
+export function writeLineage(lineage, out = DEFAULTS.out) {
+  const dir = guardOut(out); fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, 'ALFA_OMEGA_INDICATOR_LINEAGE.json'), JSON.stringify(lineage, null, 1) + '\n');
+  fs.writeFileSync(path.join(dir, 'ALFA_OMEGA_INDICATOR_LINEAGE.md'), lineageMd(lineage));
+  return dir;
+}
+
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const arg = (n) => { const i = process.argv.indexOf(n); return i > 0 ? process.argv[i + 1] : undefined; };
   const r = build({ ...(arg('--api-dir') ? { apiDir: path.resolve(arg('--api-dir')) } : {}) });
-  if (process.argv.includes('--check')) { console.log(JSON.stringify({ counts: r.catalog.counts, verified: r.catalog.verified, api_rows: r.apiMap.length })); }
-  else { const d = write(r, arg('--out') || DEFAULTS.out); console.log(JSON.stringify({ out: d, counts: r.catalog.counts, verified: r.catalog.verified, api_rows: r.apiMap.length })); }
+  const L = buildLineage(); applyLineage(r, L);
+  const sum = { counts: r.catalog.counts, verified: r.catalog.verified, api_rows: r.apiMap.length, lineage_entries: L.entries.length, lineage_evidence: L.evidence_resolved, lineage_counts: r.catalog.lineage_counts };
+  if (process.argv.includes('--check')) { console.log(JSON.stringify(sum)); }
+  else { const out = arg('--out') || DEFAULTS.out; const d = write(r, out); writeLineage(L, out); console.log(JSON.stringify({ out: d, ...sum })); }
 }
