@@ -1,0 +1,35 @@
+PROCESS pid=112240 snapshot_utc=2026-10-06T13:44:43.1463441Z local=2026-10-06T10:44:43.1487813-03:00
+
+GENERATION module=0x7ffb4de44580 file='C:\Users\ADM\Documents\NinjaTrader 8\tmp\2d11e60791f64c3abd8fa7a468955f47.dll' size=4046848
+  STATIC <MeDirection_ES>k__BackingField = 0
+  STATIC <MeDirection_NQ>k__BackingField = 0
+  STATIC <LastPrice_ES>k__BackingField = 0
+  STATIC <LastPrice_NQ>k__BackingField = 0
+  STATIC <LastUpdate_ES>k__BackingField = 0001-01-04T10:59:50.6944792 (age 63926581492,7s)
+  STATIC <LastUpdate_NQ>k__BackingField = 0001-01-04T10:59:50.6944816 (age 63926581492,7s)
+  STATIC <PressState_ES>k__BackingField = null
+
+GENERATION module=0x7ffb4d91f920 file='C:\Users\ADM\Documents\NinjaTrader 8\tmp\a2991505956b4c5d81da3182f2280314.dll' size=4046848
+  STATIC <MeDirection_ES>k__BackingField = -1
+  STATIC <MeDirection_NQ>k__BackingField = -1
+  STATIC <LastPrice_ES>k__BackingField = 7866,5
+  STATIC <LastPrice_NQ>k__BackingField = 31512,5
+  STATIC <LastUpdate_ES>k__BackingField = 0001-01-04T10:59:47.3568832 (age 63926581496,1s)
+  STATIC <LastUpdate_NQ>k__BackingField = 0001-01-04T10:59:47.3568856 (age 63926581496,1s)
+  STATIC <PressState_ES>k__BackingField = "PRESS_VALID"
+
+GENERATION module=0x7ffb492004b8 file='C:\Users\ADM\Documents\NinjaTrader 8\bin\Custom\NinjaTrader.Custom.dll' size=4046848
+  STATIC <MeDirection_ES>k__BackingField = -1
+  STATIC <MeDirection_NQ>k__BackingField = -1
+  STATIC <LastPrice_ES>k__BackingField = 7866,5
+  STATIC <LastPrice_NQ>k__BackingField = 31512,5
+  STATIC <LastUpdate_ES>k__BackingField = 0001-01-04T11:00:47.8476920 (age 63926581436,1s)
+  STATIC <LastUpdate_NQ>k__BackingField = 0001-01-04T11:00:47.8476944 (age 63926581436,1s)
+  STATIC <PressState_ES>k__BackingField = "PRESS_VALID"
+
+HEAP WALK (read-only)...
+  INSTANCES AlfaOmegaBridge gen=2d11e60791f64c3abd8fa7a468955f47.dll state=3 x1
+  INSTANCES AlfaOmegaFlowOne gen=NinjaTrader.Custom.dll state=7 x4
+  INSTANCES AlfaOmegaFlowOne gen=NinjaTrader.Custom.dll state=9 x2
+  INSTANCES AoControlCenter gen=a2991505956b4c5d81da3182f2280314.dll state=7 x1
+  INSTANCES AoControlCenter gen=NinjaTrader.Custom.dll state=7 x5

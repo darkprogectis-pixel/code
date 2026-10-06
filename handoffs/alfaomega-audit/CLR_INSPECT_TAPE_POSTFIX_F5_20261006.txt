@@ -1,0 +1,46 @@
+5151_BEFORE es 7882.5 -1 PRESS_VALID nq 31544.5 -1
+PROCESS pid=112240 snapshot_utc=2026-10-06T14:14:17.7681741Z local=2026-10-06T11:14:17.7711665-03:00
+
+GENERATION module=0x7ffb4de44580 file='C:\Users\ADM\Documents\NinjaTrader 8\tmp\2d11e60791f64c3abd8fa7a468955f47.dll' size=4046848
+  STATIC <MeDirection_ES>k__BackingField = 0
+  STATIC <MeDirection_NQ>k__BackingField = 0
+  STATIC <LastPrice_ES>k__BackingField = 0
+  STATIC <LastPrice_NQ>k__BackingField = 0
+  STATIC <LastUpdate_ES>k__BackingField = 0001-01-04T10:59:50.5704616 (age 63926583267,5s)
+  STATIC <LastUpdate_NQ>k__BackingField = 0001-01-04T10:59:50.5704640 (age 63926583267,5s)
+  STATIC <PressState_ES>k__BackingField = null
+
+GENERATION module=0x7ffb4d91f920 file='C:\Users\ADM\Documents\NinjaTrader 8\tmp\a2991505956b4c5d81da3182f2280314.dll' size=4046848
+  STATIC <MeDirection_ES>k__BackingField = -1
+  STATIC <MeDirection_NQ>k__BackingField = -1
+  STATIC <LastPrice_ES>k__BackingField = 7882
+  STATIC <LastPrice_NQ>k__BackingField = 31543,25
+  STATIC <LastUpdate_ES>k__BackingField = 0001-01-04T10:59:47.3568832 (age 63926583270,7s)
+  STATIC <LastUpdate_NQ>k__BackingField = 0001-01-04T10:59:47.3568856 (age 63926583270,7s)
+  STATIC <PressState_ES>k__BackingField = "PRESS_VALID"
+
+GENERATION module=0x7ffb492004b8 file='C:\Users\ADM\Documents\NinjaTrader 8\bin\Custom\NinjaTrader.Custom.dll' size=4046848
+  STATIC <MeDirection_ES>k__BackingField = -1
+  STATIC <MeDirection_NQ>k__BackingField = -1
+  STATIC <LastPrice_ES>k__BackingField = 7882
+  STATIC <LastPrice_NQ>k__BackingField = 31543,25
+  STATIC <LastUpdate_ES>k__BackingField = 0001-01-04T11:00:47.8462864 (age 63926583210,9s)
+  STATIC <LastUpdate_NQ>k__BackingField = 0001-01-04T11:00:47.8462888 (age 63926583210,9s)
+  STATIC <PressState_ES>k__BackingField = "PRESS_VALID"
+
+GENERATION module=0x7ffb4e25bf90 file='C:\Users\ADM\Documents\NinjaTrader 8\tmp\a0b4d01b9e57437b8337392337e01e1e.dll' size=4046848
+  STATIC <MeDirection_ES>k__BackingField = 0
+  STATIC <MeDirection_NQ>k__BackingField = 0
+  STATIC <LastPrice_ES>k__BackingField = 0
+  STATIC <LastPrice_NQ>k__BackingField = 0
+  STATIC <LastUpdate_ES>k__BackingField = 0001-01-04T11:02:37.7482728 (age 63926583101,2s)
+  STATIC <LastUpdate_NQ>k__BackingField = 0001-01-04T11:02:37.7482752 (age 63926583101,2s)
+  STATIC <PressState_ES>k__BackingField = null
+
+HEAP WALK (read-only)...
+  INSTANCES AlfaOmegaBridge gen=a0b4d01b9e57437b8337392337e01e1e.dll state=3 x1
+  INSTANCES AlfaOmegaFlowOne gen=NinjaTrader.Custom.dll state=7 x4
+  INSTANCES AlfaOmegaFlowOne gen=NinjaTrader.Custom.dll state=9 x2
+  INSTANCES AoControlCenter gen=a2991505956b4c5d81da3182f2280314.dll state=7 x1
+  INSTANCES AoControlCenter gen=NinjaTrader.Custom.dll state=7 x5
+5151_AFTER es 7880.5 -1 PRESS_VALID nq 31542 -1
