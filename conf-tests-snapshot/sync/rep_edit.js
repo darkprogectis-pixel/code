@@ -1,0 +1,2 @@
+const fs=require('fs');
+module.exports=function rep(f, pairs){ let s=fs.readFileSync(f,'utf8'); const crlf=s.includes('\r\n'); for(const [a,b] of pairs){ const A=crlf?a.replace(/\n/g,'\r\n'):a, B=crlf?b.replace(/\n/g,'\r\n'):b; const n=s.split(A).length-1; if(n!==1){ console.log('FAIL',f,n,JSON.stringify(a.slice(0,70))); process.exit(1);} s=s.replace(A,()=>B);} fs.writeFileSync(f,s); console.log('ok',f,crlf?'CRLF':'LF'); }
