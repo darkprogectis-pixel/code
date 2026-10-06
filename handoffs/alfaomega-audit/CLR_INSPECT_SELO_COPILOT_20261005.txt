@@ -1,0 +1,126 @@
+PROCESS pid=99344 snapshot=yes clr=4.8.9345.0
+APPDOMAIN id=1 name=NinjaTrader.exe addr=0x1b1a38e9330
+
+ASSEMBLY module=0x7ffb491decc0 name='C:\Users\ADM\Documents\NinjaTrader 8\bin\Custom\NinjaTrader.Custom.dll' asm='C:\Users\ADM\Documents\NinjaTrader 8\bin\Custom\NinjaTrader.Custom.dll' appdomain=NinjaTrader.exe dynamic=False layout=Unknown isPE=True
+  BASE_ADDRESS=0x1b1d2c10000 SIZE=4030464 ASSEMBLY_ADDR=0x1b1d0ed44d0
+  MVID=unreadable
+  defines: SharedState=True Copilot=True Bridge=True
+  STATIC <CopilotBadge>k__BackingField [appdomain NinjaTrader.exe] = "{"glyph":"NEUTRO ú sem tape ES/NQ","conf":0,"aoDown":false,"es":"NEUTRO","nq":"NEUTRO","strength":4,"at":1791243513962}"
+  STATIC <AnchorStrength>k__BackingField [appdomain NinjaTrader.exe] = 4
+  BRIDGE STATIC _listener = System.Net.Sockets.TcpListener@0x1b1a63eb550
+  BRIDGE STATIC _thread = System.Threading.Thread@0x1b1a63eb710
+
+ASSEMBLY module=0x7ffb4dcd74f8 name='C:\Users\ADM\Documents\NinjaTrader 8\tmp\da1e315f28cb4acd9165330cd5f07656.dll' asm='C:\Users\ADM\Documents\NinjaTrader 8\tmp\da1e315f28cb4acd9165330cd5f07656.dll' appdomain=NinjaTrader.exe dynamic=False layout=Unknown isPE=True
+  BASE_ADDRESS=0x1b232950000 SIZE=4038656 ASSEMBLY_ADDR=0x1b1957f3850
+  MVID=unreadable
+  defines: SharedState=True Copilot=True Bridge=True
+  STATIC <CopilotBadge>k__BackingField [appdomain NinjaTrader.exe] = null
+  STATIC <AnchorStrength>k__BackingField [appdomain NinjaTrader.exe] = 0
+  STATIC <PressState_ES>k__BackingField [appdomain NinjaTrader.exe] = "PRESS_VALID"
+  BRIDGE STATIC _listener = System.Net.Sockets.TcpListener@0x1b1ff6f5500
+  BRIDGE STATIC _thread = System.Threading.Thread@0x1b1ff6f5710
+
+HEAP WALK (read-only)...
+
+COPILOT_INSTANCE @0x1b181e85690 module=0x7ffb491decc0 mvid=unreadable
+  FeedNarrator=True _started=True
+  _timer=System.Threading.Timer@0x1b188065150
+  STATE field NinjaTrader.NinjaScript.Indicators.AlfaOmegaCopilotUnificado.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.NinjaScript.Indicators.Indicator.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.Gui.NinjaScript.IndicatorRenderBase.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.NinjaScript.IndicatorBase.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScriptBase.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScript.<State>k__BackingField = 7 (enum int)
+  _data=System.Collections.Generic.Dictionary<System.String, NinjaTrader.NinjaScript.Indicators.AcoSym>
+
+COPILOT_INSTANCE @0x1b186f68eb8 module=0x7ffb491decc0 mvid=unreadable
+  FeedNarrator=True _started=False
+  _timer=null
+  STATE field NinjaTrader.NinjaScript.Indicators.AlfaOmegaCopilotUnificado.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.Indicators.Indicator.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.Gui.NinjaScript.IndicatorRenderBase.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.IndicatorBase.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScriptBase.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScript.<State>k__BackingField = 9 (enum int)
+  _data=System.Collections.Generic.Dictionary<System.String, NinjaTrader.NinjaScript.Indicators.AcoSym>
+
+COPILOT_INSTANCE @0x1b189a89a30 module=0x7ffb491decc0 mvid=unreadable
+  FeedNarrator=True _started=False
+  _timer=null
+  STATE field NinjaTrader.NinjaScript.Indicators.AlfaOmegaCopilotUnificado.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.Indicators.Indicator.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.Gui.NinjaScript.IndicatorRenderBase.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.IndicatorBase.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScriptBase.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScript.<State>k__BackingField = 9 (enum int)
+  _data=System.Collections.Generic.Dictionary<System.String, NinjaTrader.NinjaScript.Indicators.AcoSym>
+
+COPILOT_INSTANCE @0x1b18a467a88 module=0x7ffb491decc0 mvid=unreadable
+  FeedNarrator=True _started=False
+  _timer=null
+  STATE field NinjaTrader.NinjaScript.Indicators.AlfaOmegaCopilotUnificado.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.Indicators.Indicator.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.Gui.NinjaScript.IndicatorRenderBase.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.IndicatorBase.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScriptBase.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScript.<State>k__BackingField = 9 (enum int)
+  _data=System.Collections.Generic.Dictionary<System.String, NinjaTrader.NinjaScript.Indicators.AcoSym>
+
+COPILOT_INSTANCE @0x1b18ab066d0 module=0x7ffb491decc0 mvid=unreadable
+  FeedNarrator=True _started=False
+  _timer=null
+  STATE field NinjaTrader.NinjaScript.Indicators.AlfaOmegaCopilotUnificado.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.Indicators.Indicator.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.Gui.NinjaScript.IndicatorRenderBase.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.IndicatorBase.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScriptBase.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScript.<State>k__BackingField = 9 (enum int)
+  _data=System.Collections.Generic.Dictionary<System.String, NinjaTrader.NinjaScript.Indicators.AcoSym>
+
+COPILOT_INSTANCE @0x1b1aea66e08 module=0x7ffb491decc0 mvid=unreadable
+  FeedNarrator=True _started=True
+  _timer=System.Threading.Timer@0x1b1af662958
+  STATE field NinjaTrader.NinjaScript.Indicators.AlfaOmegaCopilotUnificado.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.NinjaScript.Indicators.Indicator.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.Gui.NinjaScript.IndicatorRenderBase.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.NinjaScript.IndicatorBase.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScriptBase.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScript.<State>k__BackingField = 7 (enum int)
+  _data=System.Collections.Generic.Dictionary<System.String, NinjaTrader.NinjaScript.Indicators.AcoSym>
+
+COPILOT_INSTANCE @0x1b1aeb966c8 module=0x7ffb491decc0 mvid=unreadable
+  FeedNarrator=True _started=True
+  _timer=System.Threading.Timer@0x1b1af685690
+  STATE field NinjaTrader.NinjaScript.Indicators.AlfaOmegaCopilotUnificado.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.NinjaScript.Indicators.Indicator.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.Gui.NinjaScript.IndicatorRenderBase.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.NinjaScript.IndicatorBase.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScriptBase.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScript.<State>k__BackingField = 7 (enum int)
+  _data=System.Collections.Generic.Dictionary<System.String, NinjaTrader.NinjaScript.Indicators.AcoSym>
+
+COPILOT_INSTANCE @0x1b1b055f2e8 module=0x7ffb491decc0 mvid=unreadable
+  FeedNarrator=True _started=False
+  _timer=null
+  STATE field NinjaTrader.NinjaScript.Indicators.AlfaOmegaCopilotUnificado.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.Indicators.Indicator.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.Gui.NinjaScript.IndicatorRenderBase.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.IndicatorBase.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScriptBase.<State>k__BackingField = 9 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScript.<State>k__BackingField = 9 (enum int)
+  _data=System.Collections.Generic.Dictionary<System.String, NinjaTrader.NinjaScript.Indicators.AcoSym>
+
+COPILOT_INSTANCE @0x1b1b058f530 module=0x7ffb491decc0 mvid=unreadable
+  FeedNarrator=True _started=True
+  _timer=System.Threading.Timer@0x1b1ae5d61e0
+  STATE field NinjaTrader.NinjaScript.Indicators.AlfaOmegaCopilotUnificado.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.NinjaScript.Indicators.Indicator.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.Gui.NinjaScript.IndicatorRenderBase.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.NinjaScript.IndicatorBase.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScriptBase.<State>k__BackingField = 7 (enum int)
+  STATE field NinjaTrader.NinjaScript.NinjaScript.<State>k__BackingField = 7 (enum int)
+  _data=System.Collections.Generic.Dictionary<System.String, NinjaTrader.NinjaScript.Indicators.AcoSym>
+
+BRIDGE_INSTANCE @0x1b1ff6f53c0 module=0x7ffb4dcd74f8 mvid=unreadable
+
+COPILOT_INSTANCE_COUNT=9 BRIDGE_INSTANCE_COUNT=1
