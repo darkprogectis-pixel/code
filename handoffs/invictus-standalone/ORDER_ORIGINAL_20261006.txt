@@ -1,0 +1,897 @@
+
+
+<pasted_content id="2200">
+ORDEM EXECUTIVA FINAL — MIGRAÇÃO INVICTUS 100% STANDALONE NT8
+DATA = 2026-10-06
+
+AUTORIZAÇÃO EXPLÍCITA DO OPERADOR:
+EXECUTAR A MIGRAÇÃO COMPLETA END-TO-END.
+
+NÃO PERGUNTAR NOVAMENTE.
+NÃO DEVOLVER STATUS INTERMEDIÁRIO.
+NÃO PARAR EM "PLANO PRONTO", "STAGING PRONTO" OU "DEPLOY READY".
+
+OBJETIVO FINAL OBRIGATÓRIO:
+
+INVICTUS = 100% STANDALONE NATIVO NO NT8
+
+AOT/BFF = DOWNSTREAM / SHADOW / AUDITORIA / SINCRONIZAÇÃO
+
+AOT/BFF NÃO PODE:
+- decidir entrada live;
+- decidir saída live;
+- autorizar entrada;
+- bloquear entrada;
+- ser necessário para PlaceCore;
+- ser necessário para gerenciamento da posição.
+
+BFF OFF ou AOT OFF:
+=> INVICTUS CONTINUA OPERACIONAL NORMALMENTE.
+
+==================================================
+0. REGRA ABSOLUTA — HANDOFFS PRIMEIRO
+==================================================
+
+NENHUMA pesquisa aleatória.
+
+ANTES DE CÓDIGO/GIT/RUNTIME usar obrigatoriamente:
+
+1.
+C:\Users\ADM\Downloads\Club gamma\Handof TTW
+
+2.
+C:\Users\ADM\Desktop\Handof TTW
+
+Reutilizar a investigação já feita nesta sessão.
+
+NÃO repetir varredura integral sem necessidade.
+
+Documentos já identificados e prioritários:
+
+- HANDOFF_INVICTUS_PARIDADE_MOTOR_CANONICO_20260913.md
+- HANDOFF_INVICTUS_COMPLETO_ESTADO_ATUAL_20260913.md
+- HANDOFF_AOT_INVICTUS_TOTAL_SYNC_AUDIT_20260930.md
+- HANDOFF_PILOTO_LUFDUTRA_STANDALONE_20260928.md
+- HANDOFF_RANYERE_INVICTUS_STANDALONE_20260929.md
+- HANDOFF_INVICTUS_NO_TRADES_20261005.md
+- REVIEW_INVICTUS_ENTRY_CONFLUENCE_AOT_20261006.md
+
+Extrair somente o necessário para reconstruir:
+
+A. último motor standalone comprovado;
+B. todas as mudanças posteriores até HOJE;
+C. lógica atual do AOT;
+D. melhorias que NÃO podem ser perdidas.
+
+Somente depois ir ao código direcionadamente.
+
+==================================================
+1. PRINCÍPIO ARQUITETURAL NOVO
+==================================================
+
+A partir desta ordem:
+
+LIVE_TRADING_AUTHORITY = NT8_INVICTUS_NATIVE
+
+SIGNAL_SOURCE = NT8_NATIVE
+ENTRY_DECISION = NT8_NATIVE
+EXIT_DECISION = NT8_NATIVE
+POSITION_MANAGEMENT = NT8_NATIVE
+RISK_GATES = NT8_NATIVE
+ORDER_SUBMISSION = NT8_NATIVE
+
+AOT_CANONICAL_FOR_LIVE_EXECUTION = REMOVED
+
+AOT/BFF passam a ser:
+
+- shadow;
+- comparação;
+- auditoria;
+- histórico;
+- telemetria;
+- sincronização das decisões/ordens reais do NT8.
+
+==================================================
+2. NÃO SIMPLESMENTE "REVIVER" O MOTOR DE 13/09
+==================================================
+
+ATENÇÃO CRÍTICA:
+
+O AoMotorCanonico standalone de 13/09 é apenas a base histórica.
+
+NÃO basta reativá-lo.
+
+Ele precisa incorporar a verdade funcional ATUAL de 06/10.
+
+Comparar:
+
+motor standalone histórico
+VS
+aot-sim.js atual
+VS
+melhorias posteriores
+VS
+código live atual.
+
+Portar para o NT8 todas as regras vigentes.
+
+==================================================
+3. PRESERVAR 100% DAS MELHORIAS ATUAIS
+==================================================
+
+A migração NÃO pode regredir nenhuma melhoria válida implementada
+até 2026-10-06.
+
+Preservar no mínimo, após confirmação nos handoffs/código:
+
+--------------------------------
+SINAL / CONFLUÊNCIA
+--------------------------------
+
+- AoGate.EsNq 4/4;
+- ME/MVI ES;
+- ME/MVI NQ;
+- ES e NQ na mesma direção;
+- tape ES/NQ fresco;
+- threshold vigente de tape;
+- |Press_ES| >= 0.03;
+- |Press_NQ| >= 0.03;
+- Press P1S / sessão completa;
+- comportamento correto de Press ausente/stale;
+- direction/strength atuais;
+- spots válidos;
+- cooldown 60 s;
+- histerese/rearm;
+- estado FLAT quando aplicável.
+
+--------------------------------
+EXECUTION MIRROR / BLOCK
+--------------------------------
+
+Preservar semanticamente o atual:
+
+!execBloqueiaEntrada()
+
+MAS torná-lo 100% LOCAL.
+
+Não consultar AOT/BFF para esse gate.
+
+Usar o estado real local de execução/posição/order lifecycle
+que alimenta hoje a mesma verdade.
+
+--------------------------------
+SAÍDAS
+--------------------------------
+
+Preservar toda lógica vigente de saída.
+
+Especialmente verificar e manter:
+
+- hard stop;
+- break-even;
+- step/trailing atual;
+- regras atuais de CLOSE;
+- alterações EX1/EX2 de 03/09;
+- "força fraca" não fecha quando hoje não deve fechar;
+- "sem tape" não fecha quando hoje não deve fechar;
+- "indefinido" não fecha quando hoje não deve fechar;
+- gerenciamento de posição;
+- proteção broker-side;
+- fechamento de divergência;
+- perna sem proteção;
+- demais correções vigentes.
+
+100% standalone significa:
+
+OPEN LOCAL
+E
+CLOSE LOCAL.
+
+--------------------------------
+EXECUÇÃO / SEGURANÇA
+--------------------------------
+
+Preservar:
+
+- engine_play;
+- ativos habilitados;
+- seleção PER_LEG;
+- contas universais Account.All;
+- identidade RAW Ordinal;
+- providers Unknown permitidos;
+- ausência de fallback silencioso;
+- nt8_reachable quando semanticamente aplicável;
+- propfirm_guard;
+- observabilidade da conta;
+- stop + take pré-trade;
+- AoPermissao;
+- contrato válido;
+- ORDER_NAME <= limite vigente;
+- token de conta;
+- PlaceCore guards;
+- duplicate protection;
+- order lifecycle;
+- reconnect;
+- protection recovery;
+- EQUITY_GUARD vigente;
+- Copy Engine vigente;
+- quaisquer safeguards atuais confirmados.
+
+--------------------------------
+HOT RELOAD / SHARED STATE
+--------------------------------
+
+Preservar:
+
+- CopilotBadge generation-safe;
+- AoTapeGen generation-safe;
+- P1S;
+- correções de assembly split;
+- zero handlers duplicados;
+- hot reload compatível.
+
+==================================================
+4. CAMINHO LIVE NOVO
+==================================================
+
+Construir um único caminho canônico local:
+
+NT8 Market Data
+→ SharedState/AoGate
+→ Native Canonical Motor
+→ decisão OPEN/CLOSE
+→ gates locais
+→ ExecutarEntrada / ExecutarSaida
+→ ExecutarAlvo
+→ ExecutarOrdem
+→ PlaceCore
+→ broker/NT8
+
+ZERO chamada externa obrigatória neste caminho.
+
+ZERO HTTP GET/POST obrigatório antes de PlaceCore.
+
+ZERO espera por BFF.
+
+ZERO espera por Node.
+
+ZERO /sim/events como gatilho executável.
+
+==================================================
+5. ELIMINAR O CAMINHO EXECUTÁVEL DO AOT
+==================================================
+
+Atualmente existe:
+
+ConsumirEventosAot
+→ AplicarEventoAot
+→ ExecutarEntrada/ExecutarSaida.
+
+Depois desta migração:
+
+nenhum OPEN/CLOSE vindo de:
+
+:3600
+/sim/events
+aot-sim.js
+BFF
+
+pode chegar a:
+
+ExecutarEntrada
+ExecutarSaida
+ExecutarAlvo
+ExecutarOrdem
+PlaceCore
+
+Pode continuar sendo consumido SOMENTE para:
+
+- shadow;
+- comparação;
+- auditoria;
+- divergência;
+- telemetria.
+
+Marcar explicitamente no código:
+
+AOT_EXECUTION_AUTHORITY = NONE
+
+Não deixar fallback escondido.
+
+==================================================
+6. AOT/BFF — NOVA DIREÇÃO DO FLUXO
+==================================================
+
+Fluxo desejado:
+
+ANTES:
+NT8
+→ BFF/AOT
+→ decisão
+→ BFF
+→ NT8
+→ ordem
+
+DEPOIS:
+NT8
+→ decisão
+→ ordem
+→ BFF/AOT
+
+AOT/BFF recebe o que ocorreu no INVICTUS.
+
+==================================================
+7. SINCRONIZAÇÃO MÁXIMA NT8 → AOT/BFF
+==================================================
+
+O downstream deve receber, na menor latência prática possível:
+
+- SIGNAL_STATE;
+- DECISION_OPEN;
+- DECISION_CLOSE;
+- ENTRY_INTENT;
+- ORDER_SUBMITTED;
+- ORDER_ACCEPTED;
+- ORDER_WORKING;
+- PARTIAL_FILL;
+- FILLED;
+- REJECTED;
+- CANCELLED;
+- EXIT_INTENT;
+- EXIT_SUBMITTED;
+- EXIT_FILLED;
+- POSITION_STATE;
+- STOP_STATE;
+- TARGET_STATE;
+- BE/TRAIL/STEP state;
+- account;
+- symbol;
+- side;
+- qty;
+- price;
+- order id;
+- trade id;
+- timestamps;
+- reason/gate;
+- decision sequence.
+
+Usar contratos existentes se já houver infraestrutura apropriada.
+
+NÃO criar protocolo novo se já existir um mecanismo compatível.
+
+Se não existir mecanismo suficiente:
+implementar o menor transporte local necessário.
+
+==================================================
+8. REGRA DE OURO DO SYNC
+==================================================
+
+A sincronização externa deve ser:
+
+ASYNC
+NON-BLOCKING
+FAIL-OPEN PARA TELEMETRIA
+FAIL-CLOSED NUNCA PARA EXECUÇÃO LIVE
+
+Falha do BFF:
+
+=> ordem NT8 continua.
+
+Falha do AOT:
+
+=> ordem NT8 continua.
+
+Timeout externo:
+
+=> ordem NT8 continua.
+
+Node morto:
+
+=> ordem NT8 continua.
+
+Nenhum await externo deve ficar no critical path de PlaceCore.
+
+==================================================
+9. DURABILIDADE DA SINCRONIZAÇÃO
+==================================================
+
+"máximo de sincronização possível" exige mais que fire-and-forget.
+
+Se compatível com a arquitetura existente, garantir:
+
+- monotonic sequence / exec_seq;
+- event id único;
+- timestamp UTC;
+- idempotência;
+- dedupe;
+- cursor/ack;
+- backlog local;
+- retry posterior;
+- replay ordenado após reconnect;
+- reconciliação de estado atual;
+- sem duplicar ordem;
+- sem alterar trading path.
+
+Se BFF cair:
+
+NT8 continua negociando
++
+eventos ficam recuperáveis.
+
+Quando BFF voltar:
+
+eventos pendentes são sincronizados
+sem executar nada novamente no NT8.
+
+==================================================
+10. AOT SIM DEPOIS DA MIGRAÇÃO
+==================================================
+
+Não destruir o AOT SIM.
+
+Ele pode continuar calculando sua decisão independente em SHADOW
+para comparação científica.
+
+Separar claramente:
+
+AOT_SHADOW_DECISION
+vs
+NT8_LIVE_DECISION
+
+Nunca permitir que o shadow execute live.
+
+Manter métricas de divergência:
+
+NT8_OPEN vs AOT_SHADOW_OPEN
+NT8_CLOSE vs AOT_SHADOW_CLOSE
+direction
+timestamp delta
+reason
+state.
+
+NÃO contaminar silenciosamente o ledger histórico oficial.
+
+Se schema precisar de modo/producer:
+
+producer = nt8_live
+producer = aot_shadow
+
+ou equivalente já compatível com o projeto.
+
+==================================================
+11. PARIDADE EXATA DO MOTOR
+==================================================
+
+Antes do deploy, provar que o motor native novo reproduz a lógica
+vigente do AOT atual.
+
+Usar fixtures/dados históricos existentes.
+
+Para um mesmo input stream:
+
+AOT_CURRENT_DECISION
+vs
+NT8_NATIVE_DECISION
+
+Comparar:
+
+- OPEN LONG;
+- OPEN SHORT;
+- NO OPEN;
+- CLOSE;
+- cooldown;
+- rearm;
+- P1S;
+- tape stale;
+- Press;
+- spot;
+- FLAT;
+- exec block;
+- saída;
+- hard stop;
+- BE;
+- trailing/step.
+
+Meta:
+
+DECISION_PARITY = 100%
+
+para os casos determinísticos disponíveis.
+
+Qualquer divergência:
+investigar e corrigir ANTES de deploy.
+
+==================================================
+12. NÃO REMOVER MELHORIAS POR ENGANO
+==================================================
+
+Criar uma matriz:
+
+FEATURE
+CURRENT_BEFORE
+STANDALONE_AFTER
+PRESERVED
+TEST
+
+Para todas as melhorias encontradas nos handoffs desde 13/09.
+
+PRESERVED deve ser YES em todas as melhorias funcionais válidas.
+
+Se alguma melhoria não puder coexistir:
+NÃO remover silenciosamente.
+Implementar equivalente local.
+
+==================================================
+13. TESTES OBRIGATÓRIOS
+==================================================
+
+Criar/usar harness SEM ordens reais/prop.
+
+ST01 BFF OFF → sinal local ainda é calculado
+ST02 AOT SIM OFF → sinal local ainda é calculado
+ST03 :3600 indisponível → OPEN local possível
+ST04 /sim/events vazio → OPEN local possível
+ST05 Node morto → decisão local intacta
+
+ST06 LONG 4/4 atual → decisão igual ao AOT atual
+ST07 SHORT 4/4 atual → decisão igual ao AOT atual
+ST08 Press 0.029 → bloqueia
+ST09 Press 0.030 → comportamento atual
+ST10 Press sinal contrário mas |Press| válido → comportamento atual
+ST11 tape stale → comportamento atual
+ST12 P1S incompleto → comportamento atual
+ST13 cooldown → comportamento atual
+ST14 hysteresis/rearm → comportamento atual
+ST15 spot inválido → comportamento atual
+ST16 FLAT/position state → comportamento atual
+ST17 execBloqueiaEntrada LOCAL → comportamento atual
+
+ST18 CLOSE atual → paridade
+ST19 hard stop → paridade
+ST20 BE → paridade
+ST21 step/trail → paridade
+ST22 EX1/EX2 → preservadas
+
+ST23 engine_play OFF → bloqueia
+ST24 account PER_LEG → preservado
+ST25 RAW Ordinal → preservado
+ST26 unknown provider → permitido conforme regra atual
+ST27 stop+take readiness → preservado
+ST28 AoPermissao → preservado
+ST29 order_name → preservado
+ST30 PlaceCore guards → preservados
+
+ST31 evento AOT OPEN externo → NÃO executa
+ST32 evento AOT CLOSE externo → NÃO executa
+ST33 AOT stream offline → NÃO bloqueia native
+ST34 BFF timeout → NÃO bloqueia native
+
+ST35 NT8 decision → BFF recebe shadow/sync
+ST36 submitted → BFF recebe
+ST37 fill → BFF recebe
+ST38 close → BFF recebe
+ST39 BFF offline → backlog
+ST40 BFF reconnect → backlog replay ordenado
+ST41 replay → idempotente
+ST42 duplicate event → dedupe
+
+ST43 hot reload → motor native permanece válido
+ST44 CopilotBadge → sem regressão
+ST45 Fita/AoTapeGen → sem regressão
+ST46 P1S → sem regressão
+
+ST47 zero caller externo para ExecutarEntrada
+ST48 zero caller externo para ExecutarSaida
+ST49 zero :3600 obrigatório no live path
+ST50 zero /sim/events obrigatório no live path
+
+NEW_FAILURES = 0.
+
+==================================================
+14. TESTES DE FALHA ARQUITETURAL
+==================================================
+
+Sem desligar produção/sem gerar ordem real:
+
+usar harness/mocks/fault injection.
+
+Provar:
+
+BFF_OFF:
+LIVE_ENTRY_DECISION_AVAILABLE = YES
+
+AOT_OFF:
+LIVE_ENTRY_DECISION_AVAILABLE = YES
+
+HTTP_TIMEOUT:
+LIVE_ENTRY_DECISION_AVAILABLE = YES
+
+AOT_BAD_DATA:
+LIVE_ENTRY_DECISION_AVAILABLE = YES
+
+AOT_DUPLICATE_OPEN:
+LIVE_ORDER_DUPLICATED = NO
+
+Não enviar ordem teste real/prop.
+
+==================================================
+15. JEV OBRIGATÓRIO
+==================================================
+
+Toda mudança técnica passa por JEV.
+
+Fluxo:
+
+A. handoff-first evidence
+B. proposta arquitetural mínima
+C. JEV aplicável ANTES do patch de staging
+D. implementar em staging
+E. testes ST01-ST50
+F. build completo
+G. regressões
+H. JEV FINAL
+I. deploy
+J. compile/F5/reload necessário
+K. validação final
+
+Não enfraquecer JEV.
+
+Não pular JEV porque a ordem do operador é explícita.
+
+==================================================
+16. DEPLOY
+==================================================
+
+Depois de JEV FINAL = A:
+
+- backup de todos os live files tocados;
+- hashes before;
+- copiar somente arquivos aprovados;
+- hashes after;
+- staging == live;
+- rollback validado;
+- config/ATIVOS/contas intactos.
+
+Não alterar PLAY por conta própria.
+
+Não gerar ordens de teste.
+
+==================================================
+17. VALIDAÇÃO PÓS-DEPLOY
+==================================================
+
+Provar na instalação atual:
+
+NATIVE_MOTOR_LOADED = YES
+NATIVE_SIGNAL_SOURCE = YES
+NATIVE_ENTRY_DECISION = YES
+NATIVE_EXIT_DECISION = YES
+AOT_EXECUTION_AUTHORITY = NONE
+
+Executar análise de call graph live:
+
+LOCAL_NATIVE_DECISION
+→ ExecutarEntrada/ExecutarSaida
+→ PlaceCore
+
+e:
+
+AOT_EVENT
+-X→ ExecutarEntrada
+AOT_EVENT
+-X→ ExecutarSaida
+
+==================================================
+18. PROVA DE STANDALONE
+==================================================
+
+Só declarar standalone se:
+
+CAN_RECEIVE_MARKET_DATA_WITH_BFF_OFF = YES
+CAN_CALCULATE_SIGNAL_WITH_BFF_OFF = YES
+CAN_DECIDE_ENTRY_WITH_BFF_OFF = YES
+CAN_DECIDE_EXIT_WITH_BFF_OFF = YES
+CAN_MANAGE_POSITION_WITH_BFF_OFF = YES
+CAN_REACH_PLACECORE_WITH_BFF_OFF = YES
+
+CAN_RECEIVE_MARKET_DATA_WITH_AOT_OFF = YES
+CAN_CALCULATE_SIGNAL_WITH_AOT_OFF = YES
+CAN_DECIDE_ENTRY_WITH_AOT_OFF = YES
+CAN_DECIDE_EXIT_WITH_AOT_OFF = YES
+CAN_MANAGE_POSITION_WITH_AOT_OFF = YES
+CAN_REACH_PLACECORE_WITH_AOT_OFF = YES
+
+EXTERNAL_REQUIRED_FOR_LIVE_TRADING = 0
+
+==================================================
+19. DOCUMENTAÇÃO DRIFT
+==================================================
+
+Depois de o código estar validado, corrigir a documentação
+para refletir a nova arquitetura.
+
+Atualizar:
+
+- handoff canônico;
+- comentário obsoleto de AlfaOmegaRobo;
+- review de 06/10;
+- referências que dizem AOT_CANONICAL para live,
+  marcando a transição histórica corretamente.
+
+Não apagar o histórico.
+
+Registrar:
+
+2026-09-13 → 2026-10-01:
+standalone anterior
+
+2026-10-01 → 2026-10-06:
+AOT canonical follower
+
+2026-10-06:
+standalone native reinstaurado com todas as melhorias vigentes
++ AOT/BFF downstream shadow/sync.
+
+==================================================
+20. HANDOFF FINAL
+==================================================
+
+Atualizar o handoff canônico com seção específica:
+
+"INVICTUS 100% STANDALONE — 2026-10-06"
+
+Registrar:
+
+- arquitetura before;
+- arquitetura after;
+- arquivos;
+- hashes;
+- decisões;
+- JEV;
+- testes;
+- deploy;
+- rollback;
+- runtime;
+- sync NT8→BFF;
+- prova BFF OFF/AOT OFF;
+- nenhuma melhoria perdida.
+
+==================================================
+21. CRITÉRIO DE ACEITE ABSOLUTO
+==================================================
+
+NÃO retornar COMPLETE se qualquer item abaixo não for verdade:
+
+INVICTUS_STANDALONE = YES
+ENTRY_DECISION_NATIVE = YES
+EXIT_DECISION_NATIVE = YES
+POSITION_MANAGEMENT_NATIVE = YES
+ORDER_SUBMISSION_NATIVE = YES
+
+BFF_REQUIRED_FOR_LIVE = NO
+AOT_REQUIRED_FOR_LIVE = NO
+NODE_REQUIRED_FOR_LIVE = NO
+SIM_EVENTS_REQUIRED_FOR_LIVE = NO
+
+AOT_CAN_EXECUTE_LIVE = NO
+AOT_CAN_BLOCK_LIVE = NO
+
+AOT_BFF_RECEIVES_NT8_EVENTS = YES
+AOT_BFF_SYNC_NONBLOCKING = YES
+AOT_BFF_RECONNECT_RESYNC = YES
+AOT_SHADOW_PRESERVED = YES
+
+CURRENT_ENTRY_LOGIC_PRESERVED = YES
+CURRENT_EXIT_LOGIC_PRESERVED = YES
+P1S_PRESERVED = YES
+TAPE_FIX_PRESERVED = YES
+COPILOT_FIX_PRESERVED = YES
+UNIVERSAL_ACCOUNTS_PRESERVED = YES
+ORDER_NAME_FIX_PRESERVED = YES
+ALL_CURRENT_SAFETY_GATES_PRESERVED = YES
+
+DECISION_PARITY = 100%
+ST01_ST50 = PASS
+NEW_FAILURES = 0
+BUILD = PASS
+JEV_FINAL = A
+
+EXTERNAL_REQUIRED_FOR_LIVE_TRADING = 0
+
+==================================================
+22. REGRA DE RETORNO
+==================================================
+
+NÃO mandar:
+- plano;
+- diagnóstico intermediário;
+- staging ready;
+- deploy ready;
+- "aguardando operador";
+- sugestões opcionais;
+- auditoria futura.
+
+Continuar trabalhando.
+
+Só retornar quando o estado final for:
+
+INVICTUS_100_PERCENT_STANDALONE = YES
+
+Se existir uma ação FÍSICA impossível de realizar pela sessão
+(ex.: UI/F5 realmente inacessível), essa é a única exceção legítima:
+informar SOMENTE o bloqueio físico exato, sem abrir nova investigação.
+
+==================================================
+RETORNO FINAL ÚNICO
+==================================================
+
+PARA COLAR NO CHATGPT
+
+STATUS =
+INVICTUS_100_PERCENT_STANDALONE =
+LIVE_TRADING_AUTHORITY =
+
+ENTRY_DECISION_NATIVE =
+EXIT_DECISION_NATIVE =
+POSITION_MANAGEMENT_NATIVE =
+ORDER_SUBMISSION_NATIVE =
+
+BFF_REQUIRED_FOR_LIVE =
+AOT_REQUIRED_FOR_LIVE =
+NODE_REQUIRED_FOR_LIVE =
+SIM_EVENTS_REQUIRED_FOR_LIVE =
+EXTERNAL_REQUIRED_FOR_LIVE_TRADING =
+
+AOT_EXECUTION_AUTHORITY =
+AOT_CAN_BLOCK_LIVE =
+AOT_ROLE =
+BFF_ROLE =
+
+NT8_TO_BFF_SYNC =
+SYNC_LATENCY_MODEL =
+SYNC_BACKLOG =
+SYNC_REPLAY =
+SYNC_IDEMPOTENCY =
+SYNC_RECONNECT =
+
+CURRENT_ENTRY_LOGIC_PRESERVED =
+CURRENT_EXIT_LOGIC_PRESERVED =
+P1S_PRESERVED =
+TAPE_FIX_PRESERVED =
+COPILOT_FIX_PRESERVED =
+UNIVERSAL_ACCOUNTS_PRESERVED =
+ORDER_NAME_FIX_PRESERVED =
+ALL_CURRENT_SAFETY_GATES_PRESERVED =
+
+DECISION_PARITY =
+ST01_ST50 =
+BUILD =
+REGRESSION =
+JEV_DIFF =
+JEV_FINAL =
+
+FILES_CHANGED =
+DEPLOY =
+ROLLBACK =
+RUNTIME_VALIDATION =
+
+CAN_TRADE_WITH_BFF_OFF =
+CAN_TRADE_WITH_AOT_OFF =
+CAN_TRADE_WITH_NODE_OFF =
+
+AOT_BFF_RECEIVES_NT8_EVENTS =
+AOT_SHADOW_PRESERVED =
+
+CODE_CHANGED =
+PLAY_TOUCHED =
+ATIVOS_TOUCHED =
+ACCOUNTS_TOUCHED =
+ORDERS_SENT_BY_TESTS =
+
+HANDOFF =
+REVIEW_UPDATED =
+DOCUMENTATION_DRIFT_REMAINING =
+
+PROJECT_COMPLETE =
+NEXT_EXACT_ACTION =
+</pasted_content id="2200">
