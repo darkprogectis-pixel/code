@@ -108,3 +108,8 @@ Nome dos arquivos: import = ALFA_OMEGA_<CLIENTE>_INVICTUS_import.zip · entrega 
 - Limitações (servidor/conta, não pack): DESTINO piloto-01 sem licença ⇒ INVICTUS fail-closed (indicadores ok) — liberar = decisão do operador no servidor; ANAALICEGUSTAVO sem conta AlfaOmega (fontes esgotadas) — conta a criar pelo operador; validação física em NT8 de cliente não feita (sandbox Roslyn + import simulado).
 - Superseded (sidecar .SUPERSEDED_20261007.txt, originais mantidos): LUFDUTRA_FULL_STANDALONE, MARCOS_FULL_STANDALONE, MARCOS_FULL_20260930, RANYERE_MENDONCA, RANYERE_INVICTUS_STANDALONE, AIRISON, HAMZEH, ANAVIEIRA10, JOAO_HS_FULL, WJAVERTJR, WJAVERTJR_FIX_MIRROR, NELSON_CASCO (2), AUTHV2_PILOTO_20260918.
 - Nada mais pendente nesta missão.
+
+## SUPERSEDED_BY_RTH_API_INDEPENDENCE_FIX (2026-10-07, sessão 5beb9ac4)
+- As entregas e imports desta missão (entregas\<CLIENTE>\*, build\F*\AlfaOmega_F*_INVICTUS_import.zip, import canônico 4f987b6c, entrega MAGNUM feb2e97a) estão SUPERSEDED / NAO_DISTRIBUIR (sidecar `*.SUPERSEDED_BY_RTH_API_INDEPENDENCE_FIX.NAO_DISTRIBUIR.txt`; nada apagado).
+- Substitutos: `Desktop\Handof TTW\HANDOFF\conf-tests\pack-native-20261006\global-rth-api-independence-20261007\entregas\<CLIENTE>\ALFA_OMEGA_<CLIENTE>_INVICTUS_PRTH1_import.zip` (mesmas famílias/bases/auth; só AddOns/AlfaOmegaRoboFontes.cs trocado, P-RTH1). Imports: CANON 1f125eb2 · F1 4205eb47 · F2 2c59097a · F3 ded36d68 · F4 c8081a9f.
+- JEV DIFF A req_01a11886323b7bbb9c6848f3a8c12400 · JEV FINAL A 0.79 req_01a1188feb3c7742986aef747348bb8f. Detalhe: HANDOFF_GLOBAL_RTH_API_INDEPENDENCE_FIX_20261007.md.
