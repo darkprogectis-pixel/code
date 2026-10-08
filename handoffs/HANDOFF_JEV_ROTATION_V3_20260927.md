@@ -163,3 +163,5 @@ Reversão: `git checkout` dos 2 primeiros arquivos + apagar o teste.
 - JEV FINAL = B: medir a duplicidade **no perfil canônico**. Minha execução do teste ao vivo naquele perfil foi negada pelo classificador de segurança do ambiente (não contornado). Como medir: abrir uma sessão pelo launcher no perfil canônico e, após uma chamada de ferramenta, conferir em `…\.claude-darkprogectis\jev-rotation\events.jsonl` se há 1 linha por evento (PreToolUse/PostToolUse). Se houver 2 ⇒ aplicar SO_PROJETO (novo JEV DIFF). Depois reenviar o JEV FINAL.
 - `rotation:force` real desta sessão: último ato (resultado registrado abaixo pelo sucessor).
 - Mods: continuam desligados até JEV FINAL = A da rotação.
+
+**PARA A SESSAO SUCESSORA (aberta pelo `npm run rotation:force` da sessao 6b86565f, ultimo ato dela):** 1) rodar `npm run rotation:status` e `node tools/jev-rotation/install-hooks.mjs --config-dir "$env:CLAUDE_CONFIG_DIR" --verify`; 2) registrar aqui: sucessor registrado? perfil/cwd corretos? hooks presentes? trabalho perdido?; 3) pendencia do JEV FINAL (duplicidade no perfil canonico) continua aberta; 4) NAO religar Mods antes do JEV FINAL = A; 5) commit local, sem push.
