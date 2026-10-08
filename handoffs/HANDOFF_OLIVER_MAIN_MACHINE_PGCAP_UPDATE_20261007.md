@@ -202,3 +202,10 @@ Etapa passiva por ordem do operador (PLAY_ATIVADO = YES). Claude só leu arquivo
 - **13:29Z — PLAY ativado pelo operador** (v55, 13:29:15.797Z) com FORCA_JANELA_30 carregada; motor FLAT; warm-up da janela até ≈ 13:55Z; entradas 0; erros 0. Observação passiva em andamento (handoff da auditoria §16).
 
 - **13:38Z — gate novo comprovadamente ativo:** em 2 ciclos (13:34:58Z, 13:37:19Z) o passo 4 aprovou o NQ com Press NQ ≈ −0,0026 / −0,0006 (impossível pelo gate de Press) e reprovou só o ES. Âncora 4/4: 0 · entradas: 0 · motor FLAT · erros 0. Detalhe no handoff da auditoria §16.
+
+## PRIMEIRA ENTRADA REAL PÓS-ATUALIZAÇÃO (FORCA_JANELA_30) — 2026-10-08T13:49:49.676Z
+- LONG · RTH (09:49:49 ET) · âncora 4/4 · decisão nativa NT8 (trade_id f411ddf4-dca0-406f-aa45-2645abc3fb07) · ES 7832,75 / NQ 31232.
+- Passo 4 aprovado pelo z-score com Press ES −0,00082 / NQ −0,00076 (impossível pelo gate de Press) ⇒ gate novo é a autoridade nos dois símbolos.
+- gate_check pass; licença ativa; fontes locais READY; SpotGamma :3500 OFFLINE com hard=false ⇒ API não atuou como hard gate nem veto.
+- 6 ordens do robô (ES/NQ Sim 001 · MES x3 / MNQ x2 conta real TAKEPROFIT ***210 · NES/NNQ x5 Sim 002), 6 brackets Stop+Take OCO criados, 0 falhas.
+- Executor: 0 ordens manuais · F5 0 · nenhuma alteração. Detalhe: `handoffs/HANDOFF_INVICTUS_TEMPORAL_CLUSTERING_AUDIT_20261008.md` §17.
