@@ -430,3 +430,21 @@ Artefatos: `W\build_test\AlfaOmega_TESTE_NAO_OFICIAL_EXITFIX_X2_import.zip` SHA2
 - **Estado preservado para o próximo pregão:** correção instalada (f678d200 / a1fc99a8 / 90e0020a) · NT8 PID 32520 · `ativos.json` v184 (MES/MNQ off; backup `ativos.json.bak-exitfix-simtest-20261008`) · CopyEngine off · conta real FLAT e fora do robô · zip de rollback de TESTE pronto (745b8651…). STOP global é botão do gráfico ⇒ operador clica STOP. SAFE_TO_PLAY_REAL = NO; **não religar MES/MNQ** até JEV DIFF T3 = A.
 - **Preparação da fase de packs (somente leitura, `W\tests\PACK_INVENTORY_RAW.json`, `W\tools\inventory_packs.ps1`):** 1.486 zips varridos, 113 com a camada de saída: 87 com Robo dc6d45c4 + Fechamento/Saida = base OLIVER (entregas MAGNUM, NELSON_CASCO etc.) · 16 = base OLIVER (32c84685) · 2 = correção (zips de TESTE) · 8 antigos de setembro (Robo 923cdbc7/78d145e2/8138cf8d/5ac8ac3c/73c2fd3c, Saida bbd3030a, sem Fechamento). Classificação e atualização só depois do JEV DIFF T3 = A.
 - EXACT_NEXT_STEP: próximo pregão regular (09:30 ET): Claude confere por leitura (PID, STOP, MES/MNQ off, CopyEngine off, hashes, conta real FLAT) ⇒ operador PLAY ⇒ `node W\tools\watch_simtest.js` ⇒ ciclo (entrada, saída, entrada, saída) ⇒ STOP ⇒ JEV DIFF T3 ⇒ pacote oficial ⇒ packs.
+
+## REGRA CANÔNICA NOVA — LIVE CONGELADO / NOVO PACK PRIMEIRO (operador, 2026-10-08 ~17:20 BRT)
+1. O INVICTUS instalado no NT8 fica CONGELADO e SOMENTE EM OBSERVAÇÃO. **LIVE_NT8_MODIFICATION = PROIBIDA** até JEV FINAL = A sobre o novo pack.
+2. Nenhum patch novo direto no ambiente vivo. Toda alteração futura acontece PRIMEIRO num NOVO PACK cujo baseline é exatamente o estado instalado agora.
+3. No novo pack: auditoria de diff · compile completo · testes existentes · testes da alteração · regressão · arquivos inesperados = 0 · validação Sim/ambiente de teste quando aplicável · JEV DIFF · JEV FINAL.
+4. Só com testes aprovados e JEV FINAL = A se considera atualizar o NT8 vivo.
+5. Fluxo: LIVE NT8 (só observação) → estado instalado → clone/baseline → NOVO PACK (alterações + testes + JEV) → validado → só então futura alteração do NT8 vivo.
+- Consequência para o plano anterior: a "missão final" (pacote oficial OLIVER, packs de clientes, primeiro uso em conta real) fica SUSPENSA; o que já está instalado NÃO é revertido nem alterado.
+
+### Estado vivo congelado (lido 17:22 BRT, somente leitura)
+- NT8 PID 32520 (15:46:15). Fontes instalados = P-GCAP + FORCA_JANELA_30 + **EXIT_LAYER_FIX X2 (zip de TESTE, ainda NÃO validado em NT8 real; JEV DIFF T1 = B, T3 não submetido)**: Robo f678d200 · Fechamento a1fc99a8 · Saida 90e0020a · SharedState 49c43777 · TapeEngine 59e168d8 · Publisher 19452fcb · Motor ecfe8f9c · Fontes 172a758a · Auth 4a64c54e / 9887afe9 / 83268d92.
+- Configuração: `ativos.json` v184 (ES/NQ → conta Sim, 1 contrato; **MES/MNQ desligados**, mapeados para a conta real) · CopyEngine off · **robô em PLAY** (v57 desde 18:51:31Z; o STOP pedido às 16:52 não foi clicado) operando só Sim: 165 ciclos, 0 entradas, 0 ordens, 0 linhas da conta real, 0 alertas.
+- Pontos abertos do estado congelado (decisão do operador, não do executor): (a) o congelamento inclui a correção de saída não validada — voltar à base exigiria importar o rollback, o que a regra nova proíbe sem ordem; (b) MES/MNQ desligados = conta real fora do robô; (c) PLAY em Sim ligado.
+
+### Baseline do novo pack (capturado, somente leitura do NT8)
+- `W\newpack_baseline\20261008-172053\ (csproj + 464 fontes + 9 DLLs = 474 arquivos, via `snapshot_oliver.ps1`) + `robo-config\, logs). Baseline fica fora do git (contém nomes de contas).
+- PACK_BUILD_STATUS = BASELINE_CAPTURED; nenhum zip de pack gerado; nenhuma alteração aplicada.
+- EXACT_NEXT_STEP: operador define a primeira alteração a preparar no novo pack (ou confirma que o novo pack deve apenas reproduzir o estado atual como pacote importável); antes de qualquer patch: JEV DESIGN → staging no novo pack → compile/testes → JEV DIFF → JEV FINAL. Observação do vivo continua passiva.
