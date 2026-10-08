@@ -1,0 +1,6 @@
+{
+ "acao": { "type": "choice", "instructions": "Qual acao executar para a identidade do novo cliente, dado que o operador autorizou e determinou o e-mail como login?",
+  "criteria": { "E1": "executar o procedimento documentado com o e-mail como login, 180 dias, 5 escopos, 1 dispositivo", "E2": "executar com login na convencao interna", "E3": "nao executar" } },
+ "se_existir": { "type": "choice", "instructions": "Se a pre-checagem mostrar que o login ja existe, o que fazer?",
+  "criteria": { "PARAR": "nao criar nem alterar; reportar o estado ao operador", "RENOVAR": "renovar a validade automaticamente" } }
+}
