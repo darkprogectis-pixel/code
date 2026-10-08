@@ -165,3 +165,27 @@ Reversão: `git checkout` dos 2 primeiros arquivos + apagar o teste.
 - Mods: continuam desligados até JEV FINAL = A da rotação.
 
 **PARA A SESSAO SUCESSORA (aberta pelo `npm run rotation:force` da sessao 6b86565f, ultimo ato dela):** 1) rodar `npm run rotation:status` e `node tools/jev-rotation/install-hooks.mjs --config-dir "$env:CLAUDE_CONFIG_DIR" --verify`; 2) registrar aqui: sucessor registrado? perfil/cwd corretos? hooks presentes? trabalho perdido?; 3) pendencia do JEV FINAL (duplicidade no perfil canonico) continua aberta; 4) NAO religar Mods antes do JEV FINAL = A; 5) commit local, sem push.
+
+### INCIDENTE 2026-10-08 — RESULTADO DO `rotation:force` REAL (registrado pela sessão sucessora 9dde1e26)
+
+`npm run rotation:force` da sessão `6b86565f` foi **ACEITO** (antes do patch: REFUSED, exit 3). Linhagem em `…\.claude-gomesgomestrader\jev-rotation\lineage.jsonl`:
+
+| Evento | Hora (Z) | Dado |
+|---|---|---|
+| FORCE_ROTATION_REQUESTED | 23:37:23.509 | level OK, 157809 tokens |
+| ROTATION_TRIGGERED | 23:37:23.511 | trigger FORCE, sucessor `9dde1e26-f34a-49b4-ae69-07c14e0bacb2`, depth 1 |
+| SUCCESSOR_SPAWNED | 23:37:23.663 | modo `wt`, pid 23472 |
+| SUCCESSOR_STARTED | 23:37:26.753 | cwd `C:\Users\ADM\Claude-JEV\code`, config_dir `C:\Users\ADM\.claude-gomesgomestrader` |
+| SUCCESSOR_CONFIRMED | 23:37:27.781 | ~4,3 s após o pedido; um único sucessor |
+
+Conferido pelo sucessor:
+- **Sucessor registrado:** SIM — `rotation:status` ⇒ `session=9dde1e26… level=OK`, `PREDECESSOR 6b86565f… (rotation #1)`; `state/9dde1e26….json` existe com `predecessor`.
+- **Antecessor:** `rotation.status = ROTATED_READ_ONLY`, `successor = 9dde1e26…`; último evento dele = PostToolUse `action: stop`.
+- **Perfil / cwd:** corretos (mesmo perfil e mesmo cwd do antecessor).
+- **Hooks:** `install-hooks.mjs --config-dir …\.claude-gomesgomestrader --verify` ⇒ **PASS** (5 hooks, vindos do `.claude/settings.json` do projeto; nada gravado no perfil).
+- **Transcript do sucessor:** existe (`…\projects\C--Users-ADM-Claude-JEV-code\9dde1e26-….jsonl`).
+- **Brief:** `handoffs/rotation/ROTATION_6b86565f_TO_9dde1e26.md` recebido no system prompt; snapshot `AUTO_ROTATION_6b86565f.md`.
+- **Trabalho perdido:** NENHUM — HEAD `fd0636d`, patch (`127299b`) íntegro, cópia de trabalho idêntica ao snapshot da rotação.
+- **Eventos neste perfil:** 1 linha por PreToolUse/PostToolUse (este perfil só tem os hooks do projeto; não mede a duplicidade do canônico).
+
+**Continua pendente (sem mudança):** JEV FINAL = B — medir duplicidade no perfil canônico `.claude-darkprogectis` (sessão aberta pelo launcher lá; 1 ou 2 linhas por evento em `events.jsonl`); se 2 ⇒ SO_PROJETO com novo JEV DIFF; depois reenviar JEV FINAL. Mods seguem desligados até JEV FINAL = A. Sem push.
