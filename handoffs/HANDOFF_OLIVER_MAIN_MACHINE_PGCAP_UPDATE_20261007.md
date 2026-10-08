@@ -200,3 +200,5 @@ Etapa passiva por ordem do operador (PLAY_ATIVADO = YES). Claude só leu arquivo
 - **13:25Z — NT8 reiniciado de fato** (PID 30300, 10:23:04 BRT). Runtime novo carregado: Control Center recarregado, publicador #3 eleito, tape/spot ES/NQ READY, fontes READY, âncora saiu de "sem tape" para "forca fraca ES/NQ" (strength 4). FORCA_JANELA_30 em warm-up esperado até ≈ 10:55 BRT (janela de 30 min cobrindo; gate fechado por força até lá). Erros novos 0. Auth/Login/Licença/Robo/RoboFontes preservados por hash. **NEXT = OPERATOR_PLAY** (detalhe no handoff da auditoria §16). ORDERS 0 · F5 0.
 
 - **13:29Z — PLAY ativado pelo operador** (v55, 13:29:15.797Z) com FORCA_JANELA_30 carregada; motor FLAT; warm-up da janela até ≈ 13:55Z; entradas 0; erros 0. Observação passiva em andamento (handoff da auditoria §16).
+
+- **13:38Z — gate novo comprovadamente ativo:** em 2 ciclos (13:34:58Z, 13:37:19Z) o passo 4 aprovou o NQ com Press NQ ≈ −0,0026 / −0,0006 (impossível pelo gate de Press) e reprovou só o ES. Âncora 4/4: 0 · entradas: 0 · motor FLAT · erros 0. Detalhe no handoff da auditoria §16.
