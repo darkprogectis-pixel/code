@@ -1,5 +1,5 @@
 {
- "gerado": "2026-10-08T23:04:01.987Z",
+ "gerado": "2026-10-08T23:17:21.569Z",
  "fontes": {
   "jev": "chrishan17/claude-jev-mod@f004877 (MIT)",
   "token-weather|blast-radius|replay-theater": "anthropics/claude-code-playground@569c528 (Apache-2.0)",
@@ -10,6 +10,7 @@
  "regra": "qualquer mudanca exige nova auditoria + JEV antes de regenerar este arquivo",
  "files": {
   ".claude-plugin/marketplace.json": "a6227ec28dc06c1d36f3e178a822c91d845c0f63f8efb0af2b0c5dec6d7d876d",
+  ".gitattributes": "8bb9567352a2b5833cf152e3e6cffb438480a4c8213340bd38742bdf666198f7",
   "LICENSE-anthropics-playground-APACHE-2.0.txt": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
   "blast-radius/.claude-plugin/plugin.json": "d4a0b321cd801522bcb2d7a790da366e02261b4317ef9f8ebca66a3c4cf319e1",
   "blast-radius/.gitignore": "953c17056a27f269d7165413dff56654f7e1c164f8d33cb11454c3ff9fe53dae",
