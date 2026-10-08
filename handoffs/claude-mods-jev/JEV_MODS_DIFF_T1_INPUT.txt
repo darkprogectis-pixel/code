@@ -1,0 +1,31 @@
+CLAUDE-JEV - MODS + JEV - JEV DIFF ANTES DA INSTALACAO
+
+DECISAO ANTERIOR
+JEV MODS DESIGN T1 req_01a11dba02127c88bfbdaabd77a1cafd: stack S1 (mod JEV + 3 amostras oficiais + um mod local em modo observar); sem comunidade; sem roteamento de modelo. T2 req_01a11dba4cf472eaa9c6b2018972a334: regra principal que faltava = integridade e atualizacao controlada (0,43); conjunto ainda incompleto 0,69.
+
+O QUE FOI PREPARADO (nada instalado ainda)
+P1 Marketplace LOCAL dentro do repositorio, com copias fixadas nos commits auditados: mod JEV de terceiros (commit f004877, licenca MIT), tres amostras oficiais da Anthropic (commit 569c528, licenca Apache), e o mod local.
+P2 Validacao estatica oficial dos 5: passou. Eventos e chamadas:
+   - mod JEV: evento de montagem da interface; chamadas: leitura de variaveis de ambiente (so as suas) e requisicao de rede (so ao provedor).
+   - previsao de contexto: le uso da sessao; desenha faixa.
+   - guarda destrutiva: evento de chamada de ferramenta; chama processo auxiliar e interface; so nega ou repassa.
+   - replay: comando proprio; le arquivos; painel.
+   - mod local: inicio de sessao, chamada de ferramenta de shell, 4 comandos; chamadas: registrar comando, ler arquivo, pedir ao JEV, rodar processo (somente git diff de contagem), diretorio da sessao, armazenamento proprio, linha de registro.
+   Nenhum dos 5 usa o evento de checagem de permissao, envio ou reescrita de prompt, alteracao da conversa, mensagem a outras sessoes ou escrita de variavel de ambiente.
+P3 Mod local (cerca de 230 linhas, lido e testado): em toda chamada de shell repassa a chamada sem alteracao; so quando o comando casa com um filtro local de risco (14 padroes: remocao recursiva, git reset --hard, git clean, push forcado, descarte de trabalho, remocao de branch, formatacao, SQL destrutivo, implantacao em producao, acesso remoto privilegiado, encerramento de processo, alvo fora do projeto) ele pede ao JEV, em paralelo, tres respostas tipadas (nota de risco, irreversibilidade, categoria) sobre o comando sanitizado e cortado em 300 caracteres. A ferramenta roda como rodaria sem o mod; depois o mod grava a decisao no livro e mostra uma linha discreta. Uma chamada por comando, cache por comando, teto de 40 por sessao, espera maxima de 8 segundos. Erro, demora ou ausencia do provedor: so registra e segue. Tratador de falha explicito que repassa a chamada.
+   Comandos: livro de decisoes; pre-classificacao de diff (so nomes de arquivo e contagens); pre-avaliacao de prontidao (so evidencias chave=valor); qualidade de handoff (o texto nao sai da maquina, so um checklist de booleanos). Todas as saidas dizem que sao observacao e que o JEV canonico continua obrigatorio.
+P4 Testes do mod local pelo comando oficial: 10 de 10. Um teste encontrou um vazamento real na sanitizacao (valor apos a palavra Bearer nao era removido); corrigido e reprovado. Testes do mod JEV: 12 de 12. As amostras oficiais nao tem testes proprios.
+P5 Chave do JEV: o mod JEV le a mesma variavel de ambiente que o JEV existente ja usa, e fala com o mesmo endereco. Nenhuma chave copiada, gravada ou digitada.
+P6 Configuracao: os hooks do controlador de rotacao e do gate ficam no arquivo de configuracao do projeto; a instalacao sera no escopo de usuario da pasta de configuracao isolada do Claude-JEV, sem tocar no arquivo de hooks do projeto. Backup feito. Linha de base antes de instalar: testes da rotacao 22 de 22.
+P7 Programas auxiliares da guarda destrutiva oficial (bash e sleep) existem no PATH do Windows desta maquina.
+
+REGRAS A IMPLEMENTAR JUNTO COM A INSTALACAO
+R5 teste do repositorio com o hash de cada arquivo dos mods e a lista fechada de eventos e chamadas permitidos por mod; falha se algo mudar. Atualizacao so com nova auditoria.
+R6 lista fechada de rede: so o mod JEV, so o endereco do provedor.
+R12 instalacao so na pasta de configuracao isolada do Claude-JEV.
+R13 desligamento por plugin documentado e ensaiado; nunca pela chave global que tambem desliga os hooks.
+
+LIMITES
+L1 As amostras oficiais sao compartilhadas sem suporte e sem testes proprios.
+L2 A guarda destrutiva oficial SEGURA o comando ate o usuario decidir; em sessao sem ninguem olhando isso pode parar o trabalho ate o tempo limite dela.
+L3 O mod local nao pode ser exercitado contra o provedor real pelo comando de teste; a prova com o provedor real sera feita depois da instalacao.

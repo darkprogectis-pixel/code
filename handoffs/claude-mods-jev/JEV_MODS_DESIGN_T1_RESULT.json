@@ -1,0 +1,76 @@
+{
+ "request_id": "req_01a11dba02127c88bfbdaabd77a1cafd",
+ "model": "jev-1.13.0",
+ "answers": {
+  "stack": {
+   "type": "choice",
+   "choice": "S1",
+   "confidence": 1,
+   "probabilities": {
+    "S1": 1,
+    "S2": 0,
+    "S3": 0,
+    "S4": 0,
+    "S5": 0
+   }
+  },
+  "mod_jev": {
+   "type": "choice",
+   "choice": "A",
+   "confidence": 0.97,
+   "probabilities": {
+    "A": 0.98,
+    "B": 0.02,
+    "C": 0
+   }
+  },
+  "guarda_destrutiva": {
+   "type": "choice",
+   "choice": "SIM_SE_WINDOWS_OK",
+   "confidence": 0.66,
+   "probabilities": {
+    "SIM_SE_WINDOWS_OK": 0.77,
+    "NAO": 0.05,
+    "SIM": 0.18
+   }
+  },
+  "roteamento": {
+   "type": "choice",
+   "choice": "NAO_INSTALAR",
+   "confidence": 0.8,
+   "probabilities": {
+    "NAO_INSTALAR": 0.87,
+    "SUGERIR": 0.13,
+    "AUTO": 0
+   }
+  },
+  "guardiao_contexto": {
+   "type": "choice",
+   "choice": "REJEITAR",
+   "confidence": 1,
+   "probabilities": {
+    "REJEITAR": 1,
+    "INSTALAR": 0
+   }
+  },
+  "modo_mod_local": {
+   "type": "choice",
+   "choice": "OBSERVAR",
+   "confidence": 1,
+   "probabilities": {
+    "OBSERVAR": 1,
+    "PERGUNTAR": 0,
+    "BLOQUEAR": 0
+   }
+  },
+  "regras": {
+   "type": "choice",
+   "choice": "FALTA",
+   "confidence": 0.82,
+   "probabilities": {
+    "SIM": 0.09,
+    "FALTA": 0.91
+   }
+  }
+ }
+}

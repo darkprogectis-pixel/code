@@ -1,0 +1,10 @@
+{
+ "e1": { "type": "noul", "instructions": "A regra E1 (imposicao da integridade na partida pelo lancador) e exigida para aprovar?", "criteria": { "true": "exigida", "false": "nao exigida" } },
+ "e2": { "type": "noul", "instructions": "A regra E2 (prova em execucao de que o gate e os hooks continuam valendo com os mods ligados) e exigida para aprovar?", "criteria": { "true": "exigida", "false": "nao exigida" } },
+ "e3": { "type": "noul", "instructions": "A regra E3 (provedor fixo em TypeSafe na configuracao do mod JEV) e exigida para aprovar?", "criteria": { "true": "exigida", "false": "nao exigida" } },
+ "e4": { "type": "noul", "instructions": "A regra E4 (rotacao forcada ao vivo como ultimo ato) e exigida para aprovar?", "criteria": { "true": "exigida", "false": "nao exigida" } },
+ "e5": { "type": "noul", "instructions": "A regra E5 (retencao e limpeza do livro) e exigida para aprovar?", "criteria": { "true": "exigida", "false": "nao exigida" } },
+ "e6": { "type": "noul", "instructions": "A regra E6 (sem atualizacao automatica; mudanca so com auditoria) e exigida para aprovar?", "criteria": { "true": "exigida", "false": "nao exigida" } },
+ "e7": { "type": "noul", "instructions": "A regra E7 (reauditoria a cada atualizacao do Claude Code) e exigida para aprovar?", "criteria": { "true": "exigida", "false": "nao exigida" } },
+ "principal": { "type": "choice", "instructions": "Qual destas era a regra faltante principal?", "criteria": { "E1": "imposicao na partida", "E2": "prova em execucao dos hooks", "E3": "provedor fixo", "E4": "rotacao forcada ao vivo", "E5": "retencao do livro", "E6": "atualizacao controlada", "E7": "revisao periodica", "OUTRA": "outra" } }
+}

@@ -1,0 +1,49 @@
+{
+ "request_id": "req_01a11dcbc92c775983bca9869888d706",
+ "model": "jev-1.13.0",
+ "answers": {
+  "e1": {
+   "type": "noul",
+   "noul": 0.45
+  },
+  "e2": {
+   "type": "noul",
+   "noul": 0.63
+  },
+  "e3": {
+   "type": "noul",
+   "noul": 0.42
+  },
+  "e4": {
+   "type": "noul",
+   "noul": 0.66
+  },
+  "e5": {
+   "type": "noul",
+   "noul": 0.35
+  },
+  "e6": {
+   "type": "noul",
+   "noul": 0.53
+  },
+  "e7": {
+   "type": "noul",
+   "noul": 0.34
+  },
+  "principal": {
+   "type": "choice",
+   "choice": "E4",
+   "confidence": 0.31,
+   "probabilities": {
+    "E1": 0.08,
+    "E2": 0.31,
+    "E3": 0.13,
+    "E4": 0.39999999999999997,
+    "E5": 0.04,
+    "E6": 0.02,
+    "E7": 0.01,
+    "OUTRA": 0.01
+   }
+  }
+ }
+}

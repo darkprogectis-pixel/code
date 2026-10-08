@@ -1,0 +1,38 @@
+{
+ "request_id": "req_01a11dbfae197668ae5283eb7da435ac",
+ "model": "jev-1.13.0",
+ "answers": {
+  "diff": {
+   "type": "choice",
+   "choice": "A",
+   "confidence": 0.35,
+   "probabilities": {
+    "A": 0.57,
+    "B": 0.35,
+    "C": 0.08
+   }
+  },
+  "ajuste": {
+   "type": "choice",
+   "choice": "GUARDA_SEGURA",
+   "confidence": 0.42,
+   "probabilities": {
+    "NENHUM": 0.29,
+    "GUARDA_SEGURA": 0.54,
+    "ESCOPO": 0.02,
+    "MOD_LOCAL": 0.05,
+    "OUTRO": 0.1
+   }
+  },
+  "guarda_oficial": {
+   "type": "choice",
+   "choice": "INSTALAR_LIGADA",
+   "confidence": 0.3,
+   "probabilities": {
+    "INSTALAR_DESLIGADA": 0.44,
+    "INSTALAR_LIGADA": 0.53,
+    "NAO_INSTALAR": 0.03
+   }
+  }
+ }
+}

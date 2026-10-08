@@ -1,0 +1,15 @@
+{
+ "stack": { "type": "choice", "instructions": "Qual stack instalar no Claude-JEV?",
+  "criteria": { "S1": "minima segura: mod JEV + 3 amostras oficiais + um mod local do projeto em modo observar; sem comunidade; sem roteamento de modelo", "S2": "S1 + roteador de modelo da comunidade em modo sugerir", "S3": "S1 + mods de visibilidade da comunidade", "S4": "so mod JEV + amostras oficiais, sem mod local", "S5": "nao instalar nada" } },
+ "mod_jev": { "type": "choice", "instructions": "O mod JEV de terceiros esta aprovado para instalacao, usando o provedor TypeSafe pela variavel de ambiente ja existente (sem copiar chave)?",
+  "criteria": { "A": "aprovado", "B": "aprovado so depois de ajuste", "C": "rejeitado" } },
+ "guarda_destrutiva": { "type": "choice", "instructions": "A amostra oficial de guarda de comando destrutivo deve ser instalada?",
+  "criteria": { "SIM_SE_WINDOWS_OK": "instalar se a prova de compatibilidade com Windows passar; senao cobrir a funcao no mod local", "NAO": "nao instalar; cobrir no mod local", "SIM": "instalar de qualquer modo" } },
+ "roteamento": { "type": "choice", "instructions": "Roteamento de modelo por mod.",
+  "criteria": { "NAO_INSTALAR": "nao instalar agora; modelo oficial preservado", "SUGERIR": "instalar em modo sugerir", "AUTO": "instalar em modo automatico" } },
+ "guardiao_contexto": { "type": "choice", "instructions": "Mods da comunidade que gerenciam contexto e escrevem handoffs.",
+  "criteria": { "REJEITAR": "rejeitar: concorrem com o controlador de rotacao", "INSTALAR": "instalar" } },
+ "modo_mod_local": { "type": "choice", "instructions": "Modo inicial do mod local do projeto.",
+  "criteria": { "OBSERVAR": "observar e registrar: classifica risco e grava o livro de decisoes; nunca bloqueia nem aprova", "PERGUNTAR": "alem de registrar, perguntar ao usuario antes de comando classificado como destrutivo", "BLOQUEAR": "negar automaticamente comando classificado como destrutivo" } },
+ "regras": { "type": "choice", "instructions": "As regras R1 a R4 sao adequadas e suficientes?", "criteria": { "SIM": "adequadas e suficientes", "FALTA": "falta regra" } }
+}

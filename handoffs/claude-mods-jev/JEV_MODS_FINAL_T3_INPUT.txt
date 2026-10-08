@@ -1,0 +1,23 @@
+CLAUDE-JEV - MODS + JEV - JEV FINAL T3 (apos cumprir as exigencias do FINAL T2)
+
+HISTORICO
+FINAL T1 req_01a11dcb5e147ddb92362dd94e9339d9 = B 0,76 (regra faltante). FINAL T2 req_01a11dcbc92c775983bca9869888d706: exigidas a prova em execucao dos hooks (0,63), a atualizacao controlada (0,53) e a rotacao forcada ao vivo como ultimo ato (0,66).
+
+O QUE FOI ACRESCENTADO DESDE O FINAL T1
+N1 PROVA EM EXECUCAO DOS HOOKS (exigencia cumprida): em um projeto de rascunho com um hook de configuracao do mesmo tipo dos hooks do projeto, que bloqueia um comando marcado, e com os mods LIGADOS: o hook disparou nas duas chamadas de shell; o comando marcado foi bloqueado mesmo estando liberado nas permissoes; o comando nao marcado rodou; o mod local observou e classificou os dois sem interferir. Isso prova em execucao que os mods instalados nao impedem um hook de configuracao de rodar nem de bloquear.
+N2 ATUALIZACAO CONTROLADA (exigencia cumprida): o marketplace e um diretorio local dentro do repositorio; nao existe origem remota, logo nao ha atualizacao automatica. Os arquivos estao fixados por hash em um manifesto versionado, com conversao de fim de linha desligada para os hashes ficarem estaveis. Regra registrada: qualquer mudanca nos mods exige nova auditoria, nova decisao e regeneracao do manifesto. O teste de integridade passa 10 de 10 depois do commit.
+N3 PROVEDOR FIXO: o mod JEV foi configurado com o provedor TypeSafe fixo; continua respondendo, mesmo com uma variavel-isca de outro provedor presente no ambiente; nenhuma chave gravada na configuracao.
+N4 Regressao repetida depois dessas mudancas: testes do controlador de rotacao 22 de 22; arquivo de hooks do projeto com o mesmo hash de antes da instalacao.
+N5 Tudo versionado em dois commits locais; handoff dedicado completo, com rollback por plugin.
+
+ROTACAO FORCADA AO VIVO (exigencia restante)
+O comando de rotacao forcada sera executado como ULTIMO ATO desta sessao, logo apos esta decisao e o registro dela no handoff. Ele encerra a sessao atual e abre a sucessora; o resultado do comando sera relatado ao operador na mensagem final. Os mods so carregam em sessoes novas, entao a sucessora sera a primeira sessao real do projeto com os mods ligados e com o controlador de rotacao ativo ao mesmo tempo.
+
+ESTADO INSTALADO (inalterado)
+Mod JEV de terceiros ligado; mod local em modo observar ligado; duas amostras oficiais de interface ligadas; guarda destrutiva oficial instalada e desligada; nenhum mod da comunidade; nenhum roteamento de modelo.
+
+LIMITES QUE PERMANECEM
+L1 As amostras de interface nao foram conferidas visualmente.
+L2 Desempenho medido so parcialmente.
+L3 A suite completa tem 25 falhas em modulos de video e voz sem relacao com mods; nao houve comparacao antes e depois.
+L4 A integridade dos mods nao e imposta na partida pelo lancador (o lancador nao foi alterado); depende de rodar o teste.

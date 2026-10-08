@@ -1,0 +1,30 @@
+{
+ "request_id": "req_01a11dba4cf472eaa9c6b2018972a334",
+ "model": "jev-1.13.0",
+ "answers": {
+  "falta": {
+   "type": "choice",
+   "choice": "R5",
+   "confidence": 0.35,
+   "probabilities": {
+    "R5": 0.43,
+    "R6": 0.04,
+    "R7": 0.01,
+    "R8": 0.17,
+    "R9": 0.01,
+    "R10": 0.02,
+    "R11": 0.14,
+    "OUTRA": 0.18
+   }
+  },
+  "conjunto": {
+   "type": "choice",
+   "choice": "FALTA",
+   "confidence": 0.38,
+   "probabilities": {
+    "SIM": 0.31,
+    "FALTA": 0.69
+   }
+  }
+ }
+}

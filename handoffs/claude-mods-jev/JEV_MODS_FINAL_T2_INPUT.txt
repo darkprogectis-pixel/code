@@ -1,0 +1,14 @@
+CLAUDE-JEV - MODS + JEV - FINAL T2: IDENTIFICAR A REGRA QUE FALTA
+
+CONTEXTO
+JEV MODS FINAL T1 (req_01a11dcb5e147ddb92362dd94e9339d9) = B 0,76; pendencia = regra faltante 0,61 (rotacao forcada ao vivo 0,22); guarda destrutiva: ligar 0,52 x manter desligada 0,48; seguranca 1,48 de 2.
+Instalado: mod JEV (terceiro), mod local em modo observar, duas amostras oficiais de interface ligadas, guarda destrutiva oficial desligada. Ja implementado: integridade por hash e lista fechada de chamadas (teste do repositorio), rede so no mod JEV, nao interferencia, escopo isolado, desligamento por plugin, falha segura, sem segredo no livro.
+
+REGRAS CANDIDATAS (cada uma pode ser exigida ou nao)
+E1 IMPOSICAO NA PARTIDA: hoje a integridade depende de alguem rodar o teste. Regra: o lancador oficial do Claude-JEV roda o teste de integridade dos mods antes de abrir a sessao; se falhar, a sessao abre com os mods do usuario desligados (ou nao abre).
+E2 PROVA EM EXECUCAO DOS HOOKS: provar, com os mods ligados e dentro do projeto, que um comando que o gate existente bloqueia continua bloqueado e que os hooks de rotacao continuam disparando (prova em execucao, nao so leitura estatica).
+E3 PROVEDOR FIXO: o mod JEV escolhe o provedor pelas variaveis de ambiente presentes e sabe falar com outros quatro provedores. Regra: fixar o provedor em TypeSafe na configuracao do mod, para que uma variavel de outro provedor que apareca no ambiente nunca desvie o envio.
+E4 ROTACAO FORCADA AO VIVO: executar o comando de rotacao forcada ao vivo como ultimo ato, depois do handoff e do commit, aceitando que a sessao atual termina.
+E5 RETENCAO DO LIVRO: limite de tempo e comando de limpeza do livro de decisoes.
+E6 ATUALIZACAO: registrar que o marketplace e local e que nenhuma atualizacao automatica de mod pode ocorrer; qualquer mudanca passa por auditoria, novo arquivo de integridade e decisao.
+E7 REVISAO PERIODICA: reauditar os mods de terceiros a cada atualizacao do Claude Code, porque a interface dos mods pode mudar.

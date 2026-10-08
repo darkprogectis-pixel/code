@@ -1,0 +1,39 @@
+{
+ "request_id": "req_01a11dcf0a6a7605be9e63cd0ef7a4c4",
+ "model": "jev-1.13.0",
+ "answers": {
+  "final": {
+   "type": "choice",
+   "choice": "A",
+   "confidence": 0.55,
+   "probabilities": {
+    "A": 0.7,
+    "B": 0.29,
+    "C": 0.01
+   }
+  },
+  "pendencia": {
+   "type": "choice",
+   "choice": "OUTRA",
+   "confidence": 0.81,
+   "probabilities": {
+    "NENHUMA": 0.02,
+    "IMPOSICAO_NA_PARTIDA": 0.05,
+    "VISUAL": 0.07,
+    "SUITE": 0.01,
+    "GUARDA": 0.01,
+    "OUTRA": 0.84
+   }
+  },
+  "se_rotacao_falhar": {
+   "type": "choice",
+   "choice": "DESLIGAR_MODS",
+   "confidence": 0.88,
+   "probabilities": {
+    "DESLIGAR_MODS": 0.92,
+    "MANTER": 0.08,
+    "DESINSTALAR": 0
+   }
+  }
+ }
+}

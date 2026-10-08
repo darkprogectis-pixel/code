@@ -1,0 +1,6 @@
+{
+ "falta": { "type": "choice", "instructions": "Qual era a regra principal que faltava no conjunto R1 a R4?",
+  "criteria": { "R5": "integridade e atualizacao controlada dos mods", "R6": "lista fechada de destinos de rede", "R7": "limite de custo e de chamadas ao JEV", "R8": "nao interferencia em prompts, conversa e outras sessoes", "R9": "sem segredo no livro de decisoes", "R10": "falha segura do mod local", "R11": "autoridade do JEV existente preservada", "OUTRA": "outra regra nao listada" } },
+ "conjunto": { "type": "choice", "instructions": "O conjunto R1 a R11 e adequado e suficiente para instalar a stack S1?",
+  "criteria": { "SIM": "adequado e suficiente", "FALTA": "ainda falta regra" } }
+}

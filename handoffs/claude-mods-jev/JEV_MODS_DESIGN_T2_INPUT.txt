@@ -1,0 +1,14 @@
+CLAUDE-JEV - MODS + JEV - DESIGN T2: QUAL REGRA FALTA
+
+CONTEXTO
+JEV MODS DESIGN T1 (req_01a11dba02127c88bfbdaabd77a1cafd): stack S1 1,00; mod JEV aprovado 0,98; guarda destrutiva oficial se o Windows passar 0,77; roteamento de modelo nao instalar 0,87; guardioes de contexto rejeitar 1,00; mod local em modo observar 1,00; regras R1 a R4 = FALTA 0,91.
+Regras ja propostas: R1 nenhum mod instalado usa o evento de checagem de permissao nem responde no lugar da ferramenta; R2 o mod local envia ao JEV so o minimo, sanitizado; R3 instalacao de copia local fixada no commit auditado, rollback por plugin; R4 regressao da rotacao e do gate depois de cada instalacao.
+
+REGRAS CANDIDATAS ADICIONAIS
+R5 INTEGRIDADE: registrar o hash de cada arquivo dos mods instalados e conferir por um teste do repositorio; qualquer atualizacao de mod exige nova auditoria e nova decisao; atualizacao automatica desligada.
+R6 REDE: lista fechada de destinos por mod (mod JEV: somente o endereco do provedor ja usado; demais mods: nenhum); o teste falha se a validacao estatica mostrar chamada de rede fora da lista.
+R7 CUSTO: o mod local limita as chamadas ao JEV (so comandos de shell que casam com um filtro local de risco; no maximo uma chamada por comando; cache por comando; teto por sessao) e registra latencia e contagem.
+R8 NAO INTERFERENCIA: nenhum mod instalado reescreve prompts, envia prompts, altera a conversa armazenada ou fala com outras sessoes; o teste falha se a validacao estatica mostrar essas chamadas.
+R9 SEM SEGREDO NO LIVRO: o livro de decisoes guarda so pergunta resumida, resposta, confianca, probabilidades, identificador e hora; nunca o comando inteiro quando ele contiver padrao de segredo; arquivo fora do git.
+R10 FALHA SEGURA: em erro ou demora do provedor o mod local apenas repassa a chamada e registra a falha; nunca bloqueia nem aprova por conta propria.
+R11 AUTORIDADE: as decisoes do mod local sao so observacao; o JEV existente continua sendo a autoridade para design, diff e final; nenhuma decisao do mod substitui esses portoes.

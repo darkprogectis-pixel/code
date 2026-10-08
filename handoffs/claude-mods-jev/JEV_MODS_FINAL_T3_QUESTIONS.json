@@ -1,0 +1,8 @@
+{
+ "final": { "type": "choice", "instructions": "Com as exigencias N1 e N2 cumpridas e a rotacao forcada ao vivo executada como ultimo ato, a instalacao Claude Code Mods + JEV esta completa, segura, compativel com a arquitetura e melhora o fluxo sem quebrar o controlador de rotacao, os limites do projeto, os hooks ou o modelo oficial?",
+  "criteria": { "A": "aprovada, condicionada a executar a rotacao forcada como ultimo ato", "B": "ainda falta item especifico, indicado em 'pendencia'", "C": "reprovada; desinstalar" } },
+ "pendencia": { "type": "choice", "instructions": "Se nao for A, qual a pendencia?",
+  "criteria": { "NENHUMA": "nenhuma", "IMPOSICAO_NA_PARTIDA": "impor a integridade no lancador antes de aprovar", "VISUAL": "conferencia visual", "SUITE": "comparacao antes e depois da suite", "GUARDA": "decisao sobre a guarda destrutiva", "OUTRA": "outra" } },
+ "se_rotacao_falhar": { "type": "choice", "instructions": "Se o comando de rotacao forcada falhar ao vivo, o que fazer com os mods?",
+  "criteria": { "DESLIGAR_MODS": "desligar os plugins instalados (por plugin) e reportar", "MANTER": "manter os mods e reportar", "DESINSTALAR": "desinstalar tudo" } }
+}

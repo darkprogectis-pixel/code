@@ -81,3 +81,9 @@ R1 nenhum mod usa `tool.check` nem responde no lugar da ferramenta · R2 mínimo
 - Decidir com o operador se liga `blast-radius` (segura comandos até alguém decidir — ruim para sessão sem operador).
 - E1 (rodar `npm run test:mods` no `START_JEV_CLAUDE.ps1` antes de abrir a sessão) não implementado: o lançador não foi alterado.
 - A cada atualização do Claude Code: `npm run test:mods` + `npm run test:rotation`.
+
+## JEV FINAL T3 = A 0,70 (B 0,29) · `req_01a11dcf0a6a7605be9e63cd0ef7a4c4`
+- Aprovado, CONDICIONADO a executar `npm run rotation:force` ao vivo como último ato desta sessão. Se o comando falhar: desligar os plugins instalados, um a um (0,92), e reportar.
+- Pendência residual apontada pelo JEV: "outra" (0,84), não identificada; limites declarados: sem conferência visual das amostras de interface, desempenho parcial, 25 falhas de vídeo/voz sem comparação antes/depois, integridade não imposta na partida pelo lançador.
+- ÚLTIMO ATO: `npm run rotation:force` executado logo após este registro (sessão 6b86565f). A sessão sucessora é a primeira do projeto com os mods ligados junto com o Rotation Controller V3: conferir em `/plugin` a linha de mods ativos e rodar `npm run test:mods` e `npm run test:rotation`.
+- Commits desta missão: 46f5c4a (handoff inicial) · 4aeba8e (mods + teste + handoff) · 2d27c89 (.gitattributes) · este.

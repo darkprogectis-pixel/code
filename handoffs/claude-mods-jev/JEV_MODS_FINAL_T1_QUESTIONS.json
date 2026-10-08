@@ -1,0 +1,8 @@
+{
+ "final": { "type": "choice", "instructions": "A instalacao Claude Code Mods + JEV esta completa, segura, compativel com a arquitetura e melhora o fluxo sem quebrar o controlador de rotacao, os limites do projeto, os hooks ou o modelo oficial?",
+  "criteria": { "A": "aprovada", "B": "falta item especifico, indicado em 'pendencia'", "C": "reprovada; desinstalar", "D": "outro" } },
+ "pendencia": { "type": "choice", "instructions": "Se nao for A, qual a pendencia principal?",
+  "criteria": { "NENHUMA": "nenhuma", "ROTACAO_FORCADA_AO_VIVO": "executar o comando de rotacao forcada ao vivo", "SUITE_ANTES_DEPOIS": "provar por comparacao antes e depois que as 25 falhas nao vem dos mods", "VISUAL": "conferir visualmente as amostras de interface", "DESEMPENHO": "medir desempenho por completo", "GUARDA": "decidir de novo a guarda destrutiva oficial", "REGRA": "regra faltante", "OUTRA": "outra" } },
+ "guarda_desligada": { "type": "choice", "instructions": "Manter a guarda destrutiva oficial instalada e desligada e adequado?", "criteria": { "SIM": "adequado", "LIGAR": "deve ser ligada", "REMOVER": "deve ser removida" } },
+ "seguranca": { "type": "score", "instructions": "Seguranca do conjunto instalado frente ao gate do JEV, a rotacao e aos segredos.", "criteria": ["fraca", "aceitavel", "forte"] }
+}

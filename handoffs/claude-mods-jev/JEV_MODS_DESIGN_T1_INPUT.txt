@@ -1,0 +1,38 @@
+CLAUDE-JEV - MODS DO CLAUDE CODE + JEV - DESIGN DA STACK (nada instalado ainda)
+
+AUTORIZACAO
+O operador autorizou por mensagem digitada a missao completa: auditar, validar, submeter cada etapa ao JEV, instalar so o aprovado, integrar com o JEV existente sem expor chaves, criar mod local se necessario, alterar configuracao de forma minima e reversivel, testar a rotacao e seguir ate a decisao final.
+
+FATOS DA DOCUMENTACAO OFICIAL (10 paginas lidas)
+D1 Mods estao ligados por padrao desde a versao 2.1.287; aqui roda 2.1.294. Nenhum plugin instalado hoje.
+D2 Um mod nao e isolado: roda com as permissoes do usuario; pode ler arquivos, iniciar processos, fazer rede, ler variaveis de ambiente e configuracoes.
+D3 Um mod que responde a chamada de ferramenta sem repassar impede que os hooks de configuracao do usuario rodem; e um mod que usa o evento de checagem pode APROVAR uma chamada que um hook de configuracao do usuario bloqueou. Os hooks de configuracao desta instalacao sao o gate do JEV e o controlador de rotacao. A guarda embutida que protege hooks so vale para configuracoes gerenciadas por organizacao, que esta maquina nao tem.
+D4 O comando oficial de validacao lista, sem executar, os eventos e as chamadas de cada mod. O comando oficial de teste roda os testes do proprio mod.
+D5 A chave global que desliga mods tambem desliga os hooks de configuracao (pararia a rotacao); o rollback deve ser por plugin.
+D6 A documentacao oficial nao menciona o JEV; o acesso ao JEV dentro de um mod vem de um mod de terceiros que acrescenta um servico a interface dos mods.
+
+AUDITORIA (5 repositorios clonados em pasta isolada; 43 mods; validacao estatica em todos)
+A1 MOD JEV (terceiro, licenca MIT, 14 arquivos, lido por inteiro): um unico evento (montagem da interface); so chama leitura de variaveis de ambiente e requisicao de rede; le somente as proprias variaveis de configuracao; envia a requisicao somente ao provedor configurado. Com o provedor TypeSafe usa exatamente o mesmo endereco e o mesmo cabecalho que o JEV existente do projeto, e le a chave da mesma variavel de ambiente que o JEV existente ja usa: nenhuma chave precisa ser copiada, gravada ou digitada. Nao intercepta ferramentas, nao le arquivos, nao le a conversa. Em erro, lanca excecao (nao aprova nada). Testes proprios: 12 de 12. Limite: NAO sanitiza o estado enviado; quem chama e responsavel pelo que manda.
+A2 AMOSTRAS OFICIAIS da Anthropic (licenca Apache, sem suporte, validacao OK, sem testes proprios):
+   - previsao de contexto: so le o uso da sessao e desenha uma faixa; 137 linhas.
+   - guarda de comando destrutivo: segura rm recursivo, git reset --hard, git clean, push forcado e mostra o que mudaria, com botoes prosseguir/cancelar; so NEGA ou repassa, nunca aprova; usa processo auxiliar (bash e sleep), compatibilidade com Windows a provar.
+   - replay das edicoes do ultimo turno: so leitura de arquivos e painel.
+A3 COMUNIDADE (dois repositorios, 36 mods): varios duplicam as amostras oficiais; alguns tem capacidades de risco para esta arquitetura:
+   - roteador de modelo: le chaves de outros provedores e faz rede; trocaria o modelo de subagentes.
+   - guardiao de contexto: escreve handoffs, bifurca o modelo e executa comandos; concorre com o controlador de rotacao.
+   - quebra-laco: reescreve linhas da conversa.
+   - atividade e notificacao: usam o evento de checagem de permissao.
+   - outros: jogos, musica, horarios, saldo de outro provedor: irrelevantes.
+
+OPCOES DE STACK
+S1 MINIMA SEGURA: instalar o mod JEV (provedor TypeSafe pela variavel de ambiente ja existente) + as 3 amostras oficiais + UM mod local do projeto que usa o JEV do mod para classificar risco de comando e registrar um livro de decisoes, em modo OBSERVAR (nunca aprova, nunca responde no lugar da ferramenta, sempre repassa; em falha do provedor apenas repassa). Nenhum mod da comunidade. Roteamento de modelo NAO instalado (modelo oficial preservado).
+S2 S1 + roteador de modelo da comunidade em modo sugerir.
+S3 S1 + mods de visibilidade da comunidade (medidor de uso, radar de agentes).
+S4 So o mod JEV + amostras oficiais, sem mod local.
+S5 Nao instalar nada.
+
+REGRAS PROPOSTAS PARA QUALQUER MOD INSTALADO
+R1 Nenhum mod instalado pode usar o evento de checagem de permissao nem responder a chamada de ferramenta com resultado proprio; so pode negar, perguntar ao usuario ou repassar.
+R2 O mod local envia ao JEV somente o minimo (o comando ou um resumo curto), sanitizado pelas mesmas regras do JEV existente; nunca arquivos inteiros, handoffs, chaves ou senhas.
+R3 Instalacao a partir de copia local fixada no commit auditado, guardada no repositorio; rollback por plugin.
+R4 Regressao obrigatoria do controlador de rotacao e do gate do JEV depois de cada instalacao.
