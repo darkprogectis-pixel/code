@@ -1,0 +1,9 @@
+{
+ "rollout": { "type": "choice", "instructions": "O que fazer agora com os packs de clientes, dado que o EXIT_LAYER_FIX X2 ainda nao foi validado em NinjaTrader real?",
+  "criteria": { "G1": "preparar agora e RETER ate JEV DIFF T3 = A e JEV FINAL de release", "G2": "preparar e ENTREGAR agora com aviso operacional de nao usar conta real", "G3": "nao preparar agora; esperar o JEV DIFF T3", "G4": "entregar agora para uso somente em Sim nas maquinas dos clientes, com aviso" } },
+ "entrega_antes_do_t3": { "type": "choice", "instructions": "Packs com o EXIT_LAYER_FIX X2 podem chegar a maquinas de clientes com conta real conectada antes do JEV DIFF T3 = A, protegidos apenas por orientacao escrita?",
+  "criteria": { "NAO": "nao podem ser entregues antes do T3", "SIM": "podem, com a orientacao escrita" } },
+ "bloqueio_software": { "type": "choice", "instructions": "E correto NAO criar nenhum bloqueio de software para conta real nos packs (sem versao so Sim, sem flag, sem configuracao artificial)?",
+  "criteria": { "CORRETO": "correto; os packs devem ser tecnicamente completos", "INCORRETO": "deveria existir bloqueio tecnico ate a validacao" } },
+ "risco_g2": { "type": "score", "instructions": "Risco de entregar agora com apenas a orientacao escrita.", "criteria": ["alto", "moderado", "baixo"] }
+}

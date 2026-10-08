@@ -1,0 +1,19 @@
+INVICTUS - ROLLOUT DOS PACKS DE CLIENTES - PORTA DE PREPARACAO
+
+PEDIDO DO OPERADOR
+Continuar agora a atualizacao de TODOS os packs de clientes com P-GCAP + FORCA_JANELA_30 + EXIT_LAYER_FIX X2. Os packs devem sair tecnicamente completos para conta real: nenhum bloqueio de software, nenhuma versao so Sim, nenhuma configuracao desabilitando conta real, nenhuma necessidade de reimportar depois. A unica restricao seria uma orientacao escrita a cada operador de PC: nao utilizar conta real ate a validacao ao vivo e o JEV FINAL de release.
+
+FATOS
+F1 O codigo EXIT_LAYER_FIX X2 corrige a camada de saida que hoje causou saida em dobro e posicao invertida sem protecao em conta real. Prova offline: codigo antigo reproduz o defeito; corrigido 28 de 28 no harness e 32 de 32 na bancada do executor; compilacao sem erros.
+F2 JEV DIFF desse codigo = B 0,66: exigido teste em NinjaTrader real, conta Sim, antes de qualquer pacote. O teste Sim de hoje rodou uma hora sem nenhuma entrada; a camada de saida nao foi exercitada no NinjaTrader real. T3 nao submetido.
+F3 JEV NEWPACK FINAL (req_01a11d3989bc75a49119fda1994e0370) = A somente como BASELINE validado offline; pode ser distribuido ou usado em conta real no estado atual = NAO 1,00.
+F4 A autorizacao escrita pelo operador para atualizar os packs foi condicionada: submeter JEV DIFF T3 e, se aprovado, gerar o pacote oficial e atualizar os packs afetados.
+F5 Os packs importaveis nunca contiveram configuracao de contas nem de ativos; o importador so instala codigo-fonte. Portanto nenhum pack tem nem teria bloqueio de conta real: os caminhos de codigo da conta real sao os mesmos da conta Sim. O estado da maquina OLIVER (dois ativos desligados) e so dela e nao entra em pack nenhum. Nesse ponto o pedido do operador ja esta atendido por construcao.
+F6 Inventario (somente leitura): 113 arquivos zip contem a camada de saida; 87 sao de um mesmo grupo de entregas a clientes cujo arquivo principal do robo difere do da OLIVER (precisa de integracao do diff, nao de copia do arquivo); 8 sao pacotes antigos de setembro com versoes anteriores.
+F7 O defeito ATUAL esta presente nos packs ja distribuidos (codigo antigo da saida). Segundo a auditoria do incidente, ele se manifesta em conta de corretora quando ha saida seguida de reentrada no mesmo ciclo.
+
+OPCOES
+G1 PREPARAR E RETER: construir agora os packs de clientes com o codigo novo, com todos os testes offline, e mante-los RETIDOS (nao entregar) ate JEV DIFF T3 = A e JEV FINAL de release. Nenhum bloqueio de software. Aviso operacional incluido.
+G2 PREPARAR E ENTREGAR COM AVISO: construir e entregar agora aos operadores, tecnicamente completos, confiando so na orientacao escrita de nao usar conta real.
+G3 NAO PREPARAR AGORA: esperar o JEV DIFF T3 e so entao construir os packs.
+G4 ENTREGAR SO PARA USO EM SIM NAS MAQUINAS DOS CLIENTES para acelerar a validacao, com aviso, sem bloqueio de software.
