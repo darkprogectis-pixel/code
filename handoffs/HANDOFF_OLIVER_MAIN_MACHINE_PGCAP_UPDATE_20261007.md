@@ -209,3 +209,4 @@ Etapa passiva por ordem do operador (PLAY_ATIVADO = YES). Claude só leu arquivo
 - gate_check pass; licença ativa; fontes locais READY; SpotGamma :3500 OFFLINE com hard=false ⇒ API não atuou como hard gate nem veto.
 - 6 ordens do robô (ES/NQ Sim 001 · MES x3 / MNQ x2 conta real TAKEPROFIT ***210 · NES/NNQ x5 Sim 002), 6 brackets Stop+Take OCO criados, 0 falhas.
 - Executor: 0 ordens manuais · F5 0 · nenhuma alteração. Detalhe: `handoffs/HANDOFF_INVICTUS_TEMPORAL_CLUSTERING_AUDIT_20261008.md` §17.
+- Fechamento: 13:50:51.583Z por anchor_neutro (ES x NQ divergentes), 62 s; ciclo CLOSED 13:51:33.148Z com as 6 pernas FLAT confirmadas e brackets cancelados; P&L executado −566,65 USD no total (conta real: MES −26,25 · MNQ −68,00); falhas 0; alertas 0; PLAY segue ativo.

@@ -194,3 +194,12 @@ Somente leitura. Executor: 0 ordens criadas/alteradas/canceladas · F5 0 · nenh
 - **Contagem desde o boot (até 13:50:31Z):** ciclos que chegaram ao passo 4: forca fraca ES/NQ 11 · forca fraca ES (NQ aprovado) 7+ · âncora 4/4 aprovada 1 · entradas 1.
 - **Warnings/erros:** `place_fail` 0 · alertas 0 · erros 0. AOT de referência estava FLAT/NEUTRO ("ES x NQ divergentes", estado de 13:48:58Z) — só telemetria. Bridge rotulou o instante como FORCE_BELOW_MIN (campo `block` derivado do Press, ressalva já registrada).
 - **T60:** não atingido; auditoria do ES NÃO disparada (ES aprovado antes do critério).
+
+### 17.1 Fechamento da primeira entrada (leitura 2026-10-08 13:51:43Z)
+- **Saída:** 13:50:51.583Z · motivo `anchor_neutro` (âncora "ES x NQ divergentes", NEUTRO não transitório ⇒ regra canônica de saída) · duração da decisão 62 s · P&L de decisão (escala E-mini) ES −62,50 · NQ −325,00 · total −387,50.
+- **Execução da saída:** 4 pernas Sim FLAT no mesmo ciclo (`flatten_ok`); as 2 pernas da conta real TAKEPROFIT (MES x3, MNQ x2) saíram como `flatten_sent sent:unverified`, com `trade_closed` às 13:50:52.349Z (MES) e 13:50:55.839Z (MNQ); retry de verificação 13:51:12Z (`flatten_wait`) e confirmação 13:51:33Z (`exec_desvio desvio:ja_fechada`). `trade_lifecycle`: EXIT_DECIDED → EXIT_PARTIAL (4/6) → **CLOSED 13:51:33.148Z** ("todas as 6 pernas FLAT confirmadas + fills de saída cobrem os de entrada").
+- **P&L executado (descritivo, `trade_ledger_closed`, pnl_status ok):** total **−566,65 USD** nas 6 pernas — ES Sim −7,50 · NES Sim −50,00 · NQ Sim −37,50 · NNQ Sim −174,00 · **conta real: MES −26,25 · MNQ −68,00 (= −94,25)**.
+- **Proteções:** os 6 brackets Stop+Take foram cancelados na saída (order_state CANCELLED 2 por instrumento); prontidão 13:51:00Z: 6 ativos flat, execution_ready=true; `robo-alertas.json` alerts=[]; `motor-canonico.json` side FLAT.
+- **Bloqueio de entrada durante a saída (por desenho):** `exec_block_entrada` exit_pending de 13:51:12Z a 13:51:33Z; no ciclo 13:51:33.148Z a âncora voltou a LONG 4/4 e o motor NÃO reabriu (exit_pending + histerese armed=false + cooldown até 13:51:51.583Z).
+- **Falhas:** `place_fail` 0 · `flatten_fail` 0 · `take_escort_fail` 0 · alertas 0 · erros 0. PLAY segue ativo (v55).
+- Uma entrada não avalia a qualidade do gate: o P&L é descritivo e não é critério (JEV DESIGN).
