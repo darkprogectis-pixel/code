@@ -114,6 +114,31 @@ Nome dos arquivos: import = ALFA_OMEGA_<CLIENTE>_INVICTUS_import.zip · entrega 
 - Substitutos: `Desktop\Handof TTW\HANDOFF\conf-tests\pack-native-20261006\global-rth-api-independence-20261007\entregas\<CLIENTE>\ALFA_OMEGA_<CLIENTE>_INVICTUS_PRTH1_import.zip` (mesmas famílias/bases/auth; só AddOns/AlfaOmegaRoboFontes.cs trocado, P-RTH1). Imports: CANON 1f125eb2 · F1 4205eb47 · F2 2c59097a · F3 ded36d68 · F4 c8081a9f.
 - JEV DIFF A req_01a11886323b7bbb9c6848f3a8c12400 · JEV FINAL A 0.79 req_01a1188feb3c7742986aef747348bb8f. Detalhe: HANDOFF_GLOBAL_RTH_API_INDEPENDENCE_FIX_20261007.md.
 
-## PRESS_RECALIBRATION_30D (P-GCAP, 2026-10-07, sessões 5beb9ac4→0dcb802a→d9e7bfff) — CANDIDATO, NÃO VERIFICADO
-- Entregas candidatas: `Desktop\Handof TTW\HANDOFF\conf-tests\pack-native-20261006\press-recalibration-20261007\entregas\<CLIENTE>\ALFA_OMEGA_<CLIENTE>_INVICTUS_PGCAP_import.zip` (12 clientes; P-RTH1 + Indicators/AlfaOmegaSharedState.cs + Indicators/AoMarketDataPublisher.cs). Imports: CANON f95cb59e · F1 b68f1bbc · F2 9db17f11 · F3 8f0aa295 · F4 28006bc7.
-- Sandbox: compile 13/13, static 16/16, harness RTH/OUT × API 10/10, gate 15/15, E2E 7/7, ftests 15/15, isolamento 0. JEV FINAL T2 **B 0,34**; diagnóstico = PHYSICAL_NT8_VALIDATION ⇒ **até a validação física (ordem do operador), o último pacote VERIFICADO continua o P-RTH1** (seção acima). Sidecars SUPERSEDED_BY_PRESS_RECALIBRATION_30D nas entregas P-RTH1 são CONDICIONAIS. Detalhe: HANDOFF_PRESS_RECALIBRATION_30D_20261007.md.
+## PRESS_RECALIBRATION_30D (P-GCAP, 2026-10-07, sessões 5beb9ac4→0dcb802a→d9e7bfff→…→132665f6) — VERIFIED (JEV FINAL T3 = A 0,64 · req_01a119300e367e49b270d19b6447cab7; ver seção FINAL abaixo)
+- Entregas (agora RELEASED_VERIFIED_PGCAP): `Desktop\Handof TTW\HANDOFF\conf-tests\pack-native-20261006\press-recalibration-20261007\entregas\<CLIENTE>\ALFA_OMEGA_<CLIENTE>_INVICTUS_PGCAP_import.zip` (12 clientes; P-RTH1 + Indicators/AlfaOmegaSharedState.cs + Indicators/AoMarketDataPublisher.cs). Imports: CANON f95cb59e · F1 b68f1bbc · F2 9db17f11 · F3 8f0aa295 · F4 28006bc7.
+- Sandbox: compile 13/13, static 16/16, harness RTH/OUT × API 10/10, gate 15/15, E2E 7/7, ftests 15/15, isolamento 0. JEV FINAL T2 **B 0,34**; diagnóstico = PHYSICAL_NT8_VALIDATION. *(HISTÓRICO SUPERADO em 2026-10-07: "até a validação física o último pacote VERIFICADO continua o P-RTH1" e "sidecars CONDICIONAIS" deixaram de valer — a lacuna foi fechada por validação HEADLESS com binários oficiais + C#×JS RESOLVED e JEV FINAL T3 = A; sidecars agora EFETIVOS: SUPERSEDED_BY_PGCAP / NAO_DISTRIBUIR.)* Detalhe: HANDOFF_PRESS_RECALIBRATION_30D_20261007.md.
+
+## FINAL — RELEASE P-GCAP (2026-10-07, sessões 132665f6→41f1f360) — COMPLETE_AND_VERIFIED
+- Autorização: ordem explícita do operador 2026-10-07 (release do P-GCAP aprovado pelo JEV). **JEV FINAL T3 = A** · conf 0,64 (p A 0,71 / B 0,26 / D 0,02 / E 0,01) · **req_01a119300e367e49b270d19b6447cab7**.
+- **CURRENT_CANONICAL_PRESS_VERSION = P-GCAP** · **PGCAP = VERIFIED** · **PRTH1 = SUPERSEDED** (PREVIOUS_VERSION P-RTH1 = SUPERSEDED / NAO_DISTRIBUIR; 29/29 sidecars P-RTH1 com "ESTADO FINAL: SUPERSEDED_BY_PGCAP / NAO_DISTRIBUIR", nada apagado).
+- **TOTAL_PACKS_RELEASED = 12 · TOTAL_PACKS_VALIDATED = 12** · SHA256 reconfirmados 12/12 (import == família == MANIFEST) · ZIPs regenerados 0 / alterados 0 · CROSS_CLIENT leak 0/0 · senhas em zips 0.
+- Manifesto do release: `Desktop\Handof TTW\HANDOFF\conf-tests\pack-native-20261006\press-recalibration-20261007\entregas\RELEASE_PGCAP_VERIFIED_20261007.json` (tool `R\tools\release_pgcap.js`).
+- Imports: CANON f95cb59e514e3a0d4bacf20dab8271d9e10a436ea20b995ad7ef853c7f70ba59 · F1 b68f1bbc4292e65fef14121dcb6900008c86f10b2fc3c12e67ae1bd5948a2db7 · F2 9db17f11482567522a6501853227d9ef71ebb5f15ef68cb5fe0fbecc695c895c · F3 8f0aa29594fe06736071883056e1c678bc9189412592bc527e6f91a23bf28e71 · F4 28006bc776fd76f365f25fd56caef41e36b58db2f43b139489a70c332197c044.
+
+| CLIENT | FAMILY | AÇÃO | IMPORT_SHA256 | DELIVERY_SHA256 | STATUS |
+|---|---|---|---|---|---|
+| LUFDUTRA | F1 | UPDATE | b68f1bbc…2db7 | badc1a7b66c25e0f218b22f63a305d48f945ddec9cc1dc3b8af50ec9e39e6a8b | RELEASED_VERIFIED_PGCAP |
+| RANYERE | F1 | UPDATE | b68f1bbc…2db7 | 7b6965fdd39c91c6359ba40ff799cc57c4bb790df9fef9a8b6e611d5e7a0f08a | RELEASED_VERIFIED_PGCAP |
+| MARCOS | F1 | UPDATE | b68f1bbc…2db7 | f8c667c587e42c3ac7adac3686eacf1ac0e397877fc524e76fd903cb68d9c44d | RELEASED_VERIFIED_PGCAP |
+| AIRISON | F1 | ADD | b68f1bbc…2db7 | 6ce3884231f39cb43ca133362d0e22953902fd87d7202cc0ac7e8f98ba6d05a1 | RELEASED_VERIFIED_PGCAP |
+| HAMZEH | F1 | ADD | b68f1bbc…2db7 | 5e11ab46f4bf95540455fa66efc70ec46048bfe018ca4045e364ba7d32d3a7d5 | RELEASED_VERIFIED_PGCAP |
+| ANAVIEIRA10 | F1 | ADD | b68f1bbc…2db7 | 3f01158a19d0fb3ea405b5f190ed744eadd1e68c858ef05038f6e324acd3ae4c | RELEASED_VERIFIED_PGCAP |
+| JOAO_HS | F1 | ADD | b68f1bbc…2db7 | 90768f1a5c9a5d44dcf6a5925e3fcda21d1da1095e227cb8e361ff5b23466b25 | RELEASED_VERIFIED_PGCAP |
+| ANAALICEGUSTAVO | F1 | ADD (IDENTITY_UNPROVEN) | b68f1bbc…2db7 | 01e63de83d86a4dda921f458656c42bec1e1a78bc4cf3b9b59c75e0fc2d687c3 | RELEASED_VERIFIED_PGCAP |
+| NELSON_CASCO | F2 | ADD | 9db17f11…895c | c3f8a452dc6e7b049c2f7794cbb3bc24e1ea311f5715e5edf048cfb94791380c | RELEASED_VERIFIED_PGCAP |
+| WJAVERTJR | F3 | ADD | 8f0aa295…8e71 | 7ac348fb4b84f54f8b8867b45a92031ff2968a3c8218743e661a1d516b163527 | RELEASED_VERIFIED_PGCAP |
+| MAGNUM | CANON | CLEAN_MACHINE_ONLY | f95cb59e…ba59 | 8cf9ecc71a18ee9276ae61ad7c317844a0a7dabaebcf352976b44bc60022b9a6 | RELEASED_VERIFIED_PGCAP |
+| DESTINO_DESKTOP-CBDFE4C | F4 | ADD | 28006bc7…c044 | 92371aa946cfc3f839acf4a464e76bd592b48a88aca0e7fff238d492ccf1ff85 | RELEASED_VERIFIED_PGCAP |
+
+- Limitações herdadas: ANAALICEGUSTAVO IDENTITY_UNPROVEN · DESTINO_DESKTOP-CBDFE4C piloto-01 sem licença no servidor · MAGNUM CANON CLEAN_MACHINE_ONLY · validação HEADLESS (despacho NinjaScript/Playback GUI/relógio de parede/robô AddOn/UI = modo comum não exercitado) · PnL real indisponível (proxy fwd30).
+- RTH_API_INDEPENDENCE_PRESERVED = YES · LEGITIMATE_SOFTWARE_ONLY = YES · NT8LOADER_USED = NO · CRACK_USED = NO · MAIN_NT8_UNTOUCHED = YES · ORDERS 0 · F5 0.
