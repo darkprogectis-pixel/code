@@ -188,3 +188,9 @@ Etapa passiva por ordem do operador (PLAY_ATIVADO = YES). Claude só leu arquivo
 - Preservados por hash: Robo 32c84685 · RoboFontes 172a758a (APIs só telemetria) · AuthV2 4a64c54e · AoLicenca 9887afe9 · AoLogin 83268d92. Nenhum arquivo de identidade/licença/dispositivo/config no zip.
 - Este pacote é exclusivo da OLIVER (base = árvore instalada na máquina-mãe). Não distribuir a clientes.
 - NT8 principal NÃO alterado · ORDERS 0 · F5 0. NEXT = OPERATOR_STOP_FLAT_IMPORT_VALIDATION (procedimento no handoff da auditoria §14.5).
+
+## OLIVER_FORCA_JANELA_30_POST_IMPORT (sessão 6b86565f, 2026-10-08 13:05Z)
+- Import feito pelo operador (robô em STOP v54 desde 13:00:35Z). Arquivos 3/3 = staging aprovado (conteúdo), inesperados 0 em 474, `NinjaTrader.Custom.dll` compilado 10:02:29 BRT com `AoForcaJanela`, oráculo 464/464 0 erros, Auth/Login/Licença/Robo/RoboFontes preservados por hash.
+- **Ainda NÃO liberar PLAY:** os AddOns recarregaram no assembly novo, mas os indicadores dos gráficos (Control Center = publicador) não; o robô novo está com "sem tape ES/NQ" / "nenhum publicador eleito" desde 13:02:31Z (gate fechado, motor FLAT, sem risco).
+- **OPERATOR_ACTION:** reiniciar o NinjaTrader (fechar e abrir), robô em STOP, sem F5 ⇒ avisar "NT8 REINICIADO" ⇒ Claude verifica (só leitura) ⇒ NEXT = OPERATOR_PLAY. Detalhe em `handoffs/HANDOFF_INVICTUS_TEMPORAL_CLUSTERING_AUDIT_20261008.md` §15.
+- ORDERS 0 · F5 0.
