@@ -94,3 +94,18 @@ R1 nenhum mod usa `tool.check` nem responde no lugar da ferramenta · R2 mínimo
 - Cumprindo o JEV FINAL T3 (se a rotação forçada falhar ⇒ desligar os plugins, 0,92): `jev`, `jev-policy`, `token-weather`, `replay-theater` DESLIGADOS (um a um); `blast-radius` já estava desligado. Tudo continua instalado, validado e fixado; religar = `claude plugin enable <nome>@claude-jev-mods`.
 - **STATUS FINAL = INSTALADO, VALIDADO, DESLIGADO — JEV FINAL A condicionado NÃO satisfeito** (a condição era a rotação forçada ao vivo).
 - EXACT_NEXT_STEP: (1) abrir o Claude-JEV pelo `START_JEV_CLAUDE.ps1` (que instala e verifica os hooks da rotação) e confirmar `npm run rotation:status` com estado; (2) nessa sessão: `claude plugin enable` dos 4, `npm run test:mods`, `npm run test:rotation`, `npm run rotation:force`; (3) com a rotação funcionando ao vivo, registrar JEV FINAL A satisfeito.
+
+## RETOMADA (sessão 6b86565f, mesma sessão) — CAUSA COMPROVADA DA RECUSA DA ROTAÇÃO + CORREÇÃO DE PERFIL
+- **Esta sessão NÃO foi aberta pelo lançador canônico.** Ela roda com `CLAUDE_CONFIG_DIR = C:\Users\ADM\.claude-gomesgomestrader`, perfil que não tem os hooks do Rotation Controller V3 nem a pasta `jev-rotation`. O perfil canônico do Claude-JEV é `C:\Users\ADM\.claude-darkprogectis` (padrão do `START_JEV_CLAUDE.ps1`): tem os 5 hooks (SessionStart, UserPromptSubmit, PreToolUse, PostToolUse, Stop), 128 arquivos de estado e última sessão registrada a51db1fa em 2026-10-08T12:54Z. Por isso `rotation:status` diz "no state" e `rotation:force` recusa AQUI. Não é defeito do controlador nem dos mods.
+- **Erro do executor corrigido:** os mods tinham sido instalados só no perfil `.claude-gomesgomestrader` (o desta sessão). Agora estão instalados TAMBÉM no perfil canônico `.claude-darkprogectis`, todos DESLIGADOS, com `provider=typesafe` fixo no `jev`, sem chave gravada. Backup: `C:\Users\ADM\.claude-darkprogectis\settings.json.bak-premods-20261008`. Hooks do perfil canônico iguais antes/depois (só a ordem das chaves do JSON mudou); `install-hooks.mjs --verify` = PASS (5 hooks; auto-teste warning/soft-stop/hard-rotation/sucessora PASS). Plugin pré-existente `watch@claude-video` intocado.
+- No perfil `.claude-gomesgomestrader` os 5 continuam instalados e desligados (podem ser removidos com `claude plugin uninstall`).
+- Nenhum mod foi ligado nesta retomada (regra: não ligar enquanto a sessão não for válida no controlador).
+
+### CONTINUAÇÃO — executar numa sessão aberta por `C:\Users\ADM\Claude-JEV\START_JEV_CLAUDE.ps1` (perfil `.claude-darkprogectis`)
+1. `npm run rotation:status` ⇒ deve mostrar a sessão atual com estado.
+2. `claude plugin enable jev@claude-jev-mods` · `jev-policy@claude-jev-mods` · `token-weather@claude-jev-mods` · `replay-theater@claude-jev-mods` (NÃO ligar `blast-radius`). Os mods só carregam na PRÓXIMA sessão.
+3. `npm run test:mods` (10/10) e `npm run test:rotation` (22/22).
+4. Atualizar este handoff e executar `npm run rotation:force`. A sucessora é a primeira sessão com os 4 mods carregados junto com o controlador.
+5. Na sucessora: `npm run rotation:status`, `npm run test:mods`, `npm run test:rotation`; em `/plugin` conferir a linha de mods ativos e os embutidos (sec-default); `/jev-ledger`, `/jev-diff`, `/jev-ready tests=pass compile=pass`, `/jev-handoff handoffs/HANDOFF_CLAUDE_MODS_JEV_20261008.md`.
+6. JEV FINAL (dossiê: sessão pelo lançador, 4 mods ativos, testes, rotação real com sucessora registrada, mods persistiram). Se A ⇒ stack canônica; `blast-radius` permanece OFF.
+- Se a rotação falhar lá: desligar os 4 plugins (regra JEV 0,92) e reportar.
