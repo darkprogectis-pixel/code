@@ -1,0 +1,52 @@
+{
+ "request_id": "req_01a11c682b8d719f8b4468d1fc3537c0",
+ "model": "jev-1.13.0",
+ "answers": {
+  "incidente": {
+   "type": "choice",
+   "choice": "A",
+   "confidence": 0.71,
+   "probabilities": {
+    "A": 0.78,
+    "C": 0.04,
+    "B": 0.17,
+    "D": 0.01
+   }
+  },
+  "causa_raiz": {
+   "type": "choice",
+   "choice": "VERIFICACAO_ID",
+   "confidence": 0.93,
+   "probabilities": {
+    "CONJUNTO": 0.04,
+    "RETRY_SO_FLAT": 0,
+    "ATRIBUICAO_PERNA": 0.01,
+    "LEITURA_UNICA": 0,
+    "VERIFICACAO_ID": 0.94,
+    "REENTRADA_MESMO_CICLO": 0.01,
+    "OUTRO": 0
+   }
+  },
+  "mitigacao": {
+   "type": "choice",
+   "choice": "SO_SIM",
+   "confidence": 0.84,
+   "probabilities": {
+    "NENHUMA": 0.12,
+    "REAL_COM_VIGIA": 0,
+    "SO_SIM": 0.88,
+    "OUTRO": 0
+   }
+  },
+  "gate": {
+   "type": "choice",
+   "choice": "PRE_EXISTENTE_EXPOSTO",
+   "confidence": 1,
+   "probabilities": {
+    "REGRESSAO_GATE": 0,
+    "PRE_EXISTENTE_EXPOSTO": 1,
+    "INDETERMINADO": 0
+   }
+  }
+ }
+}

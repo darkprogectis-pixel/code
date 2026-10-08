@@ -1,0 +1,70 @@
+WINDOW play 2026-10-08T13:29:15.797Z -> last tick 2026-10-08T16:25:58.999Z = 2.95h | ET 09:29:15 -> 12:25:58 | ticks 338
+COVERAGE covered 2.95h uncovered(tick gaps>90s) 0.0min max tick gap 66s
+GATE first-fail (ticks | time share):
+  DIVERGENT                     80   25.0%
+  FORCE_BOTH                    95   36.3%
+  FORCE_ES_only(NQ pass)        24    8.5%
+  FORCE_NQ_only(ES pass)         5    1.2%
+  OK_4of4                       32    7.0%
+  UNDEFINED                    102   22.0%
+STEP4: cycles reaching step 4 = 156 | ES pass 37 (23.7%) | NQ pass 56 (35.9%) | both 32 (20.5%) | both fail 95
+ANCHORS 4/4: ticks 32 | episodes 11 | outcome per OK tick {"OPENED":7,"EXEC_BLOCK:exit_pending":3,"HYSTERESIS(not re-armed)":2,"ALREADY_IN_POSITION":20} | dir {"LONG":31,"SHORT":1}
+BY ET HOUR: hour covered | TAPE UNDEF DIVERG aligned(steps1-3) OK | P(ok|aligned)
+  09h  30.5min |   0%  23%  38%  39%   4.5% | 11.6%
+  10h    1.00h |   0%  23%  22%  55%  14.7% | 26.9%
+  11h    1.01h |   0%  16%  21%  63%   0.0% | 0.0%
+  12h  25.9min |   0%  30%  28%  42%   8.1% | 19.2%
+
+TRADES since PLAY (history file): 5
+  13:49:49Z 09:49:49ET LONG RTH dur 103s exit anchor_neutro decisao 7833 / 31232.5 pnlExec -566.65 status ok replay false sim false src nt8-inprocess | legs ESx1@sim001 MESx3@takeprofit61 NESx5@sim002 NQx1@sim001 MNQx2@takeprofit61 NNQx5@sim002
+  14:07:47Z 10:07:47ET LONG RTH dur 489s exit anchor_neutro decisao 7838.25 / 31252 pnlExec 50.55 status ok replay false sim false src nt8-inprocess | legs ESx1@sim001 MESx3@takeprofit61 NESx5@sim002 NQx1@sim001 MNQx2@takeprofit61 NNQx5@sim002
+  14:24:42Z 10:24:42ET LONG RTH dur 266s exit anchor_neutro decisao 7840.25 / 31317.25 pnlExec 663.55 status ok replay false sim false src nt8-inprocess | legs ESx1@sim001 MESx3@takeprofit61 NESx5@sim002 NQx1@sim001 MNQx2@takeprofit61 NNQx5@sim002
+  14:30:50Z 10:30:50ET LONG RTH dur 105s exit anchor_neutro decisao 7842.5 / 31346.5 pnlExec -61.45 status ok replay false sim false src nt8-inprocess | legs ESx1@sim001 MESx3@takeprofit61 NESx5@sim002 NQx1@sim001 MNQx2@takeprofit61 NNQx5@sim002
+  14:54:40Z 10:54:40ET SHORT RTH dur 105s exit anchor_neutro decisao 7827.5 / 31249.5 pnlExec -533.75 status ok replay false sim false src nt8-inprocess | legs ESx1@sim001 MESx3@takeprofit61 NESx5@sim002 NQx1@sim001 MNQx2@takeprofit61 NNQx5@sim002
+motor_abriu ticks (distinct ts): 7 09:49:49 10:07:47 10:24:42 10:30:50 10:54:40 12:17:23 12:18:27
+GAPS between entries: n 6 median 17.4min p90 53.3min max 1.38h | list min: 18 17 6 24 83 1
+time PLAY->first entry 20.6min | last entry->now 7.5min
+clusters (43 min break): 2
+entries by ET hour {"9":1,"10":4,"12":2}
+
+EVENT COUNTS {"motor_tick":350,"engine_stop":1,"engine_start":1,"nt8_ready":1,"order_watch_subscribe":1,"robo_prontidao":14,"boot_protection_check":1,"session_start":2,"source_readiness_blocked":2,"source_readiness_ready":2,"robo_play":1,"native_event":7,"motor_abriu":7,"gate_check":7,"place_ok":42,"protecao_pendente":42,"bracket_ok":42,"native_event_ack":7,"protecao_ajuste_ok":3,"trade_lifecycle":21,"motor_fechou":7,"trade_closed":42,"flatten_ok":28,"flatten_sent":16,"exec_block_entrada":11,"flatten_wait":8,"exec_desvio":10,"trade_ledger_closed":5,"source_readiness_change":12,"fill_ignorado":2,"take_escort":6,"take_escort_fail":8,"protecao_reprotegida":4,"connection_status":6,"robo_alerta":1,"broker_internal_divergence":4,"flatten_fail":24}
+gate_check since PLAY: 7 {"pass":7} | api_ecosystem_ready at entry: {"local=true api=false":7}
+  engine_stop 13:22:46.484  ok {"produto":"Alfa Omega INVICTUS 不可征服者","ciclos":601,"ticks_motor":61,"motor_side":"FLAT","audit":"audit: gravadas=107 fila=0 falhas=0 descartadas=0"}
+  engine_start 13:23:58.262  ok {"produto":"Alfa Omega INVICTUS 不可征服者","motor":"NATIVO NT8 — AoMotorCanonico (= aot-sim.js) decide OPEN/CLOSE; AOT :3600 so sombra/auditoria","decisor
+  nt8_ready 13:24:48.356  ok {"espera_ms":50024}
+  session_start 13:24:48.368  OUTSIDE_RTH {"turno":"OUTSIDE_RTH","turno_anterior":null,"detalhe":{"turno":"OUTSIDE_RTH","et":"2026-10-08T09:24:48","data_et":"2026-10-08","dia":"Thu","fuso":"Ea
+  source_readiness_blocked 13:24:48.368  NOT_READY {"estado":"NOT_READY","ready":false,"turno":"OUTSIDE_RTH","local_market_data_ready":false,"api_ecosystem_ready":false,"estado_local":"NOT_READY","esta
+  source_readiness_ready 13:24:50.836  READY {"estado":"READY","ready":true,"turno":"OUTSIDE_RTH","local_market_data_ready":true,"api_ecosystem_ready":false,"estado_local":"READY","estado_ecossis
+  robo_play 13:29:15.797  ok {"produto":"Alfa Omega INVICTUS 不可征服者","transicao":"STOP -> PLAY","de":"STOP","para":"PLAY","origem":"AoControlCenter","quem":"ADM@OLIVER","versao":55
+  session_start 13:30:01.971  RTH {"turno":"RTH","turno_anterior":"OUTSIDE_RTH","detalhe":{"turno":"RTH","et":"2026-10-08T09:30:01","data_et":"2026-10-08","dia":"Thu","fuso":"Eastern S
+  source_readiness_blocked 13:30:01.971  NOT_READY {"estado":"NOT_READY","ready":false,"turno":"RTH","local_market_data_ready":false,"api_ecosystem_ready":false,"estado_local":"NOT_READY","estado_ecoss
+  source_readiness_ready 13:30:04.018  READY {"estado":"READY","ready":true,"turno":"RTH","local_market_data_ready":true,"api_ecosystem_ready":false,"estado_local":"READY","estado_ecossistema":"P
+  robo_alerta 14:32:06.247 TAKEPROFIT***210 critical:alert:price_feed_disconnected {"canal":"price_feed","pernas_abertas":2,"alerta":"price_feed_disconnected","nivel":1,"arquivo":"C:\\Users\\ADM\\Documents\\NinjaTrader 8\\alfaomega-r
+  flatten_fail 16:24:16.726 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MES 12-
+  flatten_fail 16:24:16.726 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MNQ 12-
+  flatten_fail 16:24:16.726 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MES 12-
+  flatten_fail 16:24:16.726 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MNQ 12-
+  flatten_fail 16:24:37.355 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MES 12-
+  flatten_fail 16:24:37.355 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MNQ 12-
+  flatten_fail 16:24:37.355 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MES 12-
+  flatten_fail 16:24:37.355 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MNQ 12-
+  flatten_fail 16:24:57.836 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MES 12-
+  flatten_fail 16:24:57.836 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MNQ 12-
+  flatten_fail 16:24:57.836 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MES 12-
+  flatten_fail 16:24:57.836 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MNQ 12-
+  flatten_fail 16:25:18.242 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MES 12-
+  flatten_fail 16:25:18.242 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MNQ 12-
+  flatten_fail 16:25:18.242 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MES 12-
+  flatten_fail 16:25:18.242 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MNQ 12-
+  flatten_fail 16:25:38.584 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MES 12-
+  flatten_fail 16:25:38.584 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MNQ 12-
+  flatten_fail 16:25:38.584 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MES 12-
+  flatten_fail 16:25:38.584 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MNQ 12-
+  flatten_fail 16:25:58.999 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MES 12-
+  flatten_fail 16:25:58.999 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MNQ 12-
+  flatten_fail 16:25:58.999 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MES 12-
+  flatten_fail 16:25:58.999 takeprofit61 critical:flatten_fail {"motivo":"flatten_retry","retry":true,"modo":"propriedade","execucao":{"conta":"takeprofit61","nt8_account":"TAKEPROFIT***210","instrumento":"MNQ 12-
+take_escort_fail since PLAY 8 {"takeprofit61 MNQ 12-26 ORDER_NOT_FOUND":7,"takeprofit61 MES 12-26 ORDER_NOT_FOUND":1}
+protecao_reprotegida since PLAY 4
+exec_block (exit_pending) total 3.4min events 11
+connection_status 6 {"warning:price_feed_disconnected":2,"critical:price_feed_disconnected":1,"info:price_feed_reconnected":3}

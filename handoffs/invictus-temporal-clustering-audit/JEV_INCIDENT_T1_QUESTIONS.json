@@ -1,0 +1,10 @@
+{
+ "incidente": { "type": "choice", "instructions": "Qual e a causa raiz comprovada do incidente de execucao que deixou a conta real SHORT apos uma sequencia LONG -> saida -> reentrada -> nova saida, e qual deve ser a resposta operacional antes de qualquer novo PLAY?",
+  "criteria": { "A": "causa comprovada; manter STOP e corrigir antes de novo PLAY", "B": "causa comprovada; existe mitigacao segura sem patch", "C": "evidencia insuficiente; manter STOP e coletar evidencia especifica", "D": "outro" } },
+ "causa_raiz": { "type": "choice", "instructions": "Qual elemento e a causa raiz primaria (o primeiro defeito sem o qual o incidente nao ocorreria)?",
+  "criteria": { "VERIFICACAO_ID": "a saida na conta real nunca e verificada porque a ordem e procurada pelo identificador interno; a perna fechada continua registrada como aberta", "RETRY_SO_FLAT": "a reverificacao de saidas pendentes so roda com o motor sem posicao", "LEITURA_UNICA": "leitura unica de posicao no laco de saida, sem abater o que ja foi vendido", "REENTRADA_MESMO_CICLO": "reabertura no mesmo ciclo da saida por trailing, antes do bloqueio por saida pendente", "ATRIBUICAO_PERNA": "atribuicao da posicao da conta a pernas por instrumento e lado, sem separar por trade", "CONJUNTO": "nao ha um unico: e a combinacao necessaria de todos", "OUTRO": "outro" } },
+ "mitigacao": { "type": "choice", "instructions": "Se houver novo PLAY antes da correcao, qual condicao e aceitavel?",
+  "criteria": { "NENHUMA": "nenhuma: manter STOP total ate a correcao", "SO_SIM": "PLAY somente com contas Sim (ativos da conta real desligados), sem correcao", "REAL_COM_VIGIA": "PLAY com conta real sob vigilancia humana", "OUTRO": "outro" } },
+ "gate": { "type": "choice", "instructions": "O incidente e uma regressao da FORCA_JANELA_30 (gate) ou um defeito pre-existente da camada de execucao exposto por ela?",
+  "criteria": { "PRE_EXISTENTE_EXPOSTO": "defeito pre-existente da execucao, exposto pelo gate novo; o gate nao precisa ser revertido por isso", "REGRESSAO_GATE": "regressao do gate; reverter o gate", "INDETERMINADO": "nao da para afirmar" } }
+}

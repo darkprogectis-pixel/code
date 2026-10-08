@@ -212,3 +212,8 @@ Etapa passiva por ordem do operador (PLAY_ATIVADO = YES). Claude só leu arquivo
 - Fechamento: 13:50:51.583Z por anchor_neutro (ES x NQ divergentes), 62 s; ciclo CLOSED 13:51:33.148Z com as 6 pernas FLAT confirmadas e brackets cancelados; P&L executado −566,65 USD no total (conta real: MES −26,25 · MNQ −68,00); falhas 0; alertas 0; PLAY segue ativo.
 - 14:26Z: entradas 2 (14:07:47Z, +50,55 USD, fechada) e 3 (14:24:42Z, aberta) com o gate novo. `take_escort_fail` ORDER_NOT_FOUND no MNQ da conta real (take não subiu; Stop 31267 e Take 31466,75 seguem Working) — defeito PRÉ-EXISTENTE (06 e 07/10), fora do escopo da FORCA_JANELA_30; sem intervenção do executor. Detalhe: handoff da auditoria §17.2.
 - 14:32Z: alerta crítico price_feed_disconnected por 2 s (14:32:06–14:32:08Z), limpo automaticamente; conta real já estava FLAT; sem intervenção. Entrada 3 fechada +663,55 USD; entrada 4 (14:30:50Z) fechada em 63 s. Detalhe: handoff da auditoria §17.3.
+
+## CRITICAL_EXECUTION_INCIDENT_20261008 (resumo; detalhe no handoff da auditoria)
+- 16:24Z: conta real ficou SHORT 3 MES / 2 MNQ sem proteção por saída em dobro (trailing + reentrada no mesmo ciclo + fechamento da conta real nunca verificado por id). Operador zerou 16:40:12Z; **robô em STOP v56 desde 16:40:19Z**.
+- JEV INCIDENT T1 = A 0,78 (req_01a11c682b8d719f8b4468d1fc3537c0): causa comprovada (verificação por id interno, 0,94); manter STOP e corrigir antes de novo PLAY; se operar antes, só contas Sim (0,88); defeito pré-existente exposto pelo gate (1,00).
+- **SAFE_TO_PLAY com conta real = NO.** Patch não iniciado. Executor: 0 ordens · F5 0.

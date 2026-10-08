@@ -226,3 +226,68 @@ Somente leitura. Executor: 0 ordens criadas/alteradas/canceladas · F5 0 · nenh
 - **Sequência (audit + log NT8):** entrada 6 LONG 16:17:23.688Z; saída por `trailing_stop_nq` 16:18:27.758Z com REENTRADA IMEDIATA no mesmo ciclo (entrada 7, regra do motor para trailing com 4/4). As pernas reais da entrada 6 ficaram `flatten_sent sent:unverified`. Na saída da entrada 7 (anchor_neutro, 16:23:54.834Z) o robô reenviou o flatten das pernas da entrada 6 E enviou o das pernas da entrada 7: MES vendeu 3 às 13:23:55 BRT (conta FLAT) e vendeu 3 de novo às 13:24:01 (conta SHORT 3); MNQ vendeu 2 às 13:23:58 (FLAT) e 2 de novo às 13:24:06 (SHORT 2). Saída em dobro ⇒ inversão.
 - **Origem:** camada de execução/saída na conta real (verificação de flatten + reentrada imediata), arquivos NÃO alterados pela FORCA_JANELA_30 (AlfaOmegaRobo.cs 32c84685). O gate novo gerou a sequência trailing + reentrada que expôs o defeito. Causa raiz NÃO auditada ainda.
 - **Executor:** nenhuma ordem, nenhuma alteração, F5 0. Ação necessária é do OPERADOR (zerar manualmente MES e MNQ na conta real e decidir STOP).
+
+## CRITICAL_EXECUTION_INCIDENT_20261008
+Auditoria causal SOMENTE LEITURA (sessão 6b86565f, 2026-10-08 ~16:45Z). Nenhum patch · executor: 0 ordens, F5 0, nenhuma alteração. Estado: **robô STOP** (`operacional.json` play=false v56 desde 16:40:19.220Z, AoControlCenter) · conta real FLAT (prontidão 16:40:20Z "flat em MES/MNQ"; operador zerou às 16:40:12Z: MES coberto a 7830, MNQ a 31223,25) · **SAFE_TO_PLAY com conta real = NO**.
+
+### Cronologia provada (audit do robô × log de ordens/execuções/posições do NT8)
+| UTC | Fato |
+|---|---|
+| 16:17:23.688 | Entrada 6 LONG (trade_id 6108a7a7-da48-4a01-a90b-e946a619c607). Conta real: compra 3 MES 7838,75 e 2 MNQ 31249; Stop+Take criados. |
+| 16:18:27.758 | Motor fecha a entrada 6 por `trailing_stop_nq` e reabre LONG no MESMO ciclo (entrada 7, trade_id d8cf6d8c-5fc7-4184-8cd6-61137c694be3). `exec_bloqueia_entrada` ainda false nesse ciclo (true só em 16:18:47). |
+| 16:18:28.585 / 16:18:32.513 | Corretora executa as ordens `…161723|X`: MES vende 3 a 7838 (conta FLAT) · MNQ vende 2 a 31249 (conta FLAT). O rastreador de ordens do robô registra FILLED (latência 0,58 s). |
+| 16:18:27.758 (registro) | Robô grava `flatten_sent sent:unverified` nas 2 pernas reais; `x_estado` = "Initialized". Pernas Sim: `flatten_ok` imediato. `trade_lifecycle` 6108a7a7: EXIT_PARTIAL (4/6). |
+| 16:18:36 | Entrada 7 na conta real: compra 3 MES 7838,75 e 2 MNQ 31251,5; novo bracket. Registro passa a ter 2 pernas LONG por instrumento na mesma conta. |
+| 16:18:47 → 16:23:34 | 15 ciclos com o motor LONG: nenhuma reverificação das pernas da entrada 6 (0 `flatten_wait`, 0 `exec_desvio`). |
+| 16:23:54.834 | Motor fecha a entrada 7 (`anchor_neutro`). Decisões gravadas, mesma leitura de conta: perna 161723 MES "Fechar 3 — conta LONG 3x" · perna 161827 MES "CancelarEFechar 3 — conta LONG 3x"; idem MNQ com 2. |
+| 16:23:55.129 / 16:24:01.617 | MES vende 3 a 7836,75 (FLAT) e vende mais 3 (SHORT 3 @ 7836,75). |
+| 16:23:58.189 / 16:24:06.081 | MNQ vende 2 a 31255,25 (FLAT) e vende mais 2 a 31252,25 (SHORT 2 @ 31252,25). |
+| 16:24:16.726 | `broker_internal_divergence` ×4 ("perna LONG × conta SHORT — nenhuma ordem automatica (nunca inverter)"); trades EXIT_FAILED_RETRY; `flatten_fail` a cada ~20 s (188 no dia); POSITION_GUARD; entradas bloqueadas. `robo-alertas.json` sem alerta. |
+| 16:40:12 | Operador zera manualmente (ordens "Zerar"). 16:40:19 STOP. |
+
+### Mecanismo no código (lido em `scratch\oliver_post_z30\AddOns`, não alterado)
+1. `AlfaOmegaRobo.cs` l.1596–1611 `EsperarFilled(ntAcc, orderId, 3000)`: procura a ordem de fechamento pelo `orderId` interno devolvido no envio. Na conta real a ordem existe na corretora com outro id numérico (ex.: interno `bb1b08f6…` × corretora `674389781092`); a busca devolve "Initialized" ⇒ `flatten_sent sent:unverified`, perna não marcada `fechada`.
+2. `AlfaOmegaRoboSaida.cs` `Decidir`, regra 2: fechamento já enviado que não está FILLED nem ativo ("rejeitada/cancelada/nao encontrada") ⇒ cai para nova tentativa; regra 3: conta com posição no MESMO lado ⇒ `Fechar min(qty, conta)`.
+3. `AlfaOmegaRobo.cs` l.686–689: `flatten_retry` só roda com `!m.TemPosicao`; com o motor posicionado as saídas pendentes não são relidas.
+4. `AlfaOmegaRobo.cs` l.1430–1436: leitura de posição "uma vez, antes do laço" para todas as pernas; duas pernas da mesma conta/instrumento usam a mesma leitura.
+5. `AlfaOmegaRobo.cs` l.668–684: no mesmo ciclo, `ExecutarSaida` e em seguida `ProcessarOpenNativo` (reentrada do motor após trailing com 4/4).
+6. `RevalidarClose` l.1541–1572: lado oposto ⇒ BROKER_INTERNAL_DIVERGENCE, nenhuma ordem (por desenho); sem escrita em `robo-alertas.json`.
+
+### Avaliação por fator
+- DOUBLE_FLATTEN_CAUSAL = YES (causa imediata: 2 vendas para 1 posição).
+- REENTRY_CAUSAL = YES (condição necessária: reabertura no mesmo ciclo, mesma conta/instrumento/lado).
+- SENT_UNVERIFIED_CAUSAL = YES (causa raiz segundo o JEV: a perna fechada continua registrada como aberta).
+- BROKER_ACK_CAUSAL = NO para a corretora (ACK e fill em 0,6 s) · YES para a leitura do ACK pelo robô (id interno × id da corretora).
+- POSITION_RECONCILIATION_CAUSAL = YES (leitura única no laço; posição da entrada nova atribuída à perna antiga).
+- EXIT_STATE_MACHINE_CAUSAL = YES (reverificação só com motor sem posição; bloqueio por saída pendente vale um ciclo depois).
+- ORDER_OWNERSHIP_CAUSAL = YES (propriedade por conta/instrumento/lado, não por trade).
+- OTHER_CAUSE = FORCA_JANELA_30 é gatilho, não causa (arquivos de execução com o mesmo hash); divergência crítica não gera alerta.
+
+### Histórico (audit setembro + outubro)
+- Conta real: `flatten_ok` imediato = 0 em todos os dias; `flatten_sent` não verificado = 26 (06/10) · 4 (07/10) · 16 (08/10). Contas Sim: centenas de `flatten_ok`.
+- Reabertura no mesmo ciclo da saída: 14/09 ×3 (só Sim) · 08/10 ×1.
+- `broker_internal_divergence`: 06/10 ×2 (11:34:23Z, legs 112215: trailing + reabertura no lado OPOSTO; regra "nunca inverter" evitou dano) · 08/10 ×4 (este incidente, reabertura no MESMO lado).
+- EXIT_FAILED_RETRY: só 08/10 (2 trades). `flatten_fail` real: 06/10 ×2 · 08/10 ×188. Posição invertida comprovada: só 08/10.
+- `take_escort_fail` ORDER_NOT_FOUND na conta real (mesma classe de id): 06/10 ×29 · 07/10 ×17 · 08/10 ×8.
+
+### BLAST_RADIUS
+Somente a conta real TAKEPROFIT (nas Sim a perna sai do registro na hora) · MES e MNQ igualmente · qualquer motivo de saída deixa a perna real não verificada · o dano exige nova entrada na mesma conta/instrumento/lado antes da reverificação · caminho determinístico: saída por trailing stop com âncora 4/4 (reabre no mesmo ciclo e no mesmo lado em decisão nativa).
+
+### JEV INCIDENT T1 · req_01a11c682b8d719f8b4468d1fc3537c0 (jev-1.13.0)
+- Resposta operacional = **A** (causa comprovada; manter STOP e corrigir antes de novo PLAY) · prob. 0,78 · conf 0,71 (B 0,17 · C 0,04).
+- Causa raiz primária = **VERIFICACAO_ID** 0,94 (conf 0,93).
+- Se houver PLAY antes da correção: **SO_SIM** 0,88 (PLAY só com contas Sim, ativos da conta real desligados); NENHUMA 0,12; conta real sob vigia 0,00.
+- Gate: defeito PRÉ-EXISTENTE exposto pela FORCA_JANELA_30 = 1,00 (não reverter o gate por isso).
+- Arquivos: `W\JEV_INCIDENT_T1_{INPUT.txt,QUESTIONS.json,RESULT.json}`.
+
+### Não provado
+Por que a lista de ordens da conta real mantém o id interno em "Initialized" (adaptador `AlfaOmegaTrader` não lido); se há outra via além de trailing + reabertura no mesmo lado; estado atual do registro `motor-execucoes.json` das 4 pernas em falha após o zeramento manual.
+
+### PATCH_STATUS = NOT_STARTED
+Pontos candidatos para o JEV decidir depois (não é proposta escolhida): verificação do fechamento por nome da ordem/id da corretora; reverificação de saídas pendentes também com o motor posicionado; leitura de posição por perna (ou abatimento por conta/instrumento) no laço de saída; bloquear reentrada enquanto houver perna não verificada na mesma conta/instrumento; alerta em `robo-alertas.json` na divergência. Qualquer patch exige JEV DESIGN/DIFF.
+
+### EXACT_NEXT_STEP
+1. Manter STOP. Não dar PLAY com a conta real.
+2. Decisão do operador: (a) abrir o desenho da correção (dossiê + JEV); (b) se quiser operar antes disso, só contas Sim (JEV 0,88) — exige desligar MES/MNQ da conta real nos ativos, ação do operador.
+3. Antes de qualquer PLAY: conferir, só leitura, o registro `alfaomega-robo\state\motor-execucoes.json` (pernas 161723/161827) e o estado EXIT_FAILED_RETRY dos trades 6108a7a7 e d8cf6d8c.
+4. Pendente: concluir a auditoria de comportamento da FORCA_JANELA_30 (dados em `W\tests\13_runtime_audit_since_play.txt`; JEV não enviado).
