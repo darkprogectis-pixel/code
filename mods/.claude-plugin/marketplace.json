@@ -1,0 +1,12 @@
+{
+  "name": "claude-jev-mods",
+  "owner": { "name": "Claude-JEV (local, auditado)" },
+  "metadata": { "description": "Mods auditados e fixados para o Claude-JEV. Fontes: chrishan17/claude-jev-mod@f004877 (MIT), anthropics/claude-code-playground@569c528 (Apache-2.0), jev-policy (local). JEV MODS DESIGN req_01a11dba02127c88bfbdaabd77a1cafd." },
+  "plugins": [
+    { "name": "jev", "source": "./jev", "description": "Adiciona $.jev (TypeSafe System One) a interface dos mods. Terceiro, auditado." },
+    { "name": "token-weather", "source": "./token-weather", "description": "Previsao do contexto acima do prompt. Amostra oficial." },
+    { "name": "blast-radius", "source": "./blast-radius", "description": "Segura comandos destrutivos e mostra o que mudariam. Amostra oficial." },
+    { "name": "replay-theater", "source": "./replay-theater", "description": "Replay das edicoes do ultimo turno. Amostra oficial." },
+    { "name": "jev-policy", "source": "./jev-policy", "description": "Mod local do projeto: risco de comando, classificacao de diff, prontidao, qualidade de handoff e livro de decisoes, em modo OBSERVAR." }
+  ]
+}

@@ -1,0 +1,4 @@
+{
+  "description": "jev-policy: observa tool.call de shell, classifica com $.jev e registra; comandos /jev-ledger /jev-diff /jev-ready /jev-handoff",
+  "modules": ["./register.mjs"]
+}

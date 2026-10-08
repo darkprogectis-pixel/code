@@ -1,0 +1,9 @@
+{
+  "name": "jev-policy",
+  "displayName": "JEV Policy (Claude-JEV)",
+  "version": "0.1.0",
+  "description": "Mod local do Claude-JEV em modo OBSERVAR: classifica o risco de comandos de shell com $.jev, pre-classifica diff, prontidao e qualidade de handoff, e mantem um livro de decisoes. Nunca aprova, nega ou responde no lugar de uma ferramenta.",
+  "author": { "name": "Claude-JEV (local)" },
+  "license": "UNLICENSED",
+  "dependencies": ["jev"]
+}
