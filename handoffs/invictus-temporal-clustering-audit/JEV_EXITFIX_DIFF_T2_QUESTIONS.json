@@ -1,0 +1,10 @@
+{
+ "caminho": { "type": "choice", "instructions": "Qual caminho deve ser levado ao operador como PROXIMO PASSO unico para cumprir o teste em NinjaTrader real (conta Sim) exigido pelo JEV DIFF T1?",
+  "criteria": { "N1": "instancia isolada, operador destrava o registro; principal intocado", "N2": "zip de TESTE na propria OLIVER com conta real desmarcada, PLAY so em Sim", "N3": "maquina ou VM limpa com NinjaTrader oficial", "N4": "manter STOP e nao testar agora" } },
+ "segundo": { "type": "choice", "instructions": "Se o primeiro caminho for inviavel para o operador, qual e o segundo?",
+  "criteria": { "N1": "instancia isolada", "N2": "OLIVER em Sim com zip de TESTE", "N3": "maquina ou VM limpa", "N4": "manter STOP" } },
+ "zip_teste_agora": { "type": "choice", "instructions": "O zip de TESTE (3 arquivos do staging, marcado como TESTE, com rollback e SHA256, distinto do pacote oficial) pode ser preparado agora, sem importar em lugar nenhum, para estar pronto quando o operador autorizar?",
+  "criteria": { "SIM": "preparar agora, sem importar", "NAO": "nao preparar nada ate a ordem do operador" } },
+ "criterio_pass": { "type": "choice", "instructions": "Criterio minimo de PASS do teste em NinjaTrader real, conta Sim.",
+  "criteria": { "CICLO_COMPLETO": "entrada -> saida -> reentrada -> saida, cada fechamento verificado, 0 fechamento em dobro, conta FLAT ao fim, 0 alerta critico indevido", "DOIS_CICLOS": "o anterior repetido em dois ciclos, incluindo uma reentrada no mesmo ciclo da saida", "UMA_SAIDA": "uma saida verificada" } }
+}

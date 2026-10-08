@@ -1,0 +1,19 @@
+T27 FORCA_JANELA_30 identica — 2026-10-08T17:24:51Z
+== arquivos diferentes entre arvore base (oliver_post_z30) e staging (oliver_exitfix):
+AddOns/AlfaOmegaRobo.cs
+AddOns/AlfaOmegaRoboFechamento.cs
+AddOns/AlfaOmegaRoboSaida.cs
+total_diferentes=3
+== hashes (staging | NT8 instalado, somente leitura)
+AlfaOmegaSharedState.cs staging=49c43777481cb5dd instalado=49c43777481cb5dd
+AoTapeEngine.cs staging=59e168d8f2923d23 instalado=59e168d8f2923d23
+AoMarketDataPublisher.cs staging=19452fcb5d49a839 instalado=19452fcb5d49a839
+AlfaOmegaRoboMotor.cs staging=ecfe8f9ce00b86fd instalado=ecfe8f9ce00b86fd
+AlfaOmegaTrader.cs staging=07a939228fbb79a3 instalado=07a939228fbb79a3
+AlfaOmegaRobo.cs staging=f678d200fe4ca7e9 instalado=32c84685d1381e6b
+AlfaOmegaRoboSaida.cs staging=90e0020ad3187f6a instalado=ca59088d38c79854
+AlfaOmegaRoboFechamento.cs staging=a1fc99a8cce2bbbc instalado=c061880c962cfbaa
+== referencias dos arquivos do gate aos simbolos alterados (esperado 0):
+AlfaOmegaSharedState.cs: 0
+AoTapeEngine.cs: 0
+AoMarketDataPublisher.cs: 0

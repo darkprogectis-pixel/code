@@ -1,0 +1,71 @@
+{
+ "request_id": "req_01a11c94be5e775c812f9a07b54e3143",
+ "model": "jev-1.13.0",
+ "answers": {
+  "diff": {
+   "type": "choice",
+   "choice": "B",
+   "confidence": 0.55,
+   "probabilities": {
+    "A": 0.31,
+    "B": 0.66,
+    "C": 0.01,
+    "D": 0.02
+   }
+  },
+  "pendencia": {
+   "type": "choice",
+   "choice": "TESTE_NT8_REAL",
+   "confidence": 0.87,
+   "probabilities": {
+    "NENHUMA": 0.04,
+    "TESTE_NT8_REAL": 0.88,
+    "ORDEM_SUMIDA": 0.03,
+    "SALDO_DESCONHECIDO": 0.01,
+    "MAIS_CENARIOS": 0.01,
+    "OUTRA": 0.03
+   }
+  },
+  "porta_pos_import": {
+   "type": "choice",
+   "choice": "SIM_CICLO_COMPLETO",
+   "confidence": 0.96,
+   "probabilities": {
+    "SIM_CICLO_COMPLETO": 0.98,
+    "SIM_UMA_SAIDA": 0.01,
+    "REAL_DIRETO": 0.01,
+    "REAL_QTY_MINIMA": 0
+   }
+  },
+  "prova_executor": {
+   "type": "score",
+   "score": 0.94,
+   "confidence": 0.13,
+   "legend": {
+    "0": "nao fecha",
+    "1": "fecha parcialmente",
+    "2": "fecha"
+   },
+   "probabilities": {
+    "0": 0.32,
+    "1": 0.42,
+    "2": 0.26
+   }
+  },
+  "risco_regressao": {
+   "type": "score",
+   "score": 1.39,
+   "confidence": 0.09,
+   "legend": {
+    "0": "alto",
+    "1": "moderado",
+    "2": "baixo"
+   },
+   "probabilities": {
+    "0": 0.1,
+    "1": 0.41,
+    "2": 0.49
+   }
+  }
+ }
+}

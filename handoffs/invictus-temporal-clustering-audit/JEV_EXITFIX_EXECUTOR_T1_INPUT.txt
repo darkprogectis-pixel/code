@@ -1,0 +1,26 @@
+INVICTUS - EXIT_LAYER_FIX X2 - METODO DE TESTE DO EXECUTOR REAL (ponto residual do JEV DESIGN T5)
+
+CONTEXTO
+O JEV DESIGN T5 aprovou (A 0,93) a implementacao em staging das alteracoes C1-C7 em 3 arquivos, com um ponto residual: a parte de ExecutarSaida que fala com o NinjaTrader fica fora do harness puro e precisa de teste adicional definido.
+Robo em STOP. Conta real FLAT. Nada foi alterado no NinjaTrader principal. Nenhum pack de cliente alterado.
+
+O QUE JA FOI FEITO NESTA RODADA (staging, fora do NinjaTrader)
+1. Staging implementado: 3 arquivos alterados (AlfaOmegaRobo.cs 32c84685 -> f678d200, AlfaOmegaRoboFechamento.cs c061880c -> a1fc99a8, AlfaOmegaRoboSaida.cs ca59088d -> 90e0020a); +370 / -45 linhas; arquivos inesperados alterados = 0; os 3 arquivos da FORCA_JANELA_30 identicos ao instalado (49c43777, 59e168d8, 19452fcb).
+2. Compilacao da arvore completa do staging: 464 de 464 itens, fontes ausentes 0, erros 0.
+3. Harness sobre o assembly COMPLETO compilado (as classes reais AoRoboSaida, AoRoboFechamento, AoRoboAlertas, AoRoboGates; corretora simulada com troca de id opcional = modelo da conta real; eventos de execucao entregues, atrasados ou perdidos).
+   BASE (codigo instalado hoje), cenario T01 LONG -> saida -> reentrada no mesmo ciclo -> saida: REPRODUZIU o incidente. Perna antiga permaneceu pendente (2 pernas no registro), 3 fechamentos somando 9 contratos para uma posicao de 3+3, fechamento enviado com a conta ja FLAT, conta terminou SHORT 3 (inversao LONG -> FLAT -> SHORT). Igual ao incidente real (SHORT 3 MES).
+   STAGING, mesmos cenarios: 28 de 28 PASS (T01 a T26 mais T08b e T23b). T01: 2 fechamentos, 6 contratos, conta FLAT, 0 pernas restantes, 0 reenvios, 0 inversao. T27 (FORCA_JANELA_30 identica): PASS por hash e por ausencia de referencia aos simbolos alterados.
+4. Limite do harness: o laco do executor (ordem dos passos de ExecutarSaida, cancelamento de protecao, gravacao do registro, auditoria) foi EMULADO no driver. No staging o laco real so executa o plano devolvido por AoRoboSaida.PlanejarSaidas (funcao pura REAL, testada), mas o metodo ExecutarSaida, EsperarFilled, FecharPernaEmDesvio e FecharPernaSemProtecao em si nao rodaram.
+
+FATO TECNICO QUE LIMITA AS OPCOES
+ExecutarSaida e metodo privado de AlfaOmegaRobo (AddOnBase do NinjaTrader) e chama metodos ESTATICOS: AlfaOmegaTrader.PlaceCore / CancelCore / OrdersCore (que usam objetos Account do NinjaTrader) e AoRoboPositions.RefreshAll / Get. Nao existe ponto de injecao. Criar um exigiria alterar um 4o arquivo (fora do escopo aprovado).
+
+OPCOES DE METODO
+M1 - BANCADA DE EXECUTOR FORA DO NINJATRADER (sem conta, sem NinjaTrader aberto): compilar a arvore do staging trocando SOMENTE os fontes das classes de fronteira (AlfaOmegaTrader e AoRoboPositions; AoRoboAudit e AoRoboConfig redirecionados para pasta temporaria) por dubles com a mesma API estatica, ligados a corretora simulada do harness (com troca de id). AlfaOmegaRobo.cs do staging entra SEM NENHUMA alteracao. O objeto do robo e criado sem construtor e os campos necessarios preenchidos por reflexao; chama-se o ExecutarSaida, EsperarFilled, RevalidarClose REAIS nos cenarios T01, T08, T10, T17, T20, T24 e nos dois caminhos FecharPerna. Custo: bancada nova (os dubles nao vao para o pacote). Limite: nao exercita o NinjaTrader de verdade (threads, eventos reais de ordem).
+M2 - NINJATRADER ISOLADO EM CONTA SIM (usuario Windows separado jevnt8test, ja provisionado em 07/10): hoje INVIAVEL sem o operador. A instancia isolada para numa janela de registro (ID + chave) do carregador instalado no Program Files; exige acao manual do operador e mexe em registro/licenca, o que esta proibido nesta rodada.
+M3 - VALIDACAO SIM NA PROPRIA OLIVER DEPOIS DA IMPORTACAO: importar o pacote no NinjaTrader principal com o robo em STOP, operador seleciona SOMENTE conta Sim (conta real desmarcada), PLAY em Sim, observar entrada -> saida -> reentrada -> saida com verificacao por nome e saldo nos registros; so depois liberar conta real. Limite: exige importar no NinjaTrader principal ANTES do teste do executor (ordem diferente da pedida pelo operador: teste do executor antes do JEV DIFF) e na conta Sim o id NAO troca, entao o caso da conta real nao e exercitado de verdade.
+M4 - SEM TESTE ADICIONAL: seguir para JEV DIFF so com harness + revisao estatica do diff.
+M1_E_M3 - M1 agora como porta para o JEV DIFF e para gerar o pacote; M3 como porta posterior, depois da importacao manual pelo operador, antes de qualquer PLAY em conta real.
+
+RESTRICOES EM VIGOR
+Nao alterar o NinjaTrader principal, nao importar, nao dar PLAY, nao criar ordens, nao tocar em conta real, nao tocar FORCA_JANELA_30, nao alterar registro/licenca/dispositivo, nao alterar packs de clientes.

@@ -1,0 +1,84 @@
+{
+    "backup":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\backup_exit_test\\20261008-143543",
+    "backup_files":  [
+                         "32c84685d1381e6bfd8d10156dea9de38f01acdd002aa5ab4ace3128c69060c6  AddOns\\AlfaOmegaRobo.cs",
+                         "c061880c962cfbaa1b563f983ed24bd1ad4622c523993228c46ad10506b30163  AddOns\\AlfaOmegaRoboFechamento.cs",
+                         "ca59088d38c798544f9fe69cf92ed815db520cc1a17892b98c9718d48f574470  AddOns\\AlfaOmegaRoboSaida.cs"
+                     ],
+    "info_xml_sha256":  "ffb3a3cbe8d83f1bdf65298af487ebadc20e0497205b87e516b03e586363fcff",
+    "ref_zip_entries":  [
+                            "Info.xml",
+                            "AddOns/AlfaOmegaRoboFontes.cs",
+                            "Indicators/TTW_DarkProjects/AlfaOmegaSharedState.cs",
+                            "Indicators/TTW_DarkProjects/AoMarketDataPublisher.cs"
+                        ],
+    "zips":  [
+                 {
+                     "zip":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\build_test\\AlfaOmega_TESTE_NAO_OFICIAL_EXITFIX_X2_import.zip",
+                     "sha256":  "72c057db4353aac269115be5f9f079b288fa952402da9bbc5e14b7e84367b499",
+                     "entries":  [
+                                     {
+                                         "entry":  "Info.xml",
+                                         "bytes":  130,
+                                         "sha256":  "ffb3a3cbe8d83f1bdf65298af487ebadc20e0497205b87e516b03e586363fcff",
+                                         "match":  true
+                                     },
+                                     {
+                                         "entry":  "AddOns/AlfaOmegaRobo.cs",
+                                         "bytes":  235574,
+                                         "sha256":  "f678d200fe4ca7e9b8f6211d6436eb86dac2838f4422cee23d8791b79041298e",
+                                         "match":  true
+                                     },
+                                     {
+                                         "entry":  "AddOns/AlfaOmegaRoboFechamento.cs",
+                                         "bytes":  74670,
+                                         "sha256":  "a1fc99a8cce2bbbcbe1428b545ec2efc15355c571919e23f1843945347d7774d",
+                                         "match":  true
+                                     },
+                                     {
+                                         "entry":  "AddOns/AlfaOmegaRoboSaida.cs",
+                                         "bytes":  32361,
+                                         "sha256":  "90e0020ad3187f6a360a5a661ade4e610ea16a101ff44e3538757032518eacf9",
+                                         "match":  true
+                                     }
+                                 ],
+                     "n_entries":  4,
+                     "all_match":  true,
+                     "forbidden_entries":  0
+                 },
+                 {
+                     "zip":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\build_test\\AlfaOmega_TESTE_NAO_OFICIAL_EXITFIX_X2_ROLLBACK_import.zip",
+                     "sha256":  "745b8651170b478fc2f328af12a7390596d4fdd0f49e875087ad99f1901d8286",
+                     "entries":  [
+                                     {
+                                         "entry":  "Info.xml",
+                                         "bytes":  130,
+                                         "sha256":  "ffb3a3cbe8d83f1bdf65298af487ebadc20e0497205b87e516b03e586363fcff",
+                                         "match":  true
+                                     },
+                                     {
+                                         "entry":  "AddOns/AlfaOmegaRobo.cs",
+                                         "bytes":  231683,
+                                         "sha256":  "32c84685d1381e6bfd8d10156dea9de38f01acdd002aa5ab4ace3128c69060c6",
+                                         "match":  true
+                                     },
+                                     {
+                                         "entry":  "AddOns/AlfaOmegaRoboFechamento.cs",
+                                         "bytes":  72794,
+                                         "sha256":  "c061880c962cfbaa1b563f983ed24bd1ad4622c523993228c46ad10506b30163",
+                                         "match":  true
+                                     },
+                                     {
+                                         "entry":  "AddOns/AlfaOmegaRoboSaida.cs",
+                                         "bytes":  15807,
+                                         "sha256":  "ca59088d38c798544f9fe69cf92ed815db520cc1a17892b98c9718d48f574470",
+                                         "match":  true
+                                     }
+                                 ],
+                     "n_entries":  4,
+                     "all_match":  true,
+                     "forbidden_entries":  0
+                 }
+             ],
+    "rollback_equals_installed":  true
+}

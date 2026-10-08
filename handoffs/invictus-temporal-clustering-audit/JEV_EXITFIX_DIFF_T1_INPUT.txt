@@ -1,0 +1,46 @@
+INVICTUS - EXIT_LAYER_FIX X2 - JEV DIFF (staging concluido; nada instalado)
+
+ESTADO
+Robo em STOP. Conta real FLAT. NinjaTrader principal NAO alterado. Nenhum pack de cliente alterado. Nenhuma ordem criada. Versao 8.1.8 build 2.
+Desenho aprovado: JEV DESIGN T5 = A 0,93. Metodo de teste do executor: JEV escolheu M1 (0,89), cenarios COMPLETO (0,87), execucao aprovada com ajuste (B 0,42; C 0,33; A 0,25; confianca baixa), risco de falsa seguranca do M1 avaliado como alto (0,65).
+
+DIFF (3 arquivos; +370 / -45 linhas; inesperados 0)
+AlfaOmegaRoboFechamento.cs c061880c -> a1fc99a8
+  C1 SaldoPerna(intentId, side, qtyFallback, out conhecido): saldo proprio da perna = soma das execucoes de entrada (lado da perna, nome que nao e de saida) menos soma das execucoes do lado oposto, a partir do registro de execucoes ja existente e persistido. Sem execucao de entrada registrada => conhecido = false e devolve o fallback. Nenhum campo persistido novo.
+AlfaOmegaRoboSaida.cs ca59088d -> 90e0020a
+  C2 nova sobrecarga Decidir(e, posicao, ordens, saldo, saldoConhecido, posDisponivel):
+     saldo conhecido igual a 0 => Verificada (nenhuma ordem);
+     fechamento com o nome da perna ainda ativo => Aguardar;
+     fechamento com o nome da perna Filled cobrindo a qty => Verificada;
+     conta FLAT ou no lado oposto => JaFechada / sem ordem;
+     fechamento ja enviado sem prova de Rejected ou Cancelled => Aguardar, NUNCA reenvia;
+     quantidade = min(saldo da perna menos o que os fechamentos por nome ja executaram, posicao disponivel, posicao da conta); se <= 0 nao envia.
+     PlanejarSaidas (funcao pura): uma decisao por perna na ordem do registro; a posicao disponivel por conta/instrumento/lado e lida uma vez e ABATIDA a cada perna que manda fechar; excecao em uma perna => sem ordem para ela.
+     Revalidar: porte do RevalidarClose com teto min(qty, saldo, disponivel).
+     A sobrecarga antiga Decidir(e, posicao, ordens) permanece intacta.
+AlfaOmegaRobo.cs 32c84685 -> f678d200
+  C3 ExecutarSaida monta saldos e chama PlanejarSaidas; o laco so executa o plano; falha ao planejar => nenhuma ordem.
+  C4 RevalidarClose delega para AoRoboSaida.Revalidar.
+  C5 MotorPasso: com o motor posicionado, reverifica a cada ciclo SOMENTE pernas com fechamento ja enviado (nunca as do trade aberto).
+  C6 alertas criticos pelo canal de alertas existente: divergencia corretora x interno, falha de fechamento, fechamento nao confirmado ha mais de 60 s; limpos quando a perna e verificada.
+  C7 EsperarFilled confirma por saldo da perna ou pelo NOME da ordem de fechamento (nao mais pelo id devolvido no envio); usado tambem por FecharPernaEmDesvio e FecharPernaSemProtecao.
+Nao alterados (hash identico ao instalado): AlfaOmegaSharedState.cs 49c43777, AoTapeEngine.cs 59e168d8, AoMarketDataPublisher.cs 19452fcb (FORCA_JANELA_30), AlfaOmegaRoboMotor.cs ecfe8f9c, AlfaOmegaTrader.cs 07a93922. Arquivos do gate sem nenhuma referencia aos simbolos alterados.
+
+PROVAS
+P1 Compilacao da arvore completa do staging: 464 de 464 itens, fontes ausentes 0, erros 0.
+P2 BASE (codigo instalado), T01 LONG -> saida -> reentrada no mesmo ciclo -> saida, ids no modelo da conta real: REPRODUZIU. Perna antiga pendente (2 pernas no registro), 3 fechamentos = 9 contratos para 3+3, um fechamento enviado com a conta ja FLAT, conta final SHORT 3. Base: 12 de 28 cenarios passam; falham os de reentrada, evento perdido, ordem Working, ordem sumida, posicao alheia.
+P3 STAGING, harness sobre o assembly completo (classes reais de decisao; laco do executor emulado): 28 de 28. T01: 2 fechamentos, 6 contratos, FLAT, 0 pernas, 0 reenvios, 0 inversao.
+P4 BANCADA M1 - EXECUTOR REAL: AlfaOmegaRobo.cs do staging SEM alteracao compilado com a arvore completa; trocados somente 2 fontes de fronteira (nucleo estatico de ordens por duble com a mesma API; leitura de posicao com gancho). ExecutarSaida, EsperarFilled, RevalidarClose, TemSaidaPendenteEnviada, GravarExecucoes/CarregarExecucoes, FecharPernaEmDesvio e FecharPernaSemProtecao REAIS chamados por reflexao contra a corretora simulada (troca de id, evento perdido/atrasado, parcial, Working, Rejected, Cancelled, sumida): 32 de 32.
+   Inclui T01 a T26, T08b, T23b e R01 a R04 (os dois caminhos FecharPerna, com e sem evento de execucao perdido, seguidos de reabertura e saida).
+   Invariantes medidos em todos: 0 inversao, 0 fechamento com conta FLAT ou oposta, 0 fechamento de perna ja encerrada, soma dos fechamentos de um ciclo nunca acima da posicao lida.
+P5 T27 FORCA_JANELA_30 identica: PASS (3 arquivos diferentes entre as arvores, exatamente os previstos).
+Invariantes I1 a I8: I1 PASS (P3, P4), I2 PASS (plano com abatimento; T24), I3 PASS (0 fechamento de perna encerrada), I4 PASS pelo saldo por perna (T01, T08, T20), I5 PASS (T11, T12, T23), I6 PASS (T12, T25, T26), I7 PASS (T15 modelo real, T16 modelo Sim), I8 PASS (P5).
+
+LIMITES DECLARADOS
+L1 A bancada M1 nao exercita o NinjaTrader de verdade: threads, eventos reais de ordem e o caminho OnExecucao -> registro de execucoes (na bancada as execucoes sao entregues direto ao registro). Se na conta real o evento de execucao do fechamento nao chegar, a confirmacao cai para o NOME da ordem (testado em T08, R02, R04).
+L2 Ordem de fechamento que some sem deixar rastro (T10, T19, T26): o robo NAO reenvia; a posicao fica aberta ate o alerta de 60 s e a acao do operador. E a consequencia aceita do desenho (nunca reenviar sem prova de Rejected ou Cancelled).
+L3 Registro sem execucao de entrada conhecida (perna antiga): saldo desconhecido; vale o teto pela posicao disponivel e a confirmacao por nome.
+L4 Nenhum teste em NinjaTrader real foi feito; a instancia isolada esta travada numa janela de registro que exige o operador.
+
+PEDIDO
+Decidir se o diff esta aprovado para gerar SOMENTE o pacote da OLIVER (import + rollback), sem importar, e qual porta posterior e exigida antes de qualquer PLAY em conta real.

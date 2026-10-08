@@ -1,0 +1,47 @@
+{
+ "request_id": "req_01a11c9547347b71a7a90e58c67dc8fd",
+ "model": "jev-1.13.0",
+ "answers": {
+  "caminho": {
+   "type": "choice",
+   "choice": "N1",
+   "confidence": 0.41,
+   "probabilities": {
+    "N4": 0.01,
+    "N1": 0.56,
+    "N3": 0.01,
+    "N2": 0.42
+   }
+  },
+  "segundo": {
+   "type": "choice",
+   "choice": "N2",
+   "confidence": 1,
+   "probabilities": {
+    "N4": 0,
+    "N1": 0,
+    "N3": 0,
+    "N2": 1
+   }
+  },
+  "zip_teste_agora": {
+   "type": "choice",
+   "choice": "SIM",
+   "confidence": 0.82,
+   "probabilities": {
+    "SIM": 0.91,
+    "NAO": 0.09
+   }
+  },
+  "criterio_pass": {
+   "type": "choice",
+   "choice": "CICLO_COMPLETO",
+   "confidence": 0.98,
+   "probabilities": {
+    "UMA_SAIDA": 0,
+    "DOIS_CICLOS": 0.01,
+    "CICLO_COMPLETO": 0.99
+   }
+  }
+ }
+}

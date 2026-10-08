@@ -1,0 +1,10 @@
+{
+ "diff": { "type": "choice", "instructions": "O diff do staging implementa o desenho X2 aprovado, fecha o defeito de double-flatten e inversao sem regressao material e esta aprovado para gerar SOMENTE o pacote da OLIVER (import + rollback), sem importar?",
+  "criteria": { "A": "aprovado para gerar o pacote OLIVER", "B": "falta prova ou ajuste especifico antes do pacote, indicado em 'pendencia'", "C": "o diff precisa mudar", "D": "outro" } },
+ "pendencia": { "type": "choice", "instructions": "Se nao for A, qual e a pendencia?",
+  "criteria": { "NENHUMA": "nenhuma; aprovado", "TESTE_NT8_REAL": "exigir teste em NinjaTrader real (conta Sim) antes de gerar o pacote", "ORDEM_SUMIDA": "o tratamento da ordem de fechamento que some (L2) precisa mudar antes do pacote", "SALDO_DESCONHECIDO": "o tratamento do saldo desconhecido (L3) precisa mudar", "MAIS_CENARIOS": "faltam cenarios na bancada", "OUTRA": "outra" } },
+ "porta_pos_import": { "type": "choice", "instructions": "Depois da importacao manual pelo operador na OLIVER, qual porta e obrigatoria antes de qualquer PLAY em conta real?",
+  "criteria": { "SIM_CICLO_COMPLETO": "PLAY somente em conta Sim ate observar entrada -> saida -> reentrada -> saida com fechamento verificado por nome e saldo, sem inversao", "SIM_UMA_SAIDA": "PLAY somente em conta Sim ate uma saida verificada", "REAL_DIRETO": "nenhuma porta; conta real direto", "REAL_QTY_MINIMA": "conta real com quantidade minima e operador presente, sem etapa Sim" } },
+ "prova_executor": { "type": "score", "instructions": "A bancada M1 (executor real do staging, 32 de 32) fecha o ponto residual do T5 para efeito de gerar o pacote?", "criteria": ["nao fecha", "fecha parcialmente", "fecha"] },
+ "risco_regressao": { "type": "score", "instructions": "Risco de regressao material em saidas normais, contas Sim, protecoes e motor com este diff.", "criteria": ["alto", "moderado", "baixo"] }
+}

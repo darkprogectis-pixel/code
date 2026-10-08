@@ -1,0 +1,18 @@
+INVICTUS - EXIT_LAYER_FIX X2 - COMO CUMPRIR A PENDENCIA DO JEV DIFF T1
+
+CONTEXTO
+JEV DIFF T1 (req_01a11c94be5e775c812f9a07b54e3143) = B 0,66; pendencia = TESTE_NT8_REAL 0,88 (exigir teste em NinjaTrader real, conta Sim, antes de gerar o pacote da OLIVER); porta apos importacao = SIM_CICLO_COMPLETO 0,98.
+Provas ja obtidas: base T01 reproduz o incidente; staging 28 de 28; bancada do executor real 32 de 32; compilacao 464 itens, 0 erros; so 3 arquivos alterados; FORCA_JANELA_30 identica.
+Em consequencia o pacote da OLIVER NAO foi gerado. Robo em STOP, conta real FLAT, NinjaTrader principal nao alterado.
+
+FATOS DO AMBIENTE
+F1 Nesta maquina existe UM NinjaTrader instalado (Program Files), usado pelo operador com a conta real conectada (robo em STOP) e contas Sim.
+F2 Existe um usuario Windows isolado (jevnt8test), provisionado em 07/10, com pasta de documentos propria e dados de Playback de ES e NQ. A instancia isolada abre, mas para numa janela de registro (ID + chave) do carregador presente no Program Files. Destravar exige o operador digitar o registro; mexer em registro/licenca esta proibido nesta rodada sem ordem dele.
+F3 Um teste em NinjaTrader real precisa de um artefato importavel com os 3 arquivos do staging. Esse artefato seria um zip de TESTE, distinto do pacote oficial da OLIVER (que so pode ser gerado com JEV DIFF = A).
+F4 Na conta Sim o id da ordem NAO e trocado pela plataforma; o caso exato da conta real (id trocado) so e reproduzido de verdade em conta de corretora. Em Sim o teste cobre: threads e eventos reais, registro real das execucoes, confirmacao por nome e por saldo, reentrada no mesmo ciclo, ausencia de fechamento em dobro.
+
+CAMINHOS POSSIVEIS
+N1 INSTANCIA ISOLADA: operador destrava o registro na instancia isolada (acao manual dele); importa-se o zip de TESTE somente la; Playback de ES/NQ em conta Sim/Playback ate o ciclo completo entrada -> saida -> reentrada -> saida; NinjaTrader principal intocado. Custo: depende do operador e de registro.
+N2 OLIVER EM SIM: gerar zip de TESTE + rollback, operador importa no NinjaTrader principal com o robo em STOP e a conta real DESMARCADA, PLAY somente em conta Sim ate o ciclo completo; se passar, JEV DIFF T3 e so entao pacote oficial (que seria identico em conteudo). Custo: altera o NinjaTrader principal antes de JEV DIFF = A; reversivel pelo rollback.
+N3 MAQUINA OU VM LIMPA: instalar NinjaTrader oficial em outra maquina/VM em modo Sim/Playback, importar o zip de TESTE la. Custo: maior prazo; depende do operador providenciar o ambiente.
+N4 MANTER STOP: nao testar agora; robo permanece em STOP ate existir ambiente.

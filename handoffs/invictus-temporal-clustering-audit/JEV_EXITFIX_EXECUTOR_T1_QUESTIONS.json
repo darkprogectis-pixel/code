@@ -1,0 +1,10 @@
+{
+ "metodo": { "type": "choice", "instructions": "Qual e o metodo MINIMO e seguro para testar o caminho real do executor (ExecutarSaida e afins) antes do JEV DIFF, respeitando as restricoes em vigor?",
+  "criteria": { "M1": "bancada de executor fora do NinjaTrader com dubles das classes de fronteira; suficiente como porta para o JEV DIFF", "M1_E_M3": "M1 agora como porta para o JEV DIFF e pacote; M3 (Sim na OLIVER apos importacao manual) como porta obrigatoria antes de qualquer PLAY em conta real", "M2": "NinjaTrader isolado em conta Sim; aguardar o operador destravar o registro", "M3": "somente validacao Sim na OLIVER depois da importacao; JEV DIFF sem teste de executor previo", "M4": "nenhum teste adicional; harness e revisao estatica bastam", "OUTRO": "outro metodo" } },
+ "aprovado_executar": { "type": "choice", "instructions": "O metodo escolhido esta aprovado para execucao imediata nesta rodada (fora do NinjaTrader, sem conta, sem ordens)?",
+  "criteria": { "A": "aprovado; executar agora", "B": "aprovado com ajuste indicado em 'cenarios'", "C": "nao executar; devolver ao operador" } },
+ "cenarios": { "type": "choice", "instructions": "Conjunto minimo de cenarios que o teste do executor real precisa cobrir para valer como porta do JEV DIFF.",
+  "criteria": { "NUCLEO": "T01 (reentrada mesmo ciclo, ids modelo real) + T08 (evento de execucao perdido) + T10 (fechamento sumido, nao reenvia) + T17 (rejeitada, reenvia)", "NUCLEO_MAIS_RESTART_E_DUAS_PERNAS": "nucleo + T20 (reinicio com perna pendente) + T24 (duas pernas abertas)", "COMPLETO": "o anterior + os dois caminhos FecharPernaEmDesvio e FecharPernaSemProtecao", "SO_T01": "apenas T01" } },
+ "suficiencia_harness": { "type": "score", "instructions": "Quanto a prova ja obtida (base T01 reproduz o incidente; staging 28 de 28; compilacao 0 erros) cobre o risco do defeito?", "criteria": ["insuficiente", "parcial", "suficiente"] },
+ "risco_m1": { "type": "score", "instructions": "Risco de a bancada M1 dar falsa seguranca por nao exercitar o NinjaTrader de verdade.", "criteria": ["alto", "moderado", "baixo"] }
+}

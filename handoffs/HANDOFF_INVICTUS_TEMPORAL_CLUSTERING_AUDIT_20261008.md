@@ -349,3 +349,36 @@ Somente leitura + JEV. Nenhum código escrito. Robô STOP · conta real FLAT · 
 4. Compile (oráculo 464 itens) → JEV DIFF → pacote OLIVER + rollback → importação manual → validação.
 5. Depois: rollout dos demais packs conforme dossiê §F (inventário, classificação por hash, patch só nos AFFECTED, sem distribuição automática).
 6. Pendente em paralelo: JEV da auditoria de comportamento temporal da FORCA_JANELA_30.
+
+## EXIT_LAYER_FIX_STAGING_20261008 — implementação SOMENTE em staging · JEV DIFF T1 = B (teste em NT8 real exigido) · pacote OLIVER NÃO gerado (sessão 6b86565f)
+Nada instalado. Robô STOP · conta real FLAT · NT8 principal NÃO alterado · packs alterados 0 · nenhuma ordem · SAFE_TO_PLAY_REAL = NO.
+
+- **Staging (fora do NT8):** `W\staging_exit\before|after\AddOns` · gerador `W\tools\apply_exitfix.js` (substituições exatas; aborta se âncora não bate) · diff `W\tests\EXITFIX_STAGING.diff` (+370/−45).
+  - `AlfaOmegaRobo.cs` 32c84685d1381e6bfd8d10156dea9de38f01acdd002aa5ab4ace3128c69060c6 → f678d200fe4ca7e9b8f6211d6436eb86dac2838f4422cee23d8791b79041298e
+  - `AlfaOmegaRoboFechamento.cs` c061880c962cfbaa1b563f983ed24bd1ad4622c523993228c46ad10506b30163 → a1fc99a8cce2bbbcbe1428b545ec2efc15355c571919e23f1843945347d7774d
+  - `AlfaOmegaRoboSaida.cs` ca59088d38c798544f9fe69cf92ed815db520cc1a17892b98c9718d48f574470 → 90e0020ad3187f6a360a5a661ade4e610ea16a101ff44e3538757032518eacf9
+  - UNEXPECTED_CHANGED_FILES = 0 (árvore base × staging: 3 arquivos diferentes, os previstos) · FORCA_JANELA_30 idêntica ao instalado (49c43777 / 59e168d8 / 19452fcb; `W\tests\T27_FORCA_JANELA30_UNCHANGED.txt`).
+  - Refino em relação ao dossiê: `EstadoFechamentoPorNome` devolve também a qty executada; fechamento `|X` Filled por NOME conta como verificação quando o evento de execução se perde (T08/R02/R04).
+- **Compile:** árvore completa do staging 464/464, fontes ausentes 0, **erros 0** (`W\tests\COMPILE_EXITFIX_AFTER.json`).
+- **Harness** (`W\harness\ExitDriver.cs` + `run_exit_full.ps1`: compila a árvore inteira em memória e roda o driver contra ela; corretora simulada com troca de id = modelo da conta real):
+  - **BASE (código instalado) T01 = REPRODUZIU o incidente:** perna antiga pendente (2 pernas), 3 fechamentos = 9 contratos para 3+3, 1 fechamento com conta FLAT, conta final **SHORT 3** (LONG→FLAT→SHORT). Base 12/28 (`W\tests\EXIT_HARNESS_BASE.json`). No ramo base o laço do executor e o `RevalidarClose` são transcrição do fonte instalado; `AoRoboSaida.Decidir` é o real.
+  - **STAGING 28/28** (`W\tests\EXIT_HARNESS_STAGING.json`) — T01–T26 + T08b + T23b; T27 PASS por hash. T01: 2 fechamentos, 6 contratos, FLAT, 0 pernas, 0 reenvios.
+  - Invariantes I1–I8 PASS (0 inversão · 0 fechamento com conta FLAT/oposta · 0 fechamento de perna encerrada · soma dos fechamentos de um ciclo ≤ posição lida).
+- **Ponto residual do T5 (executor real):** JEV EXECUTOR T1 `req_01a11c8d44ed7cdc885300234248a8f4` → método **M1** 0,89 (bancada fora do NT8), cenários COMPLETO 0,87, executar = B 0,42 (C 0,33 · A 0,25; confiança baixa), risco de falsa segurança do M1 = alto 0,65.
+  - **Bancada M1** (`W\tools\mk_rig.js`): árvore do staging com SOMENTE 2 fontes de fronteira trocados (`AoTraderCore.cs` dublê com a mesma API estática; `AlfaOmegaRoboPositions.cs` com gancho de leitura) — `AlfaOmegaRobo.cs` do staging sem alteração (`W\tests\RIG_TREE_DIFF.txt`). `ExecutarSaida`, `EsperarFilled`, `RevalidarClose`, `TemSaidaPendenteEnviada`, `GravarExecucoes`/`CarregarExecucoes`, `FecharPernaEmDesvio`, `FecharPernaSemProtecao` REAIS por reflexão.
+  - **Resultado 32/32** (`W\tests\EXIT_RIG_EXECUTOR.json`): T01–T26, T08b, T23b, R01–R04.
+  - Limites: não exercita threads/eventos reais do NinjaTrader nem `OnExecucao` (execuções entregues direto ao registro).
+- **JEV DIFF T1 = B 0,66 (A 0,31) · `req_01a11c94be5e775c812f9a07b54e3143`** — pendência **TESTE_NT8_REAL 0,88** (teste em NinjaTrader real, conta Sim, antes do pacote) · porta pós-import SIM_CICLO_COMPLETO 0,98 · prova do executor 0,94/2 (conf 0,13) · risco de regressão 1,39/2 (conf 0,09).
+  ⇒ **OLIVER_PACKAGE_READY = NO.** Pacote oficial NÃO gerado.
+- **JEV DIFF T2 `req_01a11c9547347b71a7a90e58c67dc8fd`** (como cumprir): caminho **N1** instância isolada `jevnt8test` com o operador destravando a janela de registro (0,56) · segundo **N2** zip de TESTE na própria OLIVER com conta real desmarcada e PLAY só em Sim (0,42 / segundo 1,00) · preparar zip de TESTE agora sem importar = SIM 0,91 · critério de PASS = CICLO_COMPLETO 0,99 (entrada → saída → reentrada → saída, cada fechamento verificado, 0 fechamento em dobro, FLAT ao fim, 0 alerta crítico indevido).
+- **Zip de TESTE (NÃO é o pacote OLIVER; não importado):** `W\build_test\`
+  - `AlfaOmega_TESTE_NAO_OFICIAL_EXITFIX_X2_import.zip` SHA256 72c057db4353aac269115be5f9f079b288fa952402da9bbc5e14b7e84367b499
+  - `AlfaOmega_TESTE_NAO_OFICIAL_EXITFIX_X2_ROLLBACK_import.zip` SHA256 745b8651170b478fc2f328af12a7390596d4fdd0f49e875087ad99f1901d8286
+  - roundtrip 4/4 entradas conferem, entradas proibidas 0, rollback = instalado agora (`W\tests\BUILD_EXITFIX_TEST_ZIPS.json`; backup `W\backup_exit_test\20261008-143543`).
+- **Limites conhecidos do desenho (declarados ao JEV):** L2 ordem de fechamento que some sem rastro ⇒ robô não reenvia; posição fica aberta até o alerta de 60 s e a ação do operador (T10/T19/T26) · L3 perna sem execução de entrada registrada ⇒ saldo desconhecido, vale o teto da posição disponível · em conta Sim o id NÃO troca (o caso exato da conta real só existe em conta de corretora).
+
+### EXACT_NEXT_STEP = OPERADOR decide o ambiente do teste em NT8 real (conta Sim)
+1. N1 (preferido pelo JEV): destravar o registro na instância isolada `jevnt8test`; importar SOMENTE lá o zip de TESTE; Playback/Sim até CICLO_COMPLETO. NT8 principal intocado.
+2. N2 (segundo): operador importa o zip de TESTE na OLIVER com robô em STOP e conta real DESMARCADA; PLAY só em Sim até CICLO_COMPLETO; rollback pronto.
+3. Com PASS ⇒ JEV DIFF T3 ⇒ se A, gerar o pacote oficial OLIVER (mesmo conteúdo) + rollback + roundtrip.
+4. Depois: `VALIDATE_OLIVER_THEN_REBUILD_ALL_AFFECTED_PACKS` (nenhum pack tocado até aqui) · correção da escolta do take em pacote separado · JEV da auditoria de comportamento da FORCA_JANELA_30 (dados em `tests\13_runtime_audit_since_play.txt`).
