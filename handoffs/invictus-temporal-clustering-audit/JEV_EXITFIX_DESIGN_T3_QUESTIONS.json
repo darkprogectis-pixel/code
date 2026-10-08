@@ -1,0 +1,9 @@
+{
+ "desenho_final": { "type": "choice", "instructions": "Qual e o desenho final minimo e robusto, considerando os invariantes obrigatorios do operador (I1 a I8, em especial I4 e I6)?",
+  "criteria": { "X1": "D3 puro (S1, S2, S3, S4, S5, S7, S8, S10); alerta fica para pacote separado", "X2": "D3 + alerta critico no arquivo de alertas (divergencia, falha de saida, fechamento nao confirmado por mais de 60 s); sem politica de reentrada", "X3": "D3 + alerta critico + politica de reentrada (pular conta e instrumento com saida nao confirmada)", "OUTRO": "outro" } },
+ "aprovacao": { "type": "choice", "instructions": "Decisao de DESIGN: o desenho final escolhido esta aprovado para implementacao SOMENTE em staging, com a matriz de teste descrita, seguida de JEV DIFF antes de qualquer pacote para o NT8 principal?",
+  "criteria": { "A": "APROVADO para staging", "B": "NAO AINDA: falta item especifico", "C": "REJEITADO", "D": "outro" } },
+ "i4": { "type": "choice", "instructions": "O invariante I4 (saida nao verificada impede reentrada quando houver risco de propriedade ambigua) fica atendido pelo desenho final escolhido?",
+  "criteria": { "SIM_POR_SALDO": "sim: com saldo por perna e abatimento no laco nao ha propriedade ambigua que possa inverter a conta", "SIM_POR_BLOQUEIO": "sim, porque o desenho inclui a politica de reentrada", "NAO": "nao fica atendido" } },
+ "risco_residual": { "type": "score", "instructions": "Risco residual de inversao involuntaria da conta real com o desenho final escolhido, depois de passar a matriz de teste.", "criteria": ["alto", "moderado", "baixo"] }
+}

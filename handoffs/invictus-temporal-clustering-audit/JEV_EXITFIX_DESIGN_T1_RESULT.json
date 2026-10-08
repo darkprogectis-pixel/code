@@ -1,0 +1,104 @@
+{
+ "request_id": "req_01a11c70a9487c11b1bdcde7a716a6d4",
+ "model": "jev-1.13.0",
+ "answers": {
+  "desenho": {
+   "type": "choice",
+   "choice": "D3",
+   "confidence": 0.47,
+   "probabilities": {
+    "D1": 0.01,
+    "D2": 0.02,
+    "D3": 0.54,
+    "D4": 0.29,
+    "D5": 0.12,
+    "D6": 0,
+    "OUTRO": 0.01,
+    "INSUFICIENTE": 0.01
+   }
+  },
+  "confirmacao": {
+   "type": "choice",
+   "choice": "EVENTO_EXECUCAO",
+   "confidence": 0.77,
+   "probabilities": {
+    "NOME_LISTA": 0.15,
+    "EVENTO_EXECUCAO": 0.8200000000000001,
+    "OBJETO_ORDEM": 0,
+    "SO_POSICAO": 0,
+    "ID_INTERNO": 0.03
+   }
+  },
+  "propriedade": {
+   "type": "choice",
+   "choice": "SALDO_POR_PERNA",
+   "confidence": 0.97,
+   "probabilities": {
+    "SALDO_POR_PERNA": 0.98,
+    "ABATER_NO_LACO": 0,
+    "ATUAL": 0.02
+   }
+  },
+  "reentrada": {
+   "type": "choice",
+   "choice": "PULAR_CONTA",
+   "confidence": 0.96,
+   "probabilities": {
+    "PULAR_CONTA": 0.97,
+    "BLOQUEAR_TUDO": 0.02,
+    "PERMITIR": 0.01
+   }
+  },
+  "retry": {
+   "type": "choice",
+   "choice": "SO_APOS_TERMINAL",
+   "confidence": 0.63,
+   "probabilities": {
+    "SO_APOS_TERMINAL": 0.76,
+    "COMO_HOJE": 0.23,
+    "NUNCA": 0.01
+   }
+  },
+  "corretora_flat": {
+   "type": "choice",
+   "choice": "FECHAR_PERNA_SEM_ORDEM",
+   "confidence": 0.3,
+   "probabilities": {
+    "FECHAR_PERNA_SEM_ORDEM": 0.53,
+    "AGUARDAR": 0.08,
+    "OUTRO": 0.39
+   }
+  },
+  "corretora_oposta": {
+   "type": "choice",
+   "choice": "NUNCA_ORDEM_ALERTA",
+   "confidence": 0.39,
+   "probabilities": {
+    "NUNCA_ORDEM_ALERTA_STOP": 0.38,
+    "NUNCA_ORDEM_ALERTA": 0.6,
+    "CORRIGIR_AUTO": 0.02
+   }
+  },
+  "alerta": {
+   "type": "choice",
+   "choice": "DIVERGENCIA_E_PRAZO",
+   "confidence": 0.93,
+   "probabilities": {
+    "DIVERGENCIA_E_PRAZO": 0.95,
+    "SO_DIVERGENCIA": 0.01,
+    "NENHUM": 0.04
+   }
+  },
+  "aprovacao": {
+   "type": "choice",
+   "choice": "B",
+   "confidence": 0.64,
+   "probabilities": {
+    "A": 0.15,
+    "B": 0.73,
+    "C": 0.06,
+    "D": 0.06
+   }
+  }
+ }
+}

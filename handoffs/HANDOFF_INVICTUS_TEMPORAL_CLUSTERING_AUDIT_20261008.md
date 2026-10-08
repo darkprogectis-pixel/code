@@ -291,3 +291,42 @@ Pontos candidatos para o JEV decidir depois (não é proposta escolhida): verifi
 2. Decisão do operador: (a) abrir o desenho da correção (dossiê + JEV); (b) se quiser operar antes disso, só contas Sim (JEV 0,88) — exige desligar MES/MNQ da conta real nos ativos, ação do operador.
 3. Antes de qualquer PLAY: conferir, só leitura, o registro `alfaomega-robo\state\motor-execucoes.json` (pernas 161723/161827) e o estado EXIT_FAILED_RETRY dos trades 6108a7a7 e d8cf6d8c.
 4. Pendente: concluir a auditoria de comportamento da FORCA_JANELA_30 (dados em `W\tests\13_runtime_audit_since_play.txt`; JEV não enviado).
+
+## EXIT_LAYER_FIX_DESIGN_20261008 (sessão 6b86565f, ~17:00Z) — desenho escolhido pelo JEV, aprovação para staging AINDA NÃO concedida
+Somente leitura + consultas ao JEV. Nenhum código escrito. Robô STOP · conta real FLAT · SAFE_TO_PLAY_REAL = NO · PATCH_STATUS = NOT_STARTED.
+
+### Lacunas fechadas
+1. **Por que "Initialized":** `AlfaOmegaTrader.cs` — `PlaceCore` (l.1110–1125) cria a ordem, faz `Submit` e devolve `ord.OrderId` lido naquele instante; `OrdersJson` (l.992–1025) lista `a.Orders` emitindo o `OrderId` ATUAL de cada ordem. Na conta real o NT8 troca o id inicial pelo id da corretora depois do envio (resposta do envio `bb1b08f6…` × log do NT8 e rastreador de ordens `674389781092` para a MESMA ordem de nome `…161723|X`); nas Sim o id não muda. `EsperarFilled` (Robo.cs l.1596–1611) procura pelo id inicial por 3 s, guarda o último estado visto antes da troca ("Initialized") e o devolve. O NOME da ordem é estável e único por perna/tipo (entrada, `|S`, `|T`, `|X`) e já é usado para achar stop/take e pelo rastreador (FILLED em 0,58 s). Mesma origem do `take_escort_fail ORDER_NOT_FOUND` (`ChangeCore` procura por `orderId`, l.1245–1260).
+2. **Outras vias de dano (código):** via 1 (ocorrida) trailing 4/4 + reabertura no mesmo ciclo e lado — o bloqueio `BloqueiaEntrada` (exit_pending) é avaliado antes do `Tick` do motor e não cobre a reabertura decidida dentro do mesmo ciclo. Via 2 (não observada): com o motor FLAT, `flatten_retry` de perna real não verificada cai em "nova tentativa" (`Decidir` regra 2) e, se a conta tiver posição no mesmo lado/instrumento que não é do robô (manual, cópia), fecha essa posição alheia. Via 3 (não observada): reinício/recarga com perna não verificada persistida — mesma regra. Via 4 (06/10, sem dano): reabertura no lado oposto ⇒ "nunca inverter" bloqueia. Saídas comuns: cooldown 60 s + bloqueio por saída pendente cobrem a janela de 20–40 s. **OTHER_DAMAGE_PATH_FOUND = YES (vias 2 e 3, só em código).**
+
+### Consultas ao JEV (jev-1.13.0)
+| Rodada | request_id | Resultado |
+|---|---|---|
+| T1 | req_01a11c70a9487c11b1bdcde7a716a6d4 | desenho D3 = A+B+C 0,54 (D4 0,29 · D5 0,12) · confirmação por evento de ordem/execução casado por NOME, lista por nome como reforço 0,82 · propriedade por saldo próprio da perna 0,98 · reentrada: pular só a conta/instrumento 0,97 · retry só após terminal 0,76 · corretora FLAT: fechar perna sem ordem 0,53 (outro 0,39) · lado oposto: sem ordem + alerta + bloqueio, sem STOP automático 0,60 (com STOP 0,38) · alerta em divergência/falha/prazo 0,95 · aprovação **B 0,73** |
+| T2 | req_01a11c714b91776e93d517ada0cf6656 | especificação consolidada A+B+C+D+E: aprovação **B 0,91** · item: reduzir para D3, retirando reentrada e alerta 0,54 · take em pacote separado 0,83 · evidência com conta FLAT: evento por nome OU duas leituras 1,00 · prazo de alerta 60 s 1,00 |
+| T3 | req_01a11c71d37772f5ad4bedbf27576128 | desenho final **X2 = D3 + alerta crítico, sem política de reentrada** 0,92 · I4 atendido pelo saldo por perna 0,96 · risco residual baixo 1,71/2 · aprovação **B 0,77** |
+| T4 | req_01a11c72472a787eadd4d8070b61b996 | item faltante: especificação em nível de código 0,38 (outro 0,33 · nada 0,23) · próximo passo: **dossiê de detalhe e novo JEV DESIGN antes de escrever código 0,92** |
+
+### Desenho selecionado (X2) — direção fixada, detalhe pendente
+- **Confirmação:** fechamento confirmado por evento de ordem/execução da conta casado pelo NOME da ordem de fechamento; lista de ordens por nome como reforço e recuperação; o id devolvido no envio deixa de ser usado para verificar.
+- **Propriedade:** saldo próprio por perna = executado na entrada − executado nas saídas (fechamento do robô, stop ou take da própria perna), por nome de ordem; saldo zero ⇒ perna sai do registro e não volta.
+- **Quantidade a fechar:** no máximo min(saldo da perna, posição da conta no mesmo lado), com abatimento dentro do laço (a soma por conta/instrumento nunca passa da posição lida).
+- **Reverificação:** saídas pendentes reavaliadas em todo ciclo, com o motor posicionado ou não.
+- **Retry:** novo fechamento só com o anterior comprovadamente rejeitado/cancelado e saldo > 0; estado desconhecido ou ativo ⇒ nenhuma ordem.
+- **Reentrada:** sem bloqueio novo (I4 atendido pelo saldo por perna).
+- **Corretora FLAT:** nunca enviar fechamento; perna encerrada por evento de execução por nome OU duas leituras independentes de conta FLAT; cancela só a proteção da própria perna.
+- **Corretora no lado oposto:** nenhuma ordem automática; entradas bloqueadas; alerta crítico; sem STOP automático.
+- **Alerta crítico (`robo-alertas.json`):** divergência, falha de saída, fechamento não confirmado por mais de 60 s.
+- **Escopo:** só saída, registro de pernas e alerta. Motor, FORCA_JANELA_30, entradas, bracket, identidade/licença intocados. Ajuste do take: pacote separado.
+
+### Invariantes (operador) × desenho
+I1 nunca inverter conta FLAT (limite pela posição + abatimento) · I2 posição agregada nunca atribuída a duas pernas (abatimento no laço + saldo por perna) · I3 perna confirmada não volta (saldo zero sai do registro) · I4 atendido pelo saldo por perna, sem bloqueio de reentrada (JEV 0,96) · I5 corretora prevalece (limite pela posição; FLAT nunca recebe ordem) · I6 alerta crítico incluído · I7 mesmo código para Sim e real · I8 gate intocado.
+
+### Matriz de teste exigida (harness offline com o código real do staging; depois conta Sim)
+Reprodução do incidente (LONG → saída → reentrada no mesmo ciclo → saída) · trailing stop · anchor_neutro · saída comum sem reentrada · confirmação rápida · atrasada (> 3 s) · evento de execução perdido · execução parcial · estado da ordem não encontrado · corretora já FLAT · corretora no lado oposto · MES · MNQ · conta com troca de id (real) e sem troca (Sim) · retry · reinício com perna pendente · posição alheia no mesmo lado. Cada caso verifica I1–I8.
+
+### JEV_DESIGN_DECISION = B (não aprovado ainda para staging) · PATCH_STATUS = NOT_STARTED
+### EXACT_NEXT_STEP
+1. Dossiê de detalhe (só leitura do código atual): funções a alterar e fluxo (`ExecutarSaida`, `AoRoboSaida.Decidir`, `RevalidarClose`, `EsperarFilled`, registro `_execucoes`/`motor-execucoes.json`, rastreador de ordens/`OrderUpdate`/`ExecutionUpdate`, rotina de alertas); estrutura e persistência do saldo por perna; recuperação após reinício; comportamento com evento perdido/atrasado.
+2. JEV DESIGN T5 sobre o dossiê ⇒ só com A: implementar em staging + harness da matriz ⇒ JEV DIFF ⇒ pacote OLIVER + rollback ⇒ importação manual.
+3. Conta real em STOP até lá. Pendente em paralelo: JEV da auditoria de comportamento temporal da FORCA_JANELA_30.

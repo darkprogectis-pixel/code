@@ -1,0 +1,12 @@
+{
+ "aprovacao": { "type": "choice", "instructions": "A especificacao consolidada S1 a S10 esta aprovada como desenho minimo e robusto para implementacao SOMENTE em staging, com a matriz de teste descrita, seguida de JEV DIFF antes de qualquer pacote para o NT8 principal?",
+  "criteria": { "A": "APROVADO para staging como esta", "B": "NAO AINDA: falta um item especifico, indicado na pergunta 'falta'", "C": "REJEITADO: desenho errado", "D": "outro" } },
+ "falta": { "type": "choice", "instructions": "Se nao estiver aprovado como esta, qual e o item que falta ou precisa mudar?",
+  "criteria": { "NADA": "nada; aprovado", "REDUZIR_PARA_D3": "retirar S6 (reentrada) e S9 (alerta) e manter so confirmacao, reverificacao e saldo por perna", "STOP_AUTOMATICO": "acrescentar STOP automatico do robo em divergencia critica", "S7_EVIDENCIA": "em S7 exigir evento de execucao; duas leituras de conta FLAT nao bastam", "PERSISTENCIA_REINICIO": "especificar a persistencia do saldo por perna e a recuperacao apos reinicio", "TAKE_MESMO_PACOTE": "incluir no mesmo pacote a correcao do ajuste do take por nome", "VALIDAR_SIM_ANTES": "exigir validacao em conta Sim com identificador trocado simulado antes de aprovar o desenho", "OUTRO": "outro item" } },
+ "take": { "type": "choice", "instructions": "A falha do ajuste do take na conta real (ordem nao encontrada, mesma origem de identificador) deve entrar neste mesmo pacote?",
+  "criteria": { "MESMO_PACOTE": "sim, corrigir junto, procurando a ordem por nome", "PACOTE_SEPARADO": "nao, pacote separado depois; hoje nao causa dano", "NAO_CORRIGIR": "nao corrigir" } },
+ "flat_evidencia": { "type": "choice", "instructions": "Em S7, que evidencia basta para encerrar a perna sem ordem quando a conta esta FLAT?",
+  "criteria": { "EVENTO_OU_DUAS_LEITURAS": "evento de execucao por nome OU duas leituras independentes de conta FLAT", "SO_EVENTO": "so evento de execucao por nome", "UMA_LEITURA": "uma leitura de conta FLAT basta" } },
+ "prazo_alerta": { "type": "choice", "instructions": "Prazo para o alerta de fechamento nao confirmado.",
+  "criteria": { "S20": "20 s", "S60": "60 s", "S120": "120 s" } }
+}

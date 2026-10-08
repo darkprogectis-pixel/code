@@ -1,0 +1,20 @@
+{
+ "desenho": { "type": "choice", "instructions": "Qual desenho minimo e robusto deve corrigir o defeito comprovado de saida/reconciliacao da conta real, impedindo double-flatten e inversao involuntaria, sem quebrar saidas normais, contas Sim, MES/MNQ, protecoes e o motor existente? Escolha a combinacao MINIMA que satisfaz os invariantes I1 a I8.",
+  "criteria": { "D1": "so A (confirmar fechamento por nome da ordem)", "D2": "A + B", "D3": "A + B + C", "D4": "A + B + C + D + E", "D5": "A + B + C + D + E + F (com STOP automatico em divergencia critica)", "D6": "C + D, sem mexer na confirmacao", "OUTRO": "outra combinacao", "INSUFICIENTE": "falta evidencia especifica antes de decidir o desenho" } },
+ "confirmacao": { "type": "choice", "instructions": "Mecanismo canonico de confirmacao de fill do fechamento.",
+  "criteria": { "NOME_LISTA": "procurar na lista de ordens da conta pelo NOME da ordem de fechamento", "EVENTO_EXECUCAO": "evento de execucao/ordem da conta casado pelo nome da ordem, com a lista por nome como reforco", "OBJETO_ORDEM": "guardar a referencia do objeto da ordem criado e ler dele o estado", "SO_POSICAO": "so pela posicao da conta", "ID_INTERNO": "manter o identificador inicial" } },
+ "propriedade": { "type": "choice", "instructions": "Regra de propriedade da perna (ownership).",
+  "criteria": { "SALDO_POR_PERNA": "saldo proprio por perna = executado na entrada menos executado na saida, por nome de ordem; fecha no maximo min(saldo da perna, posicao da conta)", "ABATER_NO_LACO": "manter o modelo atual e apenas abater no laco o que cada perna ja mandou fechar", "ATUAL": "manter atribuicao por conta, instrumento e lado" } },
+ "reentrada": { "type": "choice", "instructions": "Politica de reentrada com saida nao verificada na mesma conta e instrumento.",
+  "criteria": { "PULAR_CONTA": "a nova entrada pula somente a conta/instrumento com saida nao confirmada; demais contas entram", "BLOQUEAR_TUDO": "bloquear a entrada inteira ate confirmar", "PERMITIR": "permitir como hoje" } },
+ "retry": { "type": "choice", "instructions": "Politica de retry do fechamento.",
+  "criteria": { "SO_APOS_TERMINAL": "novo fechamento so quando o anterior esta comprovadamente rejeitado ou cancelado e o saldo da perna continua maior que zero; estado desconhecido nunca reenvia", "COMO_HOJE": "estado nao encontrado cai para nova tentativa", "NUNCA": "nunca reenviar automaticamente" } },
+ "corretora_flat": { "type": "choice", "instructions": "Comportamento quando a corretora ja esta FLAT no instrumento.",
+  "criteria": { "FECHAR_PERNA_SEM_ORDEM": "marcar a perna como fechada (desvio), nenhuma ordem, cancelar so a protecao da propria perna", "AGUARDAR": "aguardar segunda leitura como hoje", "OUTRO": "outro" } },
+ "corretora_oposta": { "type": "choice", "instructions": "Comportamento quando a corretora esta no lado oposto ao da perna.",
+  "criteria": { "NUNCA_ORDEM_ALERTA_STOP": "nenhuma ordem automatica, alerta critico e STOP automatico do robo", "NUNCA_ORDEM_ALERTA": "nenhuma ordem automatica, alerta critico, bloqueio de entradas (sem STOP automatico)", "CORRIGIR_AUTO": "o robo zera a posicao oposta automaticamente" } },
+ "alerta": { "type": "choice", "instructions": "Politica de alerta critico.",
+  "criteria": { "DIVERGENCIA_E_PRAZO": "alerta no arquivo de alertas em divergencia, em falha de saida e em fechamento nao confirmado alem de um prazo", "SO_DIVERGENCIA": "alerta so em divergencia", "NENHUM": "sem alerta novo" } },
+ "aprovacao": { "type": "choice", "instructions": "Decisao de DESIGN: o desenho escolhido acima esta aprovado para implementacao SOMENTE em staging, com a matriz de teste descrita, seguida de JEV DIFF?",
+  "criteria": { "A": "APROVADO para staging", "B": "NAO AINDA: falta item especifico", "C": "REJEITADO", "D": "outro" } }
+}

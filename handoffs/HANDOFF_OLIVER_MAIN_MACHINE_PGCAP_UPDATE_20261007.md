@@ -217,3 +217,5 @@ Etapa passiva por ordem do operador (PLAY_ATIVADO = YES). Claude só leu arquivo
 - 16:24Z: conta real ficou SHORT 3 MES / 2 MNQ sem proteção por saída em dobro (trailing + reentrada no mesmo ciclo + fechamento da conta real nunca verificado por id). Operador zerou 16:40:12Z; **robô em STOP v56 desde 16:40:19Z**.
 - JEV INCIDENT T1 = A 0,78 (req_01a11c682b8d719f8b4468d1fc3537c0): causa comprovada (verificação por id interno, 0,94); manter STOP e corrigir antes de novo PLAY; se operar antes, só contas Sim (0,88); defeito pré-existente exposto pelo gate (1,00).
 - **SAFE_TO_PLAY com conta real = NO.** Patch não iniciado. Executor: 0 ordens · F5 0.
+
+- **Correção da saída (conta real) — JEV DESIGN em andamento (17:00Z):** desenho escolhido X2 (confirmação por nome/evento + saldo por perna + reverificação em todo ciclo + alerta crítico; req_01a11c71d37772f5ad4bedbf27576128), aprovação para staging ainda B; próximo passo decidido pelo JEV: dossiê de detalhe e novo JEV DESIGN (req_01a11c72472a787eadd4d8070b61b996). Robô em STOP; conta real sem PLAY. Detalhe: handoff da auditoria, seção EXIT_LAYER_FIX_DESIGN_20261008.
