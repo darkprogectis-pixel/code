@@ -1,0 +1,11 @@
+{
+ "porta": { "type": "choice", "instructions": "Considerando toda a evidencia ja produzida, qual e o caminho MINIMO para concluir a validacao usando SOMENTE a maquina OLIVER existente, sem VM, sem outra maquina, sem nova infraestrutura e sem colocar a conta real em risco?",
+  "criteria": { "A": "evidencia existente e suficiente para aprovar o JEV DIFF e gerar o pacote oficial; ciclo Sim como porta pos-importacao", "B": "falta somente um teste Sim/Playback na propria OLIVER, com conta real excluida e robo real em STOP, antes do pacote oficial", "C": "existe outro teste minimo na propria maquina, sem nova infraestrutura", "D": "ha bloqueio tecnico real; falta evidencia indispensavel" } },
+ "evidencia_suficiente": { "type": "choice", "instructions": "A evidencia existente (E1 a E7) e suficiente para GERAR o pacote oficial da OLIVER, mantendo vedado qualquer PLAY em conta real ate o ciclo completo em Sim?",
+  "criteria": { "SIM": "suficiente para gerar o pacote", "NAO": "insuficiente para gerar o pacote" } },
+ "porta_sim_obrigatoria": { "type": "choice", "instructions": "Em qualquer das opcoes, o ciclo completo em conta Sim na OLIVER (entrada -> saida -> reentrada -> saida, fechamentos verificados, 0 fechamento em dobro, FLAT ao fim) e obrigatorio antes de qualquer PLAY em conta real?",
+  "criteria": { "SIM": "obrigatorio", "NAO": "dispensavel" } },
+ "primeira_real": { "type": "choice", "instructions": "Como a troca de id so ocorre em conta de corretora (L2), qual condicao minima para o PRIMEIRO uso em conta real depois do ciclo Sim aprovado?",
+  "criteria": { "OPERADOR_PRESENTE_QTY_MINIMA": "operador presente, quantidade minima, primeira saida e primeira reentrada acompanhadas, STOP imediato a qualquer alerta critico", "OPERADOR_PRESENTE": "operador presente, quantidade normal", "SEM_CONDICAO": "nenhuma condicao adicional", "NAO_LIBERAR": "nao liberar conta real com esta evidencia" } },
+ "risco_residual": { "type": "score", "instructions": "Risco residual de importar o patch na OLIVER com robo em STOP e conta real excluida, tendo rollback pronto.", "criteria": ["alto", "moderado", "baixo"] }
+}

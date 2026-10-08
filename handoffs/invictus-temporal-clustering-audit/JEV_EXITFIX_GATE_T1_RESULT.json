@@ -1,0 +1,61 @@
+{
+ "request_id": "req_01a11ca5380570cd90aa0d7a8d1e3018",
+ "model": "jev-1.13.0",
+ "answers": {
+  "porta": {
+   "type": "choice",
+   "choice": "B",
+   "confidence": 0.61,
+   "probabilities": {
+    "A": 0.28,
+    "B": 0.71,
+    "C": 0,
+    "D": 0.01
+   }
+  },
+  "evidencia_suficiente": {
+   "type": "choice",
+   "choice": "NAO",
+   "confidence": 0.25,
+   "probabilities": {
+    "SIM": 0.37,
+    "NAO": 0.63
+   }
+  },
+  "porta_sim_obrigatoria": {
+   "type": "choice",
+   "choice": "SIM",
+   "confidence": 0.99,
+   "probabilities": {
+    "SIM": 1,
+    "NAO": 0
+   }
+  },
+  "primeira_real": {
+   "type": "choice",
+   "choice": "OPERADOR_PRESENTE_QTY_MINIMA",
+   "confidence": 0.55,
+   "probabilities": {
+    "OPERADOR_PRESENTE_QTY_MINIMA": 0.66,
+    "OPERADOR_PRESENTE": 0.03,
+    "SEM_CONDICAO": 0.04,
+    "NAO_LIBERAR": 0.27
+   }
+  },
+  "risco_residual": {
+   "type": "score",
+   "score": 1.47,
+   "confidence": 0.21,
+   "legend": {
+    "0": "alto",
+    "1": "moderado",
+    "2": "baixo"
+   },
+   "probabilities": {
+    "0": 0.05,
+    "1": 0.42,
+    "2": 0.53
+   }
+  }
+ }
+}

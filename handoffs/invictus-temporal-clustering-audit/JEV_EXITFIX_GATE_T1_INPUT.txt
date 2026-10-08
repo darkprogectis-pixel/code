@@ -1,0 +1,36 @@
+INVICTUS - EXIT_LAYER_FIX X2 - REAVALIACAO DA PORTA FINAL (sem reabrir causa raiz, desenho ou patch)
+
+RESTRICAO NOVA DO OPERADOR
+Nao havera VM, outra maquina, outro Windows nem ambiente novo. A validacao deve terminar usando SOMENTE a maquina OLIVER existente, pelo caminho mais simples e seguro, sem colocar a conta real em risco.
+
+HISTORICO DAS DECISOES
+JEV DESIGN T5 = A 0,93. JEV DIFF T1 = B 0,66 (A 0,31): pendencia unica = teste em NinjaTrader real, conta Sim, antes do pacote; porta apos importacao = ciclo completo em Sim 0,98. JEV DIFF T2: instancia isolada 0,56, segundo = zip de TESTE na propria OLIVER 0,42. A instancia isolada foi encerrada (nao recuperavel por meio legitimo). JEV ROUTE T1: ambiente limpo 0,88 - agora vetado pelo operador. A auditoria do host confirmou: nenhuma VM, uma unica instalacao de NinjaTrader (a da OLIVER).
+
+EVIDENCIA JA PRODUZIDA
+E1 Causa raiz provada (JEV INCIDENT A).
+E2 Patch em staging: somente 3 arquivos, +370 / -45 linhas, inesperados 0, FORCA_JANELA_30 identica por hash.
+E3 Compilacao da arvore completa: 464 de 464, 0 erros.
+E4 Codigo instalado hoje, cenario T01 (LONG -> saida -> reentrada no mesmo ciclo -> saida, ids no modelo da conta real): reproduz o incidente (3 fechamentos = 9 contratos para 3+3, conta final SHORT 3).
+E5 Staging: 28 de 28 cenarios no harness + T27 por hash = 29 de 29.
+E6 Bancada do executor real: os metodos reais do robo (saida, espera de confirmacao, revalidacao, reverificacao, gravacao e recarga do registro, dois caminhos de fechamento de perna) contra corretora simulada: 32 de 32.
+E7 Invariantes I1 a I8 PASS.
+
+O QUE A EVIDENCIA NAO COBRE (declarado)
+L1 Nenhum codigo do patch rodou dentro do NinjaTrader: threads reais, eventos reais de ordem e de execucao, e o caminho do evento de execucao ate o registro de execucoes por perna (na bancada as execucoes foram entregues direto ao registro).
+L2 Em conta Sim a plataforma NAO troca o id da ordem; a troca de id (gatilho do incidente) so ocorre em conta de corretora. Um teste Sim cobre L1, nao a troca de id; a troca de id esta coberta so por simulacao (E4, E5, E6).
+L3 Ordem de fechamento que some sem rastro: o robo nao reenvia; posicao fica aberta ate o alerta de 60 s e a acao do operador (consequencia aceita do desenho).
+L4 Na avaliacao anterior o JEV considerou que a bancada fecha o ponto residual apenas parcialmente (0,94 de 2, confianca baixa) e que o risco de falsa seguranca dela e alto (0,65).
+
+FATOS OPERACIONAIS DA OLIVER
+O1 A OLIVER tem a conta real conectada e contas Sim no mesmo NinjaTrader. O robo esta em STOP. O operador controla quais contas o robo usa (selecao de contas) e o PLAY.
+O2 Qualquer teste dentro do NinjaTrader da OLIVER exige importar os 3 arquivos no NinjaTrader principal (compilacao pela plataforma). Existe zip de rollback pronto com os 3 originais, conferido contra o instalado.
+O3 O conteudo do zip de TESTE e o do pacote oficial seriam identicos (os mesmos 3 arquivos).
+
+OPCOES
+A Evidencia existente e suficiente: aprovar o JEV DIFF e gerar o pacote oficial da OLIVER (import + rollback), sem importar; a porta Sim de ciclo completo continua obrigatoria depois da importacao e antes de qualquer PLAY em conta real.
+B Falta somente um teste Sim/Playback na propria OLIVER, com a conta real completamente excluida da selecao do robo e o robo real em STOP, ANTES de aprovar o JEV DIFF e de existir pacote oficial (importando o zip de TESTE).
+C Existe outro teste minimo na propria maquina, sem nova infraestrutura (indicar qual).
+D Ha bloqueio tecnico real: falta evidencia indispensavel que 29 de 29 + 32 de 32 nao substituem (indicar qual).
+
+OBSERVACAO DO EXECUTOR
+As opcoes A e B levam ao mesmo ato fisico (importar os mesmos 3 arquivos na OLIVER e rodar o ciclo completo so em Sim antes de qualquer conta real). A diferenca e a ordem formal: em A o pacote oficial e gerado agora e o ciclo Sim e a porta pos-importacao; em B o ciclo Sim vem antes, com zip de TESTE, e o pacote oficial depois.
