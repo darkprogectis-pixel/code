@@ -1,0 +1,9 @@
+{
+ "diff": { "type": "choice", "instructions": "A implementacao em staging corresponde fielmente ao design JANELA_30 aprovado e reduz a dependencia temporal/reset do INVICTUS sem desativar a seletividade do gate de forca ou introduzir regressoes materiais?",
+  "criteria": { "A": "SIM: fiel ao design, sem regressao material; pode gerar o pacote de importacao da OLIVER (importacao manual pelo operador)", "B": "NAO AINDA: ha correcao especifica e identificavel a fazer na implementacao antes do pacote", "C": "NAO: a implementacao diverge do design ou introduz regressao material", "D": "outro" } },
+ "correcao": { "type": "choice", "instructions": "Se a decisao nao for A, qual item precisa ser corrigido antes do pacote?",
+  "criteria": { "NENHUM": "nenhum", "ELEICAO_Z": "a eleicao propria da medida de forca", "FAIL_CLOSED_30MIN": "a regra de validade da janela (cobertura de 30 min apos carga ou buraco)", "BRIDGE_OBSERVABILIDADE": "expor z e corrigir o rotulo block no bridge antes de instalar", "THETA": "o valor ou a forma de configurar theta", "RUNTIME_ANTES": "validar em runtime ou playback antes de qualquer pacote", "OUTRO": "outro item" } },
+ "fidelidade": { "type": "score", "instructions": "Fidelidade da implementacao C sharp ao modelo matematico aprovado.", "criteria": ["diverge", "parcial", "fiel"] },
+ "seletividade": { "type": "score", "instructions": "A seletividade do gate de forca esta preservada (nao equivale a desligar o gate)?", "criteria": ["nao preservada", "parcial", "preservada"] },
+ "regressao": { "type": "score", "instructions": "Risco de regressao material em componentes nao relacionados (motor, saidas, protecoes, identidade, APIs).", "criteria": ["alto", "moderado", "baixo"] }
+}

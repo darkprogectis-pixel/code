@@ -104,3 +104,42 @@ Passo 4 novo, por símbolo: z = Σ(lado·vol) / √Σ(vol²) em janela móvel de
 2. Compilar com `oliver-main-pgcap-20261007\tools\compile_oliver.ps1` (0 erros) · harness de equivalência C# × `tools\alt2.js` (mesmos ticks, mesmo veredito) · replay completo 44 sessões.
 3. JEV DIFF (pergunta: o diff implementa exatamente a especificação 13.4 e nada mais?) ⇒ se A, montar import zip OLIVER + rollback. Importação só pelo operador.
 4. Fechar lacunas do JEV: validação em runtime/playback; aceite explícito do operador para o gate passar a exigir sinal.
+
+## 14. FORCA_JANELA_30 — IMPLEMENTADO EM STAGING, JEV DIFF A, PACOTE OLIVER PRONTO (sessão 6b86565f, 2026-10-08)
+**STATUS = READY_FOR_OPERATOR_IMPORT.** NT8 principal NÃO alterado (só leitura de 3 arquivos para o backup) · ORDERS 0 · F5 0. Pasta `W` = `Desktop\Handof TTW\HANDOFF\conf-tests\pack-native-20261006\invictus-temporal-clustering-audit-20261008`.
+
+### 14.1 Implementação (3 arquivos, +143 / −12 linhas; `W\tests\Z30_STAGING.diff`; gerador `W\tools\apply_z30.js`; `W\staging\{before,after}`)
+| Arquivo (`Indicators\TTW_DarkProjects\`) | SHA256 antes (= instalado) | SHA256 depois | Mudança |
+|---|---|---|---|
+| `AlfaOmegaSharedState.cs` | cb1dc884… | 70ba382f… | classe pura `AoForcaJanela` (1800 baldes de 1 s; `Tick`, `ViradaSessao`, `MarcarLocal`, `Ler`, `Avaliar`) · campos `Forca_ES/NQ` · `AoGate.ForcaZMin = 3.454` · sobrecarga `EsNq(minForce, freshSec, now)` · passo 4 = sinal(z) = direção e abs(z) ≥ ForcaZMin nos dois; mensagens "forca fraca …" mantidas |
+| `AoTapeEngine.cs` | 845700b9… | 7e2a1c38… | alimenta a janela em todo negócio (ao vivo e Backfill) e avisa a virada de sessão |
+| `AoMarketDataPublisher.cs` | c7e23175… | 19452fcb… | `PublicarForca` com eleição própria (chave símbolo + sufixo Z); `Encerrar` libera o posto |
+
+UNEXPECTED_CHANGED_FILES = 0 (474 arquivos). Inalterados: Robo 32c84685 · RoboFontes 172a758a · RoboMotor ecfe8f9c · AuthV2 4a64c54e · AoLicenca 9887afe9 · AoLogin 83268d92 · AoControlCenter e4d935d9 · AoPressSessao 097279c8. Press/PressVol/LimiarForca seguem compilados e publicados como telemetria, sem decidir.
+
+### 14.2 Provas
+- **Compile** (oráculo Roslyn, bin oficial 8.1.8.2 extraído, Program Files não carregado): 464/464, fontes ausentes 0, **erros 0** (`tests\COMPILE_Z30_AFTER.json`).
+- **Harness C# × replay** (`harness\Z30Driver.cs` + `run_z30_harness.ps1`; fontes reais do staging: SharedState, TapeEngine, PressSessao, RoboMotor; 73,9 milhões de negócios reais; `tests\11_harness_cs_vs_replay_z30.txt`): 182 160 passos · anchor 100,000000 % · passos 1–3 100 % · direção 100 % · MAX_NUMERIC_ERROR z ES 1,8e-15 / NQ 8,9e-16 · GATE_MISMATCH 0 / 0 · ANCHOR_MISMATCH 0 · entradas do motor C# real 860 = modelo JS 860 (860 no mesmo timestamp).
+- **Casos sintéticos no C# real:** 18/18 PASS (`tests\HARNESS_Z30_CASES.json`) — fail-closed sem publicador / janela não coberta / medida velha / buraco > 300 s; pausa de virada aceita nas duas ordens; sinal contrário reprova; passos 1 e 3 intactos.
+- **Replay 44 sessões (motor C# real):** 860 entradas · 19,5/sessão · clusters 374 · gap mediano 30 min · p90 3,1 h · máx. 27,7 h · gaps > 2 h / 4 h / 8 h = 170 / 56 / 15 · overnight 440 · RTH 420 · 18–20h ET 9,3 % · horas sem entrada 0 · CV horário 0,50 · consistência de direção 100 % · PnL descritivo com stops reais +16,3/trade, acerto 44 % (826 anchor_neutro, 22 trailing NQ, 11 hard stop NQ, 1 trailing ES).
+  Referências: BASE/P-RTH1 341 · 7,8 · p90 13,3 h · 52 / 44 · 56 % · RTH 0 — P-GCAP 612 · 13,9 · p90 3,9 h · 61 / 42 · 31 % · RTH 160 — SEM_FORCE 6516 · 148,1/sessão.
+- **JEV DIFF = A · prob. 0,93 (conf 0,91) · req_01a11b953e517b13b2bab1bad0b833f1** — fidelidade 1,96/2 · seletividade 1,85/2 · risco de regressão baixo 1,96/2. Itens residuais apontados (não bloqueantes): validação em runtime 0,62 · observabilidade no bridge 0,26.
+
+### 14.3 Pacote OLIVER (`W\build\`; `tests\BUILD_Z30_ZIPS.json`)
+- **OLIVER_IMPORT_ZIP** = `AlfaOmega_OLIVER_INVICTUS_FORCAJANELA30_import.zip` · SHA256 **7230586bc22f281dccf1d3804aac9df59b526fa3dcacd2fedddc8a18300cd0a7** · 4 entradas: Info.xml + os 3 arquivos acima (cada entrada == staging\after). Sem Auth/Login/Licença/DLL/config.
+- **ROLLBACK_ZIP** = `AlfaOmega_OLIVER_INVICTUS_FORCAJANELA30_ROLLBACK_import.zip` · SHA256 **16497feeead5f38835bc43c8ee83ced6817ec1d1fa38cbb9d840f4ad1e500b37** · Info.xml + os 3 instalados hoje (cb1dc884 / 845700b9 / c7e23175).
+- Backup versionado: `W\backup\20261008-095559\` + SHA256SUMS.txt (== instalado no momento).
+- Roundtrip em cópia: import sobre o snapshot instalado == árvore do staging (474 arquivos, 3 alterados); rollback por cima == snapshot pré-import.
+- Hash NORMALIZADO para conferir depois do import (o NT8 reescreve BOM/fim de linha): SharedState dc57b9a9cba61c2e · TapeEngine 7bc6e19f0212f3df · Publisher d5b37d4023fe76d4 (sem BOM, CRLF→LF, sem quebra de linha final; `tests\Z30_NORMALIZED_SHA.txt`).
+
+### 14.4 Comportamentos novos que o operador vai ver
+1. Depois de carregar o NT8 (ou de um buraco de tape > 300 s) o passo de força só volta a valer quando a janela de 30 min estiver coberta; os ticks históricos da carga contam. Pode haver até 30 min de "forca fraca" após reiniciar.
+2. A medida é publicada pelo Control Center (eleição própria). Sem Control Center carregado o gate fecha por força.
+3. O bridge `:5151` não expõe z; o campo `block` continua derivado do estado do Press e pode rotular FORCE_BELOW_MIN / PRESS_NOT_VALID um bloqueio que agora é do z. `press`/`pressState` seguem publicados como telemetria.
+4. Giro esperado ~19,5 entradas/sessão (P-GCAP 13,9), entradas distribuídas por todas as horas; gaps > 4 h continuam existindo.
+
+### 14.5 EXACT_NEXT_STEP = OPERATOR_STOP_FLAT_IMPORT_VALIDATION
+1. Operador: robô em STOP, FLAT, sem ordens working ⇒ Tools > Import > `AlfaOmega_OLIVER_INVICTUS_FORCAJANELA30_import.zip` (compila sozinho, sem F5) ⇒ avisar "IMPORT FEITO". Não dar PLAY antes da verificação.
+2. Claude (somente leitura): hash normalizado dos 3 instalados == 14.3; Robo/AuthV2/AoLicenca/AoLogin == originais; log NT8 sem erro de compilação; snapshot + oráculo de compilação pós-import; bridge/audit: o anchor volta a avaliar de forma coerente depois que a janela cobrir.
+3. Fechar as lacunas do JEV: observar o runtime por uma sessão (incluindo a virada das 18:00 ET) com o coletor passivo; JEV FINAL antes de liberar PLAY.
+4. Rollback, se necessário: importar o zip ROLLBACK (mesmo procedimento).

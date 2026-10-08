@@ -1,0 +1,76 @@
+{
+ "request_id": "req_01a11b953e517b13b2bab1bad0b833f1",
+ "model": "jev-1.13.0",
+ "answers": {
+  "diff": {
+   "type": "choice",
+   "choice": "A",
+   "confidence": 0.91,
+   "probabilities": {
+    "A": 0.93,
+    "B": 0.06,
+    "C": 0.01,
+    "D": 0
+   }
+  },
+  "correcao": {
+   "type": "choice",
+   "choice": "RUNTIME_ANTES",
+   "confidence": 0.55,
+   "probabilities": {
+    "NENHUM": 0.08,
+    "ELEICAO_Z": 0,
+    "FAIL_CLOSED_30MIN": 0.01,
+    "BRIDGE_OBSERVABILIDADE": 0.26,
+    "THETA": 0.01,
+    "RUNTIME_ANTES": 0.62,
+    "OUTRO": 0.02
+   }
+  },
+  "fidelidade": {
+   "type": "score",
+   "score": 1.96,
+   "confidence": 0.94,
+   "legend": {
+    "0": "diverge",
+    "1": "parcial",
+    "2": "fiel"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.03,
+    "2": 0.97
+   }
+  },
+  "seletividade": {
+   "type": "score",
+   "score": 1.85,
+   "confidence": 0.78,
+   "legend": {
+    "0": "nao preservada",
+    "1": "parcial",
+    "2": "preservada"
+   },
+   "probabilities": {
+    "0": 0.03,
+    "1": 0.08,
+    "2": 0.89
+   }
+  },
+  "regressao": {
+   "type": "score",
+   "score": 1.96,
+   "confidence": 0.94,
+   "legend": {
+    "0": "alto",
+    "1": "moderado",
+    "2": "baixo"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.03,
+    "2": 0.97
+   }
+  }
+ }
+}

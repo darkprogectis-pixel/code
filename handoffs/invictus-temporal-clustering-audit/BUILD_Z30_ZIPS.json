@@ -1,0 +1,84 @@
+{
+    "backup":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\backup\\20261008-095559",
+    "backup_files":  [
+                         "cb1dc8849f34ea9beb6bba198db9cbd92ff9cb08af9e2f86295a8d1997eb90c6  Indicators\\TTW_DarkProjects\\AlfaOmegaSharedState.cs",
+                         "845700b92dc63d5f12865e5238c9740af575bd00efff1b9c4926de14fe491d02  Indicators\\TTW_DarkProjects\\AoTapeEngine.cs",
+                         "c7e23175c544772f21fab3e25f53739a3e9d6b54fcddc5bbab17a7cad072e5c5  Indicators\\TTW_DarkProjects\\AoMarketDataPublisher.cs"
+                     ],
+    "info_xml_sha256":  "ffb3a3cbe8d83f1bdf65298af487ebadc20e0497205b87e516b03e586363fcff",
+    "ref_zip_entries":  [
+                            "Info.xml",
+                            "AddOns/AlfaOmegaRoboFontes.cs",
+                            "Indicators/TTW_DarkProjects/AlfaOmegaSharedState.cs",
+                            "Indicators/TTW_DarkProjects/AoMarketDataPublisher.cs"
+                        ],
+    "zips":  [
+                 {
+                     "zip":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\build\\AlfaOmega_OLIVER_INVICTUS_FORCAJANELA30_import.zip",
+                     "sha256":  "7230586bc22f281dccf1d3804aac9df59b526fa3dcacd2fedddc8a18300cd0a7",
+                     "entries":  [
+                                     {
+                                         "entry":  "Info.xml",
+                                         "bytes":  130,
+                                         "sha256":  "ffb3a3cbe8d83f1bdf65298af487ebadc20e0497205b87e516b03e586363fcff",
+                                         "match":  true
+                                     },
+                                     {
+                                         "entry":  "Indicators/TTW_DarkProjects/AlfaOmegaSharedState.cs",
+                                         "bytes":  58996,
+                                         "sha256":  "70ba382f90d64e0c0240878a34883ddd8157cc1fb82f37b1e84ba9c56d87120a",
+                                         "match":  true
+                                     },
+                                     {
+                                         "entry":  "Indicators/TTW_DarkProjects/AoTapeEngine.cs",
+                                         "bytes":  12316,
+                                         "sha256":  "7e2a1c38ff1c8c23e7828034f036ac8738f8ff26a3de1ea4758cc473bd347f99",
+                                         "match":  true
+                                     },
+                                     {
+                                         "entry":  "Indicators/TTW_DarkProjects/AoMarketDataPublisher.cs",
+                                         "bytes":  11271,
+                                         "sha256":  "19452fcb5d49a83900926af04420ab76f9bca536020ec9950e7f227a2cbb3ba1",
+                                         "match":  true
+                                     }
+                                 ],
+                     "n_entries":  4,
+                     "all_match":  true,
+                     "forbidden_entries":  0
+                 },
+                 {
+                     "zip":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\build\\AlfaOmega_OLIVER_INVICTUS_FORCAJANELA30_ROLLBACK_import.zip",
+                     "sha256":  "16497feeead5f38835bc43c8ee83ced6817ec1d1fa38cbb9d840f4ad1e500b37",
+                     "entries":  [
+                                     {
+                                         "entry":  "Info.xml",
+                                         "bytes":  130,
+                                         "sha256":  "ffb3a3cbe8d83f1bdf65298af487ebadc20e0497205b87e516b03e586363fcff",
+                                         "match":  true
+                                     },
+                                     {
+                                         "entry":  "Indicators/TTW_DarkProjects/AlfaOmegaSharedState.cs",
+                                         "bytes":  52942,
+                                         "sha256":  "cb1dc8849f34ea9beb6bba198db9cbd92ff9cb08af9e2f86295a8d1997eb90c6",
+                                         "match":  true
+                                     },
+                                     {
+                                         "entry":  "Indicators/TTW_DarkProjects/AoTapeEngine.cs",
+                                         "bytes":  11564,
+                                         "sha256":  "845700b92dc63d5f12865e5238c9740af575bd00efff1b9c4926de14fe491d02",
+                                         "match":  true
+                                     },
+                                     {
+                                         "entry":  "Indicators/TTW_DarkProjects/AoMarketDataPublisher.cs",
+                                         "bytes":  10282,
+                                         "sha256":  "c7e23175c544772f21fab3e25f53739a3e9d6b54fcddc5bbab17a7cad072e5c5",
+                                         "match":  true
+                                     }
+                                 ],
+                     "n_entries":  4,
+                     "all_match":  true,
+                     "forbidden_entries":  0
+                 }
+             ],
+    "rollback_equals_installed":  true
+}
