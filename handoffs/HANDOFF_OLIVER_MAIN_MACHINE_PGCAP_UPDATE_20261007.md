@@ -194,3 +194,5 @@ Etapa passiva por ordem do operador (PLAY_ATIVADO = YES). Claude só leu arquivo
 - **Ainda NÃO liberar PLAY:** os AddOns recarregaram no assembly novo, mas os indicadores dos gráficos (Control Center = publicador) não; o robô novo está com "sem tape ES/NQ" / "nenhum publicador eleito" desde 13:02:31Z (gate fechado, motor FLAT, sem risco).
 - **OPERATOR_ACTION:** reiniciar o NinjaTrader (fechar e abrir), robô em STOP, sem F5 ⇒ avisar "NT8 REINICIADO" ⇒ Claude verifica (só leitura) ⇒ NEXT = OPERATOR_PLAY. Detalhe em `handoffs/HANDOFF_INVICTUS_TEMPORAL_CLUSTERING_AUDIT_20261008.md` §15.
 - ORDERS 0 · F5 0.
+
+- **13:19Z:** operador informou reinício, mas o processo NT8 é o mesmo (PID 12752, início 00:05:26 BRT); robô novo segue "sem tape ES/NQ". PLAY continua NÃO liberado; falta fechar e reabrir o NinjaTrader. ORDERS 0 · F5 0.
