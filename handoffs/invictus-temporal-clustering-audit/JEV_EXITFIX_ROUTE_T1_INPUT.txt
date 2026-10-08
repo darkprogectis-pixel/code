@@ -1,0 +1,19 @@
+INVICTUS - EXIT_LAYER_FIX X2 - NOVA DECISAO DE ROTA PARA O TESTE EM NINJATRADER REAL (CONTA SIM)
+
+CONTEXTO
+JEV DIFF T1 = B 0,66 (req_01a11c94be5e775c812f9a07b54e3143): exigido teste em NinjaTrader real, conta Sim, antes do pacote da OLIVER. JEV DIFF T2 (req_01a11c9547347b71a7a90e58c67dc8fd): caminho N1 instancia isolada 0,56; segundo N2. O operador excluiu N2 (nao importar nada na OLIVER principal antes de JEV DIFF = A).
+Provas ja obtidas: base T01 reproduz o incidente; staging 28 de 28; bancada do executor real 32 de 32; compilacao 464 itens, 0 erros; so 3 arquivos alterados. Robo em STOP, conta real FLAT.
+
+AUDITORIA SOMENTE LEITURA DA DIFERENCA ENTRE O AMBIENTE-MAE E A INSTANCIA ISOLADA (evidencia ja registrada em 07/10 e reconferida hoje)
+A1 O provisionamento de 07/10 criou um usuario Windows local separado, com perfil proprio, e copiou SOMENTE dados de Playback de ES/NQ e os zips de teste. Nao copiou nenhum estado do usuario principal (registro do usuario, AppData, configuracao do NinjaTrader), por desenho.
+A2 A instalacao em Program Files e compartilhada. Nela, a biblioteca de protecao original do NinjaTrader foi substituida por um carregador de terceiros sem assinatura, que carrega um plugin empacotado tambem sem assinatura; a biblioteca original esta renomeada ao lado. Fornecedor desconhecido; sem relacao com o projeto; nao consta no registro de instalacao.
+A3 A janela Registration (ID + chave) pertence a esse carregador, nao ao NinjaTrader. O estado de ativacao dele e por usuario Windows: o usuario principal ja esta ativado; o usuario isolado nao.
+A4 Portanto a janela NAO prova licenca do NinjaTrader; ela e a ativacao de um carregador que fica no lugar da protecao de licenca original.
+A5 Fazer a instancia isolada passar dessa janela exige ativar o carregador para o segundo usuario (digitando ID + chave) ou levar o estado de ativacao do usuario principal. As duas formas equivalem a estender um contorno de licenca a outro usuario. O executor NAO fara isso, nem investigara onde esse estado fica guardado, qualquer que seja a decisao. Nao existe procedimento documentado e legitimo, pertencente a maquina-mae, que evite essa janela sem uma dessas duas formas.
+A6 Conclusao: N1 nao e recuperavel por meio legitimo nesta instalacao.
+
+ROTAS RESTANTES
+R1 NINJATRADER OFICIAL EM AMBIENTE LIMPO: instalador oficial do fabricante em VM ou outra maquina, modo Sim/Playback (gratuito), nenhuma conta real, importar so o zip de TESTE, executar o ciclo completo (entrada -> saida -> reentrada -> saida) com eventos reais de ordem e execucao, depois JEV DIFF T3. Depende de o operador providenciar o ambiente.
+R2 MANTER STOP: nao testar agora; robo em STOP ate existir ambiente.
+R3 REABRIR N2: pedir ao operador que reconsidere a exclusao (zip de TESTE na OLIVER com conta real desmarcada, PLAY so em Sim). Hoje excluido por ordem dele.
+R4 DISPENSAR O TESTE EM NINJATRADER REAL: rever o JEV DIFF T1 e aceitar harness + bancada como suficientes para gerar o pacote, mantendo a porta Sim obrigatoria depois da importacao.

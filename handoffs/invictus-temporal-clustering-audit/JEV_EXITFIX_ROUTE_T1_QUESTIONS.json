@@ -1,0 +1,8 @@
+{
+ "rota": { "type": "choice", "instructions": "Com N1 nao recuperavel por meio legitimo e N2 excluido pelo operador, qual rota deve ser levada ao operador como proximo passo unico?",
+  "criteria": { "R1": "NinjaTrader oficial em ambiente limpo (VM ou outra maquina), Sim/Playback, zip de TESTE", "R2": "manter STOP e nao testar agora", "R3": "pedir ao operador que reconsidere N2", "R4": "dispensar o teste em NinjaTrader real e seguir para o pacote com porta Sim apos a importacao" } },
+ "segunda": { "type": "choice", "instructions": "Se a primeira rota for inviavel para o operador, qual e a segunda?",
+  "criteria": { "R1": "NinjaTrader oficial em ambiente limpo", "R2": "manter STOP", "R3": "reconsiderar N2", "R4": "dispensar o teste em NinjaTrader real" } },
+ "n1_encerrado": { "type": "choice", "instructions": "A conclusao A6 (N1 nao recuperavel por meio legitimo nesta instalacao) esta suficientemente provada para encerrar N1?",
+  "criteria": { "SIM": "encerrar N1", "NAO": "falta prova" } }
+}
