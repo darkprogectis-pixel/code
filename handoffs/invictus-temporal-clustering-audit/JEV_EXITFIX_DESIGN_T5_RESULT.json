@@ -1,0 +1,78 @@
+{
+ "request_id": "req_01a11c78e1cc70948150ca238dacc7d6",
+ "model": "jev-1.13.0",
+ "answers": {
+  "t5": {
+   "type": "choice",
+   "choice": "A",
+   "confidence": 0.91,
+   "probabilities": {
+    "B": 0.05,
+    "D": 0.01,
+    "A": 0.93,
+    "C": 0
+   }
+  },
+  "detalhe": {
+   "type": "choice",
+   "choice": "EXECUTOR_NAO_TESTADO",
+   "confidence": 0.65,
+   "probabilities": {
+    "EXECUTOR_NAO_TESTADO": 0.6900000000000001,
+    "ALERTA": 0,
+    "SALDO_DESCONHECIDO": 0.03,
+    "ESCOPO_MAIOR": 0,
+    "ESCOPO_MENOR": 0,
+    "NENHUM": 0.17,
+    "C5_GUARDA": 0.05,
+    "PARCIAL_E_RETRY": 0,
+    "OUTRO": 0.05
+   }
+  },
+  "completude": {
+   "type": "score",
+   "score": 1.89,
+   "confidence": 0.83,
+   "legend": {
+    "0": "incompleta",
+    "1": "parcial",
+    "2": "completa"
+   },
+   "probabilities": {
+    "0": 0.01,
+    "1": 0.09,
+    "2": 0.9
+   }
+  },
+  "minimalidade": {
+   "type": "score",
+   "score": 1.45,
+   "confidence": 0.19,
+   "legend": {
+    "0": "excessiva",
+    "1": "aceitavel",
+    "2": "minima"
+   },
+   "probabilities": {
+    "0": 0.09,
+    "1": 0.36,
+    "2": 0.55
+   }
+  },
+  "risco_regressao": {
+   "type": "score",
+   "score": 1.07,
+   "confidence": 0.68,
+   "legend": {
+    "0": "alto",
+    "1": "moderado",
+    "2": "baixo"
+   },
+   "probabilities": {
+    "0": 0.07,
+    "1": 0.79,
+    "2": 0.14
+   }
+  }
+ }
+}

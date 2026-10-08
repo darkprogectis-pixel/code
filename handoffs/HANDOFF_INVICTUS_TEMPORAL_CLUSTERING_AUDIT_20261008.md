@@ -330,3 +330,22 @@ Reprodução do incidente (LONG → saída → reentrada no mesmo ciclo → saí
 1. Dossiê de detalhe (só leitura do código atual): funções a alterar e fluxo (`ExecutarSaida`, `AoRoboSaida.Decidir`, `RevalidarClose`, `EsperarFilled`, registro `_execucoes`/`motor-execucoes.json`, rastreador de ordens/`OrderUpdate`/`ExecutionUpdate`, rotina de alertas); estrutura e persistência do saldo por perna; recuperação após reinício; comportamento com evento perdido/atrasado.
 2. JEV DESIGN T5 sobre o dossiê ⇒ só com A: implementar em staging + harness da matriz ⇒ JEV DIFF ⇒ pacote OLIVER + rollback ⇒ importação manual.
 3. Conta real em STOP até lá. Pendente em paralelo: JEV da auditoria de comportamento temporal da FORCA_JANELA_30.
+
+## EXIT_LAYER_FIX_DESIGN_T5_20261008 — especificação em nível de código APROVADA para staging (sessão 6b86565f, ~17:20Z)
+Somente leitura + JEV. Nenhum código escrito. Robô STOP · conta real FLAT · SAFE_TO_PLAY_REAL = NO · PATCH_STATUS = NOT_STARTED.
+
+- **Dossiê:** `W\DOSSIER_EXIT_LAYER_FIX_X2_20261008.md` (cópia em `handoffs/invictus-temporal-clustering-audit/`). Contém: causa do id "Initialized", vias de dano classificadas, 7 alterações com FILE/FUNCTION/CURRENT/REQUIRED/STATE/INVARIANT/RISK, modelo de estado da perna, 9 casos de reinício, algoritmos, matriz T01–T27, procedimento de rollout dos packs.
+- **JEV DESIGN T5 = A · prob. 0,93 (conf 0,91) · req_01a11c78e1cc70948150ca238dacc7d6** — completude 1,89/2 · minimalidade 1,45/2 (conf baixa 0,19) · risco de regressão MODERADO 1,07/2 · ponto residual apontado: a parte de `ExecutarSaida` que fala com o NinjaTrader fica fora do harness e precisa de teste adicional definido (0,69; nenhum 0,17).
+- **Achado que reduz o escopo:** o saldo por perna deriva de estado já existente e persistido — `AoRoboFechamento._fills` (execuções por `intentId` com nome da ordem, alimentado por `OnExecucao`, gravado em `state\motor-fechamentos.json`). Nenhum campo persistido novo; nenhuma migração.
+- **Alterações (3 arquivos):** C1 `AlfaOmegaRoboFechamento.cs` novo `SaldoPerna` (puro) · C2 `AlfaOmegaRoboSaida.cs` `Decidir` (sobrecarga com saldo/posição disponível; fechamento por NOME; estado desconhecido nunca reenvia) + função pura nova `PlanejarSaidas` · C3 `AlfaOmegaRobo.cs` `ExecutarSaida` (posição disponível por conta/instrumento/lado com abatimento no laço; `soPendentes`) · C4 `RevalidarClose` (min(saldo, disponível)) · C5 `MotorPasso` l.686–689 (reverificação em todo ciclo, só pernas com fechamento já enviado) · C6 alertas via `AoRoboAlertas` (`broker_divergence`, `flatten_fail`, `close_unconfirmed` > 60 s) · C7 `EsperarFilled` → confirmação por saldo/nome.
+- **Não mudam:** `AlfaOmegaTrader.cs`, `AlfaOmegaRoboMotor.cs`, `AlfaOmegaSharedState.cs`/`AoTapeEngine.cs`/`AoMarketDataPublisher.cs` (FORCA_JANELA_30), entradas, proteção, escolta do take (pacote separado), identidade/licença.
+- **ORDER_ID_INITIALIZED_CAUSE:** `PlaceCore` devolve o `OrderId` lido no envio; `OrdersJson` emite o `OrderId` atual; na conta real o NT8 troca o id (bb1b08f6… → 674389781092); `EsperarFilled` procura o id inicial e devolve o último estado visto. Não provado: o instante exato da troca dentro do NT8.
+- **OTHER_DAMAGE_PATHS:** trailing + reabertura mesmo ciclo/lado PROVEN · lado oposto PROVEN sem dano · `flatten_retry` com posição alheia POSSIBLE · reinício com perna não verificada POSSIBLE · saída comum/anchor_neutro + nova entrada NOT_FOUND · stop/take executado NOT_FOUND · retry após rejeição NOT_FOUND.
+
+### EXACT_NEXT_STEP = IMPLEMENT_STAGING_ONLY (aguardando retorno do operador/ChatGPT; não iniciado)
+1. Staging fora do NT8: cópia da árvore instalada (snapshot novo por `snapshot_oliver.ps1`, conferir hashes) + C1–C7; SHA256 antes/depois; inesperados 0.
+2. Harness com as peças puras reais: T01 primeiro contra o código ATUAL (reproduzir a inversão), depois T01–T27 no staging.
+3. Fechar o ponto residual do T5: definir e executar teste do executor (`ExecutarSaida` real) — por exemplo em conta Sim com o NT8 isolado — antes do JEV DIFF.
+4. Compile (oráculo 464 itens) → JEV DIFF → pacote OLIVER + rollback → importação manual → validação.
+5. Depois: rollout dos demais packs conforme dossiê §F (inventário, classificação por hash, patch só nos AFFECTED, sem distribuição automática).
+6. Pendente em paralelo: JEV da auditoria de comportamento temporal da FORCA_JANELA_30.

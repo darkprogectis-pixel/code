@@ -1,0 +1,9 @@
+{
+ "t5": { "type": "choice", "instructions": "Esta especificacao em nivel de codigo implementa de forma completa e minima o desenho X2 aprovado conceitualmente, fecha o defeito de double-flatten/inversao sem regressao material e esta suficientemente definida para iniciar implementacao SOMENTE em staging?",
+  "criteria": { "A": "aprovado para implementacao staging", "B": "falta detalhe especifico, indicado na pergunta 'detalhe'", "C": "desenho precisa mudar", "D": "outro" } },
+ "detalhe": { "type": "choice", "instructions": "Se nao for A, qual e EXATAMENTE o detalhe que falta ou o ponto que precisa mudar?",
+  "criteria": { "NENHUM": "nenhum; aprovado", "C5_GUARDA": "a guarda da reverificacao com motor posicionado (C5) precisa de definicao mais forte para nunca tocar pernas do trade aberto", "SALDO_DESCONHECIDO": "o tratamento de saldo desconhecido (registro antigo ou evento perdido) precisa mudar", "PARCIAL_E_RETRY": "o tratamento de execucao parcial e de retry precisa de mais definicao", "EXECUTOR_NAO_TESTADO": "a parte de ExecutarSaida que fala com o NinjaTrader fica fora do harness; exigir teste adicional definido antes", "ALERTA": "a especificacao do alerta precisa mudar", "ESCOPO_MAIOR": "faltam alteracoes (por exemplo no adaptador de ordens ou no bloqueio de reentrada)", "ESCOPO_MENOR": "ha alteracoes desnecessarias a retirar", "OUTRO": "outro detalhe" } },
+ "completude": { "type": "score", "instructions": "Completude da especificacao em relacao ao desenho X2.", "criteria": ["incompleta", "parcial", "completa"] },
+ "minimalidade": { "type": "score", "instructions": "Minimalidade: a especificacao altera so o necessario?", "criteria": ["excessiva", "aceitavel", "minima"] },
+ "risco_regressao": { "type": "score", "instructions": "Risco de regressao material em saidas normais, contas Sim, protecoes e motor.", "criteria": ["alto", "moderado", "baixo"] }
+}
