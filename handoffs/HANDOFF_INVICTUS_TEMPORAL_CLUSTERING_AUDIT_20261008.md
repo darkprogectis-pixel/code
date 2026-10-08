@@ -445,6 +445,8 @@ Artefatos: `W\build_test\AlfaOmega_TESTE_NAO_OFICIAL_EXITFIX_X2_import.zip` SHA2
 - Pontos abertos do estado congelado (decisão do operador, não do executor): (a) o congelamento inclui a correção de saída não validada — voltar à base exigiria importar o rollback, o que a regra nova proíbe sem ordem; (b) MES/MNQ desligados = conta real fora do robô; (c) PLAY em Sim ligado.
 
 ### Baseline do novo pack (capturado, somente leitura do NT8)
-- `W\newpack_baseline\20261008-172053\ (csproj + 464 fontes + 9 DLLs = 474 arquivos, via `snapshot_oliver.ps1`) + `robo-config\, logs). Baseline fica fora do git (contém nomes de contas).
+- Pasta `W\newpack_baseline\20261008-172053`: subpasta `Custom` (csproj + 464 fontes + 9 DLLs = 474 arquivos, via `snapshot_oliver.ps1`) + subpasta `robo-config` (7 arquivos: accounts, ativos, copy, operacional, runtime, market-window, cme-calendar) + `SHA256SUMS.txt` (481 linhas; sha256 do manifesto 9372631a773345a29f9f3db849461c1fea995ca7f444d357ebfc3a79866067f4).
+- Conferência: 481/481 iguais ao instalado; árvore `Custom` idêntica (0 diferenças) à árvore de staging `oliver_exitfix` já compilada (464/464, 0 erros) e testada (harness 28/28, bancada 32/32).
+- NÃO capturados de propósito: arquivos de segredo/ligação do trader e estado de execução (pasta `state`, logs). Baseline fica fora do git (contém nomes de contas).
 - PACK_BUILD_STATUS = BASELINE_CAPTURED; nenhum zip de pack gerado; nenhuma alteração aplicada.
 - EXACT_NEXT_STEP: operador define a primeira alteração a preparar no novo pack (ou confirma que o novo pack deve apenas reproduzir o estado atual como pacote importável); antes de qualquer patch: JEV DESIGN → staging no novo pack → compile/testes → JEV DIFF → JEV FINAL. Observação do vivo continua passiva.
