@@ -1,0 +1,30 @@
+INVICTUS - ROLLOUT Z30X2 DOS PACKS DE CLIENTES - JEV DIFF OFFLINE (packs RETIDOS)
+
+DECISAO VIGENTE
+JEV ROLLOUT GATE T1 req_01a11d42365f71b592f54c95ed5c263b: preparar agora e RETER ate JEV DIFF T3 = A do EXIT_LAYER_FIX X2 e JEV FINAL de release. Sem bloqueio de software para conta real (correto 0,97). O operador aceitou a retencao.
+
+ESTRUTURA DOS PACKS
+12 clientes em 5 familias de import: F1 (8 clientes), F2 (1), F3 (1), F4 (1) e CANON (1). Cada cliente recebe copia byte a byte do import da sua familia. As familias diferem nos indicadores e na identidade herdados; o nucleo do robo e identico entre elas.
+
+O QUE FOI FEITO (somente offline; NinjaTrader vivo nao tocado)
+D1 Nucleo de cliente: os 6 arquivos do nucleo nos packs P-GCAP sao identicos entre as 5 familias. O arquivo principal do robo dos clientes difere do da OLIVER em 5 linhas (criacao de configuracao inicial em instalacao limpa); o arquivo de estado compartilhado difere so por marca de ordem de bytes e uma linha em branco.
+D2 Patch por diff, nao por copia: os DOIS geradores ja aprovados (FORCA_JANELA_30 e EXIT_LAYER_FIX X2), byte a byte identicos aos usados na OLIVER, foram executados sobre os arquivos de cliente. Todas as ancoras casaram exatamente uma vez. O delta normalizado e identico ao da OLIVER nos 6 arquivos (em 5 por hash do diff; no arquivo de estado compartilhado o conteudo final e igual ao instalado na OLIVER, exceto a marca de ordem de bytes do cliente). As 5 linhas proprias do cliente no arquivo do robo foram preservadas (o resultado difere do da OLIVER exatamente nessas 5 linhas).
+D3 Imports de familia novos: para cada familia, zip novo com a MESMA lista e ordem de entradas do P-GCAP; 6 entradas trocadas; todas as demais copiadas byte a byte. Entradas: F1 125, F2 125, F3 125, F4 110, CANON 63. Entradas alteradas inesperadas: 0 nas 5 familias. Arquivos de autenticacao, licenca, login, painel e indicadores: identicos ao P-GCAP de cada familia.
+
+PROVAS OFFLINE
+T1 Compilacao em 14 cenarios (instalacao limpa de cada familia + upgrade sobre cada base historica de cliente + upgrade sobre o proprio P-GCAP), com as bibliotecas oficiais extraidas: 14 de 14 com 0 erros.
+T2 Harness da saida sobre a arvore de cada familia: 28 de 28 em cada uma das 5.
+T3 Bancada do executor real sobre a arvore de cada familia: 32 de 32 em cada uma das 5.
+T4 FORCA_JANELA_30 sobre os arquivos de gate de cliente (identicos nas 5 familias): 182160 passos 100 por cento iguais a referencia aprovada; 860 de 860 entradas; saidas com o mesmo hash da execucao da OLIVER.
+T5 P-GCAP independencia de API sobre o arquivo de fontes de cada familia: resultado byte a byte igual ao da OLIVER instalada, nas 5.
+T6 Segredos e isolamento: nas linhas novas dos 6 arquivos, 0 e-mails, 0 identificadores de cliente, 0 contas, 0 literais de segredo. Nenhum outro arquivo mudou.
+T7 Conta real: os packs so contem codigo-fonte; nao ha configuracao de contas nem de ativos em nenhum; nao existe caminho de codigo distinto para conta real. Bloqueio tecnico = nenhum; reimportacao futura para habilitar conta real = nao necessaria.
+T8 Inventario: 113 zips com a camada de saida classificados; desconhecidos 0. 87 afetados (imports e copias das 12 entregas em tres geracoes; a geracao vigente e a P-GCAP, agora substituida), 2 ja atuais, 24 nao aplicaveis (16 da linhagem OLIVER, cobertos pelo pack baseline; 8 pacotes historicos de setembro, bases substituidas pelas entregas de familia, com o upgrade sobre eles compilado em T1).
+
+PASTAS DE ENTREGA
+12 pastas montadas, cada uma com: import novo (copia da familia), rollback (copia byte a byte do import P-GCAP que o cliente ja tem), nota de instalacao preservando o bloco de login do cliente, aviso operacional com o texto definido pelo operador, lista de entradas e somas.
+
+O QUE NAO FOI FEITO
+N1 Os zips de transporte por cliente e a copia para a pasta de distribuicao NAO foram gerados: a acao foi negada pelo controle de permissoes do ambiente do executor (classificada como implantacao em producao). Nao contornado.
+N2 Nenhum pack foi importado em NinjaTrader algum. A aceitacao pelo importador e inferida por lista e metadados identicos aos dos packs P-GCAP ja aceitos.
+N3 Validacao em mercado ao vivo e JEV DIFF T3 do EXIT_LAYER_FIX X2: pendentes (o teste Sim de hoje nao teve nenhuma entrada).

@@ -1,0 +1,58 @@
+{
+ "request_id": "req_01a11d5c34737272879eb438b8c71304",
+ "model": "jev-1.13.0",
+ "answers": {
+  "diff": {
+   "type": "choice",
+   "choice": "A",
+   "confidence": 0.92,
+   "probabilities": {
+    "C": 0,
+    "B": 0.06,
+    "A": 0.94,
+    "D": 0
+   }
+  },
+  "pendencia": {
+   "type": "choice",
+   "choice": "OUTRA",
+   "confidence": 0.76,
+   "probabilities": {
+    "NENHUMA": 0.03,
+    "GATE_CLIENTE": 0.05,
+    "OUTRA": 0.8,
+    "IMPORT_TESTE": 0.1,
+    "IDENTIDADE": 0,
+    "TESTE_POR_CLIENTE": 0.02
+   }
+  },
+  "familia_basta": {
+   "type": "choice",
+   "choice": "SIM",
+   "confidence": 0.92,
+   "probabilities": {
+    "NAO": 0.04,
+    "SIM": 0.96
+   }
+  },
+  "antigos": {
+   "type": "choice",
+   "choice": "CORRETO",
+   "confidence": 0.86,
+   "probabilities": {
+    "ATUALIZAR": 0.07,
+    "CORRETO": 0.93
+   }
+  },
+  "final_offline": {
+   "type": "choice",
+   "choice": "A",
+   "confidence": 0.98,
+   "probabilities": {
+    "C": 0,
+    "B": 0.01,
+    "A": 0.99
+   }
+  }
+ }
+}

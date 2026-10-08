@@ -1,0 +1,2862 @@
+[
+    {
+        "familia":  "F1",
+        "base_zip":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\press-recalibration-20261007\\build\\AlfaOmega_F1_INVICTUS_PGCAP_import.zip",
+        "base_sha256":  "b68f1bbc4292e65fef14121dcb6900008c86f10b2fc3c12e67ae1bd5948a2db7",
+        "zip":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\build\\AlfaOmega_F1_INVICTUS_Z30X2_import.zip",
+        "sha256":  "2aa3e38266feb9174cf50b27567dd0a167af181d252b750ed978b0de8713c704",
+        "bytes":  1507713,
+        "entradas":  125,
+        "mesma_lista":  true,
+        "trocados":  [
+                         "Indicators/AlfaOmegaSharedState.cs",
+                         "AddOns/AlfaOmegaRobo.cs",
+                         "AddOns/AlfaOmegaRoboFechamento.cs",
+                         "AddOns/AlfaOmegaRoboSaida.cs",
+                         "Indicators/AoMarketDataPublisher.cs",
+                         "Indicators/AoTapeEngine.cs"
+                     ],
+        "alvos_ok":  6,
+        "unexpected_changed":  [
+
+                               ],
+        "entries":  [
+                        {
+                            "name":  "Info.xml",
+                            "sha256":  "ffb3a3cbe8d83f1bdf65298af487ebadc20e0497205b87e516b03e586363fcff",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaTrace.cs",
+                            "sha256":  "7a57ae83e770232e091cfe80ed34630a5697cb9e255e37c9a12ac1d6a74c3729",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaMarker.cs",
+                            "sha256":  "f04caf6271dba92f4326efdfcad7b10fcf5b766c90bdfaffae146f7e1e0e7294",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotNQ.cs",
+                            "sha256":  "07c591d0942a0d146eeab19d4f9923cf6500185dacf2c889c171658148d722ff",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaSharedState.cs",
+                            "sha256":  "cdce2cddd59bad97bb30636b6ce2877944c6af1805aef2e9e1bc6829d4d8163e",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotES.cs",
+                            "sha256":  "d741eb10390d7d4228b4cad70a1da142d392ea8bcc4bd6285a525950636a7ee8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVector.cs",
+                            "sha256":  "736e6eb82c1175a5a83ed42bca00a10bf2a5c8b11a776bdd6057c48a77882535",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVectorPro.cs",
+                            "sha256":  "20a07d7c62bca18d05791124b81c5ade49b3f4ed8a935ed18e4673b63c985ea3",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoLogin.cs",
+                            "sha256":  "6eb74dfbe9a89a7dce181006749d404f774162f20849b801c385fe3949a9b290",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaNetGex0DTE.cs",
+                            "sha256":  "3acd19110087d429fc00e570fce9b1c8bf2bcc953b7760cbc0ebd7ba59a53867",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaDexGexFlow.cs",
+                            "sha256":  "4143c173f7470feca9335453b5c03876ca822698dadc8d8ab1d6d6b5e47678b5",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaStorm.cs",
+                            "sha256":  "cb219e84f00a13da3e88190127ea0d247aa8e97556c0de4bed2552086b66c658",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaBotRelay.cs",
+                            "sha256":  "31cf9f88959364d71797d14fb6b5776fbe104ba7828d83c7effd69582c948e0a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoStopTakeCore.cs",
+                            "sha256":  "a643741818252236251d5a543838bf30f789a56a51dcab7e31ccb9a31c4cdc84",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoAccountNames.cs",
+                            "sha256":  "8047078611310f0dc93b21f74a9639cc44822e353899c1d60a6491c0739f3065",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaOptionsFlowHiro.cs",
+                            "sha256":  "5fee0b8c6c164330e426739af2f3c72a5806e02d8f64dca06c93e2a9102baf14",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/QuantDataEngine.cs",
+                            "sha256":  "3828a8cefc4fbab094baced9b224ba0b39f71c08aafdaac076923f002f904b36",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaDivergenceESX.cs",
+                            "sha256":  "37cb0a560676d5cad6cfd8a2aa8887f8c0f0ebf54b7d97f5bc06138e919276ff",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaPressure.cs",
+                            "sha256":  "b0be9b3f89475021096baa51bcf3bcc30f58bbd5afe858c59ae37dc8e228fb35",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVision.cs",
+                            "sha256":  "7bae5057526854cb48a0ba79dbd740e32d35f3808ab6b0b26eed63e8f3a10785",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaGammaRelay.cs",
+                            "sha256":  "b8e9adf36a530c44d659f3dddd828be867195c8c05525d3300202b775d1fa78f",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaPhantom.cs",
+                            "sha256":  "de11eb4678a1c8c66330bd8a944ecb71affc41487b6e67540129d9b25a033d8b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotGC.cs",
+                            "sha256":  "7621252882f22107401ca52188f17c2c88e441c26a23dad1a45a156ee03c9ccd",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVolDashboard.cs",
+                            "sha256":  "7c644d4887b50a70b6f1687b1b3331f954c1fa7967d494418541e530a2613263",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoB3Core.cs",
+                            "sha256":  "ce692fffb6f56c940d31557ed6e6d7ce39e39950830916b8f9249be1fbac03c1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaFlowOne.cs",
+                            "sha256":  "f6248b6c8cee3aaf9af0724627af765d0f637b0852fef2b3ed3fb18304a10839",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCallPutClassing.cs",
+                            "sha256":  "971534546a7ed100344ac2aca9453d82a2fe7c86713ac52f34f1fc8a0960ab27",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaFusion.cs",
+                            "sha256":  "25782d40323d8c6cc4c6f497ef13f1e80d5d9179fa9dc6c8f1b4e29254b16647",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AO_DataLayer.cs",
+                            "sha256":  "1878e200f4894d3a7be02f1cd9f390ae5f65882bc0f6be27618a2657dec9abd4",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCallPutClassingB3.cs",
+                            "sha256":  "80ee1129cee091d77ad99492321a867c4cd620074319e66060a496f72638183b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoBrand.cs",
+                            "sha256":  "4cf6f4817c2a9ede44617fdb54dcc24ab6a17670daa1e44ef534f4a93f2f63d5",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaFlowOneHybrid.cs",
+                            "sha256":  "2ec975738c7d787b29980c84e957112f9e49e8bdff9591a2591c07f6a7976ea5",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoBoleta.cs",
+                            "sha256":  "edeae422cedf75bac09c23b694f4d9983001f00fab576058d9aae496ecbabbc9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAuthV2.cs",
+                            "sha256":  "6c3bb8b0b4ce9828b5f5baaf858f4e36888427ab2bde8da36e20192e97308db1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaLogin.cs",
+                            "sha256":  "71a5318c33cb96914f46d884a9a4b6d54348ed72841b4d5469b12e12e5b38dcc",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaQRelay.cs",
+                            "sha256":  "9cb92db764aa0ea80a9bdc6719c5cc2e0eb4b6849958c8bffe9d5713a1f2a16b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotIndicator.cs",
+                            "sha256":  "c699b6e6d18ee544515407d1d75e0ef8fd6266292f1d532986c1af901572d05a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVixLine.cs",
+                            "sha256":  "19f8d41632f7e2701d428c557218d2d2315c82617dc5525ae6c577c2abd9563b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaHiro.cs",
+                            "sha256":  "ddf34f9ed8b878e23c285b9d19277fd0aa360237dbcf6e21a4fc029a8f88a0e0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGammaPressure.cs",
+                            "sha256":  "698a4753274848b360620f3b5df9859bb79b85385c190648c36cbd48f0cd5f4e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaOpenFlow.cs",
+                            "sha256":  "d72bfbea38239acd52239567596d8ce6bc9ddc1fb25ab36660557814ea97e77a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaOrderflow.cs",
+                            "sha256":  "bafd74a43e5127a23f67a992fdcdca839f05c506dbb7e36c771ff1586cfd3658",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaRelayEndpoint.cs",
+                            "sha256":  "3ca2bada115512163e4d26aa9628d4093b203a115e89c1e3a18a3e0cd1b5262a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaTapeStyle.cs",
+                            "sha256":  "34bafa8d4c284b4a6f07d08a69babc6d5444e382ab4738d41e2c2df7ba0f12cc",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/MenthorQGammaEngine.cs",
+                            "sha256":  "63adeececa331b82f1944265a03d6b858b76b71457f08bcfbac6aa2d52b0b94e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaNetDrift.cs",
+                            "sha256":  "898c5b631a0734720825f3905fa4679de4a8363aa8caff1f5e0aa50aeca2044b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaDepth.cs",
+                            "sha256":  "4cf19142841bf425b0add9f51212a827dec73c063a0ca7abbe5f84e7612a92f6",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoHud.cs",
+                            "sha256":  "8811b457c77eb0db10dfe8eaa9fc9bd6f7b7e980289c9b0ca1e2270175f26411",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaClassic.cs",
+                            "sha256":  "b82ba61fb1106796ce2c14c94f82bec2f5f544eafd56697e7f107bbe08f29de6",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGexByStrikeB3.cs",
+                            "sha256":  "75f802d68adddc42abdd059ff2ed57e2d7b3c5838a2825a7c04a42e4c0381ca0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVelocity.cs",
+                            "sha256":  "7f9248888438658572ceda3d63c6cf5854d21bc9ce22cb1f87e52ede30d0732c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoTheme.cs",
+                            "sha256":  "03f5592225f8e876e46172c47461eecf52ae09be5190b7b02bd4c43d8c3998cc",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGexByStrike.cs",
+                            "sha256":  "737178730ca7d34be832f78ca15bf37425ea11bdb26fc7c53dea34ed876e1cbe",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoInput.cs",
+                            "sha256":  "7aeb078b945230ca6a9ab1fbb88eacb45f40675647d546fc9744637991ddab89",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaFlowOnePersistence.cs",
+                            "sha256":  "f79cd5a87cbd7528f7968c6ac057cc1b5d5d1ac4accf8cdfae393be9ff677678",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGravity.cs",
+                            "sha256":  "bf5f7055d3a10355dc7d543a0b3d3828f9a9b68b0581cece6e9c2a51a674d693",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotAssetWindow.cs",
+                            "sha256":  "6ebaa13564ab924eae37c8e65ee9b0905055d8aaa1035e99cb28d8d68a6d7f3c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaDataRelay.cs",
+                            "sha256":  "9e22f83f41b880bd5d4be34e4cbeadf4e18ebbab38aafbcd643efb180ab09f3d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaConsolidatorRelay.cs",
+                            "sha256":  "a81ad6269901f97aac6bc1caf126409aced589b1a5ba7e1c046c346fde589273",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaState.cs",
+                            "sha256":  "14fe1299784753fe75bd71409d897cafd70aceb2f1620d0d7cc085c243df1b3e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaPulse.cs",
+                            "sha256":  "97d132396fa5b74212f4db5e683f78711ed90446663d21cec13b254b0857d68e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoDiag.cs",
+                            "sha256":  "208a37452c75c90dc9607a417c0df9ddd2f6dc9472ccc77eeec79cf6d0542401",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoSkin.cs",
+                            "sha256":  "76b0c1f82b9cac0a00ffb90cd65ea36cbe4b51da847de0fd69e723586a9ecfe0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/MenthorQGammaEntryCore.cs",
+                            "sha256":  "238ae4ea215bea7d364ff8ad45bf65c752ffda0365548484fc3834d5f6143f0c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaStops.cs",
+                            "sha256":  "b8b8e4dd7b2b0ed592a6dd5916a96ddcbb853efee074b8837f69d5b03519ba82",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGammaEngineB3.cs",
+                            "sha256":  "cdb7710c5912620b07c9056bf6f450e773cd3970fe9a61b40f26a6bddaeb4dfd",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotUnificado.cs",
+                            "sha256":  "c873bd3d91433dddc14ba29ba981ad6e9f76cbda7c1819ad1158f6627cd6c11d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AO_DecisionLayer.cs",
+                            "sha256":  "1563d7c18ffd10f956c739a93b56e75fa307d52b36a914cb0ff8c8cbc1149aa4",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaTraceCloud.cs",
+                            "sha256":  "99a07520c810166a6498f097eebf2b3741f0437e800ea86bb0406bd9245ce22d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaTrackerPro.cs",
+                            "sha256":  "79d437f11198c7067cd58312a333f9bfee9b854547e5a65af3a42925c699bd9d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaNexus.cs",
+                            "sha256":  "fbd49587660dd98959311af29d5ae7b8cea7ae98d6e18e52fca02819563280eb",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaBridge.cs",
+                            "sha256":  "ad3ec1c75dbd65992032a0b0e7cf1662618c06504584d347dec1641a4c887787",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AdditionalReferences.txt",
+                            "sha256":  "c1cc3e5e63466f15a33fb1f4d52ae150d1ee11fe1dfeac7a1e67b51e0a45d7b3",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Newtonsoft.Json.dll",
+                            "sha256":  "7f912b28a07c226e0be3acfb2f57f050538aba0100fa1f0bf2c39f1a1f1da814",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineContas.cs",
+                            "sha256":  "41410ceb2484d3f5cb6270c67cc7c3450976ec11606a8b3bc8daae14ed97589b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineCore.cs",
+                            "sha256":  "a4d4f2d1cb5f8840d4d94ca0c8231bcd23d71928cdd6ea2aa76566bfcb95407e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineMotor.cs",
+                            "sha256":  "7b6ef9b4994d8eba3ecec593c1f389fbb050f3c60fc43da56e2f8ba25749c3d9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineNet.cs",
+                            "sha256":  "effbb7d69916ac386e5e58ccc754a15880b9eb5904733dbe85abca8914e6fa09",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineStagger.cs",
+                            "sha256":  "0f661a2e7be6bffae82d89729331abcaef50d2b54f3f366755b3fc15f1ac2bf4",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyMaster.cs",
+                            "sha256":  "73ac0ca36f175ef78bf27564ec69b3ab032279ee28bcbdd26180b59f50e0403c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaProtecaoManual.cs",
+                            "sha256":  "e31c104d976dad5991f94c087c4a5e7153ac900921723e0fb78bc3f470ce2e19",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRobo.cs",
+                            "sha256":  "0ec04dafde95bd9ff6e25422c088793e1b4e4b24fa2daa9340c15e9ce8784de8",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboAot.cs",
+                            "sha256":  "c65cbd7997147638010b81bbcf116052d5cc5a0da940377018432d4da164deac",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboAtivos.cs",
+                            "sha256":  "441b8b0ebde3d19d67cf27c0ea9a25ec53b4d96b2d1db9c7f679e0900ffd0a0a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboAudit.cs",
+                            "sha256":  "a5c6c5127ec2d9b6bd08885ec724a36652d90bb89306b5fce7ef0011b80233f1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboConfig.cs",
+                            "sha256":  "050f03b1bd16ac2697d920a462f54301d22de4890ff200b25e573c0d2af82221",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboConfigInicial.cs",
+                            "sha256":  "7803082904f04ada7adacacd8e7b06e3a4b0a3d3231e3d72ded5be1100818646",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboConfluencia.cs",
+                            "sha256":  "aaead8635a4f30cb5b3fea823d7d6c24774749eb165314a7f97e7a505ff1c1f2",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboDedup.cs",
+                            "sha256":  "18546e3e42e4fdf2cd18c980e4a7a07aa293f00ba1da74cdb01492ae23dafd08",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboEntry.cs",
+                            "sha256":  "39c8ac330522815cc5c5c5b3928c5e20a4a279d376429a15003a12ab81eda0af",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboEntryMq.cs",
+                            "sha256":  "3071e5ff9b9519164d2045b3428b4f7a3a63a4263f86e07ced45bc3af97ffa23",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboEventoAot.cs",
+                            "sha256":  "bbaa02b53de7b6b9132b0320b1c5e61962933b40006c5f8bc87a49cbfd3443d9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboFechamento.cs",
+                            "sha256":  "a1fc99a8cce2bbbcbe1428b545ec2efc15355c571919e23f1843945347d7774d",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboFontes.cs",
+                            "sha256":  "172a758a125561f88f4efb90da6af5abac01c39bb7761a20daac5eaa308b855a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboGates.cs",
+                            "sha256":  "c4f3148029ddc67091c230a54aa5199f510f2929921ed8afe2906d6f3a720d4f",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboHistorico.cs",
+                            "sha256":  "3110027ea7e214ae6e317519ffea3150493662e18aedb4d1dd3530f0212f7fe8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboLedger.cs",
+                            "sha256":  "2966866a68d6b6bce9db88bce2b5ef1f3bfe0289b8fc2fd85ce0ec666e8d97ed",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboMotor.cs",
+                            "sha256":  "ecfe8f9ce00b86fdae03258937fadb42575f003ff712317bc6b1134cfe26b9bc",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboOperacional.cs",
+                            "sha256":  "0fd2bbd628410840988b5e2c8e59737f95f6170c22720ebdd157421314047d1d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboOrderState.cs",
+                            "sha256":  "706a5bfcb0e5f51f126a3ad6bcac5e6897cb3cfd8b1f8e0372464f42f0a925a4",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboOrderWatch.cs",
+                            "sha256":  "19e853b6a8a5dce893e3c340c3ef2b6e039ef1f7fd2c2e2943b69ca1034c668d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboPermissao.cs",
+                            "sha256":  "7131b20c355635a684fbb1fceb1e305d796aff70c5884c79e92dd580fd2e6ea6",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboPositions.cs",
+                            "sha256":  "15fbefca9c14907661d903975a1feea7ee4b3f3e0ab57b25007605e5e304a818",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboProtecao.cs",
+                            "sha256":  "0d7013d9c1069e1f754d72e25f3ff2d0aedf50b0b4de942f4b42cfa66b2359d9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboRelay.cs",
+                            "sha256":  "16d340cbe8386f2c674f14a4658b707b89851f7b8c480291bef1853c17e70178",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboSaida.cs",
+                            "sha256":  "90e0020ad3187f6a360a5a661ade4e610ea16a101ff44e3538757032518eacf9",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboStack.cs",
+                            "sha256":  "7321ceb81565edb30ec508feacdb4e5283435a94a5c4cf1bd65b5a216a12e9d0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboTurno.cs",
+                            "sha256":  "4a9590df530b1219693a7103331807bb96a742d0923439dde55a17c8cec62384",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaTrader.cs",
+                            "sha256":  "07a939228fbb79a35fb09eb4eb6cdb323df1f748fefcd4a8522fa4bd49fdbd1e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoBasicEntryLink.cs",
+                            "sha256":  "0c4cad048bc966434a1a201711a4bc5dbd3c5aaeb840563b2333839df0fa010c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoJsonNum.cs",
+                            "sha256":  "0866de80418cef02d8f1ef7f31a76165a379667ac35960bb47c48b325df5bca8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoRoboGuard.cs",
+                            "sha256":  "a4566f0c0e573e78e2be2ecba03dec4170d854c1e17381af22797e5d28079c8b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoTraderCore.cs",
+                            "sha256":  "f48b51497944d218513383a47a08d2c554d9cf8dd86fc19d3c0c00e15f44b3aa",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoXGate.cs",
+                            "sha256":  "46781fdfbe526ef7098ce3e35c6b1e98739de762d509d5e2b640c4ee64d741a8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoAccounts.cs",
+                            "sha256":  "c5be2b337e2c6c7020944bfc35dcb6313a961c202be92a93b0d1026e08ce0937",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoControlCenter.cs",
+                            "sha256":  "e4d935d9b6fd866f28185dae0711d2927c8880481412a136eadc08aa98cff2e7",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoCopyStatus.cs",
+                            "sha256":  "3dcfa845f060f3301900c4be38d4be28304e74662cc579aead1e1fcfdfa02ed0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoExecClient.cs",
+                            "sha256":  "2b8d499a3095e2f8df67327199265d29ec70dc1fbff2b3fb9b9e82e5d621392c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoLicenca.cs",
+                            "sha256":  "1b725237f536f99969349c0f365b894a592c46aa8e1d1e1e9f3db7bbbf9f52b3",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoLicencaUi.cs",
+                            "sha256":  "e1906e48907f58d6901e7987562062d29ff03d76449d0baa954f1df50fd91ceb",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoMarcadores.cs",
+                            "sha256":  "298bab356da0b57f56e7dacde8e156ea3394d43379db0ee9116f5920bd99e3a1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoMarketDataPublisher.cs",
+                            "sha256":  "3d9f7f4639efce3de1ea3f9127d090a0ed72a73ff12403a09f5318183eafe5af",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "Indicators/AoPressSessao.cs",
+                            "sha256":  "097279c81f6cd89450ef74bf1c260a16a4b0cdea9039d2806d9215ac78f4f45b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoSizing.cs",
+                            "sha256":  "1de8346ad1b460adb12b7043f2d9c8a6997165e884aa40c108f4b1c29dcae05d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoTapeEngine.cs",
+                            "sha256":  "7e2a1c38ff1c8c23e7828034f036ac8738f8ff26a3de1ea4758cc473bd347f99",
+                            "action":  "Z30X2"
+                        }
+                    ]
+    },
+    {
+        "familia":  "F2",
+        "base_zip":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\press-recalibration-20261007\\build\\AlfaOmega_F2_INVICTUS_PGCAP_import.zip",
+        "base_sha256":  "9db17f11482567522a6501853227d9ef71ebb5f15ef68cb5fe0fbecc695c895c",
+        "zip":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\build\\AlfaOmega_F2_INVICTUS_Z30X2_import.zip",
+        "sha256":  "143622a60637d1e7554d84099df772e1db0efbdd591efe7b8f7890e50bef7861",
+        "bytes":  1506114,
+        "entradas":  125,
+        "mesma_lista":  true,
+        "trocados":  [
+                         "Indicators/AlfaOmegaSharedState.cs",
+                         "AddOns/AlfaOmegaRobo.cs",
+                         "AddOns/AlfaOmegaRoboFechamento.cs",
+                         "AddOns/AlfaOmegaRoboSaida.cs",
+                         "Indicators/AoMarketDataPublisher.cs",
+                         "Indicators/AoTapeEngine.cs"
+                     ],
+        "alvos_ok":  6,
+        "unexpected_changed":  [
+
+                               ],
+        "entries":  [
+                        {
+                            "name":  "Info.xml",
+                            "sha256":  "ffb3a3cbe8d83f1bdf65298af487ebadc20e0497205b87e516b03e586363fcff",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaTrace.cs",
+                            "sha256":  "7a57ae83e770232e091cfe80ed34630a5697cb9e255e37c9a12ac1d6a74c3729",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaMarker.cs",
+                            "sha256":  "f04caf6271dba92f4326efdfcad7b10fcf5b766c90bdfaffae146f7e1e0e7294",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotNQ.cs",
+                            "sha256":  "07c591d0942a0d146eeab19d4f9923cf6500185dacf2c889c171658148d722ff",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaSharedState.cs",
+                            "sha256":  "cdce2cddd59bad97bb30636b6ce2877944c6af1805aef2e9e1bc6829d4d8163e",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotES.cs",
+                            "sha256":  "d741eb10390d7d4228b4cad70a1da142d392ea8bcc4bd6285a525950636a7ee8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVector.cs",
+                            "sha256":  "736e6eb82c1175a5a83ed42bca00a10bf2a5c8b11a776bdd6057c48a77882535",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVectorPro.cs",
+                            "sha256":  "20a07d7c62bca18d05791124b81c5ade49b3f4ed8a935ed18e4673b63c985ea3",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoLogin.cs",
+                            "sha256":  "6eb74dfbe9a89a7dce181006749d404f774162f20849b801c385fe3949a9b290",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaNetGex0DTE.cs",
+                            "sha256":  "f927a17df0935e5daeebdbb01ad57cb5f1d6d2bb6c82df125db47d59a43bdfa8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaDexGexFlow.cs",
+                            "sha256":  "f84c78f1e026b12051d7344aab4659a111d453dc1592d48adff1df5afef36a53",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaStorm.cs",
+                            "sha256":  "cb219e84f00a13da3e88190127ea0d247aa8e97556c0de4bed2552086b66c658",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaBotRelay.cs",
+                            "sha256":  "31cf9f88959364d71797d14fb6b5776fbe104ba7828d83c7effd69582c948e0a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoStopTakeCore.cs",
+                            "sha256":  "a643741818252236251d5a543838bf30f789a56a51dcab7e31ccb9a31c4cdc84",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoAccountNames.cs",
+                            "sha256":  "8047078611310f0dc93b21f74a9639cc44822e353899c1d60a6491c0739f3065",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaOptionsFlowHiro.cs",
+                            "sha256":  "5fee0b8c6c164330e426739af2f3c72a5806e02d8f64dca06c93e2a9102baf14",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/QuantDataEngine.cs",
+                            "sha256":  "3828a8cefc4fbab094baced9b224ba0b39f71c08aafdaac076923f002f904b36",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaDivergenceESX.cs",
+                            "sha256":  "37cb0a560676d5cad6cfd8a2aa8887f8c0f0ebf54b7d97f5bc06138e919276ff",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaPressure.cs",
+                            "sha256":  "b0be9b3f89475021096baa51bcf3bcc30f58bbd5afe858c59ae37dc8e228fb35",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVision.cs",
+                            "sha256":  "7bae5057526854cb48a0ba79dbd740e32d35f3808ab6b0b26eed63e8f3a10785",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaGammaRelay.cs",
+                            "sha256":  "b8e9adf36a530c44d659f3dddd828be867195c8c05525d3300202b775d1fa78f",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaPhantom.cs",
+                            "sha256":  "de11eb4678a1c8c66330bd8a944ecb71affc41487b6e67540129d9b25a033d8b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotGC.cs",
+                            "sha256":  "7621252882f22107401ca52188f17c2c88e441c26a23dad1a45a156ee03c9ccd",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVolDashboard.cs",
+                            "sha256":  "7c644d4887b50a70b6f1687b1b3331f954c1fa7967d494418541e530a2613263",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoB3Core.cs",
+                            "sha256":  "ce692fffb6f56c940d31557ed6e6d7ce39e39950830916b8f9249be1fbac03c1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaFlowOne.cs",
+                            "sha256":  "f6248b6c8cee3aaf9af0724627af765d0f637b0852fef2b3ed3fb18304a10839",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCallPutClassing.cs",
+                            "sha256":  "971534546a7ed100344ac2aca9453d82a2fe7c86713ac52f34f1fc8a0960ab27",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaFusion.cs",
+                            "sha256":  "25782d40323d8c6cc4c6f497ef13f1e80d5d9179fa9dc6c8f1b4e29254b16647",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AO_DataLayer.cs",
+                            "sha256":  "1878e200f4894d3a7be02f1cd9f390ae5f65882bc0f6be27618a2657dec9abd4",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCallPutClassingB3.cs",
+                            "sha256":  "80ee1129cee091d77ad99492321a867c4cd620074319e66060a496f72638183b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoBrand.cs",
+                            "sha256":  "4cf6f4817c2a9ede44617fdb54dcc24ab6a17670daa1e44ef534f4a93f2f63d5",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaFlowOneHybrid.cs",
+                            "sha256":  "2ec975738c7d787b29980c84e957112f9e49e8bdff9591a2591c07f6a7976ea5",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoBoleta.cs",
+                            "sha256":  "edeae422cedf75bac09c23b694f4d9983001f00fab576058d9aae496ecbabbc9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAuthV2.cs",
+                            "sha256":  "6c3bb8b0b4ce9828b5f5baaf858f4e36888427ab2bde8da36e20192e97308db1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaLogin.cs",
+                            "sha256":  "71a5318c33cb96914f46d884a9a4b6d54348ed72841b4d5469b12e12e5b38dcc",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaQRelay.cs",
+                            "sha256":  "9cb92db764aa0ea80a9bdc6719c5cc2e0eb4b6849958c8bffe9d5713a1f2a16b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotIndicator.cs",
+                            "sha256":  "c699b6e6d18ee544515407d1d75e0ef8fd6266292f1d532986c1af901572d05a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVixLine.cs",
+                            "sha256":  "19f8d41632f7e2701d428c557218d2d2315c82617dc5525ae6c577c2abd9563b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaHiro.cs",
+                            "sha256":  "ddf34f9ed8b878e23c285b9d19277fd0aa360237dbcf6e21a4fc029a8f88a0e0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGammaPressure.cs",
+                            "sha256":  "698a4753274848b360620f3b5df9859bb79b85385c190648c36cbd48f0cd5f4e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaOpenFlow.cs",
+                            "sha256":  "d72bfbea38239acd52239567596d8ce6bc9ddc1fb25ab36660557814ea97e77a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaOrderflow.cs",
+                            "sha256":  "bafd74a43e5127a23f67a992fdcdca839f05c506dbb7e36c771ff1586cfd3658",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaRelayEndpoint.cs",
+                            "sha256":  "3ca2bada115512163e4d26aa9628d4093b203a115e89c1e3a18a3e0cd1b5262a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaTapeStyle.cs",
+                            "sha256":  "34bafa8d4c284b4a6f07d08a69babc6d5444e382ab4738d41e2c2df7ba0f12cc",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/MenthorQGammaEngine.cs",
+                            "sha256":  "63adeececa331b82f1944265a03d6b858b76b71457f08bcfbac6aa2d52b0b94e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaNetDrift.cs",
+                            "sha256":  "898c5b631a0734720825f3905fa4679de4a8363aa8caff1f5e0aa50aeca2044b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaDepth.cs",
+                            "sha256":  "4cf19142841bf425b0add9f51212a827dec73c063a0ca7abbe5f84e7612a92f6",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoHud.cs",
+                            "sha256":  "8811b457c77eb0db10dfe8eaa9fc9bd6f7b7e980289c9b0ca1e2270175f26411",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaClassic.cs",
+                            "sha256":  "74093a5228421454e4cc83f7e2ef50d847762041f9def411484fcecb31b45610",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGexByStrikeB3.cs",
+                            "sha256":  "75f802d68adddc42abdd059ff2ed57e2d7b3c5838a2825a7c04a42e4c0381ca0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVelocity.cs",
+                            "sha256":  "7f9248888438658572ceda3d63c6cf5854d21bc9ce22cb1f87e52ede30d0732c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoTheme.cs",
+                            "sha256":  "03f5592225f8e876e46172c47461eecf52ae09be5190b7b02bd4c43d8c3998cc",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGexByStrike.cs",
+                            "sha256":  "737178730ca7d34be832f78ca15bf37425ea11bdb26fc7c53dea34ed876e1cbe",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoInput.cs",
+                            "sha256":  "7aeb078b945230ca6a9ab1fbb88eacb45f40675647d546fc9744637991ddab89",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaFlowOnePersistence.cs",
+                            "sha256":  "f79cd5a87cbd7528f7968c6ac057cc1b5d5d1ac4accf8cdfae393be9ff677678",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGravity.cs",
+                            "sha256":  "bf5f7055d3a10355dc7d543a0b3d3828f9a9b68b0581cece6e9c2a51a674d693",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotAssetWindow.cs",
+                            "sha256":  "6ebaa13564ab924eae37c8e65ee9b0905055d8aaa1035e99cb28d8d68a6d7f3c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaDataRelay.cs",
+                            "sha256":  "9e22f83f41b880bd5d4be34e4cbeadf4e18ebbab38aafbcd643efb180ab09f3d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaConsolidatorRelay.cs",
+                            "sha256":  "a81ad6269901f97aac6bc1caf126409aced589b1a5ba7e1c046c346fde589273",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaState.cs",
+                            "sha256":  "14fe1299784753fe75bd71409d897cafd70aceb2f1620d0d7cc085c243df1b3e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaPulse.cs",
+                            "sha256":  "97d132396fa5b74212f4db5e683f78711ed90446663d21cec13b254b0857d68e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoDiag.cs",
+                            "sha256":  "208a37452c75c90dc9607a417c0df9ddd2f6dc9472ccc77eeec79cf6d0542401",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoSkin.cs",
+                            "sha256":  "76b0c1f82b9cac0a00ffb90cd65ea36cbe4b51da847de0fd69e723586a9ecfe0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/MenthorQGammaEntryCore.cs",
+                            "sha256":  "238ae4ea215bea7d364ff8ad45bf65c752ffda0365548484fc3834d5f6143f0c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaStops.cs",
+                            "sha256":  "b8b8e4dd7b2b0ed592a6dd5916a96ddcbb853efee074b8837f69d5b03519ba82",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGammaEngineB3.cs",
+                            "sha256":  "cdb7710c5912620b07c9056bf6f450e773cd3970fe9a61b40f26a6bddaeb4dfd",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotUnificado.cs",
+                            "sha256":  "c873bd3d91433dddc14ba29ba981ad6e9f76cbda7c1819ad1158f6627cd6c11d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AO_DecisionLayer.cs",
+                            "sha256":  "1563d7c18ffd10f956c739a93b56e75fa307d52b36a914cb0ff8c8cbc1149aa4",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaTraceCloud.cs",
+                            "sha256":  "99a07520c810166a6498f097eebf2b3741f0437e800ea86bb0406bd9245ce22d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaTrackerPro.cs",
+                            "sha256":  "79d437f11198c7067cd58312a333f9bfee9b854547e5a65af3a42925c699bd9d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaNexus.cs",
+                            "sha256":  "fbd49587660dd98959311af29d5ae7b8cea7ae98d6e18e52fca02819563280eb",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaBridge.cs",
+                            "sha256":  "ad3ec1c75dbd65992032a0b0e7cf1662618c06504584d347dec1641a4c887787",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AdditionalReferences.txt",
+                            "sha256":  "c1cc3e5e63466f15a33fb1f4d52ae150d1ee11fe1dfeac7a1e67b51e0a45d7b3",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Newtonsoft.Json.dll",
+                            "sha256":  "7f912b28a07c226e0be3acfb2f57f050538aba0100fa1f0bf2c39f1a1f1da814",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineContas.cs",
+                            "sha256":  "41410ceb2484d3f5cb6270c67cc7c3450976ec11606a8b3bc8daae14ed97589b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineCore.cs",
+                            "sha256":  "a4d4f2d1cb5f8840d4d94ca0c8231bcd23d71928cdd6ea2aa76566bfcb95407e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineMotor.cs",
+                            "sha256":  "7b6ef9b4994d8eba3ecec593c1f389fbb050f3c60fc43da56e2f8ba25749c3d9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineNet.cs",
+                            "sha256":  "effbb7d69916ac386e5e58ccc754a15880b9eb5904733dbe85abca8914e6fa09",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineStagger.cs",
+                            "sha256":  "0f661a2e7be6bffae82d89729331abcaef50d2b54f3f366755b3fc15f1ac2bf4",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyMaster.cs",
+                            "sha256":  "73ac0ca36f175ef78bf27564ec69b3ab032279ee28bcbdd26180b59f50e0403c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaProtecaoManual.cs",
+                            "sha256":  "e31c104d976dad5991f94c087c4a5e7153ac900921723e0fb78bc3f470ce2e19",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRobo.cs",
+                            "sha256":  "0ec04dafde95bd9ff6e25422c088793e1b4e4b24fa2daa9340c15e9ce8784de8",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboAot.cs",
+                            "sha256":  "c65cbd7997147638010b81bbcf116052d5cc5a0da940377018432d4da164deac",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboAtivos.cs",
+                            "sha256":  "441b8b0ebde3d19d67cf27c0ea9a25ec53b4d96b2d1db9c7f679e0900ffd0a0a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboAudit.cs",
+                            "sha256":  "a5c6c5127ec2d9b6bd08885ec724a36652d90bb89306b5fce7ef0011b80233f1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboConfig.cs",
+                            "sha256":  "050f03b1bd16ac2697d920a462f54301d22de4890ff200b25e573c0d2af82221",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboConfigInicial.cs",
+                            "sha256":  "7803082904f04ada7adacacd8e7b06e3a4b0a3d3231e3d72ded5be1100818646",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboConfluencia.cs",
+                            "sha256":  "aaead8635a4f30cb5b3fea823d7d6c24774749eb165314a7f97e7a505ff1c1f2",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboDedup.cs",
+                            "sha256":  "18546e3e42e4fdf2cd18c980e4a7a07aa293f00ba1da74cdb01492ae23dafd08",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboEntry.cs",
+                            "sha256":  "39c8ac330522815cc5c5c5b3928c5e20a4a279d376429a15003a12ab81eda0af",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboEntryMq.cs",
+                            "sha256":  "3071e5ff9b9519164d2045b3428b4f7a3a63a4263f86e07ced45bc3af97ffa23",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboEventoAot.cs",
+                            "sha256":  "bbaa02b53de7b6b9132b0320b1c5e61962933b40006c5f8bc87a49cbfd3443d9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboFechamento.cs",
+                            "sha256":  "a1fc99a8cce2bbbcbe1428b545ec2efc15355c571919e23f1843945347d7774d",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboFontes.cs",
+                            "sha256":  "172a758a125561f88f4efb90da6af5abac01c39bb7761a20daac5eaa308b855a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboGates.cs",
+                            "sha256":  "c4f3148029ddc67091c230a54aa5199f510f2929921ed8afe2906d6f3a720d4f",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboHistorico.cs",
+                            "sha256":  "3110027ea7e214ae6e317519ffea3150493662e18aedb4d1dd3530f0212f7fe8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboLedger.cs",
+                            "sha256":  "2966866a68d6b6bce9db88bce2b5ef1f3bfe0289b8fc2fd85ce0ec666e8d97ed",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboMotor.cs",
+                            "sha256":  "ecfe8f9ce00b86fdae03258937fadb42575f003ff712317bc6b1134cfe26b9bc",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboOperacional.cs",
+                            "sha256":  "0fd2bbd628410840988b5e2c8e59737f95f6170c22720ebdd157421314047d1d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboOrderState.cs",
+                            "sha256":  "706a5bfcb0e5f51f126a3ad6bcac5e6897cb3cfd8b1f8e0372464f42f0a925a4",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboOrderWatch.cs",
+                            "sha256":  "19e853b6a8a5dce893e3c340c3ef2b6e039ef1f7fd2c2e2943b69ca1034c668d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboPermissao.cs",
+                            "sha256":  "7131b20c355635a684fbb1fceb1e305d796aff70c5884c79e92dd580fd2e6ea6",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboPositions.cs",
+                            "sha256":  "15fbefca9c14907661d903975a1feea7ee4b3f3e0ab57b25007605e5e304a818",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboProtecao.cs",
+                            "sha256":  "0d7013d9c1069e1f754d72e25f3ff2d0aedf50b0b4de942f4b42cfa66b2359d9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboRelay.cs",
+                            "sha256":  "16d340cbe8386f2c674f14a4658b707b89851f7b8c480291bef1853c17e70178",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboSaida.cs",
+                            "sha256":  "90e0020ad3187f6a360a5a661ade4e610ea16a101ff44e3538757032518eacf9",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboStack.cs",
+                            "sha256":  "7321ceb81565edb30ec508feacdb4e5283435a94a5c4cf1bd65b5a216a12e9d0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboTurno.cs",
+                            "sha256":  "4a9590df530b1219693a7103331807bb96a742d0923439dde55a17c8cec62384",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaTrader.cs",
+                            "sha256":  "07a939228fbb79a35fb09eb4eb6cdb323df1f748fefcd4a8522fa4bd49fdbd1e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoBasicEntryLink.cs",
+                            "sha256":  "0c4cad048bc966434a1a201711a4bc5dbd3c5aaeb840563b2333839df0fa010c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoJsonNum.cs",
+                            "sha256":  "0866de80418cef02d8f1ef7f31a76165a379667ac35960bb47c48b325df5bca8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoRoboGuard.cs",
+                            "sha256":  "a4566f0c0e573e78e2be2ecba03dec4170d854c1e17381af22797e5d28079c8b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoTraderCore.cs",
+                            "sha256":  "f48b51497944d218513383a47a08d2c554d9cf8dd86fc19d3c0c00e15f44b3aa",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoXGate.cs",
+                            "sha256":  "46781fdfbe526ef7098ce3e35c6b1e98739de762d509d5e2b640c4ee64d741a8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoAccounts.cs",
+                            "sha256":  "c5be2b337e2c6c7020944bfc35dcb6313a961c202be92a93b0d1026e08ce0937",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoControlCenter.cs",
+                            "sha256":  "e4d935d9b6fd866f28185dae0711d2927c8880481412a136eadc08aa98cff2e7",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoCopyStatus.cs",
+                            "sha256":  "3dcfa845f060f3301900c4be38d4be28304e74662cc579aead1e1fcfdfa02ed0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoExecClient.cs",
+                            "sha256":  "2b8d499a3095e2f8df67327199265d29ec70dc1fbff2b3fb9b9e82e5d621392c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoLicenca.cs",
+                            "sha256":  "1b725237f536f99969349c0f365b894a592c46aa8e1d1e1e9f3db7bbbf9f52b3",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoLicencaUi.cs",
+                            "sha256":  "e1906e48907f58d6901e7987562062d29ff03d76449d0baa954f1df50fd91ceb",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoMarcadores.cs",
+                            "sha256":  "298bab356da0b57f56e7dacde8e156ea3394d43379db0ee9116f5920bd99e3a1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoMarketDataPublisher.cs",
+                            "sha256":  "3d9f7f4639efce3de1ea3f9127d090a0ed72a73ff12403a09f5318183eafe5af",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "Indicators/AoPressSessao.cs",
+                            "sha256":  "097279c81f6cd89450ef74bf1c260a16a4b0cdea9039d2806d9215ac78f4f45b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoSizing.cs",
+                            "sha256":  "1de8346ad1b460adb12b7043f2d9c8a6997165e884aa40c108f4b1c29dcae05d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoTapeEngine.cs",
+                            "sha256":  "7e2a1c38ff1c8c23e7828034f036ac8738f8ff26a3de1ea4758cc473bd347f99",
+                            "action":  "Z30X2"
+                        }
+                    ]
+    },
+    {
+        "familia":  "F3",
+        "base_zip":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\press-recalibration-20261007\\build\\AlfaOmega_F3_INVICTUS_PGCAP_import.zip",
+        "base_sha256":  "8f0aa29594fe06736071883056e1c678bc9189412592bc527e6f91a23bf28e71",
+        "zip":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\build\\AlfaOmega_F3_INVICTUS_Z30X2_import.zip",
+        "sha256":  "7fd049d3da6314f8b9435b0cb3f1e1d7ed69e276dcbad2e27af4d74eef7afa0b",
+        "bytes":  1510501,
+        "entradas":  125,
+        "mesma_lista":  true,
+        "trocados":  [
+                         "Indicators/AlfaOmegaSharedState.cs",
+                         "AddOns/AlfaOmegaRobo.cs",
+                         "AddOns/AlfaOmegaRoboFechamento.cs",
+                         "AddOns/AlfaOmegaRoboSaida.cs",
+                         "Indicators/AoMarketDataPublisher.cs",
+                         "Indicators/AoTapeEngine.cs"
+                     ],
+        "alvos_ok":  6,
+        "unexpected_changed":  [
+
+                               ],
+        "entries":  [
+                        {
+                            "name":  "Info.xml",
+                            "sha256":  "ffb3a3cbe8d83f1bdf65298af487ebadc20e0497205b87e516b03e586363fcff",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaTrace.cs",
+                            "sha256":  "7a57ae83e770232e091cfe80ed34630a5697cb9e255e37c9a12ac1d6a74c3729",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaMarker.cs",
+                            "sha256":  "f04caf6271dba92f4326efdfcad7b10fcf5b766c90bdfaffae146f7e1e0e7294",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotNQ.cs",
+                            "sha256":  "07c591d0942a0d146eeab19d4f9923cf6500185dacf2c889c171658148d722ff",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaSharedState.cs",
+                            "sha256":  "cdce2cddd59bad97bb30636b6ce2877944c6af1805aef2e9e1bc6829d4d8163e",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotES.cs",
+                            "sha256":  "d741eb10390d7d4228b4cad70a1da142d392ea8bcc4bd6285a525950636a7ee8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVector.cs",
+                            "sha256":  "736e6eb82c1175a5a83ed42bca00a10bf2a5c8b11a776bdd6057c48a77882535",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVectorPro.cs",
+                            "sha256":  "20a07d7c62bca18d05791124b81c5ade49b3f4ed8a935ed18e4673b63c985ea3",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoLogin.cs",
+                            "sha256":  "6eb74dfbe9a89a7dce181006749d404f774162f20849b801c385fe3949a9b290",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaNetGex0DTE.cs",
+                            "sha256":  "3acd19110087d429fc00e570fce9b1c8bf2bcc953b7760cbc0ebd7ba59a53867",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaDexGexFlow.cs",
+                            "sha256":  "4143c173f7470feca9335453b5c03876ca822698dadc8d8ab1d6d6b5e47678b5",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaStorm.cs",
+                            "sha256":  "cb219e84f00a13da3e88190127ea0d247aa8e97556c0de4bed2552086b66c658",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaBotRelay.cs",
+                            "sha256":  "31cf9f88959364d71797d14fb6b5776fbe104ba7828d83c7effd69582c948e0a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoStopTakeCore.cs",
+                            "sha256":  "a643741818252236251d5a543838bf30f789a56a51dcab7e31ccb9a31c4cdc84",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoAccountNames.cs",
+                            "sha256":  "8047078611310f0dc93b21f74a9639cc44822e353899c1d60a6491c0739f3065",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaOptionsFlowHiro.cs",
+                            "sha256":  "5fee0b8c6c164330e426739af2f3c72a5806e02d8f64dca06c93e2a9102baf14",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/QuantDataEngine.cs",
+                            "sha256":  "3828a8cefc4fbab094baced9b224ba0b39f71c08aafdaac076923f002f904b36",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaDivergenceESX.cs",
+                            "sha256":  "37cb0a560676d5cad6cfd8a2aa8887f8c0f0ebf54b7d97f5bc06138e919276ff",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaPressure.cs",
+                            "sha256":  "b0be9b3f89475021096baa51bcf3bcc30f58bbd5afe858c59ae37dc8e228fb35",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVision.cs",
+                            "sha256":  "7bae5057526854cb48a0ba79dbd740e32d35f3808ab6b0b26eed63e8f3a10785",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaGammaRelay.cs",
+                            "sha256":  "b8e9adf36a530c44d659f3dddd828be867195c8c05525d3300202b775d1fa78f",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaPhantom.cs",
+                            "sha256":  "de11eb4678a1c8c66330bd8a944ecb71affc41487b6e67540129d9b25a033d8b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotGC.cs",
+                            "sha256":  "7621252882f22107401ca52188f17c2c88e441c26a23dad1a45a156ee03c9ccd",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVolDashboard.cs",
+                            "sha256":  "7c644d4887b50a70b6f1687b1b3331f954c1fa7967d494418541e530a2613263",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoB3Core.cs",
+                            "sha256":  "ce692fffb6f56c940d31557ed6e6d7ce39e39950830916b8f9249be1fbac03c1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaFlowOne.cs",
+                            "sha256":  "f6248b6c8cee3aaf9af0724627af765d0f637b0852fef2b3ed3fb18304a10839",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCallPutClassing.cs",
+                            "sha256":  "971534546a7ed100344ac2aca9453d82a2fe7c86713ac52f34f1fc8a0960ab27",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaFusion.cs",
+                            "sha256":  "25782d40323d8c6cc4c6f497ef13f1e80d5d9179fa9dc6c8f1b4e29254b16647",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCallPutClassingB3.cs",
+                            "sha256":  "80ee1129cee091d77ad99492321a867c4cd620074319e66060a496f72638183b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoBrand.cs",
+                            "sha256":  "4cf6f4817c2a9ede44617fdb54dcc24ab6a17670daa1e44ef534f4a93f2f63d5",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaFlowOneHybrid.cs",
+                            "sha256":  "2ec975738c7d787b29980c84e957112f9e49e8bdff9591a2591c07f6a7976ea5",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoBoleta.cs",
+                            "sha256":  "edeae422cedf75bac09c23b694f4d9983001f00fab576058d9aae496ecbabbc9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAuthV2.cs",
+                            "sha256":  "6c3bb8b0b4ce9828b5f5baaf858f4e36888427ab2bde8da36e20192e97308db1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaLogin.cs",
+                            "sha256":  "71a5318c33cb96914f46d884a9a4b6d54348ed72841b4d5469b12e12e5b38dcc",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaQRelay.cs",
+                            "sha256":  "9cb92db764aa0ea80a9bdc6719c5cc2e0eb4b6849958c8bffe9d5713a1f2a16b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotIndicator.cs",
+                            "sha256":  "c699b6e6d18ee544515407d1d75e0ef8fd6266292f1d532986c1af901572d05a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVixLine.cs",
+                            "sha256":  "19f8d41632f7e2701d428c557218d2d2315c82617dc5525ae6c577c2abd9563b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaHiro.cs",
+                            "sha256":  "ddf34f9ed8b878e23c285b9d19277fd0aa360237dbcf6e21a4fc029a8f88a0e0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGammaPressure.cs",
+                            "sha256":  "698a4753274848b360620f3b5df9859bb79b85385c190648c36cbd48f0cd5f4e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaOpenFlow.cs",
+                            "sha256":  "d72bfbea38239acd52239567596d8ce6bc9ddc1fb25ab36660557814ea97e77a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaOrderflow.cs",
+                            "sha256":  "bafd74a43e5127a23f67a992fdcdca839f05c506dbb7e36c771ff1586cfd3658",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaRelayEndpoint.cs",
+                            "sha256":  "3ca2bada115512163e4d26aa9628d4093b203a115e89c1e3a18a3e0cd1b5262a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaTapeStyle.cs",
+                            "sha256":  "34bafa8d4c284b4a6f07d08a69babc6d5444e382ab4738d41e2c2df7ba0f12cc",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaNetDrift.cs",
+                            "sha256":  "898c5b631a0734720825f3905fa4679de4a8363aa8caff1f5e0aa50aeca2044b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaDepth.cs",
+                            "sha256":  "4cf19142841bf425b0add9f51212a827dec73c063a0ca7abbe5f84e7612a92f6",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoHud.cs",
+                            "sha256":  "8811b457c77eb0db10dfe8eaa9fc9bd6f7b7e980289c9b0ca1e2270175f26411",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaClassic.cs",
+                            "sha256":  "b82ba61fb1106796ce2c14c94f82bec2f5f544eafd56697e7f107bbe08f29de6",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGexByStrikeB3.cs",
+                            "sha256":  "75f802d68adddc42abdd059ff2ed57e2d7b3c5838a2825a7c04a42e4c0381ca0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVelocity.cs",
+                            "sha256":  "7f9248888438658572ceda3d63c6cf5854d21bc9ce22cb1f87e52ede30d0732c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoTheme.cs",
+                            "sha256":  "03f5592225f8e876e46172c47461eecf52ae09be5190b7b02bd4c43d8c3998cc",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGexByStrike.cs",
+                            "sha256":  "737178730ca7d34be832f78ca15bf37425ea11bdb26fc7c53dea34ed876e1cbe",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoInput.cs",
+                            "sha256":  "7aeb078b945230ca6a9ab1fbb88eacb45f40675647d546fc9744637991ddab89",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaFlowOnePersistence.cs",
+                            "sha256":  "f79cd5a87cbd7528f7968c6ac057cc1b5d5d1ac4accf8cdfae393be9ff677678",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGravity.cs",
+                            "sha256":  "bf5f7055d3a10355dc7d543a0b3d3828f9a9b68b0581cece6e9c2a51a674d693",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotAssetWindow.cs",
+                            "sha256":  "6ebaa13564ab924eae37c8e65ee9b0905055d8aaa1035e99cb28d8d68a6d7f3c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaDataRelay.cs",
+                            "sha256":  "9e22f83f41b880bd5d4be34e4cbeadf4e18ebbab38aafbcd643efb180ab09f3d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaConsolidatorRelay.cs",
+                            "sha256":  "a81ad6269901f97aac6bc1caf126409aced589b1a5ba7e1c046c346fde589273",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaState.cs",
+                            "sha256":  "14fe1299784753fe75bd71409d897cafd70aceb2f1620d0d7cc085c243df1b3e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaPulse.cs",
+                            "sha256":  "97d132396fa5b74212f4db5e683f78711ed90446663d21cec13b254b0857d68e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoDiag.cs",
+                            "sha256":  "208a37452c75c90dc9607a417c0df9ddd2f6dc9472ccc77eeec79cf6d0542401",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoSkin.cs",
+                            "sha256":  "76b0c1f82b9cac0a00ffb90cd65ea36cbe4b51da847de0fd69e723586a9ecfe0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaStops.cs",
+                            "sha256":  "b8b8e4dd7b2b0ed592a6dd5916a96ddcbb853efee074b8837f69d5b03519ba82",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGammaEngineB3.cs",
+                            "sha256":  "cdb7710c5912620b07c9056bf6f450e773cd3970fe9a61b40f26a6bddaeb4dfd",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotUnificado.cs",
+                            "sha256":  "c873bd3d91433dddc14ba29ba981ad6e9f76cbda7c1819ad1158f6627cd6c11d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaTraceCloud.cs",
+                            "sha256":  "99a07520c810166a6498f097eebf2b3741f0437e800ea86bb0406bd9245ce22d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaTrackerPro.cs",
+                            "sha256":  "79d437f11198c7067cd58312a333f9bfee9b854547e5a65af3a42925c699bd9d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaNexus.cs",
+                            "sha256":  "fbd49587660dd98959311af29d5ae7b8cea7ae98d6e18e52fca02819563280eb",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaBridge.cs",
+                            "sha256":  "ad3ec1c75dbd65992032a0b0e7cf1662618c06504584d347dec1641a4c887787",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AdditionalReferences.txt",
+                            "sha256":  "c1cc3e5e63466f15a33fb1f4d52ae150d1ee11fe1dfeac7a1e67b51e0a45d7b3",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Newtonsoft.Json.dll",
+                            "sha256":  "7f912b28a07c226e0be3acfb2f57f050538aba0100fa1f0bf2c39f1a1f1da814",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AO_DecisionLayer.cs",
+                            "sha256":  "ba2ff6eda5a4c58b83bb08fc39f153a6437915e8da4c27fcc9b19c28122ffa83",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/MenthorQGammaEngine.cs",
+                            "sha256":  "4a47c33e0744b34164e2b94e6f88aa9075fb63f5c79148f5bdb3b25f8c741d8a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AO_DataLayer.cs",
+                            "sha256":  "1878e200f4894d3a7be02f1cd9f390ae5f65882bc0f6be27618a2657dec9abd4",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/MenthorQGammaEntryCore.cs",
+                            "sha256":  "238ae4ea215bea7d364ff8ad45bf65c752ffda0365548484fc3834d5f6143f0c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineContas.cs",
+                            "sha256":  "41410ceb2484d3f5cb6270c67cc7c3450976ec11606a8b3bc8daae14ed97589b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineCore.cs",
+                            "sha256":  "a4d4f2d1cb5f8840d4d94ca0c8231bcd23d71928cdd6ea2aa76566bfcb95407e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineMotor.cs",
+                            "sha256":  "7b6ef9b4994d8eba3ecec593c1f389fbb050f3c60fc43da56e2f8ba25749c3d9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineNet.cs",
+                            "sha256":  "effbb7d69916ac386e5e58ccc754a15880b9eb5904733dbe85abca8914e6fa09",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineStagger.cs",
+                            "sha256":  "0f661a2e7be6bffae82d89729331abcaef50d2b54f3f366755b3fc15f1ac2bf4",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyMaster.cs",
+                            "sha256":  "73ac0ca36f175ef78bf27564ec69b3ab032279ee28bcbdd26180b59f50e0403c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaProtecaoManual.cs",
+                            "sha256":  "e31c104d976dad5991f94c087c4a5e7153ac900921723e0fb78bc3f470ce2e19",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRobo.cs",
+                            "sha256":  "0ec04dafde95bd9ff6e25422c088793e1b4e4b24fa2daa9340c15e9ce8784de8",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboAot.cs",
+                            "sha256":  "c65cbd7997147638010b81bbcf116052d5cc5a0da940377018432d4da164deac",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboAtivos.cs",
+                            "sha256":  "441b8b0ebde3d19d67cf27c0ea9a25ec53b4d96b2d1db9c7f679e0900ffd0a0a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboAudit.cs",
+                            "sha256":  "a5c6c5127ec2d9b6bd08885ec724a36652d90bb89306b5fce7ef0011b80233f1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboConfig.cs",
+                            "sha256":  "050f03b1bd16ac2697d920a462f54301d22de4890ff200b25e573c0d2af82221",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboConfigInicial.cs",
+                            "sha256":  "7803082904f04ada7adacacd8e7b06e3a4b0a3d3231e3d72ded5be1100818646",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboConfluencia.cs",
+                            "sha256":  "aaead8635a4f30cb5b3fea823d7d6c24774749eb165314a7f97e7a505ff1c1f2",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboDedup.cs",
+                            "sha256":  "18546e3e42e4fdf2cd18c980e4a7a07aa293f00ba1da74cdb01492ae23dafd08",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboEntry.cs",
+                            "sha256":  "39c8ac330522815cc5c5c5b3928c5e20a4a279d376429a15003a12ab81eda0af",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboEntryMq.cs",
+                            "sha256":  "3071e5ff9b9519164d2045b3428b4f7a3a63a4263f86e07ced45bc3af97ffa23",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboEventoAot.cs",
+                            "sha256":  "bbaa02b53de7b6b9132b0320b1c5e61962933b40006c5f8bc87a49cbfd3443d9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboFechamento.cs",
+                            "sha256":  "a1fc99a8cce2bbbcbe1428b545ec2efc15355c571919e23f1843945347d7774d",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboFontes.cs",
+                            "sha256":  "172a758a125561f88f4efb90da6af5abac01c39bb7761a20daac5eaa308b855a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboGates.cs",
+                            "sha256":  "c4f3148029ddc67091c230a54aa5199f510f2929921ed8afe2906d6f3a720d4f",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboHistorico.cs",
+                            "sha256":  "3110027ea7e214ae6e317519ffea3150493662e18aedb4d1dd3530f0212f7fe8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboLedger.cs",
+                            "sha256":  "2966866a68d6b6bce9db88bce2b5ef1f3bfe0289b8fc2fd85ce0ec666e8d97ed",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboMotor.cs",
+                            "sha256":  "ecfe8f9ce00b86fdae03258937fadb42575f003ff712317bc6b1134cfe26b9bc",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboOperacional.cs",
+                            "sha256":  "0fd2bbd628410840988b5e2c8e59737f95f6170c22720ebdd157421314047d1d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboOrderState.cs",
+                            "sha256":  "706a5bfcb0e5f51f126a3ad6bcac5e6897cb3cfd8b1f8e0372464f42f0a925a4",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboOrderWatch.cs",
+                            "sha256":  "19e853b6a8a5dce893e3c340c3ef2b6e039ef1f7fd2c2e2943b69ca1034c668d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboPermissao.cs",
+                            "sha256":  "7131b20c355635a684fbb1fceb1e305d796aff70c5884c79e92dd580fd2e6ea6",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboPositions.cs",
+                            "sha256":  "15fbefca9c14907661d903975a1feea7ee4b3f3e0ab57b25007605e5e304a818",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboProtecao.cs",
+                            "sha256":  "0d7013d9c1069e1f754d72e25f3ff2d0aedf50b0b4de942f4b42cfa66b2359d9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboRelay.cs",
+                            "sha256":  "16d340cbe8386f2c674f14a4658b707b89851f7b8c480291bef1853c17e70178",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboSaida.cs",
+                            "sha256":  "90e0020ad3187f6a360a5a661ade4e610ea16a101ff44e3538757032518eacf9",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboStack.cs",
+                            "sha256":  "7321ceb81565edb30ec508feacdb4e5283435a94a5c4cf1bd65b5a216a12e9d0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboTurno.cs",
+                            "sha256":  "4a9590df530b1219693a7103331807bb96a742d0923439dde55a17c8cec62384",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaTrader.cs",
+                            "sha256":  "07a939228fbb79a35fb09eb4eb6cdb323df1f748fefcd4a8522fa4bd49fdbd1e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoBasicEntryLink.cs",
+                            "sha256":  "0c4cad048bc966434a1a201711a4bc5dbd3c5aaeb840563b2333839df0fa010c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoJsonNum.cs",
+                            "sha256":  "0866de80418cef02d8f1ef7f31a76165a379667ac35960bb47c48b325df5bca8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoRoboGuard.cs",
+                            "sha256":  "a4566f0c0e573e78e2be2ecba03dec4170d854c1e17381af22797e5d28079c8b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoTraderCore.cs",
+                            "sha256":  "f48b51497944d218513383a47a08d2c554d9cf8dd86fc19d3c0c00e15f44b3aa",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoXGate.cs",
+                            "sha256":  "46781fdfbe526ef7098ce3e35c6b1e98739de762d509d5e2b640c4ee64d741a8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoAccounts.cs",
+                            "sha256":  "c5be2b337e2c6c7020944bfc35dcb6313a961c202be92a93b0d1026e08ce0937",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoControlCenter.cs",
+                            "sha256":  "e4d935d9b6fd866f28185dae0711d2927c8880481412a136eadc08aa98cff2e7",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoCopyStatus.cs",
+                            "sha256":  "3dcfa845f060f3301900c4be38d4be28304e74662cc579aead1e1fcfdfa02ed0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoExecClient.cs",
+                            "sha256":  "2b8d499a3095e2f8df67327199265d29ec70dc1fbff2b3fb9b9e82e5d621392c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoLicenca.cs",
+                            "sha256":  "1b725237f536f99969349c0f365b894a592c46aa8e1d1e1e9f3db7bbbf9f52b3",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoLicencaUi.cs",
+                            "sha256":  "e1906e48907f58d6901e7987562062d29ff03d76449d0baa954f1df50fd91ceb",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoMarcadores.cs",
+                            "sha256":  "298bab356da0b57f56e7dacde8e156ea3394d43379db0ee9116f5920bd99e3a1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoMarketDataPublisher.cs",
+                            "sha256":  "3d9f7f4639efce3de1ea3f9127d090a0ed72a73ff12403a09f5318183eafe5af",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "Indicators/AoPressSessao.cs",
+                            "sha256":  "097279c81f6cd89450ef74bf1c260a16a4b0cdea9039d2806d9215ac78f4f45b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoSizing.cs",
+                            "sha256":  "1de8346ad1b460adb12b7043f2d9c8a6997165e884aa40c108f4b1c29dcae05d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoTapeEngine.cs",
+                            "sha256":  "7e2a1c38ff1c8c23e7828034f036ac8738f8ff26a3de1ea4758cc473bd347f99",
+                            "action":  "Z30X2"
+                        }
+                    ]
+    },
+    {
+        "familia":  "F4",
+        "base_zip":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\press-recalibration-20261007\\build\\AlfaOmega_F4_INVICTUS_PGCAP_import.zip",
+        "base_sha256":  "28006bc776fd76f365f25fd56caef41e36b58db2f43b139489a70c332197c044",
+        "zip":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\build\\AlfaOmega_F4_INVICTUS_Z30X2_import.zip",
+        "sha256":  "3baa59b0d2282ebdfbfe614a931cdf9960df81a1458379218726648c8512b757",
+        "bytes":  1240924,
+        "entradas":  110,
+        "mesma_lista":  true,
+        "trocados":  [
+                         "Indicators/AlfaOmegaSharedState.cs",
+                         "AddOns/AlfaOmegaRobo.cs",
+                         "AddOns/AlfaOmegaRoboFechamento.cs",
+                         "AddOns/AlfaOmegaRoboSaida.cs",
+                         "Indicators/AoMarketDataPublisher.cs",
+                         "Indicators/AoTapeEngine.cs"
+                     ],
+        "alvos_ok":  6,
+        "unexpected_changed":  [
+
+                               ],
+        "entries":  [
+                        {
+                            "name":  "Info.xml",
+                            "sha256":  "ffb3a3cbe8d83f1bdf65298af487ebadc20e0497205b87e516b03e586363fcff",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaTrace.cs",
+                            "sha256":  "7a57ae83e770232e091cfe80ed34630a5697cb9e255e37c9a12ac1d6a74c3729",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaMarker.cs",
+                            "sha256":  "f04caf6271dba92f4326efdfcad7b10fcf5b766c90bdfaffae146f7e1e0e7294",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotNQ.cs",
+                            "sha256":  "07c591d0942a0d146eeab19d4f9923cf6500185dacf2c889c171658148d722ff",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaSharedState.cs",
+                            "sha256":  "cdce2cddd59bad97bb30636b6ce2877944c6af1805aef2e9e1bc6829d4d8163e",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotES.cs",
+                            "sha256":  "d741eb10390d7d4228b4cad70a1da142d392ea8bcc4bd6285a525950636a7ee8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVector.cs",
+                            "sha256":  "736e6eb82c1175a5a83ed42bca00a10bf2a5c8b11a776bdd6057c48a77882535",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVectorPro.cs",
+                            "sha256":  "20a07d7c62bca18d05791124b81c5ade49b3f4ed8a935ed18e4673b63c985ea3",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoLogin.cs",
+                            "sha256":  "6eb74dfbe9a89a7dce181006749d404f774162f20849b801c385fe3949a9b290",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaNetGex0DTE.cs",
+                            "sha256":  "f927a17df0935e5daeebdbb01ad57cb5f1d6d2bb6c82df125db47d59a43bdfa8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaDexGexFlow.cs",
+                            "sha256":  "f84c78f1e026b12051d7344aab4659a111d453dc1592d48adff1df5afef36a53",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaStorm.cs",
+                            "sha256":  "cb219e84f00a13da3e88190127ea0d247aa8e97556c0de4bed2552086b66c658",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaBotRelay.cs",
+                            "sha256":  "31cf9f88959364d71797d14fb6b5776fbe104ba7828d83c7effd69582c948e0a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoStopTakeCore.cs",
+                            "sha256":  "a643741818252236251d5a543838bf30f789a56a51dcab7e31ccb9a31c4cdc84",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaOptionsFlowHiro.cs",
+                            "sha256":  "5fee0b8c6c164330e426739af2f3c72a5806e02d8f64dca06c93e2a9102baf14",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/QuantDataEngine.cs",
+                            "sha256":  "6527536198ac0c12cf2542acfd72dd26b0cf301d281902cf26d7a4f23dd6849b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaPressure.cs",
+                            "sha256":  "b0be9b3f89475021096baa51bcf3bcc30f58bbd5afe858c59ae37dc8e228fb35",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVision.cs",
+                            "sha256":  "7bae5057526854cb48a0ba79dbd740e32d35f3808ab6b0b26eed63e8f3a10785",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaGammaRelay.cs",
+                            "sha256":  "b8e9adf36a530c44d659f3dddd828be867195c8c05525d3300202b775d1fa78f",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaPhantom.cs",
+                            "sha256":  "de11eb4678a1c8c66330bd8a944ecb71affc41487b6e67540129d9b25a033d8b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotGC.cs",
+                            "sha256":  "7621252882f22107401ca52188f17c2c88e441c26a23dad1a45a156ee03c9ccd",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaFusion.cs",
+                            "sha256":  "25782d40323d8c6cc4c6f497ef13f1e80d5d9179fa9dc6c8f1b4e29254b16647",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AO_DataLayer.cs",
+                            "sha256":  "1878e200f4894d3a7be02f1cd9f390ae5f65882bc0f6be27618a2657dec9abd4",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoBrand.cs",
+                            "sha256":  "4cf6f4817c2a9ede44617fdb54dcc24ab6a17670daa1e44ef534f4a93f2f63d5",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAuthV2.cs",
+                            "sha256":  "6c3bb8b0b4ce9828b5f5baaf858f4e36888427ab2bde8da36e20192e97308db1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaLogin.cs",
+                            "sha256":  "bb68c73ea1cf03f444a39c6e446094cb98dc4c5b976b819b6899ffbd533ebadd",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaQRelay.cs",
+                            "sha256":  "c42c16b443a70f4e6f58400cf03857df94124a1866eba100fdf77e9a46312860",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotIndicator.cs",
+                            "sha256":  "c699b6e6d18ee544515407d1d75e0ef8fd6266292f1d532986c1af901572d05a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVixLine.cs",
+                            "sha256":  "19f8d41632f7e2701d428c557218d2d2315c82617dc5525ae6c577c2abd9563b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaHiro.cs",
+                            "sha256":  "73fd7d78ab8d54c4ef6a8bfafe492789410e451bf7794020b460aef94dea60f1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGammaPressure.cs",
+                            "sha256":  "698a4753274848b360620f3b5df9859bb79b85385c190648c36cbd48f0cd5f4e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaOpenFlow.cs",
+                            "sha256":  "d72bfbea38239acd52239567596d8ce6bc9ddc1fb25ab36660557814ea97e77a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaOrderflow.cs",
+                            "sha256":  "bafd74a43e5127a23f67a992fdcdca839f05c506dbb7e36c771ff1586cfd3658",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaTapeStyle.cs",
+                            "sha256":  "34bafa8d4c284b4a6f07d08a69babc6d5444e382ab4738d41e2c2df7ba0f12cc",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/MenthorQGammaEngine.cs",
+                            "sha256":  "f4c82eb5668afd198aa8b73f6299027258947e5bcee4f8845dd2662c983266b3",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaNetDrift.cs",
+                            "sha256":  "768bf8a4febf3e8090c28b7bc1bc27bac86bdfa01d5affe18a5cebd09aba5369",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaDepth.cs",
+                            "sha256":  "4cf19142841bf425b0add9f51212a827dec73c063a0ca7abbe5f84e7612a92f6",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoHud.cs",
+                            "sha256":  "8811b457c77eb0db10dfe8eaa9fc9bd6f7b7e980289c9b0ca1e2270175f26411",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaVelocity.cs",
+                            "sha256":  "7f9248888438658572ceda3d63c6cf5854d21bc9ce22cb1f87e52ede30d0732c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoTheme.cs",
+                            "sha256":  "03f5592225f8e876e46172c47461eecf52ae09be5190b7b02bd4c43d8c3998cc",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGexByStrike.cs",
+                            "sha256":  "737178730ca7d34be832f78ca15bf37425ea11bdb26fc7c53dea34ed876e1cbe",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaGravity.cs",
+                            "sha256":  "bf5f7055d3a10355dc7d543a0b3d3828f9a9b68b0581cece6e9c2a51a674d693",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotAssetWindow.cs",
+                            "sha256":  "6ebaa13564ab924eae37c8e65ee9b0905055d8aaa1035e99cb28d8d68a6d7f3c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaDataRelay.cs",
+                            "sha256":  "d6f39e79094696c7f6401dfba4bdfd46939ee7c6eadf3a9d64ec30f30d7a47ff",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaAlfaConsolidatorRelay.cs",
+                            "sha256":  "fc2221ee35c15fb411b62830239166f8c45c10217066876b2aedf73fc8c7c5cd",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaPulse.cs",
+                            "sha256":  "97d132396fa5b74212f4db5e683f78711ed90446663d21cec13b254b0857d68e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/MenthorQGammaEntryCore.cs",
+                            "sha256":  "238ae4ea215bea7d364ff8ad45bf65c752ffda0365548484fc3834d5f6143f0c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaStops.cs",
+                            "sha256":  "b8b8e4dd7b2b0ed592a6dd5916a96ddcbb853efee074b8837f69d5b03519ba82",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaCopilotUnificado.cs",
+                            "sha256":  "4da088d771d4433b632cdb3fe489d30d3bc3e40d9bf2bf159e22887796de2dbf",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AO_DecisionLayer.cs",
+                            "sha256":  "1563d7c18ffd10f956c739a93b56e75fa307d52b36a914cb0ff8c8cbc1149aa4",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaTraceCloud.cs",
+                            "sha256":  "99a07520c810166a6498f097eebf2b3741f0437e800ea86bb0406bd9245ce22d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaTrackerPro.cs",
+                            "sha256":  "79d437f11198c7067cd58312a333f9bfee9b854547e5a65af3a42925c699bd9d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AlfaOmegaNexus.cs",
+                            "sha256":  "fbd49587660dd98959311af29d5ae7b8cea7ae98d6e18e52fca02819563280eb",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AdditionalReferences.txt",
+                            "sha256":  "c1cc3e5e63466f15a33fb1f4d52ae150d1ee11fe1dfeac7a1e67b51e0a45d7b3",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Newtonsoft.Json.dll",
+                            "sha256":  "7f912b28a07c226e0be3acfb2f57f050538aba0100fa1f0bf2c39f1a1f1da814",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineContas.cs",
+                            "sha256":  "41410ceb2484d3f5cb6270c67cc7c3450976ec11606a8b3bc8daae14ed97589b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineCore.cs",
+                            "sha256":  "a4d4f2d1cb5f8840d4d94ca0c8231bcd23d71928cdd6ea2aa76566bfcb95407e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineMotor.cs",
+                            "sha256":  "7b6ef9b4994d8eba3ecec593c1f389fbb050f3c60fc43da56e2f8ba25749c3d9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineNet.cs",
+                            "sha256":  "effbb7d69916ac386e5e58ccc754a15880b9eb5904733dbe85abca8914e6fa09",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineStagger.cs",
+                            "sha256":  "0f661a2e7be6bffae82d89729331abcaef50d2b54f3f366755b3fc15f1ac2bf4",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyMaster.cs",
+                            "sha256":  "73ac0ca36f175ef78bf27564ec69b3ab032279ee28bcbdd26180b59f50e0403c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaProtecaoManual.cs",
+                            "sha256":  "e31c104d976dad5991f94c087c4a5e7153ac900921723e0fb78bc3f470ce2e19",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRobo.cs",
+                            "sha256":  "0ec04dafde95bd9ff6e25422c088793e1b4e4b24fa2daa9340c15e9ce8784de8",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboAot.cs",
+                            "sha256":  "c65cbd7997147638010b81bbcf116052d5cc5a0da940377018432d4da164deac",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboAtivos.cs",
+                            "sha256":  "441b8b0ebde3d19d67cf27c0ea9a25ec53b4d96b2d1db9c7f679e0900ffd0a0a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboAudit.cs",
+                            "sha256":  "a5c6c5127ec2d9b6bd08885ec724a36652d90bb89306b5fce7ef0011b80233f1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboConfig.cs",
+                            "sha256":  "050f03b1bd16ac2697d920a462f54301d22de4890ff200b25e573c0d2af82221",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboConfigInicial.cs",
+                            "sha256":  "7803082904f04ada7adacacd8e7b06e3a4b0a3d3231e3d72ded5be1100818646",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboConfluencia.cs",
+                            "sha256":  "aaead8635a4f30cb5b3fea823d7d6c24774749eb165314a7f97e7a505ff1c1f2",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboDedup.cs",
+                            "sha256":  "18546e3e42e4fdf2cd18c980e4a7a07aa293f00ba1da74cdb01492ae23dafd08",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboEntry.cs",
+                            "sha256":  "39c8ac330522815cc5c5c5b3928c5e20a4a279d376429a15003a12ab81eda0af",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboEntryMq.cs",
+                            "sha256":  "3071e5ff9b9519164d2045b3428b4f7a3a63a4263f86e07ced45bc3af97ffa23",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboEventoAot.cs",
+                            "sha256":  "bbaa02b53de7b6b9132b0320b1c5e61962933b40006c5f8bc87a49cbfd3443d9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboFechamento.cs",
+                            "sha256":  "a1fc99a8cce2bbbcbe1428b545ec2efc15355c571919e23f1843945347d7774d",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboFontes.cs",
+                            "sha256":  "172a758a125561f88f4efb90da6af5abac01c39bb7761a20daac5eaa308b855a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboGates.cs",
+                            "sha256":  "c4f3148029ddc67091c230a54aa5199f510f2929921ed8afe2906d6f3a720d4f",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboHistorico.cs",
+                            "sha256":  "3110027ea7e214ae6e317519ffea3150493662e18aedb4d1dd3530f0212f7fe8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboLedger.cs",
+                            "sha256":  "2966866a68d6b6bce9db88bce2b5ef1f3bfe0289b8fc2fd85ce0ec666e8d97ed",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboMotor.cs",
+                            "sha256":  "ecfe8f9ce00b86fdae03258937fadb42575f003ff712317bc6b1134cfe26b9bc",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboOperacional.cs",
+                            "sha256":  "0fd2bbd628410840988b5e2c8e59737f95f6170c22720ebdd157421314047d1d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboOrderState.cs",
+                            "sha256":  "706a5bfcb0e5f51f126a3ad6bcac5e6897cb3cfd8b1f8e0372464f42f0a925a4",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboOrderWatch.cs",
+                            "sha256":  "19e853b6a8a5dce893e3c340c3ef2b6e039ef1f7fd2c2e2943b69ca1034c668d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboPermissao.cs",
+                            "sha256":  "7131b20c355635a684fbb1fceb1e305d796aff70c5884c79e92dd580fd2e6ea6",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboPositions.cs",
+                            "sha256":  "15fbefca9c14907661d903975a1feea7ee4b3f3e0ab57b25007605e5e304a818",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboProtecao.cs",
+                            "sha256":  "0d7013d9c1069e1f754d72e25f3ff2d0aedf50b0b4de942f4b42cfa66b2359d9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboRelay.cs",
+                            "sha256":  "16d340cbe8386f2c674f14a4658b707b89851f7b8c480291bef1853c17e70178",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboSaida.cs",
+                            "sha256":  "90e0020ad3187f6a360a5a661ade4e610ea16a101ff44e3538757032518eacf9",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboStack.cs",
+                            "sha256":  "7321ceb81565edb30ec508feacdb4e5283435a94a5c4cf1bd65b5a216a12e9d0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboTurno.cs",
+                            "sha256":  "4a9590df530b1219693a7103331807bb96a742d0923439dde55a17c8cec62384",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaTrader.cs",
+                            "sha256":  "07a939228fbb79a35fb09eb4eb6cdb323df1f748fefcd4a8522fa4bd49fdbd1e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoBasicEntryLink.cs",
+                            "sha256":  "0c4cad048bc966434a1a201711a4bc5dbd3c5aaeb840563b2333839df0fa010c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoJsonNum.cs",
+                            "sha256":  "0866de80418cef02d8f1ef7f31a76165a379667ac35960bb47c48b325df5bca8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoRoboGuard.cs",
+                            "sha256":  "a4566f0c0e573e78e2be2ecba03dec4170d854c1e17381af22797e5d28079c8b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoTraderCore.cs",
+                            "sha256":  "f48b51497944d218513383a47a08d2c554d9cf8dd86fc19d3c0c00e15f44b3aa",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoXGate.cs",
+                            "sha256":  "46781fdfbe526ef7098ce3e35c6b1e98739de762d509d5e2b640c4ee64d741a8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoAccountNames.cs",
+                            "sha256":  "8047078611310f0dc93b21f74a9639cc44822e353899c1d60a6491c0739f3065",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoAccounts.cs",
+                            "sha256":  "c5be2b337e2c6c7020944bfc35dcb6313a961c202be92a93b0d1026e08ce0937",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoControlCenter.cs",
+                            "sha256":  "e4d935d9b6fd866f28185dae0711d2927c8880481412a136eadc08aa98cff2e7",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoCopyStatus.cs",
+                            "sha256":  "3dcfa845f060f3301900c4be38d4be28304e74662cc579aead1e1fcfdfa02ed0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoDiag.cs",
+                            "sha256":  "208a37452c75c90dc9607a417c0df9ddd2f6dc9472ccc77eeec79cf6d0542401",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoExecClient.cs",
+                            "sha256":  "2b8d499a3095e2f8df67327199265d29ec70dc1fbff2b3fb9b9e82e5d621392c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoInput.cs",
+                            "sha256":  "7aeb078b945230ca6a9ab1fbb88eacb45f40675647d546fc9744637991ddab89",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoLicenca.cs",
+                            "sha256":  "1b725237f536f99969349c0f365b894a592c46aa8e1d1e1e9f3db7bbbf9f52b3",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoLicencaUi.cs",
+                            "sha256":  "e1906e48907f58d6901e7987562062d29ff03d76449d0baa954f1df50fd91ceb",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoMarcadores.cs",
+                            "sha256":  "298bab356da0b57f56e7dacde8e156ea3394d43379db0ee9116f5920bd99e3a1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoMarketDataPublisher.cs",
+                            "sha256":  "3d9f7f4639efce3de1ea3f9127d090a0ed72a73ff12403a09f5318183eafe5af",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "Indicators/AoPressSessao.cs",
+                            "sha256":  "097279c81f6cd89450ef74bf1c260a16a4b0cdea9039d2806d9215ac78f4f45b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoSizing.cs",
+                            "sha256":  "1de8346ad1b460adb12b7043f2d9c8a6997165e884aa40c108f4b1c29dcae05d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoSkin.cs",
+                            "sha256":  "76b0c1f82b9cac0a00ffb90cd65ea36cbe4b51da847de0fd69e723586a9ecfe0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/AoTapeEngine.cs",
+                            "sha256":  "7e2a1c38ff1c8c23e7828034f036ac8738f8ff26a3de1ea4758cc473bd347f99",
+                            "action":  "Z30X2"
+                        }
+                    ]
+    },
+    {
+        "familia":  "CANON",
+        "base_zip":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\press-recalibration-20261007\\build\\AlfaOmega_INVICTUS_Native_PGCAP_import.zip",
+        "base_sha256":  "f95cb59e514e3a0d4bacf20dab8271d9e10a436ea20b995ad7ef853c7f70ba59",
+        "zip":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\build\\AlfaOmega_INVICTUS_Native_Z30X2_import.zip",
+        "sha256":  "df08a19b6364ed2869cdcb339a2d2ba87dab2eb9caf1607cefbbb95371dc7c63",
+        "bytes":  713424,
+        "entradas":  63,
+        "mesma_lista":  true,
+        "trocados":  [
+                         "AddOns/AlfaOmegaRobo.cs",
+                         "AddOns/AlfaOmegaRoboFechamento.cs",
+                         "AddOns/AlfaOmegaRoboSaida.cs",
+                         "Indicators/TTW_DarkProjects/AlfaOmegaSharedState.cs",
+                         "Indicators/TTW_DarkProjects/AoMarketDataPublisher.cs",
+                         "Indicators/TTW_DarkProjects/AoTapeEngine.cs"
+                     ],
+        "alvos_ok":  6,
+        "unexpected_changed":  [
+
+                               ],
+        "entries":  [
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AlfaOmegaAuthV2.cs",
+                            "sha256":  "6c3bb8b0b4ce9828b5f5baaf858f4e36888427ab2bde8da36e20192e97308db1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Info.xml",
+                            "sha256":  "ffb3a3cbe8d83f1bdf65298af487ebadc20e0497205b87e516b03e586363fcff",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AdditionalReferences.txt",
+                            "sha256":  "c1cc3e5e63466f15a33fb1f4d52ae150d1ee11fe1dfeac7a1e67b51e0a45d7b3",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Newtonsoft.Json.dll",
+                            "sha256":  "7f912b28a07c226e0be3acfb2f57f050538aba0100fa1f0bf2c39f1a1f1da814",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineContas.cs",
+                            "sha256":  "41410ceb2484d3f5cb6270c67cc7c3450976ec11606a8b3bc8daae14ed97589b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineCore.cs",
+                            "sha256":  "a4d4f2d1cb5f8840d4d94ca0c8231bcd23d71928cdd6ea2aa76566bfcb95407e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineMotor.cs",
+                            "sha256":  "7b6ef9b4994d8eba3ecec593c1f389fbb050f3c60fc43da56e2f8ba25749c3d9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineNet.cs",
+                            "sha256":  "effbb7d69916ac386e5e58ccc754a15880b9eb5904733dbe85abca8914e6fa09",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyEngineStagger.cs",
+                            "sha256":  "0f661a2e7be6bffae82d89729331abcaef50d2b54f3f366755b3fc15f1ac2bf4",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaCopyMaster.cs",
+                            "sha256":  "73ac0ca36f175ef78bf27564ec69b3ab032279ee28bcbdd26180b59f50e0403c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaProtecaoManual.cs",
+                            "sha256":  "e31c104d976dad5991f94c087c4a5e7153ac900921723e0fb78bc3f470ce2e19",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRobo.cs",
+                            "sha256":  "0ec04dafde95bd9ff6e25422c088793e1b4e4b24fa2daa9340c15e9ce8784de8",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboAot.cs",
+                            "sha256":  "c65cbd7997147638010b81bbcf116052d5cc5a0da940377018432d4da164deac",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboAtivos.cs",
+                            "sha256":  "441b8b0ebde3d19d67cf27c0ea9a25ec53b4d96b2d1db9c7f679e0900ffd0a0a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboAudit.cs",
+                            "sha256":  "a5c6c5127ec2d9b6bd08885ec724a36652d90bb89306b5fce7ef0011b80233f1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboConfig.cs",
+                            "sha256":  "050f03b1bd16ac2697d920a462f54301d22de4890ff200b25e573c0d2af82221",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboConfigInicial.cs",
+                            "sha256":  "7803082904f04ada7adacacd8e7b06e3a4b0a3d3231e3d72ded5be1100818646",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboConfluencia.cs",
+                            "sha256":  "aaead8635a4f30cb5b3fea823d7d6c24774749eb165314a7f97e7a505ff1c1f2",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboDedup.cs",
+                            "sha256":  "18546e3e42e4fdf2cd18c980e4a7a07aa293f00ba1da74cdb01492ae23dafd08",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboEntry.cs",
+                            "sha256":  "39c8ac330522815cc5c5c5b3928c5e20a4a279d376429a15003a12ab81eda0af",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboEntryMq.cs",
+                            "sha256":  "3071e5ff9b9519164d2045b3428b4f7a3a63a4263f86e07ced45bc3af97ffa23",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboEventoAot.cs",
+                            "sha256":  "bbaa02b53de7b6b9132b0320b1c5e61962933b40006c5f8bc87a49cbfd3443d9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboFechamento.cs",
+                            "sha256":  "a1fc99a8cce2bbbcbe1428b545ec2efc15355c571919e23f1843945347d7774d",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboFontes.cs",
+                            "sha256":  "172a758a125561f88f4efb90da6af5abac01c39bb7761a20daac5eaa308b855a",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboGates.cs",
+                            "sha256":  "c4f3148029ddc67091c230a54aa5199f510f2929921ed8afe2906d6f3a720d4f",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboHistorico.cs",
+                            "sha256":  "3110027ea7e214ae6e317519ffea3150493662e18aedb4d1dd3530f0212f7fe8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboLedger.cs",
+                            "sha256":  "2966866a68d6b6bce9db88bce2b5ef1f3bfe0289b8fc2fd85ce0ec666e8d97ed",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboMotor.cs",
+                            "sha256":  "ecfe8f9ce00b86fdae03258937fadb42575f003ff712317bc6b1134cfe26b9bc",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboOperacional.cs",
+                            "sha256":  "0fd2bbd628410840988b5e2c8e59737f95f6170c22720ebdd157421314047d1d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboOrderState.cs",
+                            "sha256":  "706a5bfcb0e5f51f126a3ad6bcac5e6897cb3cfd8b1f8e0372464f42f0a925a4",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboOrderWatch.cs",
+                            "sha256":  "19e853b6a8a5dce893e3c340c3ef2b6e039ef1f7fd2c2e2943b69ca1034c668d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboPermissao.cs",
+                            "sha256":  "7131b20c355635a684fbb1fceb1e305d796aff70c5884c79e92dd580fd2e6ea6",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboPositions.cs",
+                            "sha256":  "15fbefca9c14907661d903975a1feea7ee4b3f3e0ab57b25007605e5e304a818",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboProtecao.cs",
+                            "sha256":  "0d7013d9c1069e1f754d72e25f3ff2d0aedf50b0b4de942f4b42cfa66b2359d9",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboRelay.cs",
+                            "sha256":  "16d340cbe8386f2c674f14a4658b707b89851f7b8c480291bef1853c17e70178",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboSaida.cs",
+                            "sha256":  "90e0020ad3187f6a360a5a661ade4e610ea16a101ff44e3538757032518eacf9",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboStack.cs",
+                            "sha256":  "7321ceb81565edb30ec508feacdb4e5283435a94a5c4cf1bd65b5a216a12e9d0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaRoboTurno.cs",
+                            "sha256":  "4a9590df530b1219693a7103331807bb96a742d0923439dde55a17c8cec62384",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AlfaOmegaTrader.cs",
+                            "sha256":  "07a939228fbb79a35fb09eb4eb6cdb323df1f748fefcd4a8522fa4bd49fdbd1e",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoBasicEntryLink.cs",
+                            "sha256":  "0c4cad048bc966434a1a201711a4bc5dbd3c5aaeb840563b2333839df0fa010c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoJsonNum.cs",
+                            "sha256":  "0866de80418cef02d8f1ef7f31a76165a379667ac35960bb47c48b325df5bca8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoRoboGuard.cs",
+                            "sha256":  "a4566f0c0e573e78e2be2ecba03dec4170d854c1e17381af22797e5d28079c8b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoTraderCore.cs",
+                            "sha256":  "f48b51497944d218513383a47a08d2c554d9cf8dd86fc19d3c0c00e15f44b3aa",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "AddOns/AoXGate.cs",
+                            "sha256":  "46781fdfbe526ef7098ce3e35c6b1e98739de762d509d5e2b640c4ee64d741a8",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AlfaOmegaSharedState.cs",
+                            "sha256":  "cdce2cddd59bad97bb30636b6ce2877944c6af1805aef2e9e1bc6829d4d8163e",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoAccountNames.cs",
+                            "sha256":  "8047078611310f0dc93b21f74a9639cc44822e353899c1d60a6491c0739f3065",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoAccounts.cs",
+                            "sha256":  "c5be2b337e2c6c7020944bfc35dcb6313a961c202be92a93b0d1026e08ce0937",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoControlCenter.cs",
+                            "sha256":  "e4d935d9b6fd866f28185dae0711d2927c8880481412a136eadc08aa98cff2e7",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoCopyStatus.cs",
+                            "sha256":  "3dcfa845f060f3301900c4be38d4be28304e74662cc579aead1e1fcfdfa02ed0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoDiag.cs",
+                            "sha256":  "208a37452c75c90dc9607a417c0df9ddd2f6dc9472ccc77eeec79cf6d0542401",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoExecClient.cs",
+                            "sha256":  "2b8d499a3095e2f8df67327199265d29ec70dc1fbff2b3fb9b9e82e5d621392c",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoHud.cs",
+                            "sha256":  "8811b457c77eb0db10dfe8eaa9fc9bd6f7b7e980289c9b0ca1e2270175f26411",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoInput.cs",
+                            "sha256":  "7aeb078b945230ca6a9ab1fbb88eacb45f40675647d546fc9744637991ddab89",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoLicenca.cs",
+                            "sha256":  "1b725237f536f99969349c0f365b894a592c46aa8e1d1e1e9f3db7bbbf9f52b3",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoLicencaUi.cs",
+                            "sha256":  "e1906e48907f58d6901e7987562062d29ff03d76449d0baa954f1df50fd91ceb",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoLogin.cs",
+                            "sha256":  "6eb74dfbe9a89a7dce181006749d404f774162f20849b801c385fe3949a9b290",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoMarcadores.cs",
+                            "sha256":  "298bab356da0b57f56e7dacde8e156ea3394d43379db0ee9116f5920bd99e3a1",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoMarketDataPublisher.cs",
+                            "sha256":  "3d9f7f4639efce3de1ea3f9127d090a0ed72a73ff12403a09f5318183eafe5af",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoPressSessao.cs",
+                            "sha256":  "097279c81f6cd89450ef74bf1c260a16a4b0cdea9039d2806d9215ac78f4f45b",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoSizing.cs",
+                            "sha256":  "1de8346ad1b460adb12b7043f2d9c8a6997165e884aa40c108f4b1c29dcae05d",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoSkin.cs",
+                            "sha256":  "76b0c1f82b9cac0a00ffb90cd65ea36cbe4b51da847de0fd69e723586a9ecfe0",
+                            "action":  "KEEP_PGCAP"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoTapeEngine.cs",
+                            "sha256":  "7e2a1c38ff1c8c23e7828034f036ac8738f8ff26a3de1ea4758cc473bd347f99",
+                            "action":  "Z30X2"
+                        },
+                        {
+                            "name":  "Indicators/TTW_DarkProjects/AoTheme.cs",
+                            "sha256":  "03f5592225f8e876e46172c47461eecf52ae09be5190b7b02bd4c43d8c3998cc",
+                            "action":  "KEEP_PGCAP"
+                        }
+                    ]
+    }
+]

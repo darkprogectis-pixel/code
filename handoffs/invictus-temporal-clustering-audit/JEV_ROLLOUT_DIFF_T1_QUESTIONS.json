@@ -1,0 +1,12 @@
+{
+ "diff": { "type": "choice", "instructions": "Os 5 imports de familia Z30X2 aplicam somente o delta aprovado (FORCA_JANELA_30 + EXIT_LAYER_FIX X2) por diff, preservam identidade, autenticacao, licenca, indicadores e as diferencas proprias do cliente, e passam nas provas offline?",
+  "criteria": { "A": "aprovado offline; packs prontos e RETIDOS ate T3 e JEV FINAL de release", "B": "falta prova ou ajuste especifico, indicado em 'pendencia'", "C": "rejeitado", "D": "outro" } },
+ "pendencia": { "type": "choice", "instructions": "Se nao for A, qual e a pendencia?",
+  "criteria": { "NENHUMA": "nenhuma", "TESTE_POR_CLIENTE": "exigir prova adicional por cliente, nao so por familia", "IDENTIDADE": "prova de preservacao de identidade insuficiente", "GATE_CLIENTE": "prova do gate nos arquivos de cliente insuficiente", "IMPORT_TESTE": "exigir importacao de teste", "OUTRA": "outra" } },
+ "familia_basta": { "type": "choice", "instructions": "Como cada cliente recebe copia byte a byte do import da sua familia, a validacao por familia vale para os clientes dessa familia?",
+  "criteria": { "SIM": "vale", "NAO": "nao vale; validar por cliente" } },
+ "antigos": { "type": "choice", "instructions": "E correto classificar os 8 pacotes historicos de setembro como nao aplicaveis (bases substituidas pelas entregas de familia), sem atualiza-los?",
+  "criteria": { "CORRETO": "correto", "ATUALIZAR": "devem ser atualizados tambem" } },
+ "final_offline": { "type": "choice", "instructions": "Decisao final OFFLINE do rollout: os packs podem ser dados como construidos e validados offline, com entrega e uso RETIDOS ate JEV DIFF T3 = A e JEV FINAL de release?",
+  "criteria": { "A": "sim: construidos e validados offline, retidos", "B": "ainda nao", "C": "nao" } }
+}
