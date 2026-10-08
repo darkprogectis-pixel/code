@@ -1,0 +1,8 @@
+{
+ "playback": { "type": "choice", "instructions": "Para cumprir o ciclo completo exigido na porta B, podemos usar Playback deterministico na OLIVER com conta Sim, reproduzindo uma janela conhecida, em vez de aguardar entrada organica?",
+  "criteria": { "YES": "usar Playback na OLIVER", "NO": "nao; usar mercado ao vivo com o robo somente em conta Sim e aguardar o ciclo organico em pregao regular" } },
+ "isolamento": { "type": "choice", "instructions": "Qual forma minima de excluir a conta real durante o teste Sim?",
+  "criteria": { "DESLIGAR_MES_MNQ": "desligar os ativos MES e MNQ (os unicos mapeados para a conta real); ES e NQ seguem em conta Sim; CopyEngine mestre desligado conferido", "REMAPEAR_PARA_SIM": "remapear MES e MNQ para uma conta Sim", "DESCONECTAR_CORRETORA": "desconectar a corretora durante o teste", "DESLIGAR_E_DESCONECTAR": "desligar MES e MNQ e tambem desconectar a corretora" } },
+ "ciclo_minimo": { "type": "choice", "instructions": "No teste ao vivo em Sim, o que conta como ciclo completo suficiente para o JEV DIFF T3?",
+  "criteria": { "DUAS_ENTRADAS_DUAS_SAIDAS": "entrada -> saida -> nova entrada -> saida, com cada fechamento verificado, mesmo que a reentrada nao seja no mesmo ciclo da saida", "REENTRADA_MESMO_CICLO": "exigir que a reentrada ocorra no mesmo ciclo da saida (saida por trailing com forca maxima)" } }
+}

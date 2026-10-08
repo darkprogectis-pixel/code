@@ -1,0 +1,19 @@
+INVICTUS - EXIT_LAYER_FIX X2 - PORTA B: PLAYBACK DETERMINISTICO OU ENTRADA ORGANICA?
+
+CONTEXTO
+JEV GATE T1 = B 0,71 (req_01a11ca5380570cd90aa0d7a8d1e3018): falta um ciclo completo em conta Sim na propria OLIVER (entrada -> saida -> reentrada -> saida), conta real excluida, antes do pacote oficial. O operador quer evitar esperar horas por entrada organica, se isso for evitavel, sem nova infraestrutura.
+
+PERGUNTA OPERACIONAL
+Para cumprir o ciclo completo exigido na porta B, podemos usar Playback deterministico na OLIVER com conta Sim, reproduzindo uma janela conhecida, em vez de aguardar entrada organica?
+
+FATOS VERIFICADOS AGORA (somente leitura)
+P1 Dados: o banco de ticks em disco para ES e NQ dezembro vai ate o arquivo das 11:00 UTC de 08/10; a janela do incidente (16:17 a 16:24 UTC de 08/10) ainda NAO esta gravada em disco. Nao existem dados de Market Replay para os contratos de dezembro (so para contratos antigos). Sobraria o modo de Playback com ticks historicos de janelas anteriores.
+P2 Relogio: a janela de 30 minutos da FORCA_JANELA_30 conta pela hora do tick (em Playback ela acompanha os dados). Mas o ciclo do robo (consulta a cada 2 s), a espera de 60 s entre entradas, a checagem de dado fresco e o acompanhamento do trailing usam o relogio do computador (hora real). Em Playback acelerado o robo amostra o mercado em pontos diferentes dos do pregao real, logo a sequencia de entradas e saidas NAO se reproduz de forma deterministica. Em velocidade 1x o Playback leva o mesmo tempo que o mercado ao vivo (aquecimento de 30 minutos mais a espera pelas condicoes).
+P3 O comportamento do robo em Playback nunca foi testado nesta maquina (existe um indicador interno de modo replay, mas nenhum registro de execucao). Portoes ligados a hora real (calendario e janela de mercado) podem bloquear entradas se o Playback rodar fora do horario.
+P4 No NinjaTrader a conexao de Playback exige desconectar as conexoes ao vivo. Na OLIVER isso desconectaria a corretora durante o teste (isola a conta real, mas e mais uma acao manual do operador e muda o estado do ambiente principal).
+P5 Estado atual do robo: STOP. CopyEngine com o interruptor mestre desligado desde 05/10. Mapeamento de ativos do robo: ES e NQ cheios -> conta Sim; MES e MNQ -> conta real (3 contratos). Para excluir a conta real basta desligar os ativos MES e MNQ no painel; ES e NQ ja operam somente em conta Sim.
+P6 Ritmo observado hoje com a FORCA_JANELA_30 em pregao regular: 7 entradas organicas em cerca de 3 horas, incluindo saida por trailing com reentrada no mesmo ciclo.
+
+OPCOES
+YES_PLAYBACK usar Playback na OLIVER para o ciclo completo.
+NO_ORGANICO manter o procedimento minimo: mercado ao vivo, robo operando somente ES/NQ em conta Sim (MES/MNQ desligados), observacao passiva ate o ciclo completo em pregao regular.

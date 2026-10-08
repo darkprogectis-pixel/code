@@ -1,0 +1,35 @@
+{
+ "request_id": "req_01a11ca974497f128d8ca4e7e00747d1",
+ "model": "jev-1.13.0",
+ "answers": {
+  "playback": {
+   "type": "choice",
+   "choice": "NO",
+   "confidence": 1,
+   "probabilities": {
+    "YES": 0,
+    "NO": 1
+   }
+  },
+  "isolamento": {
+   "type": "choice",
+   "choice": "DESLIGAR_MES_MNQ",
+   "confidence": 1,
+   "probabilities": {
+    "DESLIGAR_MES_MNQ": 1,
+    "REMAPEAR_PARA_SIM": 0,
+    "DESCONECTAR_CORRETORA": 0,
+    "DESLIGAR_E_DESCONECTAR": 0
+   }
+  },
+  "ciclo_minimo": {
+   "type": "choice",
+   "choice": "DUAS_ENTRADAS_DUAS_SAIDAS",
+   "confidence": 0.31,
+   "probabilities": {
+    "DUAS_ENTRADAS_DUAS_SAIDAS": 0.66,
+    "REENTRADA_MESMO_CICLO": 0.34
+   }
+  }
+ }
+}
