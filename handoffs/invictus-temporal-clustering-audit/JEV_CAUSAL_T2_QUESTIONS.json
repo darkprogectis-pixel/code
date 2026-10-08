@@ -1,0 +1,6 @@
+{
+ "t2": { "type": "choice", "instructions": "A evidencia historica + replay + runtime real validado 16/16 e suficiente para concluir causalmente que o desenho atual do passo 4 (|Press| >= LimiarForca nos dois simbolos), baseado em cumDelta/volume acumulado e no regime de reset, e a causa primaria das rajadas de entradas e longas dead zones do INVICTUS durante TODA a sessao? Nao considere ausencia de uma coleta futura como razao automatica para B. Avalie se o conjunto retrospectivo ja identifica causalidade de forma suficiente.",
+  "criteria": { "A": "SIM: causa primaria suficientemente provada (ROOT_CAUSE_PROVEN); pode abrir a fase de desenho de correcao", "B": "NAO AINDA: falta uma evidencia especifica e identificavel antes de considerar provado", "C": "NAO: a evidencia aponta para outra causa primaria", "D": "outro" } },
+ "lacuna": { "type": "choice", "instructions": "Se ainda houver lacuna de prova, qual e a principal?",
+  "criteria": { "NENHUMA": "nenhuma lacuna relevante; o conjunto e suficiente", "PRESS_TICK_A_TICK": "falta serie continua do Press real de runtime atraves de uma virada de sessao", "PGCAP_RUNTIME": "falta observar o P-GCAP em runtime por uma sessao completa", "ORIGEM_INSTANCIA": "falta resolver as entradas de antes de 02 de outubro nao reproduzidas pelo Press reconstruido", "OUTRA": "outra lacuna" } }
+}

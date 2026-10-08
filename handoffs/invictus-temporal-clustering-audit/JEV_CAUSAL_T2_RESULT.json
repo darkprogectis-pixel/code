@@ -1,0 +1,29 @@
+{
+ "request_id": "req_01a11b7fcb7078d9b0f571dfbf4071e9",
+ "model": "jev-1.13.0",
+ "answers": {
+  "t2": {
+   "type": "choice",
+   "choice": "A",
+   "confidence": 0.83,
+   "probabilities": {
+    "A": 0.87,
+    "C": 0.01,
+    "B": 0.12,
+    "D": 0
+   }
+  },
+  "lacuna": {
+   "type": "choice",
+   "choice": "PRESS_TICK_A_TICK",
+   "confidence": 0.45,
+   "probabilities": {
+    "PGCAP_RUNTIME": 0.39,
+    "PRESS_TICK_A_TICK": 0.5599999999999999,
+    "NENHUMA": 0.03,
+    "ORIGEM_INSTANCIA": 0.01,
+    "OUTRA": 0.01
+   }
+  }
+ }
+}

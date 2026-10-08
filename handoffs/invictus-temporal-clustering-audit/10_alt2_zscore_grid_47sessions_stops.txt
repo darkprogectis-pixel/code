@@ -1,0 +1,129 @@
+PART 1 — HISTORICAL MILESTONES (18 real sessions 09-14..10-07, tick db; values = median across sessions/steps in the window; rates = share of 20 s steps with live tape)
+milestone                 |Press|ES  |Press|NQ   volES   volNQ  limGCAP_ES limGCAP_NQ | gate0.03 ES  NQ | gateGCAP ES  NQ | dirES_def dirNQ_def aligned | P(force|aligned) 0.03 GCAP | anchorOK 0.03  GCAP  (= ENTRY_ELIGIBLE before cooldown/hysteresis)
+RESET 0-2min                0.1100     0.1042      468     339    0.0300     0.0300  |  85.2  87.8  |  85.2  87.8  |  95.8      87.1     44.1  |     81.0   81.0         |  35.74  35.74
++15min                      0.0486     0.0423     2376    1997    0.0300     0.0300  |  70.4  64.9  |  70.4  64.9  |  89.6      85.1     49.0  |     39.1   39.1         |  19.17  19.17
++30min                      0.0398     0.0390     3721    3054    0.0300     0.0300  |  62.2  60.5  |  62.2  60.5  |  91.1      82.3     45.8  |     32.7   32.7         |  15.00  15.00
++60min                      0.0393     0.0229     5462    5080    0.0300     0.0300  |  61.6  42.2  |  61.6  42.2  |  91.0      84.2     45.2  |     17.6   17.6         |   7.96   7.96
++120min                     0.0364     0.0223    10180    9481    0.0300     0.0300  |  56.6  38.9  |  56.6  38.9  |  80.4      91.0     47.0  |     23.5   23.5         |  11.06  11.06
+OVERNIGHT +6h (00:00 ET)    0.0246     0.0128    43852   39391    0.0300     0.0300  |  44.9   9.2  |  44.9  10.2  |  91.3      89.8     53.0  |      7.6    9.4         |   4.02   5.00
+PRE-RTH 08:30 ET            0.0175     0.0130   170803  104892    0.0227     0.0213  |  21.4  17.0  |  29.0  20.0  |  92.7      86.0     53.6  |      5.1    8.5         |   2.73   4.55
+RTH 10:30 ET                0.0117     0.0068   479593  243706    0.0165     0.0157  |   4.9   0.8  |  26.2  14.8  |  88.0      88.7     53.3  |      0.0    1.3         |   0.00   0.68
+TARDE 14:00 ET              0.0079     0.0049   919935  419150    0.0135     0.0129  |   2.3   2.3  |  18.2  21.1  |  89.8      87.6     55.3  |      0.0    4.8         |   0.00   2.65
+
+PART 2 — STEP-4 ALTERNATIVES on the same ticks (18 sessions; theta calibrated on first 9 to 17.5 entries/session; OOS = last 9). PnL = descriptive, exit only on divergence (no stops), ES x50 + NQ x20
+alternative                                   theta    N  /sess clus medGap  p90   max  >2h >4h >8h  ovn  RTH 18-20h hourCV 0h-hours passMax/Min dirCons  pnl/trade  win  | OOS: N p90 >4h 18-20h hourCV pnl/trade
+SEM_FORCE (so passos 1-3)                      0.50000  6516 148.1  112     6m    20m  23.3h    6   3   3  3160 3356     7%   0.56     0           1     100%       2.8   44%  | 4247    19m   1    7%  0.54      7.9
+BASE_PRTH1 (sess |Press|>=0.03)                0.03000   341   7.8   97    18m  13.3h  45.8h   59  52  44   341    0    56%    1.6     7    405264.6      55%      -4.2   45%  |  215  14.3h  32   64%  1.78    -14.5
+PGCAP (LimiarForca atual)                      0.03000   612  13.9  111    10m   3.9h  45.6h   68  61  42   452  160    31%   0.84     0        17.1      42%      -0.9   45%  |  407   2.7h  38   34%  0.89      0.4
+ZSCORE janela 10min                            4.15081   899  20.4  405    36m   2.7h  25.2h  139  51  10   391  508     9%   0.67     0         3.9      91%       2.5   43%  |  619   2.4h  27    8%  0.69      6.0
+ZSCORE janela 10min + SINAL=direcao            4.03959   882    20  424    40m   2.7h  25.2h  141  49   9   417  465     9%   0.59     0         3.4     100%       9.2   44%  |  602   2.4h  26    8%   0.6     15.4
+ZSCORE janela 15min                            4.02346   917  20.8  384    31m   2.9h  26.6h  155  56  12   388  529     7%   0.69     0         3.1      83%      -1.8   45%  |  637   2.6h  29    7%  0.71      6.2
+ZSCORE janela 15min + SINAL=direcao            3.75521   905  20.6  408    36m   3.0h  24.9h  163  50   6   445  460     9%   0.55     0         2.4     100%      11.7   45%  |  624   2.6h  26    9%  0.56     13.8
+ZSCORE janela 30min                            3.93345   907  20.6  328    18m   3.2h  29.4h  162  68  19   373  534     6%    0.7     0         2.5      68%      -4.0   43%  |  627   2.9h  37    6%  0.72     -1.5
+ZSCORE janela 30min + SINAL=direcao            3.45412   859  19.5  374    30m   3.1h  27.7h  170  56  15   440  419     9%    0.5     0           2     100%      18.2   44%  |  579   2.9h  32    9%  0.48     37.0
+ZSCORE janela 60min                            3.96946   909  20.7  264    10m   3.7h  28.8h  157  81  23   360  549     3%   0.77     0         7.2      53%      29.5   46%  |  629   3.3h  51    3%   0.8     24.4
+ZSCORE janela 60min + SINAL=direcao            3.10836   885  20.1  288    15m   3.3h  28.5h  159  72  19   457  428     6%    0.5     0         3.6     100%       6.1   42%  |  605   2.8h  40    7%  0.51     23.3
+ZSCORE janela 120min                           4.13609   906  20.6  179     8m   3.2h  35.4h  128  68  39   395  511     3%   0.73     0           6      47%      14.3   45%  |  625   3.0h  41    3%  0.78     25.0
+ZSCORE janela 120min + SINAL=direcao           3.06112   883  20.1  201    12m   3.5h  35.2h  127  80  30   474  409     6%   0.54     0         3.2     100%      27.8   46%  |  603   3.0h  49    7%  0.58     49.5
+ZSCORE EMA 5min                                2.99770   923    21  430    39m   2.7h  28.8h  144  33   6   433  490     8%   0.59     0         3.8      97%     -12.7   45%  |  643   2.3h  16    8%  0.57     -5.4
+ZSCORE EMA 5min + SINAL=direcao                2.98211   905  20.6  435    40m   2.7h  28.8h  148  31   6   438  467     9%   0.56     0         3.7     100%     -12.6   45%  |  625   2.4h  15    8%  0.54     -3.3
+ZSCORE EMA 10min                               2.86145   904  20.5  386    31m   3.0h  28.8h  166  52   8   393  511     8%   0.65     0         3.5      84%       4.6   45%  |  624   2.7h  26    8%  0.66     13.6
+ZSCORE EMA 10min + SINAL=direcao               2.72417   872  19.8  411    37m   3.0h  28.8h  161  44   6   438  434    10%   0.53     0         2.6     100%      -6.6   43%  |  591   2.8h  21   10%  0.51      6.8
+ZSCORE EMA 20min                               2.89931   867  19.7  299    17m   3.5h  28.6h  175  68  19   345  522     5%   0.73     0         3.9      69%      -4.2   43%  |  586   3.3h  41    5%  0.75      9.3
+ZSCORE EMA 20min + SINAL=direcao               2.46995   856  19.5  324    22m   3.6h  28.5h  168  72  11   443  413     7%   0.54     0           3     100%      -7.4   45%  |  575   3.4h  43    8%  0.54     14.0
+ZSCORE EMA 30min                               2.96535   844  19.2  243    11m   3.8h  34.1h  148  78  29   334  510     4%   0.75     0         3.8      60%       5.0   43%  |  564   3.7h  51    4%  0.77     15.5
+ZSCORE EMA 30min + SINAL=direcao               2.40885   843  19.2  276    16m   3.7h  32.2h  153  80  21   460  383     6%   0.55     0         2.8     100%      13.7   44%  |  562   3.5h  49    7%  0.55     34.9
+ZSCORE EMA 60min                               3.08229   839  19.1  183     8m   3.9h  35.5h  120  81  35   334  505     3%   0.82     0         4.2      49%      33.3   46%  |  559   3.9h  54    3%  0.86     44.3
+ZSCORE EMA 60min + SINAL=direcao               2.26170   833  18.9  206    12m   4.0h  34.8h  123  84  34   483  350     5%   0.63     0         2.8     100%      28.9   47%  |  553   3.7h  53    6%  0.65     51.9
+EMA_RAZAO meia-vida 30min                      0.03802   759  17.3  281    23m   3.4h  34.0h  131  62  30   705   54    15%   0.65     2        36.2      74%      12.5   45%  |  479   3.4h  40   17%  0.66     23.5
+EMA_RAZAO meia-vida 30min + SINAL=direcao      0.03289   723  16.4  288    27m   3.8h  32.1h  137  70  29   675   48    17%   0.64     1        23.7     100%      32.2   48%  |  442   4.1h  45   19%  0.67     58.8
+RAZAO_LOCAL ult. 10k contratos ES              0.08140   892  20.3  270    21m   3.1h  30.8h  114  67  30   267  625     3%   0.98     0           4      92%     -31.9   42%  |  612   2.5h  40    3%  0.99    -26.4
+RAZAO_LOCAL ult. 10k contratos ES + SINAL=direcao  0.07798   882    20  255    20m   3.2h  40.0h  108  67  30   226  656     2%   1.07     0         6.2     100%     -24.0   43%  |  601   3.0h  41    2%   1.1    -10.5
+
+ENTRIES BY ET HOUR (0..23):
+SEM_FORCE (so passos 1-3)                     118 133 173 194 210 172 167 229 325 505 562 519 478 471 465 551 327 0 174 104 196 186 133 124
+BASE_PRTH1 (sess |Press|>=0.03)               8 10 15 9 15 17 7 18 19 3 0 0 0 0 0 0 0 0 113 42 36 21 2 6
+PGCAP (LimiarForca atual)                     8 13 17 12 26 23 21 30 39 53 10 6 14 35 30 34 19 0 113 42 36 21 2 8
+ZSCORE janela 10min                           22 26 9 10 24 10 17 30 31 66 103 82 88 64 72 54 30 0 21 26 30 30 26 28
+ZSCORE janela 10min + SINAL=direcao           24 29 13 13 25 12 19 32 33 62 87 78 87 59 65 48 26 0 23 27 32 31 27 30
+ZSCORE janela 15min                           24 29 9 13 26 12 18 38 40 64 106 80 95 62 75 63 28 0 14 24 29 25 22 21
+ZSCORE janela 15min + SINAL=direcao           27 34 10 19 28 14 17 40 44 71 75 74 84 58 68 51 28 0 18 28 36 31 25 25
+ZSCORE janela 30min                           25 27 17 14 30 13 11 32 37 65 108 83 76 69 74 76 33 0 12 16 27 17 26 19
+ZSCORE janela 30min + SINAL=direcao           32 25 16 18 33 16 17 40 37 74 76 62 61 57 59 48 36 0 18 29 33 24 25 23
+ZSCORE janela 60min                           24 28 28 9 25 22 10 27 47 54 72 89 71 78 79 119 39 0 3 16 10 29 17 13
+ZSCORE janela 60min + SINAL=direcao           31 33 36 24 37 20 12 36 50 71 72 69 69 53 48 63 40 0 11 24 22 29 17 18
+ZSCORE janela 120min                          14 37 41 9 23 33 14 36 43 56 64 86 62 70 85 109 52 0 10 5 12 21 9 15
+ZSCORE janela 120min + SINAL=direcao          30 38 44 17 30 34 17 38 66 74 83 53 66 42 51 63 36 0 16 14 22 20 12 17
+ZSCORE EMA 5min                               30 29 14 23 31 14 18 34 38 75 89 80 70 65 74 62 11 0 19 25 33 34 28 27
+ZSCORE EMA 5min + SINAL=direcao               30 30 14 23 31 13 18 35 39 74 81 78 66 61 74 58 12 0 19 25 34 35 28 27
+ZSCORE EMA 10min                              29 27 12 15 35 15 17 40 40 80 79 70 82 65 77 75 7 0 16 27 30 30 20 16
+ZSCORE EMA 10min + SINAL=direcao              31 31 13 21 35 16 19 43 41 80 64 66 66 52 72 53 9 0 20 31 33 34 21 21
+ZSCORE EMA 20min                              25 30 17 13 30 16 15 37 42 82 83 68 79 64 63 96 10 0 7 15 19 25 16 15
+ZSCORE EMA 20min + SINAL=direcao              32 34 24 22 42 23 18 46 50 90 74 51 59 43 52 59 12 0 13 23 26 27 20 16
+ZSCORE EMA 30min                              23 37 22 15 28 21 10 29 45 74 91 63 57 71 63 102 17 0 8 14 11 20 11 12
+ZSCORE EMA 30min + SINAL=direcao              30 39 32 27 35 25 20 42 56 95 75 45 51 33 45 61 24 0 13 14 23 29 14 15
+ZSCORE EMA 60min                              9 33 36 15 33 25 12 28 41 71 97 65 59 47 69 114 40 0 5 10 6 9 4 11
+ZSCORE EMA 60min + SINAL=direcao              28 43 50 31 42 29 17 39 69 98 84 48 39 28 33 53 25 0 15 13 12 17 5 15
+EMA_RAZAO meia-vida 30min                     55 68 55 26 52 39 34 64 73 23 0 3 7 13 13 7 0 0 39 38 39 43 35 33
+EMA_RAZAO meia-vida 30min + SINAL=direcao     51 54 61 38 47 34 34 54 65 31 1 5 5 5 5 11 0 0 38 38 46 43 27 30
+RAZAO_LOCAL ult. 10k contratos ES             17 22 15 7 20 4 9 18 35 97 135 105 89 64 72 80 44 0 14 5 12 11 10 7
+RAZAO_LOCAL ult. 10k contratos ES + SINAL=direcao 16 16 14 7 18 4 9 19 37 103 140 110 94 66 80 82 31 0 7 4 10 6 3 6
+
+P(force pass | aligned) by session bucket [0-1h, 1-4h, 4-8h, 8-13h, 13-15.5h, RTH1, RTH2]:
+SEM_FORCE (so passos 1-3)                      100.0 100.0 100.0 100.0 100.0 100.0 100.0
+BASE_PRTH1 (sess |Press|>=0.03)                 40.5  13.4   5.1   9.3   6.7   0.0   0.0
+PGCAP (LimiarForca atual)                       40.5  13.4   5.5  11.9  12.3   2.4   5.9
+ZSCORE janela 10min                              3.5   4.9   5.6   2.6   4.8  10.3   8.1
+ZSCORE janela 10min + SINAL=direcao              3.9   5.4   6.2   2.9   5.3   9.8   8.2
+ZSCORE janela 15min                              3.6   5.2   7.0   3.9   6.7  11.3   8.5
+ZSCORE janela 15min + SINAL=direcao              4.4   6.8   8.4   4.7   8.1  10.4   8.2
+ZSCORE janela 30min                              4.5   5.7   9.0   4.6   7.6  11.5   9.9
+ZSCORE janela 30min + SINAL=direcao              7.4   8.1  12.1   6.0   9.1   9.6   8.1
+ZSCORE janela 60min                              1.6   5.9  10.8   5.7   7.6  10.8  11.7
+ZSCORE janela 60min + SINAL=direcao              4.3   8.7  15.6   9.3   9.9  10.3   8.6
+ZSCORE janela 120min                             2.1   3.6   9.6   7.6   9.0  10.0  12.4
+ZSCORE janela 120min + SINAL=direcao             4.3   5.7  13.7  11.9  13.1   9.7   8.3
+ZSCORE EMA 5min                                  2.8   5.1   5.8   3.2   5.5  10.8   8.6
+ZSCORE EMA 5min + SINAL=direcao                  2.9   5.2   5.8   3.3   5.6  10.7   8.5
+ZSCORE EMA 10min                                 3.0   6.4   8.7   4.4   8.0  10.8   9.3
+ZSCORE EMA 10min + SINAL=direcao                 3.9   7.3   9.9   5.3   9.0  10.2   8.7
+ZSCORE EMA 20min                                 2.7   6.1   9.9   5.2   8.0  10.3   9.6
+ZSCORE EMA 20min + SINAL=direcao                 4.7   8.6  13.9   7.9  10.8  10.0   8.8
+ZSCORE EMA 30min                                 2.6   4.9   9.4   5.8   8.1   9.9   9.8
+ZSCORE EMA 30min + SINAL=direcao                 5.1   7.7  14.1   9.4  11.5   9.0   8.0
+ZSCORE EMA 60min                                 2.6   3.5   7.1   7.9   7.7  11.2  10.6
+ZSCORE EMA 60min + SINAL=direcao                 5.9   5.0  12.0  14.1  13.6   9.3   6.1
+EMA_RAZAO meia-vida 30min                       14.8  14.3  27.8  16.7  15.4   0.8   1.3
+EMA_RAZAO meia-vida 30min + SINAL=direcao       14.1  15.5  27.0  16.6  15.5   1.1   1.2
+RAZAO_LOCAL ult. 10k contratos ES                3.0   2.5   5.0   4.4   4.6  10.1   6.8
+RAZAO_LOCAL ult. 10k contratos ES + SINAL=direcao    2.0   1.8   4.8   3.9   5.5  11.3   7.7
+
+ROBUSTEZ — theta x0.8 / x1.25 (N total) | metade 1 x metade 2 das sessoes: N/sess, 18-20h, hourCV, pnl/trade, win
+SEM_FORCE (so passos 1-3)                       6516   6516  |  143.3    7%   0.6     -0.4   43%  x  152.9    7%  0.52      5.9   46%
+BASE_PRTH1 (sess |Press|>=0.03)                  535    232  |    7.2   55%  1.64     11.7   40%  x    8.3   57%  1.62    -18.0   49%
+PGCAP (LimiarForca atual)                       1079    327  |   10.8   37%  1.05     -2.3   41%  x     17   28%  0.77     -0.0   47%
+ZSCORE janela 10min                             1625    433  |     19   11%  0.64      2.8   45%  x   21.8    6%  0.73      2.3   41%
+ZSCORE janela 10min + SINAL=direcao             1483    453  |     19   12%  0.59      8.1   45%  x   21.1    7%  0.63     10.2   42%
+ZSCORE janela 15min                             1618    434  |   19.3    8%  0.67     -3.4   46%  x   22.4    6%  0.74     -0.3   44%
+ZSCORE janela 15min + SINAL=direcao             1454    482  |   19.3   10%  0.55     24.1   46%  x   21.9    8%  0.58      0.8   44%
+ZSCORE janela 30min                             1578    459  |   18.1    8%  0.68      7.2   41%  x   23.1    4%  0.78    -12.9   44%
+ZSCORE janela 30min + SINAL=direcao             1285    500  |   18.2   11%  0.52     -5.0   42%  x   20.8    8%  0.54     38.5   45%
+ZSCORE janela 60min                             1524    446  |   18.1    5%  0.78     50.3   46%  x   23.2    2%  0.81     13.2   46%
+ZSCORE janela 60min + SINAL=direcao             1275    551  |   17.8    9%  0.51    -24.3   39%  x   22.5    5%  0.57     30.2   45%
+ZSCORE janela 120min                            1552    372  |   18.1    4%  0.71      0.3   44%  x   23.1    2%  0.84     25.3   46%
+ZSCORE janela 120min + SINAL=direcao            1189    601  |   17.2    6%  0.49    -11.2   41%  x     23    6%  0.65     57.0   50%
+ZSCORE EMA 5min                                 1569    497  |     19   10%  0.59    -12.9   46%  x     23    7%  0.62    -12.5   44%
+ZSCORE EMA 5min + SINAL=direcao                 1479    496  |     19   11%  0.58    -16.8   46%  x   22.2    7%  0.59     -8.9   45%
+ZSCORE EMA 10min                                1553    479  |   18.2   10%  0.63    -13.4   44%  x   22.9    7%  0.72     18.9   45%
+ZSCORE EMA 10min + SINAL=direcao                1358    488  |   18.3   11%  0.56    -26.2   44%  x   21.4    8%  0.56     10.2   43%
+ZSCORE EMA 20min                                1461    431  |   17.5    6%  0.79    -24.9   39%  x     22    4%  0.79     12.3   46%
+ZSCORE EMA 20min + SINAL=direcao                1244    530  |   17.9    8%  0.57    -38.8   42%  x     21    7%  0.59     19.2   46%
+ZSCORE EMA 30min                                1455    416  |   17.6    5%  0.83     -4.9   40%  x   20.7    3%  0.79     13.5   45%
+ZSCORE EMA 30min + SINAL=direcao                1176    506  |   17.4    7%  0.61    -17.0   42%  x     21    5%  0.61     39.1   45%
+ZSCORE EMA 60min                                1392    398  |   17.5    3%  0.84     14.2   44%  x   20.7    2%  0.86     49.4   48%
+ZSCORE EMA 60min + SINAL=direcao                1123    528  |   16.9    6%  0.66    -11.5   44%  x     21    4%  0.68     61.4   48%
+EMA_RAZAO meia-vida 30min                       1134    471  |   17.8   15%  0.76     11.9   44%  x   16.7   16%  0.64     13.1   47%
+EMA_RAZAO meia-vida 30min + SINAL=direcao        964    512  |   17.9   16%  0.68      1.0   44%  x     15   17%  0.68     69.7   53%
+RAZAO_LOCAL ult. 10k contratos ES               1463    421  |     18    5%  1.01    -44.5   40%  x   22.5    2%  0.99    -21.8   43%
+RAZAO_LOCAL ult. 10k contratos ES + SINAL=direcao   1403    481  |   18.3    4%  1.07    -38.3   42%  x   21.8    1%   1.1    -11.9   44%
+sessions 44 2026-08-03 .. 2026-10-06 | calibration sessions 16

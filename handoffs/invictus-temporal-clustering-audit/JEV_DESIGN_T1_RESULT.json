@@ -1,0 +1,78 @@
+{
+ "request_id": "req_01a11b83310e7c01a1bd133b3ab8f0cc",
+ "model": "jev-1.13.0",
+ "answers": {
+  "design": {
+   "type": "choice",
+   "choice": "A",
+   "confidence": 0.72,
+   "probabilities": {
+    "A": 0.79,
+    "C": 0,
+    "D": 0.01,
+    "B": 0.2
+   }
+  },
+  "variante": {
+   "type": "choice",
+   "choice": "JANELA_30",
+   "confidence": 0.63,
+   "probabilities": {
+    "JANELA_120": 0,
+    "EMA_10": 0.01,
+    "EMA_20": 0,
+    "EMA_5": 0.01,
+    "JANELA_15": 0.21,
+    "JANELA_60": 0,
+    "EMA_30": 0.01,
+    "JANELA_30": 0.66,
+    "JANELA_10": 0.07,
+    "INDETERMINADO": 0.02,
+    "EMA_60": 0.01
+   }
+  },
+  "seletividade": {
+   "type": "score",
+   "score": 1.42,
+   "confidence": 0.13,
+   "legend": {
+    "0": "nao preserva",
+    "1": "preserva parcialmente",
+    "2": "preserva"
+   },
+   "probabilities": {
+    "0": 0.17,
+    "1": 0.24,
+    "2": 0.59
+   }
+  },
+  "vies_temporal": {
+   "type": "score",
+   "score": 1.84,
+   "confidence": 0.78,
+   "legend": {
+    "0": "nao remove",
+    "1": "remove parcialmente",
+    "2": "remove"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.15,
+    "2": 0.85
+   }
+  },
+  "lacuna": {
+   "type": "choice",
+   "choice": "RUNTIME",
+   "confidence": 0.57,
+   "probabilities": {
+    "SEMANTICA_SINAL": 0.22,
+    "NENHUMA": 0.04,
+    "MAIS_SESSOES": 0.03,
+    "OUTRA": 0.06,
+    "THETA": 0.01,
+    "RUNTIME": 0.64
+   }
+  }
+ }
+}

@@ -61,3 +61,46 @@ Cópia das saídas e ferramentas em `handoffs/invictus-temporal-clustering-audit
 - Coleta ao vivo: `tools\collect_bridge.js` → `W\data\bridge_5151.csv` desde 2026-10-08 12:07Z (20 s). Campos do bridge: anchor (dir, strength, why, block), ME/MVI/Press/pressState por símbolo, minForce. **O bridge não publica PressVol nem o limiar efetivo**: LimiarForca efetivo = fórmula P-GCAP sobre o volume reconstruído do tick db (que só é gravado quando o NT8 baixa histórico; última gravação 08/10 00:07 BRT) + cota direta pelo veredito do próprio runtime (block FORCE_BELOW_MIN × OK com os 4 canais alinhados).
 - Janela-alvo: até ≥ 120 min após a virada de 18:00 ET de 08/10 (≥ 2026-10-09 00:00Z). Depois: análise por marcos (reset, +15, +30, +60, +120, overnight, pré-RTH, RTH, tarde) ⇒ JEV CAUSAL T2. Sem desenho de correção antes do T2.
 - Se a sessão cair: relançar `node tools\collect_bridge.js` (append no mesmo CSV; buracos ficam visíveis pelo timestamp).
+
+## 13. FASE T2 FECHADA + DESENHO DA CORREÇÃO (sessão 6b86565f, 2026-10-08) — ZERO PATCH, NT8 intocado
+Ordem do operador: não esperar coleta ao vivo; decidir com o conjunto retrospectivo.
+
+### 13.1 Marcos históricos (18 sessões reais 14/09–07/10; `tests\09_milestones_and_alternatives.txt`, parte 1)
+| Marco | abs(Press) ES / NQ | Vol ES / NQ | Limiar P-GCAP ES / NQ | P(força dado alinhado) 0,03 / P-GCAP | Alinhado |
+|---|---|---|---|---|---|
+| reset 0–2 min | 0,1106 / 0,1314 | 493 / 338 | 0,0300 / 0,0300 | 81,8 % / 81,8 % | 41,1 % |
+| +15 min | 0,0570 / 0,0551 | 2437 / 2149 | 0,0300 / 0,0300 | 47,4 % / 47,4 % | 42,6 % |
+| +30 min | 0,0420 / 0,0529 | 3617 / 3378 | 0,0300 / 0,0300 | 40,7 % / 40,7 % | 50,0 % |
+| +60 min | 0,0403 / 0,0354 | 5611 / 5486 | 0,0300 / 0,0300 | 21,2 % / 21,2 % | 33,2 % |
+| +120 min | 0,0357 / 0,0313 | 10163 / 9773 | 0,0300 / 0,0300 | 18,3 % / 18,3 % | 35,4 % |
+| overnight +6 h | 0,0180 / 0,0210 | 46987 / 36608 | 0,0300 / 0,0300 | 9,3 % / 14,6 % | 45,6 % |
+| pré-RTH 08:30 ET | 0,0197 / 0,0130 | 196 mil / 106 mil | 0,0218 / 0,0213 | 4,0 % / 12,8 % | 50,7 % |
+| RTH 10:30 ET | 0,0128 / 0,0058 | 500 mil / 237 mil | 0,0163 / 0,0159 | 0,0 % / 3,0 % | 55,7 % |
+| tarde 14:00 ET | 0,0099 / 0,0040 | 999 mil / 407 mil | 0,0132 / 0,0131 | 0,0 % / 6,2 % | 57,0 % |
+
+Direção definida 72–96 % em todos os marcos. RESET_EFFECT_CONFIRMED = YES · PRESS_DECAY_CONFIRMED = YES · STEP4_FIRST_BLOCKER_CONFIRMED = YES · PGCAP_INSUFFICIENT_TO_REMOVE_DEAD_ZONES = YES.
+
+### 13.2 JEV
+- **CAUSAL T2 = A · prob. 0,87 (conf 0,83) · req_01a11b7fcb7078d9b0f571dfbf4071e9** — ROOT_CAUSE_PROVEN = YES. Lacuna residual apontada: série contínua do Press real através de uma virada (0,56) / P-GCAP em runtime (0,39) — coleta passiva segue em background, sem bloquear.
+- **SELECT T1 · req_01a11b80d65a7e388304fbc0f4d2acbd** — família ZSCORE em janela 0,61 (razão local por volume 0,21; EMA razão 0,06; resto ≤ 0,04) · exigir sinal = direção: SIM 0,74 · seletividade 1,42/2 · suficiência B 0,99 (pediu teste adicional).
+- **DESIGN T1 = A · prob. 0,79 (conf 0,72) · req_01a11b83310e7c01a1bd133b3ab8f0cc** — variante JANELA_30 0,66 (JANELA_15 0,21; JANELA_10 0,07) · viés temporal removido 1,84/2 · seletividade 1,42/2 · lacuna residual: validação em runtime/playback 0,64 · aceite da semântica de sinal 0,22.
+
+### 13.3 Alternativas testadas (mesmos ticks; `tests\09_*`, 18 sessões, 20 variantes; `tests\10_*`, 44 sessões 03/08–06/10, com stops do motor, 27 variantes)
+Famílias: limiar fixo menor · normalização dinâmica sem teto · janela móvel de tempo (15/30/60) · EMA razão (10/30) · reset periódico (2 h/4 h) · reset por volume · razão local por volume (3k/10k/30k) · z-score (sessão, janela 10/15/30/60/120, EMA 5/10/20/30/60), com e sem sinal.
+44 sessões (N | por sessão | p90 gap | gaps > 4 h / > 8 h | 18–20h ET | CV horário | horas sem entrada | máx/mín P(força dado alinhado) | RTH):
+- SEM_FORCE: 6516 | 148,1 | 20 min | 3 / 3 | 7 % | 0,56 | 0 | 1,0 | 3356
+- BASE/P-RTH1: 341 | 7,8 | 13,3 h | 52 / 44 | 56 % | 1,60 | 7 | 405 mil | 0
+- P-GCAP: 612 | 13,9 | 3,9 h | 61 / 42 | 31 % | 0,84 | 0 | 17,1 | 160
+- **Z janela 30 min + sinal (θ 3,454):** 859 | 19,5 | 3,1 h | 56 / 15 | 9 % | 0,50 | 0 | 2,0 | 419 · fora da amostra (28 sessões): 20,7 por sessão, CV horário 0,48, 18–20h 9 %.
+PnL com stops troca de sinal entre metades em todas as variantes ⇒ não é critério (descritivo). Gaps > 4 h não caem no giro igualado; > 8 h caem de 42–44 para 15.
+
+### 13.4 Especificação aprovada (DESIGN A)
+Passo 4 novo, por símbolo: z = Σ(lado·vol) / √Σ(vol²) em janela móvel de 30 min, sem reset de sessão; aprova se sinal(z) = direção e |z| ≥ θ nos dois símbolos (θ 3,454 na calibração de 16 sessões para 17,5 entradas/sessão). Passos 1–3, ME/MVI, motor, cooldown, histerese, saídas, stops e proteções inalterados. Arquivos previstos: `AoTapeEngine.cs` (baldes de 1 s de delta e vol²), `AoMarketDataPublisher.cs`, `AlfaOmegaSharedState.cs` (campos + passo 4), bridge só leitura.
+
+### 13.5 PATCH_STATUS = NOT_STARTED (design aprovado; nenhuma linha de C# escrita). NT8_MAIN_CHANGED = NO · ORDERS 0 · F5 0.
+
+### 13.6 EXACT_NEXT_STEP
+1. Staging fora do NT8 (cópia de `scratch 19ed00ed\oliver_postimport` ou novo `snapshot_oliver.ps1`): implementar 13.4; validade do dado no molde do `AoPressSessao` (buraco > 300 s na janela = inválido = gate fechado; reconstrução por ticks históricos na carga).
+2. Compilar com `oliver-main-pgcap-20261007\tools\compile_oliver.ps1` (0 erros) · harness de equivalência C# × `tools\alt2.js` (mesmos ticks, mesmo veredito) · replay completo 44 sessões.
+3. JEV DIFF (pergunta: o diff implementa exatamente a especificação 13.4 e nada mais?) ⇒ se A, montar import zip OLIVER + rollback. Importação só pelo operador.
+4. Fechar lacunas do JEV: validação em runtime/playback; aceite explícito do operador para o gate passar a exigir sinal.

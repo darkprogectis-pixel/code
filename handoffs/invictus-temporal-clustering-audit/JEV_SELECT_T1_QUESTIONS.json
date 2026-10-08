@@ -1,0 +1,19 @@
+{
+ "correcao": { "type": "choice", "instructions": "Qual e a menor alteracao matematicamente correta que remove a dependencia temporal/dead-zone causada pelo Press acumulado, preservando a informacao util de agressao e evitando explosao de overtrading? Compare as alternativas quantitativamente pelos dados acima. O objetivo NAO e gerar mais trades: e eliminar a dependencia artificial do horario/reset sem destruir o gate de forca. Nao aceite uma solucao que equivalha a desligar o gate (SEM_FORCE).",
+  "criteria": {
+   "LIMIAR": "alterar so o LimiarForca sobre a razao de sessao (A1, A2 ou novo ajuste do P-GCAP)",
+   "JANELA_TEMPO": "razao delta/volume em janela movel de tempo (A3, A4, A4s, A5)",
+   "EMA_RAZAO": "razao EMA(delta)/EMA(volume) com meia-vida (A6, A7, A7s)",
+   "RESET_PERIODICO": "manter a razao acumulada com reset periodico por tempo (A8, A9)",
+   "RESET_VOLUME": "manter a razao acumulada com reset por volume (A10)",
+   "RAZAO_LOCAL_VOLUME": "razao local nos ultimos N contratos (A11, A12, A12s, A13)",
+   "ZSCORE_JANELA": "normalizacao estatistica: z = soma do delta / raiz(soma de volume^2) em janela movel ou EMA (A15, A15s, A16, A17, A17s)",
+   "NENHUMA_AINDA": "nenhuma alternativa testada e suficiente; falta teste especifico antes de selecionar",
+   "OUTRA": "outra alternativa superior nao testada"
+  } },
+ "sinal": { "type": "choice", "instructions": "A correcao deve exigir que o SINAL da medida de forca concorde com a direcao da entrada (hoje o gate usa so o modulo)?",
+  "criteria": { "SIM": "exigir sinal igual a direcao nos dois simbolos", "NAO": "manter so o modulo, como hoje", "INDETERMINADO": "a evidencia nao decide" } },
+ "seletividade": { "type": "score", "instructions": "A alternativa escolhida preserva a seletividade do gate de forca (nao vira FORCE_GATE_DISABLED) segundo os numeros apresentados?", "criteria": ["nao preserva: equivale a desligar o gate", "preserva parcialmente", "preserva: giro igual ao atual e fracao aprovada pequena e estavel"] },
+ "suficiencia": { "type": "choice", "instructions": "A evidencia de replay apresentada e suficiente para passar ao dossie de DESIGN da alternativa escolhida (ainda sem implementar)?",
+  "criteria": { "A": "SIM: preparar dossie de design da alternativa escolhida", "B": "NAO: antes do design falta teste adicional identificavel (grade de parametros maior, mais sessoes, PnL com stops, ou outro)", "C": "outro" } }
+}

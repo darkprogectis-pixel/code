@@ -1,0 +1,57 @@
+{
+ "request_id": "req_01a11b80d65a7e388304fbc0f4d2acbd",
+ "model": "jev-1.13.0",
+ "answers": {
+  "correcao": {
+   "type": "choice",
+   "choice": "ZSCORE_JANELA",
+   "confidence": 0.56,
+   "probabilities": {
+    "RESET_VOLUME": 0.02,
+    "JANELA_TEMPO": 0.01,
+    "LIMIAR": 0.01,
+    "RESET_PERIODICO": 0.01,
+    "NENHUMA_AINDA": 0.03,
+    "ZSCORE_JANELA": 0.61,
+    "OUTRA": 0.04,
+    "EMA_RAZAO": 0.06,
+    "RAZAO_LOCAL_VOLUME": 0.21
+   }
+  },
+  "sinal": {
+   "type": "choice",
+   "choice": "SIM",
+   "confidence": 0.61,
+   "probabilities": {
+    "INDETERMINADO": 0.23,
+    "SIM": 0.74,
+    "NAO": 0.03
+   }
+  },
+  "seletividade": {
+   "type": "score",
+   "score": 1.42,
+   "confidence": 0.11,
+   "legend": {
+    "0": "nao preserva: equivale a desligar o gate",
+    "1": "preserva parcialmente",
+    "2": "preserva: giro igual ao atual e fracao aprovada pequena e estavel"
+   },
+   "probabilities": {
+    "0": 0.11,
+    "1": 0.37,
+    "2": 0.52
+   }
+  },
+  "suficiencia": {
+   "type": "choice",
+   "choice": "B",
+   "confidence": 0.98,
+   "probabilities": {
+    "B": 0.99,
+    "C": 0,
+    "A": 0.01
+   }
+  }
+ }
+}
