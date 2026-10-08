@@ -1,0 +1,106 @@
+[
+    {
+        "file":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\entregas\\AIRISON\\ALFA_OMEGA_AIRISON_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+        "entries":  6,
+        "roundtrip_bad":  0,
+        "sha256":  "092c7c57f36050e3cc4e8c4ad2b27cf97b88117027482a06ae9d87a581cc0a01",
+        "bytes":  2999510,
+        "cliente":  "AIRISON"
+    },
+    {
+        "file":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\entregas\\ANAALICEGUSTAVO\\ALFA_OMEGA_ANAALICEGUSTAVO_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+        "entries":  6,
+        "roundtrip_bad":  0,
+        "sha256":  "2dcd4f3a61a0b58c5efccc8ab9dfc67be062091db3dc45e53045b0e8ec063db6",
+        "bytes":  2999581,
+        "cliente":  "ANAALICEGUSTAVO"
+    },
+    {
+        "file":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\entregas\\ANAVIEIRA10\\ALFA_OMEGA_ANAVIEIRA10_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+        "entries":  6,
+        "roundtrip_bad":  0,
+        "sha256":  "6570174785dcf7a9ddc5c14787c55b5a2450cd95be96f2bbd7b82cae4902be3f",
+        "bytes":  2999534,
+        "cliente":  "ANAVIEIRA10"
+    },
+    {
+        "file":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\entregas\\DESTINO_DESKTOP-CBDFE4C\\ALFA_OMEGA_DESTINO_DESKTOP-CBDFE4C_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+        "entries":  6,
+        "roundtrip_bad":  0,
+        "sha256":  "7bc0e3ffdb59cef1da48456964777340ae7f609265c947340813eefdbc7d83fd",
+        "bytes":  2467169,
+        "cliente":  "DESTINO_DESKTOP-CBDFE4C"
+    },
+    {
+        "file":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\entregas\\HAMZEH\\ALFA_OMEGA_HAMZEH_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+        "entries":  6,
+        "roundtrip_bad":  0,
+        "sha256":  "41992321f992154082ba803c1c21208ac7cebd4fad2ee71cf29ccf655e732069",
+        "bytes":  2999511,
+        "cliente":  "HAMZEH"
+    },
+    {
+        "file":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\entregas\\JOAO_HS\\ALFA_OMEGA_JOAO_HS_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+        "entries":  6,
+        "roundtrip_bad":  0,
+        "sha256":  "09334716265d084ebe345f2c63d85895a4169b05959e0c6f35bc8cd1976970ae",
+        "bytes":  2999511,
+        "cliente":  "JOAO_HS"
+    },
+    {
+        "file":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\entregas\\LUFDUTRA\\ALFA_OMEGA_LUFDUTRA_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+        "entries":  6,
+        "roundtrip_bad":  0,
+        "sha256":  "0ad297a2e867eb2d5c9c607f4bfe547b1d6a52486de7c080dd0ff48330d71d49",
+        "bytes":  2999538,
+        "cliente":  "LUFDUTRA"
+    },
+    {
+        "file":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\entregas\\MAGNUM\\ALFA_OMEGA_MAGNUM_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+        "entries":  6,
+        "roundtrip_bad":  0,
+        "sha256":  "2fa36df0e9211a2f7f00edc41aaba4af47061f5cd1ab785108872cea55bf022c",
+        "bytes":  1414574,
+        "cliente":  "MAGNUM"
+    },
+    {
+        "file":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\entregas\\MARCOS\\ALFA_OMEGA_MARCOS_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+        "entries":  6,
+        "roundtrip_bad":  0,
+        "sha256":  "3f9b8441b0e349e652a888c202901dd958f125381fe9d8b809946b370ac31191",
+        "bytes":  2999527,
+        "cliente":  "MARCOS"
+    },
+    {
+        "file":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\entregas\\NELSON_CASCO\\ALFA_OMEGA_NELSON_CASCO_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+        "entries":  6,
+        "roundtrip_bad":  0,
+        "sha256":  "402a67c0a7a1afef8c6311a59f78b8d9f7b1b5d1652219f9f9958f38cea2e6e5",
+        "bytes":  2996482,
+        "cliente":  "NELSON_CASCO"
+    },
+    {
+        "file":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\entregas\\RANYERE\\ALFA_OMEGA_RANYERE_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+        "entries":  6,
+        "roundtrip_bad":  0,
+        "sha256":  "bae5734a843214c4cc89a713dbd9d40ea0a2388777ec78843dc68fc1d9dc7eb8",
+        "bytes":  2999534,
+        "cliente":  "RANYERE"
+    },
+    {
+        "file":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\entregas\\WJAVERTJR\\ALFA_OMEGA_WJAVERTJR_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+        "entries":  6,
+        "roundtrip_bad":  0,
+        "sha256":  "5d7e7156dae4241c87a8099db827b5f548c51a367d67fd599cde1c832ff5a1be",
+        "bytes":  3005182,
+        "cliente":  "WJAVERTJR"
+    },
+    {
+        "file":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\rollout_20261008\\entregas_oliver\\ALFA_OMEGA_OLIVER_MAIN_MACHINE_INVICTUS_Z30X2_BASELINE_20261008_NAO_IMPORTAR.zip",
+        "entries":  6,
+        "roundtrip_bad":  0,
+        "sha256":  "63d5b3e2640ce4e26b14088da5a71d3a18820d45635095fc63fe47e906c7789b",
+        "bytes":  817974,
+        "cliente":  "OLIVER_MAIN_MACHINE"
+    }
+]

@@ -1,0 +1,122 @@
+{
+ "destino": "C:/Users/ADM/Downloads/Telegram Desktop/invictus pack 1000",
+ "arquivos_antes": 14,
+ "arquivos_depois": 28,
+ "colisoes": 0,
+ "sobrescritos": 0,
+ "removidos": 0,
+ "itens": [
+  {
+   "cliente": "AIRISON",
+   "arquivo": "ALFA_OMEGA_AIRISON_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+   "source_sha256": "092c7c57f36050e3cc4e8c4ad2b27cf97b88117027482a06ae9d87a581cc0a01",
+   "destination_sha256": "092c7c57f36050e3cc4e8c4ad2b27cf97b88117027482a06ae9d87a581cc0a01",
+   "match": true,
+   "ja_existia_identico": false
+  },
+  {
+   "cliente": "ANAALICEGUSTAVO",
+   "arquivo": "ALFA_OMEGA_ANAALICEGUSTAVO_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+   "source_sha256": "2dcd4f3a61a0b58c5efccc8ab9dfc67be062091db3dc45e53045b0e8ec063db6",
+   "destination_sha256": "2dcd4f3a61a0b58c5efccc8ab9dfc67be062091db3dc45e53045b0e8ec063db6",
+   "match": true,
+   "ja_existia_identico": false
+  },
+  {
+   "cliente": "ANAVIEIRA10",
+   "arquivo": "ALFA_OMEGA_ANAVIEIRA10_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+   "source_sha256": "6570174785dcf7a9ddc5c14787c55b5a2450cd95be96f2bbd7b82cae4902be3f",
+   "destination_sha256": "6570174785dcf7a9ddc5c14787c55b5a2450cd95be96f2bbd7b82cae4902be3f",
+   "match": true,
+   "ja_existia_identico": false
+  },
+  {
+   "cliente": "DESTINO_DESKTOP-CBDFE4C",
+   "arquivo": "ALFA_OMEGA_DESTINO_DESKTOP-CBDFE4C_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+   "source_sha256": "7bc0e3ffdb59cef1da48456964777340ae7f609265c947340813eefdbc7d83fd",
+   "destination_sha256": "7bc0e3ffdb59cef1da48456964777340ae7f609265c947340813eefdbc7d83fd",
+   "match": true,
+   "ja_existia_identico": false
+  },
+  {
+   "cliente": "HAMZEH",
+   "arquivo": "ALFA_OMEGA_HAMZEH_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+   "source_sha256": "41992321f992154082ba803c1c21208ac7cebd4fad2ee71cf29ccf655e732069",
+   "destination_sha256": "41992321f992154082ba803c1c21208ac7cebd4fad2ee71cf29ccf655e732069",
+   "match": true,
+   "ja_existia_identico": false
+  },
+  {
+   "cliente": "JOAO_HS",
+   "arquivo": "ALFA_OMEGA_JOAO_HS_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+   "source_sha256": "09334716265d084ebe345f2c63d85895a4169b05959e0c6f35bc8cd1976970ae",
+   "destination_sha256": "09334716265d084ebe345f2c63d85895a4169b05959e0c6f35bc8cd1976970ae",
+   "match": true,
+   "ja_existia_identico": false
+  },
+  {
+   "cliente": "LUFDUTRA",
+   "arquivo": "ALFA_OMEGA_LUFDUTRA_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+   "source_sha256": "0ad297a2e867eb2d5c9c607f4bfe547b1d6a52486de7c080dd0ff48330d71d49",
+   "destination_sha256": "0ad297a2e867eb2d5c9c607f4bfe547b1d6a52486de7c080dd0ff48330d71d49",
+   "match": true,
+   "ja_existia_identico": false
+  },
+  {
+   "cliente": "MAGNUM",
+   "arquivo": "ALFA_OMEGA_MAGNUM_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+   "source_sha256": "2fa36df0e9211a2f7f00edc41aaba4af47061f5cd1ab785108872cea55bf022c",
+   "destination_sha256": "2fa36df0e9211a2f7f00edc41aaba4af47061f5cd1ab785108872cea55bf022c",
+   "match": true,
+   "ja_existia_identico": false
+  },
+  {
+   "cliente": "MARCOS",
+   "arquivo": "ALFA_OMEGA_MARCOS_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+   "source_sha256": "3f9b8441b0e349e652a888c202901dd958f125381fe9d8b809946b370ac31191",
+   "destination_sha256": "3f9b8441b0e349e652a888c202901dd958f125381fe9d8b809946b370ac31191",
+   "match": true,
+   "ja_existia_identico": false
+  },
+  {
+   "cliente": "NELSON_CASCO",
+   "arquivo": "ALFA_OMEGA_NELSON_CASCO_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+   "source_sha256": "402a67c0a7a1afef8c6311a59f78b8d9f7b1b5d1652219f9f9958f38cea2e6e5",
+   "destination_sha256": "402a67c0a7a1afef8c6311a59f78b8d9f7b1b5d1652219f9f9958f38cea2e6e5",
+   "match": true,
+   "ja_existia_identico": false
+  },
+  {
+   "cliente": "RANYERE",
+   "arquivo": "ALFA_OMEGA_RANYERE_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+   "source_sha256": "bae5734a843214c4cc89a713dbd9d40ea0a2388777ec78843dc68fc1d9dc7eb8",
+   "destination_sha256": "bae5734a843214c4cc89a713dbd9d40ea0a2388777ec78843dc68fc1d9dc7eb8",
+   "match": true,
+   "ja_existia_identico": false
+  },
+  {
+   "cliente": "WJAVERTJR",
+   "arquivo": "ALFA_OMEGA_WJAVERTJR_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip",
+   "source_sha256": "5d7e7156dae4241c87a8099db827b5f548c51a367d67fd599cde1c832ff5a1be",
+   "destination_sha256": "5d7e7156dae4241c87a8099db827b5f548c51a367d67fd599cde1c832ff5a1be",
+   "match": true,
+   "ja_existia_identico": false
+  },
+  {
+   "cliente": "OLIVER_MAIN_MACHINE",
+   "arquivo": "ALFA_OMEGA_OLIVER_MAIN_MACHINE_INVICTUS_Z30X2_BASELINE_20261008_NAO_IMPORTAR.zip",
+   "source_sha256": "63d5b3e2640ce4e26b14088da5a71d3a18820d45635095fc63fe47e906c7789b",
+   "destination_sha256": "63d5b3e2640ce4e26b14088da5a71d3a18820d45635095fc63fe47e906c7789b",
+   "match": true,
+   "ja_existia_identico": false
+  },
+  {
+   "cliente": "MASTER_MANIFEST",
+   "arquivo": "MASTER_MANIFEST_INVICTUS_Z30X2_20261008.txt",
+   "source_sha256": "d839ad8e0969c89effd66d7583a89e7fd882fd93e8ee25b805c537971c595852",
+   "destination_sha256": "d839ad8e0969c89effd66d7583a89e7fd882fd93e8ee25b805c537971c595852",
+   "match": true,
+   "ja_existia_identico": false
+  }
+ ]
+}
