@@ -1,0 +1,8 @@
+{
+ "suficiencia": { "type": "choice", "instructions": "Com o historico de 44 sessoes, a distribuicao dos sinais, a frequencia esperada do z-score aprovado e os ciclos de runtime ja observados, ja existe evidencia suficiente para abrir AGORA uma auditoria causal somente leitura do lado ES (ES sem aprovacao no passo 4)?",
+  "criteria": { "A": "SIM: o silencio do ES ja e anomalo; abrir a auditoria somente leitura agora", "B": "NAO AINDA: o silencio do ES e compativel com o comportamento esperado; continuar a observacao passiva ate o criterio de disparo", "C": "outro" } },
+ "criterio": { "type": "choice", "instructions": "Qual deve ser o criterio de disparo da auditoria somente leitura do ES, medido em tempo de RTH observado com alinhamento presente e sem nenhuma aprovacao do ES, contado a partir do fim do aquecimento mais conservador (13:55Z)?",
+  "criteria": { "T30": "30 min sem aprovacao do ES (ocorre em cerca de 19 por cento das janelas historicas)", "T60": "60 min sem aprovacao do ES (cerca de 6 por cento)", "T81": "81 min, o p99 historico da espera do ES (cerca de 1 por cento)", "T120": "120 min sem aprovacao do ES (cerca de 0,1 por cento)", "OUTRO": "outro criterio" } },
+ "estado": { "type": "choice", "instructions": "Como classificar o estado de prova em runtime do novo gate neste momento?",
+  "criteria": { "PARCIAL": "gate novo comprovadamente ativo e aprovando um simbolo; ES e ancora 4 de 4 ainda nao comprovados", "COMPLETO": "prova de runtime suficiente", "INSUFICIENTE": "ainda nao ha prova de runtime relevante" } }
+}

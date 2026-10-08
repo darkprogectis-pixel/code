@@ -1,0 +1,8 @@
+ES pass              espera no RTH a partir de um minuto qualquer: mediana 7 min p75 19 p90 36 p95 51 p99 81 | ciclos alinhados de 20 s ate la: mediana 9 p90 58 p95 82 p99 134 | censurados no fim do RTH 1.9%
+NQ pass              espera no RTH a partir de um minuto qualquer: mediana 9 min p75 25 p90 51 p95 74 p99 118 | ciclos alinhados de 20 s ate la: mediana 13 p90 82 p95 122 p99 202 | censurados no fim do RTH 2.4%
+BOTH (ancora 4/4)    espera no RTH a partir de um minuto qualquer: mediana 36 min p75 79 p90 134 p95 181 p99 291 | ciclos alinhados de 20 s ate la: mediana 58 p90 215 p95 292 p99 469 | censurados no fim do RTH 15.9%
+janela de 12 min no RTH com alinhamento em >=30% dos minutos: n 15407 | P(ES nunca aprova) 42.6% | dado que o NQ aprovou ao menos 1 vez: P(ES nunca aprova) 39.8%
+janela de 30 min no RTH com alinhamento em >=30% dos minutos: n 15616 | P(ES nunca aprova) 19.6% | dado que o NQ aprovou ao menos 1 vez: P(ES nunca aprova) 18.8%
+janela de 60 min no RTH com alinhamento em >=30% dos minutos: n 14496 | P(ES nunca aprova) 5.7% | dado que o NQ aprovou ao menos 1 vez: P(ES nunca aprova) 5.8%
+janela de 120 min no RTH com alinhamento em >=30% dos minutos: n 11880 | P(ES nunca aprova) 0.1% | dado que o NQ aprovou ao menos 1 vez: P(ES nunca aprova) 0.1%
+sessoes 44 | sessoes com ES sem nenhuma aprovacao no RTH inteiro: 0
