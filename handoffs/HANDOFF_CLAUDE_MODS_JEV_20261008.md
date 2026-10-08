@@ -109,3 +109,8 @@ R1 nenhum mod usa `tool.check` nem responde no lugar da ferramenta · R2 mínimo
 5. Na sucessora: `npm run rotation:status`, `npm run test:mods`, `npm run test:rotation`; em `/plugin` conferir a linha de mods ativos e os embutidos (sec-default); `/jev-ledger`, `/jev-diff`, `/jev-ready tests=pass compile=pass`, `/jev-handoff handoffs/HANDOFF_CLAUDE_MODS_JEV_20261008.md`.
 6. JEV FINAL (dossiê: sessão pelo lançador, 4 mods ativos, testes, rotação real com sucessora registrada, mods persistiram). Se A ⇒ stack canônica; `blast-radius` permanece OFF.
 - Se a rotação falhar lá: desligar os 4 plugins (regra JEV 0,92) e reportar.
+
+
+## INCIDENTE DE ROTACAO 2026-10-08 (ponteiro)
+
+Causa raiz, patch e provas: `handoffs/HANDOFF_JEV_ROTATION_V3_20260927.md` (secao INCIDENTE 2026-10-08). Mods permanecem desligados ate o JEV FINAL = A da rotacao (hoje B: falta medir duplicidade de hook no perfil canonico).

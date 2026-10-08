@@ -101,3 +101,65 @@ Operator: review, then commit (`Add JEV Rotation Controller V3: automatic succes
   - RED antes do fix: marcador herdado, transcript OFF;
   - GREEN depois: marcador ausente, transcript criado e crescendo, exatamente uma sucessora;
   - rotation 18/18; suíte completa 123/123; live-spawn PASS.
+
+
+---
+
+## INCIDENTE 2026-10-08 — ZERO ROTAÇÃO (registro de proteção pós-compactação)
+
+Estado gravado ANTES de qualquer correção. Nada foi alterado por causa do incidente até aqui.
+
+| Item | Valor |
+|---|---|
+| ZERO_ROTATION | **CONFIRMADO** nesta sessão |
+| Sessão atual | `6b86565f-0ed1-474b-85ff-2c43e1c80f48` |
+| Processo | `claude.exe` PID 37468, início 2026-10-08 00:39:03 (local) |
+| Ancestrais | `powershell.exe` PID 42620 (interativo, início 00:37:41) ← `explorer.exe` |
+| CLAUDE_CONFIG_DIR efetivo | `C:\Users\ADM\.claude-gomesgomestrader` (só no ambiente do processo; nenhuma variável persistente de usuário/máquina) |
+| cwd | `C:\Users\ADM\Claude-JEV\code` |
+| Hooks neste perfil | `install-hooks.mjs --config-dir C:\Users\ADM\.claude-gomesgomestrader --verify` ⇒ PreToolUse / PostToolUse / Stop = **missing** (settings.json do perfil nasceu só com `theme`) |
+| Estado do controlador neste perfil | pasta `jev-rotation` **inexistente** ⇒ `rotation:status` = "no state"; `rotation:force` = REFUSED (exit 3) |
+| Launcher atual | `C:\Users\ADM\Claude-JEV\code\START_JEV_CLAUDE.ps1` (o caminho `C:\Users\ADM\Claude-JEV\START_JEV_CLAUDE.ps1` **não existe**). Cópia de trabalho tem alteração NÃO commitada de 2026-09-30: respeita `CLAUDE_CONFIG_DIR` já definido; padrão `.claude-darkprogectis`. HEAD fixa `.claude-darkprogectis-jev`. |
+| Perfil canônico | `C:\Users\ADM\.claude-darkprogectis`: 5 hooks presentes, `--verify` PASS, estado com 128 sessões; última rotação automática real 2026-10-08 03:07:01Z (41f1f360 → 19ed00ed, wt, confirmada em ~4 s) |
+| Histórico do PowerShell (linhas 4636–4645) | `.\START_JEV_CLAUDE.ps1` → `$env:CLAUDE_CONFIG_DIR="C:\Users\ADM\.claude-gomesgomestrader"` → `New-Item -ItemType Directory -Force $env:CLAUDE_CONFIG_DIR` → `claude` (direto) → … → `.\START_JEV_CLAUDE.ps1` |
+| Hipótese | **AINDA NÃO FECHADA**: a sessão teria sido aberta por `claude` direto num perfil recém-criado, sem passar pelo launcher (que é quem instala/verifica os hooks) |
+| Próximo passo | provar a origem do desencontro de perfil (qual comando abriu o PID 37468; se o launcher alguma vez rodou com este perfil; por que os hooks dependem do perfil) e só então JEV DESIGN → JEV DIFF → patch mínimo |
+
+Thresholds: não alterados. Mods: todos desligados nos dois perfis.
+
+### INCIDENTE 2026-10-08 — CAUSA RAIZ, CORREÇÃO E PROVAS
+
+**Cadeia (primeiro desvio = passo 1)**
+
+| Passo | Esperado | Real | | Evidência |
+|---|---|---|---|---|
+| 1 Abertura | `START_JEV_CLAUDE.ps1` (instala + verifica hooks no perfil, depois `claude`) | `claude` direto, após `$env:CLAUDE_CONFIG_DIR=...\.claude-gomesgomestrader` + `New-Item` | **FAIL** | histórico do PowerShell l.4637–4640; `settings.json` do perfil nasceu 00:39 só com `theme` (se o launcher tivesse aberto, o instalador teria gravado os hooks antes) |
+| 2 env | perfil JEV com hooks | `.claude-gomesgomestrader` (só no processo; sem variável persistente) | FAIL (consequência) | ambiente do PID 37468; pai PowerShell 42620 ← explorer |
+| 3 settings | 5 hooks do controlador | nenhum hook no perfil | FAIL (consequência) | `install-hooks --verify` = missing |
+| 4 SessionStart / registro | `state/<sid>.json` | pasta `jev-rotation` inexistente | FAIL (consequência) | listagem do perfil |
+| 5 status / force | reconhece a sessão | "no state" / REFUSED exit 3 | FAIL (consequência) | saída dos comandos |
+
+- O launcher **não** colocou a sessão no perfil errado; ele não foi usado nesta abertura. Ele funciona: abriu `a51db1fa` no perfil canônico às 12:54:28Z do mesmo dia (PID 37248), registrada. Última rotação automática real no canônico: 03:07:01Z (41f1f360 → 19ed00ed, ~4 s).
+- **Causa raiz**: a imposição da rotação existia só no `settings.json` de cada perfil e era gravada só pelo launcher. Qualquer sessão aberta no repositório por outro caminho (troca de conta/perfil feita à mão) ficava sem controlador, em silêncio. Mods não participam (instalados ~17 h depois, desligados).
+- LAST_KNOWN_GOOD: rotação automática 2026-10-08 03:07:01Z no perfil canônico; `rotation:force` versionado em `20ff022`. Nenhum arquivo do controlador mudou desde então. `auto-rotate-session.js` / `start-alfaomega-session.js` não fazem parte do Controller V3 deste repositório (arquivos reais: `tools/jev-rotation/*`).
+- O caminho `C:\Users\ADM\Claude-JEV\START_JEV_CLAUDE.ps1` não existe; o launcher é `C:\Users\ADM\Claude-JEV\code\START_JEV_CLAUDE.ps1` (alteração de 09-30 continua NÃO commitada; não foi tocada).
+
+**Decisões JEV**: DESIGN T1 `req_01a11dd93e6c7d118160c0cce9fad4db` (causa provada SIM 0,79; correção P1 0,94; duplicidade ⇒ SO_PROJETO; perfil padrão fora do escopo) · DIFF T1 `req_01a11dd9cbd7759fb6e26289d4bd44ae` (A 0,64; alinhar o verificador já) · FINAL T1 `req_01a11dddeef17a81a55a3623d852010b` (B; medir duplicidade no canônico) · FINAL T2 `req_01a11ddf0e21752e90be7e8789877219` (**B**; a medição com controle não basta, medir no próprio perfil canônico). Dossiês: `handoffs/rotation-incident-20261008/`.
+
+**Patch (3 arquivos; limiares, hook, controller, force, status, watchdog e launcher intocados)**
+1. `.claude/settings.json` — 5 hooks do controlador (mesma linha do instalador) junto dos hooks do jev-finish. Toda sessão aberta neste repositório carrega o controlador em qualquer perfil; estado continua por perfil.
+2. `tools/jev-rotation/install-hooks.mjs` — `--verify` aceita os hooks declarados no perfil OU no projeto.
+3. `test/rotation/project-hooks.test.mjs` — PH1–PH4.
+
+Reversão: `git checkout` dos 2 primeiros arquivos + apagar o teste.
+
+**Provas medidas**
+- `npm run test:rotation` 26/26.
+- A sessão do incidente passou a ser registrada sem reinício e sem instalação manual: `rotation:status` ⇒ `session=6b86565f… level=OK`; `force.mjs --check` ⇒ CHECK_OK (antes REFUSED 3); `--verify` PASS no perfil sem gravar hooks nele.
+- Rotação automática real (`npm run test:rotation:live`, perfil do incidente, janela wt real, sucessor real): 3 execuções com linhagem completa (TRIGGERED → SPAWNED → STARTED no mesmo perfil/cwd → CONFIRMED em 3–4 s, um sucessor). Resultado do script: 1ª = 11/12 (checagem do transcript rodou antes de o arquivo existir; o arquivo existe), 2ª = linha de resultado não capturada (erro meu de filtro), 3ª = **12/12 PASS**.
+- Duplicidade: mesma linha em duas fontes de ajustes ⇒ 1 execução por evento; controle com linha diferente ⇒ 2. (Medido com projeto + arquivo `--settings`, não com o perfil canônico.)
+
+**Pendente**
+- JEV FINAL = B: medir a duplicidade **no perfil canônico**. Minha execução do teste ao vivo naquele perfil foi negada pelo classificador de segurança do ambiente (não contornado). Como medir: abrir uma sessão pelo launcher no perfil canônico e, após uma chamada de ferramenta, conferir em `…\.claude-darkprogectis\jev-rotation\events.jsonl` se há 1 linha por evento (PreToolUse/PostToolUse). Se houver 2 ⇒ aplicar SO_PROJETO (novo JEV DIFF). Depois reenviar o JEV FINAL.
+- `rotation:force` real desta sessão: último ato (resultado registrado abaixo pelo sucessor).
+- Mods: continuam desligados até JEV FINAL = A da rotação.

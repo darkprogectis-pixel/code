@@ -1,0 +1,10 @@
+{
+ "final": { "type": "choice", "instructions": "A correcao restaura o registro de sessao e a rotacao V3 (automatica e forcada) sem alterar limiares nem enfraquecer gates?",
+  "criteria": { "A": "aprovada; executar a rotacao forcada real como ultimo ato e o sucessor registra o resultado", "B": "falta item especifico indicado em 'pendencia' antes de aprovar", "C": "reprovada; reverter o patch" } },
+ "pendencia": { "type": "choice", "instructions": "Se houver pendencia que impeca a aprovacao, qual?",
+  "criteria": { "NENHUMA": "nenhuma", "DUPLICIDADE_CANONICO": "medir a duplicidade no perfil canonico antes", "SESSAO_PELO_LANCADOR": "sessao nova aberta a mao pelo lancador antes", "OUTRA": "outra" } },
+ "n1": { "type": "choice", "instructions": "Como tratar a duplicidade nao medida no perfil canonico?",
+  "criteria": { "MEDIR_DEPOIS": "aceitar agora; medir na proxima sessao do perfil canonico e aplicar SO_PROJETO se dobrar", "SO_PROJETO_JA": "remover ja os hooks do perfil canonico", "BLOQUEIA": "bloqueia a aprovacao" } },
+ "se_force_falhar": { "type": "choice", "instructions": "Se a rotacao forcada real falhar, o que fazer?",
+  "criteria": { "MANTER_PATCH_E_REPORTAR": "manter o patch, reportar a falha com a saida e continuar o diagnostico", "REVERTER": "reverter o patch", "PARAR": "parar tudo" } }
+}

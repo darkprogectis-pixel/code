@@ -1,0 +1,48 @@
+{
+ "request_id": "req_01a11dd93e6c7d118160c0cce9fad4db",
+ "model": "jev-1.13.0",
+ "answers": {
+  "causa_provada": {
+   "type": "choice",
+   "choice": "SIM",
+   "confidence": 0.79,
+   "probabilities": {
+    "SIM": 0.86,
+    "PARCIAL": 0.13,
+    "NAO": 0.01
+   }
+  },
+  "correcao": {
+   "type": "choice",
+   "choice": "P1",
+   "confidence": 0.94,
+   "probabilities": {
+    "P1": 0.95,
+    "P2": 0.01,
+    "P3": 0.04,
+    "P4": 0,
+    "P5": 0
+   }
+  },
+  "duplicidade": {
+   "type": "choice",
+   "choice": "SO_PROJETO",
+   "confidence": 0.77,
+   "probabilities": {
+    "SO_PROJETO": 0.85,
+    "SO_PERFIL": 0.14,
+    "ACEITAR": 0.01
+   }
+  },
+  "perfil_padrao": {
+   "type": "choice",
+   "choice": "FORA_DO_ESCOPO",
+   "confidence": 0.27,
+   "probabilities": {
+    "AVISAR_SEM_ROTACIONAR": 0.47,
+    "ROTACIONAR": 0.02,
+    "FORA_DO_ESCOPO": 0.51
+   }
+  }
+ }
+}

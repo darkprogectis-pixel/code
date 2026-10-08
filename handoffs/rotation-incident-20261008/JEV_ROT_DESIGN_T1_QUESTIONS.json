@@ -1,0 +1,40 @@
+{
+ "causa_provada": {
+  "type": "choice",
+  "instructions": "Os fatos F1 a F8 provam que a causa da rotacao zero foi a sessao ter sido aberta fora do lancador num perfil sem hooks, somada a imposicao depender do perfil?",
+  "criteria": {
+   "SIM": "causa raiz provada pelos fatos",
+   "PARCIAL": "causa imediata provada, falta evidencia para a raiz",
+   "NAO": "nao provada"
+  }
+ },
+ "correcao": {
+  "type": "choice",
+  "instructions": "Qual e a correcao minima para restaurar o registro de sessao e a rotacao V3 sem alterar limiares nem enfraquecer os gates?",
+  "criteria": {
+   "P1": "declarar os hooks do controlador no arquivo de ajustes do projeto",
+   "P2": "guarda de bloqueio no SessionStart do projeto, hooks so no perfil",
+   "P3": "P1 mais commit do lancador e alinhamento do instalador e verificador",
+   "P4": "instalar a mao no perfil novo",
+   "P5": "nao alterar"
+  }
+ },
+ "duplicidade": {
+  "type": "choice",
+  "instructions": "Se a medicao mostrar que o hook declarado no projeto e no perfil roda duas vezes por evento, o que fazer?",
+  "criteria": {
+   "SO_PROJETO": "manter so no projeto; instalador remove do perfil e o verificador confere o projeto",
+   "SO_PERFIL": "voltar a manter so no perfil e usar a guarda P2",
+   "ACEITAR": "aceitar a execucao dupla"
+  }
+ },
+ "perfil_padrao": {
+  "type": "choice",
+  "instructions": "Como tratar sessao aberta neste repositorio no perfil padrao do usuario (sem variavel de perfil)?",
+  "criteria": {
+   "AVISAR_SEM_ROTACIONAR": "o hook avisa que o perfil nao e um perfil JEV e nao grava estado na pasta padrao",
+   "ROTACIONAR": "tratar como qualquer perfil",
+   "FORA_DO_ESCOPO": "nao tratar nesta correcao"
+  }
+ }
+}

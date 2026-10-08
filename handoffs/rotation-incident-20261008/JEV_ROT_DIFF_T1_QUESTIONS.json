@@ -1,0 +1,8 @@
+{
+ "diff": { "type": "choice", "instructions": "O patch D1 mais D2 pode ser aplicado como correcao minima da rotacao, sem alterar limiares e sem enfraquecer gates?",
+  "criteria": { "A": "aprovado para aplicar e provar ao vivo", "B": "aprovado com ajuste especifico indicado em 'ajuste'", "C": "reprovado; refazer o desenho", "D": "nao aplicar nada" } },
+ "ajuste": { "type": "choice", "instructions": "Se houver ajuste necessario antes de aplicar, qual?",
+  "criteria": { "NENHUM": "nenhum", "VERIFICADOR_JA": "alinhar o verificador do instalador ja neste patch", "REMOVER_DO_PERFIL_JA": "remover os hooks do perfil canonico ja neste patch", "GUARDA_PERFIL_PADRAO": "tratar o perfil padrao ja neste patch", "OUTRO": "outro" } },
+ "se_r2_falhar": { "type": "choice", "instructions": "Se a prova real mostrar que o sucessor nao inicia porque o verificador exige os hooks no perfil, qual o ajuste minimo?",
+  "criteria": { "VERIFICADOR_ACEITA_PROJETO": "o verificador passa a aceitar os hooks declarados no projeto", "LANCADOR_INSTALA_NO_PERFIL": "o lancador gerado instala os hooks no perfil antes de verificar", "PARAR": "parar e reportar" } }
+}

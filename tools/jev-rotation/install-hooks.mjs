@@ -25,6 +25,9 @@ if (path.resolve(configDir).toLowerCase() === path.join(os.homedir(), '.claude')
 const settingsFile = path.join(configDir, 'settings.json');
 
 function load() { try { return JSON.parse(fs.readFileSync(settingsFile, 'utf8')); } catch { return {}; } }
+// Project settings (versioned): hooks declared there load in every profile that opens this repo.
+const projectFile = path.join(HERE, '..', '..', '.claude', 'settings.json');
+function loadProject() { try { return JSON.parse(fs.readFileSync(projectFile, 'utf8')); } catch { return {}; } }
 const isOurs = (h) => typeof h?.command === 'string' && h.command.includes(MARK);
 
 function strip(settings) {
@@ -62,9 +65,10 @@ function runHook(input, env) {
 
 function verify() {
   const s = load();
+  const p = loadProject();
   const problems = [];
   for (const [ev, matcher] of Object.entries(EVENTS)) {
-    const g = (s.hooks?.[ev] || []).find((x) => (x.hooks || []).some(isOurs));
+    const g = [...(s.hooks?.[ev] || []), ...(p.hooks?.[ev] || [])].find((x) => (x.hooks || []).some(isOurs));
     if (!g) { problems.push(`${ev}: missing`); continue; }
     if ((g.matcher || null) !== matcher && !(matcher === '*' && !g.matcher)) problems.push(`${ev}: matcher ${g.matcher}`);
     if (!g.hooks.find(isOurs).command.includes(hookPath)) problems.push(`${ev}: points to another hook.mjs`);
@@ -96,7 +100,7 @@ function verify() {
   fs.rmSync(tmp, { recursive: true, force: true });
 
   if (problems.length) { console.error(`VERIFY: FAIL\n - ${problems.join('\n - ')}`); process.exit(1); }
-  console.log(`VERIFY: PASS (5 hooks in ${settingsFile}; self-test warning/soft-stop rotation/hard-rotation/successor launcher PASS, dry-run)`);
+  console.log(`VERIFY: PASS (5 hooks in ${settingsFile} or ${projectFile}; self-test warning/soft-stop rotation/hard-rotation/successor launcher PASS, dry-run)`);
 }
 
 if (args.includes('--uninstall')) {

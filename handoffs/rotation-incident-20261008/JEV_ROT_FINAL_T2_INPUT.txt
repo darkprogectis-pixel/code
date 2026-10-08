@@ -1,0 +1,22 @@
+JEV ROT FINAL T2 (T1 deu B com pendencia de medir a duplicidade; medicao feita, ver E5) - incidente de rotacao zero no Claude-JEV. Correcao aplicada conforme JEV ROT DESIGN T1 (P1) e JEV ROT DIFF T1 (A, com o verificador alinhado ja neste patch).
+
+CAUSA (provada, SIM 0,79 no desenho)
+A sessao 6b86565f foi aberta por "claude" direto num perfil recem-criado, fora do lancador. Os hooks do controlador existiam so no arquivo de ajustes de cada perfil, gravados apenas pelo lancador. Sem hook nao havia registro, status nem rotacao. O lancador em si funciona (abriu sessao registrada no perfil canonico no mesmo dia).
+
+PATCH APLICADO (3 arquivos do repositorio)
+1. Arquivo de ajustes do projeto: 5 entradas do controlador (SessionStart, UserPromptSubmit, PreToolUse todas as ferramentas, PostToolUse todas as ferramentas, Stop), com a mesma linha de comando do instalador. Hooks do jev-finish preservados.
+2. Verificador do instalador: aceita os hooks declarados no perfil OU no projeto (4 linhas). Instalacao e autoteste inalterados.
+3. Teste novo com 4 casos (PH1 a PH4).
+Limiares intocados. hook, controller, force, status, watchdog, lancador intocados. Nenhum perfil recebeu hooks a mao. Mods desligados.
+
+EVIDENCIAS MEDIDAS DEPOIS DO PATCH
+E1. Testes da rotacao: 26 de 26 (22 anteriores mais 4 novos).
+E2. A propria sessao do incidente passou a ser registrada sem reiniciar e sem instalacao manual: pasta de estado criada no perfil dela; status responde "session=6b86565f level=OK"; rotacao forcada em modo conferencia responde CHECK_OK (antes: recusa codigo 3); verificador PASS nesse perfil sem gravar hooks nele.
+E3. Rotacao automatica real pelo teste ao vivo existente, no perfil do incidente (que nao tem hooks no perfil): 3 execucoes, cada uma com antecessor sintetico em 241 mil tokens, hook real, janela nova real, sucessor real. Linhagem das 3: disparo, janela aberta, sucessor iniciado pelo SessionStart no MESMO perfil e mesma pasta de trabalho, confirmado pelo vigia em 3 a 4 s, exatamente um sucessor. Resultado do script: execucao 1 = 11 de 12 (a conferencia do arquivo de transcricao rodou antes de o arquivo ser gravado; o arquivo existe, 280 KB); execucao 2 = linhagem completa, linha de resultado nao capturada por erro meu de filtro; execucao 3 = 12 de 12 PASS.
+E4. Duplicidade na sessao do incidente: uma linha de evento por chamada.
+
+E5. Duplicidade MEDIDA com controle, em sessoes reais de um turno no perfil do incidente. Medicao: a mesma linha de comando do controlador declarada em DUAS fontes de ajustes carregadas juntas (arquivo do projeto mais um segundo arquivo de ajustes passado na abertura) gerou 1 linha de evento por evento (SessionStart 1, UserPromptSubmit 1, Stop 1). Controle: com a linha da segunda fonte textualmente diferente (mesmo hook, marcador alterado) gerou 2 por evento (2, 2, 2), provando que a segunda fonte e de fato carregada e que o Claude Code elimina comandos identicos entre fontes. Limite da medicao: a segunda fonte foi o arquivo passado na abertura, nao o arquivo do perfil canonico; o mecanismo de eliminacao e por texto do comando, e a linha do perfil canonico e byte a byte igual a do projeto (conferido pelo teste PH1 e pela leitura do arquivo do perfil). A execucao direta no perfil canonico foi negada pelo classificador de seguranca do ambiente e nao foi contornada.
+
+NAO MEDIDO
+N2. Rotacao forcada real desta sessao: so pode ser o ULTIMO ato (a sessao vira somente leitura no mesmo instante). O sucessor tera de executar o status e registrar o resultado no handoff.
+N3. Sessao nova aberta a mao pelo lancador depois do patch: depende do operador abrir; a prova equivalente obtida e o sucessor aberto pelo lancador gerado (E3), que executa o mesmo verificador.

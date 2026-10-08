@@ -1,0 +1,20 @@
+JEV ROT DIFF T1 - patch minimo da correcao P1 aprovada no JEV ROT DESIGN T1 (pedido de final 9fad4db, P1 com 0,94; causa provada SIM 0,79; duplicidade = SO_PROJETO; perfil padrao = fora do escopo). Nada aplicado ainda.
+
+PATCH PROPOSTO (2 arquivos do repositorio, nenhum arquivo do controlador alterado)
+D1. Arquivo de ajustes do projeto (.claude/settings.json, versionado): acrescentar, sem remover nada do que existe (hooks do jev-finish ficam identicos e na mesma ordem, antes dos novos), uma entrada do controlador de rotacao em cada um dos 5 eventos: SessionStart, UserPromptSubmit, PreToolUse com filtro de todas as ferramentas, PostToolUse com filtro de todas as ferramentas, Stop. A linha de comando e BYTE A BYTE a mesma que o instalador grava no perfil (node + caminho absoluto do hook.mjs do controlador + marcador), com o mesmo tempo limite de 15 s.
+D2. Teste novo test/rotation/project-hooks.test.mjs (entra em npm run test:rotation): PH1 o arquivo de ajustes do projeto declara os 5 eventos com a linha de comando exata que o instalador usa; PH2 os hooks do jev-finish continuam declarados; PH3 o arquivo nao desliga hooks globalmente; PH4 o hook real, chamado com um perfil temporario VAZIO (sem hooks no perfil, como na sessao do incidente) e um evento SessionStart sintetico, cria o estado da sessao naquele perfil e o comando de rotacao forcada em modo de conferencia (sem janela, sem gravar) aceita a sessao em vez de recusar.
+
+O QUE NAO MUDA
+Limiares (config.json do controlador intocado). hook.mjs, controller.mjs, force.mjs, status.mjs, watchdog.mjs, install-hooks.mjs intocados. Lancador intocado. Perfis intocados (os hooks do perfil canonico permanecem; o perfil do incidente NAO recebe hooks a mao). Mods continuam desligados. Nenhum gate do JEV enfraquecido.
+
+EFEITO ESPERADO
+Toda sessao aberta neste repositorio carrega o controlador, por qualquer caminho de abertura e em qualquer perfil; o estado segue separado por perfil (pasta do perfil efetivo). O sucessor herda o perfil de origem pelo lancador gerado e reexecuta a verificacao do instalador nesse perfil.
+
+RISCOS E COMO SERAO MEDIDOS ANTES DE ACEITAR
+R1 execucao dupla no perfil canonico (mesma linha no perfil e no projeto): medir no arquivo de eventos do controlador se cada chamada de ferramenta gera uma ou duas linhas. O controlador ja e provado contra concorrencia (teste RT10: 8 hooks simultaneos geram 1 sucessor; trava exclusiva). Se medir duas linhas, aplicar a decisao ja tomada SO_PROJETO em patch separado com novo JEV DIFF.
+R2 o sucessor de uma sessao num perfil sem hooks no perfil: o lancador gerado chama a verificacao do instalador, que exige os hooks NO PERFIL e falharia. Sera medido na prova real. Se falhar, o ajuste minimo e o verificador aceitar os hooks declarados no projeto (novo JEV DIFF), nao instalar a mao.
+R3 sessoes ja abertas: o Claude Code pode ou nao recarregar ajustes sem reiniciar; sera observado, nao presumido.
+R4 reversao: retirar as 5 entradas (git checkout do arquivo); nenhum estado e migrado.
+
+PROVA DEPOIS DO PATCH
+test:rotation completo; sessao real nova aberta pelo lancador; status reconhece; rotacao forcada real com janela nova; sucessor registrado no mesmo perfil e reconhecido pelo status; teste ao vivo existente da rotacao automatica.
