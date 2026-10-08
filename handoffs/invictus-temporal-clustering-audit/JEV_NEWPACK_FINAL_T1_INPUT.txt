@@ -1,0 +1,22 @@
+INVICTUS - NOVO PACK BASELINE - JEV FINAL
+
+HISTORICO
+DESIGN T1 req_01a11d3288917ba3ad718c53356754d0 (P1) e T2 req_01a11d34423f7e0d90dc208e635ad1d3 (K1, fatos corrigidos).
+DIFF T1 req_01a11d37f74870a98a757a88729dd871 = B 0,67 (equivalencia 1,86 de 2).
+DIFF T2 req_01a11d387b8c7c768ab5b803fc1a76e2: pendencia principal = o codigo EXIT_LAYER_FIX X2 ainda sem aprovacao (0,65), que NAO impede aprovar como BASELINE (0,86); classificacao = BASELINE validado offline, NAO candidato a release (1,00); documento de status exigido (0,98); mascarar a conta de corretora na pasta de configuracao (0,68); referenciar os dois rollbacks (0,59); importacao de teste exigida 0,56 contra 0,44 (confianca baixa).
+
+AJUSTES DE EMPACOTAMENTO FEITOS APOS O DIFF T2 (nenhum codigo tocado; zip inalterado, mesmo sha256 com prefixo 975b5955)
+J1 Classificacao alterada para: BASELINE do estado instalado, validado OFFLINE. NAO e candidato a release. O pedido do operador de rotular como candidato a release NAO foi atendido, por decisao do JEV.
+J2 Documento LEIA-ME na pasta do pack com: classificacao; restricoes (nao importar no NinjaTrader vivo, nao distribuir, nao usar em conta real); condicoes para virar candidato a release (JEV DIFF T3 = A do EXIT_LAYER_FIX X2 apos ciclo real em conta Sim, validacao ao vivo, JEV FINAL); tabela do que foi validado offline; lista do que esta pendente; limite conhecido do desenho da saida.
+J3 Pasta de configuracao: identificador da conta de corretora mascarado nos 2 arquivos que o continham (0 ocorrencias em claro restantes; os 7 arquivos continuam JSON validos); manifesto com os hashes dos originais mantido; originais so no baseline.
+J4 Rollback: copias byte a byte dos dois pacotes ja existentes (saida, prefixo 745b8651; gate, prefixo 16497fee), com hashes e ordem de aplicacao no documento.
+
+PROVAS (inalteradas)
+Equivalencia com o baseline: faltando 0, sobrando 0, alterados 0. Roundtrip 60 de 60, diferenca 0. Arvore reconstruida 474 de 474 identica. Compilacao 464 de 464, 0 erros. Harness da saida 28 de 28. Bancada do executor 32 de 32. FORCA_JANELA_30: 182160 passos 100 por cento iguais, 860 de 860 entradas. P-GCAP harness de API identico ao da OLIVER instalada; harness antigo do gate nao aplicavel (aceito no DIFF T1). Segredos: 0 achados. Referencia aceita: 54 iguais, 6 diferentes esperados. NinjaTrader vivo: impressao digital dos fontes identica antes e depois; robo em PLAY somente Sim, ativos da conta real desligados, CopyEngine desligado, 0 ordens, 0 alertas.
+
+O QUE CONTINUA PENDENTE E NAO PODE SER RESOLVIDO NESTA RODADA
+X1 Importacao de teste do zip: a regra canonica proibe importar no NinjaTrader vivo, e nao existe outro NinjaTrader nesta maquina. Fica registrada como etapa obrigatoria da validacao posterior.
+X2 Validacao em mercado ao vivo e JEV DIFF T3 do EXIT_LAYER_FIX X2: dependem de o robo abrir e fechar posicoes em conta Sim com o mercado aberto.
+
+PEDIDO
+Decisao final sobre o pack COMO BASELINE do estado instalado, validado offline, com X1 e X2 registrados como pendencias obrigatorias antes de qualquer uso.

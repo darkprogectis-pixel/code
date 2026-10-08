@@ -1,0 +1,12 @@
+{
+ "empacotamento": { "type": "choice", "instructions": "Qual e a forma minima e segura de transformar o baseline capturado em um pack NinjaTrader importavel, preservando exatamente o estado instalado, sem alteracao funcional e sem tocar no NinjaTrader vivo?",
+  "criteria": { "P1": "escopo do pack OLIVER: Info.xml + AdditionalReferences.txt da referencia + os 58 fontes com conteudo do baseline; sem DLLs; configuracao em pasta companheira; autenticacao fora do zip", "P2": "arvore nao padrao inteira com DLLs", "P3": "P1 mais arquivos de autenticacao/licenca/login dentro do zip", "P4": "P1 mais configuracao dentro do zip", "OUTRO": "outra forma" } },
+ "dlls": { "type": "choice", "instructions": "Tratamento das 9 DLLs do baseline.",
+  "criteria": { "FORA_DO_ZIP": "nao entram; so ficam no manifesto do baseline", "DENTRO_DO_ZIP": "entram no zip" } },
+ "config": { "type": "choice", "instructions": "Tratamento dos 7 arquivos de configuracao do robo.",
+  "criteria": { "COMPANHEIRA": "pasta companheira com manifesto de hashes, fora do zip importavel", "DENTRO_DO_ZIP": "dentro do zip importavel", "NAO_INCLUIR": "nao acompanhar o pack" } },
+ "rollback": { "type": "choice", "instructions": "Pacote de rollback para o pack baseline.",
+  "criteria": { "NAO_APLICAVEL": "nao gerar pacote novo; o pack reproduz o instalado; registrar os rollbacks ja existentes", "GERAR_NOVO": "gerar um pacote de rollback novo mesmo assim" } },
+ "prova": { "type": "choice", "instructions": "As provas E1 a E5 bastam como criterio de aprovacao do pack baseline?",
+  "criteria": { "SIM": "bastam", "FALTA": "falta prova adicional" } }
+}

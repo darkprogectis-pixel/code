@@ -1,0 +1,9 @@
+{
+ "diff": { "type": "choice", "instructions": "O pack representa fielmente o baseline atual, sem codigo modificado, sem configuracao proibida, sem segredo indevido, com compilacao, regressao offline e roundtrip aprovados e com o NinjaTrader vivo intacto?",
+  "criteria": { "A": "aprovado como pack baseline", "B": "falta ajuste de empacotamento ou prova especifica, indicada em 'pendencia'", "C": "rejeitado", "D": "outro" } },
+ "pendencia": { "type": "choice", "instructions": "Se nao for A, qual e a pendencia?",
+  "criteria": { "NENHUMA": "nenhuma", "IMPORT_TESTE": "exigir importacao de teste do zip antes de aprovar", "PGCAP_GATE": "o tratamento do harness antigo do gate P-GCAP (V8) nao e aceitavel", "SEGREDOS": "varredura de segredos insuficiente", "COMPOSICAO": "composicao do zip precisa mudar", "OUTRA": "outra" } },
+ "v8_aceito": { "type": "choice", "instructions": "E correto tratar o harness antigo do gate de forca por Press como nao aplicavel (substituido pela FORCA_JANELA_30) e usar o V6 como teste vigente do gate?",
+  "criteria": { "SIM": "correto", "NAO": "incorreto; e uma regressao" } },
+ "equivalencia": { "type": "score", "instructions": "Grau de prova de que o pack reproduz o estado instalado.", "criteria": ["fraca", "parcial", "completa"] }
+}

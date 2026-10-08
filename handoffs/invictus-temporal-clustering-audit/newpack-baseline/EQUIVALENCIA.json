@@ -1,0 +1,524 @@
+{
+    "jev_design":  "req_01a11d3288917ba3ad718c53356754d0",
+    "baseline":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\newpack_baseline\\20261008-172053",
+    "referencia":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\oliver-main-pgcap-20261007\\entregas\\OLIVER_MAIN_MACHINE\\_conteudo_entrega\\AlfaOmega_OLIVER_INVICTUS_PGCAP_RECOVERY_import.zip",
+    "referencia_sha256":  "71744eb0fd262faa7bb31f1de073851c45381fc195283b210a13e6a23e70d057",
+    "zip":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\newpack\\CURRENT_LIVE_BASELINE_20261008\\AlfaOmega_OLIVER_INVICTUS_BASELINE_ATUAL_20261008_import.zip",
+    "zip_sha256":  "975b5955b9f4280cb9945981e07c89670a304fce93d8d2c94cea0cc98b79ba49",
+    "zip_bytes":  700149,
+    "source_files_expected":  58,
+    "source_files_packed":  58,
+    "pack_file_count":  60,
+    "missing":  [
+
+                ],
+    "extra":  [
+
+              ],
+    "unexpected_changed":  [
+
+                           ],
+    "entradas_proibidas":  [
+                               "Newtonsoft.Json.dll",
+                               "Indicators/TTW_DarkProjects/AoLicenca.cs",
+                               "Indicators/TTW_DarkProjects/AoLicencaUi.cs",
+                               "Indicators/TTW_DarkProjects/AoLogin.cs"
+                           ],
+    "info_xml_igual_referencia":  true,
+    "roundtrip":  {
+                      "files":  60,
+                      "missing":  0,
+                      "extra":  0,
+                      "content_diff":  0
+                  },
+    "arvore_reconstruida":  {
+                                "path":  "C:\\Users\\ADM\\AppData\\Local\\Temp\\claude\\C--Users-ADM-Claude-JEV-code\\6b86565f-0ed1-474b-85ff-2c43e1c80f48\\scratchpad\\newpack_tree",
+                                "arquivos":  474,
+                                "diferentes_do_baseline":  0,
+                                "extras":  0
+                            },
+    "config_companheira":  {
+                               "path":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\newpack\\CURRENT_LIVE_BASELINE_20261008\\config_companheira",
+                               "arquivos":  [
+                                                "4c64ac04dabb1ba7ee09ad6828c4e5ad8395497fcc2ddc31066e777f31058e26  accounts.json",
+                                                "9e85cc4f54176df64d55980c0c83adf01c2af197e5721729a5793e2130a7f40f  ativos.json",
+                                                "e70a44d9c3771a4e30ff0e277d44fd5d754a977234d77a7cb1efb65ee3fda9f7  cme-calendar.json",
+                                                "e4e2b3b290966fe72c02aa85578c98268e0bce1b2873556122fbaa6bd6b8bb89  copy.json",
+                                                "a78c69fd319b983cf3a310dce1821b4275742a04b5777f0559e4441eeb028bb6  market-window.json",
+                                                "5b2e82621fe96310fd83d7b46b62d63bf2b078a547b3bfa16fdaff1d4c7c9ea4  operacional.json",
+                                                "3b2eb52095dc4ce02ed5ce8db068f36536d9841e78abc60c671a15f24c8f9a31  runtime.json"
+                                            ]
+                           },
+    "criticos":  {
+                     "AddOns/AlfaOmegaRobo.cs":  {
+                                                     "sha256_baseline":  "f678d200fe4ca7e9b8f6211d6436eb86dac2838f4422cee23d8791b79041298e",
+                                                     "no_zip":  true
+                                                 },
+                     "AddOns/AlfaOmegaRoboFechamento.cs":  {
+                                                               "sha256_baseline":  "a1fc99a8cce2bbbcbe1428b545ec2efc15355c571919e23f1843945347d7774d",
+                                                               "no_zip":  true
+                                                           },
+                     "AddOns/AlfaOmegaRoboSaida.cs":  {
+                                                          "sha256_baseline":  "90e0020ad3187f6a360a5a661ade4e610ea16a101ff44e3538757032518eacf9",
+                                                          "no_zip":  true
+                                                      },
+                     "AddOns/AlfaOmegaRoboMotor.cs":  {
+                                                          "sha256_baseline":  "ecfe8f9ce00b86fdae03258937fadb42575f003ff712317bc6b1134cfe26b9bc",
+                                                          "no_zip":  true
+                                                      },
+                     "AddOns/AlfaOmegaRoboFontes.cs":  {
+                                                           "sha256_baseline":  "172a758a125561f88f4efb90da6af5abac01c39bb7761a20daac5eaa308b855a",
+                                                           "no_zip":  true
+                                                       },
+                     "AddOns/AlfaOmegaTrader.cs":  {
+                                                       "sha256_baseline":  "07a939228fbb79a35fb09eb4eb6cdb323df1f748fefcd4a8522fa4bd49fdbd1e",
+                                                       "no_zip":  true
+                                                   },
+                     "Indicators/TTW_DarkProjects/AlfaOmegaSharedState.cs":  {
+                                                                                 "sha256_baseline":  "49c43777481cb5ddd1a220c67219a43a0ae58b814f43d4ede44241812183c30a",
+                                                                                 "no_zip":  true
+                                                                             },
+                     "Indicators/TTW_DarkProjects/AoTapeEngine.cs":  {
+                                                                         "sha256_baseline":  "59e168d8f2923d23003fc415da1522c168e8d891506519975a379def92f94d51",
+                                                                         "no_zip":  true
+                                                                     },
+                     "Indicators/TTW_DarkProjects/AoMarketDataPublisher.cs":  {
+                                                                                  "sha256_baseline":  "19452fcb5d49a83900926af04420ab76f9bca536020ec9950e7f227a2cbb3ba1",
+                                                                                  "no_zip":  true
+                                                                              },
+                     "Indicators/TTW_DarkProjects/AlfaOmegaAuthV2.cs":  {
+                                                                            "sha256_baseline":  "4a64c54e20bbfe9fa46103f379118a29786000bc2ac6607e18d3f42f46157442",
+                                                                            "no_zip":  false
+                                                                        },
+                     "Indicators/TTW_DarkProjects/AoLicenca.cs":  {
+                                                                      "sha256_baseline":  "9887afe94b3ed1c536c1aa556548f7bd6437b975fad5b37ddc4c85b5e5d4ee7e",
+                                                                      "no_zip":  true
+                                                                  },
+                     "Indicators/TTW_DarkProjects/AoLogin.cs":  {
+                                                                    "sha256_baseline":  "83268d9271c129bdc4e6d5e8ed1d69989cb7c4b4d0aa6f6171942c978af4807d",
+                                                                    "no_zip":  true
+                                                                }
+                 },
+    "entradas":  [
+                     {
+                         "entry":  "Info.xml",
+                         "bytes":  130,
+                         "sha256":  "ffb3a3cbe8d83f1bdf65298af487ebadc20e0497205b87e516b03e586363fcff",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AdditionalReferences.txt",
+                         "bytes":  17,
+                         "sha256":  "c1cc3e5e63466f15a33fb1f4d52ae150d1ee11fe1dfeac7a1e67b51e0a45d7b3",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Newtonsoft.Json.dll",
+                         "bytes":  700336,
+                         "sha256":  "7f912b28a07c226e0be3acfb2f57f050538aba0100fa1f0bf2c39f1a1f1da814",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaCopyEngineContas.cs",
+                         "bytes":  8992,
+                         "sha256":  "41410ceb2484d3f5cb6270c67cc7c3450976ec11606a8b3bc8daae14ed97589b",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaCopyEngineCore.cs",
+                         "bytes":  38409,
+                         "sha256":  "a4d4f2d1cb5f8840d4d94ca0c8231bcd23d71928cdd6ea2aa76566bfcb95407e",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaCopyEngineMotor.cs",
+                         "bytes":  36361,
+                         "sha256":  "7b6ef9b4994d8eba3ecec593c1f389fbb050f3c60fc43da56e2f8ba25749c3d9",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaCopyEngineNet.cs",
+                         "bytes":  18096,
+                         "sha256":  "effbb7d69916ac386e5e58ccc754a15880b9eb5904733dbe85abca8914e6fa09",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaCopyEngineStagger.cs",
+                         "bytes":  11871,
+                         "sha256":  "0f661a2e7be6bffae82d89729331abcaef50d2b54f3f366755b3fc15f1ac2bf4",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaCopyMaster.cs",
+                         "bytes":  8334,
+                         "sha256":  "73ac0ca36f175ef78bf27564ec69b3ab032279ee28bcbdd26180b59f50e0403c",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaProtecaoManual.cs",
+                         "bytes":  17661,
+                         "sha256":  "e31c104d976dad5991f94c087c4a5e7153ac900921723e0fb78bc3f470ce2e19",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRobo.cs",
+                         "bytes":  235574,
+                         "sha256":  "f678d200fe4ca7e9b8f6211d6436eb86dac2838f4422cee23d8791b79041298e",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboAot.cs",
+                         "bytes":  18768,
+                         "sha256":  "c65cbd7997147638010b81bbcf116052d5cc5a0da940377018432d4da164deac",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboAtivos.cs",
+                         "bytes":  29871,
+                         "sha256":  "441b8b0ebde3d19d67cf27c0ea9a25ec53b4d96b2d1db9c7f679e0900ffd0a0a",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboAudit.cs",
+                         "bytes":  10979,
+                         "sha256":  "a5c6c5127ec2d9b6bd08885ec724a36652d90bb89306b5fce7ef0011b80233f1",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboConfig.cs",
+                         "bytes":  26294,
+                         "sha256":  "050f03b1bd16ac2697d920a462f54301d22de4890ff200b25e573c0d2af82221",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboConfluencia.cs",
+                         "bytes":  15592,
+                         "sha256":  "aaead8635a4f30cb5b3fea823d7d6c24774749eb165314a7f97e7a505ff1c1f2",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboDedup.cs",
+                         "bytes":  8584,
+                         "sha256":  "18546e3e42e4fdf2cd18c980e4a7a07aa293f00ba1da74cdb01492ae23dafd08",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboEntry.cs",
+                         "bytes":  10623,
+                         "sha256":  "39c8ac330522815cc5c5c5b3928c5e20a4a279d376429a15003a12ab81eda0af",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboEntryMq.cs",
+                         "bytes":  11541,
+                         "sha256":  "3071e5ff9b9519164d2045b3428b4f7a3a63a4263f86e07ced45bc3af97ffa23",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboEventoAot.cs",
+                         "bytes":  46463,
+                         "sha256":  "bbaa02b53de7b6b9132b0320b1c5e61962933b40006c5f8bc87a49cbfd3443d9",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboFechamento.cs",
+                         "bytes":  74670,
+                         "sha256":  "a1fc99a8cce2bbbcbe1428b545ec2efc15355c571919e23f1843945347d7774d",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboFontes.cs",
+                         "bytes":  25108,
+                         "sha256":  "172a758a125561f88f4efb90da6af5abac01c39bb7761a20daac5eaa308b855a",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboGates.cs",
+                         "bytes":  23227,
+                         "sha256":  "c4f3148029ddc67091c230a54aa5199f510f2929921ed8afe2906d6f3a720d4f",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboHistorico.cs",
+                         "bytes":  5887,
+                         "sha256":  "3110027ea7e214ae6e317519ffea3150493662e18aedb4d1dd3530f0212f7fe8",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboLedger.cs",
+                         "bytes":  19914,
+                         "sha256":  "2966866a68d6b6bce9db88bce2b5ef1f3bfe0289b8fc2fd85ce0ec666e8d97ed",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboMotor.cs",
+                         "bytes":  42300,
+                         "sha256":  "ecfe8f9ce00b86fdae03258937fadb42575f003ff712317bc6b1134cfe26b9bc",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboOperacional.cs",
+                         "bytes":  11174,
+                         "sha256":  "0fd2bbd628410840988b5e2c8e59737f95f6170c22720ebdd157421314047d1d",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboOrderState.cs",
+                         "bytes":  14496,
+                         "sha256":  "706a5bfcb0e5f51f126a3ad6bcac5e6897cb3cfd8b1f8e0372464f42f0a925a4",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboOrderWatch.cs",
+                         "bytes":  19678,
+                         "sha256":  "19e853b6a8a5dce893e3c340c3ef2b6e039ef1f7fd2c2e2943b69ca1034c668d",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboPermissao.cs",
+                         "bytes":  8910,
+                         "sha256":  "7131b20c355635a684fbb1fceb1e305d796aff70c5884c79e92dd580fd2e6ea6",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboPositions.cs",
+                         "bytes":  10457,
+                         "sha256":  "15fbefca9c14907661d903975a1feea7ee4b3f3e0ab57b25007605e5e304a818",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboProtecao.cs",
+                         "bytes":  8364,
+                         "sha256":  "0d7013d9c1069e1f754d72e25f3ff2d0aedf50b0b4de942f4b42cfa66b2359d9",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboRelay.cs",
+                         "bytes":  9773,
+                         "sha256":  "16d340cbe8386f2c674f14a4658b707b89851f7b8c480291bef1853c17e70178",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboSaida.cs",
+                         "bytes":  32361,
+                         "sha256":  "90e0020ad3187f6a360a5a661ade4e610ea16a101ff44e3538757032518eacf9",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboStack.cs",
+                         "bytes":  15385,
+                         "sha256":  "7321ceb81565edb30ec508feacdb4e5283435a94a5c4cf1bd65b5a216a12e9d0",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaRoboTurno.cs",
+                         "bytes":  11341,
+                         "sha256":  "4a9590df530b1219693a7103331807bb96a742d0923439dde55a17c8cec62384",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AlfaOmegaTrader.cs",
+                         "bytes":  64682,
+                         "sha256":  "07a939228fbb79a35fb09eb4eb6cdb323df1f748fefcd4a8522fa4bd49fdbd1e",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AoBasicEntryLink.cs",
+                         "bytes":  7350,
+                         "sha256":  "0c4cad048bc966434a1a201711a4bc5dbd3c5aaeb840563b2333839df0fa010c",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AoJsonNum.cs",
+                         "bytes":  3023,
+                         "sha256":  "0866de80418cef02d8f1ef7f31a76165a379667ac35960bb47c48b325df5bca8",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AoRoboGuard.cs",
+                         "bytes":  8517,
+                         "sha256":  "a4566f0c0e573e78e2be2ecba03dec4170d854c1e17381af22797e5d28079c8b",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AoTraderCore.cs",
+                         "bytes":  8169,
+                         "sha256":  "f48b51497944d218513383a47a08d2c554d9cf8dd86fc19d3c0c00e15f44b3aa",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "AddOns/AoXGate.cs",
+                         "bytes":  11020,
+                         "sha256":  "46781fdfbe526ef7098ce3e35c6b1e98739de762d509d5e2b640c4ee64d741a8",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AlfaOmegaSharedState.cs",
+                         "bytes":  58997,
+                         "sha256":  "49c43777481cb5ddd1a220c67219a43a0ae58b814f43d4ede44241812183c30a",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AoAccountNames.cs",
+                         "bytes":  13389,
+                         "sha256":  "8047078611310f0dc93b21f74a9639cc44822e353899c1d60a6491c0739f3065",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AoAccounts.cs",
+                         "bytes":  20095,
+                         "sha256":  "c5be2b337e2c6c7020944bfc35dcb6313a961c202be92a93b0d1026e08ce0937",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AoControlCenter.cs",
+                         "bytes":  156785,
+                         "sha256":  "e4d935d9b6fd866f28185dae0711d2927c8880481412a136eadc08aa98cff2e7",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AoCopyStatus.cs",
+                         "bytes":  3958,
+                         "sha256":  "3dcfa845f060f3301900c4be38d4be28304e74662cc579aead1e1fcfdfa02ed0",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AoDiag.cs",
+                         "bytes":  6987,
+                         "sha256":  "208a37452c75c90dc9607a417c0df9ddd2f6dc9472ccc77eeec79cf6d0542401",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AoExecClient.cs",
+                         "bytes":  19942,
+                         "sha256":  "2b8d499a3095e2f8df67327199265d29ec70dc1fbff2b3fb9b9e82e5d621392c",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AoHud.cs",
+                         "bytes":  7933,
+                         "sha256":  "8811b457c77eb0db10dfe8eaa9fc9bd6f7b7e980289c9b0ca1e2270175f26411",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AoInput.cs",
+                         "bytes":  17985,
+                         "sha256":  "7aeb078b945230ca6a9ab1fbb88eacb45f40675647d546fc9744637991ddab89",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AoLicenca.cs",
+                         "bytes":  4547,
+                         "sha256":  "9887afe94b3ed1c536c1aa556548f7bd6437b975fad5b37ddc4c85b5e5d4ee7e",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AoLicencaUi.cs",
+                         "bytes":  4622,
+                         "sha256":  "e1906e48907f58d6901e7987562062d29ff03d76449d0baa954f1df50fd91ceb",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AoLogin.cs",
+                         "bytes":  12031,
+                         "sha256":  "83268d9271c129bdc4e6d5e8ed1d69989cb7c4b4d0aa6f6171942c978af4807d",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AoMarcadores.cs",
+                         "bytes":  11422,
+                         "sha256":  "298bab356da0b57f56e7dacde8e156ea3394d43379db0ee9116f5920bd99e3a1",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AoMarketDataPublisher.cs",
+                         "bytes":  11271,
+                         "sha256":  "19452fcb5d49a83900926af04420ab76f9bca536020ec9950e7f227a2cbb3ba1",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AoPressSessao.cs",
+                         "bytes":  8810,
+                         "sha256":  "097279c81f6cd89450ef74bf1c260a16a4b0cdea9039d2806d9215ac78f4f45b",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AoSkin.cs",
+                         "bytes":  14346,
+                         "sha256":  "76b0c1f82b9cac0a00ffb90cd65ea36cbe4b51da847de0fd69e723586a9ecfe0",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AoTapeEngine.cs",
+                         "bytes":  12317,
+                         "sha256":  "59e168d8f2923d23003fc415da1522c168e8d891506519975a379def92f94d51",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     },
+                     {
+                         "entry":  "Indicators/TTW_DarkProjects/AoTheme.cs",
+                         "bytes":  26759,
+                         "sha256":  "03f5592225f8e876e46172c47461eecf52ae09be5190b7b02bd4c43d8c3998cc",
+                         "igual_ao_baseline":  true,
+                         "roundtrip_igual":  true
+                     }
+                 ]
+}

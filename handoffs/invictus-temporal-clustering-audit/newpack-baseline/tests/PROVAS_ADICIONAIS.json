@@ -1,0 +1,49 @@
+{
+    "zip":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\invictus-temporal-clustering-audit-20261008\\newpack\\CURRENT_LIVE_BASELINE_20261008\\AlfaOmega_OLIVER_INVICTUS_BASELINE_ATUAL_20261008_import.zip",
+    "referencia":  "C:\\Users\\ADM\\Desktop\\Handof TTW\\HANDOFF\\conf-tests\\pack-native-20261006\\oliver-main-pgcap-20261007\\entregas\\OLIVER_MAIN_MACHINE\\_conteudo_entrega\\AlfaOmega_OLIVER_INVICTUS_PGCAP_RECOVERY_import.zip",
+    "varredura_segredos":  {
+                               "padroes":  [
+                                               "conta_corretora",
+                                               "chave_privada",
+                                               "bearer_literal",
+                                               "atribuicao_segredo_literal",
+                                               "jwt",
+                                               "aws"
+                                           ],
+                               "entradas_texto":  59,
+                               "achados":  [
+
+                                           ]
+                           },
+    "comparacao_referencia":  {
+                                  "iguais":  54,
+                                  "diferentes":  [
+                                                     "AddOns/AlfaOmegaRobo.cs",
+                                                     "AddOns/AlfaOmegaRoboFechamento.cs",
+                                                     "AddOns/AlfaOmegaRoboSaida.cs",
+                                                     "Indicators/TTW_DarkProjects/AlfaOmegaSharedState.cs",
+                                                     "Indicators/TTW_DarkProjects/AoMarketDataPublisher.cs",
+                                                     "Indicators/TTW_DarkProjects/AoTapeEngine.cs"
+                                                 ],
+                                  "so_no_pack":  [
+
+                                                 ],
+                                  "so_na_referencia":  [
+
+                                                       ],
+                                  "diferentes_esperados":  [
+                                                               "AddOns/AlfaOmegaRobo.cs",
+                                                               "AddOns/AlfaOmegaRoboFechamento.cs",
+                                                               "AddOns/AlfaOmegaRoboSaida.cs",
+                                                               "Indicators/TTW_DarkProjects/AlfaOmegaSharedState.cs",
+                                                               "Indicators/TTW_DarkProjects/AoMarketDataPublisher.cs",
+                                                               "Indicators/TTW_DarkProjects/AoTapeEngine.cs"
+                                                           ],
+                                  "diferencas_inesperadas":  [
+
+                                                             ],
+                                  "esperadas_ausentes":  [
+
+                                                         ]
+                              }
+}

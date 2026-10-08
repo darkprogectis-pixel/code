@@ -1,0 +1,55 @@
+{
+ "request_id": "req_01a11d3288917ba3ad718c53356754d0",
+ "model": "jev-1.13.0",
+ "answers": {
+  "empacotamento": {
+   "type": "choice",
+   "choice": "P1",
+   "confidence": 1,
+   "probabilities": {
+    "P2": 0,
+    "OUTRO": 0,
+    "P3": 0,
+    "P4": 0,
+    "P1": 1
+   }
+  },
+  "dlls": {
+   "type": "choice",
+   "choice": "FORA_DO_ZIP",
+   "confidence": 1,
+   "probabilities": {
+    "FORA_DO_ZIP": 1,
+    "DENTRO_DO_ZIP": 0
+   }
+  },
+  "config": {
+   "type": "choice",
+   "choice": "COMPANHEIRA",
+   "confidence": 1,
+   "probabilities": {
+    "NAO_INCLUIR": 0,
+    "DENTRO_DO_ZIP": 0,
+    "COMPANHEIRA": 1
+   }
+  },
+  "rollback": {
+   "type": "choice",
+   "choice": "NAO_APLICAVEL",
+   "confidence": 1,
+   "probabilities": {
+    "NAO_APLICAVEL": 1,
+    "GERAR_NOVO": 0
+   }
+  },
+  "prova": {
+   "type": "choice",
+   "choice": "FALTA",
+   "confidence": 0.02,
+   "probabilities": {
+    "FALTA": 0.51,
+    "SIM": 0.49
+   }
+  }
+ }
+}

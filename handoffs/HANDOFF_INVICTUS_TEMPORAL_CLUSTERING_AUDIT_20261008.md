@@ -450,3 +450,30 @@ Artefatos: `W\build_test\AlfaOmega_TESTE_NAO_OFICIAL_EXITFIX_X2_import.zip` SHA2
 - NÃO capturados de propósito: arquivos de segredo/ligação do trader e estado de execução (pasta `state`, logs). Baseline fica fora do git (contém nomes de contas).
 - PACK_BUILD_STATUS = BASELINE_CAPTURED; nenhum zip de pack gerado; nenhuma alteração aplicada.
 - EXACT_NEXT_STEP: operador define a primeira alteração a preparar no novo pack (ou confirma que o novo pack deve apenas reproduzir o estado atual como pacote importável); antes de qualquer patch: JEV DESIGN → staging no novo pack → compile/testes → JEV DIFF → JEV FINAL. Observação do vivo continua passiva.
+
+## CURRENT_LIVE_BASELINE_IMPORTABLE_PACK_20261008 — pack BASELINE do estado instalado · JEV FINAL = A como BASELINE validado offline (NÃO release)
+Nada importado; NT8 vivo intacto (impressão digital de todos os fontes idêntica antes/depois: e39753d3…). Observação do vivo continua: PID 32520, PLAY só Sim (v57), MES/MNQ off (ativos v184), CopyEngine off, 0 ordens, 0 alertas (17:32 BRT).
+
+- **Baseline usado:** pasta `W\newpack_baseline\20261008-172053` (481/481 = instalado; manifesto 9372631a…67f4). Estado funcional: P-GCAP + FORCA_JANELA_30 + EXIT_LAYER_FIX X2. Base antiga sem a correção NÃO usada.
+- **Pack:** pasta `W\newpack\CURRENT_LIVE_BASELINE_20261008`
+  - `AlfaOmega_OLIVER_INVICTUS_BASELINE_ATUAL_20261008_import.zip` — SHA256 975b5955b9f4280cb9945981e07c89670a304fce93d8d2c94cea0cc98b79ba49 · 700.149 bytes · 60 entradas (Info.xml + AdditionalReferences.txt + Newtonsoft.Json.dll + 57 fontes; mesma lista do pack OLIVER de recuperação P-GCAP já aceito pelo importador; conteúdo 100% do baseline).
+  - `MANIFEST_SHA256.txt` · `EQUIVALENCIA.json` · `LEIA-ME.md` (classificação, restrições, validado × pendente) · pasta `tests`.
+  - pasta `config_companheira`: 7 arquivos de configuração de referência, conta de corretora mascarada, `SHA256SUMS_ORIGINAIS.txt` (não instalável pelo importador).
+  - pasta `rollback_estado_anterior`: cópias byte a byte dos rollbacks existentes — saída 745b8651…8286 e gate 16497fee…0b37 (para voltar ao P-GCAP: saída, depois gate).
+- **Ferramentas:** `W\tools\build_baseline_pack.ps1`, `newpack_scope.ps1`, `ref_pack_scan.ps1`, `newpack_extra_proofs.ps1`.
+- **Provas offline (todas sobre a árvore reconstruída do pack, não sobre o NT8):**
+  - equivalência: esperados 57 fontes + 1 biblioteca, empacotados idem · faltando 0 · sobrando 0 · alterados 0
+  - roundtrip 60/60, diferença 0 · árvore reconstruída 474/474 idêntica ao baseline
+  - compile 464/464, 0 erros
+  - EXIT_LAYER_FIX X2: harness 28/28 · bancada do executor 32/32
+  - FORCA_JANELA_30: 182.160 passos 100% iguais à referência, 860/860 entradas, saídas com o mesmo hash da execução original
+  - P-GCAP: harness de independência de API byte a byte igual ao da OLIVER instalada; harness antigo do gate por Press NÃO APLICÁVEL (passo substituído pela FORCA_JANELA_30; aceito pelo JEV 1,00)
+  - segredos: 0 achados em 59 entradas de texto · referência aceita: 54 iguais, 6 diferentes esperados (3 FORCA_JANELA_30 + 3 EXIT_LAYER_FIX)
+- **JEV:**
+  - DESIGN T1 `req_01a11d3288917ba3ad718c53356754d0` = P1 1,00 (DLLs de terceiros fora, configuração em pasta companheira, rollback novo não aplicável). ERRO DO EXECUTOR no dossiê T1 (disse "58 fontes, sem DLL, sem licença/login"; o correto é 57 fontes + Newtonsoft.Json.dll, incluindo AoLicenca/AoLicencaUi/AoLogin) corrigido no DESIGN T2 `req_01a11d34423f7e0d90dc208e635ad1d3` = K1 1,00 (manter a lista real da referência), T1 continua válido 0,97.
+  - DIFF T1 `req_01a11d37f74870a98a757a88729dd871` = B 0,67 (equivalência 1,86/2).
+  - DIFF T2 `req_01a11d387b8c7c768ab5b803fc1a76e2`: pendência principal = código EXIT_LAYER_FIX X2 sem aprovação (0,65), que não impede aprovar COMO BASELINE (0,86) · **classificação = BASELINE validado offline, NÃO candidato a release (1,00)** · LEIA-ME exigido 0,98 · mascarar conta 0,68 · referenciar os dois rollbacks 0,59 · importação de teste exigida 0,56 × 0,44.
+  - **FINAL T1 `req_01a11d3989bc75a49119fda1994e0370` = A 1,00 como BASELINE validado offline** · pode servir de ponto de partida para alterações offline = SIM 0,84 · pode ser distribuído/importado em conta real = NÃO 1,00.
+- **Classificação final:** PACK_STATUS = OFFLINE_VALIDATED_BASELINE. O rótulo pedido pelo operador (OFFLINE_VALIDATED_RELEASE_CANDIDATE) NÃO foi concedido pelo JEV.
+- **Pendências obrigatórias antes de qualquer uso:** (X1) importação de teste do zip em um NinjaTrader (não feita: proibida no vivo, não há outro ambiente) · (X2) validação em mercado ao vivo + JEV DIFF T3 do EXIT_LAYER_FIX X2 (ciclo real em Sim: entrada, saída, entrada, saída) · depois novo JEV FINAL para release.
+- EXACT_NEXT_STEP: manter a observação do vivo (PLAY só Sim) no próximo pregão ⇒ ciclo em Sim ⇒ JEV DIFF T3; em paralelo o operador define a primeira alteração a preparar sobre este baseline (JEV DESIGN antes de qualquer patch).

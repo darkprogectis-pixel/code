@@ -1,0 +1,8 @@
+{
+ "composicao": { "type": "choice", "instructions": "Com os fatos corrigidos, qual composicao o pack baseline deve ter?",
+  "criteria": { "K1": "manter como construido: mesma lista da referencia aceita (57 fontes incluindo os 3 de licenca/login + biblioteca JSON + 2 metadados)", "K2": "retirar os 3 fontes de licenca/login", "K3": "retirar a biblioteca JSON", "K4": "retirar os 3 fontes e a biblioteca JSON" } },
+ "t1_continua_valido": { "type": "choice", "instructions": "A decisao T1 (P1, DLLs de terceiros fora, configuracao em pasta companheira, rollback nao aplicavel) continua valida depois da correcao dos fatos?",
+  "criteria": { "SIM": "continua valida", "NAO": "precisa ser refeita" } },
+ "prova_adicional": { "type": "choice", "instructions": "No T1 a suficiencia das provas ficou dividida. Qual prova adicional minima e exigida para aprovar o pack baseline?",
+  "criteria": { "NENHUMA": "as provas de equivalencia, roundtrip, arvore reconstruida, compilacao e regressao offline bastam", "VARREDURA_SEGREDOS": "acrescentar varredura do zip por chaves, senhas e identificadores de conta", "COMPARAR_REFERENCIA": "acrescentar comparacao entrada a entrada com a referencia aceita, justificando cada diferenca", "AMBAS": "varredura de segredos e comparacao com a referencia" } }
+}

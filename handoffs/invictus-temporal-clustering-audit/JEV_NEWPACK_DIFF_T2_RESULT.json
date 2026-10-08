@@ -1,0 +1,76 @@
+{
+ "request_id": "req_01a11d387b8c7c768ab5b803fc1a76e2",
+ "model": "jev-1.13.0",
+ "answers": {
+  "pendencia_principal": {
+   "type": "choice",
+   "choice": "Q6",
+   "confidence": 0.59,
+   "probabilities": {
+    "Q2": 0.01,
+    "Q6": 0.65,
+    "Q7": 0,
+    "Q1": 0.06,
+    "Q4": 0,
+    "Q5": 0.27,
+    "Q3": 0.01
+   }
+  },
+  "q1_classificacao": {
+   "type": "choice",
+   "choice": "BASELINE_OFFLINE",
+   "confidence": 1,
+   "probabilities": {
+    "BASELINE_OFFLINE": 1,
+    "RELEASE_CANDIDATE_OFFLINE": 0
+   }
+  },
+  "q2_leiame": {
+   "type": "choice",
+   "choice": "SIM",
+   "confidence": 0.96,
+   "probabilities": {
+    "SIM": 0.98,
+    "NAO": 0.02
+   }
+  },
+  "q3_config": {
+   "type": "choice",
+   "choice": "MASCARAR_CONTA",
+   "confidence": 0.52,
+   "probabilities": {
+    "COMO_ESTA": 0,
+    "SO_MANIFESTO": 0.32,
+    "MASCARAR_CONTA": 0.68
+   }
+  },
+  "q4_rollback": {
+   "type": "choice",
+   "choice": "REFERENCIAR_AMBOS",
+   "confidence": 0.38,
+   "probabilities": {
+    "COMO_ESTA": 0.01,
+    "REFERENCIAR_AMBOS": 0.59,
+    "ROLLBACK_UNICO": 0.4
+   }
+  },
+  "q5_import": {
+   "type": "choice",
+   "choice": "SIM",
+   "confidence": 0.12,
+   "probabilities": {
+    "NAO": 0.44,
+    "SIM": 0.56
+   }
+  },
+  "q6_bloqueia": {
+   "type": "choice",
+   "choice": "NAO_IMPEDE",
+   "confidence": 0.72,
+   "probabilities": {
+    "IMPEDE": 0.14,
+    "NAO_IMPEDE": 0.86
+   }
+  }
+ }
+}

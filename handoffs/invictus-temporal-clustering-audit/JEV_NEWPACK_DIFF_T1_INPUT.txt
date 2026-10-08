@@ -1,0 +1,34 @@
+INVICTUS - NOVO PACK BASELINE - JEV DIFF (pack importavel que reproduz o estado instalado; nenhuma alteracao funcional)
+
+DECISOES ANTERIORES
+JEV NEWPACK DESIGN T1 req_01a11d3288917ba3ad718c53356754d0: P1 (escopo do pack OLIVER aceito, conteudo do baseline), DLLs de terceiros fora, configuracao em pasta companheira, rollback novo nao aplicavel. JEV NEWPACK DESIGN T2 req_01a11d34423f7e0d90dc208e635ad1d3 (fatos corrigidos): K1 manter a lista real da referencia, T1 continua valido.
+Classificacao pedida pelo operador para esta rodada: candidato a release validado OFFLINE. A validacao em mercado ao vivo continua PENDENTE (mercado fechado; no teste Sim de hoje o robo nao abriu nenhuma entrada, logo a camada de saida nao foi exercitada no NinjaTrader real).
+
+ESTADO FUNCIONAL DO BASELINE
+P-GCAP + FORCA_JANELA_30 + EXIT_LAYER_FIX X2. Baseline capturado por leitura do NinjaTrader: 481 de 481 arquivos conferidos contra o instalado.
+
+O PACK
+Arquivo AlfaOmega_OLIVER_INVICTUS_BASELINE_ATUAL_20261008_import.zip, sha256 com prefixo 975b5955, 700149 bytes, 60 entradas:
+ Info.xml e AdditionalReferences.txt identicos a referencia aceita; biblioteca JSON identica ao baseline; 57 fontes identicos ao baseline.
+Fora do zip: as outras 8 DLLs da maquina, os fontes de outros produtos, o arquivo de autenticacao V2, configuracao, estado de execucao e logs.
+Pasta companheira com os 7 arquivos de configuracao do robo e manifesto de hashes (referencia do estado; nao instalavel pelo importador).
+Rollback: copia byte a byte do pacote ja existente que devolve os 3 arquivos da camada de saida ao estado anterior ao EXIT_LAYER_FIX X2 (prefixo 745b8651).
+
+PROVAS
+V1 Equivalencia: fontes esperados 57 + 1 biblioteca, empacotados 57 + 1; faltando 0; sobrando 0; alterados 0 (sha256 de cada entrada igual ao do mesmo caminho no baseline).
+V2 Roundtrip: zip extraido em pasta temporaria; 60 de 60 arquivos; faltando 0; sobrando 0; diferenca de conteudo 0.
+V3 Arvore reconstruida (copia do baseline com o conteudo do zip por cima): 474 de 474 arquivos identicos ao baseline; extras 0.
+V4 Compilacao completa da arvore reconstruida: 464 de 464 itens, fontes ausentes 0, erros 0.
+V5 EXIT_LAYER_FIX X2 - harness sobre o assembly completo: 28 de 28. Bancada do executor real (metodos reais do robo contra corretora simulada, 2 fontes de fronteira trocados por dubles): 32 de 32.
+V6 FORCA_JANELA_30 - harness do codigo real sobre 44 sessoes de ticks: 182160 passos comparados com a referencia aprovada, 100 por cento iguais; 860 de 860 entradas do motor no mesmo instante; arquivos de saida com o mesmo hash da execucao original.
+V7 P-GCAP - harness de independencia de API sobre o arquivo de fontes do pack: resultado byte a byte igual ao obtido na OLIVER instalada.
+V8 P-GCAP - o harness antigo do gate de forca por Press NAO se aplica mais: esse passo do gate foi substituido pela FORCA_JANELA_30 (JEV DIFF A anterior). Rodado mesmo assim, ele difere do resultado antigo exatamente nos casos de forca, como esperado. Nao e contado como PASS nem como FAIL; o teste vigente do gate e o V6.
+V9 Varredura de segredos nas 59 entradas de texto (conta de corretora, chave privada, portador literal, atribuicao literal de segredo, JWT, chave de nuvem): 0 achados.
+V10 Comparacao com a referencia aceita: 54 entradas iguais, 6 diferentes, exatamente os 3 arquivos da FORCA_JANELA_30 e os 3 do EXIT_LAYER_FIX X2; nenhuma entrada a mais ou a menos.
+V11 NinjaTrader vivo: impressao digital de todos os fontes antes e depois da rodada identica; mesmo processo; robo em PLAY somente em contas Sim, ativos da conta real desligados, CopyEngine desligado, 0 ordens, 0 alertas.
+
+LIMITES DECLARADOS
+L1 Validacao em mercado ao vivo PENDENTE: nenhuma saida real ocorreu no NinjaTrader com este codigo.
+L2 O pack nao foi importado em nenhum NinjaTrader nesta rodada; a aceitacao pelo importador e inferida por ter a mesma lista e os mesmos metadados do pack de referencia ja aceito, e por 3 dos seus arquivos terem sido importados hoje pelo zip de teste.
+L3 O JEV DIFF do EXIT_LAYER_FIX X2 ficou em B (teste em NinjaTrader real exigido) e o T3 nao foi submetido; este pack empacota esse codigo como esta instalado, sem altera-lo.
+L4 A configuracao (contas, ativos) nao e instalada pelo pack; fica como referencia na pasta companheira.

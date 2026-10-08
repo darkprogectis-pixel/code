@@ -1,0 +1,34 @@
+INVICTUS - NOVO PACK BASELINE - JEV PACKAGING DESIGN (nenhuma alteracao funcional)
+
+REGRA CANONICA EM VIGOR
+O INVICTUS instalado no NinjaTrader fica congelado, somente em observacao (PLAY so em contas Sim; ativos da conta real desligados; CopyEngine desligado). Nenhuma alteracao no ambiente vivo. Toda alteracao futura ocorre primeiro num NOVO PACK cujo ponto de partida e exatamente o estado instalado agora. Nesta rodada o objetivo e SOMENTE transformar o baseline capturado em um pack importavel que reproduza o estado instalado. Nao e versao nova, nao e patch, nao e correcao. Nada sera importado no NinjaTrader vivo.
+
+PERGUNTA
+Qual e a forma minima e segura de transformar o baseline capturado 20261008-172053 em um pack NinjaTrader importavel, preservando exatamente o estado instalado, sem nenhuma alteracao funcional e sem tocar no NinjaTrader vivo?
+
+FATOS DO BASELINE (capturado por leitura; 481 de 481 arquivos conferidos contra o instalado)
+B1 Pasta Custom: projeto de compilacao + 464 fontes + 9 DLLs. Dos 464 fontes, 291 sao os arquivos padrao da plataforma (nome iniciado por arroba) e 173 nao sao padrao.
+B2 Pasta robo-config: 7 arquivos de configuracao do robo (contas, ativos, copy, operacional, runtime, janela de mercado, calendario). Contem nomes de contas e o estado atual (ativos da conta real desligados, PLAY ligado). Sao arquivos lidos pelo robo em outra pasta do usuario; o importador do NinjaTrader nao instala esse tipo de arquivo.
+B3 As 9 DLLs sao bibliotecas de terceiros e de outros produtos instalados na maquina (roteador de ordens, indicadores de gamma, biblioteca JSON, FIX, fornecedor). Nenhuma e do INVICTUS.
+B4 Estado funcional instalado: P-GCAP + FORCA_JANELA_30 + EXIT_LAYER_FIX X2. A arvore Custom do baseline e identica (0 diferencas) a arvore de staging ja compilada (464 de 464, 0 erros) e testada (harness 28 de 28, bancada do executor 32 de 32).
+
+REFERENCIA EXISTENTE
+R1 O pack completo da OLIVER ja aceito pelo importador (pacote de recuperacao P-GCAP de 08/10) tem 60 entradas: Info.xml (versao de exportacao 8.0.22 build 2), AdditionalReferences.txt (uma linha: Newtonsoft.Json) e 58 fontes do INVICTUS (AddOns do robo e indicadores da pasta do produto). Nenhuma DLL, nenhum arquivo de configuracao, e NAO inclui os arquivos de autenticacao/licenca/login (na OLIVER eles sao preservados como estao na maquina).
+R2 Dos 58 fontes dessa referencia, 52 tem conteudo identico ao baseline e 6 diferem: exatamente os 3 da FORCA_JANELA_30 e os 3 do EXIT_LAYER_FIX, que mudaram depois daquele pacote.
+R3 Os outros 115 fontes nao padrao do baseline pertencem a outros produtos da maquina (Copilot, FlowOne, indicadores de gamma, CopyEngine, boleta, outro AddOn, fornecedores). O projeto tem uma fronteira de escopo que proibe mexer nesses produtos.
+
+OPCOES
+P1 ESCOPO DO PACK OLIVER: zip com Info.xml e AdditionalReferences.txt copiados byte a byte da referencia R1 + os mesmos 58 caminhos de fonte, com o CONTEUDO vindo do baseline. Sem DLLs. Sem configuracao dentro do zip. Os 7 arquivos de configuracao ficam ao lado, numa pasta companheira com manifesto de hashes (referencia do estado, nao instalavel pelo importador). Os arquivos de autenticacao/licenca/login ficam fora do zip, como na referencia, e seus hashes do baseline entram no relatorio.
+P2 ARVORE NAO PADRAO INTEIRA: zip com os 173 fontes nao padrao (inclui outros produtos) e as DLLs.
+P3 P1 MAIS AUTENTICACAO: como P1, acrescentando os arquivos de autenticacao/licenca/login do baseline dentro do zip.
+P4 P1 MAIS CONFIGURACAO DENTRO DO ZIP.
+
+PROVA DE EQUIVALENCIA PROPOSTA
+E1 Cada fonte do zip com sha256 igual ao do mesmo caminho no baseline; faltando 0; sobrando 0; alterados 0.
+E2 Roundtrip: extrair o zip em pasta temporaria e comparar byte a byte com o baseline.
+E3 Reconstrucao: sobrepor o conteudo do zip a uma copia do baseline e exigir arvore identica; compilar essa arvore (esperado 464 de 464, 0 erros).
+E4 Regressao offline sobre essa arvore: harness da saida (base reproduz, corrigido 28 de 28), bancada do executor (32 de 32), harness da FORCA_JANELA_30 por comparacao de passos, e conferencia de que os arquivos do P-GCAP tem os hashes instalados.
+E5 NinjaTrader vivo: 0 arquivos alterados, conferido por hash antes e depois.
+
+ROLLBACK
+O pack baseline reproduz o que ja esta instalado; importar esse pack sobre o estado atual nao muda nenhum arquivo. Os pacotes de rollback para os estados anteriores ja existem (antes do EXIT_LAYER_FIX e antes da FORCA_JANELA_30), com hashes registrados.

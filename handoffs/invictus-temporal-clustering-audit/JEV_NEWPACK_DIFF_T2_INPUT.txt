@@ -1,0 +1,20 @@
+INVICTUS - NOVO PACK BASELINE - JEV DIFF T2: IDENTIFICAR A PENDENCIA
+
+CONTEXTO
+JEV NEWPACK DIFF T1 (req_01a11d37f74870a98a757a88729dd871) = B 0,67 (A 0,32); pendencia = OUTRA 0,78 (importacao de teste 0,19); tratamento do harness antigo do gate aceito 1,00; prova de equivalencia 1,86 de 2 (completa 0,87).
+A equivalencia com o estado instalado foi considerada praticamente completa. Falta saber qual e a pendencia "outra" para corrigi-la, sem tocar em codigo funcional e sem tocar no NinjaTrader vivo.
+
+RESUMO DO QUE EXISTE
+Pack de 60 entradas identico ao baseline (P-GCAP + FORCA_JANELA_30 + EXIT_LAYER_FIX X2); compilacao 464 de 464 sem erros; harness da saida 28 de 28; bancada do executor 32 de 32; FORCA_JANELA_30 182160 passos 100 por cento iguais; harness de API do P-GCAP identico ao da OLIVER instalada; segredos 0; roundtrip sem diferencas; NinjaTrader vivo intacto.
+Pasta do pack contem hoje: o zip, o manifesto de hashes, o relatorio de equivalencia, a pasta de testes, a pasta companheira de configuracao (7 arquivos, com nomes de contas, incluindo a conta de corretora) e uma copia do rollback existente (so os 3 arquivos da camada de saida, estado anterior ao EXIT_LAYER_FIX X2).
+Nome do zip: AlfaOmega_OLIVER_INVICTUS_BASELINE_ATUAL_20261008_import.zip. Classificacao pedida pelo operador: candidato a release validado offline; validacao em mercado ao vivo pendente.
+O JEV DIFF do EXIT_LAYER_FIX X2 esta em B (teste em NinjaTrader real exigido); o T3 nao foi submetido porque o robo nao abriu entrada no teste Sim de hoje.
+
+CANDIDATAS A PENDENCIA
+Q1 CLASSIFICACAO: o pack nao pode ser chamado de candidato a release enquanto o EXIT_LAYER_FIX X2 nao tiver JEV DIFF = A e a validacao ao vivo estiver pendente; deve ser rotulado somente como BASELINE do estado instalado, com a restricao escrita.
+Q2 DOCUMENTO DE STATUS: falta, dentro da pasta do pack, um arquivo LEIA-ME com estado, restricoes (nao importar, nao distribuir, nao usar em conta real), o que esta validado offline e o que esta pendente.
+Q3 CONFIGURACAO COM NOMES DE CONTA: a pasta companheira nao deve conter o identificador da conta de corretora em claro; mascarar ou retirar da pasta do pack, mantendo so o manifesto de hashes.
+Q4 ROLLBACK INCOMPLETO: o rollback copiado cobre so os 3 arquivos da saida; exigir tambem a referencia ao rollback da FORCA_JANELA_30 ou um rollback unico para o estado P-GCAP.
+Q5 IMPORTACAO DE TESTE: exigir que o zip seja importado em algum NinjaTrader antes de aprovar.
+Q6 CODIGO NAO APROVADO: nenhum pack que contenha o EXIT_LAYER_FIX X2 pode receber A antes do JEV DIFF T3 desse codigo, qualquer que seja o rotulo.
+Q7 NENHUMA: aprovar como esta.

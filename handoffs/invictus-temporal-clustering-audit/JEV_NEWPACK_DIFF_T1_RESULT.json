@@ -1,0 +1,54 @@
+{
+ "request_id": "req_01a11d37f74870a98a757a88729dd871",
+ "model": "jev-1.13.0",
+ "answers": {
+  "diff": {
+   "type": "choice",
+   "choice": "B",
+   "confidence": 0.56,
+   "probabilities": {
+    "A": 0.32,
+    "B": 0.67,
+    "C": 0.01,
+    "D": 0
+   }
+  },
+  "pendencia": {
+   "type": "choice",
+   "choice": "OUTRA",
+   "confidence": 0.73,
+   "probabilities": {
+    "NENHUMA": 0.02,
+    "IMPORT_TESTE": 0.19,
+    "PGCAP_GATE": 0.01,
+    "SEGREDOS": 0,
+    "COMPOSICAO": 0,
+    "OUTRA": 0.78
+   }
+  },
+  "v8_aceito": {
+   "type": "choice",
+   "choice": "SIM",
+   "confidence": 1,
+   "probabilities": {
+    "SIM": 1,
+    "NAO": 0
+   }
+  },
+  "equivalencia": {
+   "type": "score",
+   "score": 1.86,
+   "confidence": 0.79,
+   "legend": {
+    "0": "fraca",
+    "1": "parcial",
+    "2": "completa"
+   },
+   "probabilities": {
+    "0": 0,
+    "1": 0.13,
+    "2": 0.87
+   }
+  }
+ }
+}

@@ -1,0 +1,20 @@
+INVICTUS - NOVO PACK BASELINE - CORRECAO DE FATOS DO PACKAGING DESIGN T1
+
+CONTEXTO
+JEV NEWPACK DESIGN T1 (req_01a11d3288917ba3ad718c53356754d0) escolheu P1: mesmo escopo do pack completo da OLIVER ja aceito pelo importador, com o conteudo vindo do baseline; DLLs fora; configuracao em pasta companheira; rollback nao aplicavel.
+
+ERRO DO EXECUTOR NO DOSSIE T1 (detectado ao construir o pack)
+Dois fatos sobre o pack de referencia foram descritos de forma errada:
+F1 Foi dito "58 fontes, nenhuma DLL". O correto: a referencia tem 60 entradas = Info.xml + AdditionalReferences.txt + 1 DLL (a biblioteca JSON citada no AdditionalReferences.txt, exigida pelo formato de importacao) + 57 fontes.
+F2 Foi dito "nao inclui os arquivos de autenticacao/licenca/login". O correto: a referencia INCLUI 3 fontes da camada de licenca e login do produto (logica de licenca, tela de licenca, tela de login). O que ela NAO inclui e o arquivo de autenticacao V2 e um arquivo de login antigo, que existem na maquina e ficam fora do pack.
+Os 3 fontes de licenca/login e a biblioteca JSON tem, na referencia, conteudo IDENTICO ao do baseline (fazem parte dos 52 arquivos iguais). Sao codigo-fonte, nao arquivos de chave, registro ou estado de dispositivo.
+
+O QUE FOI CONSTRUIDO (seguindo a lista real da referencia, conteudo 100 por cento do baseline)
+Zip com 60 entradas: Info.xml e AdditionalReferences.txt identicos a referencia; biblioteca JSON identica ao baseline; 57 fontes identicos ao baseline. Faltando 0, sobrando 0, alterados 0. Roundtrip 60 de 60 identicos. Arvore reconstruida (baseline + zip por cima) identica ao baseline em 474 de 474 arquivos. As outras 8 DLLs da maquina (terceiros e outros produtos) ficaram fora. Configuracao em pasta companheira com manifesto. NinjaTrader vivo nao tocado.
+
+OPCOES
+K1 MANTER como construido: mesma lista da referencia aceita (57 fontes incluindo os 3 de licenca/login + biblioteca JSON + 2 metadados). Reproduz exatamente o que o importador ja aceitou na OLIVER e o estado instalado.
+K2 RETIRAR os 3 fontes de licenca/login do zip (55 fontes), mantendo a biblioteca JSON.
+K3 RETIRAR a biblioteca JSON do zip, mantendo os 3 fontes.
+K4 RETIRAR os 3 fontes e a biblioteca JSON.
+Observacao: retirar arquivos faz o pack deixar de ser igual ao escopo ja aceito pelo importador; como os conteudos sao identicos ao instalado, importar K1 sobre o estado atual nao altera nenhum arquivo.

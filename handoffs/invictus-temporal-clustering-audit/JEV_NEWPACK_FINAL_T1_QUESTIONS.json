@@ -1,0 +1,10 @@
+{
+ "final": { "type": "choice", "instructions": "Decisao final sobre o pack COMO BASELINE do estado instalado, validado offline, com a importacao de teste e a validacao ao vivo registradas como pendencias obrigatorias antes de qualquer uso.",
+  "criteria": { "A": "aprovado como BASELINE validado offline (nao release)", "B": "falta ajuste de empacotamento especifico, indicado em 'ajuste'", "C": "rejeitado", "D": "outro" } },
+ "ajuste": { "type": "choice", "instructions": "Se nao for A, qual ajuste falta?",
+  "criteria": { "NENHUM": "nenhum", "IMPORT_TESTE_ANTES": "a importacao de teste precisa ocorrer antes de qualquer aprovacao, mesmo como baseline", "CONFIG": "pasta de configuracao ainda inadequada", "ROLLBACK": "rollback ainda inadequado", "DOCUMENTO": "documento de status insuficiente", "OUTRO": "outro" } },
+ "pode_ser_base_de_alteracoes": { "type": "choice", "instructions": "Este pack pode servir desde ja como ponto de partida (baseline) para preparar e testar offline as proximas alteracoes, mantendo o NinjaTrader vivo congelado?",
+  "criteria": { "SIM": "pode servir de ponto de partida para trabalho offline", "NAO": "nao ate a importacao de teste e a validacao ao vivo" } },
+ "pode_ser_distribuido": { "type": "choice", "instructions": "Este pack pode ser importado em conta real ou distribuido a clientes no estado atual?",
+  "criteria": { "NAO": "nao; so apos JEV DIFF T3 = A do EXIT_LAYER_FIX X2, validacao ao vivo e novo JEV FINAL", "SIM": "sim" } }
+}
