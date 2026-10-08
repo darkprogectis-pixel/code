@@ -1,0 +1,22 @@
+INVICTUS - NOVO CLIENTE ASSISMOREIRA25 - JEV PRE-ACAO (criacao de identidade no servidor de autenticacao)
+
+AUTORIZACAO
+O operador autorizou por mensagem digitada: criar a conta do novo cliente no servidor de autenticacao, 180 dias, com licenca do INVICTUS. Login pedido pelo operador: o endereco de e-mail do cliente, usado como login exato.
+
+PROCEDIMENTO DOCUMENTADO (handoff de migracao, secao de pilotos novos)
+1 Listar usuarios: o login nao pode existir.
+2 Criar usuario com senha gerada pelo servidor: 5 escopos de leitura, 1 vaga de dispositivo, validade N dias, senha gravada uma unica vez em arquivo temporario remoto de acesso restrito.
+3 Trazer o arquivo para a pasta local do administrador (so a senha, acesso so do usuario) e destruir o temporario remoto. Nunca imprimir a senha.
+4 Listar usuarios de novo: so o novo aparece; nenhum outro alterado.
+Semantica de licenca do projeto: a licenca e a validade da conta no servidor (planos de 15, 30, 180 ou 365 dias); o painel do INVICTUS consulta esse estado. Nao existe produto de licenca separado. O dispositivo e registrado no primeiro login no PC do cliente.
+
+DESVIO EM RELACAO A CONVENCAO
+A convencao de login dos pilotos e um nome interno com dominio proprio do projeto. Aqui o operador determinou usar o e-mail do cliente como login. A ferramenta recebe o login como texto; nao ha, na documentacao lida, restricao de formato alem de ser unico.
+
+PACK
+Pack completo da familia F1 ja montado e validado offline (copia byte a byte do import aprovado), sem identidade dentro. So sera copiado para a pasta local de pacotes depois de a conta existir. Entrega aos clientes continua retida ate a validacao ao vivo.
+
+OPCOES
+E1 Executar o procedimento documentado com o e-mail como login, 180 dias, 5 escopos, 1 dispositivo.
+E2 Executar, mas com login na convencao interna e o e-mail so como referencia.
+E3 Nao executar.

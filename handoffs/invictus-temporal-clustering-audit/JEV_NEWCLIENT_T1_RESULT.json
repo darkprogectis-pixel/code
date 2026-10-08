@@ -1,0 +1,25 @@
+{
+ "request_id": "req_01a11d77cd367fa188190f270a86291e",
+ "model": "jev-1.13.0",
+ "answers": {
+  "acao": {
+   "type": "choice",
+   "choice": "E1",
+   "confidence": 0.98,
+   "probabilities": {
+    "E1": 0.99,
+    "E2": 0.01,
+    "E3": 0
+   }
+  },
+  "se_existir": {
+   "type": "choice",
+   "choice": "PARAR",
+   "confidence": 1,
+   "probabilities": {
+    "PARAR": 1,
+    "RENOVAR": 0
+   }
+  }
+ }
+}
