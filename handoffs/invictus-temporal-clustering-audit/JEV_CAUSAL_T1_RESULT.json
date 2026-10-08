@@ -1,0 +1,30 @@
+{
+ "request_id": "req_01a11b689c827f79b8769f4682e9d5ba",
+ "model": "jev-1.13.0",
+ "answers": {
+  "causa": {
+   "type": "choice",
+   "choice": "A",
+   "confidence": 1,
+   "probabilities": {
+    "D": 0,
+    "A": 1,
+    "C": 0,
+    "E": 0,
+    "F": 0,
+    "B": 0
+   }
+  },
+  "prova": {
+   "type": "choice",
+   "choice": "A",
+   "confidence": 0.37,
+   "probabilities": {
+    "A": 0.53,
+    "D": 0,
+    "C": 0,
+    "B": 0.47
+   }
+  }
+ }
+}

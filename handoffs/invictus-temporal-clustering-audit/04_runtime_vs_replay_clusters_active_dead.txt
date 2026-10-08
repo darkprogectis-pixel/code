@@ -1,0 +1,62 @@
+A. RUNTIME (audit motor ticks, FLAT) x REPLAY full-session, same second. rows=runtime, cols=replay [TAPE UNDEF DIVERG FORCE OK]
+ pre-P1S (<10-02) n=19543
+   rt 1_TAPE             0    426    786   1138     48
+   rt 2_UNDEFINED        0   2740    785    993     69
+   rt 3_DIVERGENT        1    681   3022    961    118
+   rt 4_FORCE            0    753    929   5754    188
+   rt OK_4of4            0     18     39     73     21
+   both pass steps 1-3: n=6036 | force verdict agrees 95.7% | rt OK & replay FORCE: 73 | rt FORCE & replay OK: 188
+ P1S era (>=10-02) n=5850
+   rt 1_TAPE             0    146    197    340      0
+   rt 2_UNDEFINED      190   1036    100    121      5
+   rt 3_DIVERGENT      157     55   1184     54      6
+   rt 4_FORCE          298     68     53   1807     11
+   rt OK_4of4            0      2      0      7     13
+   both pass steps 1-3: n=1838 | force verdict agrees 99.0% | rt OK & replay FORCE: 7 | rt FORCE & replay OK: 11
+
+B. STEP-4 verdict on runtime ticks that reached step 4 (runtime cat FORCE or OK): agreement of two Press models
+ pre-P1S n=7775 | FULL-session Press agrees 95.6% | runtime-emulated (load-aware) Press agrees 95.6%
+    mode FULL               ticks 7437 hours 95.6 emu agrees 95.5% | runtime OK share 1.94%
+    mode PARTIAL_FROM_LOAD  ticks 338 hours 4.1 emu agrees 97.9% | runtime OK share 2.07%
+ P1S era n=2259 | FULL-session Press agrees 99.0% | runtime-emulated (load-aware) Press agrees 99.0%
+    mode FULL               ticks 1334 hours 18.4 emu agrees 98.9% | runtime OK share 1.05%
+    mode P1S_ZERO           ticks 925 hours 11.9 emu agrees 99.1% | runtime OK share 0.86%
+
+C. REAL ENTRIES classified by the accumulator origin that makes step 4 pass
+  {"UNEXPLAINED(full fails; no logged load in session)":199,"FULL_SESSION_PRESS_OK":110,"LOAD_RESET_but_emu_fails":3,"LOAD_RESET_PRESS_OK":2}
+  UNEXPLAINED(full fails; no logged load in session) n 199 | RTH 61 | median min since session start 858 | median min since last load 17433 | median cumVolES 151386
+  FULL_SESSION_PRESS_OK                            n 110 | RTH 0 | median min since session start 92 | median min since last load 15210 | median cumVolES 7125
+  LOAD_RESET_but_emu_fails                         n 3 | RTH 2 | median min since session start 1188 | median min since last load 236 | median cumVolES 1631966
+  LOAD_RESET_PRESS_OK                              n 2 | RTH 0 | median min since session start 801 | median min since last load 11 | median cumVolES 295637
+  minutes since last accumulator reset (session start or logged load) at entry: median 389 p75 895 p90 1048 | share within 120 min: 27.4% within 240: 43.9%
+  entries pre-P1S n 285 {"UNEXPLAINED(full fails; no logged load in session)":193,"FULL_SESSION_PRESS_OK":87,"LOAD_RESET_but_emu_fails":3,"LOAD_RESET_PRESS_OK":2}
+  entries P1S era n 29 {"FULL_SESSION_PRESS_OK":23,"UNEXPLAINED(full fails; no logged load in session)":6}
+  baseline: share of session time within 120 min of a reset: 10.7%
+
+D. CLUSTER WINDOWS (clusters with >=2 entries and tick data: 48). means across clusters; Press = runtime-emulated |Press|
+window        P(def)  P(align|def)  P(force|align)BASE  ..GCAP  OKshare  med|Press|ES   NQ    cumVolES | RUNTIME shares(reached step: TAPE UNDEF DIVERG FORCE OK)  rt P(force|align)
+A -30..0       76.7       67.7            13.5       22.9      7.8       0.0308   0.0253    351441 |   34.3  19.0  13.8  31.9   1.0     2.9
+B during       82.3       62.2            23.5       27.6     12.2       0.0335   0.0293    305771 |    4.8  17.3  27.9  17.0  33.0     66.0
+C +0..15       79.0       67.0            21.1       22.1     10.6       0.0241   0.0236    300654 |    2.9  17.9  21.9  38.1  19.2     33.6
+D +15..45      71.8       62.0             9.4       10.1      4.4       0.0188   0.0195    323466 |    7.9  23.5  22.1  44.5   2.0     4.2
+E +45..75      78.5       68.0             7.9        8.8      3.5       0.0175   0.0174    355146 |   12.5  19.8  21.9  43.3   2.5     5.5
+F +105..135    76.7       64.7             7.0        7.9      2.9       0.0163   0.0163    378013 |   21.7  17.7  21.7  36.2   2.7     6.9
+
+E. ACTIVE (inside clusters) vs DEAD (>=60 min from any trade), runtime ticks with tape live
+variable                         ACTIVE      DEAD     DELTA
+hours                               43.0     177.6
+P(defined) both symbols            81.9%     76.7%      5.1%
+P(aligned | defined)               64.2%     67.2%     -3.0%
+P(force pass | aligned)            66.0%      0.0%     66.0%
+strength==4 share                  52.5%     51.6%      1.0%
+median |Press| ES (rt-emulated)    0.0275    0.0087    0.0188
+median |Press| NQ (rt-emulated)    0.0239    0.0057    0.0182
+median cumVol ES (session)         60971    247036   -186065
+median min since acc. reset          363       843      -480
+share |Press|ES >= 0.03            46.6%      9.6%     37.0%
+share |Press|NQ >= 0.03            41.8%      5.8%     36.0%
+
+F. DEAD-time first-failing step (runtime, tape live): UNDEFINED 23.3% DIVERGENT 25.2% FORCE 51.6% OK(no entry: cooldown/hysteresis) 0.0%
+   replay all sessions: aligned(steps1-3 pass) share of live time 50.9% | OK BASE 3.7% | OK GCAP 5.7% => step 4 removes 92.6% of aligned time (BASE), 88.8% (GCAP)
+   replay BASE entries 182 (RTH 0) | gap median 14m p90 10.1h max 69.4h | clusters(same 43m break) 37 | gaps>4h 23 | gaps>8h 20
+   replay GCAP entries 317 (RTH 63) | gap median 10m p90 1.7h max 69.4h | clusters(same 43m break) 44 | gaps>4h 27 | gaps>8h 21

@@ -1,0 +1,18 @@
+COUNTERFACTUAL (same ticks, same ME/MVI, same motor; 18 full sessions 09-14..10-07):
+steps 1-3 only (no force step)     entries  2705 | gap(market-open) median    6m p90    20m max   2.4h | gaps>2h 1 >4h 0 >8h 0 | share in 18-20h ET 8% | RTH(10-15h) 1207
+BASE/P-RTH1 (|Press|>=0.03)        entries   182 | gap(market-open) median   15m p90   8.9h max  45.8h | gaps>2h 27 >4h 23 >8h 19 | share in 18-20h ET 55% | RTH(10-15h) 0
+P-GCAP (LimiarForca)               entries   317 | gap(market-open) median   10m p90   1.7h max  23.3h | gaps>2h 31 >4h 27 >8h 15 | share in 18-20h ET 32% | RTH(10-15h) 44
+REAL runtime entries (same span)   entries   314 | gap(market-open) median   11m p90   2.7h max  42.3h | gaps>2h 41 >4h 27 >8h 16 | share in 18-20h ET 38% | RTH(10-15h) 52
+
+DEAD TIME decomposition 09-15..10-07 (market open, >=60 min from any trade): total 256h
+  NO_ENGINE_TICK      56.1h   21.9%
+  1_TAPE              35.8h   14.0%
+  2_UNDEFINED         37.5h   14.6%
+  3_DIVERGENT         41.3h   16.1%
+  4_FORCE             85.1h   33.3%
+  OK_4of4              0.0h    0.0%
+  with engine+tape live: 164h → UNDEFINED 22.9% DIVERGENT 25.2% FORCE 51.9%
+
+API EVIDENCE — gate_check records of motor openings: n=325
+  result: {"blocked:turno":72,"pass":100,"blocked:engine_play":139,"blocked:source_readiness":2,"blocked:licenca":12}
+  readiness/api state at opening: {"readiness=? api_eco=n/a":44,"readiness=PARTIAL api_eco=false":58,"readiness=READY api_eco=true":223}

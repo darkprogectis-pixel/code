@@ -1,0 +1,18 @@
+publisher instance changes (id>0): ES 188 NQ 162 | audit publisher samples start 2026-09-15T04:39:38.467Z
+
+PRE-P1S (2026-09-15..10-01), forward-only accumulators per publisher instance entries with tick data: 241 | RTH 50
+  minutes since most recent accumulator reset (session start or publisher instance change, either symbol): median 9 p75 25 p90 78 | <=15m 63.9% <=30m 77.6% <=60m 88.0% <=120m 97.9%
+  step 4 at the entry minute: full-session Press passes 73 (30.3%) | reset-aware Press passes 175 (72.6%)
+  median accumulated volume behind Press at entry: ES 3446 NQ 3064 | median |Press| ES 0.0645 NQ 0.0514
+  RTH entries: median min since reset 11 | <=60m 82.0% | preceded by publisher change in-session (either sym): 50 / 50 | reset-aware Press passes 32
+
+P1S ERA (>=2026-10-02), Press = full session or 0 entries with tick data: 29 | RTH 0
+  minutes since most recent accumulator reset (session start): median 90 p75 226 p90 812 | <=15m 20.7% <=30m 24.1% <=60m 37.9% <=120m 55.2%
+  step 4 at the entry minute: full-session Press passes 23 (79.3%) | reset-aware Press passes 23 (79.3%)
+  median accumulated volume behind Press at entry: ES 4010 NQ 3169 | median |Press| ES 0.0893 NQ 0.0578
+
+BASELINE pre-P1S: share of market time within N min of a reset: <=15m 12.5% | <=30m 21.0% | <=60m 34.3% | <=120m 54.1%
+CLUSTER STARTS pre-P1S n=48: minutes since reset median 1 p75 7 | <=15m 40 <=30m 41 <=60m 42 >120m 1
+CLUSTER STARTS P1S era n=5: minutes since 18:00 ET session start: 147, 1, 794, 0, 1
+
+RUNTIME step-4 verdict (pre-P1S ticks reaching step 4) n=7443: full-session Press agrees 96.4% | reset-aware agrees 94.1% | runtime OK ticks 141 of which reset-aware also OK 88 (62%)
