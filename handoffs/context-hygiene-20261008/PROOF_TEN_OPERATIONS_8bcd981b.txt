@@ -1,0 +1,47 @@
+model claude-opus-5-5 ops 10 result success turns 11
+1 Read ctx_before=33322 ctx_after=42088 +8766 result_chars=15889 | {"file_path":"C:\\Users\\ADM\\Claude-JEV\\code\\handoffs\\HANDOFF_INVI | 1 # HANDOFF — INVICTUS JEV CODE · NT8 READ-ONLY INSTALLAT
+2 Read ctx_before=42088 ctx_after=47869 +5781 result_chars=10233 | {"file_path":"C:\\Users\\ADM\\Claude-JEV\\code\\context\\jev-future\\H | 1 # HANDOFF — ALFA OMEGA JEV FUTURE (23/09/2026) 2 3 Sess�
+3 Grep ctx_before=47869 ctx_after=53594 +5725 result_chars=10041 | {"pattern":"JEV","path":"handoffs","output_mode":"content"} | handoffs\alpha-video\RESULT_ALPHA_VIDEO_KNOWLEDGE_20261002.m
+4 Bash ctx_before=53594 ctx_after=undefined +NaN result_chars=4070 | {"command":"git status --short","description":"Show working tree statu |  M .claude/settings.json M CLAUDE.md M START_JEV_CLAUDE.ps
+5 Bash ctx_before=53594 ctx_after=53594 +0 result_chars=387 DENIED/ERR | {"command":"git diff HEAD~5","description":"Show diff against five com | PreToolUse:Bash hook error: TOKEN_HYGIENE: git diff se
+6 Bash ctx_before=53594 ctx_after=59090 +5496 result_chars=4596 | {"command":"git diff --stat HEAD~5","description":"Show diff summary a | warning: in the working copy of '.claude/settings.json', LF 
+7 Bash ctx_before=59090 ctx_after=61150 +2060 result_chars=2245 | {"command":"node -e \"for(let i=0;i<20000;i++)console.log('audit line  | <persisted-output> Output too large (1.5MB). Full output sav
+8 PowerShell ctx_before=61150 ctx_after=62369 +1219 result_chars=2217 | {"command":"Get-ChildItem -Recurse -File handoffs | Select-Object Full | <persisted-output> Output too large (82.7KB). Full outp
+9 Bash ctx_before=62369 ctx_after=63058 +689 result_chars=1313 | {"command":"npm run test:token-hygiene","description":"Run token hygie | > alfaomega-jev-future@1.0.0 test:token-hygiene > node --tes
+10 Read ctx_before=63058 ctx_after=65108 +2050 result_chars=3872 | {"file_path":"C:\\Users\\ADM\\Claude-JEV\\code\\package.json"} | 1 { 2 "name": "alfaomega-jev-future", 3 "version": "1.0.
+{
+ "token_hygiene": "OK",
+ "session": "8bcd981b-8fd9-44e9-82c8-a5629537b1b9",
+ "cap_chars": 16000,
+ "tool_calls": 9,
+ "raw_chars": 108896,
+ "returned_chars": 58608,
+ "capped": 2,
+ "max_returned_chars": 15283,
+ "by_tool": {
+  "Read": {
+   "calls": 3,
+   "chars": 28640,
+   "returned_chars": 28640,
+   "capped": 0
+  },
+  "Grep": {
+   "calls": 1,
+   "chars": 10001,
+   "returned_chars": 10001,
+   "capped": 0
+  },
+  "Bash": {
+   "calls": 4,
+   "chars": 40118,
+   "returned_chars": 14943,
+   "capped": 1
+  },
+  "PowerShell": {
+   "calls": 1,
+   "chars": 30137,
+   "returned_chars": 5024,
+   "capped": 1
+  }
+ }
+}

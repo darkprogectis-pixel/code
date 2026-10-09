@@ -1,0 +1,17 @@
+CONTEXTO: projeto governado Claude-JEV (Claude Code 2.1.295, Opus 5.5, perfil .claude-gomesgomestrader, Rotation Controller V3 com limiares absolutos 200k/220k/235k/240k/250k). Incidente: consumo explosivo de contexto.
+
+FORENSE FECHADA (medida): sessao cba7cf4a comecou em 0 tokens, primeiro contexto ~51.6k, cresceu dentro da propria sessao ate 233990; projecao 242693 acionou HARD_ROTATION corretamente. Sucessora 1c4f75c8 tambem comecou em 0 => nao houve heranca. Briefs de rotacao 6-9 KB. Transcript ~1.3 MB. Mods OFF. Causa dominante: prompts grandes + saidas extensas de Read/Bash/PowerShell/Grep/Write/Edit incorporadas ao contexto.
+MEDIDA NOVA: o bootstrap do CLAUDE.md manda ler 8 handoffs inteiros = 171.656 bytes (~55k tokens), o que explica o primeiro contexto ~51.6k (o maior tem 74 KB).
+Capacidades verificadas no binario: hook PreToolUse aceita updatedInput; PostToolUse aceita updatedToolOutput; variavel BASH_MAX_OUTPUT_LENGTH existe.
+
+PROPOSTA (modulo novo e separado tools/jev-token-hygiene/, NENHUMA edicao em tools/jev-rotation/**, limiares intocados):
+H1 PreToolUse Read: sem `limit` explicito e arquivo > 24 KB => updatedInput com limit=200 linhas (+aviso com tamanho total). `limit` explicito e sempre respeitado (capacidade preservada).
+H2 PreToolUse Grep: sem head_limit => head_limit 40 (content) / 80 (demais). Explicito e respeitado.
+H3 PreToolUse Bash/PowerShell: negar, com instrucao de correcao, comandos que despejam sem limite: git diff/show/log -p sem --stat/--name-only/--name-status/--shortstat/--numstat, sem pathspec `-- arquivo`, sem pipe limitador (head/tail/wc/Select-Object -First/Measure-Object) e sem redirecionamento para arquivo; cat/type/Get-Content de arquivo > 24 KB sem limitador. Escape explicito: marcador `JEV_FULL_OUTPUT` no comando (hunks completos quando necessarios).
+H4 PostToolUse Bash/PowerShell/Grep/Read/MCP: saida > 16.000 caracteres => grava a saida integral em <perfil>/jev-token-hygiene/outputs/<sessao>/<n>.txt e substitui (updatedToolOutput) por: contagem de linhas/bytes, primeiras 60 + ultimas 30 linhas, linhas com erro (max 20) e o path. Tudo abaixo do limite passa intacto.
+H5 env do projeto: BASH_MAX_OUTPUT_LENGTH=16000 (segunda barreira nativa).
+H6 ledger ndjson por sessao (ferramenta, bytes de saida, acao) + `npm run tokens:status` (resumo curto).
+H7 CLAUDE.md: bootstrap deixa de mandar ler 8 handoffs inteiros; passa a: CLAUDE.md e o estado; abrir so o handoff da tarefa atual, por secao, com limit. Nova secao curta "Token hygiene" com as regras 1-5 do operador. Regras canonicas de arquitetura NAO mudam.
+H8 hooks declarados no .claude/settings.json do projeto ao lado dos existentes (jev-finish, jev-rotation mantidos, mesma ordem); falha do hook de higiene = fail-open (nunca bloqueia a sessao nem a rotacao).
+H9 testes test/token-hygiene/*.test.mjs: H1-H4 por evento sintetico, protecao contra saida anormal (1 MB => <= 6 KB devolvidos, arquivo integral preservado), fail-open, e guarda de brief de rotacao (config carry 4 x 2500 chars => brief <= 16 KB, sem transcript). test/rotation continua verde.
+PROVA: sessao limpa real, 10 operacoes representativas, contexto medido pelo transcript apos cada uma; exigir crescimento controlado e nenhuma rotacao.

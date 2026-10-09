@@ -9,11 +9,13 @@
     ],
     "PreToolUse": [
       { "matcher": "Write|Edit|MultiEdit|NotebookEdit|Bash|PowerShell", "hooks": [ { "type": "command", "command": "node \"C:/Users/ADM/Claude-JEV/code/tools/jev-finish/hook.mjs\" # jev-finish-v1", "timeout": 15 } ] },
-      { "matcher": "*", "hooks": [ { "type": "command", "command": "node \"C:/Users/ADM/Claude-JEV/code/tools/jev-rotation/hook.mjs\" # jev-rotation-controller-v2", "timeout": 15 } ] }
+      { "matcher": "*", "hooks": [ { "type": "command", "command": "node \"C:/Users/ADM/Claude-JEV/code/tools/jev-rotation/hook.mjs\" # jev-rotation-controller-v2", "timeout": 15 } ] },
+      { "matcher": "Read|Grep|Bash|PowerShell", "hooks": [ { "type": "command", "command": "node \"C:/Users/ADM/Claude-JEV/code/tools/jev-context-hygiene/hook.mjs\" # jev-token-hygiene-v1", "timeout": 10 } ] }
     ],
     "PostToolUse": [
       { "matcher": "Write|Edit|MultiEdit|NotebookEdit", "hooks": [ { "type": "command", "command": "node \"C:/Users/ADM/Claude-JEV/code/tools/jev-finish/hook.mjs\" # jev-finish-v1", "timeout": 15 } ] },
-      { "matcher": "*", "hooks": [ { "type": "command", "command": "node \"C:/Users/ADM/Claude-JEV/code/tools/jev-rotation/hook.mjs\" # jev-rotation-controller-v2", "timeout": 15 } ] }
+      { "matcher": "*", "hooks": [ { "type": "command", "command": "node \"C:/Users/ADM/Claude-JEV/code/tools/jev-rotation/hook.mjs\" # jev-rotation-controller-v2", "timeout": 15 } ] },
+      { "matcher": "*", "hooks": [ { "type": "command", "command": "node \"C:/Users/ADM/Claude-JEV/code/tools/jev-context-hygiene/hook.mjs\" # jev-token-hygiene-v1", "timeout": 10 } ] }
     ],
     "Stop": [
       { "hooks": [ { "type": "command", "command": "node \"C:/Users/ADM/Claude-JEV/code/tools/jev-finish/hook.mjs\" # jev-finish-v1", "timeout": 15 } ] },

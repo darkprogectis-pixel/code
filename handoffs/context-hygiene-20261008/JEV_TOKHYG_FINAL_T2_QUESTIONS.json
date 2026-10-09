@@ -1,0 +1,6 @@
+{
+ "final": { "type": "choice", "instructions": "O resultado final (codigo literal, testes e prova real de 10 operacoes) cumpre o objetivo de higiene de tokens e pode ser commitado localmente?",
+  "criteria": { "A": "COMPLETE_AND_VERIFIED", "B": "OBJECTIVE_NOT_MET", "C": "TESTS_INSUFFICIENT_OR_FAILING", "D": "REGRESSION_DETECTED", "E": "SCOPE_OR_LIVE_SAFETY_VIOLATION", "F": "HANDOFF_INCOMPLETE", "G": "EVIDENCE_INSUFFICIENT", "H": "OTHER" } },
+ "crescimento": { "type": "choice", "instructions": "O crescimento medido (+31.786 tokens em 10 operacoes, maximo +8.766) e controlado?",
+  "criteria": { "SIM": "controlado", "PARCIAL": "controlado mas limites devem cair", "NAO": "nao controlado" } }
+}

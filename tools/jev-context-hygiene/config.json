@@ -1,0 +1,20 @@
+{
+  "schema": "jev-token-hygiene/v1",
+  "escape_marker": "JEV_FULL_OUTPUT",
+  "big_file_bytes": 24000,
+  "read_default_limit_lines": 200,
+  "grep_head_limit_content": 40,
+  "grep_head_limit_other": 80,
+  "output_cap_chars": 16000,
+  "rewrite_string_min_chars": 4000,
+  "summary": {
+    "head_lines": 40,
+    "tail_lines": 20,
+    "error_lines": 10,
+    "line_max_chars": 160,
+    "head_max_chars": 3000,
+    "tail_max_chars": 1500,
+    "error_max_chars": 1000
+  },
+  "rotation_carry_max_chars": 12000
+}

@@ -189,3 +189,75 @@ Conferido pelo sucessor:
 - **Eventos neste perfil:** 1 linha por PreToolUse/PostToolUse (este perfil só tem os hooks do projeto; não mede a duplicidade do canônico).
 
 **Continua pendente (sem mudança):** JEV FINAL = B — medir duplicidade no perfil canônico `.claude-darkprogectis` (sessão aberta pelo launcher lá; 1 ou 2 linhas por evento em `events.jsonl`); se 2 ⇒ SO_PROJETO com novo JEV DIFF; depois reenviar JEV FINAL. Mods seguem desligados até JEV FINAL = A. Sem push.
+
+## MIGRAÇÃO DO PERFIL CANÔNICO — 2026-10-08 (sessão 9db0d83b) — STATUS = CLAUDE_JEV_CANONICAL_PROFILE_MIGRATED
+
+Ordem do operador: a conta `darkprogectis@gmail.com` está sem tokens e NÃO será usada. **Tudo acima que cita `.claude-darkprogectis` como canônico é histórico. A pendência "medir duplicidade no perfil canônico" está ENCERRADA** (JEV 1,00): o perfil saiu de uso e o novo canônico tem fonte única de hooks.
+
+| Campo | Valor |
+|---|---|
+| OLD_CANONICAL_PROFILE | `C:\Users\ADM\.claude-darkprogectis` — **REMOVED** (não referenciado por launcher nem testes; pasta intacta, nada apagado) |
+| NEW_CANONICAL_PROFILE | `C:\Users\ADM\.claude-gomesgomestrader` |
+| ACCOUNT_ORG | gomesgomestrader@gmail.com · "gomesgomestrader@gmail.com's Organization" · Claude Pro |
+| TOKENS_AVAILABLE | **YES** — uso em cache do Claude Code (23:47Z): 5 h 55 %, 7 dias 48 %, sem bloqueio; 3 sessões responderam em Opus 5.5 durante a prova. Não é ilimitado. |
+| JEV | ativo (TypeSafe `jev-1.13.0`, `TYPESAFE_API_KEY` do ambiente) |
+| ROTATION | V3 ativo: 5 hooks vindos só do `.claude/settings.json` do projeto; `--verify` PASS; perfil com 0 hooks; 1 linha por evento |
+| LAUNCHER_UPDATED | YES — `C:\Users\ADM\Claude-JEV\code\START_JEV_CLAUDE.ps1` |
+| ROTATION_FORCE_REAL | **PASS** — `a8c9eaf4` → `cba7cf4a`, confirmado em 4,2 s |
+| SUCCESSOR_PROFILE | `C:\Users\ADM\.claude-gomesgomestrader` (= NEW_CANONICAL_PROFILE), cwd `C:\Users\ADM\Claude-JEV\code` |
+| WORK_LOST | NO — HEAD `a51d339` e hash de `git status`+`git diff` idênticos antes/depois |
+| JEV_FINAL | **A 0,97** — `req_01a11df483597353ae02d8341f143454` |
+| BLOCKER | NONE |
+
+**Auditoria dos perfis (somente leitura, sem expor credenciais)**
+
+| PROFILE | ACCOUNT_ORG | CLAUDE_WORKING | TOKENS_AVAILABLE | JEV_AVAILABLE | ROTATION_HOOKS | ROTATION_STATE |
+|---|---|---|---|---|---|---|
+| `.claude-gomesgomestrader` | gomesgomestrader · Pro | SIM (Opus 5.5, 2.1.295) | SIM (55 % / 48 %) | SIM | projeto (perfil: 0) | presente |
+| `.claude-darkprogectis` | darkprogectis · Pro | não testado (proibido abrir) | **NÃO** (7 dias = 100 %, renova 2026-10-11 09:00Z) | — | perfil (5) + projeto | 128 sessões (histórico) |
+| `.claude-darkprogectis-jev` | darkprogectis · Pro | credencial expirada 10-02 | NÃO (mesma conta) | — | perfil (5) + projeto | antigo |
+| `.claude` (padrão) | gomesgomestrader · Pro | SIM | mesma conta do novo canônico | — | outro sistema (GSD/alfaomega) | inelegível: `install-hooks.mjs` recusa a pasta padrão |
+
+**Mudanças (não commitadas)**
+1. `START_JEV_CLAUDE.ps1`: perfil fixo (atribuição única e incondicional; `CLAUDE_CONFIG_DIR` herdado só gera aviso); pasta do perfil ausente ⇒ throw; **não grava mais hooks no perfil** — só `install-hooks.mjs --verify` (hooks do projeto + autoteste), throw se falhar; confere `claude auth status --json` (logado + conta canônica) antes de abrir; `claude @args` (repasse de argumentos).
+2. `test/rotation/live-spawn.mjs`, `live-transcript.mjs`: perfil padrão = novo canônico (1 linha cada).
+3. Novo `test/rotation/launcher.test.mjs` LC1–LC5 (LC3–LC5 executam o launcher real com `claude`/`node` falsos no PATH: variável herdada ignorada; outra conta ⇒ sessão não abre; verificador falhando ⇒ sessão não abre).
+- Intocados: limiares, `hook.mjs`, `controller.mjs`, `force.mjs`, `status.mjs`, `watchdog.mjs`, `install-hooks.mjs`, `.claude/settings.json`, ajustes de qualquer perfil.
+- `npm run test:rotation` = **31/31**.
+
+**Prova real**: janela nova → launcher real com `CLAUDE_CONFIG_DIR` herdado apontando para pasta inexistente (ignorado; pasta nunca criada) → sessão `a8c9eaf4` registrada no novo canônico em 7 s (Opus 5.5, SessionStart 1 / UserPromptSubmit 1 / Stop 1) → `rotation:status` OK, `force --check` CHECK_OK → `npm run rotation:force -- --session a8c9eaf4…` ⇒ ROTATED → linhagem: REQUESTED 23:57:38.783Z · TRIGGERED FORCE · SPAWNED wt · STARTED 42.381 (mesmo perfil/cwd) · CONFIRMED 43.031 → sucessor `cba7cf4a` rodou `rotation:status` (registrado, PREDECESSOR a8c9eaf4) → antecessor ROTATED_READ_ONLY.
+
+**Decisões JEV** (dossiês em `handoffs/canonical-profile-20261008/`): DESIGN T1 `req_01a11def7c4f7081b9f3f4d63492000d` (canônico PERFIL_G 1,00; fixar sempre 1,00; SO_PROJETO_VERIFICAR 1,00; duplicidade ENCERRADA 1,00; A 0,82) · DIFF T1 `req_01a11df04fe07d8b9673a6533c418860` B 0,51 · DIFF T2 `req_01a11df0aa6e77fa9e40d5c26fa8bf3b` B 0,67 (teste do launcher / conferir conta) · DIFF T3 `req_01a11df280b67e2296e0774948f2a788` **A 0,82** (pediu provocar a falha do verificador ⇒ LC5) · FINAL T1 **A 0,97**.
+
+**Limites declarados**
+- O `rotation:force` da prova foi dado de fora da sessão alvo (`--session`, pela 9db0d83b), não digitado dentro dela. O JEV deu A, mas marcou como item residual repetir de dentro de uma sessão aberta pelo launcher (0,72). De dentro da própria sessão já foi provado neste perfil hoje (6b86565f → 9dde1e26), sessão essa não aberta pelo launcher.
+- O diff foi aplicado na cópia de trabalho antes do DIFF = A para poder medir (JEV: aceitável 0,91).
+- **Mods: continuam DESLIGADOS** — JEV respondeu NÃO (0,80) à liberação automática; retomada só por ordem do operador.
+- A conta canônica está escrita no launcher (arquivo local; sem push). Nada foi commitado nesta sessão.
+- Janelas deixadas abertas pela prova: `a8c9eaf4` (somente leitura) e `cba7cf4a` (sucessora de teste, ociosa) — podem ser fechadas.
+
+**EXACT_NEXT_STEP**: (1) operador decide commit local destes arquivos; (2) abrir o trabalho sempre por `START_JEV_CLAUDE.ps1`; (3) opcional: numa sessão aberta pelo launcher, `npm run rotation:force` digitado de dentro como último ato (fecha o item residual do JEV); (4) Mods só depois, por ordem do operador.
+
+---
+
+## TOKEN HYGIENE V1 — 2026-10-08 (consumo explosivo de contexto)
+
+**STATUS = IMPLEMENTADO · TESTADO · PROVA REAL PASS · JEV FINAL = A 0,81.** Rotation Controller V3 intocado (`tools/jev-rotation/**` zero linhas; limiares 200k/220k/235k/240k/250k idênticos, guardados pelo teste TH10). `rotation:force` não executado. Mods OFF.
+
+- **Causa raiz (forense fechada):** saídas extensas de Read/Bash/PowerShell/Grep entrando integralmente no contexto dentro da própria sessão (`cba7cf4a`: 0 → 233990; sem herança do predecessor; briefs 6–9 KB).
+- Nome de diretório `context-hygiene` (o `.gitignore` do repositório ignora `*token*`; a regra foi respeitada, sem `git add -f`).
+- **Correção:** módulo separado `tools/jev-context-hygiene/` (`hook.mjs`, `config.json`, `status.mjs`), declarado em `.claude/settings.json` (PreToolUse `Read|Grep|Bash|PowerShell`, PostToolUse `*`), depois dos hooks existentes. FAIL-OPEN.
+  - Read sem `limit` em arquivo > 24.000 bytes ⇒ 200 linhas (limit explícito é respeitado; sem auto-aprovação).
+  - Grep sem `head_limit` ⇒ 40 (content) / 80.
+  - Bash/PowerShell: negados `git diff|show` sem `--stat`/`--name-only`/pathspec/limitador, `git log` sem `-n`, e `cat`/`Get-Content` de arquivo > 24.000 bytes sem limitador. Escape: marcador `JEV_FULL_OUTPUT` no comando.
+  - Saída > 16.000 caracteres (Bash/PowerShell/Grep/Read/MCP) ⇒ integral em `<perfil>/jev-token-hygiene/outputs/<sessão>/`, resumo ≤ ~6 KB + path na conversa.
+  - Ledger por sessão: `npm run tokens:status [prefixo-da-sessão]`.
+- **Testes:** `npm run test:token-hygiene` 10/10 · `npm run test:rotation` 36/36.
+- **Prova real** (sessão limpa `8bcd981b`, perfil canônico, Opus 5.5, 10 operações; série de contexto em tokens): 33322 → 42088 → 47869 → 53594 → 59090 (ops 4–6 no mesmo turno; `git diff HEAD~5` negado) → 61150 → 62369 → 63058 → 65108. Total +31.786, máximo +8.766 por operação, nível OK, nenhuma rotação. Reprova `db1587aa` depois de retirar a auto-aprovação: mesmos números.
+- **JEV:** DESIGN `req_01a11e1b24cb71f3af4e36e78ae18d50` A 0,64 · DIFF `req_01a11e20327b798b9724b9dc522f584e` A 0,55 · FINAL T1 `req_01a11e21991977ba8814527244736512` A 0,38 (corrigido) · FINAL T2 `req_01a11e229d377ee9a8f18e6d55904c1d` **A 0,81**. Artefatos: `handoffs/context-hygiene-20261008/`.
+- **Não feito / em aberto:**
+  - bootstrap do `CLAUDE.md` não alterado (ajuste do JEV DESIGN). A lista de 8 handoffs soma 171,6 KB; com o hook, os 3 arquivos > 24 KB devolvem 200 linhas por Read sem limit.
+  - prompts grandes do operador não são tratados por este módulo.
+  - 3 de 140 briefs históricos de rotação passam de 24 KB (máx. 28,7 KB, prompt carregado na íntegra); Rotation V3 não foi alterado.
+  - a ordem pedida era JEV DIFF antes de editar; os arquivos foram escritos antes da resposta do DIFF (resultado A).
+- **Próximo passo exato:** usar normalmente; depois de uma sessão longa real, conferir `npm run tokens:status` e `npm run rotation:status`. Ajuste de limites só em `tools/jev-context-hygiene/config.json`.

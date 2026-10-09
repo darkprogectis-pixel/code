@@ -1,0 +1,10 @@
+{
+ "design": { "type": "choice", "instructions": "A proposta H1-H9 e a correcao minima adequada para a higiene de tokens, sem reduzir capacidade e sem alterar o Rotation Controller V3?",
+  "criteria": { "A": "adequada; implementar", "B": "adequada com o ajuste indicado em ajuste", "C": "causa raiz nao coberta", "D": "risco de regressao ou violacao de escopo" } },
+ "ajuste": { "type": "choice", "instructions": "Qual o ajuste MAIS importante antes de implementar?",
+  "criteria": { "NENHUM": "nenhum", "H3_SO_AVISAR": "H3 deve avisar em vez de negar", "H1_NEGAR": "H1 deve negar em vez de reescrever a entrada", "H7_NAO_TOCAR_CLAUDE_MD": "nao alterar o bootstrap do CLAUDE.md", "LIMITES_MAIORES": "limites 24 KB / 16.000 caracteres pequenos demais", "LIMITES_MENORES": "limites grandes demais", "OUTRO": "outro" } },
+ "bootstrap": { "type": "choice", "instructions": "O bootstrap de 171 KB (~55k tokens) deve ser reduzido como em H7?",
+  "criteria": { "SIM": "sim, leitura sob demanda por secao", "PARCIAL": "manter leitura obrigatoria apenas do handoff atual com limit", "NAO": "manter leitura integral" } },
+ "fail_mode": { "type": "choice", "instructions": "Modo de falha do hook de higiene.",
+  "criteria": { "FAIL_OPEN": "nunca bloquear a sessao", "FAIL_CLOSED": "bloquear a ferramenta" } }
+}

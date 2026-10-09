@@ -9,7 +9,7 @@
   "scripts": {
     "jev": "node src/jev/cli.mjs",
     "jev:example": "node src/jev/cli.mjs --input fixtures/jev/C_valid_multi_source.json --output-only",
-    "test": "node --test \"test/jev/*.test.mjs\" \"test/ijc/*.test.mjs\" \"test/rotation/*.test.mjs\" \"test/jev-finish/*.test.mjs\" \"test/alpha/*.test.mjs\" \"test/jarvis/*.test.mjs\" \"test/jev-obs/*.test.mjs\" \"test/alpha-video/*.test.mjs\"",
+    "test": "node --test \"test/jev/*.test.mjs\" \"test/ijc/*.test.mjs\" \"test/rotation/*.test.mjs\" \"test/jev-finish/*.test.mjs\" \"test/alpha/*.test.mjs\" \"test/jarvis/*.test.mjs\" \"test/jev-obs/*.test.mjs\" \"test/alpha-video/*.test.mjs\" \"test/context-hygiene/*.test.mjs\"",
     "smoke": "node test/jev/smoke.mjs",
     "build:prereg": "node context/jev-future/scripts/build-jev-preregistration-design-v1.js",
     "live": "node src/jev/cli.mjs --live",
@@ -53,6 +53,8 @@
     "sg-course-build": "node tools/alpha-video/spotgamma/build.mjs",
     "sg-course-ask": "node tools/alpha-video/spotgamma/ask.mjs",
     "test:alpha-video": "node --test \"test/alpha-video/*.test.mjs\"",
+    "test:token-hygiene": "node --test \"test/context-hygiene/*.test.mjs\"",
+    "tokens:status": "node tools/jev-context-hygiene/status.mjs",
     "test:mods": "node --test \"test/mods/*.test.mjs\""
   },
   "dependencies": {

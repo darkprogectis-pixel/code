@@ -1,0 +1,33 @@
+JEV DIFF — TOKEN HYGIENE V1 (Claude-JEV). Base: JEV DESIGN T1 req_01a11e1b24cb71f3af4e36e78ae18d50 = A 0,64 (ajuste mais votado: NAO tocar o bootstrap do CLAUDE.md; fail_mode FAIL_OPEN 1,00).
+AJUSTES ADOTADOS DO DESIGN: H7 retirado (CLAUDE.md NAO foi alterado por este diff). H5 retirado (BASH_MAX_OUTPUT_LENGTH nao definido: truncaria antes do hook e impediria gravar a saida integral em arquivo).
+NAO ALTERADO: tools/jev-rotation/** (zero linhas), tools/jev-finish/**, START_JEV_CLAUDE.ps1, limiares 200k/220k/235k/240k/250k, perfil, conta, modelo, Mods (OFF).
+
+ARQUIVOS NOVOS
+- tools/jev-token-hygiene/hook.mjs (modulo separado, FAIL-OPEN: qualquer excecao => exit 0 sem saida)
+  PreToolUse Read: sem limit/pages e arquivo > 24.000 bytes (nao imagem/pdf/ipynb) => permissionDecision allow + updatedInput {...input, limit:200} + additionalContext com o tamanho. limit explicito => hook nao age.
+  PreToolUse Grep: sem head_limit => updatedInput head_limit 40 (content) / 80 (demais). head_limit explicito (inclusive 0) => nao age.
+  PreToolUse Bash/PowerShell: deny com instrucao quando ha `git diff|show` sem --stat/--name-only/--name-status/--shortstat/--numstat/--no-patch/-s, sem pathspec `-- arquivo`, sem limitador (| head/tail/wc/Select-Object -First/Measure-Object/Out-File, redirecionamento > arquivo); `git log` sem -n/-N/--max-count; cat/type/gc/Get-Content de arquivo > 24.000 bytes sem limitador. Literais entre aspas e heredocs sao ignorados (mensagem de commit citando "git diff" passa). Escape explicito: marcador JEV_FULL_OUTPUT no comando.
+  PostToolUse (matcher *): mede a saida de toda ferramenta e grava ledger ndjson por sessao. Para Bash/PowerShell/Grep/Read(texto)/mcp__*, saida > 16.000 caracteres => cada string >= 4.000 caracteres e gravada integralmente em <perfil>/jev-token-hygiene/outputs/<sessao>/ e trocada por resumo <= ~6 KB (contagem, linhas de erro, 40 primeiras, 20 ultimas, FULL_OUTPUT_PATH) via updatedToolOutput, PRESERVANDO o formato do objeto de saida da ferramenta (so as strings grandes mudam). Write/Edit e leitura de imagem nunca sao reescritos. Se nao conseguir gravar o arquivo => saida original mantida.
+- tools/jev-token-hygiene/config.json (limites acima) · tools/jev-token-hygiene/status.mjs (resumo curto do ledger; npm run tokens:status)
+- test/token-hygiene/token-hygiene.test.mjs: TH01 Read · TH02 Grep · TH03 git (9 negados, 18 permitidos) · TH04 despejo de arquivo grande · TH05 saida de 1 MB => <= 6.000 caracteres, arquivo integral identico, formato preservado, ledger CAPPED · TH06 abaixo do limite intacto; Write e imagem nunca reescritos · TH07 resumo limitado em casos extremos · TH08 processo real do hook fail-open (entrada vazia, JSON invalido, evento desconhecido, diretorio nao gravavel) · TH09 settings do projeto declaram o hook e mantem rotacao e jev-finish em todos os eventos; higiene ausente de SessionStart/UserPromptSubmit/Stop · TH10 limiares de rotacao identicos; orcamento de texto carregado no brief 4 x 2500 <= 12.000; brief carrega o transcript apenas como path.
+ARQUIVOS ALTERADOS
+- .claude/settings.json: +1 entrada PreToolUse (matcher Read|Grep|Bash|PowerShell) e +1 PostToolUse (matcher *), ACRESCENTADAS DEPOIS das entradas existentes; nenhuma entrada existente alterada.
+- package.json: scripts test:token-hygiene e tokens:status; suite incluida em npm test.
+RESULTADOS MEDIDOS
+- test:token-hygiene 10/10 PASS · test:rotation 36/36 PASS (depois da mudanca no settings.json).
+RISCOS CONHECIDOS
+- R1 permissionDecision allow em Read/Grep reescritos: somente ferramentas de leitura; regras deny e o hook de rotacao continuam valendo (deny prevalece).
+- R2 falso positivo em H3: resolvido pelo marcador de escape ou pela forma limitada indicada na mensagem.
+- R3 updatedToolOutput com formato divergente => Claude Code usa a saida original (comportamento nativo verificado no binario 2.1.295): degrada para o estado anterior, nunca perde saida.
+- R4 briefs historicos de rotacao: 3 de 140 passam de 24 KB (maximo 28,7 KB, por prompt do operador carregado na integra); nao alterado (Rotation V3 intocado).
+PROXIMO: prova real em sessao limpa com 10 operacoes representativas, contexto medido apos cada uma; depois JEV FINAL.
+
+git diff --stat (arquivos rastreados deste diff):
+ .claude/settings.json | 6 ++++--
+ package.json          | 4 +++-
+ 2 files changed, 7 insertions(+), 3 deletions(-)
+   20 tools/jev-token-hygiene/config.json
+  160 tools/jev-token-hygiene/hook.mjs
+   35 tools/jev-token-hygiene/status.mjs
+  140 test/token-hygiene/token-hygiene.test.mjs
+  355 total

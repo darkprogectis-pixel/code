@@ -1,0 +1,6 @@
+{
+ "diff": { "type": "choice", "instructions": "O diff descrito e seguro para manter e seguir para a prova real em sessao limpa?",
+  "criteria": { "A": "SAFE_TO_APPLY", "B": "WRONG_OR_UNPROVEN_ROOT_CAUSE", "C": "ARCHITECTURE_OR_RULE_CHANGE_NOT_AUTHORIZED", "D": "REGRESSION_RISK", "E": "SCOPE_OR_LIVE_SAFETY_VIOLATION", "F": "INCOMPLETE_PROPOSAL", "G": "TEST_COVERAGE_INCOMPLETE", "H": "OTHER" } },
+ "pendencia": { "type": "choice", "instructions": "Item mais importante que falta antes da prova real.",
+  "criteria": { "NENHUMA": "nenhum", "H3_SO_AVISAR": "trocar a negacao de H3 por aviso", "ALLOW_EM_READ_GREP": "nao usar permissionDecision allow em Read/Grep", "LIMITES": "rever limites numericos", "MOSTRAR_O_CODIGO": "apresentar o texto literal do diff", "OUTRA": "outro" } }
+}

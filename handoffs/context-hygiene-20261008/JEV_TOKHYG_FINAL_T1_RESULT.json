@@ -1,0 +1,101 @@
+{
+ "answers": {
+  "final": {
+   "type": "choice",
+   "choice": "A",
+   "confidence": 0.29,
+   "probabilities": {
+    "A": 0.38,
+    "B": 0.03,
+    "C": 0.14,
+    "D": 0.07,
+    "E": 0.27,
+    "F": 0.05,
+    "G": 0.04,
+    "H": 0.02
+   }
+  },
+  "crescimento": {
+   "type": "choice",
+   "choice": "SIM",
+   "confidence": 0.98,
+   "probabilities": {
+    "SIM": 0.99,
+    "PARCIAL": 0.01,
+    "NAO": 0
+   }
+  }
+ },
+ "response": {
+  "model": "jev-1.13.0",
+  "answers": {
+   "final": {
+    "type": "choice",
+    "choice": "A",
+    "confidence": 0.29,
+    "probabilities": {
+     "A": 0.38,
+     "B": 0.03,
+     "C": 0.14,
+     "D": 0.07,
+     "E": 0.27,
+     "F": 0.05,
+     "G": 0.04,
+     "H": 0.02
+    }
+   },
+   "crescimento": {
+    "type": "choice",
+    "choice": "SIM",
+    "confidence": 0.98,
+    "probabilities": {
+     "SIM": 0.99,
+     "PARCIAL": 0.01,
+     "NAO": 0
+    }
+   }
+  },
+  "usage": {
+   "input_tokens": 4785,
+   "output_tokens": 113
+  }
+ },
+ "meta": {
+  "ts": "2026-10-09T00:48:00.206Z",
+  "session_id": "d5dae7bf-2f72-4fcd-9556-834c128aa8dc",
+  "purpose": "JEV_TOKHYG_FINAL_T1",
+  "http": 200,
+  "model_requested": "jev-latest",
+  "model_source": "cache",
+  "model": "jev-1.13.0",
+  "input_tokens": 4785,
+  "output_tokens": 113,
+  "latency_ms": 530,
+  "request_id": "req_01a11e21991977ba8814527244736512",
+  "questions": 2,
+  "question_types": [
+   "choice",
+   "choice"
+  ],
+  "state_form": "object",
+  "payload_chars": 14056,
+  "features": [
+   "A:choice:choice",
+   "A:choice:confidence",
+   "A:choice:probabilities",
+   "A:choice:type",
+   "AUTH:bearer",
+   "ENDPOINT:POST /v1/systemone",
+   "Q:choice",
+   "Q:choice:criteria.value:string",
+   "Q:choice:instructions:string",
+   "REQ:model",
+   "REQ:questions:multi",
+   "REQ:state:object",
+   "RESP:answers.by_name",
+   "RESP:model",
+   "RESP:usage.input_tokens",
+   "RESP:usage.output_tokens"
+  ]
+ }
+}
