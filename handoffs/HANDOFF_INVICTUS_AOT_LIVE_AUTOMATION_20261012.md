@@ -1226,3 +1226,17 @@ JEV documentary A confidence 0.9 probabilities {"A":0.91,"B":0.02,"C":0,"D":0,"E
     - `ledger-abertos.json` mantém 14 intents de 07–12/10 em `Sim牛市 熊市002` com 0 fills (higiene de ledger);
     - `events-2026-10.jsonl` tem 2 OPEN de 05/10 sem CLOSE (`abd95645`, `29613316`).
   - **Causas e correção mínima:** iguais ao diagnóstico anterior (`#trigNote` L472–473 só testa strength; banner `v2.confluence` L799/index L933 + `level` CONFIRMADA de `aot-bff.js` L1317). Correção mínima de apresentação proposta lá; não aplicada.
+- **CORREÇÃO DAS 2 MENSAGENS ENGANOSAS (auto.html #trigNote + selo v2.confluence auto/index) — EM ANDAMENTO (14/10/2026 ~18:45Z, sessão `afa26a77`). Só staging; produção NÃO alterada:**
+  - Staging `invictus-aot-live-20261012/auto-misleading-text/` (base = produção atual index `4d5cb196…`/auto `a2c342db…`; candidato index `e3f1e038…`/auto `c26286a9…`; `auto-misleading-text.diff`; `apply-misleading-text.sh`; `tests/`).
+  - **D1** `auto.html` L472–473: "abrindo posição" removido. 4/4 com LONG/SHORT mostra "Confluência máxima 4/4 · DIR — condição de entrada atendida; abertura a cargo do motor (não é confirmação de ordem)". 4/4 com NEUTRO mostra "Radar 4/4 sem direção liberada pelo gate — sem abertura". Os demais estados ficam iguais.
+  - **D2** `auto.html` L799 e `index.html` L933: com `agree` e `gate.state≠'OPEN'` (inclusive gate ausente/OFFLINE), o selo mostra "◆ Confluência de tape (informativa) ES×NQ · DIR — Gate fechado, sem autorização de operação", sem `level` e sem cor de sinal. Gate OPEN fica idêntico.
+  - Testes: `misleading-text-tests.mjs` 47/47; `apply-script-tests.mjs` 7/7 (P1 confere as preimagens em produção, só checagem).
+  - Próximo passo: loop jev-finish + JEV DIFF/modify_file → recheck → JEV FINAL → deploy só com aprovação manual do operador (o auto mode nega deploy).
+  - **Concluído em staging (loop `jf-20261014184645-c631c8`):**
+    - JEV DIFF **A 0,86** `req_01a13bbd0bbb78ee90349296722ab34f`;
+    - modify_file `jd_mv8gov2i1ebbec` (`req_01a13bbd5a317d57bae4365509128964`), gate_open=true, minimal_edit 1,0;
+    - JEV FINAL **A 0,97** `req_01a13bbdc8c67946b22accd3c1818234`;
+    - recheck do CLI PASS (47/47 + 7/7).
+  - **Deploy (aprovação manual do operador, fora do auto mode):** `bash handoffs/invictus-aot-live-20261012/auto-misleading-text/apply-misleading-text.sh --apply`. Backup em `_backups/auto-misleading-text-20261014`, sem reinício. Rollback: `--rollback`.
+  - **Posição:** o registro de 18:34Z (LONG; fills ES1+NQ1 na conta `Sim阿爾法·歐米伽01` e MES3+MNQ2 na `TAKEPROFIT619605210`) não foi reconsultado. Nenhuma ordem foi enviada, cancelada ou modificada; executor e BFF não foram reiniciados.
+  - Loop `jf-20261014184645-c631c8` **COMPLETE** (aceito pelo CLI). Próximo passo = aprovação manual do deploy + validação Chrome.
