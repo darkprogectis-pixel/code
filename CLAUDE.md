@@ -22,7 +22,7 @@ Do not reconstruct the project from old conversations or unrelated workspaces.
 
 ## Session rotation — JEV Rotation Controller V3 (mandatory, automatic)
 
-Always start via `START_JEV_CLAUDE.ps1` (installs + verifies hooks in the isolated CLAUDE_CONFIG_DIR; no verified enforcement ⇒ no session).
+Always start via `START_JEV_CLAUDE.ps1` (fixed canonical profile `%USERPROFILE%\.claude-gomesgomestrader`, inherited CLAUDE_CONFIG_DIR ignored; hooks are declared in the project `.claude/settings.json` and verified at start; no verified enforcement or wrong account ⇒ no session).
 Absolute thresholds (API usage from the session transcript + pending prompt/tool-result projection): 200k PREPARE (incremental handoff) · 220k WARNING · 235k SOFT_STOP (rotate at next prompt/turn end) · 240k HARD_ROTATION (rotate now) · 250k never.
 At rotation the HOOK opens the successor session itself (new window, same config/cwd, lineage + brief, exactly once, watchdog-confirmed); the old session becomes ROTATED_READ_ONLY. No /exit, no operator action. Never /clear.
 Details: `handoffs/HANDOFF_JEV_ROTATION_V3_20260927.md` · `npm run test:rotation` · `npm run test:rotation:live` · `npm run rotation:status`.
