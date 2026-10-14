@@ -1114,3 +1114,9 @@ JEV documentary A confidence 0.9 probabilities {"A":0.91,"B":0.02,"C":0,"D":0,"E
   - Patch `3ec88e91`, motor `42d0c8fd` e produção `65a76459` intocados. `AOT_GCSI_SIM=off`. `--apply` **não** foi executado.
   - **Próxima instalação (OPERADOR, com nova autorização, fora do Auto Mode, de preferência com sim ES/NQ FLAT):** `bash handoffs/invictus-aot-live-20261012/gcsi-eqv/snapshot-fix/apply-bff-snapshot.sh --apply`. O backup `_backups/gcsi-snapshot-20261014/aot-bff.js` (`65a76459`) já existe e é reutilizado.
   - **Rollback:** o mesmo script com `--rollback`.
+- **ESTADO DE ROTAÇÃO (sessão `b17683cf`, WARNING 220k, 14/10/2026 ~17:40Z):** todas as ordens desta sessão foram entregues e commitadas.
+  - Commits: `dae9634` (recuperação pós-reboot), `74581e1` (snapshot + homolog :3611), `bcf76a0` (script de deploy), `e255e27` (deploy revertido por falso negativo), `73623c0` (verify corrigido). Sem push.
+  - Produção: `aot-bff.js` `65a76459`, motor `42d0c8fd`, `AOT_GCSI_SIM=off`, `:3600` saudável, `:3611` parado.
+  - Nenhuma alteração pendente desta frente. O que aparece em `git status` (handoffs e testes de rotação/jarvis modificados, arquivos `??`) é anterior e alheio a esta sessão, e não foi tocado.
+  - Loops `/jev-finish` `jf-20261014165151-5e6372` e `jf-20261014173039-15a88d`: COMPLETE.
+  - **Próximo passo exato:** aguardar ordem e autorização do operador para `bash handoffs/invictus-aot-live-20261012/gcsi-eqv/snapshot-fix/apply-bff-snapshot.sh --apply`, fora do Auto Mode e com sim ES/NQ FLAT. O script já tem o verify corrigido (SHA `f887c912…`). Esperado: `APLICADO: aot-bff.js=3ec88e91`. Rollback: o mesmo script com `--rollback`. Não iniciar sem ordem.
