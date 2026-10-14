@@ -1,0 +1,124 @@
+--- base/aot-sim.js	2026-10-14 17:19:11.121351800 -0300
++++ candidate/aot-sim.js	2026-10-14 17:20:55.506134300 -0300
+@@ -33,9 +33,18 @@
+ const DEFAULT_PARAMS = {
+   contractsEs: 1, contractsNq: 1,
+   multEs: 50, multNq: 20,               // $ por ponto (ES E-mini S&P / NQ E-mini Nasdaq)
+-  hardStopUsd: 1000,                    // STOP FIXO de proteção por ativo (US$) — rede de segurança
++  hardStopUsd: 500,                     // STOP FIXO de proteção por ativo (US$) — rede de segurança
+                                         //   por baixo. NÃO substitui trailing/anchor-neutro; é limite
+-                                        //   de perda máxima. (= 20pt ES / 50pt NQ)
++                                        //   de perda máxima. (= 10pt ES / 25pt NQ)
++                                        //   (2026-10-14 R9: 1000 -> 500 por ativo; só reduz risco — R10)
++  basketStopUsd: 1000,                  // (2026-10-14 R9) perda máxima da CESTA (ES+NQ, US$). 0/null = desligado.
++  neutroPositiveProtect: true,          // (2026-10-14 R7/R8) NEUTRO com cesta > 0 => PROTECTED (piso da cesta em 0)
++                                        //   em vez de fechar; cesta <= 0 ou desconhecida => fecha (R8). false = legado.
++  pctRules: true,                       // (2026-10-14 R1–R5) filtro de entrada por bull_pct/bear_pct (relay :3457
++                                        //   signals.ES/NQ), ADICIONAL ao anchor 4/4 — nunca abre mais do que o legado.
++  pctStrongMin: 70,                     // R1/R2: os dois ativos >= 70 na direção => entra sem exigir HIRO
++  pctMin: 50,                           // R4/R5: os dois ativos >= 50 na direção => RTH exige HIRO CONFIRMA nos dois
++  pctStaleSec: 90,                      // idade máx. do sinal (= ROBO_CFG.STALE_MS / AlfaOmegaRobo.cs:310)
+   beAtProfitUsd: 500,                   // lucro (US$) p/ mover o stop até breakeven  (= 10pt ES)
+   stepProfitUsd: 250,                   // a cada +US$ deste passo de lucro...           (= 5pt ES)
+   stepStopUsd: 250,                     // ...o stop sobe US$ deste tanto (em pontos/mult)
+@@ -218,7 +227,7 @@
+       priceSource: st.openMeta ? st.openMeta.priceSource : null,
+       replay: st.openMeta ? !!st.openMeta.replay : false,
+       sessionDate: etDateOf(nowIso),
+-      params: { beAtProfitUsd: P.beAtProfitUsd, stepProfitUsd: P.stepProfitUsd, stepStopUsd: P.stepStopUsd, hardStopUsd: P.hardStopUsd },
++      params: { beAtProfitUsd: P.beAtProfitUsd, stepProfitUsd: P.stepProfitUsd, stepStopUsd: P.stepStopUsd, hardStopUsd: P.hardStopUsd, basketStopUsd: P.basketStopUsd },
+       simulated: true,
+       trade_id: tr.trade_id || null, event_id_open: tr.event_id_open || null, seq_open: tr.seq_open == null ? null : tr.seq_open,
+       event_id_close: evC ? evC.event_id : null, seq_close: null,
+@@ -228,6 +237,7 @@
+     st.history.unshift(Object.assign({}, rec));   // cache p/ o /state (últimos N)
+     if (st.history.length > 50) st.history.length = 50;
+     st.side = 'FLAT'; st.legs = { es: null, nq: null }; st.openedAt = null; st.closedAt = nowIso; st.openAnchor = null; st.openMeta = null; st.trade = null;
++    st.protected = false;
+ 
+     // REENTRADA IMEDIATA — só quando a saída foi por TRAILING STOP e a força AINDA é 4/4:
+     // NÃO ergue a barreira (cooldown/histerese), então a entrada reabre já neste mesmo tick.
+@@ -243,8 +253,32 @@
+     if (evC) commitEEmitir();            // transição FLAT + pendente no disco ANTES do append do CLOSE
+   }
+ 
++  // (2026-10-14 R1–R5) Filtro de entrada por bull_pct/bear_pct — fail-closed. Devolve null (ok) ou o motivo do bloqueio.
++  //  pct  = { ts, es: { bull_pct, bear_pct, direction }, nq: {...} }  (relay :3457 /v1/latest -> signals; escala 0–100)
++  //  hiro = { es: 'CONFIRMA'|'NEUTRO'|'DIVERGE'|'N/A', nq: ... }      (v2.<sym>.c2.confirm)
++  //  rth  = true|false; ausente => tratado como RTH (exige HIRO — o caminho mais restritivo)
++  function pctEntryBlock(side, pct, hiro, rth, now) {
++    if (!P.pctRules) return null;
++    if (!pct || typeof pct.ts !== 'number') return 'pct_ausente';
++    const ageSec = (Date.parse(now) - pct.ts) / 1000;
++    if (!(ageSec >= 0) || ageSec > P.pctStaleSec) return 'pct_stale';
++    const key = side === 'LONG' ? 'bull_pct' : 'bear_pct';
++    const v = {};
++    for (const a of ['es', 'nq']) {
++      const s = pct[a];
++      if (!s || typeof s[key] !== 'number' || !isFinite(s[key]) || s[key] < 0 || s[key] > 100) return 'pct_invalido_' + a;
++      if (s.direction !== side) return (s.direction === 'NEUTRO' ? 'pct_neutro_' : 'pct_divergente_') + a;   // R3 + item 9
++      v[a] = s[key];
++    }
++    if (v.es >= P.pctStrongMin && v.nq >= P.pctStrongMin) return null;                                    // R1/R2
++    if (v.es < P.pctMin || v.nq < P.pctMin) return 'pct_abaixo_min';
++    if (rth === false) return null;                                                                       // R5
++    const ok = (x) => x === 'CONFIRMA';
++    return (hiro && ok(hiro.es) && ok(hiro.nq)) ? null : 'pct_rth_sem_hiro';                              // R4
++  }
++
+   // 1 passo do motor (chamado a cada poll do BFF).
+-  function tick({ anchor, esSpot, nqSpot, nowIso, priceSource, replay }) {
++  function tick({ anchor, esSpot, nqSpot, nowIso, priceSource, replay, pct, hiro, rth }) {
+     flushPending();   // B3: nenhuma decisão nova por cima de evento ainda não emitido (falha => o tick lança)
+     esSpot = pxOrNull(esSpot); nqSpot = pxOrNull(nqSpot);   // (2026-09-16) preco invalido = ausente (nunca 0)
+     const dir = anchor && anchor.dir ? anchor.dir : 'NEUTRO';
+@@ -289,14 +323,27 @@
+         && (why.indexOf('forca fraca') === 0
+          || why.indexOf('sem tape') === 0
+          || why.indexOf('indefinid') >= 0);
+-      if (dir === 'NEUTRO' && !neutroTransitorio) {
+-        closePosition('anchor_neutro', esSpot, nqSpot, now, strength); save();
+-      } else if (esPnl <= -P.hardStopUsd || nqPnl <= -P.hardStopUsd) {
++      // (2026-10-14 R7–R10) precedência: limites protetivos (ativo > cesta) > NEUTRO com cesta <= 0 (R8) >
++      // piso do PROTECTED > trailing > NEUTRO com cesta > 0 (R7: vira PROTECTED, não fecha). 1 fechamento por tick;
++      // depois do close side=FLAT, então ticks repetidos não geram 2º CLOSE. Cesta medida no spot atual, nunca
++      // presumida em zero; perna sem preço => cesta desconhecida => trata como não positiva (fecha, fail-safe).
++      const neutroQuebra = dir === 'NEUTRO' && !neutroTransitorio;
++      const basketKnown = esSpot != null && nqSpot != null;
++      const basketPnl = basketKnown ? r2(esPnl + nqPnl) : null;
++      const protectOn = !!P.neutroPositiveProtect;
++      if (esPnl <= -P.hardStopUsd || nqPnl <= -P.hardStopUsd) {
+         closePosition(esPnl <= -P.hardStopUsd ? 'hard_stop_es' : 'hard_stop_nq', esSpot, nqSpot, now, strength); save();
++      } else if (P.basketStopUsd && basketPnl != null && basketPnl <= -P.basketStopUsd) {
++        closePosition('basket_stop', esSpot, nqSpot, now, strength); save();
++      } else if (neutroQuebra && !st.protected && (!protectOn || basketPnl == null || basketPnl <= 0)) {
++        closePosition(protectOn ? 'anchor_neutro_negativo' : 'anchor_neutro', esSpot, nqSpot, now, strength); save();
++      } else if (st.protected && (basketPnl == null ? neutroQuebra : basketPnl <= 0)) {
++        closePosition('protected_floor', esSpot, nqSpot, now, strength); save();
+       } else {
+         const esHit = stopHit(st.legs.es, st.side, esSpot);
+         const nqHit = stopHit(st.legs.nq, st.side, nqSpot);
+         if (esHit || nqHit) { closePosition(esHit ? 'trailing_stop_es' : 'trailing_stop_nq', esSpot, nqSpot, now, strength); save(); }
++        else if (neutroQuebra && !st.protected) { st.protected = true; st.protectedAt = now; save(); }   // R7 (monotônico)
+       }
+     }
+ 
+@@ -307,7 +354,9 @@
+     if (st.side === 'FLAT' && !execBloqueiaEntrada()) {
+       const cooldownOk = !st.cooldownUntil || Date.parse(now) >= Date.parse(st.cooldownUntil);
+       const freshOk = !P.requireFreshFourOfFour || st.armed;
+-      if (strength === 4 && (dir === 'LONG' || dir === 'SHORT') && cooldownOk && freshOk && esSpot != null && nqSpot != null) {
++      const gateOk = strength === 4 && (dir === 'LONG' || dir === 'SHORT') && cooldownOk && freshOk && esSpot != null && nqSpot != null;
++      st.lastEntryBlock = gateOk ? pctEntryBlock(dir, pct, hiro, rth, now) : null;
++      if (gateOk && !st.lastEntryBlock) {
+         st.side = dir;
+         st.legs.es = openLeg(esSpot);
+         st.legs.nq = openLeg(nqSpot);
+@@ -345,6 +394,7 @@
+       pnl: { esUsd: esPnl, nqUsd: nqPnl, totalUsd: r2((esPnl || 0) + (nqPnl || 0)) },
+       marks: { esSpot: r2(esSpot), nqSpot: r2(nqSpot) },
+       openedAt: st.openedAt, closedAt: st.closedAt, cooldownUntil: st.cooldownUntil,
++      protected: !!st.protected, entryBlock: st.lastEntryBlock || null,
+       trade: st.trade || null,
+       anchor: st.lastAnchor,
+       params: P,

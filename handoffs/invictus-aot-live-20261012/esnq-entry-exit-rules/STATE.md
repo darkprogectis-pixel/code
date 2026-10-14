@@ -32,3 +32,15 @@ Continuar sem reauditoria: (1) DESIGN.md com estados FLAT→OPEN→PROTECTED→E
 - Para R1/R2/R4/R5 usar `bull_pct` (LONG) / `bear_pct` (SHORT); 70% e 50% aplicam-se a essas métricas.
 - A sucessora ainda VERIFICA tecnicamente, antes de codificar: origem (aot-bff L3165, `sig.bull_pct/bear_pct`), escala (0–100 ou 0–1), se existe valor SEPARADO para ES e para NQ (a regra exige os dois ativos), frequência/idade (stale ⇒ bloquear entrada). Se não houver valor por ativo ou estiver indisponível, registrar como lacuna real e não aplicar R1/R2/R4/R5.
 - Fluxo inalterado: DESIGN.md → JEV DIFF → staging (cópia de aot-sim.js) → testes → handoff/commit. LIVE intocado.
+
+## ORDEM R2 EXECUTADA (sessão fb698be1, loop `/jev-finish` jf-20261014202204-c3b423) — COMPLETE (aceito pelo CLI)
+- Métrica bull_pct/bear_pct VERIFICADA: escala 0–100, um valor separado para ES e para NQ, frescor de 90 s. É um escore não calibrado: 50 ⇔ score ≥ 0, e com R3 vale na prática a partir de 58. Detalhe em `DESIGN.md` §1.
+- `DESIGN.md`: estados, precedência e lacunas. Staging em `candidate/aot-sim.js`; a base é a cópia da produção em `base/`; diff em `esnq-rules.diff`.
+- JEV DIFF A 0,81 `req_01a13c1460817f4f8cf613001e0e1fe4`. JEV FINAL A 0,53 `req_01a13c14f8af7e5ea506cc4be567372d`.
+- Testes: `tests/esnq-rules.test.cjs` 19/19 PASS, recheck do CLI PASS.
+- A produção NÃO foi alterada. O candidato com `pctRules:true` BLOQUEIA toda entrada enquanto o BFF não passar `pct`/`hiro`/`rth`. Por isso a aplicação é uma fase própria: ligação no BFF, porte para o C# e autorização do operador.
+- **Próximo passo (exige ordem do operador):**
+  - (a) decidir se o % é só um filtro adicional ao anchor 4/4 (implementado) ou se vira o gatilho;
+  - (b) definir o take-profit, se desejado;
+  - (c) autorizar a fase de ligação no BFF (`pct` = relay `signals.ES/NQ` + ts, `hiro` = `v2.<sym>.c2.confirm`, `rth`) com JEV DIFF próprio;
+  - (d) depois disso, porte para o C# do robô com F5 do operador.
