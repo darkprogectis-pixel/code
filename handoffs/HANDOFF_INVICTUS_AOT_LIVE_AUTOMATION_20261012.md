@@ -1128,3 +1128,11 @@ JEV documentary A confidence 0.9 probabilities {"A":0.91,"B":0.02,"C":0,"D":0,"E
   - Conferência posterior (só GET): `:3600` PID 32704, health 200, gate ES/NQ CLOSED, sim ES/NQ FLAT, Russell e HIRO presentes, FLOW GC/SI `SEM_SINAL`, `/gcsi/sim enabled:false`. Zero ordens reais. Não houve rollback.
   - Rollback, se preciso: `bash handoffs/invictus-aot-live-20261012/gcsi-eqv/snapshot-fix/apply-bff-snapshot.sh --rollback`.
   - Pendência: o patch só tem efeito visível com `AOT_GCSI_SIM=on`, que exige ordem separada do operador.
+- **VALIDAÇÃO FLOW GC/SI NO CHROME (14/10/2026 ~17:40Z): BLOQUEADA.** A extensão Claude in Chrome não está conectada ("Browser extension is not connected"), então a conferência visual não foi feita.
+  - GET em `:3600/state` (BFF `3ec88e91`):
+    - Pernas: GC LIVE 4106.5 fresh, SI LIVE 55.78 fresh.
+    - Gate GC/SI: `ESPERANDO_CONFIRMACAO`/CLOSED, dir NEUTRO, radar LONG 4/4, força WEAK.
+    - Independente do gate ES/NQ (CLOSED/NEUTRO). Russell NEUTRO, HIRO ok.
+    - `/gcsi/sim` `enabled:false`.
+  - O `public/index.html` de produção tem os painéis "FLOW GC / RUSSELL" e "FLOW GC · confluência aux". Nada foi alterado.
+  - **Próximo passo:** o operador conecta o Chrome (extensão logada na mesma conta) e a validação visual em `http://127.0.0.1:3600/` é refeita.
