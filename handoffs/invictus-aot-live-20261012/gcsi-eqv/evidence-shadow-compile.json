@@ -1,0 +1,19 @@
+{
+  "custom_dir": "C:\\Users\\ADM\\Documents\\NinjaTrader 8\\bin\\Custom",
+  "candidate": "C:\\Users\\ADM\\Claude-JEV\\code\\handoffs\\invictus-aot-live-20261012\\gcsi-eqv\\candidate\\AlfaOmegaBridge.cs",
+  "baseline": {
+    "exit": 0,
+    "errors": 0,
+    "warnings": 934,
+    "spawnError": null
+  },
+  "candidate_build": {
+    "exit": 0,
+    "swapped": 2,
+    "errors": [],
+    "warnings": 934
+  },
+  "new_errors": [],
+  "new_warnings": [],
+  "verdict": "PASS"
+}
