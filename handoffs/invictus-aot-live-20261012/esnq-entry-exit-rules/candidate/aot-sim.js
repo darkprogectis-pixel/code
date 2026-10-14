@@ -45,6 +45,8 @@ const DEFAULT_PARAMS = {
   pctStrongMin: 70,                     // R1/R2: os dois ativos >= 70 na direção => entra sem exigir HIRO
   pctMin: 50,                           // R4/R5: os dois ativos >= 50 na direção => RTH exige HIRO CONFIRMA nos dois
   pctStaleSec: 90,                      // idade máx. do sinal (= ROBO_CFG.STALE_MS / AlfaOmegaRobo.cs:310)
+  requireGateOpen: true,                // (2026-10-14 decisão do operador) entrada exige Gate OPEN (buildGate.open:
+                                        //   online ∧ ready ∧ tapeLive ∧ 4/4 ∧ dir) ALÉM do anchor 4/4; ausente = fechado.
   beAtProfitUsd: 500,                   // lucro (US$) p/ mover o stop até breakeven  (= 10pt ES)
   stepProfitUsd: 250,                   // a cada +US$ deste passo de lucro...           (= 5pt ES)
   stepStopUsd: 250,                     // ...o stop sobe US$ deste tanto (em pontos/mult)
@@ -278,7 +280,7 @@ function createSimEngine({ persistPath, historyDir, params, emitEvent } = {}) {
   }
 
   // 1 passo do motor (chamado a cada poll do BFF).
-  function tick({ anchor, esSpot, nqSpot, nowIso, priceSource, replay, pct, hiro, rth }) {
+  function tick({ anchor, esSpot, nqSpot, nowIso, priceSource, replay, pct, hiro, rth, gateOpen }) {
     flushPending();   // B3: nenhuma decisão nova por cima de evento ainda não emitido (falha => o tick lança)
     esSpot = pxOrNull(esSpot); nqSpot = pxOrNull(nqSpot);   // (2026-09-16) preco invalido = ausente (nunca 0)
     const dir = anchor && anchor.dir ? anchor.dir : 'NEUTRO';
@@ -355,7 +357,7 @@ function createSimEngine({ persistPath, historyDir, params, emitEvent } = {}) {
       const cooldownOk = !st.cooldownUntil || Date.parse(now) >= Date.parse(st.cooldownUntil);
       const freshOk = !P.requireFreshFourOfFour || st.armed;
       const gateOk = strength === 4 && (dir === 'LONG' || dir === 'SHORT') && cooldownOk && freshOk && esSpot != null && nqSpot != null;
-      st.lastEntryBlock = gateOk ? pctEntryBlock(dir, pct, hiro, rth, now) : null;
+      st.lastEntryBlock = !gateOk ? null : (P.requireGateOpen && gateOpen !== true) ? 'gate_nao_open' : pctEntryBlock(dir, pct, hiro, rth, now);
       if (gateOk && !st.lastEntryBlock) {
         st.side = dir;
         st.legs.es = openLeg(esSpot);
@@ -478,4 +480,20 @@ function createSimEngine({ persistPath, historyDir, params, emitEvent } = {}) {
   return { tick, getState, reset, applyExec, params: P };
 }
 
-module.exports = { validPx, pxOrNull, recPrecoInvalido, createSimEngine, DEFAULT_PARAMS };
+// (2026-10-14 R1–R5) Entradas do filtro a partir do payload que o BFF JÁ lê (gexbot :3457 '/', oi-latest.json):
+// signals.{ts,ES,NQ}.{bull_pct,bear_pct,direction} + HIRO convergente medido contra a direção do Gate
+// (hiroFor(sym, dir) = c2ForSym(...).confirm no BFF). Puro; payload ausente/erro => pct null (o motor bloqueia).
+function simEntryInputs({ gex, gate, rth, hiroFor }) {
+  const sig = gex && !gex._err && gex.signals && typeof gex.signals === 'object' ? gex.signals : null;
+  const pick = (s) => s && typeof s === 'object' ? { bull_pct: s.bull_pct, bear_pct: s.bear_pct, direction: s.direction || null } : null;
+  const pct = sig ? { ts: typeof sig.ts === 'number' ? sig.ts : null, es: pick(sig.ES), nq: pick(sig.NQ) } : null;
+  const dir = gate && gate.anchor ? gate.anchor.dir : null;
+  let hiro = null;
+  if ((dir === 'LONG' || dir === 'SHORT') && typeof hiroFor === 'function') {
+    const conf = (sym) => { try { return hiroFor(sym, dir) || 'N/A'; } catch { return 'N/A'; } };
+    hiro = { es: conf('ES'), nq: conf('NQ') };
+  }
+  return { pct, hiro, rth: typeof rth === 'boolean' ? rth : undefined, gateOpen: !!(gate && gate.open === true) };
+}
+
+module.exports = { validPx, pxOrNull, recPrecoInvalido, createSimEngine, DEFAULT_PARAMS, simEntryInputs };

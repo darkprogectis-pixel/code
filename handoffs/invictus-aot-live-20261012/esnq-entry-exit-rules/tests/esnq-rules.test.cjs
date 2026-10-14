@@ -14,7 +14,11 @@ const pct = (es, nq, s = 0, ageSec = 10) => ({ ts: T0 + (s - ageSec) * 1000, es,
 const L70 = (s) => pct(sig(75, 'LONG'), sig(72, 'LONG'), s);
 const CONF = { es: 'CONFIRMA', nq: 'CONFIRMA' };
 
-function eng(params, emitEvent) { return C.createSimEngine({ params, emitEvent }); }
+// (ordem R3) Gate OPEN 4/4 obrigatório: os testes de regra rodam com gateOpen:true por padrão (explícito sobrescreve).
+function eng(params, emitEvent) {
+  const e = C.createSimEngine({ params, emitEvent });
+  return Object.assign({}, e, { tick: (inp) => e.tick(Object.assign({ gateOpen: true }, inp)) });
+}
 function openLong(e, s = 0, es = 6000, nq = 21000) {
   const r = e.tick({ anchor: A('LONG'), esSpot: es, nqSpot: nq, nowIso: iso(s), pct: L70(s), rth: true });
   assert.equal(r.side, 'LONG'); return r;
@@ -145,7 +149,7 @@ test('eventos: 1 OPEN e 1 CLOSE por trade_id mesmo com ticks repetidos e mudanç
 
 // ── PARIDADE / OUTROS FLOWS ──────────────────────────────────────────────────
 test('paridade: com params legados o candidato reproduz a base (sequência pseudo-aleatória 3000 ticks)', () => {
-  const LEG = { hardStopUsd: 1000, basketStopUsd: 0, neutroPositiveProtect: false, pctRules: false };
+  const LEG = { hardStopUsd: 1000, basketStopUsd: 0, neutroPositiveProtect: false, pctRules: false, requireGateOpen: false };
   const b = B.createSimEngine(), c = C.createSimEngine({ params: LEG });
   let x = 12345; const rnd = () => (x = (x * 1103515245 + 12345) % 2147483648) / 2147483648;
   let es = 6000, nq = 21000;
@@ -161,7 +165,43 @@ test('paridade: com params legados o candidato reproduz a base (sequência pseud
     assert.deepEqual(rc.history.map(h => [h.reason, h.totalUsd]), rb.history.map(h => [h.reason, h.totalUsd]), 'tick ' + i);
   }
 });
-test('API do módulo inalterada (BFF e porte C# não quebram)', () => {
-  assert.deepEqual(Object.keys(C).sort(), Object.keys(B).sort());
+test('API do módulo: só o export puro simEntryInputs a mais (BFF e porte C# não quebram)', () => {
+  assert.deepEqual(Object.keys(C).filter(k => k !== 'simEntryInputs').sort(), Object.keys(B).sort());
+  assert.equal(typeof C.simEntryInputs, 'function');
   assert.deepEqual(Object.keys(C.createSimEngine()).sort(), Object.keys(B.createSimEngine()).sort());
+});
+
+// ── GATE OPEN 4/4 OBRIGATÓRIO (ordem R3) ─────────────────────────────────────
+test('Gate OPEN obrigatório: 98/98 + HIRO + anchor 4/4 com gateOpen ausente/não-true bloqueia (gate_nao_open)', () => {
+  const p = pct(sig(98, 'LONG'), sig(98, 'LONG'));
+  for (const g of [undefined, false, null, 'true', 1]) {
+    const r = C.createSimEngine().tick({ anchor: A('LONG'), esSpot: 6000, nqSpot: 21000, nowIso: iso(0), pct: p, hiro: CONF, rth: true, gateOpen: g });
+    assert.equal(r.side, 'FLAT'); assert.equal(r.entryBlock, 'gate_nao_open');
+  }
+  assert.equal(C.createSimEngine().tick({ anchor: A('LONG'), esSpot: 6000, nqSpot: 21000, nowIso: iso(0), pct: p, rth: true, gateOpen: true }).side, 'LONG');
+});
+test('Gate fechado nunca abre: 5000 ticks aleatórios com % favorável e HIRO, gateOpen=false => 0 OPEN', () => {
+  const evs = [];
+  const e = C.createSimEngine({ emitEvent: (ev) => { evs.push(ev); return { seq: evs.length }; } });
+  let x = 777; const rnd = () => (x = (x * 1103515245 + 12345) % 2147483648) / 2147483648;
+  for (let i = 0; i < 5000; i++) {
+    const k = rnd(); const dir = k < 0.45 ? 'LONG' : k < 0.9 ? 'SHORT' : 'NEUTRO';
+    const b = dir === 'LONG' ? 98 : 2;
+    const r = e.tick({ anchor: A(dir, rnd() < 0.8 ? 4 : 3), esSpot: 6000 + (rnd() - 0.5) * 10, nqSpot: 21000 + (rnd() - 0.5) * 30,
+      nowIso: iso(i * 7), pct: pct(sig(b, dir), sig(b, dir), i * 7), hiro: CONF, rth: rnd() < 0.5, gateOpen: false });
+    assert.equal(r.side, 'FLAT', 'tick ' + i);
+  }
+  assert.equal(evs.filter(v => v.action === 'OPEN').length, 0);
+});
+test('Gate OPEN não dispensa os filtros: NEUTRO/divergência/stale/ausente continuam bloqueando', () => {
+  const t = (p) => eng().tick({ anchor: A('LONG'), esSpot: 6000, nqSpot: 21000, nowIso: iso(0), pct: p, rth: false });
+  assert.equal(t(pct(sig(75, 'LONG'), sig(50, 'NEUTRO'))).entryBlock, 'pct_neutro_nq');
+  assert.equal(t(pct(sig(75, 'LONG'), sig(30, 'SHORT'))).entryBlock, 'pct_divergente_nq');
+  assert.equal(t(pct(sig(80, 'LONG'), sig(80, 'LONG'), 0, 120)).entryBlock, 'pct_stale');
+  assert.equal(t(null).entryBlock, 'pct_ausente');
+});
+test('Gate OPEN só afeta a entrada: posição aberta segue as saídas com gateOpen=false', () => {
+  const e = eng(); openLong(e);
+  const r = e.tick({ anchor: A('LONG'), esSpot: 5990, nqSpot: 21000, nowIso: iso(5), gateOpen: false });
+  assert.equal(r.history[0].reason, 'hard_stop_es');
 });

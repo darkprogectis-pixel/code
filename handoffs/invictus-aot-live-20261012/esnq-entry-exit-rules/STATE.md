@@ -44,3 +44,46 @@ Continuar sem reauditoria: (1) DESIGN.md com estados FLAT→OPEN→PROTECTED→E
   - (b) definir o take-profit, se desejado;
   - (c) autorizar a fase de ligação no BFF (`pct` = relay `signals.ES/NQ` + ts, `hiro` = `v2.<sym>.c2.confirm`, `rth`) com JEV DIFF próprio;
   - (d) depois disso, porte para o C# do robô com F5 do operador.
+
+## DECISÃO DEFINITIVA DO OPERADOR (14/10/2026, sessão fb698be1): GATE 4/4 OBRIGATÓRIO PARA TODAS AS ENTRADAS
+- Os percentuais 50/70 (bull_pct/bear_pct) são SÓ filtros adicionais. Nunca substituem nem enfraquecem o Gate existente. A lacuna 4 do DESIGN (“filtro × gatilho”) está FECHADA: o % é filtro.
+- Ordem R3: preservar R7/R8/R9 em staging; preparar a ligação no BFF de bull_pct, bear_pct, HIRO e RTH; exigir Gate OPEN 4/4, ES/NQ na mesma direção, 70% nos dois ativos como regra normal; 50% nos dois só com HIRO convergente no RTH (fora do RTH sem HIRO); bloquear NEUTRO, divergência, stale, ausente e direção não confirmada; provar que nada abre com o Gate fechado; JEV DIFF antes; staging apenas; testes integrados + recheck; sem C#/NT8/LIVE/deploy; handoff + commit sem push.
+
+## CHECKPOINT ORDEM R3 (sessão fb698be1, JEV_SOFT_STOP) — CONCLUÍDO pela sucessora e6ce8ee4 (ver §"ORDEM R3 EXECUTADA")
+- **FEITO:**
+  - decisão registrada (acima + handoff, sem commit);
+  - base do BFF copiada da produção para `base/bff/` (aot-bff.js SHA256 prefixo 3ec88e91, hiro-darkflow-adapter.cjs b9d4ccf3) e para `candidate/bff/`;
+  - fixture real do relay em `tests/fixtures/relay-3457-snapshot.json` (signals + flow_hiro; sem credenciais).
+- **CANDIDATO EDITADO (ainda sem testes, sem JEV DIFF, sem commit):**
+  - `candidate/aot-sim.js`:
+    - `requireGateOpen:true`: a entrada exige `gateOpen===true` (= `buildGate().open`); senão bloqueia com `gate_nao_open`;
+    - `tick` passa a aceitar `gateOpen`;
+    - novo export puro `simEntryInputs({gex,gate,rth,hiroFor})`.
+  - `candidate/bff/aot-bff.js`:
+    - import de `simEntryInputs` (L57);
+    - no bloco SIM (~L2327): `simIn = simEntryInputs({gex, gate, rth:t.rth, hiroFor:(sym,d)=>c2ForSym(sym,d,gex.flow_hiro,t.rth).confirm})` e `tick(Object.assign({...}, simIn))`.
+  - O payload `gexbot '/'` já traz `signals` e `flow_hiro`, então não há fetch novo.
+- **PRÓXIMO PASSO EXATO:**
+  1. `tests/esnq-rules.test.cjs`:
+     - os testes de entrada passam `gateOpen:true`;
+     - a paridade passa a usar `requireGateOpen:false`;
+     - o teste de API aceita o export extra `simEntryInputs`;
+     - novos testes: Gate fechado com 98/98 nunca abre (sequência aleatória); `gate_nao_open` com `gateOpen` ausente.
+  2. `tests/esnq-bff-integration.test.cjs`:
+     - `simEntryInputs` com a fixture real + `base/bff/hiro-darkflow-adapter.cjs`;
+     - verificação estática da ligação no BFF candidato;
+     - `node --check candidate/bff/aot-bff.js`;
+     - o diff do BFF tem só as 2 mudanças.
+  3. `esnq-rules-r3.diff` + `jev-diff-proposal-esnq-rules-r3.md`.
+  4. Loop `/jev-finish` novo (`finish.mjs start`) → JEV DIFF → testes pelo CLI → recheck → JEV FINAL → handoff → complete → commit sem push (inclui as edições não commitadas desta sessão).
+  5. Resposta final = bloco CHATGPT da ordem R3 (GATE_4_4, FILTRO_70, FILTRO_50_RTH, FILTRO_50_FORA_RTH, BFF, JEV_DIFF, TESTES, R7_R8_R9, LIVE, HANDOFF, COMMIT, PENDENCIAS, STATUS_FINAL).
+- LIVE, BFF de produção, C#, NT8 e ordens: intocados.
+
+## ORDEM R3 EXECUTADA (sessão e6ce8ee4, loop `/jev-finish` jf-20261014203453-6f74f6) — COMPLETE (aceito pelo CLI)
+- Gate OPEN 4/4 obrigatório em toda entrada (`requireGateOpen:true`, `gateOpen===true` estrito, `gate_nao_open`), avaliado após o anchor 4/4 legado e antes do filtro %; saídas não dependem do Gate. R7/R8/R9 sem mudança.
+- BFF em staging: `candidate/bff/aot-bff.js` (SHA256 db797149…, base produção 3ec88e91…) — import de `simEntryInputs` + `tick(Object.assign({...}, simEntryInputs({gex, gate, rth:t.rth, hiroFor: c2ForSym(...).confirm})))`. Sem fetch novo / ordem / NT8.
+- `candidate/aot-sim.js` SHA256 60aed804…. Diff: `esnq-rules-r3.diff`. Proposta: `jev-diff-proposal-esnq-rules-r3.md`. Resultado: `jev-final-result-esnq-rules-r3.md`.
+- JEV DIFF A 0,92 `req_01a13c207133787aa8cb84ce19e8f605` · JEV FINAL A 0,94 `req_01a13c21025d7530a91b515944d5dddd`.
+- Testes pelo CLI + recheck PASS: `esnq-rules-r3` 23/23 · `esnq-bff-integration-r3` 6/6 (fixture real do relay + adapter HIRO de produção; 5000 ticks com Gate fechado = 0 OPEN).
+- LIVE/produção (BFF, motor), C#, NT8, contas e ordens: intocados. Sem deploy. Sem push.
+- **Próximo passo (exige ordem do operador):** deploy do BFF+motor candidatos em produção (script do operador; classifier nega no auto mode) e/ou porte para o C# do robô com F5 do operador.

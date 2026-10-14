@@ -1249,3 +1249,17 @@ JEV documentary A confidence 0.9 probabilities {"A":0.91,"B":0.02,"C":0,"D":0,"E
 - **DECISÃO DO OPERADOR 14/10/2026 (sessão `6da2f5d6`):** métrica do "%" de R1/R2/R4/R5 = `bull_pct`/`bear_pct`. A sucessora verifica escala, disponibilidade por ativo (ES e NQ) e frescor antes de codificar (detalhe em `esnq-entry-exit-rules/STATE.md`).
 
 - **ES/NQ R1–R10, ORDEM R2 EXECUTADA EM STAGING (14/10/2026, sessão `fb698be1`, loop `/jev-finish` `jf-20261014202204-c3b423`) — COMPLETE (aceito pelo CLI).** Métrica bull_pct/bear_pct verificada: escala 0–100, valor por ativo, frescor de 90 s, escore não calibrado. `esnq-entry-exit-rules/DESIGN.md` + `candidate/aot-sim.js`: R9 $500 por ativo e $1000 de cesta; R7/R8 com piso da cesta em 0 e fechamento no spot real; R1–R5 como filtro bull_pct/bear_pct adicional ao anchor 4/4, fail-closed. JEV DIFF A 0,81 `req_01a13c1460817f4f8cf613001e0e1fe4` · JEV FINAL A 0,53 `req_01a13c14f8af7e5ea506cc4be567372d` · testes 19/19 PASS. Produção, BFF, Gate, C#, NT8, conta e ordens intocados. Próximo passo = decisões e ordem do operador (ver STATE.md §"ORDEM R2 EXECUTADA").
+- **DECISÃO DEFINITIVA DO OPERADOR (14/10/2026, sessão `fb698be1`): Gate 4/4 OBRIGATÓRIO em todas as entradas ES/NQ; bull_pct/bear_pct 50/70 são só filtros adicionais e nunca substituem nem enfraquecem o Gate.** Ordem R3 (ligação no BFF em staging) registrada em `esnq-entry-exit-rules/STATE.md`.
+- **CHECKPOINT ORDEM R3 ES/NQ (sessão `fb698be1`, JEV_SOFT_STOP) — EM ANDAMENTO; a sucessora CONTINUA sem nova ordem.**
+  - **Estado:** o candidato em staging foi editado, mas ainda NÃO tem testes, NÃO tem JEV DIFF e NÃO tem commit. O último commit é `adeb1a4`.
+  - **Alterações não commitadas desta sessão** (todas em `invictus-aot-live-20261012/esnq-entry-exit-rules/`, salvo indicação):
+    - `STATE.md` (decisão + §"CHECKPOINT ORDEM R3") — modificado;
+    - este handoff — modificado;
+    - `candidate/aot-sim.js` — modificado: `requireGateOpen`, `gateOpen` no `tick`, export `simEntryInputs`;
+    - `base/bff/aot-bff.js` (3ec88e91) e `base/bff/hiro-darkflow-adapter.cjs` (b9d4ccf3) — novos, cópias da produção;
+    - `candidate/bff/aot-bff.js` — novo, com import L57 + `simIn`/`tick` no bloco SIM ~L2327;
+    - `tests/fixtures/relay-3457-snapshot.json` — novo.
+  - **Testes rodados nesta ordem:** nenhum.
+  - **Próximo passo exato:** seguir o `STATE.md` §"CHECKPOINT ORDEM R3", passos 1–5: atualizar os testes, escrever o teste integrado do BFF, montar diff + proposta, abrir um loop `/jev-finish` novo (JEV DIFF → testes pelo CLI → recheck → JEV FINAL → complete), e fechar com handoff + commit sem push.
+- **ES/NQ ORDEM R3 EXECUTADA EM STAGING (sessão `e6ce8ee4`, loop `/jev-finish` `jf-20261014203453-6f74f6`) — COMPLETE (aceito pelo CLI).** Gate OPEN 4/4 obrigatório em toda entrada; 70/50 só filtros; ligação BFF (`candidate/bff/aot-bff.js`, 2 pontos, sem fetch novo). JEV DIFF A 0,92 `req_01a13c207133787aa8cb84ce19e8f605` · JEV FINAL A 0,94 `req_01a13c21025d7530a91b515944d5dddd` · testes 23/23 + 6/6 PASS. LIVE/C#/NT8/ordens intocados; sem deploy. Próximo passo = ordem do operador (deploy por script do operador e/ou porte C# com F5). Ver `esnq-entry-exit-rules/STATE.md` §"ORDEM R3 EXECUTADA".
+  - LIVE, BFF de produção, C#, NT8 e ordens seguem intocados.
