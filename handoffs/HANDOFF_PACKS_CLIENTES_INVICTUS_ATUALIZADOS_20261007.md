@@ -187,3 +187,4 @@ Dossiê: `handoffs/credenciais-packs-20261013/` (STATE.md, ordens, GATE_SPEC_COR
   - 18 alterações na OLIVER: 15 implantadas (todas exclusivas do AOT ou privadas da OLIVER, incluindo a config operacional do robô em alfaomega-robo/config) e 3 só em staging ou bloqueadas.
   - 0 aplicáveis a clientes ⇒ pack piloto **ATUALIZADO = SIM**.
   - Detalhes: `handoffs/pack-piloto-cbdfe4c-20261014/AUDIT_PACK_PILOTO_48H_20261014.md` + `MATRIX_PACK_X_OLIVER_20261014.tsv`.
+- **Atualização global 14/10 (sessão 2ce90375):** 13 clientes já em Z30X2 ⇒ 0 packs refeitos; licenças +30 d: nelson-casco, airison-cesar, magnumtraderaxi (+ piloto-01). Tabela: `handoffs/pack-piloto-cbdfe4c-20261014/ATUALIZACAO_GLOBAL_PACKS_LICENCAS_20261014.md`.

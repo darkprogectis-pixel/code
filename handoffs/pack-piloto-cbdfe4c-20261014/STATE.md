@@ -166,3 +166,4 @@ Gerar um pack atualizado e funcional do INVICTUS para o piloto DESKTOP-CBDFE4C, 
   - fora de escopo: 22 OLIVER, 30 escritorio-novopc (teste);
   - sem conta: ANAALICEGUSTAVO.
 - Próximo passo: 3 renovações + releitura + tabela + commit.
+- **CONCLUÍDO (licenças):** 63/70/72 renovadas +30 d e relidas (ativo). Tabela: `ATUALIZACAO_GLOBAL_PACKS_LICENCAS_20261014.md`. Packs: 0 alterados.
