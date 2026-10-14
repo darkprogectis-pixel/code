@@ -1120,3 +1120,11 @@ JEV documentary A confidence 0.9 probabilities {"A":0.91,"B":0.02,"C":0,"D":0,"E
   - Nenhuma alteração pendente desta frente. O que aparece em `git status` (handoffs e testes de rotação/jarvis modificados, arquivos `??`) é anterior e alheio a esta sessão, e não foi tocado.
   - Loops `/jev-finish` `jf-20261014165151-5e6372` e `jf-20261014173039-15a88d`: COMPLETE.
   - **Próximo passo exato:** aguardar ordem e autorização do operador para `bash handoffs/invictus-aot-live-20261012/gcsi-eqv/snapshot-fix/apply-bff-snapshot.sh --apply`, fora do Auto Mode e com sim ES/NQ FLAT. O script já tem o verify corrigido (SHA `f887c912…`). Esperado: `APLICADO: aot-bff.js=3ec88e91`. Rollback: o mesmo script com `--rollback`. Não iniciar sem ordem.
+- **SNAPSHOT `/gcsi/sim` APLICADO EM PRODUÇÃO (14/10/2026 17:34:10Z–17:34:56Z, ordem do operador "Autorizo aplicar o patch agora com --apply"):**
+  - 1ª tentativa às 17:33:47Z: a pré-checagem abortou fail-closed por `/automation/native` HTTP 503 transitório. Nada foi alterado.
+  - Às 17:34:10Z `/automation/native` voltou com 200 e `apply-bff-snapshot.sh --apply` (script `f887c912`) rodou com **exit 0**. Saída: `APLICADO: aot-bff.js=3ec88e91…; motor 42d0c8fd… intocado; AOT_GCSI_SIM=off`.
+  - SHA `aot-bff.js`: `65a76459` antes, **`3ec88e91`** depois. Motor `aot-gcsi-sim.js`: `42d0c8fd`, intocado. Backup: `C:/Users/ADM/.claude/aot/_backups/gcsi-snapshot-20261014/aot-bff.js` (`65a76459`).
+  - Verificação do script: `{"health":true,"esNqGate":true,"flowRussell":true,"hiro":true,"gcsiPhase":"SEM_SINAL","forceStep":"NOT_REACHED","gcsiSimProd":false,"simGcSiInState":false}`.
+  - Conferência posterior (só GET): `:3600` PID 32704, health 200, gate ES/NQ CLOSED, sim ES/NQ FLAT, Russell e HIRO presentes, FLOW GC/SI `SEM_SINAL`, `/gcsi/sim enabled:false`. Zero ordens reais. Não houve rollback.
+  - Rollback, se preciso: `bash handoffs/invictus-aot-live-20261012/gcsi-eqv/snapshot-fix/apply-bff-snapshot.sh --rollback`.
+  - Pendência: o patch só tem efeito visível com `AOT_GCSI_SIM=on`, que exige ordem separada do operador.
