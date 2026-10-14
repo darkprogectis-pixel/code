@@ -1,0 +1,3 @@
+2026-10-14T15:29:54.134Z {"anchor":{"dir":0,"strength":2,"why":"SI indefinido","ok":false,"source":"AoGate.GcSi"},"phase":"ESPERANDO_CONFIRMACAO","state":"CLOSED","open":false,"dir":"NEUTRO","strength":4,"why":"forca fraca GC/SI","force":"WEAK"}
+2026-10-14T15:30:04.232Z {"anchor":{"dir":0,"strength":0,"why":"GC x SI divergentes","ok":false,"source":"AoGate.GcSi"},"phase":"ESPERANDO_CONFIRMACAO","state":"CLOSED","open":false,"dir":"NEUTRO","strength":4,"why":"forca fraca GC/SI","force":"WEAK"}
+2026-10-14T15:30:09.278Z {"anchor":{"dir":0,"strength":4,"why":"forca fraca GC/SI","ok":false,"source":"AoGate.GcSi"},"phase":"ESPERANDO_CONFIRMACAO","state":"CLOSED","open":false,"dir":"NEUTRO","strength":4,"why":"forca fraca GC/SI","force":"WEAK"}
