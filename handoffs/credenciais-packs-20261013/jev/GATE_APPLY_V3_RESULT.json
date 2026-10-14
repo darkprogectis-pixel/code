@@ -1,0 +1,250 @@
+{
+ "decision_id": "jd_mv8hk4s3e3fa33",
+ "ts": "2026-10-14T19:11:24.722Z",
+ "timestamp": "2026-10-14T19:11:24.722Z",
+ "session_id": "6da2f5d6-5d3f-4b5c-b343-00053d09ecfb",
+ "kind": "substantive_action",
+ "purpose": "decision:substantive_action",
+ "targets": [
+  "C:/Users/ADM/Desktop/Handof TTW/HANDOFF/conf-tests/pack-native-20261006/invictus-temporal-clustering-audit-20261008/rollout_20261008/tools/credential_transfer_manifest.js",
+  "C:/Users/ADM/Desktop/Handof TTW/HANDOFF/conf-tests/pack-native-20261006/invictus-temporal-clustering-audit-20261008/rollout_20261008/MANIFESTO_TRANSFERENCIA_CREDENCIAIS_Z30X2.json"
+ ],
+ "jev_required": true,
+ "expires_at": "2026-10-14T19:41:24.722Z",
+ "action": "Copiar a ferramenta para rollout_20261008 tools, conferir sintaxe, executar uma vez com os padroes para gerar MANIFESTO_TRANSFERENCIA_CREDENCIAIS_Z30X2.json, conferir que os 2 geradores e os 15 ZIPs continuam com o mesmo SHA, atualizar handoff. Copia dos TXT continua manual pelo operador.",
+ "action_key": "apply_manifest_tool",
+ "status": "OK",
+ "source": "JEV",
+ "primitive": "MIXED(NOUL+CHOICE+SCORE)",
+ "model_requested": "jev-latest",
+ "model_source": "cache",
+ "model": "jev-1.13.0",
+ "usage": {
+  "input_tokens": 927,
+  "output_tokens": 244
+ },
+ "latency_ms": 625,
+ "request_id": "req_01a13bd39df57d88b4f8ba61047886aa",
+ "state_form": "string",
+ "state_sha": "12ae32cb1ec02d01",
+ "state_hash": "12ae32cb1ec02d01",
+ "question_types": {
+  "hypothesis_verification": "noul",
+  "next_step": "choice",
+  "alternatives": "choice",
+  "prioritization": "score",
+  "diagnosis": "choice",
+  "diagnosis_evidence": "score",
+  "proceed_stop_revert": "choice",
+  "safe_to_proceed": "noul"
+ },
+ "answers": {
+  "hypothesis_verification": {
+   "type": "noul",
+   "noul": 0.7
+  },
+  "next_step": {
+   "type": "choice",
+   "choice": "apply_manifest_tool",
+   "confidence": 0.02,
+   "probabilities": {
+    "apply_manifest_tool": 0.51,
+    "stop_and_report": 0.49
+   }
+  },
+  "alternatives": {
+   "type": "choice",
+   "choice": "apply_manifest_tool",
+   "confidence": 0.2,
+   "probabilities": {
+    "apply_manifest_tool": 0.6,
+    "stop_and_report": 0.4
+   }
+  },
+  "prioritization": {
+   "type": "score",
+   "score": 1.31,
+   "confidence": 0.39,
+   "legend": {
+    "0": "pode esperar",
+    "1": "importante, não urgente",
+    "2": "urgente ou bloqueante"
+   },
+   "probabilities": {
+    "0": 0.05,
+    "1": 0.59,
+    "2": 0.36
+   }
+  },
+  "diagnosis": {
+   "type": "choice",
+   "choice": "not_understood",
+   "confidence": 1,
+   "probabilities": {
+    "understood": 0,
+    "partially_understood": 0,
+    "not_understood": 1
+   }
+  },
+  "diagnosis_evidence": {
+   "type": "score",
+   "score": 0,
+   "confidence": 1,
+   "legend": {
+    "0": "sem evidência ou só suposição",
+    "1": "evidência indireta ou parcial",
+    "2": "evidência direta mas incompleta",
+    "3": "evidência direta, reproduzida e suficiente"
+   },
+   "probabilities": {
+    "0": 1,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   }
+  },
+  "proceed_stop_revert": {
+   "type": "choice",
+   "choice": "proceed",
+   "confidence": 0.3,
+   "probabilities": {
+    "proceed": 0.53,
+    "stop": 0.46,
+    "revert": 0.01
+   }
+  },
+  "safe_to_proceed": {
+   "type": "noul",
+   "noul": 0.48
+  }
+ },
+ "derived": {
+  "hypothesis_verification": {
+   "yes": true,
+   "p": 0.7
+  },
+  "next_step": {
+   "choice": "apply_manifest_tool",
+   "confidence": 0.02,
+   "runner_up": [
+    "stop_and_report",
+    0.49
+   ]
+  },
+  "alternatives": {
+   "choice": "apply_manifest_tool",
+   "confidence": 0.2,
+   "runner_up": [
+    "stop_and_report",
+    0.4
+   ]
+  },
+  "prioritization": {
+   "score": 1.31,
+   "level": 1,
+   "label": "importante, não urgente",
+   "confidence": 0.39
+  },
+  "diagnosis": {
+   "choice": "not_understood",
+   "confidence": 1,
+   "runner_up": [
+    "understood",
+    0
+   ]
+  },
+  "diagnosis_evidence": {
+   "score": 0,
+   "level": 0,
+   "label": "sem evidência ou só suposição",
+   "confidence": 1
+  },
+  "proceed_stop_revert": {
+   "choice": "proceed",
+   "confidence": 0.3,
+   "runner_up": [
+    "stop",
+    0.46
+   ]
+  },
+  "safe_to_proceed": {
+   "yes": false,
+   "p": 0.48
+  },
+  "category_gate": {
+   "hypothesis_verification": true,
+   "next_step": true,
+   "proceed_stop_revert": false
+  },
+  "gate_open": false
+ },
+ "result": {
+  "hypothesis_verification": {
+   "yes": true,
+   "p": 0.7
+  },
+  "next_step": {
+   "choice": "apply_manifest_tool",
+   "confidence": 0.02,
+   "runner_up": [
+    "stop_and_report",
+    0.49
+   ]
+  },
+  "alternatives": {
+   "choice": "apply_manifest_tool",
+   "confidence": 0.2,
+   "runner_up": [
+    "stop_and_report",
+    0.4
+   ]
+  },
+  "prioritization": {
+   "score": 1.31,
+   "level": 1,
+   "label": "importante, não urgente",
+   "confidence": 0.39
+  },
+  "diagnosis": {
+   "choice": "not_understood",
+   "confidence": 1,
+   "runner_up": [
+    "understood",
+    0
+   ]
+  },
+  "diagnosis_evidence": {
+   "score": 0,
+   "level": 0,
+   "label": "sem evidência ou só suposição",
+   "confidence": 1
+  },
+  "proceed_stop_revert": {
+   "choice": "proceed",
+   "confidence": 0.3,
+   "runner_up": [
+    "stop",
+    0.46
+   ]
+  },
+  "safe_to_proceed": {
+   "yes": false,
+   "p": 0.48
+  },
+  "category_gate": {
+   "hypothesis_verification": true,
+   "next_step": true,
+   "proceed_stop_revert": false
+  },
+  "gate_open": false
+ },
+ "gate_open": false,
+ "categories": {
+  "hypothesis_verification": "jd_mv8hk59m8cdbf1",
+  "next_step": "jd_mv8hk59m9f38a3",
+  "alternatives": "jd_mv8hk59n0536da",
+  "prioritization": "jd_mv8hk59na328e3",
+  "diagnosis": "jd_mv8hk59ocfc777",
+  "proceed_stop_revert": "jd_mv8hk59o29feb8"
+ }
+}

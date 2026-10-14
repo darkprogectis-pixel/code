@@ -1,0 +1,15 @@
+{
+ "kind": "substantive_action",
+ "state": "Claude-JEV 2026-10-14, missao credenciais packs, NOVA ORDEM EXPLICITA do operador (auto mode): concluir a correcao ja investigada, resolvendo exclusivamente a entrega separada do TXT, com gates JEV, sem credencial no ZIP, sem imprimir segredos, sem gerar credenciais novas, preservando ZIPs/manifests/licencas/importadores. Estado reconferido hoje: os 2 geradores reais copy_to_destination.js e build_delivery_new_client.js continuam com SHA identico ao backup (65e56c6f / da97b577); a ferramenta credential_transfer_manifest.js e o manifesto ainda NAO existem no rollout => a proposta continua aplicavel sem conflito. JEV DIFF da proposta minima = A SAFE_TO_APPLY 0,62 (req_01a13759a29b76a28e892a5c7997bf7b). A proposta e uma ferramenta NOVA e separada que so escreve um manifesto JSON de transferencia manual (cliente, nome do TXT, origem, destino na pasta individual do cliente, status por existsSync); nunca abre, le, copia, move ou hasheia credencial; geradores, ZIPs, imports, rollback, sobrescrita e DESTINO_FINAL_VERIFICACAO intocados. Mocks com arquivos ficticios 15/15 PASS (armadilha de fs 0 violacoes). Clientes ANAALICEGUSTAVO (IDENTITY_UNPROVEN), DESTINO_DESKTOP-CBDFE4C (piloto-01 sem licenca) e OLIVER_MAIN_MACHINE (maquina do operador) nao tem TXT legitimo e saem como BLOQUEADO no manifesto, sem criar credencial. Reversivel apagando 2 arquivos novos. Copia dos TXT segue manual pelo operador.",
+ "action": "Copiar a ferramenta para rollout_20261008 tools, conferir sintaxe, executar uma vez com os padroes para gerar MANIFESTO_TRANSFERENCIA_CREDENCIAIS_Z30X2.json, conferir que os 2 geradores e os 15 ZIPs continuam com o mesmo SHA, atualizar handoff. Copia dos TXT continua manual pelo operador.",
+ "action_key": "apply_manifest_tool",
+ "options": {
+  "apply_manifest_tool": "instalar a ferramenta separada, gerar o manifesto, verificar integridade",
+  "stop_and_report": "parar e reportar sem aplicar"
+ },
+ "claim": "A aplicacao e de baixo risco: arquivo novo isolado, sem manipular conteudo de credencial, aprovado pelo JEV DIFF (A), testado com arquivos ficticios e reversivel (basta apagar a ferramenta e o manifesto).",
+ "targets": [
+  "C:/Users/ADM/Desktop/Handof TTW/HANDOFF/conf-tests/pack-native-20261006/invictus-temporal-clustering-audit-20261008/rollout_20261008/tools/credential_transfer_manifest.js",
+  "C:/Users/ADM/Desktop/Handof TTW/HANDOFF/conf-tests/pack-native-20261006/invictus-temporal-clustering-audit-20261008/rollout_20261008/MANIFESTO_TRANSFERENCIA_CREDENCIAIS_Z30X2.json"
+ ]
+}
