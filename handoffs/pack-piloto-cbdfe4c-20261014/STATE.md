@@ -113,3 +113,16 @@ Gerar um pack atualizado e funcional do INVICTUS para o piloto DESKTOP-CBDFE4C, 
 - Credencial de login (`CREDENCIAL_PILOTO_*.txt`): NÃO EXISTE, por desenho (credenciais-packs STATE l.36/84).
 - Procedimento oficial, se o operador quiser senha: `authv2-admin.js user-create-password … --out` no servidor ⇒ `Downloads\CREDENCIAL_PILOTO_<NOME>.txt`.
 - A licença do piloto-01 continua NULL; liberar é decisão do operador no servidor. Nada foi criado nem alterado.
+
+## AUTHV2 PC PILOTO — confirmação do bloqueio (ordem 14/10, somente leitura, sessão 2ce90375) — PARTIAL
+- **Leitura no servidor BLOQUEADA**: o classificador do auto mode negou ("Production Reads") a execução de `wsl … ssh root@167.233.25.27` + `node /root/auth-service/authv2-admin.js user-list/device-list --json`, filtrada para user 29 e device 92. Não foi contornada.
+- **Leitura do log NT8 da OLIVER (ordens da TAKEPROFIT) também BLOQUEADA** pelo mesmo motivo.
+- Último estado do servidor documentado (dossier `Desktop\Handof TTW\HANDOFF\conf-tests\pack-native-20261006\authv2-device-rootcause-20261007\DOSSIER_AUTHV2_DEVICE_ROOT_CAUSE.md` l.89-110, leitura de 07/10):
+  - user 29: active, license_expires_at NULL ("sem prazo"), tem_senha false;
+  - device 92: active, label DESKTOP-CBDFE4C, revoked_at null.
+  - Código: whoami devolve `license_valid = null` quando o prazo é NULL ⇒ o cliente AoLicenca mostra "licenca nao configurada" ⇒ INVICTUS fail-closed. Mas `licencaValida(NULL)=true` ⇒ token() continua emitindo tokens (indicadores funcionam).
+  - Um "blocked" literal exige mudança de status depois de 07/10 (user/device) ⇒ **não verificável sem a leitura no servidor.**
+- Ordens MES/MNQ na TAKEPROFIT619605210: a config operacional da OLIVER (`Documents\NinjaTrader 8\alfaomega-robo\config\ativos.json`, v200 de 13/10) mapeia MES (qty 3) e MNQ (qty 2) para essa conta, com `operacional.json` play=true desde 14/10 11:40Z (ADM@OLIVER).
+  - ⇒ Origem mais provável: o robô INVICTUS da **OLIVER** (user 22/device 86), não o piloto.
+  - Não confirmado contra o log/executions (leitura negada).
+- Próximo passo (decisão do operador): autorizar as duas leituras (VPS authv2-admin user-list/device-list; log NT8 da OLIVER de 14/10) ou executá-las e colar o resultado.
