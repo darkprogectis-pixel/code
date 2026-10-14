@@ -1183,3 +1183,23 @@ JEV documentary A confidence 0.9 probabilities {"A":0.91,"B":0.02,"C":0,"D":0,"E
   - Console sem erros após reload.
   - Evidência: `esnq-anchor-text/evidence/chrome-prod-auto-live-4de4-sem-direcao.jpg`.
   - **Observação sem ação (fora do escopo, exige ordem própria):** no mesmo momento, outros elementos do auto.html mostravam "Confluência 4/4 — Confluência máxima — abrindo posição" (com NEUTRO, sem posição aberta) e o banner "CONFLUÊNCIA DUPLA ES×NQ · LONG · CONFIRMADA", com o gate fechado/NEUTRO. É um possível padrão de texto contraditório em outros componentes; não foi investigado nem tocado.
+- **DIAGNÓSTICO (SÓ LEITURA) — DUAS CONTRADIÇÕES VISUAIS ES/NQ NO auto.html (14/10/2026 ~18:45Z, sessão `afa26a77`). Nenhum código alterado.** Linhas do `auto.html` de produção atual (`a2c342db…` = `esnq-anchor-text/candidate/auto.html`).
+  - **1. "Confluência máxima — abrindo posição"** (`#trigNote`, `renderSim()` L470–473):
+    - A UI testa só `sim.anchor.strength===4`; `sim.anchor` = `gate.anchor` (`{dir,strength,why}`, `aot-bff.js` L2327 → `aot-sim.js` `tick` L247–254).
+    - O motor só abre com `strength===4 ∧ dir∈{LONG,SHORT} ∧ cooldownOk ∧ freshOk ∧ spots válidos` (`aot-sim.js` L310), mais a histerese `requireFreshFourOfFour`.
+    - Com 4/4 e `dir=NEUTRO` (força fraca) o texto promete abertura que o motor corretamente não faz. É defeito SÓ de apresentação; a lógica de ordens está correta. O mesmo erro vale para a etiqueta `trigLabel` "Confluência 4/4" (L465), que é aceitável como contagem.
+  - **2. "◆ Confluência dupla ES×NQ · LONG · CONFIRMADA"** (`#aocConfluence2`, L797–800; igual em `index.html` L933):
+    - A UI exibe `st.v2.confluence` (`buildV2Stack`, `aot-bff.js` L1303–1320): `agree = es.c1.signal ∧ nq.c1.signal ∧ mesma dir ≠ NEUTRO`, onde `c1FromLeg` (L1020–1030) só exige ME e MVI do mesmo sinal por ativo.
+    - É confluência INFORMATIVA de tape (camada v2). Não passa pela etapa de força do Gate 1, e nenhum consumidor de ordens a lê: o sim lê só `gate.anchor`, o `native-automation.cjs` não lê confluence/gate e o `aot-health` só checa presença.
+    - Com 4/4 e "forca fraca NQ", os dois tapes estão LONG ⇒ `agree=true`. Além disso, `level` vale `'CONFIRMADA'` sempre que `agree ∧ ¬bothMax` (L1317), mesmo com `conv` BASE (sem confirmação HIRO). A palavra "CONFIRMADA" é um rótulo enganoso do BFF, não autorização.
+    - É defeito de apresentação/rotulagem; a lógica de ordens não é afetada.
+  - **Distinção:**
+    - confluência informativa = `v2.confluence` (tape ES×NQ);
+    - direção indicativa = `v2.es/nq.c1.dir` e `gate.anchor` com 4/4;
+    - autorização efetiva = `gate.open`/`state==='OPEN'` (exige `dir∈{LONG,SHORT}` após a etapa de força);
+    - posição real = `sim.side`.
+  - **Risco operacional:** baixo. Nenhuma ordem nasce desses textos, mas o operador pode ler "abrindo posição"/"CONFIRMADA" como entrada iminente quando o Gate está FECHADO.
+  - **Correção mínima proposta (NÃO aplicada; exige ordem, JEV DIFF e deploy autorizado):**
+    - (1) `auto.html` L472–473: "abrindo posição" só com `a.strength===4 && (aw==='LONG'||aw==='SHORT')`; com 4/4 e NEUTRO, "Radar 4/4 sem direção liberada pelo gate — sem abertura."
+    - (2) `auto.html` L799 e `index.html` L933: com `st.gate.state!=='OPEN'`, sufixar/rotular "· tape (informativa) — gate fechado, sem autorização", sem mostrar `level` como CONFIRMADA. Só apresentação, contrato BFF existente.
+    - (3) Opcional, separado, toca o BFF: renomear o `level` `'CONFIRMADA'` de L1317 para refletir `conv` (ex.: só CONFIRMADA se ambos `conv.level` ≥ CONFIRMADA). Exige JEV próprio, porque muda o contrato `v2`.
