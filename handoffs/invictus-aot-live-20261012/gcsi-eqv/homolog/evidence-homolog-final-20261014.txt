@@ -1,0 +1,20 @@
+== /gcsi/sim
+{"enabled":true,"schema":"aot-gcsi-sim/1","mode":"simulation","book":"GCSI_SIM","orders":"NONE","channel":"ISOLATED (journal gcsi-events-*.jsonl proprio)","meta":{"simulated":true,"note":"Simulação GC/SI independente — sem execução real, sem conta, sem ordem. Histórico exclusivo GC/SI."},"side":"SHORT","position":{"gc":{"contracts":1,"entry":4101.3,"stop":4101.3,"stopActive":true,"hardStop":4111.3,"pnlUsd":0},"si":{"contracts":1,"entry":55.87,"stop":55.82,"stopActive":true,"hardStop":56.07,"pnlUsd":0}},"pnl":{"gcUsd":0,"siUsd":0,"totalUsd":0},"marks":{"gcSpot":null,"siSpot":null},"openedAt":"2026-10-14T16:01:16.961Z","closedAt":null,"cooldownUntil":null,"trade":{"trade_id":"32f1a0a2-ed37-4a1e-a644-f05b1c418975","event_id_open":"32f1a0a2-ed37-4a1e-a644-f05b1c418975","seq_open":1},"anchor":{"dir":"NEUTRO","strength":2,"why":"GC indefinido"},"params":{"contractsGc":1,"contractsSi":1,"multGc":100,"multSi":5000,"hardStopUsd":1000,"beAtProfitUsd":500,"stepProfitUsd":250,"stepStopUsd":250,"cooldownSec":60,"requireFreshFourOfFour":true,"siPxScale":10},"history":[]}
+== /gcsi/events
+{"schema":"aot-gcsi-sim/events v1","enabled":true,"source":"AOT_GCSI_SIM_ISOLATED","after":0,"limit":200,"events":[{"schema":"aot-gcsi-sim/event v1","source":"AOT_GCSI_SIM_ISOLATED","action":"OPEN","trade_id":"32f1a0a2-ed37-4a1e-a644-f05b1c418975","created_at":"2026-10-14T16:01:16.961Z","direction":"SHORT","strength":4,"reason":"anchor_4_4","replay":false,"event_id":"32f1a0a2-ed37-4a1e-a644-f05b1c418975","seq":1,"gc_price":4101.3,"si_price":55.87,"instruments":{"gc":"GC","si":"SI"},"simulated":true,"orders":"NONE"}],"more":false,"last_seq":1}
+== /gcsi/history
+{"enabled":true,"schema":"aot-gcsi-history/1","book":"GCSI_SIM","exclusive":true,"simulated":true,"days":30,"includeReplay":false,"count":0,"bad_lines":0,"summary":{"trades":0,"wins":0,"losses":0,"totalUsd":0,"winRate":null},"trades":[]}
+
+== homolog /sim/events
+{"schema":"aot-sim/events v1","enabled":false,"source":"AOT_CANONICAL","after":0,"limit":200,"last_seq":0,"server_time":"2026-10-14T16:04:23.633Z","more":false,"bad_lines":0,"events":[]}
+
+== prod /gcsi/sim
+{"enabled":false,"note":"AOT_GCSI_SIM=off (padrão)"}
+== files homolog history-gcsi
+total 10
+drwxr-xr-x 1 ADM 197121   0 Oct 14 13:01 .
+drwxr-xr-x 1 ADM 197121   0 Oct 14 12:43 ..
+-rw-r--r-- 1 ADM 197121 406 Oct 14 13:01 gcsi-events-2026-10.jsonl
+-rw-r--r-- 1 ADM 197121 546 Oct 14 13:01 gcsi-sim-state.json
+== prod history-gcsi exists?
+ls: cannot access 'C:/Users/ADM/.claude/aot/history-gcsi': No such file or directory
