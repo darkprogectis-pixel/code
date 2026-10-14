@@ -19,6 +19,7 @@ Sessão 2ce90375. Nada foi modificado, reconstruído ou instalado, e nenhum LIVE
   - SharedState de 14/10;
   - .csproj/.xml/.dll/.pdb/resources do F5 de 14/10 12:15;
   - AoClassicCache (dados diários).
+- **NT8 fora de bin\Custom** (varredura completa, sem log/db/cache/WebView/sinais FlowOne): `alfaomega-robo/config` accounts.json (13/10, com .bak-autoprovision), ativos.json (13/10), operacional.json (14/10); Config.xml e UI.xml (14/10); KokoroTTS status.
 - **NT8 templates/workspaces**: `ALFA  OMEGA.xml` (13/10), `_Workspaces.xml` e Risk default (14/10), chart template `ABC. ALFA BOT NQ` (14/10).
 - **`~\.claude\aot`**, fora do Git:
   - native-automation.cjs + public/automation-live.js (12/10 01:27);
@@ -46,6 +47,10 @@ Sessão 2ce90375. Nada foi modificado, reconstruído ou instalado, e nenhum LIVE
 | 12 | ES/NQ R1–R10 + R3 Gate 4/4 + ligação BFF | 14/10 · adeb1a4/0c3e1ba | Regras em staging | **Não** | Não (proibido) | Não | staging esnq-entry-exit-rules | B | Excluir |
 | 13 | AO 2.0 F0 | 14/10 · 3f57e19 | Só documentação | Não | Não (proibido) | Não | — | B | Excluir |
 | 14 | Credenciais dos packs R3/R4/R5 | 14/10 · 6123e55/0f18ab3 | Proposta; gate fechado | **Não** | (seria cliente) | Não | BLOCKED, nada aplicado | B | Nada a incluir |
+| 15 | alfaomega-robo/config/accounts.json | 13/10 12:51 (fora do Git) | +1 conta autoprovisionada pelo produto (sim02 / Sim…02, Simulator) | Sim (runtime) | Não: cada cliente autoprovisiona a sua | Não (por desenho) | 10599 → 11099 B; diff estrutural sem segredos | E | Não incluir |
+| 16 | alfaomega-robo/config/ativos.json | 13/10 15:52 (fora do Git) | Conta de execução e qty por ativo da OLIVER (ES/NQ Sim01, MES/MNQ conta TAKEPROFIT; NES/NNQ off) | Sim (runtime) | Não: contas da OLIVER | Não | versao 200 | E | Não incluir |
+| 17 | alfaomega-robo/config/operacional.json | 14/10 08:40 (fora do Git) | play=true via AoControlCenter (ADM@OLIVER) | Sim (runtime) | Não | Não | versao 63 | E | Não incluir |
+| 18 | NT8 Config.xml / UI.xml / KokoroTTS status | 14/10 | Configuração local do NT8 e da voz | Sim | Não | Não | mtimes | E | Não incluir |
 
 Licenciamento e segurança: nenhuma alteração implantada no período. O servidor de licença não foi alterado e o piloto-01 continua sem licença. Robô (AlfaOmegaRobo.cs da OLIVER): mtime 08/10, sem alteração no período.
 
@@ -59,7 +64,7 @@ Matriz completa: `MATRIX_PACK_X_OLIVER_20261014.tsv`. SHA256 bruto, com normaliz
 - Dependências externas: Newtonsoft.Json.dll está no pack. Os relays/servidores remotos ficam do lado do servidor e não mudaram para clientes no período (o HIRO → Gate é interno ao BFF do AOT).
 
 ## Resultado
-- 14 alterações identificadas: 11 implantadas (9 C, 2 E), 3 não implantadas (B).
+- 18 alterações identificadas: 15 implantadas (9 C, 6 E), 3 não implantadas (B).
 - Aplicáveis a clientes: 0. Presentes no pack: 0/0. Ausentes: 0.
 - Diferenças justificadas: as 18 DIFF + 2 ABSENT, conforme acima.
 - **PACK ATUALIZADO = SIM.** Nenhuma correção necessária.
