@@ -1177,3 +1177,9 @@ JEV documentary A confidence 0.9 probabilities {"A":0.91,"B":0.02,"C":0,"D":0,"E
   - Caso A, renderizado pela `renderGate` real de produção com a saída de `buildGate` 4/4 sem direção (forca fraca ES/NQ): o card mostra "→ RADAR 4/4 ATENDIDO · GATE NÃO LIBEROU DIREÇÃO · NENHUM VEREDITO É EMITIDO", sem contradição com "Radar 4/4 FECHADO". Depois disso o card foi restaurado.
   - Console sem erros após reload.
   - Evidência: `esnq-anchor-text/evidence/chrome-prod-live-0de4.jpg` e `chrome-prod-caseA-4de4-sem-direcao.png`.
+- **VALIDAÇÃO CHROME DO auto.html EM PRODUÇÃO (14/10/2026 ~18:36Z, sessão `afa26a77`, só leitura, sem simulação):** página `http://127.0.0.1:3600/auto.html`; `aocRenderGate` e `aocGcsiGate` servidos contêm os dois fixes.
+  - **ES/NQ ao vivo, caso A real:** CLOSED, 4/4, NEUTRO, tape ao vivo, reason "Radar 4/4 FECHADO … gate não liberou direção — forca fraca NQ". O card mostra "→ RADAR 4/4 ATENDIDO · GATE NÃO LIBEROU DIREÇÃO · NENHUM VEREDITO É EMITIDO", sem contradição.
+  - **GC·SI ao vivo:** SEM_SINAL 0/4; mostra "→ sem radar, sem leitura de confluência GC·SI", correto.
+  - Console sem erros após reload.
+  - Evidência: `esnq-anchor-text/evidence/chrome-prod-auto-live-4de4-sem-direcao.jpg`.
+  - **Observação sem ação (fora do escopo, exige ordem própria):** no mesmo momento, outros elementos do auto.html mostravam "Confluência 4/4 — Confluência máxima — abrindo posição" (com NEUTRO, sem posição aberta) e o banner "CONFLUÊNCIA DUPLA ES×NQ · LONG · CONFIRMADA", com o gate fechado/NEUTRO. É um possível padrão de texto contraditório em outros componentes; não foi investigado nem tocado.
