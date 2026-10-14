@@ -1,0 +1,819 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INVICTUS 不可征服者 AOT · Automação</title>
+<style>
+  :root{
+    --void:#0B0E11; --panel:#12171C; --inset:#1A2129; --line:#232C35; --line-soft:#1B2229;
+    --ink:#E6EDF3; --ink-dim:#8A97A3; --ink-faint:#5A6672;
+    --long:#26A69A; --long-soft:#2FBFB0; --long-glow:rgba(38,166,154,.16);
+    --short:#EF5350; --short-glow:rgba(239,83,80,.16);
+    --warn:#FFB300; --warn-glow:rgba(255,179,0,.13); --steel:#5AB0C4;
+    --mono:ui-monospace,"SF Mono","JetBrains Mono","Cascadia Code",Consolas,monospace;
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --r:12px; --r-sm:8px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:
+      radial-gradient(1200px 600px at 15% -10%, #10161d 0%, transparent 60%),
+      radial-gradient(900px 500px at 110% 8%, #121a17 0%, transparent 55%),
+      var(--void);
+    color:var(--ink); font-family:var(--sans); font-size:14px; line-height:1.45;
+    -webkit-font-smoothing:antialiased; min-height:100vh}
+  .num{font-family:var(--mono); font-variant-numeric:tabular-nums}
+
+  /* topbar (idêntico ao Command) */
+  .topbar{display:flex; align-items:center; gap:20px; padding:10px 20px; border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,#0e1319,#0b0e11); position:sticky; top:0; z-index:5}
+  .brand{display:flex; align-items:baseline; gap:9px; font-weight:700; letter-spacing:.02em}
+  .brand .mark{color:var(--steel); font-size:15px}
+  .brand .sub{color:var(--ink-faint); font-size:11px; letter-spacing:.18em; text-transform:uppercase; font-weight:600}
+  .pill{display:inline-flex; align-items:center; gap:6px; padding:3px 9px; border-radius:999px; font-size:11px; font-weight:600; border:1px solid var(--line); color:var(--ink-dim)}
+  .pill.on{color:var(--long); border-color:rgba(38,166,154,.4); background:var(--long-glow)}
+  .pill.off{color:var(--ink-dim)}
+  .tabs{display:flex; gap:2px; margin-left:14px; padding-left:16px; border-left:1px solid var(--line)}
+  .tab{padding:5px 13px; border-radius:7px; font-size:12px; font-weight:600; color:var(--ink-dim); cursor:pointer; text-decoration:none}
+  .tab:hover{color:var(--ink)}
+  .tab.active{background:var(--inset); color:var(--ink); box-shadow:inset 0 0 0 1px var(--line)}
+  .clock{margin-left:auto; color:var(--ink-dim)}
+
+  .wrap{max-width:1060px;margin:0 auto;display:flex;flex-direction:column;gap:16px;padding:clamp(14px,2.4vw,26px)}
+  .eyebrow{font-size:10.5px;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-faint);margin:0 0 12px;font-weight:600}
+  .card{background:linear-gradient(180deg,var(--panel),#0f1419);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px}
+
+  /* off / empty notice */
+  .notice{text-align:center;padding:46px 20px;color:var(--ink-dim)}
+  .notice .big{font-size:17px;color:var(--ink);font-weight:600;margin-bottom:8px}
+  .notice code{font-family:var(--mono);color:var(--warn);background:var(--inset);padding:2px 7px;border-radius:5px}
+  .hidden{display:none!important}
+
+  /* hero */
+  .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:14px}
+  @media (max-width:720px){.hero{grid-template-columns:1fr}}
+  .trigger{display:flex;flex-direction:column;gap:14px}
+  .trig-head{display:flex;align-items:center;justify-content:space-between}
+  .side-pill{font-size:12px;font-weight:700;letter-spacing:.14em;padding:4px 11px;border-radius:999px;text-transform:uppercase}
+  .side-pill.long{color:var(--long);background:var(--long-glow);border:1px solid rgba(38,166,154,.35)}
+  .side-pill.short{color:var(--short);background:var(--short-glow);border:1px solid rgba(239,83,80,.35)}
+  .side-pill.flat{color:var(--ink-dim);border:1px solid var(--line)}
+  .strength{display:flex;gap:6px;align-items:center}
+  .seg{width:34px;height:8px;border-radius:3px;background:var(--inset);border:1px solid var(--line)}
+  .seg.on{background:linear-gradient(90deg,var(--long),var(--long-soft));border-color:transparent;box-shadow:0 0 10px var(--long-glow)}
+  .seg.on.sh{background:linear-gradient(90deg,var(--short),#ff7a76)}
+  .trig-label{font-size:24px;font-weight:700;letter-spacing:.4px}
+  .trig-note{font-size:12px;color:var(--ink-dim);margin:0}
+
+  .pnl-hero{display:flex;flex-direction:column;justify-content:center;gap:6px;position:relative;overflow:hidden}
+  .pnl-hero::after{content:"";position:absolute;inset:0;background:radial-gradient(420px 180px at 100% 0%,var(--long-glow),transparent 70%);pointer-events:none}
+  .pnl-hero.neg::after{background:radial-gradient(420px 180px at 100% 0%,var(--short-glow),transparent 70%)}
+  .pnl-big{font-family:var(--mono);font-size:clamp(34px,6.5vw,54px);font-weight:600;line-height:1;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+  .pnl-split{display:flex;gap:22px;margin-top:8px;flex-wrap:wrap}
+  .pnl-split div{font-size:12px;color:var(--ink-dim)}
+  .pnl-split b{display:block;font-family:var(--mono);font-size:17px;font-variant-numeric:tabular-nums;color:var(--ink);font-weight:600;margin-top:2px}
+  .pos{color:var(--long)} .neg{color:var(--short)} .flat{color:var(--ink-dim)}
+
+  /* legs */
+  .legs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media (max-width:720px){.legs{grid-template-columns:1fr}}
+  .leg{background:linear-gradient(180deg,var(--panel),#0f1419);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px}
+  .leg.active{border-color:rgba(38,166,154,.32)}
+  .leg.active.sh{border-color:rgba(239,83,80,.32)}
+  .leg-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+  .leg-name{display:flex;align-items:baseline;gap:9px}
+  .leg-name h3{margin:0;font-size:19px;font-weight:700;letter-spacing:.5px}
+  .leg-name .qty{font-size:11.5px;color:var(--ink-dim)}
+  .leg-name .mult{font-size:10.5px;color:var(--ink-faint);font-family:var(--mono)}
+  .leg-pnl{font-family:var(--mono);font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;text-align:right}
+  .leg-pnl small{display:block;font-family:var(--sans);font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-faint);font-weight:400}
+  .rows{display:flex;flex-direction:column;gap:9px;margin-bottom:16px}
+  .row{display:flex;align-items:center;justify-content:space-between;font-size:12.5px}
+  .row .k{color:var(--ink-dim)}
+  .row .v{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink);font-size:13.5px}
+  .row .v.stop{color:var(--warn)} .row .v.hard{color:var(--short)}
+
+  .ladder{padding-top:14px;border-top:1px solid var(--line-soft)}
+  .ladder-cap{display:flex;justify-content:space-between;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--ink-faint);margin-bottom:9px}
+  .track{position:relative;height:6px;border-radius:3px;background:var(--inset);border:1px solid var(--line)}
+  .track .locked{position:absolute;top:0;bottom:0;border-radius:3px;background:linear-gradient(90deg,rgba(38,166,154,.35),var(--long))}
+  .track .tick{position:absolute;top:50%;width:2px;height:16px;transform:translate(-50%,-50%)}
+  .track .tick.entry{background:var(--ink-faint)}
+  .track .tick.stop{background:var(--warn);box-shadow:0 0 8px rgba(255,179,0,.5)}
+  .track .tick.hard{background:var(--short)}
+  .track .tick.spot{width:11px;height:11px;border-radius:50%;background:var(--long);border:2px solid #0b1210;box-shadow:0 0 10px var(--long-glow)}
+  .track .tick.spot.sh{background:var(--short);box-shadow:0 0 10px var(--short-glow)}
+  .ladder-legend{display:flex;gap:16px;margin-top:11px;font-size:10.5px;color:var(--ink-dim);flex-wrap:wrap}
+  .ladder-legend span{display:inline-flex;align-items:center;gap:6px}
+  .ladder-legend i{width:8px;height:8px;border-radius:2px;display:inline-block}
+  .i-entry{background:var(--ink-faint)} .i-stop{background:var(--warn)} .i-hard{background:var(--short)} .i-spot{background:var(--long);border-radius:50%}
+
+  /* params */
+  .params .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+  .field{background:var(--inset);border:1px solid var(--line);border-radius:var(--r-sm);padding:11px 13px}
+  .field label{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-faint);margin-bottom:7px}
+  .field .control{display:flex;align-items:baseline;gap:5px}
+  .field .val{font-family:var(--mono);font-size:18px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+  .field .unit{font-size:11px;color:var(--ink-dim)}
+
+  /* history */
+  .hist-scroll{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:12.5px;min-width:560px}
+  th{text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-faint);font-weight:500;padding:0 12px 10px;border-bottom:1px solid var(--line)}
+  td{padding:11px 12px;border-bottom:1px solid var(--line-soft);font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink-dim)}
+  td.side{font-family:var(--sans);font-weight:600}
+  td.side .s-long{color:var(--long)} td.side .s-short{color:var(--short)}
+  td .reason{font-family:var(--sans);font-size:11px;color:var(--ink-faint)}
+  tr:last-child td{border-bottom:none}
+  .hist-empty{color:var(--ink-faint);font-size:12.5px;padding:14px 2px}
+
+  .foot{font-size:11px;color:var(--ink-faint);text-align:center;padding-top:4px}
+  .foot b{color:var(--ink-dim);font-weight:600}
+
+  /* ── PAINEL DE CONFLUÊNCIA (2026-10-12) — espelho somente leitura do painel do Command (index.html).
+     Regras copiadas de lá com prefixo aoc- (as classes .hero/.seg/.pill/.eyebrow desta página têm outro
+     desenho e não podem ser tocadas). --r e os glows voltam aos valores do Command só dentro do painel. */
+  .aoc{--r:10px; --long-glow:rgba(38,166,154,.14); --short-glow:rgba(239,83,80,.14); display:flex; flex-direction:column; gap:16px; min-width:0}
+  .aoc.aoc-stale .aoc-flowview{opacity:.55}
+  .aoc-eyebrow{font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); font-weight:600}
+  .aoc-pill{display:inline-flex; align-items:center; gap:6px; padding:3px 9px; border-radius:999px; font-size:11px; font-weight:600; border:1px solid var(--line); color:var(--ink-dim)}
+  .aoc-heroes{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+  @media(max-width:720px){ .aoc-heroes{grid-template-columns:1fr} }
+  .aoc-gate{border-radius:var(--r); border:1px solid var(--line); overflow:hidden}
+  .aoc-gate .aoc-g-head{display:flex; align-items:center; gap:12px}
+  .aoc-gate .aoc-g-mark{font-weight:800; letter-spacing:.03em}
+  .aoc-gate .aoc-g-role{font-size:11px; color:var(--ink-faint); font-weight:600}
+  .aoc-gate .aoc-g-badge{margin-left:auto; font-weight:800; letter-spacing:.06em; text-transform:uppercase; padding:4px 11px; border-radius:7px; border:1px solid transparent}
+  .aoc-gate .aoc-g-body{display:flex; align-items:center; gap:18px}
+  .aoc-gate .aoc-g-strength{display:flex; align-items:center; gap:8px}
+  .aoc-ss{display:flex; gap:4px}
+  .aoc-ss span{width:30px; height:9px; border-radius:2px; background:var(--inset); box-shadow:inset 0 0 0 1px var(--line)}
+  .aoc-g-x{font-family:var(--mono); font-weight:800}
+  .aoc-g-tape,.aoc-g-dir{display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600}
+  .aoc-g-tape .aoc-tdot{width:8px; height:8px; border-radius:50%; background:var(--ink-faint)}
+  .aoc-g-reason{color:var(--ink-dim)}
+  .aoc-gate.aoc-wait{padding:22px 24px; display:flex; flex-direction:column; gap:16px}
+  .aoc-gate.aoc-wait .aoc-g-mark{font-size:15px; color:var(--ink)}
+  .aoc-gate.aoc-wait .aoc-g-badge{color:var(--ink-dim); border-color:var(--line); font-size:14px}
+  .aoc-gate.open{display:flex; align-items:center; gap:16px; padding:11px 18px;
+    background:linear-gradient(90deg,var(--long-glow),transparent 55%); border-color:rgba(38,166,154,.4)}
+  .aoc-gate.open .aoc-g-mark{color:var(--long); font-size:13px}
+  .aoc-gate.open .aoc-g-role{display:none}
+  .aoc-gate.open .aoc-g-head{gap:10px}
+  .aoc-gate.open .aoc-g-badge{color:var(--long); border-color:rgba(38,166,154,.45); background:var(--long-glow); font-size:11px; padding:3px 9px}
+  .aoc-gate.open .aoc-g-body{margin-left:auto; gap:14px}
+  .aoc-gate.open .aoc-ss span.on{background:var(--long)}
+  .aoc-gate.open .aoc-g-x{color:var(--long)}
+  .aoc-gate.open .aoc-g-tape .aoc-tdot.on{background:var(--long); box-shadow:0 0 7px var(--long)}
+  .aoc-gate.open .aoc-g-reason{display:none}
+  .aoc-gate.closed,.aoc-gate.offline{padding:22px 24px; display:flex; flex-direction:column; gap:16px}
+  .aoc-gate.closed{background:radial-gradient(700px 240px at 18% -20%, rgba(255,179,0,.12), transparent 70%),linear-gradient(180deg,#17110a,#120f0b);
+    border-color:rgba(255,179,0,.5); box-shadow:inset 0 0 120px -60px rgba(255,179,0,.55)}
+  .aoc-gate.offline{background:radial-gradient(700px 240px at 18% -20%, rgba(239,83,80,.12), transparent 70%),linear-gradient(180deg,#180d0d,#120b0b);
+    border-color:rgba(239,83,80,.45); box-shadow:inset 0 0 120px -60px rgba(239,83,80,.5)}
+  .aoc-gate.closed .aoc-g-mark,.aoc-gate.offline .aoc-g-mark{font-size:15px; color:var(--ink)}
+  .aoc-gate.closed .aoc-g-badge{color:#120f0b; background:var(--warn); font-size:14px; box-shadow:0 0 24px -6px var(--warn)}
+  .aoc-gate.offline .aoc-g-badge{color:#fff; background:var(--short); font-size:14px; box-shadow:0 0 24px -6px var(--short)}
+  .aoc-gate.closed .aoc-g-body,.aoc-gate.offline .aoc-g-body{flex-wrap:wrap; gap:14px 22px}
+  .aoc-gate.closed .aoc-ss span, .aoc-gate.offline .aoc-ss span{width:44px; height:12px}
+  .aoc-gate.closed .aoc-ss span.on{background:var(--warn)} .aoc-gate.closed .aoc-ss span.off{background:rgba(255,179,0,.12); box-shadow:inset 0 0 0 1px rgba(255,179,0,.3)}
+  .aoc-gate.offline .aoc-ss span.off{background:rgba(239,83,80,.12); box-shadow:inset 0 0 0 1px rgba(239,83,80,.3)}
+  .aoc-gate.closed .aoc-g-x{font-size:20px; color:var(--warn)} .aoc-gate.offline .aoc-g-x{font-size:20px; color:var(--short)}
+  .aoc-gate.closed .aoc-g-reason,.aoc-gate.offline .aoc-g-reason{font-size:14.5px; color:var(--ink); line-height:1.5; max-width:74ch; font-weight:500}
+  .aoc-gate.offline .aoc-g-tape .aoc-tdot, .aoc-gate.closed .aoc-g-tape .aoc-tdot.off{background:var(--short); box-shadow:0 0 7px var(--short)}
+  .aoc-gate .aoc-g-consequence{font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; font-weight:700; color:var(--warn)}
+  .aoc-gate.offline .aoc-g-consequence{color:var(--short)}
+  .aoc-heroes.aoc-sub{opacity:.5; filter:saturate(.6)}
+  .aoc-subhint{font-size:11px; color:var(--ink-faint); text-align:center; margin:-4px 0 0; letter-spacing:.02em}
+  .aoc-confluence{display:flex; align-items:center; justify-content:center; gap:20px; padding:16px 24px; border-radius:var(--r); border:1px solid var(--line); font-weight:600; letter-spacing:.04em; text-transform:uppercase; font-size:13px; margin-bottom:12px}
+  .aoc-confluence.long{background:var(--long-glow); color:var(--long); border-color:rgba(38,166,154,.5)}
+  .aoc-confluence.short{background:var(--short-glow); color:var(--short); border-color:rgba(239,83,80,.5)}
+  .aoc-confluence.neutral{background:transparent; color:var(--ink-dim); border-color:var(--line)}
+  .aoc-v2row{display:flex; gap:6px; align-items:center; margin-top:10px; flex-wrap:wrap; padding-top:10px; border-top:1px dashed var(--line)}
+  .aoc-v2chip{font-size:10px; letter-spacing:.03em; padding:3px 7px; border-radius:5px; border:1px solid var(--line); color:var(--ink-dim); text-transform:uppercase}
+  .aoc-v2chip b{margin-left:5px; color:var(--ink); font-weight:700}
+  .aoc-v2chip.long{border-color:rgba(38,166,154,.5); color:var(--long)}
+  .aoc-v2chip.short{border-color:rgba(239,83,80,.5); color:var(--short)}
+  .aoc-v2chip.ok{border-color:rgba(38,166,154,.5)}
+  .aoc-v2chip.alert{border-color:rgba(239,83,80,.5)}
+  .aoc-v2chip.na{opacity:.5}
+  .aoc-v2conv{margin-left:auto; font-size:10px; font-weight:700; letter-spacing:.05em; color:var(--ink-dim)}
+  .aoc-v2conv.MAXIMA{color:var(--long)} .aoc-v2conv.CONFIRMADA{color:var(--long)} .aoc-v2conv.REBAIXADA{color:var(--short)}
+  .aoc-carow{margin-top:8px; padding-top:8px; border-top:1px dashed var(--line); font-size:11px; color:var(--ink-dim)}
+  .aoc-carow.wait{opacity:.55}
+  .aoc-carow .aoc-ca-h{font-size:9.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-faint); font-weight:600; margin-bottom:4px}
+  .aoc-carow .aoc-ca-h i{font-style:normal; text-transform:none; letter-spacing:0; margin-left:6px}
+  .aoc-carow .aoc-ca-l{display:flex; gap:8px; align-items:baseline; line-height:1.55}
+  .aoc-carow .aoc-ca-k{min-width:150px; color:var(--ink-faint)}
+  .aoc-carow .aoc-ca-k b{color:var(--ink-dim); font-weight:600}
+  .aoc-carow .aoc-ca-v{color:var(--ink)} .aoc-carow .aoc-ca-v .num{font-variant-numeric:tabular-nums}
+  .aoc-carow .aoc-ca-v.na, .aoc-carow .aoc-ca-v.off{color:var(--ink-faint)}
+  .aoc-confluence2{display:none; align-items:center; justify-content:center; gap:14px; padding:10px 16px; border-radius:var(--r); border:1px dashed var(--line); font-size:12px; letter-spacing:.05em; text-transform:uppercase; margin:10px 0 0; color:var(--ink-dim)}
+  .aoc-confluence2.show{display:flex}
+  .aoc-confluence2.long{color:var(--long); border-color:rgba(38,166,154,.5)}
+  .aoc-confluence2.short{color:var(--short); border-color:rgba(239,83,80,.5)}
+  .aoc-hero{position:relative; background:linear-gradient(180deg,var(--panel),#0f141a); border:1px solid var(--line); border-radius:var(--r); padding:18px 18px 16px 22px; overflow:hidden}
+  .aoc-hero .aoc-spine{position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--ink-faint)}
+  .aoc-hero.long .aoc-spine{background:linear-gradient(180deg,var(--long),transparent)}
+  .aoc-hero.short .aoc-spine{background:linear-gradient(180deg,var(--short),transparent)}
+  .aoc-hero.neutral .aoc-spine{background:linear-gradient(180deg,var(--ink-faint),transparent)}
+  .aoc-hero.long{box-shadow:inset 0 0 60px -30px var(--long-glow)}
+  .aoc-hero.short{box-shadow:inset 0 0 60px -30px var(--short-glow)}
+  .aoc-hero-head{display:flex; align-items:baseline; justify-content:space-between; gap:10px}
+  .aoc-hero-sym{font-size:15px; font-weight:700; letter-spacing:.06em}
+  .aoc-hero-spot{color:var(--ink-dim); font-size:13px}
+  .aoc-verdict{display:flex; align-items:center; gap:12px; margin:10px 0 4px}
+  .aoc-dir{font-size:38px; font-weight:800; line-height:1}
+  .aoc-dir.long{color:var(--long)} .aoc-dir.short{color:var(--short)} .aoc-dir.neutral{color:var(--ink-dim)}
+  .aoc-arrow{font-size:26px; transform:translateY(-2px)}
+  .aoc-edge{margin-left:auto; text-align:right}
+  .aoc-edge .aoc-big{font-size:26px; font-weight:700} .aoc-edge .aoc-lbl{display:block; margin-top:2px}
+  .aoc-seal{margin-top:12px; display:flex; align-items:center; gap:10px}
+  .aoc-meter{display:flex; gap:3px}
+  .aoc-seg{width:26px; height:6px; border-radius:2px; background:var(--inset); box-shadow:inset 0 0 0 1px var(--line)}
+  .aoc-seal.ALTA .aoc-seg{background:var(--long)}
+  .aoc-seal.MEDIA .aoc-seg:nth-child(-n+2){background:var(--warn)}
+  .aoc-seal.BAIXA .aoc-seg:nth-child(1){background:var(--short)}
+  .aoc-seal-txt{font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase}
+  .aoc-seal.ALTA .aoc-seal-txt{color:var(--long)} .aoc-seal.MEDIA .aoc-seal-txt{color:var(--warn)} .aoc-seal.BAIXA .aoc-seal-txt{color:var(--short)}
+  .aoc-seal-txt.none{color:var(--ink-faint)}
+  .aoc-state-pill{margin-left:auto}
+  .aoc-state-pill.stand{color:var(--warn); border-color:rgba(255,179,0,.4); background:var(--warn-glow)}
+  .aoc-state-pill.tierA{color:var(--long); border-color:rgba(38,166,154,.4); background:var(--long-glow)}
+  .aoc-state-pill.offline{color:var(--ink-faint)}
+  .aoc-reason{margin-top:11px; padding-top:11px; border-top:1px solid var(--line-soft); color:var(--ink-dim); font-size:12.5px}
+  .aoc-chips{display:flex; gap:7px; margin-top:12px; flex-wrap:wrap}
+  .aoc-chip{display:inline-flex; align-items:center; gap:6px; padding:5px 10px; border-radius:7px; font-size:11.5px; font-weight:600; border:1px solid var(--line); background:var(--inset); color:var(--ink-dim)}
+  .aoc-chip .aoc-cdot{width:6px;height:6px;border-radius:50%; background:var(--ink-faint)}
+  .aoc-chip.ok{color:var(--long); border-color:rgba(38,166,154,.35)} .aoc-chip.ok .aoc-cdot{background:var(--long)}
+  .aoc-chip.alert{color:var(--warn); border-color:rgba(255,179,0,.35); background:var(--warn-glow)} .aoc-chip.alert .aoc-cdot{background:var(--warn)}
+  .aoc-panel{background:var(--panel); border:1px solid var(--line); border-radius:var(--r); padding:15px 18px}
+  .aoc-panel-h{display:flex; align-items:center; justify-content:space-between; margin-bottom:8px}
+  .aoc-panel-h .aoc-t{font-size:12.5px; font-weight:700}
+</style>
+<style id="ao-topbar-fix">
+  /* 2026-09-15 · nome INVICTUS cortado: .brand era item flex ENCOLHIVEL (flex-shrink:1, min-width:auto).
+     Em telas mais estreitas que a soma da barra (~1093 px) ele encolhia ate 73 px e o texto de 171 px
+     transbordava para fora. Agora a marca nunca encolhe nem quebra, e a BARRA quebra linha. */
+  .topbar{flex-wrap:wrap; row-gap:8px}
+  .topbar .brand{flex:0 0 auto; white-space:nowrap}
+  /* CAUSA no Command (index.html): a regra generica .mark do MAPA DE NIVEIS (position:absolute;
+     transform:translate(-50%,-50%)) tambem casava o .brand .mark e jogava metade do nome para fora
+     da tela em QUALQUER largura. A marca da barra volta ao fluxo normal. */
+  .topbar .brand .mark{position:static; transform:none; text-align:left}
+</style>
+<script src="/ao-alias.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand"><span class="mark">◆ INVICTUS&nbsp;不可征服者</span><span class="sub">AOT · Automação</span></div>
+    <span id="enginePill" class="pill off">● —</span>
+    <span id="priceSrcPill" class="pill off" title="fonte do preço p/ P&amp;L/trailing">◈ —</span>
+    <div class="tabs"><a href="/" class="tab">Command</a><a href="/deep.html" class="tab">Deep Dive</a><a href="/auto.html" class="tab active">Automação</a><a href="/robo.html" class="tab">Robô</a><a href="/history.html" class="tab">Histórico</a><a href="/alfabot-signal.html" class="tab">ALFABOT SIGNAL</a></div>
+    <span id="clock" class="clock num">--:--:-- ET</span>
+  </div>
+
+  <div class="wrap">
+    <!-- estado: motor desligado -->
+    <div id="offCard" class="card hidden">
+      <div class="notice">
+        <div class="big">Motor de automação desligado</div>
+        <div>Suba o BFF com <code>AOT_SIM=on</code> para ativar o radar de entrada/saída e o trailing.</div>
+      </div>
+    </div>
+
+    <!-- painel ao vivo -->
+    <div id="panel" class="hidden" style="display:flex;flex-direction:column;gap:16px">
+      <!-- hero -->
+      <div class="hero">
+        <div class="card trigger">
+          <p class="eyebrow">Gatilho · Radar ES + NQ</p>
+          <div class="trig-head">
+            <span id="trigLabel" class="trig-label">—</span>
+            <span id="trigSide" class="side-pill flat">—</span>
+          </div>
+          <div id="strength" class="strength" aria-label="força do radar"></div>
+          <p id="trigNote" class="trig-note">—</p>
+        </div>
+        <div id="pnlHero" class="card pnl-hero">
+          <p class="eyebrow">Resultado da cesta · tempo real</p>
+          <div id="pnlBig" class="pnl-big flat">$0,00</div>
+          <div class="pnl-split">
+            <div>ES<b id="pnlEs" class="flat">—</b></div>
+            <div>NQ<b id="pnlNq" class="flat">—</b></div>
+            <div>Aberta há<b id="openFor">—</b></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- posição -->
+      <div id="legs" class="legs"></div>
+      <div id="noPos" class="card hidden"><div class="notice" style="padding:30px 20px"><div class="big">Sem posição aberta</div><div>Aguardando confluência máxima (4/4) do radar ES + NQ para abrir 1 ES + 1 NQ.</div></div></div>
+
+      <!-- parâmetros -->
+      <div class="card params">
+        <p class="eyebrow">Parâmetros da operação</p>
+        <div id="paramGrid" class="grid"></div>
+      </div>
+
+      <!-- painel de confluência (2026-10-12) — espelho somente leitura do painel do Command; dados do mesmo /state -->
+      <div id="aocPanel" class="aoc">
+        <div id="aocFlowtabs" style="display:flex;gap:6px;margin-bottom:12px">
+          <button class="aoc-flowtab" data-flow="esnq" style="background:#1c3a52;color:#e8eef4;border:1px solid #2a4a63;border-radius:7px;padding:6px 14px;cursor:pointer;font:13px inherit;font-weight:600">FLOW ES·NQ</button>
+          <button class="aoc-flowtab" data-flow="gc" style="background:#0d1a26;color:#8a97a6;border:1px solid #2a4a63;border-radius:7px;padding:6px 14px;cursor:pointer;font:13px inherit">FLOW GC·SI</button>
+          <button class="aoc-flowtab" data-flow="russell" style="background:#0d1a26;color:#8a97a6;border:1px solid #2a4a63;border-radius:7px;padding:6px 14px;cursor:pointer;font:13px inherit">FLOW RUSSELL</button>
+        </div>
+        <p id="aocStale" class="aoc-subhint" style="margin:0" hidden></p>
+        <div id="aocView-esnq" class="aoc-flowview">
+          <div id="aocGate" class="aoc-gate aoc-wait"><div class="aoc-g-head"><span class="aoc-g-mark">◆ ÂNCORA ALFA OMEGA</span><span class="aoc-g-role">GATE 1 · mercado futuro real (tape/agressão)</span><span class="aoc-g-badge">AGUARDANDO DADO</span></div></div>
+          <p id="aocSubhint" class="aoc-subhint" hidden></p>
+          <div id="aocConfluence" class="aoc-confluence neutral" hidden></div>
+          <div id="aocHeroes" class="aoc-heroes"></div>
+          <div id="aocConfluence2" class="aoc-confluence2"></div>
+        </div>
+        <div id="aocView-gc" class="aoc-flowview" hidden>
+          <!-- FLOW GC·SI (2026-10-12) — radar e cards por ativo; dados de st.flowGcSi, somente leitura -->
+          <div id="aocGcsiGate" class="aoc-gate aoc-wait"><div class="aoc-g-head"><span class="aoc-g-mark">◆ ÂNCORA GC·SI</span><span class="aoc-g-role">radar GC+SI · mercado futuro real (tape/agressão) · contexto, nunca operado</span><span class="aoc-g-badge">AGUARDANDO DADO</span></div></div>
+          <p id="aocGcsiSubhint" class="aoc-subhint" hidden></p>
+          <div id="aocGcsiHeroes" class="aoc-heroes"></div>
+          <div id="aocGcsiConfluence2" class="aoc-confluence2"></div>
+          <div style="height:14px"></div>
+          <div class="aoc-panel">
+            <div class="aoc-panel-h"><span class="aoc-t">FLOW GC · confluência auxiliar GC×SI</span><span class="aoc-eyebrow">contexto · NUNCA operado</span></div>
+            <div id="aocGcDetail" style="padding:14px"></div>
+          </div>
+        </div>
+        <div id="aocView-russell" class="aoc-flowview" hidden>
+          <div class="aoc-panel">
+            <div class="aoc-panel-h"><span class="aoc-t">FLOW RUSSELL · RTY (carona da âncora ES×NQ)</span><span class="aoc-eyebrow">autorização visual · manual · fora da automação</span></div>
+            <div id="aocRtyDetail" style="padding:14px"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- histórico -->
+      <div class="card">
+        <p class="eyebrow">Operações encerradas</p>
+        <div class="hist-scroll"><table><thead>
+          <tr><th>Direção</th><th>ES entra→sai</th><th>NQ entra→sai</th><th>Resultado</th><th>Motivo</th></tr>
+        </thead><tbody id="histBody"></tbody></table></div>
+        <div id="histEmpty" class="hist-empty hidden">Nenhuma operação encerrada ainda.</div>
+      </div>
+
+      <p class="foot">Radar <b>ES + NQ</b> · entrada em confluência máxima, saída quando a direção se desfaz · trailing e P&amp;L por instrumento em dólares</p>
+    </div>
+  </div>
+
+<script>
+const fmt2 = new Intl.NumberFormat('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+const fmtPx = new Intl.NumberFormat('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
+function usd(n){ if(n==null||isNaN(n)) return '—'; const s=n>0?'+':(n<0?'−':''); return s+'$'+fmt2.format(Math.abs(n)); }
+function px(n){ return n==null||isNaN(n)||!(n>0)?'—':fmtPx.format(n); }   // (2026-09-16) preco invalido (0) nunca vira "0,00"
+function pnlInvalido(t){ return !!t&&((t.pnlStatus!=null&&t.pnlStatus!=='ok')||['es','nq'].some(k=>t[k]&&(!(t[k].entry>0)||!(t[k].exit>0)))); }
+function cls(n){ return n>0?'pos':(n<0?'neg':'flat'); }
+function esc(s){ return String(s==null?'':s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+const REASON = { anchor_neutro:'Direção neutra', trailing_stop_es:'Trailing stop (ES)', trailing_stop_nq:'Trailing stop (NQ)', hard_stop_es:'Stop de proteção (ES)', hard_stop_nq:'Stop de proteção (NQ)' };
+
+function clockTick(){
+  try{ const d=new Date(); const et=new Intl.DateTimeFormat('en-US',{timeZone:'America/New_York',hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'}).format(d);
+    document.getElementById('clock').textContent=et+' ET'; }catch(e){}
+}
+function elapsed(fromIso){
+  if(!fromIso) return '—';
+  const s=Math.max(0,Math.floor((Date.now()-Date.parse(fromIso))/1000));
+  const m=Math.floor(s/60), ss=String(s%60).padStart(2,'0'); return m+':'+ss;
+}
+
+// Tolerante aos dois formatos de direção (string canônica do /state e o inteiro cru
+// que o bridge emite), igual a public/deep.html L278 e narrator/narrator.js L80.
+// O BFF já normaliza em buildGate(); isto é cinto-e-suspensório p/ estado persistido antigo.
+const dirWord=(d)=>d==='LONG'||d===1?'LONG':d==='SHORT'||d===-1?'SHORT':'NEUTRO';
+
+function renderStrength(strength, dir){
+  const el=document.getElementById('strength'); el.innerHTML='';
+  const sh = dirWord(dir)==='SHORT';
+  for(let i=0;i<4;i++){ const d=document.createElement('span'); d.className='seg'+(i<strength?(' on'+(sh?' sh':'')):''); el.appendChild(d); }
+}
+
+// mapeia preço -> % dentro de [lo,hi]
+function pct(v,lo,hi){ if(hi<=lo) return 50; return Math.max(0,Math.min(100,(v-lo)/(hi-lo)*100)); }
+
+function ladder(side, entry, stop, hard, spot){
+  const sh = side==='SHORT';
+  const pts=[entry,spot]; if(stop!=null)pts.push(stop); if(hard!=null)pts.push(hard);
+  let lo=Math.min.apply(null,pts), hi=Math.max.apply(null,pts);
+  const pad=(hi-lo)*0.12||1; lo-=pad; hi+=pad;
+  const pE=pct(entry,lo,hi), pS=stop!=null?pct(stop,lo,hi):null, pH=hard!=null?pct(hard,lo,hi):null, pP=pct(spot,lo,hi);
+  // trava de lucro: do entry até o stop (só quando o stop está do lado do lucro)
+  let lockL=null,lockW=null;
+  if(pS!=null){ const a=Math.min(pE,pS), b=Math.max(pE,pS); const inProfit = sh ? (stop<=entry) : (stop>=entry); if(inProfit){ lockL=a; lockW=b-a; } }
+  let h='<div class="track">';
+  if(lockW!=null) h+=`<div class="locked" style="left:${lockL}%;width:${lockW}%"></div>`;
+  if(pH!=null) h+=`<span class="tick hard" style="left:${pH}%"></span>`;
+  h+=`<span class="tick entry" style="left:${pE}%"></span>`;
+  if(pS!=null) h+=`<span class="tick stop" style="left:${pS}%"></span>`;
+  h+=`<span class="tick spot${sh?' sh':''}" style="left:${pP}%"></span></div>`;
+  h+='<div class="ladder-legend"><span><i class="i-entry"></i>Entrada</span>'+
+     (pS!=null?'<span><i class="i-stop"></i>Trailing</span>':'')+
+     (pH!=null?'<span><i class="i-hard"></i>Proteção</span>':'')+
+     `<span><i class="i-spot"></i>Preço</span></div>`;
+  return h;
+}
+
+function legCard(name, mult, side, leg){
+  const sh=side==='SHORT';
+  const pnlC=cls(leg.pnlUsd);
+  const stopTxt = leg.stop!=null ? (px(leg.stop)+(leg.stopActive?' · travado':' · breakeven')) : 'sem trailing ainda';
+  return `<div class="leg active${sh?' sh':''}">
+    <div class="leg-head">
+      <div class="leg-name"><h3>${name}</h3><span class="qty">${leg.contracts} contrato${leg.contracts>1?'s':''}</span><span class="mult">$${mult}/pt</span></div>
+      <div class="leg-pnl ${pnlC}">${usd(leg.pnlUsd)}<small>${side==='LONG'?'Long':'Short'}</small></div>
+    </div>
+    <div class="rows">
+      <div class="row"><span class="k">Entrada</span><span class="v">${px(leg.entry)}</span></div>
+      <div class="row"><span class="k">Stop (trailing)</span><span class="v stop">${stopTxt}</span></div>
+      <div class="row"><span class="k">Stop de proteção</span><span class="v hard">${px(leg.hardStop)} · limite</span></div>
+    </div>
+    <div class="ladder">
+      <div class="ladder-cap"><span>Entrada</span><span>Stops</span><span>Preço</span></div>
+      ${ladder(side, leg.entry, leg.stop, leg.hardStop, /*spot*/ side==='LONG'? leg.entry+(leg.pnlUsd/mult) : leg.entry-(leg.pnlUsd/mult))}
+    </div></div>`;
+}
+
+function renderSim(sim){
+  const off=document.getElementById('offCard'), panel=document.getElementById('panel');
+  const pill=document.getElementById('enginePill');
+  if(!sim || sim._err){ off.classList.remove('hidden'); panel.classList.add('hidden');
+    pill.className='pill off'; pill.textContent='● Motor off'; return; }
+  off.classList.add('hidden'); panel.classList.remove('hidden');
+
+  const a=sim.anchor||{dir:'NEUTRO',strength:0};
+  const side=sim.side||'FLAT';
+  const open = side==='LONG'||side==='SHORT';
+  pill.className='pill on'; pill.textContent='● Motor ativo';
+
+  // fonte do preço (P&L/trailing) — badge âmbar quando NT8/Replay p/ não confundir com P&L real
+  const ps=sim.priceSource||{id:'gexbot'};
+  const psp=document.getElementById('priceSrcPill');
+  psp.textContent='◈ Preço: '+(ps.label||ps.id);
+  psp.className='pill '+(ps.forReplay?'off':'on');
+  psp.style.color=ps.forReplay?'var(--warn)':''; psp.style.borderColor=ps.forReplay?'var(--warn)':'';
+  psp.title=ps.forReplay?'P&L de TESTE — preço do NT8 (segue Replay)':'P&L real — preço do gexbot ao vivo';
+
+  // gatilho
+  renderStrength(a.strength||0, a.dir);
+  document.getElementById('trigLabel').textContent = (a.strength===4?'Confluência 4/4':'Radar '+(a.strength||0)+'/4');
+  const ts=document.getElementById('trigSide');
+  const aw=dirWord(a.dir);
+  ts.className='side-pill '+(aw==='LONG'?'long':aw==='SHORT'?'short':'flat');
+  ts.textContent = aw==='LONG'?'▲ Long':aw==='SHORT'?'▼ Short':'● Neutro';
+  document.getElementById('trigNote').textContent = open
+    ? 'Posição aberta e mantida enquanto a direção não virar neutra.'
+    : (a.strength===4?'Confluência máxima — abrindo posição.':'Aguardando confluência máxima (4/4) do radar ES + NQ.');
+
+  // P&L herói
+  const pnl=sim.pnl||{}; const tot=pnl.totalUsd||0;
+  const hero=document.getElementById('pnlHero'); hero.classList.toggle('neg', tot<0);
+  const big=document.getElementById('pnlBig'); big.textContent=usd(open?tot:0); big.className='pnl-big '+(open?cls(tot):'flat');
+  const pe=document.getElementById('pnlEs'), pn=document.getElementById('pnlNq');
+  pe.textContent=open?usd(pnl.esUsd):'—'; pe.className=open?cls(pnl.esUsd):'flat';
+  pn.textContent=open?usd(pnl.nqUsd):'—'; pn.className=open?cls(pnl.nqUsd):'flat';
+  document.getElementById('openFor').textContent=open?elapsed(sim.openedAt):'—';
+
+  // pernas
+  const legs=document.getElementById('legs'), noPos=document.getElementById('noPos');
+  if(open && sim.position){ legs.classList.remove('hidden'); noPos.classList.add('hidden');
+    let h=''; if(sim.position.es) h+=legCard('ES', (sim.params&&sim.params.multEs)||50, side, sim.position.es);
+    if(sim.position.nq) h+=legCard('NQ', (sim.params&&sim.params.multNq)||20, side, sim.position.nq);
+    legs.innerHTML=h;
+  } else { legs.classList.add('hidden'); legs.innerHTML=''; noPos.classList.remove('hidden'); }
+
+  // parâmetros
+  const P=sim.params||{};
+  const pg=document.getElementById('paramGrid');
+  const F=(l,v,u)=>`<div class="field"><label>${l}</label><div class="control"><span class="val">${v}</span><span class="unit">${u||''}</span></div></div>`;
+  pg.innerHTML =
+    F('Breakeven a partir de','$'+(P.beAtProfitUsd??'—'),'lucro')+
+    F('Passo de lucro','$'+(P.stepProfitUsd??'—'),'por degrau')+
+    F('Stop sobe','$'+(P.stepStopUsd??'—'),'por degrau')+
+    F('Stop de proteção','$'+(P.hardStopUsd??'—'),'por ativo')+
+    F('Contratos',((P.contractsEs??1)+' + '+(P.contractsNq??1)),'ES + NQ')+
+    F('Cooldown',(P.cooldownSec??'—'),'seg');
+
+  // histórico
+  const body=document.getElementById('histBody'), empty=document.getElementById('histEmpty');
+  const H=sim.history||[];
+  if(!H.length){ body.innerHTML=''; empty.classList.remove('hidden'); }
+  else{ empty.classList.add('hidden');
+    body.innerHTML=H.map(t=>{
+      const sc=t.side==='LONG'?'s-long':'s-short'; const sl=t.side==='LONG'?'▲ Long':'▼ Short';
+      const es=t.es?`${px(t.es.entry)} → ${px(t.es.exit)}`:'—';
+      const nq=t.nq?`${px(t.nq.entry)} → ${px(t.nq.exit)}`:'—';
+      const inv=pnlInvalido(t);   // (2026-09-16) saida desconhecida: resultado NAO calculado — "pendente"
+      return `<tr><td class="side"><span class="${sc}">${sl}</span></td><td>${es}</td><td>${nq}</td>`+
+        `<td class="${inv?'':cls(t.totalUsd)}">${inv?'pendente':usd(t.totalUsd)}</td><td><span class="reason">${esc(REASON[t.reason]||t.reason)}</span></td></tr>`;
+    }).join('');
+  }
+}
+
+// ── PAINEL DE CONFLUÊNCIA (2026-10-12) — espelho SOMENTE LEITURA do painel do Command (index.html) ──
+// Mesmos campos do /state que o Command lê (gate, symbols, confluence, v2, confluenciaAdicional, flowGc,
+// flowRussell), mesmos textos e mesmas regras de exibição. Nenhum cálculo, critério ou fonte nova:
+// dado ausente aparece como aguardando/indisponível.
+const aocFmt = (n,d=2)=> (n==null||!isFinite(n)) ? '—' : Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
+function aocMoney(v){ if(v==null||!isFinite(v))return '—'; const a=Math.abs(v), s=v<0?'−':'+';
+  if(a>=1e9)return s+'$'+(a/1e9).toFixed(2)+'B'; if(a>=1e6)return s+'$'+(a/1e6).toFixed(1)+'M';
+  if(a>=1e3)return s+'$'+(a/1e3).toFixed(0)+'k'; return s+'$'+Math.round(a); }
+function aocDirClass(d){ return d==='LONG'?'long':d==='SHORT'?'short':'neutral'; }
+function aocArrow(d){ return d==='LONG'?'▲':d==='SHORT'?'▼':'■'; }
+
+function aocHeroCard(sym, s, extra){
+  if(!s) return `<div class="aoc-hero neutral"><div class="aoc-spine"></div><div class="aoc-hero-head"><span class="aoc-hero-sym">${sym}</span><span class="aoc-hero-spot"><span style="color:var(--ink-faint)">indisponível</span></span></div><div class="aoc-reason">/state sem dado para este ativo</div></div>`;
+  const t0=s.tier0||{}, cv=s.conviction||{}, dir=t0.direction||'NEUTRO';
+  const dc=aocDirClass(dir);
+  const off = t0.state==='OFFLINE';
+  const stand = t0.state==='STAND_DOWN';
+  const conf = (t0.confidence!=null)? Math.round(t0.confidence) : null;
+  const tgSent = !off && !stand && dir!=='NEUTRO' && conf!=null && conf>=75;
+  const tgPill = tgSent
+    ? '<span class="aoc-pill aoc-state-pill tierA" title="atende o criterio de envio ao canal darkcode_futures (conf>=75)">&#8594; Telegram</span>'
+    : '<span class="aoc-pill aoc-state-pill" style="opacity:.55" title="abaixo do limiar de envio (conf>=75) ou gate inativo">Telegram: &#8212;</span>';
+  const lvl = cv.level||'—';
+  const statePill = off ? '<span class="aoc-pill aoc-state-pill offline">offline</span>'
+    : stand ? '<span class="aoc-pill aoc-state-pill stand">esperando confirmação</span>'
+    : (t0.tier==='A' ? '<span class="aoc-pill aoc-state-pill tierA">Tier A</span>' : '<span class="aoc-pill aoc-state-pill">Tier '+esc(t0.tier||'—')+'</span>');
+  const chips = (cv.modulators||[]).map(m=>{
+    const k = m.kind==='ok'?'ok':m.kind==='alert'?'alert':'';
+    return `<span class="aoc-chip ${k}"><span class="aoc-cdot"></span>${esc(m.t)}</span>`;
+  }).join('');
+  const spot = s.spot!=null ? `spot <span class="num">${aocFmt(s.spot)}</span>` : '<span style="color:var(--ink-faint)">sem spot</span>';
+  return `<div class="aoc-hero ${dc}">
+    <div class="aoc-spine"></div>
+    <div class="aoc-hero-head"><span class="aoc-hero-sym">${sym}</span><span class="aoc-hero-spot">${spot}</span></div>
+    <div class="aoc-verdict">
+      <span class="aoc-dir ${dc}">${esc(dir)}</span><span class="aoc-arrow" style="color:var(--${dc==='neutral'?'ink-faint':dc})">${aocArrow(dir)}</span>
+      <div class="aoc-edge"><span class="aoc-big num" style="color:var(--${dc==='neutral'?'ink-dim':dc})">${conf!=null?conf+'%':'—'}</span><span class="aoc-lbl aoc-eyebrow">edge do gate</span></div>
+    </div>
+    <div class="aoc-seal ${esc(lvl)}">
+      <div class="aoc-meter"><span class="aoc-seg"></span><span class="aoc-seg"></span><span class="aoc-seg"></span></div>
+      <span class="aoc-seal-txt ${lvl==='—'?'none':''}">Convicção ${lvl==='—'?'indef.':esc(lvl)}</span>
+      ${statePill}${tgPill}
+    </div>
+    <div class="aoc-reason">${esc(t0.reason||'—')}</div>
+    <div class="aoc-chips">${chips||'<span class="aoc-chip"><span class="aoc-cdot"></span>sem confirmadores</span>'}</div>
+    ${extra||''}
+  </div>`;
+}
+
+// chips TAPE / HIRO / MULTI por ativo (st.v2) — '' quando stackMode==='v1', como no Command
+function aocV2Row(symKey, st){
+  if(!st || st.stackMode==='v1' || !st.v2 || st.v2._err) return '';
+  const leg = st.v2[symKey.toLowerCase()]; if(!leg) return '';
+  const c1=leg.c1||{}, c2=leg.c2||{}, c3=leg.c3||{}, conv=leg.conv||{};
+  const chip=(lbl,val,cls)=>`<span class="aoc-v2chip ${cls}">${lbl}<b>${esc(val)}</b></span>`;
+  const c1cls = c1.signal ? aocDirClass(c1.dir) : 'neutral';
+  const c1val = c1.available ? (c1.signal ? `${c1.dir} ${c1.confStrength}/2` : 'flat') : 'N/A';
+  const c2v = c2.confirm||'N/A';
+  const c2cls = c2v==='CONFIRMA'?'ok':c2v==='DIVERGE'?'alert':(c2v==='N/A'?'na':'');
+  const c3v = c3.available ? (c3.aligned?'ALINHADO':(c3.alignedCount||0)+'/3') : 'N/A';
+  const c3cls = c3.aligned?'ok':(c3.available?'':'na');
+  return `<div class="aoc-v2row" title="Camada 1 tape · Camada 2 HIRO (Net $ dos últimos 5min, NÃO o HIRO real/cumulativo) · Camada 3 charm/vol/vanna">
+    ${chip('TAPE', c1val, c1cls)}${chip('HIRO', c2v, c2cls)}${chip('MULTI', c3v, c3cls)}
+    <span class="aoc-v2conv ${esc(conv.level||'—')}">${esc(conv.level||'—')}</span>
+  </div>`;
+}
+
+// CONFLUÊNCIA ADICIONAL (st.confluenciaAdicional) — só fatos do evento, estados distintos, como no Command
+function aocCaEt(ms){ return new Date(ms).toLocaleTimeString('en-US',{timeZone:'America/New_York',hour12:false}) + ' ET'; }
+function aocCaIdade(s){
+  if(s==null||!isFinite(s)) return '';
+  if(s<60) return 'há '+Math.max(0,Math.round(s))+' s';
+  if(s<3600) return 'há '+Math.round(s/60)+' min';
+  const h=Math.floor(s/3600), m=Math.round((s%3600)/60); return 'há '+h+' h'+(m?' '+m+' min':'');
+}
+function aocCaLeg(nome, leg, fatos, semTxt){
+  const k='<span class="aoc-ca-k"><b>'+nome+'</b> · '+esc(leg?leg.unidade:'')+'</span>';
+  if(!leg) return '<div class="aoc-ca-l">'+k+'<span class="aoc-ca-v off">—</span></div>';
+  const t=esc(leg.why||'').replace(/"/g,'&quot;');
+  if(leg.estado==='na')           return '<div class="aoc-ca-l" title="'+t+'">'+k+'<span class="aoc-ca-v na">N/A</span></div>';
+  if(leg.estado==='indisponivel') return '<div class="aoc-ca-l" title="'+t+'">'+k+'<span class="aoc-ca-v off">indisponível</span></div>';
+  if(leg.estado==='sem_evento'||!leg.ultimo) return '<div class="aoc-ca-l" title="'+t+'">'+k+'<span class="aoc-ca-v">'+(semTxt||'sem evento')+'</span></div>';
+  return '<div class="aoc-ca-l">'+k+'<span class="aoc-ca-v">'+fatos(leg.ultimo)+'</span></div>';
+}
+function aocConfAdicionalRow(symKey, st){
+  const ca=st&&st.confluenciaAdicional; if(!ca||ca._err) return '';
+  const b=ca[symKey.toLowerCase()]; if(!b) return '';
+  const wait=b.estado!=='conviccao_existente';
+  const hf=aocCaLeg('HIRO Flow', b.hiroFlow, u=>'<b>'+esc(u.label)+'</b> · <span class="num">'+aocCaEt(u.ts)+'</span> · '+aocCaIdade(u.idadeS), 'sem evento na sessão');
+  const sw=aocCaLeg('Options Sweep', b.sweep, u=>esc(u.lado)+' · strike <span class="num">'+aocFmt(u.strike,0)+'</span> · <span class="num">'+aocMoney(u.premio).replace(/^[+−]/,'')+'</span> · <span class="num">'+aocCaEt(u.ts)+'</span> · '+aocCaIdade(u.idadeS), 'sem sweep na janela');
+  return '<div class="aoc-carow'+(wait?' wait':'')+'"><div class="aoc-ca-h">Confluência adicional<i>'+(wait?'aguardando convicção':'após a convicção')+'</i></div>'+hf+sw+'</div>';
+}
+
+function aocRenderGate(g){
+  const el=document.getElementById('aocGate');
+  const state=(g.state||'OFFLINE').toLowerCase();          // open | closed | offline
+  const open=state==='open';
+  const badge = open ? 'GATE ABERTO' : state==='closed' ? 'ESPERANDO CONFIRMAÇÃO' : 'PONTE OFFLINE';
+  const str = (typeof g.strength==='number') ? g.strength : 0;
+  const segs = [0,1,2,3].map(i=>`<span class="${i<str?'on':'off'}"></span>`).join('');
+  const tapeOn = !!g.tapeLive;
+  const dirTxt = open ? `<span class="aoc-g-dir">direção <b class="num" style="color:var(--long)">${esc(g.dir||'—')}</b></span>` : '';
+  const conseq = open ? '' : `<div class="aoc-g-consequence">→ sem radar, nenhum veredito é emitido</div>`;
+  el.className = 'aoc-gate '+(open?'open':state==='closed'?'closed':'offline');
+  el.innerHTML = `
+    <div class="aoc-g-head">
+      <span class="aoc-g-mark">◆ ÂNCORA ALFA OMEGA</span>
+      <span class="aoc-g-role">GATE 1 · mercado futuro real (tape/agressão)</span>
+      <span class="aoc-g-badge">${badge}</span>
+    </div>
+    <div class="aoc-g-body">
+      <div class="aoc-g-strength">
+        <div class="aoc-ss">${segs}</div>
+        <span class="aoc-g-x">${(typeof g.strength==='number')?g.strength:'?'}/4</span>
+        <span class="aoc-g-tape"><span class="aoc-tdot ${tapeOn?'on':'off'}"></span>${tapeOn?'tape ao vivo':'tape parado'}</span>
+        ${dirTxt}
+      </div>
+      <div class="aoc-g-reason">${esc(g.reason||'—')}</div>
+      ${conseq}
+    </div>`;
+}
+
+function aocShowFlow(name){
+  document.querySelectorAll('.aoc-flowview').forEach(v=>v.hidden = (v.id!=='aocView-'+name));
+  document.querySelectorAll('.aoc-flowtab').forEach(b=>{ const on=b.dataset.flow===name; b.style.background=on?'#1c3a52':'#0d1a26'; b.style.color=on?'#e8eef4':'#8a97a6'; b.style.fontWeight=on?'600':'400'; });
+}
+document.querySelectorAll('.aoc-flowtab').forEach(b=>b.addEventListener('click',()=>aocShowFlow(b.dataset.flow)));
+function aocRenderFlowGc(fg){
+  const el=document.getElementById('aocGcDetail'); if(!el) return;
+  if(!fg){ el.innerHTML='<div style="color:var(--ink-faint)">indisponível — /state sem dado de FLOW GC</div>'; return; }
+  const tape=fg.tape||{}, hiro=fg.hiro||{};
+  const col = fg.strength==='FORTE'?(fg.dir==='LONG'?'var(--long)':'var(--short)') : fg.strength==='DIVERGENTE'?'var(--warn)':'var(--ink-dim)';
+  el.innerHTML =
+    '<div style="font-size:22px;font-weight:700;color:'+col+'">'+esc(fg.strength||'—')+(fg.dir&&fg.dir!=='NEUTRO'?' · '+aocArrow(fg.dir)+' '+esc(fg.dir):'')+'</div>'
+    +'<div style="margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:10px">'
+      +'<div style="border:1px solid var(--line);border-radius:8px;padding:10px"><div style="color:var(--ink-faint);font-size:11px">TAPE (GC×SI)</div><div style="font-weight:600">'+esc(tape.dir||'—')+(tape.strength?' · '+esc(tape.strength)+'/4':'')+'</div><div style="color:var(--ink-dim);font-size:11px">'+(tape.agree?'GC e SI concordam':'sem confluência de tape')+'</div></div>'
+      +'<div style="border:1px solid var(--line);border-radius:8px;padding:10px"><div style="color:var(--ink-faint);font-size:11px">HIRO (GLD / SLV)</div><div style="font-weight:600">GLD '+esc(hiro.gc||'—')+' · SLV '+esc(hiro.si||'—')+'</div><div style="color:var(--ink-dim);font-size:11px">'+(hiro.agree?'os dois metais alinhados':'sem alinhamento HIRO')+'</div></div>'
+    +'</div>'
+    +'<div style="margin-top:10px;color:var(--ink-faint);font-size:11px;border-top:1px dashed var(--line);padding-top:8px">'+esc(fg._note||'')+'</div>';
+}
+function aocRenderFlowRussell(fr){
+  const el=document.getElementById('aocRtyDetail'); if(!el) return;
+  if(!fr){ el.innerHTML='<div style="color:var(--ink-faint)">indisponível — /state sem dado de FLOW RUSSELL</div>'; return; }
+  const col = fr.authorized?(fr.dir==='LONG'?'var(--long)':'var(--short)'):'var(--ink-dim)';
+  const badge = fr.authorized?('AUTORIZA '+fr.dir):'AGUARDA';
+  el.innerHTML =
+    '<div style="font-size:22px;font-weight:700;color:'+col+'">'+esc(badge)+'</div>'
+    +'<div style="margin-top:8px;color:var(--ink-dim)">'+esc(fr.reason||'')+'</div>'
+    +'<div style="margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:10px">'
+      +'<div style="border:1px solid var(--line);border-radius:8px;padding:10px"><div style="color:var(--ink-faint);font-size:11px">TAPE RTY</div><div style="font-weight:600">'+esc((fr.rty&&fr.rty.dir)||'—')+(fr.rty&&fr.rty.confStrength!=null?' · '+esc(fr.rty.confStrength)+'/2':'')+'</div></div>'
+      +'<div style="border:1px solid var(--line);border-radius:8px;padding:10px"><div style="color:var(--ink-faint);font-size:11px">ÂNCORA ES×NQ</div><div style="font-weight:600">'+esc((fr.anchor&&fr.anchor.dir)||'—')+'</div></div>'
+    +'</div>'
+    +(fr.hiro?'<div style="margin-top:8px;color:var(--ink-dim);font-size:12px">HIRO Russell: '+esc(fr.hiro.dir||'—')+'</div>':'')
+    +'<div style="margin-top:10px;color:var(--ink-faint);font-size:11px;border-top:1px dashed var(--line);padding-top:8px">'+esc(fr._note||'')+'</div>';
+}
+
+// ── FLOW GC·SI (2026-10-12) — radar e cards GC / SI a partir de st.flowGcSi (BFF) ──
+// SOMENTE LEITURA: desenha o que o BFF publica; nenhum cálculo, critério ou direção nasce aqui.
+// Campo sem fonte para ouro/prata (EDGE, MULTI, etapa de força) aparece como indisponível, com o motivo.
+function aocGcsiAge(ms){
+  if(ms==null||!isFinite(ms)) return '—';
+  if(ms>=86400000) return 'nunca publicado';
+  return ms>=60000 ? Math.round(ms/60000)+'min' : Math.round(ms/1000)+'s';
+}
+function aocGcsiGate(g){
+  const el=document.getElementById('aocGcsiGate'); if(!el) return;
+  const head=(badge)=>'<div class="aoc-g-head"><span class="aoc-g-mark">◆ ÂNCORA GC·SI</span><span class="aoc-g-role">radar GC+SI · mercado futuro real (tape/agressão) · contexto, nunca operado</span><span class="aoc-g-badge">'+badge+'</span></div>';
+  if(!g){ el.className='aoc-gate aoc-wait'; el.innerHTML=head('SEM DADO')+'<div class="aoc-g-body"><div class="aoc-g-reason">/state sem o radar GC·SI — indisponível.</div></div>'; return; }
+  const state=String(g.state||'UNAVAILABLE').toLowerCase();   // open | closed | offline | unavailable
+  if(state==='unavailable'){ el.className='aoc-gate aoc-wait'; el.innerHTML=head('INDISPONÍVEL')+'<div class="aoc-g-body"><div class="aoc-g-reason">'+esc(g.reason||'—')+'</div></div>'; return; }
+  const open=state==='open';
+  const badge = open ? 'RADAR 4/4 CONFIRMADO' : state==='closed' ? 'ESPERANDO CONFIRMAÇÃO' : 'PONTE OFFLINE';
+  const hasStr=(typeof g.strength==='number'), str=hasStr?g.strength:0;
+  const segs=[0,1,2,3].map(i=>'<span class="'+(i<str?'on':'off')+'"></span>').join('');
+  const tapeOn=!!g.tapeLive;
+  const dirTxt = open ? '<span class="aoc-g-dir">direção <b class="num" style="color:var(--'+aocDirClass(g.dir)+')">'+esc(g.dir||'—')+'</b></span>' : '';
+  const conseq = open ? '' : g.phase==='ESPERANDO_CONFIRMACAO' ? '<div class="aoc-g-consequence">→ radar 4/4 atendido · força insuficiente · gate fechado, sem direção e sem ordem</div>'
+    : '<div class="aoc-g-consequence">→ sem radar, sem leitura de confluência GC·SI</div>';
+  el.className='aoc-gate '+(open?'open':state==='closed'?'closed':'offline');
+  el.innerHTML=head(badge)
+    +'<div class="aoc-g-body"><div class="aoc-g-strength"><div class="aoc-ss">'+segs+'</div>'
+    +'<span class="aoc-g-x">'+(hasStr?g.strength:'?')+'/4</span>'
+    +'<span class="aoc-g-tape"><span class="aoc-tdot '+(tapeOn?'on':'off')+'"></span>'+(tapeOn?'tape ao vivo':'tape parado')+'</span>'+dirTxt+'</div>'
+    +'<div class="aoc-g-reason">'+esc(g.reason||'—')+'</div>'+conseq+'</div>';
+}
+function aocGcsiCard(title, leg){
+  if(!leg) return '<div class="aoc-hero neutral"><div class="aoc-spine"></div><div class="aoc-hero-head"><span class="aoc-hero-sym">'+title+'</span><span class="aoc-hero-spot"><span style="color:var(--ink-faint)">indisponível</span></span></div><div class="aoc-reason">/state sem dado para este ativo</div></div>';
+  const c1=leg.c1||{}, c2=leg.c2||{}, c3=leg.c3||{}, conv=leg.conv||{}, edge=leg.edge||{};
+  const live = leg.state==='LIVE';
+  const dir = (live && c1.signal) ? (c1.dir||'NEUTRO') : 'NEUTRO';   // direção só com tape vivo e ME∧MVI concordando
+  const dc=aocDirClass(dir);
+  const pill = live ? '<span class="aoc-pill aoc-state-pill tierA">tape ao vivo</span>'
+    : leg.state==='STALE' ? '<span class="aoc-pill aoc-state-pill stand">STALE · tape há '+esc(aocGcsiAge(leg.ageMs))+'</span>'
+    : leg.state==='OFFLINE' ? '<span class="aoc-pill aoc-state-pill offline">offline</span>'
+    : '<span class="aoc-pill aoc-state-pill offline">indisponível</span>';
+  const spot = leg.lastPrice!=null ? 'último <span class="num">'+aocFmt(leg.lastPrice)+'</span> · preço há '+esc(aocGcsiAge(leg.priceAgeMs)) : '<span style="color:var(--ink-faint)">sem preço</span>';
+  const lvl = conv.level||'—';
+  const chip=(t,k)=>'<span class="aoc-chip '+(k||'')+'"><span class="aoc-cdot"></span>'+esc(t)+'</span>';
+  const sg=(n)=> n>0?'+1':n<0?'−1':'0';
+  const chips = c1.available
+    ? chip('ME '+sg(leg.me), leg.me!==0?'ok':'')+chip('MVI '+sg(leg.mvi), leg.mvi!==0?'ok':'')
+      +chip('pressão '+(leg.press!=null?Number(leg.press).toFixed(5):'—'))
+      +chip('tape há '+aocGcsiAge(leg.ageMs), leg.fresh?'ok':'alert')
+      +(leg.sourceTs?chip('origem '+new Date(leg.sourceTs).toLocaleTimeString('pt-BR')):'')
+    : chip(c1.note||'sem dado de tape','alert');
+  const v2=(lbl,val,cls,tip)=>'<span class="aoc-v2chip '+cls+'"'+(tip?' title="'+esc(tip)+'"':'')+'>'+lbl+'<b>'+esc(val)+'</b></span>';
+  const c1cls = (live && c1.signal) ? aocDirClass(c1.dir) : 'neutral';
+  const c1val = c1.available ? (c1.signal ? c1.dir+' '+c1.confStrength+'/2' : 'flat') : 'N/A';
+  const c2v = c2.confirm||'N/A';
+  const c2cls = c2v==='CONFIRMA'?'ok':c2v==='DIVERGE'?'alert':(c2v==='N/A'?'na':'');
+  const c2tip = (c2.proxyNote||'')+((c2.spotgamma&&c2.spotgamma.reason)?' · '+c2.spotgamma.reason:'');
+  const c3v = c3.available ? (c3.aligned?'ALINHADO':(c3.alignedCount||0)+'/3') : 'N/A';
+  const c3cls = c3.aligned?'ok':(c3.available?'':'na');
+  const edgeTxt = (edge.available && edge.value!=null) ? Math.round(edge.value)+'%' : '—';
+  return '<div class="aoc-hero '+dc+'"><div class="aoc-spine"></div>'
+    +'<div class="aoc-hero-head"><span class="aoc-hero-sym">'+title+'</span><span class="aoc-hero-spot">'+spot+'</span></div>'
+    +'<div class="aoc-verdict"><span class="aoc-dir '+dc+'">'+esc(dir)+'</span><span class="aoc-arrow" style="color:var(--'+(dc==='neutral'?'ink-faint':dc)+')">'+aocArrow(dir)+'</span>'
+    +'<div class="aoc-edge"><span class="aoc-big num" style="color:var(--ink-dim)">'+edgeTxt+'</span><span class="aoc-lbl aoc-eyebrow" title="'+esc(edge.note||'')+'">edge do gate'+(edge.available?'':' · indisponível')+'</span></div></div>'
+    +'<div class="aoc-seal"><div class="aoc-meter"><span class="aoc-seg"></span><span class="aoc-seg"></span><span class="aoc-seg"></span></div>'
+    +'<span class="aoc-seal-txt '+(lvl==='—'?'none':'')+'">Convicção '+(lvl==='—'?'indef.':esc(lvl))+'</span>'+pill+'</div>'
+    +'<div class="aoc-reason">'+esc(conv.reason||'—')+'</div>'
+    +'<div class="aoc-chips">'+chips+'</div>'
+    +'<div class="aoc-v2row" title="Camada 1 tape · Camada 2 HIRO do ETF (proxy, Net $ dos últimos 5min) · Camada 3 sem fonte para ouro/prata">'
+    +v2('TAPE', c1val, c1cls)+v2('HIRO '+esc(c2.proxy||'ETF')+' (ETF)', c2v, c2cls, c2tip)+v2('MULTI', c3v, c3cls, c3.note||'')
+    +'<span class="aoc-v2conv '+esc(lvl)+'">'+esc(lvl)+'</span></div></div>';
+}
+function aocRenderFlowGcSi(f){
+  const heroes=document.getElementById('aocGcsiHeroes'), sub=document.getElementById('aocGcsiSubhint'), cf2=document.getElementById('aocGcsiConfluence2');
+  if(!heroes||!sub||!cf2) return;
+  if(!f || f._err || !f.gate){   // BFF sem o contrato novo (ou erro isolado): nada é inventado
+    aocGcsiGate(null); heroes.classList.add('aoc-sub');
+    heroes.innerHTML=aocGcsiCard('GC · Gold Futures', null)+aocGcsiCard('SI · Silver Futures', null);
+    sub.hidden=false; sub.textContent='FLOW GC·SI indisponível — o /state não trouxe o radar por ativo.';
+    cf2.className='aoc-confluence2'; cf2.textContent=''; return;
+  }
+  aocGcsiGate(f.gate);
+  const open=f.gate.state==='OPEN';
+  heroes.classList.toggle('aoc-sub', !open);
+  heroes.innerHTML=aocGcsiCard('GC · Gold Futures', f.gc)+aocGcsiCard('SI · Silver Futures', f.si);
+  sub.hidden=false;
+  sub.textContent = open
+    ? ((f.gate.forceStep&&f.gate.forceStep.note)||'')+' · contexto, nunca operado'
+    : f.gate.state==='OFFLINE' ? 'Cards aguardando o radar GC·SI — ponte offline.'
+    : f.gate.state==='UNAVAILABLE' ? 'Cards aguardando as pernas GC e SI da ponte do NinjaTrader.'
+    : 'Cards aguardando o radar GC·SI'+(f.gate.why?' — '+f.gate.why:' formar (4/4)')+'.';
+  const c=f.confluence;
+  if(c && c.agree && c.live){ cf2.className='aoc-confluence2 show '+aocDirClass(c.dir); cf2.textContent='◆ Confluência dupla GC×SI · '+c.dir+' · '+(c.level||''); }
+  else if(c && c.agree){ cf2.className='aoc-confluence2 show'; cf2.textContent='sinais de tape iguais, mas dado sem frescor (STALE) — sem confluência dupla'; }
+  else if(c){ cf2.className='aoc-confluence2 show'; cf2.textContent='trilhas independentes — sem confluência dupla'; }
+  else { cf2.className='aoc-confluence2'; cf2.textContent=''; }
+}
+
+let aocLastOk=null;   // hora local do último /state desenhado no painel
+function aocRender(st){
+  const root=document.getElementById('aocPanel'), stale=document.getElementById('aocStale');
+  if(!st||!st.symbols){   // /state falhou ou veio sem o contrato: nada é inventado, o último desenho fica esmaecido
+    root.classList.add('aoc-stale'); stale.hidden=false;
+    stale.textContent='Painel de confluência sem atualização — /state indisponível'+(aocLastOk?' · último dado '+aocLastOk:' · aguardando o primeiro dado');
+    return;
+  }
+  root.classList.remove('aoc-stale'); stale.hidden=true;
+  const heroesEl=document.getElementById('aocHeroes'), subhint=document.getElementById('aocSubhint');
+  if(st.gate){
+    aocRenderGate(st.gate);
+    const open = st.gate.state==='OPEN';
+    heroesEl.classList.toggle('aoc-sub', !open);
+    if(open){ subhint.hidden=true; }
+    else { subhint.hidden=false; subhint.textContent = st.gate.state==='OFFLINE'
+      ? 'Heroes aguardando o Radar Alfa Omega — ponte offline, sem veredito.'
+      : ('Heroes aguardando o Radar Alfa Omega' + (st.gate.why ? ' — ' + st.gate.why : ' formar (4/4)') + ' — sem veredito.'); }
+  } else {
+    const g=document.getElementById('aocGate'); g.className='aoc-gate aoc-wait';
+    g.innerHTML='<div class="aoc-g-head"><span class="aoc-g-mark">◆ ÂNCORA ALFA OMEGA</span><span class="aoc-g-role">GATE 1 · mercado futuro real (tape/agressão)</span><span class="aoc-g-badge">SEM DADO</span></div><div class="aoc-g-body"><div class="aoc-g-reason">/state sem objeto gate — indisponível.</div></div>';
+    heroesEl.classList.add('aoc-sub'); subhint.hidden=true;
+  }
+  heroesEl.innerHTML = aocHeroCard('ES · S&amp;P 500', st.symbols.ES, aocV2Row('ES', st) + aocConfAdicionalRow('ES', st)) + aocHeroCard('NQ · Nasdaq 100', st.symbols.NQ, aocV2Row('NQ', st) + aocConfAdicionalRow('NQ', st));
+  const cf2=document.getElementById('aocConfluence2');
+  const c=(st.stackMode!=='v1' && st.v2 && !st.v2._err) ? st.v2.confluence : null;
+  if(c && c.agree){ cf2.className='aoc-confluence2 show '+aocDirClass(c.dir); cf2.textContent='◆ Confluência dupla ES×NQ · '+c.dir+' · '+(c.level||''); }
+  else if(c){ cf2.className='aoc-confluence2 show'; cf2.textContent='trilhas independentes — sem confluência dupla'; }
+  else { cf2.className='aoc-confluence2'; cf2.textContent=''; }
+  const cf=document.getElementById('aocConfluence');
+  if(st.confluence){ cf.className='aoc-confluence '+aocDirClass(st.confluence.color==='long'?'LONG':st.confluence.color==='short'?'SHORT':''); cf.textContent=st.confluence.label||'—'; cf.hidden=false; }
+  else { cf.hidden=true; cf.textContent=''; }
+  aocRenderFlowGc(st.flowGc); aocRenderFlowRussell(st.flowRussell);
+  try{ aocRenderFlowGcSi(st.flowGcSi); }catch(e){ /* FLOW GC·SI isolado */ }
+  aocLastOk=new Date().toLocaleTimeString('pt-BR');
+}
+
+async function tick(){
+  let st=null;
+  try{ const r=await fetch('/state',{cache:'no-store'}); st=await r.json(); renderSim(st.sim); }
+  catch(e){ /* silencioso; mantém último render */ }
+  try{ aocRender(st); }catch(e){ /* o painel de confluência nunca interfere nos painéis acima */ }
+}
+setInterval(clockTick,1000); clockTick();
+tick(); setInterval(tick, 10000);
+</script>
+</body>
+</html>

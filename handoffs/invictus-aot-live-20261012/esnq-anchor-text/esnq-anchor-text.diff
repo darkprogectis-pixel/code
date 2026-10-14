@@ -1,0 +1,24 @@
+--- base/index.html	2026-10-14 15:17:07.775690000 -0300
++++ candidate/index.html	2026-10-14 15:17:08.006882000 -0300
+@@ -734,7 +734,8 @@
+   const segs = [0,1,2,3].map(i=>`<span class="${i<str?'on':'off'}"></span>`).join('');
+   const tapeOn = !!g.tapeLive;
+   const dirTxt = open ? `<span class="g-dir">direção <b class="num" style="color:var(--long)">${esc(g.dir||'—')}</b></span>` : '';
+-  const conseq = open ? '' : `<div class="g-consequence">→ sem radar, nenhum veredito é emitido</div>`;
++  const conseq = open ? '' : (g.tapeLive && g.strength===4 && g.dir!=='LONG' && g.dir!=='SHORT') ? `<div class="g-consequence">→ radar 4/4 atendido · gate não liberou direção · nenhum veredito é emitido</div>`
++    : `<div class="g-consequence">→ sem radar, nenhum veredito é emitido</div>`;
+   el.className = 'gate '+state;
+   el.innerHTML = `
+     <div class="g-head">
+--- base/auto.html	2026-10-14 15:17:07.748370800 -0300
++++ candidate/auto.html	2026-10-14 15:17:08.007882100 -0300
+@@ -619,7 +619,8 @@
+   const segs = [0,1,2,3].map(i=>`<span class="${i<str?'on':'off'}"></span>`).join('');
+   const tapeOn = !!g.tapeLive;
+   const dirTxt = open ? `<span class="aoc-g-dir">direção <b class="num" style="color:var(--long)">${esc(g.dir||'—')}</b></span>` : '';
+-  const conseq = open ? '' : `<div class="aoc-g-consequence">→ sem radar, nenhum veredito é emitido</div>`;
++  const conseq = open ? '' : (g.tapeLive && g.strength===4 && g.dir!=='LONG' && g.dir!=='SHORT') ? `<div class="aoc-g-consequence">→ radar 4/4 atendido · gate não liberou direção · nenhum veredito é emitido</div>`
++    : `<div class="aoc-g-consequence">→ sem radar, nenhum veredito é emitido</div>`;
+   el.className = 'aoc-gate '+(open?'open':state==='closed'?'closed':'offline');
+   el.innerHTML = `
+     <div class="aoc-g-head">

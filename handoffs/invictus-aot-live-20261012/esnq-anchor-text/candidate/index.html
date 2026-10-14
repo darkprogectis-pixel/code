@@ -1,0 +1,1273 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INVICTUS 不可征服者 AOT · Command</title>
+<style>
+  :root{
+    --void:#0B0E11; --panel:#12171C; --inset:#1A2129; --line:#232C35; --line-soft:#1B2229;
+    --ink:#E6EDF3; --ink-dim:#8A97A3; --ink-faint:#5A6672;
+    --long:#26A69A; --long-glow:rgba(38,166,154,.14);
+    --short:#EF5350; --short-glow:rgba(239,83,80,.14);
+    --warn:#FFB300; --warn-glow:rgba(255,179,0,.13);
+    --steel:#5AB0C4;
+    --mono:ui-monospace,"SF Mono","JetBrains Mono","Cascadia Code",Consolas,monospace;
+    --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --r:10px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{background:radial-gradient(1200px 600px at 78% -10%, #0f1620 0%, transparent 60%),var(--void);
+    color:var(--ink); font-family:var(--sans); font-size:14px; line-height:1.45; -webkit-font-smoothing:antialiased; min-height:100vh}
+  .num{font-family:var(--mono); font-variant-numeric:tabular-nums}
+  .eyebrow{font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); font-weight:600}
+
+  .topbar{display:flex; align-items:center; gap:20px; padding:10px 20px; border-bottom:1px solid var(--line);
+    background:linear-gradient(180deg,#0e1319,#0b0e11); position:sticky; top:0; z-index:5}
+  .brand{display:flex; align-items:baseline; gap:9px; font-weight:700; letter-spacing:.02em}
+  .brand .mark{color:var(--steel); font-size:15px}
+  .brand .sub{color:var(--ink-faint); font-size:11px; letter-spacing:.18em; text-transform:uppercase; font-weight:600}
+  .pill{display:inline-flex; align-items:center; gap:6px; padding:3px 9px; border-radius:999px; font-size:11px; font-weight:600; border:1px solid var(--line); color:var(--ink-dim)}
+  .pill.rth{color:var(--long); border-color:rgba(38,166,154,.4); background:var(--long-glow)}
+  .pill.closed{color:var(--ink-dim)}
+  .clock{margin-left:auto; color:var(--ink-dim)}
+  .tabs{display:flex; gap:2px; margin-left:14px; padding-left:16px; border-left:1px solid var(--line)}
+  .tab{padding:5px 13px; border-radius:7px; font-size:12px; font-weight:600; color:var(--ink-dim); cursor:pointer; text-decoration:none}
+  .tab:hover{color:var(--ink)}
+  .tab.active{background:var(--inset); color:var(--ink); box-shadow:inset 0 0 0 1px var(--line)}
+  .health{display:flex; gap:13px; align-items:center; padding-left:18px; border-left:1px solid var(--line)}
+  .src{display:flex; align-items:center; gap:6px; font-size:11px; color:var(--ink-dim)}
+  .dot{width:7px; height:7px; border-radius:50%; background:var(--ink-faint)}
+  .dot.live{background:var(--long); box-shadow:0 0 7px var(--long)}
+  .dot.stale{background:var(--warn); box-shadow:0 0 7px var(--warn)}
+  .dot.offline{background:var(--ink-faint)}
+  .src.offline{opacity:.55}
+  /* (2026-09-28) UI_SOURCE_COLOR_POLICY: cor = conexao (azul CONNECTED · amarelo AUTH/DISCONNECTED/ERROR); dado = texto */
+  .dot.conn{background:#42A5F5; box-shadow:0 0 7px #42A5F5}
+  .dot.down{background:#FFD600; box-shadow:0 0 7px #FFD600}
+  .src.down{color:#FFD600}
+  .src .ds{color:var(--ink-faint); font-size:9.5px; letter-spacing:.04em}
+
+  .stage{display:grid; grid-template-columns:1fr 340px; gap:16px; padding:16px 20px; max-width:1500px; margin:0 auto}
+  @media(max-width:1100px){ .stage{grid-template-columns:1fr} }
+  .col-main{display:flex; flex-direction:column; gap:16px; min-width:0}
+  .heroes{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+  @media(max-width:720px){ .heroes{grid-template-columns:1fr} }
+
+  /* ---------- GATE 1 · Alfa Omega (bloco adaptativo, dominante quando fechado) ---------- */
+  .gate{border-radius:var(--r); border:1px solid var(--line); overflow:hidden}
+  .gate .g-head{display:flex; align-items:center; gap:12px}
+  .gate .g-mark{font-weight:800; letter-spacing:.03em}
+  .gate .g-role{font-size:11px; color:var(--ink-faint); font-weight:600}
+  .gate .g-badge{margin-left:auto; font-weight:800; letter-spacing:.06em; text-transform:uppercase; padding:4px 11px; border-radius:7px; border:1px solid transparent}
+  .gate .g-body{display:flex; align-items:center; gap:18px}
+  .gate .g-strength{display:flex; align-items:center; gap:8px}
+  .ss{display:flex; gap:4px}
+  .ss span{width:30px; height:9px; border-radius:2px; background:var(--inset); box-shadow:inset 0 0 0 1px var(--line)}
+  .g-x{font-family:var(--mono); font-weight:800}
+  .g-tape,.g-dir{display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:600}
+  .g-tape .tdot{width:8px; height:8px; border-radius:50%; background:var(--ink-faint)}
+  .g-reason{color:var(--ink-dim)}
+
+  /* OPEN — faixa fina, discreta, cede foco aos heroes */
+  .gate.open{display:flex; align-items:center; gap:16px; padding:11px 18px;
+    background:linear-gradient(90deg,var(--long-glow),transparent 55%); border-color:rgba(38,166,154,.4)}
+  .gate.open .g-mark{color:var(--long); font-size:13px}
+  .gate.open .g-role{display:none}
+  .gate.open .g-head{gap:10px}
+  .gate.open .g-badge{color:var(--long); border-color:rgba(38,166,154,.45); background:var(--long-glow); font-size:11px; padding:3px 9px}
+  .gate.open .g-body{margin-left:auto; gap:14px}
+  .gate.open .ss span.on{background:var(--long)}
+  .gate.open .g-x{color:var(--long)}
+  .gate.open .g-tape .tdot.on{background:var(--long); box-shadow:0 0 7px var(--long)}
+  .gate.open .g-reason{display:none}
+
+  /* CLOSED / OFFLINE — DOMINANTE: explica o silêncio de toda a tela */
+  .gate.closed,.gate.offline{padding:22px 24px; display:flex; flex-direction:column; gap:16px}
+  .gate.closed{background:radial-gradient(700px 240px at 18% -20%, rgba(255,179,0,.12), transparent 70%),linear-gradient(180deg,#17110a,#120f0b);
+    border-color:rgba(255,179,0,.5); box-shadow:inset 0 0 120px -60px rgba(255,179,0,.55)}
+  .gate.offline{background:radial-gradient(700px 240px at 18% -20%, rgba(239,83,80,.12), transparent 70%),linear-gradient(180deg,#180d0d,#120b0b);
+    border-color:rgba(239,83,80,.45); box-shadow:inset 0 0 120px -60px rgba(239,83,80,.5)}
+  .gate.closed .g-mark,.gate.offline .g-mark{font-size:15px; color:var(--ink)}
+  .gate.closed .g-badge{color:#120f0b; background:var(--warn); font-size:14px; box-shadow:0 0 24px -6px var(--warn)}
+  .gate.offline .g-badge{color:#fff; background:var(--short); font-size:14px; box-shadow:0 0 24px -6px var(--short)}
+  .gate.closed .g-body,.gate.offline .g-body{flex-wrap:wrap; gap:14px 22px}
+  .gate.closed .ss span, .gate.offline .ss span{width:44px; height:12px}
+  .gate.closed .ss span.on{background:var(--warn)} .gate.closed .ss span.off{background:rgba(255,179,0,.12); box-shadow:inset 0 0 0 1px rgba(255,179,0,.3)}
+  .gate.offline .ss span.off{background:rgba(239,83,80,.12); box-shadow:inset 0 0 0 1px rgba(239,83,80,.3)}
+  .gate.closed .g-x{font-size:20px; color:var(--warn)} .gate.offline .g-x{font-size:20px; color:var(--short)}
+  .gate.closed .g-reason,.gate.offline .g-reason{font-size:14.5px; color:var(--ink); line-height:1.5; max-width:74ch; font-weight:500}
+  .gate.offline .g-tape .tdot, .gate.closed .g-tape .tdot.off{background:var(--short); box-shadow:0 0 7px var(--short)}
+  .gate .g-consequence{font-size:11.5px; letter-spacing:.03em; text-transform:uppercase; font-weight:700; color:var(--warn)}
+  .gate.offline .g-consequence{color:var(--short)}
+
+  /* heroes subordinados quando o gate não está aberto */
+  #heroes.subordinated{opacity:.5; filter:saturate(.6)}
+  #heroes.subordinated::after{content:''}
+  .subhint{font-size:11px; color:var(--ink-faint); text-align:center; margin:-4px 0 0; letter-spacing:.02em}
+
+  /* ────── CONFLUÊNCIA ES×NQ ────── */
+  .confluence{display:flex; align-items:center; justify-content:center; gap:20px; padding:16px 24px; border-radius:var(--r); border:1px solid var(--line); font-weight:600; letter-spacing:.04em; text-transform:uppercase; font-size:13px; margin-bottom:12px}
+  .confluence.long{background:var(--long-glow); color:var(--long); border-color:rgba(38,166,154,.5)}
+  .confluence.short{background:var(--short-glow); color:var(--short); border-color:rgba(239,83,80,.5)}
+  .confluence.neutral{background:transparent; color:var(--ink-dim); border-color:var(--line)}
+  /* ── NOVA hierarquia por trilhas (v2) — só aparece com stackMode≠v1; default invisível ── */
+  .v2row{display:flex; gap:6px; align-items:center; margin-top:10px; flex-wrap:wrap; padding-top:10px; border-top:1px dashed var(--line)}
+  .v2chip{font-size:10px; letter-spacing:.03em; padding:3px 7px; border-radius:5px; border:1px solid var(--line); color:var(--ink-dim); text-transform:uppercase}
+  .v2chip b{margin-left:5px; color:var(--ink); font-weight:700}
+  .v2chip.long{border-color:rgba(38,166,154,.5); color:var(--long)}
+  .v2chip.short{border-color:rgba(239,83,80,.5); color:var(--short)}
+  .v2chip.ok{border-color:rgba(38,166,154,.5)}
+  .v2chip.alert{border-color:rgba(239,83,80,.5)}
+  .v2chip.na{opacity:.5}
+  .v2conv{margin-left:auto; font-size:10px; font-weight:700; letter-spacing:.05em; color:var(--ink-dim)}
+  .v2conv.MAXIMA{color:var(--long)} .v2conv.CONFIRMADA{color:var(--long)} .v2conv.REBAIXADA{color:var(--short)}
+  /* CONFLUÊNCIA ADICIONAL (2026-09-11) — a jusante da convicção, somente leitura. Paleta NEUTRA:
+     nenhuma cor long/short (no hero elas significam direção primária). */
+  .carow{margin-top:8px; padding-top:8px; border-top:1px dashed var(--line); font-size:11px; color:var(--ink-dim)}
+  .carow.wait{opacity:.55}
+  .carow .ca-h{font-size:9.5px; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-faint); font-weight:600; margin-bottom:4px}
+  .carow .ca-h i{font-style:normal; text-transform:none; letter-spacing:0; margin-left:6px}
+  .carow .ca-l{display:flex; gap:8px; align-items:baseline; line-height:1.55}
+  .carow .ca-k{min-width:150px; color:var(--ink-faint)}
+  .carow .ca-k b{color:var(--ink-dim); font-weight:600}
+  .carow .ca-v{color:var(--ink)} .carow .ca-v .num{font-variant-numeric:tabular-nums}
+  .carow .ca-v.na, .carow .ca-v.off{color:var(--ink-faint)}
+  .confluence2{display:none; align-items:center; justify-content:center; gap:14px; padding:10px 16px; border-radius:var(--r); border:1px dashed var(--line); font-size:12px; letter-spacing:.05em; text-transform:uppercase; margin:10px 0 0; color:var(--ink-dim)}
+  .confluence2.show{display:flex}
+  .confluence2.long{color:var(--long); border-color:rgba(38,166,154,.5)}
+  .confluence2.short{color:var(--short); border-color:rgba(239,83,80,.5)}
+
+  .hero{position:relative; background:linear-gradient(180deg,var(--panel),#0f141a); border:1px solid var(--line); border-radius:var(--r); padding:18px 18px 16px 22px; overflow:hidden}
+  .hero .spine{position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--ink-faint)}
+  .hero.long .spine{background:linear-gradient(180deg,var(--long),transparent)}
+  .hero.short .spine{background:linear-gradient(180deg,var(--short),transparent)}
+  .hero.neutral .spine{background:linear-gradient(180deg,var(--ink-faint),transparent)}
+  .hero.long{box-shadow:inset 0 0 60px -30px var(--long-glow)}
+  .hero.short{box-shadow:inset 0 0 60px -30px var(--short-glow)}
+  .hero-head{display:flex; align-items:baseline; justify-content:space-between; gap:10px}
+  .hero-sym{font-size:15px; font-weight:700; letter-spacing:.06em}
+  .hero-spot{color:var(--ink-dim); font-size:13px}
+  .verdict{display:flex; align-items:center; gap:12px; margin:10px 0 4px}
+  .dir{font-size:38px; font-weight:800; line-height:1}
+  .dir.long{color:var(--long)} .dir.short{color:var(--short)} .dir.neutral{color:var(--ink-dim)}
+  .arrow{font-size:26px; transform:translateY(-2px)}
+  .edge{margin-left:auto; text-align:right}
+  .edge .big{font-size:26px; font-weight:700} .edge .lbl{display:block; margin-top:2px}
+  .seal{margin-top:12px; display:flex; align-items:center; gap:10px}
+  .meter{display:flex; gap:3px}
+  .seg{width:26px; height:6px; border-radius:2px; background:var(--inset); box-shadow:inset 0 0 0 1px var(--line)}
+  .seal.ALTA .seg{background:var(--long)}
+  .seal.MEDIA .seg:nth-child(-n+2){background:var(--warn)}
+  .seal.BAIXA .seg:nth-child(1){background:var(--short)}
+  .seal-txt{font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase}
+  .seal.ALTA .seal-txt{color:var(--long)} .seal.MEDIA .seal-txt{color:var(--warn)} .seal.BAIXA .seal-txt{color:var(--short)}
+  .seal-txt.none{color:var(--ink-faint)}
+  .state-pill{margin-left:auto}
+  .state-pill.stand{color:var(--warn); border-color:rgba(255,179,0,.4); background:var(--warn-glow)}
+  .state-pill.tierA{color:var(--long); border-color:rgba(38,166,154,.4); background:var(--long-glow)}
+  .state-pill.offline{color:var(--ink-faint)}
+  .reason{margin-top:11px; padding-top:11px; border-top:1px solid var(--line-soft); color:var(--ink-dim); font-size:12.5px}
+  .chips{display:flex; gap:7px; margin-top:12px; flex-wrap:wrap}
+  .chip{display:inline-flex; align-items:center; gap:6px; padding:5px 10px; border-radius:7px; font-size:11.5px; font-weight:600; border:1px solid var(--line); background:var(--inset); color:var(--ink-dim)}
+  .chip .cdot{width:6px;height:6px;border-radius:50%; background:var(--ink-faint)}
+  .chip.ok{color:var(--long); border-color:rgba(38,166,154,.35)} .chip.ok .cdot{background:var(--long)}
+  .chip.alert{color:var(--warn); border-color:rgba(255,179,0,.35); background:var(--warn-glow)} .chip.alert .cdot{background:var(--warn)}
+
+  .panel{background:var(--panel); border:1px solid var(--line); border-radius:var(--r); padding:15px 18px}
+  .panel-h{display:flex; align-items:center; justify-content:space-between; margin-bottom:8px}
+  .panel-h .t{font-size:12.5px; font-weight:700}
+  .lvlmap{position:relative; height:92px; margin:26px 10px 34px}
+  .axis{position:absolute; left:0; right:0; top:50%; height:2px; background:linear-gradient(90deg,var(--short-glow),var(--line),var(--long-glow))}
+  .mark{position:absolute; top:50%; transform:translate(-50%,-50%); text-align:center}
+  .mark .tick{width:2px; height:26px; margin:0 auto; background:var(--ink-faint)}
+  .mark .cap{position:absolute; left:50%; transform:translateX(-50%); white-space:nowrap; font-size:10.5px; color:var(--ink-dim)}
+  .mark .val{position:absolute; left:50%; transform:translateX(-50%); white-space:nowrap; font-size:11px; font-weight:600; font-family:var(--mono)}
+  .mark .cap{top:-19px} .mark .val{top:-33px}
+  .mark.bot .cap{top:auto; bottom:-19px} .mark.bot .val{top:auto; bottom:-33px}
+  .mark.wall .tick{background:var(--short); height:34px} .mark.wall .val{color:var(--short)}
+  .mark.support .tick{background:var(--long); height:34px} .mark.support .val{color:var(--long)}
+  .mark.zg .tick{background:var(--warn); height:40px} .mark.zg .val{color:var(--warn)}
+  .mark.spot .tick{background:var(--ink); height:46px; width:3px; box-shadow:0 0 10px rgba(230,237,243,.5)} .mark.spot .val{color:var(--ink); font-size:12.5px}
+  .mark.mg .tick{background:var(--steel); height:30px} .mark.mg .val{color:var(--steel)}
+
+  .regime{display:grid; grid-template-columns:repeat(6,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+  .rcell{background:var(--panel); padding:12px 14px}
+  .rcell .k{font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint); font-weight:600}
+  .rcell .v{font-size:16px; font-weight:700; margin-top:5px; font-family:var(--mono)}
+  .rcell .v small{font-size:11px; color:var(--ink-dim); font-weight:500; font-family:var(--sans)}
+  .v.pos{color:var(--long)} .v.neg{color:var(--short)} .v.amb{color:var(--warn)} .v.dim{color:var(--ink-faint)}
+  @media(max-width:820px){ .regime{grid-template-columns:repeat(3,1fr)} }
+
+  .ticker{background:var(--panel); border:1px solid var(--line); border-radius:var(--r); display:flex; flex-direction:column; position:sticky; top:80px; max-height:calc(100vh - 96px)}
+  .ticker-h{display:flex; align-items:center; justify-content:space-between; padding:13px 16px; border-bottom:1px solid var(--line)}
+  .ticker-h .t{font-size:12.5px; font-weight:700; display:flex; align-items:center; gap:8px}
+  .langsel{margin-left:auto; margin-right:8px; background:var(--inset); color:var(--ink-dim); border:1px solid var(--line); border-radius:6px; font-size:11px; padding:3px 6px; cursor:pointer}
+  .soon{padding:26px 18px; text-align:center; color:var(--ink-faint); font-size:12.5px; line-height:1.6}
+  .soon .badge{display:inline-block; margin-bottom:10px; padding:4px 10px; border:1px dashed var(--line); border-radius:7px; color:var(--ink-dim); font-size:11px}
+  .feed{flex:1; overflow-y:auto; padding:6px; min-height:120px; max-height:calc(100vh - 190px)}
+  .feed .empty{padding:26px 16px; text-align:center; color:var(--ink-faint); font-size:12px}
+  .ev{display:grid; grid-template-columns:auto 1fr; gap:9px; padding:9px 8px; border-radius:8px}
+  .ev + .ev{border-top:1px solid var(--line-soft)}
+  .ev.silent{opacity:.55}
+  .prio{font-size:9px; font-weight:800; padding:2px 5px; border-radius:4px; color:#0b0e11; height:fit-content}
+  .prio.P0{background:var(--short)} .prio.P1{background:var(--warn)} .prio.P2{background:var(--steel)} .prio.P3{background:var(--ink-faint)}
+  .ev .top{display:flex; align-items:baseline; gap:7px}
+  .ev .src{font-size:9.5px; font-weight:700; letter-spacing:.04em; color:var(--ink-dim); text-transform:uppercase}
+  .ev .tm{margin-left:auto; font-size:10px; color:var(--ink-faint)}
+  .ev .txt{margin-top:3px; font-size:12px; line-height:1.4; color:var(--ink)}
+  .ev.silent .txt{color:var(--ink-dim)}
+  .ev .spk{font-size:9.5px; color:var(--steel); margin-top:2px}
+  .ev.silent .spk{color:var(--ink-faint)}
+
+  .updated{padding:9px 16px; border-top:1px solid var(--line); color:var(--ink-faint); font-size:10.5px; display:flex; justify-content:space-between}
+  .wf-tag{position:fixed; right:12px; bottom:10px; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-faint); background:var(--panel); border:1px solid var(--line); padding:4px 9px; border-radius:6px; z-index:9}
+
+  /* ---------- Indicadores Alfa Omega (recálculo BFF · ES · NT8 fechado) ---------- */
+  .ind-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--r); overflow:hidden}
+  @media(max-width:820px){ .ind-grid{grid-template-columns:1fr} }
+  .ind{background:var(--panel); padding:13px 15px; display:flex; flex-direction:column; gap:7px; min-width:0}
+  .ind .ih{display:flex; align-items:center; gap:8px}
+  .ind .ih .nm{font-size:12px; font-weight:700}
+  .ind .badge{margin-left:auto; font-size:9.5px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; padding:2px 7px; border-radius:6px; border:1px solid var(--line); color:var(--ink-dim); white-space:nowrap}
+  .badge.pos{color:var(--long); border-color:rgba(38,166,154,.4); background:var(--long-glow)}
+  .badge.neg{color:var(--short); border-color:rgba(239,83,80,.4); background:var(--short-glow)}
+  .ind .big{font-size:23px; font-weight:800; font-family:var(--mono); line-height:1.05}
+  .ind .sub{font-size:11.5px; color:var(--ink-dim)}
+  .ind .note{font-size:10px; color:var(--ink-faint); line-height:1.4}
+  .noedge{margin-left:auto; font-size:9px; font-weight:800; letter-spacing:.07em; text-transform:uppercase; color:var(--warn); border:1px dashed rgba(255,179,0,.55); border-radius:5px; padding:2px 6px; white-space:nowrap}
+  .pbar{position:relative; height:6px; border-radius:3px; background:var(--inset); box-shadow:inset 0 0 0 1px var(--line); overflow:hidden}
+  .pbar .zero{position:absolute; left:50%; top:0; bottom:0; width:1px; background:var(--ink-faint); z-index:1}
+  .pbar .fill{position:absolute; top:0; bottom:0}
+
+  /* ---------- Gráfico (candlestick / Renko) — mesmo vocabulário visual ---------- */
+  .ct-tools{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+  .seg-ctl{display:inline-flex; background:var(--inset); border:1px solid var(--line); border-radius:8px; overflow:hidden}
+  .seg-ctl button{appearance:none; background:transparent; border:0; color:var(--ink-dim); font:600 12px var(--sans); padding:5px 13px; cursor:pointer}
+  .seg-ctl button:hover{color:var(--ink)}
+  .seg-ctl button.on{background:var(--panel); color:var(--ink); box-shadow:inset 0 0 0 1px var(--line)}
+  .tgl{display:inline-flex; align-items:center; gap:7px; font-size:11.5px; font-weight:600; color:var(--ink-dim); cursor:pointer; user-select:none}
+  .tgl .sw{width:34px; height:18px; border-radius:999px; background:var(--inset); box-shadow:inset 0 0 0 1px var(--line); position:relative; transition:.15s}
+  .tgl .sw::after{content:''; position:absolute; top:2px; left:2px; width:14px; height:14px; border-radius:50%; background:var(--ink-faint); transition:.15s}
+  .tgl.on{color:var(--ink)}
+  .tgl.on .sw{background:var(--long-glow); box-shadow:inset 0 0 0 1px rgba(38,166,154,.5)}
+  .tgl.on .sw::after{left:18px; background:var(--long)}
+  .ct-brick{display:inline-flex; align-items:center; gap:5px; font-size:11px; color:var(--ink-dim)}
+  .ct-brick[hidden]{display:none}   /* o atributo hidden precisa vencer o display acima */
+  .ct-brick button{appearance:none; width:20px; height:20px; border:1px solid var(--line); background:var(--inset); color:var(--ink-dim); border-radius:5px; cursor:pointer; font-size:13px; line-height:1}
+  .ct-brick button:hover{color:var(--ink); border-color:var(--ink-faint)}
+  .ct-badge{font-size:10px; letter-spacing:.1em; text-transform:uppercase; font-weight:700; color:var(--ink-dim); border:1px dashed var(--line); border-radius:6px; padding:3px 8px}
+  .ct-wrap{position:relative; border:1px solid var(--line-soft); border-radius:8px; overflow:hidden; background:linear-gradient(180deg,#0c1116,#0a0d11)}
+  .ct-wrap canvas{display:block; width:100%; height:300px}
+  .ct-illus{position:absolute; bottom:7px; right:12px; font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint); opacity:.7; pointer-events:none; z-index:2}
+  .ct-legend{display:flex; flex-wrap:wrap; gap:6px 14px; margin-top:9px; font-size:10.5px; color:var(--ink-dim)}
+  .ct-legend span{display:inline-flex; align-items:center}
+  .ct-legend i{display:inline-block; width:11px; height:2px; margin-right:5px}
+  .ct-legend i.box{height:9px; width:7px; border-radius:1px}
+</style>
+<style id="ao-topbar-fix">
+  /* 2026-09-15 · nome INVICTUS cortado: .brand era item flex ENCOLHIVEL (flex-shrink:1, min-width:auto).
+     Em telas mais estreitas que a soma da barra (~1093 px) ele encolhia ate 73 px e o texto de 171 px
+     transbordava para fora. Agora a marca nunca encolhe nem quebra, e a BARRA quebra linha. */
+  .topbar{flex-wrap:wrap; row-gap:8px}
+  .topbar .brand{flex:0 0 auto; white-space:nowrap}
+  /* CAUSA no Command (index.html): a regra generica .mark do MAPA DE NIVEIS (position:absolute;
+     transform:translate(-50%,-50%)) tambem casava o .brand .mark e jogava metade do nome para fora
+     da tela em QUALQUER largura. A marca da barra volta ao fluxo normal. */
+  .topbar .brand .mark{position:static; transform:none; text-align:left}
+</style>
+<script src="/ao-alias.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand"><span class="mark">◆ INVICTUS&nbsp;不可征服者</span><span class="sub">AOT · Command</span></div>
+    <span id="sessPill" class="pill closed">● —</span>
+    <div class="tabs"><a href="/" class="tab active">Command</a><a href="/deep.html" class="tab">Deep Dive</a><a href="/auto.html" class="tab">Automação</a><a href="/robo.html" class="tab">Robô</a><a href="/history.html" class="tab">Histórico</a><a href="/alfabot-signal.html" class="tab">ALFABOT SIGNAL</a></div>
+    <span id="clock" class="clock num">--:--:-- ET</span>
+    <div id="health" class="health"></div>
+  </div>
+
+  <!-- ── FAIXA DE ALERTA DE SAÚDE (2026-08-17) ────────────────────────────────
+       Só aparece quando HÁ alerta. Silêncio = saudável: uma faixa permanente
+       "tudo ok" vira paisagem e deixa de ser lida em uma semana — que é o mesmo
+       modo de falha (operador ignora o aviso) que este bloco existe para impedir. -->
+  <div id="alertband" hidden></div>
+
+  <div class="stage">
+    <div class="col-main">
+      <!-- #22 — 3 abas de fluxo (sub-nav do Command). FLOW ES·NQ = conteúdo original. -->
+      <div class="flowtabs" id="flowtabs" style="display:flex;gap:6px;margin-bottom:12px">
+        <button class="flowtab on" data-flow="esnq" style="background:#1c3a52;color:#e8eef4;border:1px solid #2a4a63;border-radius:7px;padding:6px 14px;cursor:pointer;font:13px inherit;font-weight:600">FLOW ES·NQ</button>
+        <button class="flowtab" data-flow="gc" style="background:#0d1a26;color:#8a97a6;border:1px solid #2a4a63;border-radius:7px;padding:6px 14px;cursor:pointer;font:13px inherit">FLOW GC·SI</button>
+        <button class="flowtab" data-flow="russell" style="background:#0d1a26;color:#8a97a6;border:1px solid #2a4a63;border-radius:7px;padding:6px 14px;cursor:pointer;font:13px inherit">FLOW RUSSELL</button>
+      </div>
+      <div id="view-esnq" class="flowview">
+      <div id="gate" class="gate offline"></div>
+      <p id="subhint" class="subhint" hidden></p>
+      <div id="confluence" class="confluence neutral" hidden></div>
+      <div id="heroes" class="heroes"></div>
+      <div id="confluence2" class="confluence2"></div>
+      <div class="panel">
+        <div class="panel-h"><span class="t">Mapa de níveis · ES <span style="color:var(--ink-faint);font-weight:400" id="regimeTag">—</span></span></div>
+        <div id="lvlmap" class="lvlmap"><div class="axis"></div></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-h"><span class="t">Indicadores Alfa Omega · ES <span style="color:var(--ink-faint);font-weight:400">recálculo BFF · NT8 fechado</span></span><span id="indAsof" class="eyebrow">—</span></div>
+        <div id="indGrid" class="ind-grid"></div>
+      </div>
+
+      <div class="panel chartpanel">
+        <div class="panel-h">
+          <span class="t">Gráfico · ES <span id="ctSub" style="color:var(--ink-faint);font-weight:400">candlestick · ilustrativo</span></span>
+          <div class="ct-tools">
+            <span class="ct-brick" id="ctBrick" hidden>tijolo <button data-b="-1" title="menor">−</button><b id="ctBrickV" class="num">10</b><button data-b="1" title="maior">+</button> pt</span>
+            <div class="seg-ctl" id="ctMode" role="group" aria-label="tipo de barra">
+              <button data-mode="candle" class="on">Candlestick</button>
+              <button data-mode="renko">Renko</button>
+            </div>
+            <span class="tgl on" id="ctTgl" role="switch" aria-checked="true" title="mostra/oculta níveis + HIRO"><span class="sw"></span>Indicadores AΩ</span>
+            <span class="ct-badge">● ilustrativo</span>
+          </div>
+        </div>
+        <div class="ct-wrap">
+          <span class="ct-illus">dado ilustrativo — conectar no handoff de dev</span>
+          <canvas id="ctCanvas"></canvas>
+        </div>
+        <div class="ct-legend">
+          <span><i class="box" style="background:var(--long)"></i>alta</span>
+          <span><i class="box" style="background:var(--short)"></i>baixa</span>
+          <span><i style="background:var(--ink)"></i>spot</span>
+          <span><i style="background:var(--short)"></i>Call Wall</span>
+          <span><i style="background:var(--long)"></i>Put Wall</span>
+          <span><i style="background:var(--warn)"></i>Zero-Gamma</span>
+          <span><i style="background:var(--steel)"></i>Max-Gamma</span>
+          <span><i style="background:var(--steel)"></i>HIRO⟂ (sub-painel)</span>
+        </div>
+      </div>
+
+      <div id="regime" class="regime"></div>
+      </div><!-- /view-esnq -->
+
+      <!-- #22 FLOW GC — confluência auxiliar GC×SI (contexto, nunca operado) -->
+      <div id="view-gc" class="flowview" hidden>
+        <!-- FLOW GC·SI (2026-10-12) — radar e cards por ativo; dados de st.flowGcSi, somente leitura -->
+        <div id="gcsiGate" class="gate closed"><div class="g-head"><span class="g-mark">◆ ÂNCORA GC·SI</span><span class="g-role">radar GC+SI · mercado futuro real (tape/agressão) · contexto, nunca operado</span><span class="g-badge">AGUARDANDO DADO</span></div></div>
+        <p id="gcsiSubhint" class="subhint" hidden></p>
+        <div id="gcsiHeroes" class="heroes"></div>
+        <div id="gcsiConfluence2" class="confluence2"></div>
+        <div id="gcLegacy" class="panel" style="margin-top:14px" hidden>
+          <div class="panel-h"><span class="t">FLOW GC · confluência auxiliar GC×SI (painel anterior)</span><span class="eyebrow">contexto · NUNCA operado</span></div>
+          <div id="gcDetail" style="padding:14px"></div>
+        </div>
+      </div>
+
+      <!-- #22 FLOW RUSSELL — RTY "carona" gated ES×NQ (autorização visual, manual) -->
+      <div id="view-russell" class="flowview" hidden>
+        <div class="panel">
+          <div class="panel-h"><span class="t">FLOW RUSSELL · RTY (carona da âncora ES×NQ)</span><span class="eyebrow">autorização visual · manual · fora da automação</span></div>
+          <div id="rtyDetail" style="padding:14px"></div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="ticker">
+      <div class="ticker-h"><span class="t">🔊 Narrador</span>
+        <select id="langSel" class="langsel" title="idioma da voz + texto"></select>
+        <span id="narrStat" class="pill" style="font-size:10px">—</span></div>
+      <div id="feed" class="feed"></div>
+      <div class="updated"><span id="upd">—</span><span id="live">—</span></div>
+    </aside>
+  </div>
+
+  <span class="wf-tag">AOT BFF :3600 · dado real</span>
+
+<script>
+// alfaomega NÃO entra aqui: é o GATE 1, tem bloco próprio destacado (renderGate), não um dot genérico.
+const SRC_LABELS = { consolidator:'α Quant', spotgamma:'α Gamma', gexbot:'α Bot', menthorq:'α Q', quantdata:'α Data' };
+const fmt = (n,d=2)=> (n==null||!isFinite(n)) ? '—' : Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
+const fmtK = (n)=>{ if(n==null||!isFinite(n))return '—'; const a=Math.abs(n); if(a>=1e6)return (n/1e6).toFixed(1)+'M'; if(a>=1e3)return (n/1e3).toFixed(1)+'k'; return (''+Math.round(n)); };
+const esc = (s)=> String(s==null?'':s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+function dirClass(d){ return d==='LONG'?'long':d==='SHORT'?'short':'neutral'; }
+function arrow(d){ return d==='LONG'?'▲':d==='SHORT'?'▼':'■'; }
+
+function heroCard(sym, s, extra){
+  const t0=s.tier0||{}, cv=s.conviction||{}, dir=t0.direction||'NEUTRO';
+  const dc=dirClass(dir);
+  const off = t0.state==='OFFLINE';
+  const stand = t0.state==='STAND_DOWN';
+  const conf = (t0.confidence!=null)? Math.round(t0.confidence) : null;
+  // #25 — espelho do canal Telegram: sinaliza se o consolidado atende o criterio de envio (conf>=75, gate ativo).
+  const tgSent = !off && !stand && dir!=='NEUTRO' && conf!=null && conf>=75;
+  const tgPill = tgSent
+    ? '<span class="pill state-pill tierA" title="atende o criterio de envio ao canal darkcode_futures (conf>=75)">&#8594; Telegram</span>'
+    : '<span class="pill state-pill" style="opacity:.55" title="abaixo do limiar de envio (conf>=75) ou gate inativo">Telegram: &#8212;</span>';
+  const lvl = cv.level||'—';
+  const statePill = off ? '<span class="pill state-pill offline">offline</span>'
+    : stand ? '<span class="pill state-pill stand">esperando confirmação</span>'
+    : (t0.tier==='A' ? '<span class="pill state-pill tierA">Tier A</span>' : '<span class="pill state-pill">Tier '+(t0.tier||'—')+'</span>');
+  const chips = (cv.modulators||[]).map(m=>{
+    const k = m.kind==='ok'?'ok':m.kind==='alert'?'alert':'';
+    return `<span class="chip ${k}"><span class="cdot"></span>${esc(m.t)}</span>`;
+  }).join('');
+  const spot = s.spot!=null ? `spot <span class="num">${fmt(s.spot)}</span>` : '<span style="color:var(--ink-faint)">sem spot</span>';
+  return `<div class="hero ${dc}">
+    <div class="spine"></div>
+    <div class="hero-head"><span class="hero-sym">${sym}</span><span class="hero-spot">${spot}</span></div>
+    <div class="verdict">
+      <span class="dir ${dc}">${dir}</span><span class="arrow" style="color:var(--${dc==='neutral'?'ink-faint':dc})">${arrow(dir)}</span>
+      <div class="edge"><span class="big num" style="color:var(--${dc==='neutral'?'ink-dim':dc})">${conf!=null?conf+'%':'—'}</span><span class="lbl eyebrow">edge do gate</span></div>
+    </div>
+    <div class="seal ${lvl}">
+      <div class="meter"><span class="seg"></span><span class="seg"></span><span class="seg"></span></div>
+      <span class="seal-txt ${lvl==='—'?'none':''}">Convicção ${lvl==='—'?'indef.':lvl}</span>
+      ${statePill}${tgPill}
+    </div>
+    <div class="reason">${esc(t0.reason||'—')}</div>
+    <div class="chips">${chips||'<span class="chip"><span class="cdot"></span>sem confirmadores</span>'}</div>
+    ${extra||''}
+  </div>`;
+}
+
+// ── NOVA hierarquia por trilhas (v2) — chips C1/C2/C3 por ativo, atrás da flag stackMode ──
+// Retorna '' quando stackMode==='v1' (default) → hero idêntico ao atual.
+function v2Row(symKey, st){
+  if(!st || st.stackMode==='v1' || !st.v2 || st.v2._err) return '';
+  const leg = st.v2[symKey.toLowerCase()]; if(!leg) return '';
+  const c1=leg.c1||{}, c2=leg.c2||{}, c3=leg.c3||{}, conv=leg.conv||{};
+  const chip=(lbl,val,cls)=>`<span class="v2chip ${cls}">${lbl}<b>${esc(val)}</b></span>`;
+  const c1cls = c1.signal ? dirClass(c1.dir) : 'neutral';
+  const c1val = c1.available ? (c1.signal ? `${c1.dir} ${c1.confStrength}/2` : 'flat') : 'N/A';
+  const c2v = c2.confirm||'N/A';
+  const c2cls = c2v==='CONFIRMA'?'ok':c2v==='DIVERGE'?'alert':(c2v==='N/A'?'na':'');
+  const c3v = c3.available ? (c3.aligned?'ALINHADO':(c3.alignedCount||0)+'/3') : 'N/A';
+  const c3cls = c3.aligned?'ok':(c3.available?'':'na');
+  return `<div class="v2row" title="Camada 1 tape · Camada 2 HIRO (Net $ dos últimos 5min, NÃO o HIRO real/cumulativo do card acima) · Camada 3 charm/vol/vanna">
+    ${chip('TAPE', c1val, c1cls)}${chip('HIRO', c2v, c2cls)}${chip('MULTI', c3v, c3cls)}
+    <span class="v2conv ${conv.level||'—'}">${esc(conv.level||'—')}</span>
+  </div>`;
+}
+
+// ── CONFLUÊNCIA ADICIONAL (2026-09-11) — HIRO Flow + Options Sweep, SOMENTE LEITURA ──
+// Fica ABAIXO da convicção (depois da v2Row). Mostra só FATOS do evento; não calcula "a favor/
+// contra" da direção (pendente do operador) e não usa seta, BUY/SELL, % nem cor de direção.
+// Estados distintos (I4): evento · sem evento · indisponível · N/A — nunca fundidos.
+function caEt(ms){ return new Date(ms).toLocaleTimeString('en-US',{timeZone:'America/New_York',hour12:false}) + ' ET'; }
+function caIdade(s){
+  if(s==null||!isFinite(s)) return '';
+  if(s<60) return 'há '+Math.max(0,Math.round(s))+' s';
+  if(s<3600) return 'há '+Math.round(s/60)+' min';
+  const h=Math.floor(s/3600), m=Math.round((s%3600)/60); return 'há '+h+' h'+(m?' '+m+' min':'');
+}
+function caLeg(nome, leg, fatos, semTxt){
+  const k='<span class="ca-k"><b>'+nome+'</b> · '+esc(leg?leg.unidade:'')+'</span>';
+  if(!leg) return '<div class="ca-l">'+k+'<span class="ca-v off">—</span></div>';
+  const t=esc(leg.why||'');
+  if(leg.estado==='na')           return '<div class="ca-l" title="'+t+'">'+k+'<span class="ca-v na">N/A</span></div>';
+  if(leg.estado==='indisponivel') return '<div class="ca-l" title="'+t+'">'+k+'<span class="ca-v off">indisponível</span></div>';
+  if(leg.estado==='sem_evento')   return '<div class="ca-l" title="'+t+'">'+k+'<span class="ca-v">'+(semTxt||'sem evento')+'</span></div>';
+  return '<div class="ca-l">'+k+'<span class="ca-v">'+fatos(leg.ultimo)+'</span></div>';
+}
+function confAdicionalRow(symKey, st){
+  const ca=st&&st.confluenciaAdicional; if(!ca||ca._err) return '';
+  const b=ca[symKey.toLowerCase()]; if(!b) return '';
+  const wait=b.estado!=='conviccao_existente';
+  const hf=caLeg('HIRO Flow', b.hiroFlow, u=>'<b>'+esc(u.label)+'</b> · <span class="num">'+caEt(u.ts)+'</span> · '+caIdade(u.idadeS), 'sem evento na sessão');
+  const sw=caLeg('Options Sweep', b.sweep, u=>esc(u.lado)+' · strike <span class="num">'+fmt(u.strike,0)+'</span> · <span class="num">'+moneyUsd(u.premio).replace(/^[+\u2212]/,'')+'</span> · <span class="num">'+caEt(u.ts)+'</span> · '+caIdade(u.idadeS), 'sem sweep na janela');
+  return '<div class="carow'+(wait?' wait':'')+'"><div class="ca-h">Confluência adicional<i>'+(wait?'aguardando convicção':'após a convicção')+'</i></div>'+hf+sw+'</div>';
+}
+
+function renderLevelMap(s, w){
+  const el=document.getElementById('lvlmap');
+  el.querySelectorAll('.mark').forEach(m=>m.remove());
+  const L=(s&&s.levels)||{}, spot=s&&s.spot;
+  // preferir os walls do α Gamma (recálculo /api/indicators — mesma fonte do NT8); fallback α Bot
+  const wl=(w&&w.ok)?w:null;
+  const tag=document.getElementById('regimeTag');
+  if(tag && wl) tag.setAttribute('data-src','α Gamma');
+  const pts=[
+    {k:'put_wall', cls:'support bot', cap:'Put Wall', v: wl?wl.putWall:L.put_wall},
+    {k:'zero_gamma', cls:'zg', cap:'Zero-Gamma', v: wl?wl.zeroGamma:L.zero_gamma},
+    {k:'spot', cls:'spot bot', cap:'agora', v:spot, spot:true},
+    {k:'max_g', cls:'mg', cap:'Hedge Wall', v: wl?wl.hedgeWall:(L.max_g_strike||L.gamma_wall_0dte)},
+    {k:'call_wall', cls:'wall bot', cap:'Call Wall', v: wl?wl.callWall:L.call_wall},
+  ].filter(p=>p.v!=null && isFinite(p.v));
+  if(pts.length<2){ el.insertAdjacentHTML('beforeend', '<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:var(--ink-faint);font-size:12px">níveis indisponíveis (fonte offline)</div>'); return; }
+  const vals=pts.map(p=>p.v); let lo=Math.min(...vals), hi=Math.max(...vals); const pad=(hi-lo)*0.12||1; lo-=pad; hi+=pad;
+  for(const p of pts){
+    const pos=clamp(((p.v-lo)/(hi-lo))*100,2,98);
+    const valTxt = p.spot ? `${fmt(p.v)} ·spot` : fmt(p.v,0);
+    el.insertAdjacentHTML('beforeend', `<div class="mark ${p.cls}" style="left:${pos}%"><div class="tick"></div><span class="val">${valTxt}</span><span class="cap">${p.cap}</span></div>`);
+  }
+}
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+
+function renderRegime(s){
+  const el=document.getElementById('regime'); const g=s&&s.tier2_regime;
+  document.getElementById('regimeTag').textContent = g ? `— ${g.gamma_condition==='POSITIVE'?'γ positivo · mean-revert':g.gamma_condition==='NEGATIVE'?'γ negativo · trend/vol':'—'}` : '— (α Bot offline)';
+  if(!g){ el.innerHTML='<div class="rcell" style="grid-column:1/-1;color:var(--ink-faint)">α Bot offline — regime indisponível</div>'; return; }
+  const cells=[
+    ['Gamma', g.gamma_condition==='POSITIVE'?'<span class="v pos">⊕ Positivo</span>':g.gamma_condition==='NEGATIVE'?'<span class="v neg">⊖ Negativo</span>':'<span class="v dim">—</span>'],
+    ['Regime Vega', `<span class="v ${g.regime_vega==='EXPANSIVA'?'neg':g.regime_vega==='COMPRESSIVA'?'amb':'dim'}">${g.regime_vega||'—'}</span>`],
+    ['Vanna 0DTE', `<span class="v ${g.vanna.tag==='ALTA'?'amb':''}">${g.vanna.tag||'—'} <small>${fmtK(g.vanna.value)}</small></span>`],
+    ['Charm Drift', `<span class="v ${g.charm.driftPct>55?'pos':g.charm.driftPct<45?'neg':'dim'}">${g.charm.driftPct!=null?g.charm.driftPct+'%':'—'}</span>`],
+    ['DEX oflow', `<span class="v ${g.dexoflow>0?'pos':g.dexoflow<0?'neg':'dim'}">${fmtK(g.dexoflow)} <small>/s</small></span>`],
+    ['GEX oflow', `<span class="v ${g.gexoflow>0?'pos':g.gexoflow<0?'neg':'dim'}">${fmtK(g.gexoflow)} <small>/s</small></span>`],
+  ];
+  el.innerHTML = cells.map(([k,v])=>`<div class="rcell"><div class="k">${k}</div>${v}</div>`).join('');
+}
+
+// ── Indicadores Alfa Omega (recálculo BFF · /api/indicators · ES) ──────────────
+function badgeRegime(reg){
+  if(reg==='POSITIVO') return '<span class="badge pos">γ⊕ positivo</span>';
+  if(reg==='NEGATIVO') return '<span class="badge neg">γ⊖ negativo</span>';
+  return '<span class="badge">—</span>';
+}
+function moneyUsd(v){ if(v==null||!isFinite(v))return '—'; const a=Math.abs(v), s=v<0?'−':'+';
+  if(a>=1e9)return s+'$'+(a/1e9).toFixed(2)+'B'; if(a>=1e6)return s+'$'+(a/1e6).toFixed(1)+'M';
+  if(a>=1e3)return s+'$'+(a/1e3).toFixed(0)+'k'; return s+'$'+Math.round(a); }
+
+function renderIndicators(ind, st){
+  const grid=document.getElementById('indGrid'), asofEl=document.getElementById('indAsof');
+  if(!ind || ind._err){ grid.innerHTML='<div class="ind" style="grid-column:1/-1;color:var(--ink-faint)">indicadores indisponíveis'+(ind&&ind._err?' — '+esc(ind._err):' (α Gamma offline)')+'</div>'; asofEl.textContent=''; return; }
+  asofEl.textContent = ind.asof ? 'atualizado '+new Date(ind.asof).toLocaleTimeString('pt-BR') : '';
+  const cards=[];
+
+  // GAMMA PRESSURE — pressão de transição de regime (flip). Perto de 0 = calmo.
+  const gp=ind.gammaPressure||{};
+  if(gp.ok){
+    const P=gp.P, pv=(P==null)?null:clamp(P,-100,100);
+    const col=P>0?'var(--long)':P<0?'var(--short)':'var(--ink-faint)';
+    const w=pv==null?0:Math.abs(pv)/2, left=pv==null?50:(P>=0?50:50-w);
+    cards.push(`<div class="ind"><div class="ih"><span class="nm">Gamma Pressure</span>${badgeRegime(gp.regime)}</div>
+      <div class="big" style="color:${col}">${P==null?'—':(P>0?'+':'')+fmt(P,1)}</div>
+      <div class="pbar"><span class="zero"></span><span class="fill" style="left:${left}%; width:${w}%; background:${col}"></span></div>
+      <div class="note">Pressão de FLIP de regime. Perto de 0 = calmo. Lift 6,91× (backtest) — detecção precoce, não previsão de horizonte.</div></div>`);
+  } else cards.push(`<div class="ind"><div class="ih"><span class="nm">Gamma Pressure</span></div><div class="sub">${esc(gp.note||'indisponível')}</div></div>`);
+
+  // OPENFLOW — direção T1 SEM EDGE + magnitude (a parte válida, p=0,0001)
+  // O destaque do card é o REGIME DE GAMMA (Ω positivo/negativo), não a direção do fluxo:
+  // é o regime que a evidência sustenta (prevê magnitude, p=0,0001), enquanto a perna
+  // direcional não se sustentou. O rótulo passa a dizer o que o indicador de fato mede.
+  const of=ind.openFlow||{}, d=of.direction||{}, mg=of.magnitude||{};
+  const oc = mg.regime==='ABSORVE' ? 'long' : mg.regime==='AMPLIFICA' ? 'short' : 'neutral';
+  const oTxt = mg.regime==='ABSORVE' ? 'Ω positivo' : mg.regime==='AMPLIFICA' ? 'Ω negativo' : '—';
+  const mgTxt = mg.regime ? `<b style="color:var(--${mg.regime==='AMPLIFICA'?'short':'long'})">${esc(mg.regime)} ~${fmt(mg.expectedPts,1)} pts</b> <span style="color:var(--ink-faint)">(p=0,0001 — prevê tamanho, não lado)</span>` : 'indisponível';
+  cards.push(`<div class="ind"><div class="ih"><span class="nm">OpenFlow</span></div>
+    <div class="big" style="color:var(--${oc==='neutral'?'ink-dim':oc})">${oTxt}</div>
+    <div class="sub">regime de gamma do dealer</div>
+    <div class="note">magnitude: ${mgTxt}</div></div>`);
+
+  // HIRO REAL (cumulativo, grade inteira) — o número igual ao NT8. Fluxo/pressão do DIA.
+  const hr=ind.hiroRegime||{};
+  if(hr.ok){
+    const hc=hr.cumHiro>0?'long':hr.cumHiro<0?'short':'neutral';
+    cards.push(`<div class="ind"><div class="ih"><span class="nm">HIRO real (cumulativo)</span>${badgeRegime(hr.regime)}</div>
+      <div class="big" style="color:var(--${hc==='neutral'?'ink-dim':hc})">${moneyUsd(hr.cumHiro)}</div>
+      <div class="sub">pressão de hedge da SESSÃO · fluxo ${esc(hr.dir||'—')}</div>
+      <div class="note">Σ do fluxo HIRO da sessão inteira (/hiro/SPX) — o MESMO número que o NT8 mostra. Lento/estável — não usado para confirmar/divergir do Tape.</div></div>`);
+  } else cards.push(`<div class="ind"><div class="ih"><span class="nm">HIRO real (cumulativo)</span></div><div class="sub">${esc(hr.note||'indisponível')}</div></div>`);
+
+  // HIRO NET $ (últimos 5min) — 2026-07-31. Adicionado p/ resolver a confusão de ver "HIRO real"
+  // positivo ao lado do chip "HIRO DIVERGE": o chip compara o Tape contra ESTE número (janela
+  // curta, sensível), NÃO contra o cumulativo acima (janela do dia inteiro, lento demais p/
+  // divergir/confirmar de verdade). Os dois PODEM ter sinais opostos ao mesmo tempo — não é bug,
+  // é o dealer tendo revertido o fluxo recente dentro de um dia que no total segue de um lado.
+  if(hr.ok && hr.net5m!=null){
+    const nc=hr.net5m>0?'long':hr.net5m<0?'short':'neutral';
+    cards.push(`<div class="ind"><div class="ih"><span class="nm">HIRO Net $ (últimos 5min)</span></div>
+      <div class="big" style="color:var(--${nc==='neutral'?'ink-dim':nc})">${moneyUsd(hr.net5m)}</div>
+      <div class="sub">fluxo recente · ${esc(hr.net5mDir||'—')}</div>
+      <div class="note">Σ do HIRO só dos últimos 5min (candle nativa é de 5s — sozinha é ruído puro). É contra ESTE número que o chip CONFIRMA/DIVERGE do Tape é calculado — não contra o "HIRO real" acima.</div></div>`);
+  }
+
+
+  // ══ BLOCOS DE GAMMA POR STRIKE/REGIÃO (2026-08-07) ═══════════════════════════════
+  // Chaves de TOPO do /state — por isso renderIndicators recebe o `st` inteiro. O servidor
+  // já publicava desde o restart de hoje; o que faltava era só a tela.
+  // Os TRÊS eixos saem SEPARADOS (tipo · lado · papel), como no bloco do servidor: a 'Fusão'
+  // da metodologia é composição visual, sem fórmula própria — nada é fundido num número.
+  var S = st || {};
+
+  var cpc = S.callPutClassing;
+  if (cpc && cpc.ok) {
+    var lvs = (cpc.levels || []).slice(0, 8);
+    var linhas = lvs.map(function(l){
+      var cor = l.tipo === 'CALL' ? 'var(--long)' : 'var(--short)';
+      var peso = l.concentracao === 'FORTE' ? 'font-weight:700' : (l.concentracao === 'MEDIA' ? 'opacity:.9' : 'opacity:.65');
+      var L = l.leitura || {};
+      // REGRA 2 na tela: direcional quando há base; senão, a exposição do dealer.
+      // O `title` carrega a BASE — o operador vê de onde o lado vem sem poluir a linha.
+      var leit = (L.usada === 'DIRECIONAL' && L.direcional)
+        ? '<b style="color:' + (L.direcional === 'COMPRA' || L.direcional === 'LONG' ? 'var(--long)' : 'var(--short)') + '" title="' + esc(L.base || '') + '">' + esc(L.direcional) + '</b>'
+        : '<span style="opacity:.75" title="' + esc((L.exposicao && L.exposicao.detalhe) || '') + '">hedge ' + (L.exposicao && L.exposicao.valor != null ? moneyUsd(L.exposicao.valor) : '—') + '</span>';
+      var dir = l.direcional
+        ? '<b style="color:' + (l.direcional === 'COMPRA' ? 'var(--long)' : 'var(--short)') + '">' + esc(l.direcional) + '</b>'
+        : '—';
+      return '<tr style="' + peso + '">' +
+        '<td class="num">' + (l.futK != null ? fmt(l.futK, 2) : l.k) + '</td>' +
+        '<td style="color:' + cor + '">' + esc(l.tipo) + '</td>' +
+        '<td>' + esc(l.concentracao) + '</td>' +
+        '<td>' + esc(l.papel || '—') + '</td>' +
+        '<td>' + leit + '</td>' +
+        '<td style="font-size:11px;opacity:.75">' + (l.classificacao ?
+          ('C ' + esc(l.classificacao.callPosicao || '—') + ' · P ' + esc(l.classificacao.putPosicao || '—')) :
+          esc(l.lado || '—')) + '</td></tr>';
+    }).join('');
+    var stale = cpc.staleGrid
+      ? '<span style="color:#ffb300"> · ' + esc(cpc.staleNote || 'grade da sessão anterior') + '</span>' : '';
+    cards.push('<div class="ind" style="grid-column:1/-1">' +
+      '<div class="ih"><span class="nm">Call-Put Classing — níveis por strike</span>' + badgeRegime(cpc.regime) + '</div>' +
+      '<div class="sub">' + cpc.strikes + ' strikes · ' + cpc.matchedDealer + ' com papel do dealer · ' +
+        cpc.matchedSide + ' com lado · exp ' + esc(cpc.expiration || '—') + stale + '</div>' +
+      '<table style="width:100%;border-collapse:collapse;font-size:12px;margin-top:6px">' +
+      '<thead style="opacity:.6;font-size:11px"><tr style="text-align:left">' +
+      '<th>nível (ES)</th><th>tipo</th><th>concentração</th><th>papel (dealer)</th><th>leitura</th><th>posição (call/put)</th>' +
+      '</tr></thead><tbody>' + linhas + '</tbody></table>' +
+      '<div class="note">TIPO = α Data (call_gex/put_gex) · LADO = α Gamma netoi split, LÍQUIDO ' +
+      '(negativo = net vendido) · PAPEL = sign(dealer), medido. PRESSÃO é a obrigação mecânica ' +
+      'CONDICIONAL a o preço tocar o nível — não é previsão de desfecho.</div></div>');
+  } else if (cpc) {
+    cards.push('<div class="ind"><div class="ih"><span class="nm">Call-Put Classing</span></div>' +
+      '<div class="sub">' + esc(cpc.note || 'indisponível') + '</div></div>');
+  }
+
+  var hbs = S.hedgeByStrike;
+  if (hbs && hbs.ok) {
+    var top = (hbs.levels || []).slice(0, 4).map(function(l){
+      var c = l.estado === 'CASCATA' ? 'var(--short)' : (l.estado === 'PINAGEM' ? '#ffb300' : 'var(--ink-dim)');
+      return '<div style="display:flex;gap:8px;font-size:12px">' +
+        '<span class="num" style="min-width:70px">' + fmt(l.futK, 2) + '</span>' +
+        '<span style="opacity:.8;min-width:52px">' + esc(l.papel) + '</span>' +
+        '<b style="color:' + c + '">' + esc(l.estado) + '</b>' +
+        '<span style="opacity:.6">' + esc(l.ladoDoPreco || '') + '</span></div>';
+    }).join('');
+    cards.push('<div class="ind"><div class="ih"><span class="nm">Obrigação de hedge por strike</span>' +
+      badgeRegime(hbs.regime) + '</div>' +
+      '<div class="sub">ActivGate ' + (hbs.activGate && hbs.activGate.ratio != null ? fmt(hbs.activGate.ratio,1) + 'x' : '—') +
+      ' · ZG ' + esc(hbs.zeroGammaFonte || '') + '</div>' +
+      '<div style="margin-top:6px">' + top + '</div>' +
+      '<div class="note">O que o dealer é OBRIGADO a negociar se o preço chegar ali. Não é sinal de entrada.</div></div>');
+  }
+
+  var sth = S.stopTakeHedge;
+  if (sth && sth.ok) {
+    cards.push('<div class="ind"><div class="ih"><span class="nm">STOP-TAKE (hedge do dealer)</span>' +
+      badgeRegime(sth.regime) + '</div>' +
+      '<div class="sub">buffer ' + fmt(sth.bufferPt,2) + ' pt · ZG ' + esc(sth.zeroGammaFonte || '') + '</div>' +
+      '<div style="font-size:12px;margin-top:4px">' +
+      '<div>nível ↑ <span class="num">' + (sth.nivelUp ? fmt(sth.nivelUp.futK,2) : '—') + '</span> · STOP ↑ <span class="num">' +
+        (sth.stopUp != null ? fmt(sth.stopUp,2) : '—') + '</span> <span style="opacity:.6">(' +
+        (sth.distUpPt != null ? fmt(sth.distUpPt,1) + ' pt' : '—') + ')</span></div>' +
+      '<div>nível ↓ <span class="num">' + (sth.nivelDn ? fmt(sth.nivelDn.futK,2) : '—') + '</span> · STOP ↓ <span class="num">' +
+        (sth.stopDn != null ? fmt(sth.stopDn,2) : '—') + '</span> <span style="opacity:.6">(' +
+        (sth.distDnPt != null ? fmt(sth.distDnPt,1) + ' pt' : '—') + ')</span></div></div>' +
+      '<div class="note">Nível por obrigação de hedge; STOP além do nível que invalida + buffer(regime), ' +
+      'com piso na banda de ruído. Convive com o STOP-TAKE de volatilidade — são os dois modos do indicador.</div></div>');
+  }
+
+  var zg0 = S.zeroGamma0dte;
+  if (zg0 && zg0.ok) {
+    var conf = zg0.regimeConflict ? '<span style="color:#ffb300"> ⚠ conflito</span>' : '';
+    cards.push('<div class="ind"><div class="ih"><span class="nm">Zero Gamma 0DTE</span></div>' +
+      '<div class="big">' + (zg0.zeroGamma0dteFut != null ? fmt(zg0.zeroGamma0dteFut,2) : '—') + '</div>' +
+      '<div class="sub">estrutura completa ' + (zg0.zeroGammaFullFut != null ? fmt(zg0.zeroGammaFullFut,2) : '—') +
+      ' · gap ' + (zg0.gapPt != null ? fmt(zg0.gapPt,1) + ' pt' : '—') + conf + '</div>' +
+      (zg0.leitura && zg0.leitura.usada === 'DIRECIONAL'
+        ? '<div style="font-size:12px;margin-top:4px">leitura: <b style="color:' +
+          (zg0.leitura.direcional === 'LONG' ? 'var(--long)' : 'var(--short)') + '">' + esc(zg0.leitura.direcional) +
+          '</b> <span style="opacity:.7">' + esc(zg0.leitura.base || '') + '</span></div>'
+        : '<div style="font-size:12px;margin-top:4px;opacity:.75">leitura: exposição · ' +
+          esc((zg0.leitura && zg0.leitura.exposicao && zg0.leitura.exposicao.detalhe) || '—') + '</div>') +
+      '<div class="note">O 0DTE governa o regime no terminal. O da estrutura completa segue publicado — ' +
+      'são dois escopos legítimos e podem discordar (I2).</div></div>');
+  }
+
+  var dpl = S.darkPoolLevels;
+  if (dpl && dpl.ok) {
+    var mm = (dpl.matches || []).slice(0, 4).map(function(x){
+      return '<div style="font-size:12px"><span class="num">' + fmt(x.nivel,2) + '</span> ' +
+        '<span style="opacity:.7">' + esc(x.rotulo || '') + '</span> · ' + x.prints + ' prints</div>';
+    }).join('') || '<div class="sub">nenhum nível casado agora</div>';
+    cards.push('<div class="ind"><div class="ih"><span class="nm">Dark pool nos níveis</span></div>' +
+      '<div class="sub">' + dpl.count + ' prints · componente ' + esc(dpl.componente || '—') +
+      (dpl.betaScale ? ' · beta ' + fmt(dpl.betaScale,2) : '') + ' · tolerância ' + dpl.tolPt + ' pt</div>' +
+      '<div style="margin-top:6px">' + mm + '</div>' +
+      '<div class="note">Presença observada de dark pool casada com níveis de gamma. Preços do ETF ' +
+      'convertidos pelo beta_scale — sem isso a escala não bate com a do ES.</div></div>');
+  }
+
+  // ── F1 · Fallback 1DTE (α Bot) ─────────────────────────────────────────────────
+  // Só aparece com destaque quando ATIVO (0DTE morto, pós 16:00 ET). Fora disso fica
+  // como contexto da próxima expiração — que é informação útil mesmo com o 0DTE vivo.
+  var f1 = S.fallback1Dte;
+  if (f1 && f1.ok) {
+    var L1 = f1.leitura || {};
+    var tag = f1.ativo
+      ? '<span style="color:#ffb300">● ATIVO — 0DTE expirou</span>'
+      : '<span style="opacity:.6">contexto da próxima expiração</span>';
+    cards.push('<div class="ind"><div class="ih"><span class="nm">1DTE (próxima expiração)</span>' +
+      badgeRegime(f1.regimeNext) + '</div>' +
+      '<div class="sub">' + tag + '</div>' +
+      '<div style="font-size:12px;margin-top:4px">' +
+      '<div>call res <span class="num">' + (f1.callResistance != null ? fmt(f1.callResistance,2) : '—') + '</span>' +
+      ' · put sup <span class="num">' + (f1.putSupport != null ? fmt(f1.putSupport,2) : '—') + '</span>' +
+      ' · hvl <span class="num">' + (f1.hvl != null ? fmt(f1.hvl,2) : '—') + '</span></div>' +
+      '<div style="opacity:.8">vanna ' + (f1.vannaNext != null ? fmt(f1.vannaNext,2) : '—') +
+      ' · charm ' + (f1.charmNext != null ? fmt(f1.charmNext,2) : '—') + '</div>' +
+      '<div style="opacity:.8">leitura: ' + esc((L1.exposicao && L1.exposicao.detalhe) || '—') + '</div></div>' +
+      '<div class="note">Agregado + níveis nomeados da α Bot — NÃO é grade por strike com participante. ' +
+      'Preços já em escala de futuro (ES_SPX): não somar futuresDiff. É a única fonte de vanna/charm do ecossistema.</div></div>');
+  }
+  grid.innerHTML = cards.join('');
+}
+
+// GATE 1 (Alfa Omega) — bloco adaptativo: fino quando OPEN, dominante quando CLOSED/OFFLINE.
+function renderGate(g){
+  const el=document.getElementById('gate');
+  const state=(g.state||'OFFLINE').toLowerCase();          // open | closed | offline
+  const open=state==='open';
+  const badge = open ? 'GATE ABERTO' : state==='closed' ? 'ESPERANDO CONFIRMAÇÃO' : 'PONTE OFFLINE';
+  const str = (typeof g.strength==='number') ? g.strength : 0;
+  const segs = [0,1,2,3].map(i=>`<span class="${i<str?'on':'off'}"></span>`).join('');
+  const tapeOn = !!g.tapeLive;
+  const dirTxt = open ? `<span class="g-dir">direção <b class="num" style="color:var(--long)">${esc(g.dir||'—')}</b></span>` : '';
+  const conseq = open ? '' : (g.tapeLive && g.strength===4 && g.dir!=='LONG' && g.dir!=='SHORT') ? `<div class="g-consequence">→ radar 4/4 atendido · gate não liberou direção · nenhum veredito é emitido</div>`
+    : `<div class="g-consequence">→ sem radar, nenhum veredito é emitido</div>`;
+  el.className = 'gate '+state;
+  el.innerHTML = `
+    <div class="g-head">
+      <span class="g-mark">◆ ÂNCORA ALFA OMEGA</span>
+      <span class="g-role">GATE 1 · mercado futuro real (tape/agressão)</span>
+      <span class="g-badge">${badge}</span>
+    </div>
+    <div class="g-body">
+      <div class="g-strength">
+        <div class="ss">${segs}</div>
+        <span class="g-x">${(typeof g.strength==='number')?g.strength:'?'}/4</span>
+        <span class="g-tape"><span class="tdot ${tapeOn?'on':'off'}"></span>${tapeOn?'tape ao vivo':'tape parado'}</span>
+        ${dirTxt}
+      </div>
+      <div class="g-reason">${esc(g.reason||'—')}</div>
+      ${conseq}
+    </div>`;
+}
+
+// (2026-09-28) UI_SOURCE_COLOR_POLICY — COR = connection_state, TEXTO = data_state.
+// BFF antigo (sem connection_state): offline -> DISCONNECTED; live/stale -> CONNECTED.
+const DS_SHORT = { FRESH:'', PARTIAL:'parcial', NO_NEW_DATA_EXPECTED:'fechado', STALE:'stale' };
+function srcConn(st){ return (st&&st.connection_state) || ((!st||st.status==='offline')?'DISCONNECTED':'CONNECTED'); }
+function srcData(st){ return (st&&st.data_state) || (st&&st.status==='live'?'FRESH':'STALE'); }
+function fmtAgeS(s){ return s==null?'—':s>3600?Math.round(s/3600)+'h':s>90?Math.round(s/60)+'m':s+'s'; }
+function srcTip(st){ return `${srcConn(st)} · ${srcData(st)} · updatedAt=${(st&&st.updated_at)||'—'} · age=${fmtAgeS(st&&st.age_s)} · reason=${(st&&(st.reason||st.detail))||'—'}`; }
+function renderHealth(sources){
+  const el=document.getElementById('health');
+  el.innerHTML = Object.keys(SRC_LABELS).map(k=>{
+    const st=(sources&&sources[k])||{status:'offline'};
+    const up=srcConn(st)==='CONNECTED', ds=DS_SHORT[srcData(st)]||'';
+    return `<span class="src ${up?'':'down'}" title="${esc(srcTip(st))}" data-conn="${srcConn(st)}" data-data="${srcData(st)}"><span class="dot ${up?'conn':'down'}"></span>${SRC_LABELS[k]}${ds?` <span class="ds">${ds}</span>`:''}</span>`;
+  }).join('');
+}
+
+// ── FAIXA DE ALERTA DE SAÚDE ────────────────────────────────────────────────
+// Regra de exibição: só com alerta. `down` (vermelho) domina `degraded` (âmbar);
+// COLAPSO DE LOTE domina os dois — porque quando 5 de 9 caem juntos o que importa
+// é a FONTE, não a lista de 5 nomes.
+// (2026-09-28, UI_SOURCE_COLOR_POLICY) falha de CONEXAO de fonte (item src.* down, lote do grupo sources)
+// = AMARELO, igual ao badge. RED_FOR_SOURCE_CONNECTION = FORBIDDEN. Vermelho so para indicador nao-fonte.
+const AB_COR = { batch:{bg:'#3a1618',bd:'#7d2c31',fg:'#ffb4b4'}, down:{bg:'#33191a',bd:'#6e2a2e',fg:'#ff9d9d'}, degraded:{bg:'#332a12',bd:'#6d5a1f',fg:'#ffd48a'}, conn:{bg:'#332e0a',bd:'#6d6420',fg:'#FFD600'} };
+const abIsSrc = a => /^src\./.test((a&&a.id)||'');
+function abSev(h){
+  const al=h.alerts||[], bt=h.batches||[];
+  if(bt.some(b=>b.group!=='sources')) return 'batch';
+  if(bt.length) return 'conn';
+  if(al.some(a=>a.status==='down'&&!abIsSrc(a))) return 'down';
+  if(al.some(a=>a.status==='down')) return 'conn';
+  return h.severity==='degraded' ? 'degraded' : 'down';
+}
+function abTag(a){
+  if(a.status==='degraded') return { tag:'DEGRADADO', cor:'#ffd48a' };
+  if(!abIsSrc(a)) return { tag:'FORA', cor:'#ff9d9d' };
+  const m=/AUTH_REQUIRED|ERROR/.exec(a.why||'');
+  return { tag: m ? m[0] : 'FORA', cor:'#FFD600' };
+}
+function renderAlertBand(h){
+  const el=document.getElementById('alertband');
+  if(!el) return;
+  // BFF antigo (sem o campo health): não inventa alerta nem esconde problema — fica quieto.
+  if(!h || h.ok || (!(h.alerts||[]).length && !(h.batches||[]).length)){ el.hidden=true; el.innerHTML=''; return; }
+  const sev = abSev(h);
+  const c = AB_COR[sev]||AB_COR.down;
+  const lote = (h.batches||[]).map(b=>`<div style="font-weight:700;margin-bottom:4px">⚠ ${esc(b.msg)}</div>`).join('');
+  const itens = (h.alerts||[]).map(a=>{
+    const { tag, cor } = abTag(a);
+    return `<span style="display:inline-block;margin:2px 10px 2px 0;white-space:nowrap">
+      <b style="color:${cor}">${esc(tag)}</b> ${esc(a.label)}
+      <span style="color:var(--ink-faint)">· ${esc(a.why||'')} · ${a.streak} polls</span></span>`;
+  }).join('');
+  const n = (h.counts&&h.counts.total)||0, okN=(h.counts&&h.counts.ok)||0, mut=(h.counts&&h.counts.muted)||0;
+  el.hidden=false;
+  el.style.cssText=`background:${c.bg};border:1px solid ${c.bd};color:${c.fg};border-radius:8px;padding:9px 13px;margin:0 0 12px;font:13px inherit;line-height:1.55`;
+  el.innerHTML = lote + itens +
+    `<div style="color:var(--ink-faint);margin-top:5px;font-size:12px">
+       ${okN}/${n} saudáveis · ${mut} silenciados por desenho/flag/pregão ·
+       alerta exige ${h.streakRequired} polls ruins seguidos</div>`;
+}
+
+// Narrador — feed via proxy /narrator do BFF (mesma-origem → funciona no mobile/remoto; §BP.3/§BZ).
+// Resiliente: tenta /narrator; se cair (BFF antigo pré-restart), usa localhost:3601 (usuário local).
+async function narrGet(sub){
+  try{ const r=await fetch('/narrator'+sub,{cache:'no-store'}); if(r.ok){ const j=await r.json(); if(!(j&&j.offline)) return j; } }catch(e){}
+  try{ const r=await fetch('http://localhost:3601'+sub,{cache:'no-store'}); return await r.json(); }catch(e){ return {offline:true}; }
+}
+async function narrPost(sub, obj){
+  const body=JSON.stringify(obj);
+  try{ const r=await fetch('/narrator'+sub,{method:'POST',headers:{'content-type':'application/json'},body}); if(r.ok) return; }catch(e){}
+  try{ await fetch('http://localhost:3601'+sub,{method:'POST',headers:{'content-type':'application/json'},body}); }catch(e){}
+}
+function evRow(e){
+  const t=new Date(e.ts).toLocaleTimeString('pt-BR');
+  const spk = e.spoken ? '🔊 falado' : '🔇 só no log';
+  return `<div class="ev ${e.spoken?'spoken':'silent'}"><span class="prio ${e.priority}">${e.priority}</span>
+    <div><div class="top"><span class="src">${esc((e.sources&&e.sources.join('+'))||e.source)}</span><span class="tm">${t}</span></div>
+    <div class="txt">${esc(e.text)}</div><div class="spk">${spk}${e.why?' · '+esc(e.why):''}</div></div></div>`;
+}
+
+// ── PERFIL DE ACESSO (2026-08-19) — conveniência de UI, NÃO segurança ──────────────────
+// A trava real é o `exigirAdmin()` no BFF, que responde 403 na rota. Isto aqui só evita que
+// o operador veja um controle que ele não pode usar e receba um erro depois de clicar.
+// ⚠️ NÃO duplicar validação aqui: se um dia o servidor mudar a regra, este código não pode
+//    virar uma segunda fonte de verdade que discorde dele.
+// Fail-closed também na UI: qualquer falha em /whoami esconde o controle. Preferimos esconder
+// um botão de quem tinha direito (recuperável com F5) do que mostrar um que dá 403.
+let AO_PERFIL = null;
+async function carregarPerfil(){
+  try{
+    const r = await fetch('/whoami', {cache:'no-store'});
+    AO_PERFIL = r.ok ? await r.json() : null;
+  }catch(e){ AO_PERFIL = null; }
+  aplicarPerfil();
+  return AO_PERFIL;
+}
+function ehAdmin(){ return !!(AO_PERFIL && AO_PERFIL.perfil === 'admin'); }
+function aplicarPerfil(){
+  // Link para a tela de administracao de acesso: so existe para admin. Nao e seguranca
+  // (a trava e o exigirAdmin no servidor) — e para o operador nao ver porta que nao abre.
+  try{
+    const tabs=document.querySelector(".tabs");
+    let a=document.getElementById("tabAdmin");
+    if(tabs && ehAdmin() && !a){
+      a=document.createElement("a"); a.id="tabAdmin"; a.className="tab"; a.href="/admin.html";
+      a.textContent="Acesso"; a.title="administrar quem pode entrar no painel";
+      tabs.appendChild(a);
+    } else if(a && !ehAdmin()){ a.remove(); }
+  }catch(e){}
+
+  // Controle administrativo desta página: o seletor de idioma da narração
+  // (dispara POST /narrator/config, que exige admin no servidor).
+  const sel = document.getElementById('langSel');
+  if(!sel) return;
+  const adm = ehAdmin();
+  sel.disabled = !adm;
+  sel.style.opacity = adm ? '' : '0.45';
+  sel.style.cursor  = adm ? '' : 'not-allowed';
+  sel.title = adm ? 'idioma da voz + texto'
+                  : 'somente leitura — requer perfil admin' + (AO_PERFIL && AO_PERFIL.email ? ' (' + AO_PERFIL.email + ')' : '');
+}
+
+let langInit=false;
+async function setupLang(h){
+  const sel=document.getElementById('langSel');
+  if(!langInit && h.langs){ sel.innerHTML=h.langs.map(l=>`<option value="${l.key}">${esc(l.label)}</option>`).join(''); sel.value=h.lang; langInit=true;
+    sel.addEventListener('change', ()=>{ narrPost('/config',{lang:sel.value}); }); }
+  else if(langInit && h.lang && document.activeElement!==sel){ sel.value=h.lang; }
+}
+async function narrTick(){
+  const stat=document.getElementById('narrStat'), feed=document.getElementById('feed');
+  try{
+    const h=await narrGet('/health');
+    if(h&&h.offline){ stat.textContent='● offline'; stat.style.color='var(--ink-faint)'; feed.innerHTML='<div class="empty">Narrador offline. Sobe junto com o watchdog.</div>'; return; }
+    setupLang(h);
+    stat.textContent='● ao vivo'; stat.style.color='var(--long)'; stat.style.borderColor='rgba(38,166,154,.4)';
+    const r=await narrGet('/events?n=14');
+    feed.innerHTML = (r.events&&r.events.length) ? r.events.map(evRow).join('') : '<div class="empty">Sem eventos ainda — o narrador fala quando algo muda a tese. Fora do pregão, silêncio é o estado correto.</div>';
+  }catch(e){ stat.textContent='● offline'; stat.style.color='var(--ink-faint)'; feed.innerHTML='<div class="empty">Narrador inalcançável. Sobe junto com o watchdog.</div>'; }
+}
+
+async function tick(){
+  try{
+    const r=await fetch('/state',{cache:'no-store'});
+    // sessão do Cloudflare Access expirou → a resposta é o HTML de login, não JSON
+    if(r.redirected || !/json/.test(r.headers.get('content-type')||'')){
+      document.getElementById('upd').textContent='⚠ Sessão do Cloudflare Access expirou — recarregue a página (Ctrl+Shift+R) e faça login';
+      return;
+    }
+    const st=await r.json();
+    if(!st||!st.symbols) return;
+    // sessão + clock
+    const sp=document.getElementById('sessPill');
+    if(st.rth){ sp.className='pill rth'; sp.textContent='● RTH · '+(st.session==='POWER_HOUR'?'Power Hour':'Regular'); }
+    else { sp.className='pill closed'; sp.textContent='● Mercado fechado'; }
+    renderHealth(st.sources);
+    renderAlertBand(st.health);   // faixa de saúde — some sozinha quando não há alerta
+    // GATE 1 (Alfa Omega) — bloco dominante-quando-fechado + subordina os heroes
+    const heroesEl=document.getElementById('heroes'), subhint=document.getElementById('subhint');
+    if(st.gate){
+      renderGate(st.gate);
+      const open = st.gate.state==='OPEN';
+      heroesEl.classList.toggle('subordinated', !open);
+      if(open){ subhint.hidden=true; }
+      else { subhint.hidden=false; subhint.textContent = st.gate.state==='OFFLINE'
+        ? 'Heroes aguardando o Radar Alfa Omega — ponte offline, sem veredito.'
+        : ('Heroes aguardando o Radar Alfa Omega' + (st.gate.why ? ' — ' + st.gate.why : ' formar (4/4)') + ' — sem veredito.'); }
+    } else {
+      document.getElementById('gate').innerHTML='<div class="g-head"><span class="g-mark">◆ RADAR ALFA OMEGA</span><span class="g-badge">SEM DADO</span></div><div class="g-body"><div class="g-reason">/state sem objeto gate — reinicie o BFF para carregar o código novo.</div></div>';
+    }
+    document.getElementById('heroes').innerHTML = heroCard('ES · S&P 500', st.symbols.ES, v2Row('ES', st) + confAdicionalRow('ES', st)) + heroCard('NQ · Nasdaq 100', st.symbols.NQ, v2Row('NQ', st) + confAdicionalRow('NQ', st));
+    // Selo de confluência ES×NQ da nova hierarquia (v2) — derivado; só com flag ligada.
+    const cf2=document.getElementById('confluence2');
+    if(cf2){
+      const c=(st.stackMode!=='v1' && st.v2 && !st.v2._err) ? st.v2.confluence : null;
+      if(c && c.agree){ cf2.className='confluence2 show '+dirClass(c.dir); cf2.textContent='◆ Confluência dupla ES×NQ · '+c.dir+' · '+(c.level||''); }
+      else if(c){ cf2.className='confluence2 show'; cf2.textContent='trilhas independentes — sem confluência dupla'; }
+      else { cf2.className='confluence2'; cf2.textContent=''; }
+    }
+    // ── Bug #5: Renderizar confluência ES×NQ ──
+    if(st.confluence){
+      const cf=document.getElementById('confluence');
+      cf.className='confluence '+st.confluence.color;
+      cf.textContent=st.confluence.label;
+      cf.hidden=false;
+    }
+    // ── Bug #3: Passar OHLC real ao canvas ──
+    if(st.ohlc && st.ohlc.candles && st.ohlc.candles.length>0){
+      window.CHART_DATA_OHLC=st.ohlc.candles;
+    }
+    // indicadores Alfa Omega recalculados (ES-only) — busca própria, degrada sozinha
+    let ind=null; try{ ind = await (await fetch('/api/indicators',{cache:'no-store'})).json(); }catch(e){}
+    renderIndicators(ind, st);
+    renderLevelMap(st.symbols.ES, ind && ind.walls);
+    renderRegime(st.symbols.ES);
+    const live=st.sources?Object.values(st.sources).filter(s=>s.status==='live').length:0;
+    document.getElementById('upd').textContent = 'atualizado '+new Date(st.asof).toLocaleTimeString('pt-BR');
+    document.getElementById('live').textContent = live+'/6 fontes ao vivo';
+    renderFlowGc(st.flowGc); renderFlowRussell(st.flowRussell);   // #22 — abas FLOW GC / RUSSELL
+    try{ renderFlowGcSi(st.flowGcSi); }catch(e){ /* FLOW GC·SI isolado */ }
+  }catch(e){ document.getElementById('upd').textContent='erro ao buscar /state'; }
+}
+function clockTick(){ const d=new Date(); const et=d.toLocaleTimeString('en-US',{timeZone:'America/New_York',hour12:false}); document.getElementById('clock').textContent=et+' ET'; }
+setInterval(clockTick,1000); clockTick();
+// perfil primeiro: define se os controles administrativos nascem ativos ou apagados.
+// Revalida a cada 5 min — se o admins.json mudar, a tela acompanha sem F5.
+carregarPerfil(); setInterval(carregarPerfil, 300000);
+tick(); setInterval(tick, 10000);
+narrTick(); setInterval(narrTick, 6000);
+
+// #22 — sub-abas de fluxo (view-switch dentro do Command). FLOW GC/RUSSELL consomem st.flowGc/flowRussell.
+function showFlow(name){
+  document.querySelectorAll('.flowview').forEach(v=>v.hidden = (v.id!=='view-'+name));
+  document.querySelectorAll('.flowtab').forEach(b=>{ const on=b.dataset.flow===name; b.style.background=on?'#1c3a52':'#0d1a26'; b.style.color=on?'#e8eef4':'#8a97a6'; b.style.fontWeight=on?'600':'400'; });
+}
+document.querySelectorAll('.flowtab').forEach(b=>b.addEventListener('click',()=>showFlow(b.dataset.flow)));
+function renderFlowGc(fg){
+  const el=document.getElementById('gcDetail'); if(!el) return;
+  if(!fg){ el.innerHTML='<div style="color:var(--ink-faint)">sem dado do /state (reinicie o BFF p/ carregar o código novo)</div>'; return; }
+  const col = fg.strength==='FORTE'?(fg.dir==='LONG'?'var(--long)':'var(--short)') : fg.strength==='DIVERGENTE'?'var(--warn)':'var(--ink-dim)';
+  el.innerHTML =
+    '<div style="font-size:22px;font-weight:700;color:'+col+'">'+esc(fg.strength)+(fg.dir!=='NEUTRO'?' · '+arrow(fg.dir)+' '+esc(fg.dir):'')+'</div>'
+    +'<div style="margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:10px">'
+      +'<div style="border:1px solid var(--line);border-radius:8px;padding:10px"><div style="color:var(--ink-faint);font-size:11px">TAPE (GC×SI)</div><div style="font-weight:600">'+esc(fg.tape.dir)+(fg.tape.strength?' · '+fg.tape.strength+'/4':'')+'</div><div style="color:var(--ink-dim);font-size:11px">'+(fg.tape.agree?'GC e SI concordam':'sem confluência de tape')+'</div></div>'
+      +'<div style="border:1px solid var(--line);border-radius:8px;padding:10px"><div style="color:var(--ink-faint);font-size:11px">HIRO (GLD / SLV)</div><div style="font-weight:600">GLD '+esc(fg.hiro.gc)+' · SLV '+esc(fg.hiro.si)+'</div><div style="color:var(--ink-dim);font-size:11px">'+(fg.hiro.agree?'os dois metais alinhados':'sem alinhamento HIRO')+'</div></div>'
+    +'</div>'
+    +'<div style="margin-top:10px;color:var(--ink-faint);font-size:11px;border-top:1px dashed var(--line);padding-top:8px">'+esc(fg._note||'')+'</div>';
+}
+function renderFlowRussell(fr){
+  const el=document.getElementById('rtyDetail'); if(!el) return;
+  if(!fr){ el.innerHTML='<div style="color:var(--ink-faint)">sem dado do /state (reinicie o BFF p/ carregar o código novo)</div>'; return; }
+  const col = fr.authorized?(fr.dir==='LONG'?'var(--long)':'var(--short)'):'var(--ink-dim)';
+  const badge = fr.authorized?('AUTORIZA '+fr.dir):'AGUARDA';
+  el.innerHTML =
+    '<div style="font-size:22px;font-weight:700;color:'+col+'">'+esc(badge)+'</div>'
+    +'<div style="margin-top:8px;color:var(--ink-dim)">'+esc(fr.reason||'')+'</div>'
+    +'<div style="margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:10px">'
+      +'<div style="border:1px solid var(--line);border-radius:8px;padding:10px"><div style="color:var(--ink-faint);font-size:11px">TAPE RTY</div><div style="font-weight:600">'+esc((fr.rty&&fr.rty.dir)||'—')+(fr.rty&&fr.rty.confStrength!=null?' · '+fr.rty.confStrength+'/2':'')+'</div></div>'
+      +'<div style="border:1px solid var(--line);border-radius:8px;padding:10px"><div style="color:var(--ink-faint);font-size:11px">ÂNCORA ES×NQ</div><div style="font-weight:600">'+esc((fr.anchor&&fr.anchor.dir)||'—')+'</div></div>'
+    +'</div>'
+    +(fr.hiro?'<div style="margin-top:8px;color:var(--ink-dim);font-size:12px">HIRO Russell: '+esc(fr.hiro.dir||'—')+'</div>':'')
+    +'<div style="margin-top:10px;color:var(--ink-faint);font-size:11px;border-top:1px dashed var(--line);padding-top:8px">'+esc(fr._note||'')+'</div>';
+}
+
+// ── FLOW GC·SI (2026-10-12) — radar e cards GC / SI a partir de st.flowGcSi (BFF) ──
+// SOMENTE LEITURA: desenha o que o BFF publica; nenhum cálculo, critério ou direção nasce aqui.
+// Campo sem fonte para ouro/prata (EDGE, MULTI, etapa de força) aparece como indisponível, com o motivo.
+function gcsiAge(ms){
+  if(ms==null||!isFinite(ms)) return '—';
+  if(ms>=86400000) return 'nunca publicado';
+  return ms>=60000 ? Math.round(ms/60000)+'min' : Math.round(ms/1000)+'s';
+}
+function gcsiGate(g){
+  const el=document.getElementById('gcsiGate'); if(!el) return;
+  const head=(badge)=>'<div class="g-head"><span class="g-mark">◆ ÂNCORA GC·SI</span><span class="g-role">radar GC+SI · mercado futuro real (tape/agressão) · contexto, nunca operado</span><span class="g-badge">'+badge+'</span></div>';
+  if(!g){ el.className='gate closed'; el.innerHTML=head('SEM DADO')+'<div class="g-body"><div class="g-reason">/state sem o radar GC·SI — indisponível.</div></div>'; return; }
+  const state=String(g.state||'UNAVAILABLE').toLowerCase();   // open | closed | offline | unavailable
+  if(state==='unavailable'){ el.className='gate closed'; el.innerHTML=head('INDISPONÍVEL')+'<div class="g-body"><div class="g-reason">'+esc(g.reason||'—')+'</div></div>'; return; }
+  const open=state==='open';
+  const semForca = open && !(g.forceStep && g.forceStep.applied===true);   // etapa de força sem fonte para GC/SI
+  const badge = semForca ? 'RADAR 4/4 · FORÇA INDISPONÍVEL' : open ? 'RADAR 4/4 CONFIRMADO' : state==='closed' ? 'ESPERANDO CONFIRMAÇÃO' : 'PONTE OFFLINE';
+  const hasStr=(typeof g.strength==='number'), str=hasStr?g.strength:0;
+  const segs=[0,1,2,3].map(i=>'<span class="'+(i<str?'on':'off')+'"></span>').join('');
+  const tapeOn=!!g.tapeLive;
+  const dirTxt = open ? '<span class="g-dir">'+(semForca?'direção do tape':'direção')+' <b class="num" style="color:var(--'+dirClass(g.dir)+')">'+esc(g.dir||'—')+'</b></span>' : '';
+  const conseq = semForca ? '<div class="g-consequence">→ passos 1–3 do radar atendidos · etapa de força sem fonte para GC/SI · gate não declarado aberto</div>'
+    : open ? '' : g.phase==='ESPERANDO_CONFIRMACAO' ? '<div class="g-consequence">→ radar 4/4 atendido · força insuficiente · gate fechado, sem direção e sem ordem</div>'
+    : '<div class="g-consequence">→ sem radar, sem leitura de confluência GC·SI</div>';
+  el.className='gate '+(semForca?'closed':open?'open':state==='closed'?'closed':'offline');
+  el.innerHTML=head(badge)
+    +'<div class="g-body"><div class="g-strength"><div class="ss">'+segs+'</div>'
+    +'<span class="g-x">'+(hasStr?g.strength:'?')+'/4</span>'
+    +'<span class="g-tape"><span class="tdot '+(tapeOn?'on':'off')+'"></span>'+(tapeOn?'tape ao vivo':'tape parado')+'</span>'+dirTxt+'</div>'
+    +'<div class="g-reason">'+esc(g.reason||'—')+'</div>'+conseq+'</div>';
+}
+function gcsiCard(title, leg){
+  if(!leg) return '<div class="hero neutral"><div class="spine"></div><div class="hero-head"><span class="hero-sym">'+title+'</span><span class="hero-spot"><span style="color:var(--ink-faint)">indisponível</span></span></div><div class="reason">/state sem dado para este ativo</div></div>';
+  const c1=leg.c1||{}, c2=leg.c2||{}, c3=leg.c3||{}, conv=leg.conv||{}, edge=leg.edge||{};
+  const live = leg.state==='LIVE';
+  const dir = (live && c1.signal) ? (c1.dir||'NEUTRO') : 'NEUTRO';   // direção só com tape vivo e ME∧MVI concordando
+  const dc=dirClass(dir);
+  const pill = live ? '<span class="pill state-pill tierA">tape ao vivo</span>'
+    : leg.state==='STALE' ? '<span class="pill state-pill stand">STALE · tape há '+esc(gcsiAge(leg.ageMs))+'</span>'
+    : leg.state==='OFFLINE' ? '<span class="pill state-pill offline">offline</span>'
+    : '<span class="pill state-pill offline">indisponível</span>';
+  const spot = leg.lastPrice!=null ? 'último <span class="num">'+fmt(leg.lastPrice)+'</span> · preço há '+esc(gcsiAge(leg.priceAgeMs)) : '<span style="color:var(--ink-faint)">sem preço</span>';
+  const lvl = conv.level||'—';
+  const chip=(t,k)=>'<span class="chip '+(k||'')+'"><span class="cdot"></span>'+esc(t)+'</span>';
+  const sg=(n)=> n>0?'+1':n<0?'−1':'0';
+  const chips = c1.available
+    ? chip('ME '+sg(leg.me), leg.me!==0?'ok':'')+chip('MVI '+sg(leg.mvi), leg.mvi!==0?'ok':'')
+      +chip(leg.press ? 'pressão '+Number(leg.press).toFixed(5) : 'pressão indisponível')
+      +chip('tape há '+gcsiAge(leg.ageMs), leg.fresh?'ok':'alert')
+      +(leg.sourceTs?chip('origem '+new Date(leg.sourceTs).toLocaleTimeString('pt-BR')):'')
+    : chip(c1.note||'sem dado de tape','alert');
+  const v2=(lbl,val,cls,tip)=>'<span class="v2chip '+cls+'"'+(tip?' title="'+esc(tip)+'"':'')+'>'+lbl+'<b>'+esc(val)+'</b></span>';
+  const c1cls = (live && c1.signal) ? dirClass(c1.dir) : 'neutral';
+  const c1val = c1.available ? (c1.signal ? c1.dir+' '+c1.confStrength+'/2' : 'flat') : 'N/A';
+  const c2v = c2.confirm||'N/A';
+  const c2cls = c2v==='CONFIRMA'?'ok':c2v==='DIVERGE'?'alert':(c2v==='N/A'?'na':'');
+  const c2tip = (c2.proxyNote||'')+((c2.spotgamma&&c2.spotgamma.reason)?' · '+c2.spotgamma.reason:'');
+  const c3v = c3.available ? (c3.aligned?'ALINHADO':(c3.alignedCount||0)+'/3') : 'N/A';
+  const c3cls = c3.aligned?'ok':(c3.available?'':'na');
+  const edgeTxt = (edge.available && edge.value!=null) ? Math.round(edge.value)+'%' : '—';
+  return '<div class="hero '+dc+'"><div class="spine"></div>'
+    +'<div class="hero-head"><span class="hero-sym">'+title+'</span><span class="hero-spot">'+spot+'</span></div>'
+    +'<div class="verdict"><span class="dir '+dc+'">'+esc(dir)+'</span><span class="arrow" style="color:var(--'+(dc==='neutral'?'ink-faint':dc)+')">'+arrow(dir)+'</span>'
+    +'<div class="edge"><span class="big num" style="color:var(--ink-dim)">'+edgeTxt+'</span><span class="lbl eyebrow" title="'+esc(edge.note||'')+'">edge do gate'+(edge.available?'':' · indisponível')+'</span></div></div>'
+    +'<div class="seal"><div class="meter"><span class="seg"></span><span class="seg"></span><span class="seg"></span></div>'
+    +'<span class="seal-txt '+(lvl==='—'?'none':'')+'">Convicção '+(lvl==='—'?'indef.':esc(lvl))+'</span>'+pill+'</div>'
+    +'<div class="reason">'+esc(conv.reason||'—')+'</div>'
+    +'<div class="chips">'+chips+'</div>'
+    +'<div class="v2row" title="Camada 1 tape · Camada 2 HIRO do ETF (proxy, Net $ dos últimos 5min) · Camada 3 sem fonte para ouro/prata">'
+    +v2('TAPE', c1val, c1cls)+v2('HIRO '+esc(c2.proxy||'ETF')+' (ETF)', c2v, c2cls, c2tip)+v2('MULTI', c3v, c3cls, c3.note||'')
+    +'<span class="v2conv '+esc(lvl)+'">'+esc(lvl)+'</span></div></div>';
+}
+function renderFlowGcSi(f){
+  const heroes=document.getElementById('gcsiHeroes'), sub=document.getElementById('gcsiSubhint'), cf2=document.getElementById('gcsiConfluence2');
+  if(!heroes||!sub||!cf2) return;
+  const legacy=document.getElementById('gcLegacy');
+  if(!f || f._err || !f.gate){   // BFF sem o contrato novo (ou erro isolado): nada é inventado
+    gcsiGate(null); heroes.style.opacity='.5'; if(legacy) legacy.hidden=false;
+    heroes.innerHTML=gcsiCard('GC · Gold Futures', null)+gcsiCard('SI · Silver Futures', null);
+    sub.hidden=false; sub.textContent='FLOW GC·SI indisponível — o /state não trouxe o radar por ativo.';
+    cf2.className='confluence2'; cf2.textContent=''; return;
+  }
+  gcsiGate(f.gate); if(legacy) legacy.hidden=true;
+  const open=f.gate.state==='OPEN';
+  heroes.style.opacity=open?'':'.5';
+  heroes.innerHTML=gcsiCard('GC · Gold Futures', f.gc)+gcsiCard('SI · Silver Futures', f.si);
+  sub.hidden=open;   // com 4/4 o motivo (inclusive a etapa de força) já está na faixa do radar
+  sub.textContent = open
+    ? ''
+    : f.gate.state==='OFFLINE' ? 'Cards aguardando o radar GC·SI — ponte offline.'
+    : f.gate.state==='UNAVAILABLE' ? 'Cards aguardando as pernas GC e SI da ponte do NinjaTrader.'
+    : 'Cards aguardando o radar GC·SI'+(f.gate.why?' — '+f.gate.why:' formar (4/4)')+'.';
+  const c=f.confluence;
+  if(c && c.agree && c.live){ cf2.className='confluence2 show '+dirClass(c.dir); cf2.textContent='◆ Confluência dupla GC×SI · '+c.dir+' · '+(c.level||''); }
+  else if(c && c.agree){ cf2.className='confluence2 show'; cf2.textContent='sinais de tape iguais, mas dado sem frescor (STALE) — sem confluência dupla'; }
+  else if(c){ cf2.className='confluence2 show'; cf2.textContent='trilhas independentes — sem confluência dupla'; }
+  else { cf2.className='confluence2'; cf2.textContent=''; }
+}
+
+// ────────────────────────────────────────────────────────────────────────────
+//  GRÁFICO · Candlestick / Renko  — Canvas 2D puro, dado ILUSTRATIVO.
+//  Placeholder determinístico (seed fixa) para não piscar entre repaints.
+//  A conexão com dado real (/state, série OHLC do BFF) fica para o handoff de dev.
+//  Renko = técnica clássica: tijolo de tamanho fixo de PREÇO, sem eixo de tempo.
+// ────────────────────────────────────────────────────────────────────────────
+(function(){
+  const cv = document.getElementById('ctCanvas'); if(!cv) return;
+  const ctx = cv.getContext('2d');
+
+  // paleta vinda dos tokens (uma fonte só de verdade)
+  const css = getComputedStyle(document.documentElement);
+  const C = k => css.getPropertyValue(k).trim();
+  const COL = { long:C('--long'), short:C('--short'), warn:C('--warn'), steel:C('--steel'),
+    ink:C('--ink'), dim:C('--ink-dim'), faint:C('--ink-faint'), line:C('--line'), soft:C('--line-soft') };
+
+  // níveis ilustrativos (coerentes com os números reais do vendor p/ o ES)
+  const LV = { call_wall:7600, put_wall:7300, zero_gamma:7443, max_gamma:7495 };
+
+  // ── dado real (Bug #3) ou sintético determinístico ──────────────────────────────────────────
+  function mulberry32(a){ return function(){ a|=0; a=a+0x6D2B79F5|0; let t=Math.imul(a^a>>>15,1|a); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
+  const rnd = mulberry32(20260714);
+  let candles=[], closes=[], spot=7500, N=90;
+
+  // usar OHLC real se disponível (passado pela função tick() do BFF)
+  if(window.CHART_DATA_OHLC && window.CHART_DATA_OHLC.length>0){
+    candles = window.CHART_DATA_OHLC.slice(0, 90);
+    closes = candles.map(c=>c.c);
+    N = candles.length;
+    spot = closes[closes.length-1] || 7500;
+    document.getElementById('ctSub').textContent='candlestick · dados α Gamma /gseries real';
+    document.querySelector('.ct-badge').textContent='● ao vivo';
+  } else {
+    // fallback: dado sintético determinístico
+    let px = 7460;
+    for(let i=0;i<N;i++){
+      const trend = Math.sin(i/22)*3.2;                  // ondas amplas
+      const o = px;
+      const c = o + trend + (rnd()-0.5)*14 + (7500-o)*0.012;
+      const hi = Math.max(o,c) + rnd()*6;
+      const lo = Math.min(o,c) - rnd()*6;
+      candles.push({o,h:hi,l:lo,c}); closes.push(c); px = c;
+    }
+    spot = closes[closes.length-1];
+  }
+
+  // HIRO ilustrativo (fluxo cumulativo) — série própria, escala própria
+  const hiro = []; let h=0; const hr = mulberry32(77);
+  for(let i=0;i<N;i++){ h += Math.sin(i/7)*0.35 + (hr()-0.5)*0.5; hiro.push(h); }
+
+  // ── Renko genérico: tijolo de tamanho fixo, reversão clássica de 2 tijolos ──
+  function buildRenko(series, b){
+    const bricks=[]; let anchor=Math.round(series[0]/b)*b, dir=0, top=anchor, bot=anchor;
+    for(const p of series){
+      if(dir===0){
+        if(p>=anchor+b){ let t=anchor; while(p>=t+b){ bricks.push({o:t,c:t+b,dir:1}); t+=b; } top=t; bot=t-b; dir=1; }
+        else if(p<=anchor-b){ let t=anchor; while(p<=t-b){ bricks.push({o:t,c:t-b,dir:-1}); t-=b; } bot=t; top=t+b; dir=-1; }
+      } else if(dir===1){
+        while(p>=top+b){ bricks.push({o:top,c:top+b,dir:1}); top+=b; bot=top-b; }
+        if(p<=bot-b){ let t=bot; while(p<=t-b){ bricks.push({o:t,c:t-b,dir:-1}); t-=b; } bot=t; top=t+b; dir=-1; }  // reversão: 2 tijolos abaixo do topo
+      } else {
+        while(p<=bot-b){ bricks.push({o:bot,c:bot-b,dir:-1}); bot-=b; top=bot+b; }
+        if(p>=top+b){ let t=top; while(p>=t+b){ bricks.push({o:t,c:t+b,dir:1}); t+=b; } top=t; bot=t-b; dir=1; }
+      }
+    }
+    return bricks;
+  }
+
+  // ── estado da UI ────────────────────────────────────────────────────────────
+  const S = { mode:'candle', brick:10, ind:true };
+
+  function draw(){
+    const W = cv.clientWidth || 640, H = 300;
+    const dpr = window.devicePixelRatio || 1;
+    cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    ctx.clearRect(0,0,W,H);
+
+    const axW = 54, padT = 10, plotW = W - axW - 6;
+    const priceH = S.ind ? Math.round(H*0.66) : H - 20;
+    const priceB = padT + priceH;
+    const hiroT = priceB + 16, hiroB = H - 8;
+
+    const renko = S.mode==='renko' ? buildRenko(closes, S.brick) : null;
+
+    // faixa de preço (inclui níveis quando visíveis)
+    let vals = candles.flatMap(c=>[c.h,c.l]);
+    if(renko && renko.length) vals = vals.concat(renko.flatMap(b=>[b.o,b.c]));
+    if(S.ind) vals = vals.concat([spot, LV.call_wall, LV.put_wall, LV.zero_gamma, LV.max_gamma]);
+    let lo=Math.min(...vals), hi=Math.max(...vals); const pad=(hi-lo)*0.06||1; lo-=pad; hi+=pad;
+    const y = p => padT + (1-(p-lo)/(hi-lo))*priceH;
+
+    // grade + eixo de preço
+    ctx.font = '10px '+C('--mono'); ctx.textBaseline='middle';
+    for(let i=0;i<=4;i++){
+      const p = lo+(hi-lo)*i/4, yy=y(p);
+      ctx.strokeStyle=COL.soft; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(0,yy+.5); ctx.lineTo(plotW,yy+.5); ctx.stroke();
+      ctx.fillStyle=COL.faint; ctx.textAlign='left'; ctx.fillText(p.toFixed(0), plotW+8, yy);
+    }
+
+    // ── candlestick ──
+    if(S.mode==='candle'){
+      const step = plotW/N, bw = Math.max(2, step*0.62);
+      candles.forEach((c,i)=>{
+        const cx = i*step + step/2, up = c.c>=c.o, col = up?COL.long:COL.short;
+        ctx.strokeStyle=col; ctx.fillStyle=col; ctx.lineWidth=1;
+        ctx.beginPath(); ctx.moveTo(cx+.5,y(c.h)); ctx.lineTo(cx+.5,y(c.l)); ctx.stroke();   // pavio
+        const yo=y(c.o), yc=y(c.c), top=Math.min(yo,yc), bh=Math.max(1,Math.abs(yc-yo));
+        ctx.fillRect(cx-bw/2, top, bw, bh);                                                   // corpo
+      });
+      document.getElementById('ctSub').textContent='candlestick · ilustrativo';
+    } else {
+      // ── Renko: largura igual por tijolo, SEM eixo de tempo ──
+      const n=renko.length||1, step=plotW/Math.max(n,1), bw=Math.max(2,step*0.82);
+      renko.forEach((b,i)=>{
+        const up=b.dir>0, col=up?COL.long:COL.short, x=i*step+(step-bw)/2;
+        const yt=y(Math.max(b.o,b.c)), yb=y(Math.min(b.o,b.c));
+        ctx.fillStyle=col; ctx.globalAlpha=.9; ctx.fillRect(x, yt, bw, Math.max(2,yb-yt));
+        ctx.globalAlpha=1; ctx.strokeStyle=up?COL.long:COL.short; ctx.lineWidth=1; ctx.strokeRect(x+.5, yt+.5, bw-1, Math.max(1,yb-yt-1));
+      });
+      document.getElementById('ctSub').textContent='Renko · tijolo '+S.brick+' pt · ilustrativo';
+    }
+
+    // ── overlays dos indicadores (níveis + spot + HIRO) ──
+    if(S.ind){
+      const levels=[
+        ['Call Wall', LV.call_wall, COL.short],
+        ['Put Wall',  LV.put_wall,  COL.long],
+        ['Zero-Gamma',LV.zero_gamma,COL.warn],
+        ['Max-Gamma', LV.max_gamma, COL.steel],
+      ];
+      ctx.textBaseline='middle'; ctx.textAlign='left';
+      for(const [nm,v,col] of levels){
+        const yy=y(v); ctx.strokeStyle=col; ctx.globalAlpha=.72; ctx.lineWidth=1; ctx.setLineDash([5,4]);
+        ctx.beginPath(); ctx.moveTo(0,yy+.5); ctx.lineTo(plotW,yy+.5); ctx.stroke(); ctx.setLineDash([]); ctx.globalAlpha=1;
+        ctx.fillStyle=col; ctx.font='9.5px '+C('--sans'); ctx.fillText(nm, 4, yy-6);
+      }
+      // spot
+      const ys=y(spot); ctx.strokeStyle=COL.ink; ctx.globalAlpha=.9; ctx.lineWidth=1.4;
+      ctx.beginPath(); ctx.moveTo(0,ys+.5); ctx.lineTo(plotW,ys+.5); ctx.stroke(); ctx.globalAlpha=1;
+
+      // sub-painel HIRO
+      let hlo=Math.min(...hiro), hhi=Math.max(...hiro); const hp=(hhi-hlo)*0.15||1; hlo-=hp; hhi+=hp;
+      const hy = v => hiroT + (1-(v-hlo)/(hhi-hlo))*(hiroB-hiroT);
+      ctx.strokeStyle=COL.soft; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(0,hiroT-6+.5); ctx.lineTo(plotW,hiroT-6+.5); ctx.stroke();
+      ctx.fillStyle=COL.faint; ctx.font='9px '+C('--sans'); ctx.textAlign='left'; ctx.fillText('HIRO ⟂', 4, hiroT+4);
+      const zy=hy(0); ctx.strokeStyle=COL.soft; ctx.setLineDash([2,3]); ctx.beginPath(); ctx.moveTo(0,zy+.5); ctx.lineTo(plotW,zy+.5); ctx.stroke(); ctx.setLineDash([]);
+      ctx.strokeStyle=COL.steel; ctx.lineWidth=1.5; ctx.beginPath();
+      hiro.forEach((v,i)=>{ const xx=i*(plotW/N)+(plotW/N)/2, yy=hy(v); i?ctx.lineTo(xx,yy):ctx.moveTo(xx,yy); }); ctx.stroke();
+    }
+  }
+
+  // ── controles ────────────────────────────────────────────────────────────
+  document.getElementById('ctMode').addEventListener('click', e=>{
+    const b=e.target.closest('button'); if(!b) return;
+    S.mode=b.dataset.mode;
+    [...e.currentTarget.children].forEach(x=>x.classList.toggle('on', x===b));
+    document.getElementById('ctBrick').hidden = S.mode!=='renko';
+    draw();
+  });
+  const tgl=document.getElementById('ctTgl');
+  tgl.addEventListener('click', ()=>{ S.ind=!S.ind; tgl.classList.toggle('on',S.ind); tgl.setAttribute('aria-checked',S.ind); draw(); });
+  document.getElementById('ctBrick').addEventListener('click', e=>{
+    const b=e.target.closest('button'); if(!b) return;
+    S.brick=Math.max(2, Math.min(40, S.brick + (b.dataset.b==='1'?2:-2)));
+    document.getElementById('ctBrickV').textContent=S.brick; draw();
+  });
+
+  let raf; window.addEventListener('resize', ()=>{ cancelAnimationFrame(raf); raf=requestAnimationFrame(draw); });
+  draw();
+})();
+</script>
+</body>
+</html>
