@@ -1,0 +1,10 @@
+PASS S1 checagem na preimagem: exit 0, nada alterado — CHECAGEM OK: preimagens conferidas; nada alterado (use --apply).
+PASS S2 --apply: exit 0, os 2 arquivos = candidato, backup = preimagem — APLICADO: index.html=e7819fd1840fd11d auto.html=d48601314beddd17; aot-bff.js e motor intocados; sem reinicio.
+PASS S3 reaplicar: JA APLICADO, exit 0 — JA APLICADO. Nada alterado.
+PASS S4 --rollback: os 2 arquivos = preimagem — ROLLBACK: index.html=b6ac8094fde08143
+ROLLBACK: auto.html=5e8441eba84419e4
+PASS S5 conflito (auto.html diferente): exit != 0, nada alterado — CONFLITO: auto.html em producao (aaf95d1d53be0a59) nao e a preimagem aprovada. Nada alterado.
+PASS S6 servidor nao serve o candidato: exit != 0 e restauracao automatica — FALHA: http://127.0.0.1:1 nao serve o candidato; restaurando
+PASS P1 producao, modo checagem: preimagens conferidas, nada alterado — CHECAGEM OK: preimagens conferidas; nada alterado (use --apply).
+
+7/7 PASS

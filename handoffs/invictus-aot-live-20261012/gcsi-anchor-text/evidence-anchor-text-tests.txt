@@ -1,0 +1,44 @@
+PASS A index.html radar 4/4 + ESPERANDO_CONFIRMACAO: texto contraditório ausente
+PASS A index.html ESPERANDO_CONFIRMACAO: consequência coerente (radar 4/4 atendido, sem ordem)
+PASS A index.html base reproduz o defeito
+PASS B index.html radar ausente (semSinal): mensagem de ausência aparece
+PASS B index.html radar ausente (stale): mensagem de ausência aparece
+PASS B index.html radar ausente (offline): mensagem de ausência aparece
+PASS C index.html força fraca: badge ESPERANDO CONFIRMAÇÃO, classe e reason do BFF preservados
+PASS D index.html dado ausente/stale (stale): nenhuma confirmação falsa
+PASS D index.html dado ausente/stale (noPhase): nenhuma confirmação falsa
+PASS D index.html dado ausente/stale (unavailable): nenhuma confirmação falsa
+PASS D index.html dado ausente/stale (nul): nenhuma confirmação falsa
+PASS D index.html dado ausente/stale (offline): nenhuma confirmação falsa
+PASS E index.html regressão (semSinal): saída idêntica à base
+PASS E index.html regressão (stale): saída idêntica à base
+PASS E index.html regressão (noPhase): saída idêntica à base
+PASS E index.html regressão (offline): saída idêntica à base
+PASS E index.html regressão (unavailable): saída idêntica à base
+PASS E index.html regressão (confirmed): saída idêntica à base
+PASS E index.html regressão (openNoForce): saída idêntica à base
+PASS E index.html regressão (nul): saída idêntica à base
+PASS E index.html diff restrito ao conseq do GC·SI (−1/+2 linhas, linha 1023)
+PASS A auto.html radar 4/4 + ESPERANDO_CONFIRMACAO: texto contraditório ausente
+PASS A auto.html ESPERANDO_CONFIRMACAO: consequência coerente (radar 4/4 atendido, sem ordem)
+PASS A auto.html base reproduz o defeito
+PASS B auto.html radar ausente (semSinal): mensagem de ausência aparece
+PASS B auto.html radar ausente (stale): mensagem de ausência aparece
+PASS B auto.html radar ausente (offline): mensagem de ausência aparece
+PASS C auto.html força fraca: badge ESPERANDO CONFIRMAÇÃO, classe e reason do BFF preservados
+PASS D auto.html dado ausente/stale (stale): nenhuma confirmação falsa
+PASS D auto.html dado ausente/stale (noPhase): nenhuma confirmação falsa
+PASS D auto.html dado ausente/stale (unavailable): nenhuma confirmação falsa
+PASS D auto.html dado ausente/stale (nul): nenhuma confirmação falsa
+PASS D auto.html dado ausente/stale (offline): nenhuma confirmação falsa
+PASS E auto.html regressão (semSinal): saída idêntica à base
+PASS E auto.html regressão (stale): saída idêntica à base
+PASS E auto.html regressão (noPhase): saída idêntica à base
+PASS E auto.html regressão (offline): saída idêntica à base
+PASS E auto.html regressão (unavailable): saída idêntica à base
+PASS E auto.html regressão (confirmed): saída idêntica à base
+PASS E auto.html regressão (openNoForce): saída idêntica à base
+PASS E auto.html regressão (nul): saída idêntica à base
+PASS E auto.html diff restrito ao conseq do GC·SI (−1/+2 linhas, linha 696)
+
+42/42 PASS
