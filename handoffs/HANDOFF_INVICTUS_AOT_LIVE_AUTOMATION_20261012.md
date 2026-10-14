@@ -1177,13 +1177,13 @@ JEV documentary A confidence 0.9 probabilities {"A":0.91,"B":0.02,"C":0,"D":0,"E
   - Caso A, renderizado pela `renderGate` real de produção com a saída de `buildGate` 4/4 sem direção (forca fraca ES/NQ): o card mostra "→ RADAR 4/4 ATENDIDO · GATE NÃO LIBEROU DIREÇÃO · NENHUM VEREDITO É EMITIDO", sem contradição com "Radar 4/4 FECHADO". Depois disso o card foi restaurado.
   - Console sem erros após reload.
   - Evidência: `esnq-anchor-text/evidence/chrome-prod-live-0de4.jpg` e `chrome-prod-caseA-4de4-sem-direcao.png`.
-- **VALIDAÇÃO CHROME DO auto.html EM PRODUÇÃO (14/10/2026 ~18:36Z, sessão `afa26a77`, só leitura, sem simulação):** página `http://127.0.0.1:3600/auto.html`; `aocRenderGate` e `aocGcsiGate` servidos contêm os dois fixes.
+- **VALIDAÇÃO CHROME DO auto.html EM PRODUÇÃO (14/10/2026 18:29Z (relógio da página 14:29 ET), sessão `afa26a77`, só leitura, sem simulação):** página `http://127.0.0.1:3600/auto.html`; `aocRenderGate` e `aocGcsiGate` servidos contêm os dois fixes.
   - **ES/NQ ao vivo, caso A real:** CLOSED, 4/4, NEUTRO, tape ao vivo, reason "Radar 4/4 FECHADO … gate não liberou direção — forca fraca NQ". O card mostra "→ RADAR 4/4 ATENDIDO · GATE NÃO LIBEROU DIREÇÃO · NENHUM VEREDITO É EMITIDO", sem contradição.
   - **GC·SI ao vivo:** SEM_SINAL 0/4; mostra "→ sem radar, sem leitura de confluência GC·SI", correto.
   - Console sem erros após reload.
   - Evidência: `esnq-anchor-text/evidence/chrome-prod-auto-live-4de4-sem-direcao.jpg`.
   - **Observação sem ação (fora do escopo, exige ordem própria):** no mesmo momento, outros elementos do auto.html mostravam "Confluência 4/4 — Confluência máxima — abrindo posição" (com NEUTRO, sem posição aberta) e o banner "CONFLUÊNCIA DUPLA ES×NQ · LONG · CONFIRMADA", com o gate fechado/NEUTRO. É um possível padrão de texto contraditório em outros componentes; não foi investigado nem tocado.
-- **DIAGNÓSTICO (SÓ LEITURA) — DUAS CONTRADIÇÕES VISUAIS ES/NQ NO auto.html (14/10/2026 ~18:45Z, sessão `afa26a77`). Nenhum código alterado.** Linhas do `auto.html` de produção atual (`a2c342db…` = `esnq-anchor-text/candidate/auto.html`).
+- **DIAGNÓSTICO (SÓ LEITURA) — DUAS CONTRADIÇÕES VISUAIS ES/NQ NO auto.html (14/10/2026 ~18:32Z, sessão `afa26a77`). Nenhum código alterado.** Linhas do `auto.html` de produção atual (`a2c342db…` = `esnq-anchor-text/candidate/auto.html`).
   - **1. "Confluência máxima — abrindo posição"** (`#trigNote`, `renderSim()` L470–473):
     - A UI testa só `sim.anchor.strength===4`; `sim.anchor` = `gate.anchor` (`{dir,strength,why}`, `aot-bff.js` L2327 → `aot-sim.js` `tick` L247–254).
     - O motor só abre com `strength===4 ∧ dir∈{LONG,SHORT} ∧ cooldownOk ∧ freshOk ∧ spots válidos` (`aot-sim.js` L310), mais a histerese `requireFreshFourOfFour`.
@@ -1203,3 +1203,26 @@ JEV documentary A confidence 0.9 probabilities {"A":0.91,"B":0.02,"C":0,"D":0,"E
     - (1) `auto.html` L472–473: "abrindo posição" só com `a.strength===4 && (aw==='LONG'||aw==='SHORT')`; com 4/4 e NEUTRO, "Radar 4/4 sem direção liberada pelo gate — sem abertura."
     - (2) `auto.html` L799 e `index.html` L933: com `st.gate.state!=='OPEN'`, sufixar/rotular "· tape (informativa) — gate fechado, sem autorização", sem mostrar `level` como CONFIRMADA. Só apresentação, contrato BFF existente.
     - (3) Opcional, separado, toca o BFF: renomear o `level` `'CONFIRMADA'` de L1317 para refletir `conv` (ex.: só CONFIRMADA se ambos `conv.level` ≥ CONFIRMADA). Exige JEV próprio, porque muda o contrato `v2`.
+- **DIAGNÓSTICO COM HISTÓRICO (SÓ LEITURA) — contradições do auto.html × operações (14/10/2026 18:36Z, sessão `afa26a77`). Nenhum código/estado alterado; nenhuma ordem.** Scripts de leitura: scratchpad `hist-analyze.mjs` e `robo-analyze.mjs`.
+  - **Fontes lidas:**
+    - simulador AOT `.claude/aot/history/trades-2026-0{8,9,10}.jsonl`: 727 fechadas, todas `simulated:true` (708 anchor_neutro, 11 trailing, 8 hard_stop);
+    - eventos AOT `history/events-2026-10.jsonl` (309);
+    - INVICTUS robô `Documents/NinjaTrader 8/alfaomega-robo/history/trades-2026-0{9,10}.jsonl`: 378 fechadas, `simulated:false`, engine invictus (349 anchor_neutro, 10 hard_stop, 9 trailing, 6 TEST_RT, 2 manual_leg, 2 session_close);
+    - exec `alfaomega-robo/state/aot-exec-2026-10.jsonl` (420; 106 DECISION_OPEN, 88 OPEN_EXECUTED, 41 OPEN_BLOCKED [40 operational_stop]);
+    - `ledger-abertos.json`.
+    - A seleção do operador (373 = 360/7/6) não foi reproduzida byte a byte por nenhum filtro de arquivo (deve ser filtro da página Histórico); as proporções batem com o robô.
+  - **Contrato de entrada comprovado no histórico:**
+    - 727/727 trades do sim e 378/378 do robô abriram com `anchorAtEntry` 4/LONG ou 4/SHORT;
+    - 106/106 DECISION_OPEN do robô com 4/LONG|SHORT;
+    - zero entradas com dir NEUTRO.
+    - O Gate/anchor (`strength===4 ∧ dir∈{LONG,SHORT}`) é o único gatilho.
+  - **Correlação temporal:** no print do auto.html (18:29Z), o gate estava 4/4 NEUTRO ("forca fraca NQ"). Entre exec_seq 418 (16:44:55Z CLOSED) e 419 (18:34:10.913Z DECISION_OPEN LONG) não há evento algum, logo nenhuma decisão, ordem ou posição nasceu do estado em que "abrindo posição"/"CONFIRMADA" apareciam. As mensagens eram só visuais; a divergência operacional não está comprovada.
+  - **Posição atual (≠ histórico):** às 18:34:10Z o anchor fechou 4/4 LONG e abriram juntos:
+    - sim AOT `e7829800` (OPEN, sem CLOSE);
+    - robô `6ccf93f5` (DECISION_OPEN + OPEN_EXECUTED, sem CLOSED até 18:36Z).
+    - O `ledger-abertos.json` (18:34:11Z) registra fills de entrada LONG: `Sim阿爾法·歐米伽01` ES 1 + NQ 1 e `TAKEPROFIT619605210` MES 3 + MNQ 2.
+    - Os arquivos não certificam execução na corretora (OPEN_EXECUTED = submissão; nota do `native-automation.cjs`: "REAL_REPORTED is not certified LIVE"). O IDs do sim e do robô são distintos (motores paralelos com o mesmo anchor).
+  - **Achados laterais (sem ação):**
+    - `ledger-abertos.json` mantém 14 intents de 07–12/10 em `Sim牛市 熊市002` com 0 fills (higiene de ledger);
+    - `events-2026-10.jsonl` tem 2 OPEN de 05/10 sem CLOSE (`abd95645`, `29613316`).
+  - **Causas e correção mínima:** iguais ao diagnóstico anterior (`#trigNote` L472–473 só testa strength; banner `v2.confluence` L799/index L933 + `level` CONFIRMADA de `aot-bff.js` L1317). Correção mínima de apresentação proposta lá; não aplicada.
