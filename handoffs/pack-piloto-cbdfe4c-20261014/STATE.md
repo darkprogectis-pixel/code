@@ -167,3 +167,25 @@ Gerar um pack atualizado e funcional do INVICTUS para o piloto DESKTOP-CBDFE4C, 
   - sem conta: ANAALICEGUSTAVO.
 - Próximo passo: 3 renovações + releitura + tabela + commit.
 - **CONCLUÍDO (licenças):** 63/70/72 renovadas +30 d e relidas (ativo). Tabela: `ATUALIZACAO_GLOBAL_PACKS_LICENCAS_20261014.md`. Packs: 0 alterados.
+
+## ROTATION CHECKPOINT (sessão 2ce90375, ~224k) — estado exato
+- Ordens desta sessão, todas ENTREGUES (bloco CHATGPT dado):
+  - pack piloto TESTE_ATUALIZADO;
+  - auditoria 48 h (PACK ATUALIZADO = SIM);
+  - TXT da credencial do piloto;
+  - AuthV2 R1/R2;
+  - licença do piloto-01 +30 d;
+  - atualização global: 0 packs; +30 d para 63/70/72; 9 já válidas; ANAALICEGUSTAVO sem conta.
+- Commits sem push: d02d98d, 35f1e3d, 8494933, 9ee606a, c8de841, 4f67a4b, 47b4d51, a15ae17, 1d083b0, 0f55b7c.
+- Fora do Git, alterado nesta sessão:
+  - servidor AuthV2: licenças dos users 29, 63, 70 e 72;
+  - `Downloads\Club gamma\Handof TTW\HANDOFF_URGENTE_AUTHV2_APIS_20260918.md` (2 ponteiros);
+  - `invictus pack 1000\MANIFEST_DESTINO_CBDFE4C_TESTE_ATUALIZADO_20261014.txt`.
+- Testes: só releituras do servidor (4/4 ativas). Nenhum código alterado.
+- Arquivos não commitados de outras frentes: os mesmos do brief de rotação (nenhum novo desta sessão).
+- Correção registrada: no pack o robô NÃO é bloqueado pela licença (`GatesConfirmacao` inclui `licenca`, override de 30/09); só PLAY/STOP veta entradas.
+- PRÓXIMO PASSO EXATO: aguardar o operador. Pendências:
+  - (1) validação funcional no PC piloto (`AUTHV2_LICENCA_PILOTO_20261014.md` §Validação), sem PLAY e sem ordens;
+  - (2) origem das ordens MES/MNQ 14/10 19:34–19:41 (`PROCEDIMENTO_LEITURA_MANUAL_AUTHV2_ORDENS_20261014.md` parte B, no piloto);
+  - (3) ANAALICEGUSTAVO: provar identidade e criar a conta;
+  - (4) decisão sobre a licença voltar a ser gate bloqueante (exige JEV DIFF).
