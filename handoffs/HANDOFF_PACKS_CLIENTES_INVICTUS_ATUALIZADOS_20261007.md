@@ -183,3 +183,7 @@ Dossiê: `handoffs/credenciais-packs-20261013/` (STATE.md, ordens, GATE_SPEC_COR
 - Validação: roundtrip 5/5 OK. Varredura limpa: sem credencial, sem ID da OLIVER, sem AO 2.0 e sem R1–R10. NT8 herdado do Z30X2: HARNESS 28/28, BANCADA 32/32.
 - Licença do piloto: piloto-01 (user 29, device 92) sem licença ⇒ fail-closed até a liberação pelo operador no servidor. Nada instalado no piloto.
 - Detalhes: `handoffs/pack-piloto-cbdfe4c-20261014/STATE.md`.
+- **Auditoria 48 h (12–14/10, somente leitura, sessão 2ce90375):**
+  - 14 alterações na OLIVER: 11 implantadas (todas exclusivas do AOT ou privadas da OLIVER) e 3 só em staging ou bloqueadas.
+  - 0 aplicáveis a clientes ⇒ pack piloto **ATUALIZADO = SIM**.
+  - Detalhes: `handoffs/pack-piloto-cbdfe4c-20261014/AUDIT_PACK_PILOTO_48H_20261014.md` + `MATRIX_PACK_X_OLIVER_20261014.tsv`.
