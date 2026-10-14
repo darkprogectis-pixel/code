@@ -1,0 +1,28 @@
+PASS N01 radar 4/4 LONG sem anchorGcSi => ESPERANDO_CONFIRMACAO, open=false, dir NEUTRO, força não aplicada
+PASS N02 radar 4/4 + anchorGcSi força fraca => ESPERANDO CONFIRMAÇÃO (exemplo obrigatório), forceStep WEAK, sem direção
+PASS N03 radar 4/4 + anchorGcSi ok LONG => OPEN/CONFIRMADO, dir LONG, forceStep PASS
+PASS N04 SHORT confirmado => OPEN SHORT
+PASS N05 anchorGcSi em direção oposta ao radar => não abre (ESPERANDO_CONFIRMACAO)
+PASS N06 GC x SI divergentes => SEM_SINAL, não ESPERANDO
+PASS N07 anchorGcSi sem source AoGate.GcSi = inválido => fail-closed
+PASS N08 operated continua false (FLOW GC·SI nunca opera conta)
+PASS N09 gcsiSimInput com força fraca => anchor NEUTRO, why "forca fraca GC/SI", strength 4
+PASS N10 gcsiSimInput confirmado => anchor LONG 4/4
+PASS N11 gcsiSimInput sem anchorGcSi => NEUTRO e why null (fail-visible)
+PASS S01 4/4 + força fraca por 5 ticks => FLAT, zero eventos (sem ordem)
+PASS S02 confirmado LONG => abre 1 GC + 1 SI (simulado)
+PASS S03 SI na escala real e no grid de 0,005 (60.585), hard stop SI = 0,20 / GC = 10 pt
+PASS S04 evento OPEN no canal ISOLADO (schema/source próprios, gc/si price, orders NONE)
+PASS S05 nada em history/ do ES/NQ nem events-*.jsonl canônico
+PASS S06 posição aberta + força fraca => MANTÉM (NEUTRO transitório, igual ES/NQ)
+PASS S07 GC +6 pt (US$600) => breakeven armado no GC
+PASS S08 restart: posição e seq preservados
+PASS S09 "GC x SI divergentes" => fecha (anchor_neutro), igual ES/NQ
+PASS S10 histórico EXCLUSIVO GC/SI: 1 trade, pernas gc/si, P&L em US$ correto (GC +400, SI 0)
+PASS S11 CLOSE no canal isolado com seq 2
+PASS S12 SI cai 0,20 => hard_stop_si, SI −US$1000 exatos
+PASS I01 sim GC/SI não referencia simEmitEvent, /sim/events, events-*.jsonl canônico nem rede
+PASS I02 AOT_GCSI_SIM off por padrão; rotas /gcsi/* só GET
+PASS I03 funções ES/NQ intocadas (buildGate, simEmitEvent, simEventsRead, computeConfluence, buildV2Stack, buildFlowGc, c1FromLeg)
+PASS I04 tick do sim ES/NQ idêntico (anchor: gate.anchor)
+TOTAL 27/27 PASS
