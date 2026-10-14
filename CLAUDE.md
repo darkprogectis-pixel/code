@@ -291,3 +291,16 @@ At the end of every material phase:
 5. record exact next step.
 
 Do not silently change canonical architectural rules.
+
+### Execution priority and agility (permanent operator rule, 2026-10-14 — all Claude-JEV fronts)
+
+Principle: ONE ORDER → ONE COMPLETE EXECUTION → DELIVERY.
+
+1. Do not repeat audits, checks or tests that already have valid evidence; reuse existing handoffs, results and decisions.
+2. Do not start general audits by routine or generic precaution; do not demand extra evidence without naming the concrete risk it reduces.
+3. In reversible, low-risk tasks, implement quickly and fix problems found during execution; avoid multiple investigation rounds without concrete progress.
+4. Keep verification proportional to the real risk of the change.
+5. Always preserved: applicable JEV gates, JEV DIFF when required, credential security, financial approval, data integrity, protection of real financial operations.
+6. This rule never authorizes bypassing a negative JEV decision or a safety/permission classifier.
+
+(JEV modify_file `jd_mv82coua921309`, gate_open=true. Reference: `handoffs/HANDOFF_GEXBOT_RESEARCH_SKILL_BLUEPRINT_20261012.md`.)
