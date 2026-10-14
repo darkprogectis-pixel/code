@@ -147,3 +147,11 @@ Gerar um pack atualizado e funcional do INVICTUS para o piloto DESKTOP-CBDFE4C, 
   - (2) imediata e reversível: STOP no Control Center do piloto (`operacional.json` play=false) enquanto a licença estiver irregular;
   - (3) causa (b): renovar a licença do piloto-01 com o CLI oficial `/root/auth-service/authv2-admin.js` (comando de renovação listado pelo usage); causa (a): reativar user/device pelo mesmo CLI;
   - (4) política: voltar `licenca` a gate bloqueante = mudança de código no robô ⇒ JEV DIFF + ordem do operador (reverte o override de 30/09).
+
+## AUTHV2 — LICENÇA REGULARIZADA (sessão 2ce90375, 14/10 23:27Z)
+- Servidor:
+  - ANTES: user 29 active / device 92 active, licença `sem_prazo`;
+  - comando: `renew-user piloto-01@alfaomega --days 30` (operador escolheu 30 d);
+  - DEPOIS: licenca `ativo`, expira 2026-11-13T23:27:17Z.
+- Detalhes, componentes, rollback e validação no piloto: `AUTHV2_LICENCA_PILOTO_20261014.md`.
+- Próximo passo: validação funcional no PC piloto (sem PLAY, sem ordens).
