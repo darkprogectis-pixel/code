@@ -64,7 +64,7 @@ Matriz completa: `MATRIX_PACK_X_OLIVER_20261014.tsv`. SHA256 bruto, com normaliz
 - Dependências externas: Newtonsoft.Json.dll está no pack. Os relays/servidores remotos ficam do lado do servidor e não mudaram para clientes no período (o HIRO → Gate é interno ao BFF do AOT).
 
 ## Resultado
-- 18 alterações identificadas: 15 implantadas (9 C, 6 E), 3 não implantadas (B).
+- 18 alterações identificadas: 15 implantadas (8 C, 7 E), 3 não implantadas (B).
 - Aplicáveis a clientes: 0. Presentes no pack: 0/0. Ausentes: 0.
 - Diferenças justificadas: as 18 DIFF + 2 ABSENT, conforme acima.
 - **PACK ATUALIZADO = SIM.** Nenhuma correção necessária.
