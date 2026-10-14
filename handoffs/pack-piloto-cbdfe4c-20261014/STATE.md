@@ -126,3 +126,24 @@ Gerar um pack atualizado e funcional do INVICTUS para o piloto DESKTOP-CBDFE4C, 
   - ⇒ Origem mais provável: o robô INVICTUS da **OLIVER** (user 22/device 86), não o piloto.
   - Não confirmado contra o log/executions (leitura negada).
 - Próximo passo (decisão do operador): autorizar as duas leituras (VPS authv2-admin user-list/device-list; log NT8 da OLIVER de 14/10) ou executá-las e colar o resultado.
+
+## AUTHV2 PC PILOTO — R2 (ordem 14/10, somente leitura, sessão 2ce90375) — PARTIAL
+- A chamada ao servidor NÃO foi repetida (negada antes por "Production Reads"). Procedimento manual redigido em `PROCEDIMENTO_LEITURA_MANUAL_AUTHV2_ORDENS_20261014.md`.
+- O log do PC piloto não está nesta máquina. O único arquivo do piloto em Downloads (`pc piloto 02 _ MÁQUINADESKTOPCBDFE4C.txt`, 19:46) é a ORDEM enviada ao Claude do piloto, não o resultado. A leitura integral dele foi negada ("Credential Materialization"); foram lidas só linhas filtradas.
+- **Código (pack Z30X2 = rollback = OLIVER):**
+  - A tela "Acesso bloqueado. Contate o operador." sai de `status=blocked`, que tem 2 causas indistinguíveis na UI:
+    - (a) user/device ≠ active;
+    - (b) licença sem prazo / license_valid null (`AoLogin.cs` l.163-169; `AlfaOmegaLogin.cs` l.145).
+  - O motivo só fica em memória (`AoLogin.LastError`, sem log). Estado documentado em 07/10 (user/device active, prazo NULL) ⇒ (b), a confirmar no servidor.
+- **RISCO REAL:** a licença NÃO bloqueia o robô.
+  - `AlfaOmegaRobo.cs` l.3279: `GatesConfirmacao = { turno, source_readiness, licenca }` (OPERATOR_OVERRIDE de 30/09) ⇒ só `engine_play` (PLAY/STOP de `alfaomega-robo\config\operacional.json`) veta entrada.
+  - Com PLAY no piloto, o robô abre posições via `AlfaOmegaTrader.PlaceCore` mesmo com login "Acesso bloqueado".
+  - O padrão do pack é STOP (sem `operacional.json`; o ConfigInicial não o cria) ⇒ entrar exige PLAY explícito no piloto.
+  - `AlfaOmegaTrader` (:5152, X-AO-Token local) e `AlfaOmegaCopyEngineMotor` também enviam ordens sem nenhuma checagem AuthV2.
+- **Correção de registro:** o "fail-closed" escrito antes para o INVICTUS do piloto (manifesto/LEIA_PRIMEIRO TESTE_ATUALIZADO e respostas anteriores) é impreciso. Indicadores e login ficam bloqueados, mas a EXECUÇÃO do robô depende só de PLAY/STOP.
+- Ordens MES/MNQ TAKEPROFIT619605210 19:34–19:41: origem e ambiente NÃO verificados (sem evidência do piloto). NÃO atribuídas à OLIVER.
+- Correção mínima recomendada (não executada, decisão do operador):
+  - (1) leituras A/B do procedimento;
+  - (2) imediata e reversível: STOP no Control Center do piloto (`operacional.json` play=false) enquanto a licença estiver irregular;
+  - (3) causa (b): renovar a licença do piloto-01 com o CLI oficial `/root/auth-service/authv2-admin.js` (comando de renovação listado pelo usage); causa (a): reativar user/device pelo mesmo CLI;
+  - (4) política: voltar `licenca` a gate bloqueante = mudança de código no robô ⇒ JEV DIFF + ordem do operador (reverte o override de 30/09).
