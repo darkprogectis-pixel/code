@@ -26,8 +26,8 @@ Promise.all([get('/state'),get('/gcsi/sim'),get('/health')]).then(([s,g,hh])=>{
   const r={health:hh.ok===true,esNqGate:!!(s.gate&&s.gate.state),flowRussell:!!s.flowRussell,hiro:!!(s.hiroOpra&&s.hiroOpra.ok!==undefined),
     gcsiPhase:gg&&gg.phase,forceStep:gg&&gg.forceStep&&gg.forceStep.status,gcsiSimProd:g.enabled,simGcSiInState:!!s.simGcSi};
   console.log(JSON.stringify(r));
-  process.exit(r.health&&r.esNqGate&&r.flowRussell&&r.hiro&&typeof r.gcsiPhase==='string'&&!s.flowGcSi._err&&g.enabled===false&&!r.simGcSiInState?0:1)
-}).catch(e=>{console.error(e.message);process.exit(1)})"; }
+  process.exitCode=(r.health&&r.esNqGate&&r.flowRussell&&r.hiro&&typeof r.gcsiPhase==='string'&&!s.flowGcSi._err&&g.enabled===false&&!r.simGcSiInState?0:1)
+}).catch(e=>{console.error(e.message);process.exitCode=1})"; }
 
 # 1. artefatos aprovados
 [ "$(h "$CAND")" = "$NEW" ] || { echo "ABORTADO: candidato difere do aprovado (3ec88e91)."; exit 1; }

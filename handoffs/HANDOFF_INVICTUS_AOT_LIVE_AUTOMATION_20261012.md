@@ -1100,3 +1100,17 @@ JEV documentary A confidence 0.9 probabilities {"A":0.91,"B":0.02,"C":0,"D":0,"E
   - Cópia de `3ec88e91` e reinício do `:3600` OK. A verificação pós-instalação imprimiu **todas as condições verdadeiras**: `{"health":true,"esNqGate":true,"flowRussell":true,"hiro":true,"gcsiPhase":"SEM_SINAL","forceStep":"NOT_REACHED","gcsiSimProd":false,"simGcSiInState":false}`. Mesmo assim, o Node v26.4.0 abortou na saída com `Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), file src\win\async.c, line 94`, por causa do `process.exit` com handles do fetch ainda fechando. O exit code ≠ 0 disparou o **rollback automático**.
   - Depois: `aot-bff.js` = `65a76459` (preimagem restaurada), motor `42d0c8fd`, `:3600` saudável (novo PID 26520, health 200), gate ES/NQ ok, Russell e HIRO presentes, FLOW GC/SI `ESPERANDO_CONFIRMACAO`/WEAK, `/gcsi/sim enabled:false`, sim ES/NQ FLAT. Zero ordens reais. O patch **não está** em produção.
   - Causa: falso negativo da ferramenta de verificação (crash do libuv no Windows ao sair), não do patch. Correção necessária no script (fora desta ordem; exige JEV modify_file + DIFF): no `verify()`, trocar `process.exit(...)` por `process.exitCode = ...`, como já faz o `precheck-gcsi.cjs`, que não crasha. Depois, nova autorização do operador para `--apply`. O backup existente é reutilizado.
+- **VERIFY() DO SCRIPT CORRIGIDO EM STAGING (14/10/2026 ~17:25Z–17:35Z, loop `/jev-finish` `jf-20261014173039-15a88d`):**
+  - Causa reproduzida: o `verify()` original foi extraído do script e rodado 5 vezes contra o `:3600` (só GET). Deu 5/5 exit `3221226505` (0xC0000409), com a assertion libuv `UV_HANDLE_CLOSING`, mesmo com todas as condições true.
+  - Correção mínima em `snapshot-fix/apply-bff-snapshot.sh`, só nas linhas 29–30: `process.exit(cond?0:1)` virou `process.exitCode=(cond?0:1)` e `catch → process.exit(1)` virou `process.exitCode=1`. O fetch já é limitado por `AbortSignal.timeout(15000)`. Precheck, backup, reconferência, restart e rollback continuam idênticos.
+  - Script novo: SHA `f887c912…`. A cópia anterior foi guardada em `snapshot-fix/tests/apply-bff-snapshot.pre-verify-fix.sh`.
+  - JEV: modify_file `jd_mv8dwn3r7f71ae` (`req_01a13b76017278dfabb710cd4a48b2ef`), gate_open=true, 0,93, `minimal_edit` 1,0. JEV DIFF **A 0,78** (`req_01a13b7761777be0869ba069ae214b13`), proposta `snapshot-fix/jev-diff-proposal-verify-fix.md`.
+  - Testes `snapshot-fix/tests/verify-fix-tests.mjs`: **13/13 PASS**, evidência em `evidence-verify-fix-20261014.txt`.
+    - Sucesso: 10 execuções contra o `:3600` deram exit 0, sem assertion.
+    - Falhas reais via servidor HTTP local de teste: health false, sim ligado, Russell ausente, gate ES/NQ ausente, `flowGcSi._err`, `simGcSi` presente, HTTP 500 e BFF fora do ar. Todas deram exit ≠ 0, sem assertion.
+    - Diff restrito às linhas 29–30.
+    - Sem shims de processo.
+    - Recheck do CLI: PASS.
+  - Patch `3ec88e91`, motor `42d0c8fd` e produção `65a76459` intocados. `AOT_GCSI_SIM=off`. `--apply` **não** foi executado.
+  - **Próxima instalação (OPERADOR, com nova autorização, fora do Auto Mode, de preferência com sim ES/NQ FLAT):** `bash handoffs/invictus-aot-live-20261012/gcsi-eqv/snapshot-fix/apply-bff-snapshot.sh --apply`. O backup `_backups/gcsi-snapshot-20261014/aot-bff.js` (`65a76459`) já existe e é reutilizado.
+  - **Rollback:** o mesmo script com `--rollback`.

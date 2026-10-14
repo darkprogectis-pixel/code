@@ -1,0 +1,16 @@
+INFO original x5: exits=3221226505,3221226505,3221226505,3221226505,3221226505 crashes=5
+PASS V01 corrigido x10 contra :3600 (todas as condições true) => exit 0, sem assertion libuv
+PASS V02 saída JSON da verificação preservada
+PASS V03 health ok:false => exit != 0, sem assertion
+PASS V04 /gcsi/sim enabled:true (sim ligado) => exit != 0, sem assertion
+PASS V05 flowRussell ausente => exit != 0, sem assertion
+PASS V06 gate ES/NQ ausente => exit != 0, sem assertion
+PASS V07 flowGcSi._err => exit != 0, sem assertion
+PASS V08 simGcSi presente no /state => exit != 0, sem assertion
+PASS V09 HTTP 500 com corpo inválido => exit != 0, sem assertion
+PASS V10 controle: servidor local com payload bom => exit 0
+PASS V11 BFF fora do ar (porta fechada) => exit != 0 (catch), sem assertion
+PASS V12 só as linhas 29-30 (verify) mudaram; precheck/backup/rollback/restart idênticos
+PASS V13 nenhum process.exit( restante no script corrigido
+
+13/13 PASS
