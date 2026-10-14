@@ -1171,3 +1171,9 @@ JEV documentary A confidence 0.9 probabilities {"A":0.91,"B":0.02,"C":0,"D":0,"E
   - Sem reinício; `aot-bff.js` e o motor não foram tocados; `/gcsi/sim` enabled:false.
   - Estado no momento: ES/NQ CLOSED 0/4 NEUTRO (a ausência de radar é o texto correto); GC/SI CLOSED/ESPERANDO_CONFIRMACAO; Russell não autorizado/NEUTRO; HIRO (`hiroOpra`, `darkPoolLevels`) presente.
   - Backup em `_backups/esnq-anchor-text-20261014`. Rollback: `apply-anchor-text.sh --rollback`. As abas abertas antes do deploy precisam de reload.
+- **VALIDAÇÃO CHROME DO CARD ES/NQ EM PRODUÇÃO (14/10/2026 ~18:34Z, sessão `afa26a77`, só leitura; o DOM foi alterado só no cliente e depois restaurado):**
+  - Página `http://127.0.0.1:3600/` (aba nova): `renderGate` servido contém o fix.
+  - Ao vivo: ES/NQ CLOSED 0/4 NEUTRO, tape ao vivo, reason "Radar ES+NQ incompleto (0/4) — ES x NQ divergentes". O card mostra "→ SEM RADAR, NENHUM VEREDITO É EMITIDO", correto para radar ausente.
+  - Caso A, renderizado pela `renderGate` real de produção com a saída de `buildGate` 4/4 sem direção (forca fraca ES/NQ): o card mostra "→ RADAR 4/4 ATENDIDO · GATE NÃO LIBEROU DIREÇÃO · NENHUM VEREDITO É EMITIDO", sem contradição com "Radar 4/4 FECHADO". Depois disso o card foi restaurado.
+  - Console sem erros após reload.
+  - Evidência: `esnq-anchor-text/evidence/chrome-prod-live-0de4.jpg` e `chrome-prod-caseA-4de4-sem-direcao.png`.
