@@ -1,0 +1,20 @@
+{
+ "at": "2026-10-14T17:05:56.623Z",
+ "simPosition": null,
+ "nativeCounts": {
+  "CLOSED": 337,
+  "NOT_EXECUTED": 53,
+  "CLOSED_PENDING_HISTORY": 7
+ },
+ "blocking": [],
+ "safe": true
+}
+Pre-checagem OK. Nada foi alterado (use --apply).
+
+== Caminhos de guarda do apply-bff-snapshot.sh (sandbox AOT_DIR temporario, 14/10/2026 ~17:15Z; nenhum PID tocado, nenhum reinicio)
+T1 preimagem alterada + --apply  => "CONFLITO: aot-bff.js em producao (99d76ae8...) nao e a preimagem aprovada 65a7645965d186ab (alteracao concorrente). Nada alterado." exit=1, aot-bff.js inalterado, sem backup
+T2 motor aot-gcsi-sim.js alterado + --apply => "ABORTADO: aot-gcsi-sim.js de producao difere de 42d0c8fd ... Nada alterado." exit=1, nada alterado
+T3 --rollback sem backup => "sem backup valido em .../_backups/gcsi-snapshot-20261014" exit=1, nada alterado
+T4 preimagem 65a76459 sem flag => precheck GET :3600 safe, "Pre-checagem OK. Nada foi alterado (use --apply)." exit=0
+Nao exercitado (so o operador): --apply com backup/copia/reinicio/verify/rollback automatico. Simulacao com shims de processo negada pelo classificador do Auto Mode; nao contornada.
+JEV modify_file: negado jd_mv8d31sk83fa10 e jd_mv8d3g5x330a30 (noul 0,32: script descrito sem conteudo nem teste); aprovado jd_mv8ddar2a1ee63 req_01a13b683b527b83a93a444607ee6e80 gate_open=true noul 0,92 (conteudo integral + T1-T4).

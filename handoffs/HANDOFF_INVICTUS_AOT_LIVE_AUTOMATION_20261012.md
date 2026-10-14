@@ -1078,3 +1078,20 @@ JEV documentary A confidence 0.9 probabilities {"A":0.91,"B":0.02,"C":0,"D":0,"E
   - **Homologação ao vivo (`:3611`, autorizada pelo operador via pergunta: janela de 30 min):** `run-gcsi-homolog-fix.sh --start` às 16:53Z (SHA de produção e do candidato conferidos; a posição SHORT persistida foi retomada). Exemplo: `marks` GC 4101.7 / SI 55.73 ⇒ PnL −40 / +700, coerente com os preços (`snapshot.source=tick`, `stale=false`); stop SI em breakeven 55.87. **CLOSE natural** às 16:55:11Z por `anchor_neutro` ("GC x SI divergentes"): GC 4101.3→4103.1 = −180, SI 55.87→55.77 = +500, total **+320**, `pnlStatus ok`. Journal: `seq 1 OPEN` + `seq 2 CLOSE`, `orders NONE`, `AOT_GCSI_SIM_ISOLATED`. `/gcsi/history` `count 1`. `/sim/events` ES/NQ da instância vazio (`enabled:false`). Produção `/gcsi/sim` `enabled:false`. Nenhum sinal fabricado, nenhum fechamento forçado. Instância parada (`--stop`, PID 17536) às 16:56Z. Evidência: `snapshot-fix/evidence-homolog-fix-watch-20261014.txt`, `evidence-snapshot-tests.txt`, `evidence-regress-27.txt`.
   - **Rollback:** `bash snapshot-fix/run-gcsi-homolog-fix.sh --rollback` (devolve o `aot-bff.js` do `aot-gcsi-homolog` ao de produção). Produção `:3600` (PID 21432) **não** recebeu o patch; `AOT_GCSI_SIM=off`; ES/NQ, RTY, HIRO, INVICTUS, contas e `:5152` intocados; zero ordens reais.
   - **Próximo passo:** implantação produtiva do patch exige autorização separada do operador, com script de pré-checagem, backup e rollback (modelo `gcsi-eqv/apply/apply-bff-eqv.sh`). Só depois disso, e com nova ordem, avaliar `AOT_GCSI_SIM=on` em produção.
+- **DEPLOY CONTROLADO DO SNAPSHOT — PREPARADO, NÃO APLICADO (14/10/2026 ~17:00Z–17:20Z):**
+  - Script do operador: `gcsi-eqv/snapshot-fix/apply-bff-snapshot.sh`. Troca só o `aot-bff.js`, de `65a76459` (preimagem) para `3ec88e91` (candidato com JEV DIFF A 0,90). O motor `aot-gcsi-sim.js` `42d0c8fd` é conferido e não é tocado. O script não define `AOT_GCSI_SIM`, que segue off.
+  - O que o script faz:
+    - Conferências: SHA do candidato e do motor. Se a produção não for a preimagem, registra **CONFLITO** e não escreve nada; se já for o candidato, registra "JA APLICADO".
+    - `precheck-gcsi.cjs`: sim ES/NQ FLAT e nenhuma operação nativa aberta ou pendente.
+    - Backup conferido em `C:/Users/ADM/.claude/aot/_backups/gcsi-snapshot-20261014/aot-bff.js`, reconferência anti-corrida antes da cópia, reinício do `:3600`.
+    - Verificação pós-instalação: health, gate ES/NQ, Russell, HIRO, FLOW GC/SI e `/gcsi/sim enabled:false`, com rollback automático em qualquer falha.
+  - Evidência (`snapshot-fix/evidence-apply-check-20261014.txt`):
+    - Modo checagem real às 17:05:56Z: preimagem OK e `safe:true`, nada alterado. Uma tentativa anterior abortou por 503 transitório em `/automation/native` (fail-closed).
+    - Caminhos de guarda T1–T4 em sandbox `AOT_DIR` (conflito, motor alterado, rollback sem backup, checagem) passaram sem escrita.
+    - O caminho `--apply` não foi exercitado pelo agente: ele reinicia o `:3600` e é só do operador. A simulação com shims de processo foi negada pelo classificador e não foi contornada.
+  - JEV modify_file:
+    - Negado duas vezes: `jd_mv8d31sk83fa10` e `jd_mv8d3g5x330a30`, `evidence_sufficient` 0,32. Causa: o script foi descrito sem o conteúdo e sem nenhum teste do próprio script.
+    - Aprovado na nova submissão com o conteúdo integral, o SHA e T1–T4: `jd_mv8ddar2a1ee63` (`req_01a13b683b527b83a93a444607ee6e80`), gate_open=true, 0,92. Abordagem sugerida: `broader_change` 0,83, não aplicada porque o patch está congelado.
+  - **Instalação (OPERADOR, com autorização específica, de preferência com sim ES/NQ FLAT):** `bash handoffs/invictus-aot-live-20261012/gcsi-eqv/snapshot-fix/apply-bff-snapshot.sh --apply`. Saída esperada: `APLICADO: aot-bff.js=3ec88e91…`.
+  - **Rollback:** `bash handoffs/invictus-aot-live-20261012/gcsi-eqv/snapshot-fix/apply-bff-snapshot.sh --rollback`, que restaura `65a76459` e reinicia.
+  - Produção `:3600` intocada (PID 21432, `65a76459`, `AOT_GCSI_SIM=off`).
