@@ -472,3 +472,11 @@ Continue existing scheduled capture; analyze only after evidence complete using 
 
 ## REGRA PERMANENTE — PRIORIDADE À AGILIDADE E EXECUÇÃO (2026-10-14)
 Registrada como regra global de todas as frentes Claude-JEV em `CLAUDE.md` → `## Session discipline` → "Execution priority and agility". JEV modify_file `jd_mv82coua921309` (gate_open=true, 0,74). Gates JEV, JEV DIFF, credenciais, aprovação financeira e integridade continuam obrigatórios; não autoriza contornar decisões negativas.
+
+## HIRO DARKFLOW → GATE — FRENTE 2 CONCLUÍDA (pronto para decisão de deploy) — sessão `b833f64a`, 14/10/2026 — FINAL_STATUS = READY_FOR_DEPLOY_DECISION / NOT_DEPLOYED
+- Estado real (somente leitura): produção `C:\Users\ADM\.claude\aot\aot-bff.js` sha `ab4c1de6…` = preimagem (mtime 12/10 08:58); `_backups\hiro-darkflow-20261013` ausente ⇒ `--apply` nunca rodou ⇒ **NOT_DEPLOYED**.
+- Candidato íntegro: `candidate/aot-bff.js` `5df4ae5c…` e `hiro-darkflow-adapter.cjs` `b9d4ccf3…` = hashes fixados no script; `node --check` OK; `apply-hiro-darkflow.sh` `7365fa51…` inalterado. Preimagem continua válida ⇒ candidato não precisa ser refeito.
+- Evidências reutilizadas (não repetidas): homologação RTH 13/10 APPROVED; RECHECK3 `jd_mv6rm99ee48dc0` e FINAL3 `jd_mv6rm9ya4362a7` gate aberto; JEV DIFF4 `jd_mv6vm3hd6b92be` sem veto. Codex-JEV não tem RECHECK/FINAL próprio do HIRO (só manteve a captura RTH de 13/10) ⇒ sem duplicação.
+- Nenhuma correção técnica necessária; nenhum arquivo de produção ou do candidato alterado. Deploy NÃO executado pelo agente (sem autorização específica nesta ordem; classificador "Production Deploy" já negou 2×; não contornado).
+- Procedimento final (OPERADOR, Git Bash, Gate fechado ou após 20:00 UTC, simulador FLAT): `cd /c/Users/ADM/Claude-JEV/research/hiro-darkflow-gate-20261012/apply && ./apply-hiro-darkflow.sh` (espera "Conferencias OK") → `./apply-hiro-darkflow.sh --apply` (backup, cópia, reinício :3600 pelo watchdog, validação, rollback automático) · desfazer: `--rollback`. Depois: pedir ao agente a validação pós-deploy (saúde, HIRO ES/NQ, Gate/Tape/C1/C2, nenhuma ordem, watchdog).
+- JEV desta atualização: modify_file `jd_mv83ohhe9f55eb` (req_01a13a6fe7b476e29a00df3e7783932b) gate_open=true 0,89.
