@@ -155,3 +155,14 @@ Gerar um pack atualizado e funcional do INVICTUS para o piloto DESKTOP-CBDFE4C, 
   - DEPOIS: licenca `ativo`, expira 2026-11-13T23:27:17Z.
 - Detalhes, componentes, rollback e validação no piloto: `AUTHV2_LICENCA_PILOTO_20261014.md`.
 - Próximo passo: validação funcional no PC piloto (sem PLAY, sem ordens).
+
+## ATUALIZAÇÃO GLOBAL DOS PACKS + LICENÇAS 30d (ordem 14/10, sessão 2ce90375) — EM ANDAMENTO
+- Packs: os 13 clientes da linhagem já estão em Z30X2 = mesmo import do pack de referência do piloto. A correção do piloto foi só a licença no servidor ⇒ 0 packs a refazer; JEV DIFF não aplicável.
+- AuthV2 ANTES (23:42Z): todos os users active, nenhum travado, nenhum device revogado. O snapshot fica só no scratchpad da sessão, não no repo.
+- Plano (renew-user +30 d):
+  - RENOVAR: 63 (vencido 06/10), 70 (expira 29/10), 72 (expira 06/11);
+  - MANTER, prazo > 30 d (não reduzir): 64, 65, 66, 67, 68, 69, 71, 73, 74;
+  - já feito: 29 (até 13/11);
+  - fora de escopo: 22 OLIVER, 30 escritorio-novopc (teste);
+  - sem conta: ANAALICEGUSTAVO.
+- Próximo passo: 3 renovações + releitura + tabela + commit.
