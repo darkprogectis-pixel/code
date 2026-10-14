@@ -102,3 +102,14 @@ Gerar um pack atualizado e funcional do INVICTUS para o piloto DESKTOP-CBDFE4C, 
 - Manifesto: `invictus pack 1000\MANIFEST_DESTINO_CBDFE4C_TESTE_ATUALIZADO_20261014.txt` (e5b74686a436a1b2d20259c5c47b60f9e8d7f8234338c5ae4eed2a7723585754).
 - Ponteiro gravado no HANDOFF_PACKS_CLIENTES_INVICTUS_ATUALIZADOS_20261007.md. Commit sem push.
 - Próximo passo: depende do operador (liberar a licença do piloto-01 no servidor; instalar no piloto conforme o LEIA_PRIMEIRO_TESTE_ATUALIZADO).
+
+## CREDENCIAL DO PILOTO (ordem 14/10, somente leitura, sessão 2ce90375)
+- TXT associado ao piloto: `C:\Users\ADM\Desktop\codigo-piloto-01.txt` (24 B, 18/09/2026 17:46, sha256 1d688ed24b1c…). O conteúdo não foi exibido.
+- Tipo: **código de ENROLLMENT de uso único** (AuthV2), não é senha de login. Já foi consumido em 18/09 ⇒ device 92 do piloto-01 (user 29).
+- Vínculo, por evidência documental:
+  - HANDOFF_PACKS_CLIENTES…20261007 l.34 (DESKTOP-CBDFE4C ⇒ 18/09 piloto-01@alfaomega user 29 ⇒ enrollment ⇒ device 92);
+  - AUDIT_LINHAGEM_PACKS_CREDENCIAIS_20261014 l.55;
+  - roteiro `Downloads\# PC PILOTO — CONSUMIR ENROLLMENT.txt` (18/09 18:09).
+- Credencial de login (`CREDENCIAL_PILOTO_*.txt`): NÃO EXISTE, por desenho (credenciais-packs STATE l.36/84).
+- Procedimento oficial, se o operador quiser senha: `authv2-admin.js user-create-password … --out` no servidor ⇒ `Downloads\CREDENCIAL_PILOTO_<NOME>.txt`.
+- A licença do piloto-01 continua NULL; liberar é decisão do operador no servidor. Nada foi criado nem alterado.
