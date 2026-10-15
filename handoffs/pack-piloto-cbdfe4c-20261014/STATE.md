@@ -206,3 +206,34 @@ Gerar um pack atualizado e funcional do INVICTUS para o piloto DESKTOP-CBDFE4C, 
   - rollback `..._PGCAP_ROLLBACK_import.zip` 1.499.730 B.
   - Próximo passo exato: comparar entrada a entrada os dois imports (sha256) e classificar só-JOAO_HS / só-piloto / comuns iguais / comuns diferentes ⇒ diferença técnica real em arquivo comum = proposta + JEV DIFF antes do pack novo.
 - Checkpoint final da sessão 2ce90375 (~233k): nada sem commit desta frente (último commit 4ee278b). Testes: nenhum. Próximo passo exato = comparação por entrada JOAO_HS × piloto (ver acima). Bloco CHATGPT PARTIAL já entregue ao operador.
+- Comparação por entrada (sessão 2ce90375): resultado em scratchpad `cmp_jh.txt`. Resumo:
+  -      11 DIFF
+  -      99 EQ
+  -      15 ONLY_JOAO
+  - Não-EQ:
+    - ONLY_JOAO *./AddOns/AlfaOmegaBridge.cs
+    - DIFF *./Indicators/AlfaOmegaAlfaConsolidatorRelay.cs
+    - DIFF *./Indicators/AlfaOmegaAlfaDataRelay.cs
+    - DIFF *./Indicators/AlfaOmegaAlfaQRelay.cs
+    - ONLY_JOAO *./Indicators/AlfaOmegaCallPutClassing.cs
+    - ONLY_JOAO *./Indicators/AlfaOmegaCallPutClassingB3.cs
+    - ONLY_JOAO *./Indicators/AlfaOmegaClassic.cs
+    - DIFF *./Indicators/AlfaOmegaCopilotUnificado.cs
+    - DIFF *./Indicators/AlfaOmegaDexGexFlow.cs
+    - ONLY_JOAO *./Indicators/AlfaOmegaDivergenceESX.cs
+    - ONLY_JOAO *./Indicators/AlfaOmegaFlowOne.cs
+    - ONLY_JOAO *./Indicators/AlfaOmegaFlowOneHybrid.cs
+    - ONLY_JOAO *./Indicators/AlfaOmegaFlowOnePersistence.cs
+    - ONLY_JOAO *./Indicators/AlfaOmegaGammaEngineB3.cs
+    - ONLY_JOAO *./Indicators/AlfaOmegaGexByStrikeB3.cs
+    - DIFF *./Indicators/AlfaOmegaHiro.cs
+    - DIFF *./Indicators/AlfaOmegaLogin.cs
+    - DIFF *./Indicators/AlfaOmegaNetDrift.cs
+    - DIFF *./Indicators/AlfaOmegaNetGex0DTE.cs
+    - ONLY_JOAO *./Indicators/AlfaOmegaRelayEndpoint.cs
+    - ONLY_JOAO *./Indicators/AlfaOmegaState.cs
+    - ONLY_JOAO *./Indicators/AlfaOmegaVolDashboard.cs
+    - ONLY_JOAO *./Indicators/AoB3Core.cs
+    - ONLY_JOAO *./Indicators/AoBoleta.cs
+    - DIFF *./Indicators/MenthorQGammaEngine.cs
+  - Próximo passo: classificar os DIFF (origem/finalidade) ⇒ JEV DIFF se forem técnicos ⇒ pack novo.
