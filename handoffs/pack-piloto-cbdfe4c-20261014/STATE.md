@@ -237,3 +237,14 @@ Gerar um pack atualizado e funcional do INVICTUS para o piloto DESKTOP-CBDFE4C, 
     - ONLY_JOAO *./Indicators/AoBoleta.cs
     - DIFF *./Indicators/MenthorQGammaEngine.cs
   - Próximo passo: classificar os DIFF (origem/finalidade) ⇒ JEV DIFF se forem técnicos ⇒ pack novo.
+- SOFT_STOP 2ce90375 (~237k):
+  - último commit 5548917; este parágrafo NÃO tem commit (o Bash foi bloqueado pelo SOFT_STOP) ⇒ a sucessora faz o commit;
+  - testes: nenhum.
+  - Próximo passo exato: classificar os 11 DIFF entre os imports JOAO_HS e piloto (recriar `cmp_jh.txt`: unzip + sha256 + join) ⇒ JEV DIFF se forem técnicos ⇒ pack novo HOMOLOGADO.
+
+## PACK JOAO_HS — CONCLUÍDO (sessão 673b1836, rotação #7, 14/10)
+- Classificação dos 11 DIFF + 15 ONLY_JOAO: o MESMO conjunto de 26 arquivos já diverge entre os rollbacks P-GCAP de 07/10 (JOAO × piloto) ⇒ diferença de FAMÍLIA, anterior ao Z30X2: JOAO_HS tem as correções de 20–21/09 (AoRelayEndpoint + hosts públicos conso/qd/mq.murklogic.site, AlfaOmegaLogin Auth V2 com licença, HasKey em NetGex0DTE/DexGexFlow, HIRO `SessaoGlobex`); o piloto está na família anterior (loopback 127.0.0.1, Login V1, HIRO Rth0930). O 11º DIFF = `Indicators/QuantDataEngine.cs`.
+- Delta Z30X2 (rollback→import) = os mesmos 6 arquivos nos dois packs (Robo, RoboFechamento, RoboSaida, SharedState, AoMarketDataPublisher, AoTapeEngine) e os 6 são EQ byte a byte JOAO × piloto ⇒ import JOAO_HS de 08/10 JÁ É o Z30X2 homologado ⇒ reutilizado sem reconstruir; nenhum arquivo alterado ⇒ JEV DIFF não aplicável. Copiar os arquivos do piloto regrediria o JOAO_HS (loopback no escritório, Login V1).
+- Pack novo: `invictus pack 1000\ALFA_OMEGA_JOAO_HS_INVICTUS_Z30X2_HOMOLOGADO_20261014_NAO_IMPORTAR.zip` sha256 `cb787d479310b7680fa9089c0b9e3fe866e37564a5efbb2894717f4969d0b783` (3.000.521 B). 7 entradas: import `2aa3e382…` + rollback `b68f1bbc…` (byte a byte do pack 08/10), AVISO_OPERACIONAL, ENTRIES.json (reutilizados), LEIA_PRIMEIRO.txt (novo), MANIFESTO_HOMOLOGACAO.json (novo), SHA256SUMS.txt.
+- Validação: roundtrip unzip + `sha256sum -c` 6/6 OK; `unzip -t` import e rollback OK; varredura de segredos 0; sem AO 2.0 / R1–R10 (mesmo conteúdo do pack de 08/10 + delta igual ao piloto). Packs antigos intactos (Z30X2 08/10 `09334716…`, P-GCAP 07/10 `90768f1a…`, origem 21/09 não tocada). Credencial: nenhuma no ZIP, senha inalterada ⇒ sem TXT. Licença 64 não renovada. Nada instalado.
+- Próximo passo: operador decide entregar ao JOAO_HS (se já importou o de 08/10, nada novo a importar).
