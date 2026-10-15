@@ -205,3 +205,4 @@ Gerar um pack atualizado e funcional do INVICTUS para o piloto DESKTOP-CBDFE4C, 
   - import `ALFA_OMEGA_JOAO_HS_INVICTUS_Z30X2_import.zip` = 1.507.713 B × piloto 1.240.924 B ⇒ **os imports NÃO são iguais byte a byte** (família de pack diferente: JOAO_HS tem mais arquivos);
   - rollback `..._PGCAP_ROLLBACK_import.zip` 1.499.730 B.
   - Próximo passo exato: comparar entrada a entrada os dois imports (sha256) e classificar só-JOAO_HS / só-piloto / comuns iguais / comuns diferentes ⇒ diferença técnica real em arquivo comum = proposta + JEV DIFF antes do pack novo.
+- Checkpoint final da sessão 2ce90375 (~233k): nada sem commit desta frente (último commit 4ee278b). Testes: nenhum. Próximo passo exato = comparação por entrada JOAO_HS × piloto (ver acima). Bloco CHATGPT PARTIAL já entregue ao operador.
