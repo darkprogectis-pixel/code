@@ -189,3 +189,14 @@ Gerar um pack atualizado e funcional do INVICTUS para o piloto DESKTOP-CBDFE4C, 
   - (2) origem das ordens MES/MNQ 14/10 19:34–19:41 (`PROCEDIMENTO_LEITURA_MANUAL_AUTHV2_ORDENS_20261014.md` parte B, no piloto);
   - (3) ANAALICEGUSTAVO: provar identidade e criar a conta;
   - (4) decisão sobre a licença voltar a ser gate bloqueante (exige JEV DIFF).
+
+## ORDEM NOVA — PACK JOAO_HS (14/10, recebida na sessão 2ce90375 a ~226k) — A SUCESSORA EXECUTA
+- Missão: pack novo e exclusivo de JOAO_HS na versão Z30X2 homologada. Componentes comuns BYTE A BYTE iguais à referência `invictus pack 1000\ALFA_OMEGA_DESTINO_DESKTOP-CBDFE4C_INVICTUS_Z30X2_TESTE_ATUALIZADO_20261014_NAO_IMPORTAR.zip` (import 3baa59b0…, rollback 28006bc7…).
+- Origem histórica: `C:\Users\ADM\Downloads\ALFA_OMEGA_PILOTO_JOAO_HS_FULL_20260921.zip` (SUPERSEDED 07/10, preservar). Pack Z30X2 atual de JOAO_HS: sha 09334716… na linhagem (`AUDIT_LINHAGEM…` l.~47).
+- Passos:
+  - (1) achar o ZIP Z30X2 de JOAO_HS em `invictus pack 1000` e listar as entradas (externo/import/rollback);
+  - (2) comparar arquivo a arquivo o import JOAO_HS × o import do piloto (sha256 por entrada);
+  - (3) se for igual, reutilizar sem reconstruir; se diferir, documentar a origem e passar pelo JEV DIFF antes de qualquer mudança;
+  - (4) novo ZIP `..._JOAO_HS_INVICTUS_Z30X2_HOMOLOGADO_20261014_NAO_IMPORTAR.zip` (sem sobrescrever) com import, rollback, LEIA_PRIMEIRO, manifesto e SHA256SUMS; credencial TXT fora do ZIP;
+  - (5) validar (roundtrip, sha, sem segredos, sem AO2/R1–R10) e fazer commit sem push; resposta = bloco CHATGPT da ordem.
+- Proibido: renovar a licença (64 válida até 2027-09-21), instalar, tocar OLIVER/Gate/BFF/robô/contas.
