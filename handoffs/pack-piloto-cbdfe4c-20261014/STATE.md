@@ -200,3 +200,8 @@ Gerar um pack atualizado e funcional do INVICTUS para o piloto DESKTOP-CBDFE4C, 
   - (4) novo ZIP `..._JOAO_HS_INVICTUS_Z30X2_HOMOLOGADO_20261014_NAO_IMPORTAR.zip` (sem sobrescrever) com import, rollback, LEIA_PRIMEIRO, manifesto e SHA256SUMS; credencial TXT fora do ZIP;
   - (5) validar (roundtrip, sha, sem segredos, sem AO2/R1–R10) e fazer commit sem push; resposta = bloco CHATGPT da ordem.
 - Proibido: renovar a licença (64 válida até 2027-09-21), instalar, tocar OLIVER/Gate/BFF/robô/contas.
+- Achado inicial (sessão 2ce90375):
+  - pack Z30X2 atual de JOAO_HS = `invictus pack 1000\ALFA_OMEGA_JOAO_HS_INVICTUS_Z30X2_20261008_NAO_IMPORTAR.zip` (sha 09334716265d…), 6 entradas no MESMO padrão do piloto;
+  - import `ALFA_OMEGA_JOAO_HS_INVICTUS_Z30X2_import.zip` = 1.507.713 B × piloto 1.240.924 B ⇒ **os imports NÃO são iguais byte a byte** (família de pack diferente: JOAO_HS tem mais arquivos);
+  - rollback `..._PGCAP_ROLLBACK_import.zip` 1.499.730 B.
+  - Próximo passo exato: comparar entrada a entrada os dois imports (sha256) e classificar só-JOAO_HS / só-piloto / comuns iguais / comuns diferentes ⇒ diferença técnica real em arquivo comum = proposta + JEV DIFF antes do pack novo.
